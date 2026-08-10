@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#E4E3DD">
+<title>Armoury — collection manifest</title>
+<link rel="manifest" href="./manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#E4E3DD; --panel:#F4F3EF; --ink:#14161A; --ink2:#63625D;
+  --rule:#C7C6BF; --rule2:#AEACA3;
+  --ochre:#9A7614; --ochre-bg:#F0E7C9;
+  --oxide:#96382A; --oxide-bg:#F2DED9;
+  --slate:#4A5560; --slate-bg:#E0E4E8;
+  /* granate de las fichas oficiales: sólo vive dentro de la data-slate */
+  --plate:#6E1F26; --plate-ink:#FBF7F4; --plate-line:#D8C6C4;
+  --tap:44px;   /* objetivo táctil mínimo */
+  --disp:"Archivo Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--field); color:var(--ink); font-family:var(--body);
+  font-size:15px; line-height:1.5; padding-bottom:96px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* ---- manifest header: el bloque de control documental ---- */
+header{border-bottom:2px solid var(--ink);margin-bottom:20px}
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:22px 0 12px;flex-wrap:wrap}
+h1{font-family:var(--disp);font-weight:600;font-size:32px;letter-spacing:.01em;line-height:.95}
+h1 small{display:block;font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.14em;color:var(--ink2);margin-top:6px}
+.stamp{font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--ink2);text-align:right;white-space:nowrap}
+.stamp b{font-weight:500;color:var(--ink)}
+
+/* ---- controles ---- */
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+select,input[type=search]{
+  font:inherit;background:var(--panel);color:var(--ink);
+  border:1px solid var(--rule2);border-radius:2px;padding:9px 11px;
+}
+select{font-family:var(--disp);font-weight:600;font-size:16px;flex:1 1 220px}
+input[type=search]{flex:2 1 200px}
+input[type=search]::placeholder{color:var(--ink2)}
+:focus-visible{outline:2px solid var(--ochre);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+
+.filters{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--ink2);margin-bottom:18px}
+.filters label{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+.filters input{accent-color:var(--ochre);width:15px;height:15px}
+
+/* ---- líneas del manifiesto ---- */
+.group{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--ink2);
+  border-bottom:2px solid var(--ink);padding-bottom:5px;margin:26px 0 2px}
+.group:first-of-type{margin-top:0}
+.role{display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+  font-family:var(--disp);font-weight:600;font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink);
+  border-bottom:1px solid var(--rule);padding:14px 0 4px;margin-bottom:2px}
+.role span{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--ink2);letter-spacing:.04em}
+
+.line{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule)}
+.line.owned{background:linear-gradient(90deg,rgba(154,118,20,.07),transparent 60%)}
+.id{flex:1;min-width:0}
+.nm{font-family:var(--disp);font-size:17px;line-height:1.25;overflow-wrap:anywhere}
+.meta{font-family:var(--mono);font-size:11px;color:var(--ink2);margin-top:2px}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  padding:1px 5px;border-radius:2px;margin-right:6px;vertical-align:1px}
+.t-leg{background:var(--oxide-bg);color:var(--oxide)}
+.t-cru{background:var(--slate-bg);color:var(--slate)}
+
+/* ---- stepper ---- */
+.step{display:flex;align-items:center;gap:2px;flex:0 0 auto}
+.step button{
+  font-family:var(--mono);font-size:17px;line-height:1;width:34px;height:34px;
+  background:var(--panel);border:1px solid var(--rule2);color:var(--ink);
+  cursor:pointer;border-radius:2px;
+}
+.step button:hover{background:#fff;border-color:var(--ink)}
+.step button:active{background:var(--ochre-bg)}
+.step input{
+  font-family:var(--mono);font-size:15px;font-weight:500;text-align:center;
+  width:52px;height:34px;background:transparent;border:none;color:var(--ink);
+}
+.step input.zero{color:var(--rule2)}
+
+/* ---- barra inferior ---- */
+.totals{
+  position:fixed;left:0;right:0;bottom:0;background:var(--panel);
+  border-top:2px solid var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+}
+.totals .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0;flex-wrap:wrap}
+.count{font-family:var(--mono);font-size:12px;color:var(--ink2)}
+.count b{font-family:var(--disp);font-weight:600;font-size:22px;color:var(--ink);margin-right:3px}
+.acts{display:flex;gap:6px}
+.acts button{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:8px 12px;
+  background:transparent;border:1px solid var(--rule2);border-radius:2px;
+  color:var(--ink);cursor:pointer
+}
+.acts button:hover:not(:disabled){border-color:var(--ink);background:#fff}
+.acts button:disabled{opacity:.4;cursor:not-allowed}
+
+.note{font-family:var(--mono);font-size:12px;color:var(--ink2);padding:28px 0;line-height:1.8}
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--ink);margin-bottom:18px}
+.tabs button{font-family:var(--disp);font-weight:600;font-size:14px;letter-spacing:.08em;
+  text-transform:uppercase;padding:9px 16px;background:transparent;border:none;
+  border-bottom:3px solid transparent;margin-bottom:-2px;color:var(--ink2);cursor:pointer}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--ochre)}
+.card{background:var(--panel);border:1px solid var(--rule2);border-radius:2px;
+  padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;
+  align-items:center;gap:12px;cursor:pointer}
+.card:hover{border-color:var(--ink)}
+.card .nm{font-family:var(--disp);font-weight:600;font-size:18px}
+.card .meta{font-family:var(--mono);font-size:11px;color:var(--ink2);margin-top:2px}
+.card .pts{font-family:var(--mono);font-size:15px;white-space:nowrap}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.bar input,.bar select{font:inherit;background:var(--panel);border:1px solid var(--rule2);
+  border-radius:2px;padding:8px 10px;color:var(--ink)}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:9px 13px;
+  background:transparent;border:1px solid var(--rule2);border-radius:2px;color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--ink);background:#fff}
+.btn.pri{background:var(--ink);color:var(--field);border-color:var(--ink)}
+.btn.pri:hover{background:#000}
+.warn{border-left:3px solid var(--oxide);background:var(--oxide-bg);padding:9px 12px;
+  margin-bottom:6px;font-size:13px}
+.warn.soft{border-left-color:var(--ochre);background:var(--ochre-bg)}
+.warn b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;display:block;color:var(--ink2)}
+.slot{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule)}
+.slot .id{flex:1;min-width:0}
+.hint{font-family:var(--mono);font-size:11px;color:var(--ink2);margin:-6px 0 14px}
+/* ---------- data-slate: la ficha, único lugar donde la app sube el volumen ---------- */
+.sheet{background:#fff;border:1px solid var(--plate-line);border-radius:3px;
+  overflow:hidden;margin:2px 0 10px}
+.stats{display:flex;gap:5px;flex-wrap:wrap;padding:10px 12px 4px}
+.stat{border:1.5px solid var(--plate);border-radius:4px;padding:2px 7px 3px;
+  text-align:center;min-width:42px;background:#fff}
+.stat b{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;
+  color:var(--plate);font-weight:500}
+.stat span{font-family:var(--disp);font-weight:600;font-size:17px;line-height:1.1}
+.band{background:var(--plate);color:var(--plate-ink);font-family:var(--disp);
+  font-weight:600;font-size:11.5px;letter-spacing:.14em;padding:4px 12px;margin-top:6px}
+/* Columnas numéricas angostas y fijas: los valores se agrupan a la derecha,
+ * como en la ficha oficial, y el nombre del arma se queda con el resto. */
+.wp{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+.wp th:nth-child(2),.wp td:nth-child(2){width:58px}
+.wp th:nth-child(n+3),.wp td:nth-child(n+3){width:38px}
+.wp th{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;color:var(--plate);
+  text-align:right;padding:5px 6px 4px;font-weight:500;border-bottom:1px solid var(--plate-line)}
+.wp th:first-child{text-align:left}
+.wp td{padding:5px 6px;text-align:right;border-bottom:1px solid var(--plate-line);
+  font-family:var(--mono);font-size:12.5px}
+.wp td:first-child{text-align:left;font-family:var(--body);font-size:13px;
+  overflow-wrap:anywhere;padding-right:10px}
+.wp tr:last-child td{border-bottom:none}
+.wkw{display:block;font-size:10px;color:var(--plate);letter-spacing:.02em;margin-top:1px}
+.abil{padding:8px 12px 2px}
+.abil h4{font-family:var(--disp);font-weight:600;font-size:14px;margin-bottom:1px}
+.abil p{font-size:12.5px;line-height:1.5;color:#33363a;margin-bottom:8px}
+.kwbar{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px 10px;background:#FAF8F7;
+  border-top:1px solid var(--plate-line)}
+.kwbar span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
+  background:#fff;border:1px solid var(--plate-line);color:var(--plate);padding:2px 6px;border-radius:2px}
+.tog{font-family:var(--mono);font-size:10px;letter-spacing:.06em;background:transparent;
+  border:1px solid var(--rule2);border-radius:2px;padding:5px 8px;color:var(--ink2);cursor:pointer}
+.tog:hover{border-color:var(--ink);color:var(--ink)}
+@media (max-width:560px){
+  body{font-size:15.5px;padding-bottom:112px}
+  .wrap{padding:0 12px}
+  h1{font-size:25px}
+  .masthead{padding:16px 0 10px}
+  .stamp{text-align:left}
+  .line,.slot{flex-wrap:wrap}
+  .line .id,.slot .id{flex:1 1 100%;order:1}
+  .line .step,.slot .step{order:2}
+  .line .tog,.slot .tog{order:3;margin-left:auto !important}
+  .step button{width:var(--tap);height:var(--tap);font-size:19px}
+  .step input{height:var(--tap);width:56px;font-size:16px}
+  .btn,.tog{min-height:38px}
+  .bar select,.bar input{flex:1 1 100%}
+  .tabs button{flex:1;padding:11px 8px}
+  .wp td:first-child{max-width:44vw}
+  .filters{gap:10px 14px}
+}
+.ledger{position:sticky;top:0;z-index:5;display:flex;align-items:baseline;gap:14px;
+  background:var(--field);border-bottom:2px solid var(--ink);padding:10px 0 7px;margin:18px 0 10px}
+.ledger .lf{flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:16px;
+  letter-spacing:.04em;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ledger .lm{font-family:var(--mono);font-size:12px;color:var(--ink2);white-space:nowrap}
+.ledger .lm b{font-family:var(--disp);font-size:21px;color:var(--ink);font-weight:600}
+.ledger .lm b.bad{color:var(--oxide)}
+.ledger .lm i{font-style:normal;font-size:10px;letter-spacing:.1em;margin-left:2px}
+#fatal{border:2px solid var(--oxide);background:var(--oxide-bg);padding:14px 16px;margin:18px 0}
+#fatal h2{font-family:var(--disp);font-size:19px;font-weight:600;margin-bottom:6px}
+#fatal p{font-size:14px;margin-bottom:10px}
+#fatal pre{font-family:var(--mono);font-size:11px;white-space:pre-wrap;opacity:.7;margin-bottom:10px}
+.note b{color:var(--oxide);font-weight:500}
+
+/* ---------- impresión: hoja de consulta rápida ---------- */
+#printArea{display:none}
+@media print{
+  @page{margin:14mm}
+  body{background:#fff;padding:0}
+  .tabs,.totals,.controls,.filters,.bar,#viewCol,#viewLists,header,#fatal{display:none !important}
+  #printArea{display:block}
+  .pr-head{border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:12px}
+  .pr-head h1{font-family:var(--disp);font-size:26px;font-weight:600}
+  .pr-head .m{font-family:var(--mono);font-size:11px;color:#444;margin-top:3px}
+  .pr-roster{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:12px}
+  .pr-roster td{padding:3px 6px;border-bottom:1px solid #ccc}
+  .pr-roster td:last-child{text-align:right;font-family:var(--mono)}
+  .pr-roster tr.tot td{border-top:2px solid #000;border-bottom:none;font-weight:600}
+  .pr-unit{break-inside:avoid;page-break-inside:avoid;border:1px solid #999;
+    border-radius:2px;padding:8px 10px;margin-bottom:8px}
+  .pr-unit h3{font-family:var(--disp);font-size:16px;font-weight:600;
+    border-bottom:1px solid #999;padding-bottom:3px;margin-bottom:6px}
+  .pr-unit .sheet{border:none;margin:0}
+  .pr-unit .band{background:#000;color:#fff;padding:3px 8px}
+  .pr-unit .stats{padding:6px 0 2px}
+  .pr-unit .abil{padding:6px 0 0}
+  .pr-unit .kwbar{background:none;padding:6px 0 0}
+  .pr-unit .abil p{font-size:11px}
+  .pr-unit .wp{font-size:11px}
+  .pr-unit .stat{border-color:#999}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="masthead">
+      <h1>Armoury<small>COLLECTION MANIFEST</small></h1>
+      <div class="stamp" id="stamp">LOADING…</div>
+    </div>
+  </header>
+
+  <div id="printArea"></div>
+  <div id="fatal" hidden></div>
+
+  <div class="tabs" role="tablist">
+    <button id="tabCol" role="tab" aria-selected="true">Collection</button>
+    <button id="tabList" role="tab" aria-selected="false">Lists</button>
+  </div>
+
+  <div id="viewLists" hidden></div>
+
+  <div id="viewCol">
+  <div class="controls">
+    <input type="text" id="cname" placeholder="Name this collection…" aria-label="Collection name"
+           style="flex:1 1 100%;font-family:var(--disp);font-weight:600;font-size:18px;
+                  background:transparent;border:none;border-bottom:1px solid var(--rule2);
+                  padding:4px 0;color:var(--ink);border-radius:0">
+    <select id="faction" aria-label="Faction"></select>
+    <input type="search" id="q" placeholder="Search unit…" aria-label="Search unit">
+  </div>
+
+  <div class="filters">
+    <label><input type="checkbox" id="fOwned"> Owned only</label>
+    <label><input type="checkbox" id="fLegends" checked> Show Legends</label>
+    <label><input type="checkbox" id="fCrucible" checked> Show Crucible</label>
+    <label style="margin-left:auto">Group by
+      <select id="groupBy" style="flex:none;font-size:13px;padding:4px 6px">
+        <option value="role">Role</option>
+        <option value="mode">Legality</option>
+        <option value="name">Name only</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="list"></div>
+  </div>
+</div>
+
+<div class="totals">
+  <div class="wrap">
+    <div class="count">
+      <b id="tModels">0</b>models
+      <b id="tUnits" style="margin-left:12px">0</b>entries
+      <b id="tPts" style="margin-left:12px">0</b><span title="Estimate: models packed into the largest units. Actual cost depends on how you split them in a list.">pts approx.</span>
+    </div>
+    <div class="acts">
+      <button id="bExport">EXPORT</button>
+      <button id="bImport">IMPORT</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/*__DATA__*/
+/* ============================================================
+   ALMACENAMIENTO — IndexedDB
+   Guardamos SOLO { id, qty }. Nada de puntos ni nombres: eso
+   vive en collection-data.json y se actualiza solo. Si guardáramos
+   el nombre, quedaría desactualizado cuando GW renombre la unidad.
+   ============================================================ */
+const DB_NAME = 'armoury';
+
+/* ------------------------------------------------------------------
+ * Tres niveles, en orden de preferencia:
+ *
+ *   idb → IndexedDB. Lo normal cuando la app se sirve por http/https.
+ *   ls  → localStorage. Chrome BLOQUEA IndexedDB en file://, y sin este
+ *         respaldo la app queda inservible al abrirla con doble clic.
+ *   mem → sólo memoria. Último recurso: se pierde al cerrar, así que la
+ *         app lo dice en pantalla en vez de fingir que guardó.
+ *
+ * Los datos son chicos (colección + listas), así que localStorage sobra.
+ * ---------------------------------------------------------------- */
+const NS = { col: 'collection', lists: 'lists' };
+let db = null;
+
+const store = {
+  mode: 'mem',
+  mem: { collection: new Map(), lists: new Map() },
+
+  async init(){
+    if (await this._tryIdb())  { this.mode = 'idb'; return; }
+    if (this._tryLocal())      { this.mode = 'ls';  return; }
+    this.mode = 'mem';
+  },
+
+  _tryIdb(){
+    return new Promise((ok) => {
+      let done = false;
+      const finish = (v) => { if (!done) { done = true; ok(v); } };
+      try {
+        if (!self.indexedDB) return finish(false);
+        const r = indexedDB.open(DB_NAME, 2);
+        r.onupgradeneeded = () => {
+          const d = r.result;
+          for (const name of Object.values(NS))
+            if (!d.objectStoreNames.contains(name)) d.createObjectStore(name, { keyPath:'id' });
+        };
+        r.onsuccess = () => { db = r.result; db.onversionchange = () => db.close(); finish(true); };
+        r.onerror   = () => finish(false);
+        r.onblocked = () => finish(false);
+        setTimeout(() => finish(false), 2500);   // file:// nunca contesta
+      } catch { finish(false); }
+    });
+  },
+
+  _tryLocal(){
+    try { localStorage.setItem('__t','1'); localStorage.removeItem('__t'); return true; }
+    catch { return false; }
+  },
+
+  _lsKey(ns){ return 'armoury:' + NS[ns]; },
+  _lsRead(ns){ try { return JSON.parse(localStorage.getItem(this._lsKey(ns)) || '[]'); } catch { return []; } },
+  _lsWrite(ns, arr){ localStorage.setItem(this._lsKey(ns), JSON.stringify(arr)); },
+
+  getAll(ns){
+    if (this.mode === 'idb') {
+      return new Promise((ok) => {
+        try { db.transaction(NS[ns],'readonly').objectStore(NS[ns]).getAll().onsuccess = e => ok(e.target.result); }
+        catch { ok([]); }
+      });
+    }
+    if (this.mode === 'ls') return Promise.resolve(this._lsRead(ns));
+    return Promise.resolve([...this.mem[NS[ns]].values()]);
+  },
+
+  put(ns, obj){
+    if (this.mode === 'idb') {
+      try { db.transaction(NS[ns],'readwrite').objectStore(NS[ns]).put(obj); } catch {}
+      return;
+    }
+    if (this.mode === 'ls') {
+      const arr = this._lsRead(ns).filter(x => x.id !== obj.id);
+      arr.push(obj); this._lsWrite(ns, arr); return;
+    }
+    this.mem[NS[ns]].set(obj.id, obj);
+  },
+
+  del(ns, id){
+    if (this.mode === 'idb') {
+      try { db.transaction(NS[ns],'readwrite').objectStore(NS[ns]).delete(id); } catch {}
+      return;
+    }
+    if (this.mode === 'ls') { this._lsWrite(ns, this._lsRead(ns).filter(x => x.id !== id)); return; }
+    this.mem[NS[ns]].delete(id);
+  },
+
+  wipe(){
+    try { localStorage.removeItem(this._lsKey('col')); localStorage.removeItem(this._lsKey('lists')); } catch {}
+    this.mem.collection.clear(); this.mem.lists.clear();
+    try { db && db.close(); } catch {}
+    try {
+      const d = indexedDB.deleteDatabase(DB_NAME);
+      d.onsuccess = d.onerror = d.onblocked = () => location.reload();
+      setTimeout(() => location.reload(), 1200);
+    } catch { location.reload(); }
+  },
+};
+
+function saveQty(id, qty){ qty > 0 ? store.put('col', { id, qty }) : store.del('col', id); }
+function loadAll(){ return store.getAll('col'); }
+
+/* ============================================================
+   ESTADO
+   ============================================================ */
+let DATA = null;             // collection-data.json
+const owned = new Map();     // id -> cantidad de miniaturas
+
+/* ============================================================
+   ARRANQUE
+   ============================================================ */
+function fatal(e){
+  const msg  = (e && e.message) ? e.message : String(e);
+  const line = (e && e.stack) ? e.stack.split('\n').slice(0,3).join('\n') : '';
+
+  document.getElementById('stamp').textContent = 'ERROR';
+
+  // La banda vive FUERA de las pestañas: un error que se esconde al cambiar
+  // de pestaña es un error invisible.
+  const box = document.getElementById('fatal');
+  box.hidden = false;
+  box.innerHTML =
+    '<h2>Something went wrong</h2>' +
+    '<p>' + escSafe(msg) + '</p>' +
+    '<pre>' + escSafe(line) + '</pre>' +
+    '<p>If closing other tabs did not help, wiping local storage usually does. ' +
+    'Your collection is only stored in this browser, so export it first if you can.</p>';
+
+  const b = document.createElement('button');
+  b.className = 'btn';
+  b.textContent = 'WIPE LOCAL STORAGE AND RELOAD';
+  b.onclick = () => {
+    if (!confirm('This deletes your collection and all lists from this browser. ' +
+                 'There is no undo. Continue?')) return;
+    store.wipe();
+  };
+  box.appendChild(b);
+}
+
+// Versión a prueba de todo: fatal() puede correr antes de que esc() exista.
+function escSafe(v){
+  return String(v).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+}
+
+async function boot(){
+  try { await start(); }
+  catch (e) { fatal(e); }
+}
+
+async function start(){
+  await store.init();
+  for (const row of await loadAll()) {
+    if (row.id === '__name__') { document.getElementById('cname').value = row.qty; continue; }
+    owned.set(row.id, row.qty);
+  }
+  document.getElementById('cname').addEventListener('input', e => {
+    store.put('col', { id: '__name__', qty: e.target.value });
+  });
+
+  // 1) Datos incrustados (armoury.html, doble clic). 2) Si no, fetch (Pages).
+  if (window.__ARMOURY_DATA__) {
+    DATA = window.__ARMOURY_DATA__;
+  } else {
+    try {
+      const res = await fetch('./collection-data.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      DATA = await res.json();
+    } catch (e) {
+      document.getElementById('list').innerHTML =
+        '<p class="note"><b>No catalogue in this file.</b><br><br>' +
+        'Run <code>node prepare-data.mjs</code> to rebuild index.html with the ' +
+        'catalogue embedded.</p>';
+      document.getElementById('stamp').textContent = 'NO CATALOGUE';
+      document.getElementById('bExport').disabled = true;
+      document.getElementById('bImport').disabled = true;
+      return;
+    }
+  }
+
+  const stamp = document.getElementById('stamp');
+  stamp.innerHTML =
+    'BUILD <b>' + (DATA.build ?? '—') + '</b><br>' +
+    'CATALOGUE <b>' + (DATA.revision?.sha ?? '—') + '</b>' +
+      (DATA.mfmVersion ? ' \u00b7 MFM <b>' + DATA.mfmVersion + '</b>' : '') + '<br>' +
+    'FACTIONS <b>' + DATA.factions.length + '</b> \u00b7 UNITS <b>' +
+      DATA.factions.reduce((a, f) => a + f.units.length, 0) + '</b>';
+
+  const sel = document.getElementById('faction');
+  for (const group of ['Imperium','Chaos','Xenos','Otros']) {
+    const fs = DATA.factions.filter(f => f.group === group);
+    if (!fs.length) continue;
+    const og = document.createElement('optgroup');
+    og.label = group;
+    for (const f of fs) {
+      const o = document.createElement('option');
+      o.value = f.slug; o.textContent = f.name;
+      og.appendChild(o);
+    }
+    sel.appendChild(og);
+  }
+
+  ['faction','q','fOwned','fLegends','fCrucible','groupBy'].forEach(id =>
+    document.getElementById(id).addEventListener('input', render));
+
+  lists = await loadLists();
+
+  // Limpieza: la versión anterior guardaba el borrador del formulario antes
+  // de apretar CREATE, así que pudieron quedar listas vacías sin nombre.
+  const ghosts = lists.filter(l => !l.name && (!l.slots || !l.slots.length));
+  for (const g of ghosts) store.del('lists', g.id);
+  if (ghosts.length) lists = lists.filter(l => !ghosts.includes(l));
+
+  // Migración: antes se guardaba UN destacamento como texto. En 11e se
+  // llevan varios, hasta gastar el presupuesto de DP.
+  for (const l of lists) {
+    if (!Array.isArray(l.dets)) {
+      l.dets = l.detachment ? [l.detachment] : [];
+      delete l.detachment;
+      saveList(l);
+    }
+  }
+
+  pruneGear();
+
+  // Si el navegador negó el almacenamiento normal, hay que decirlo. Guardar
+  // en silencio en un sitio que se borra al cerrar es peor que no guardar.
+  if (store.mode !== 'idb') {
+    const w = document.getElementById('fatal');
+    w.hidden = false;
+    w.style.borderColor = 'var(--ochre)';
+    w.style.background  = 'var(--ochre-bg)';
+    w.innerHTML = store.mode === 'ls'
+      ? '<h2>Limited storage</h2><p>This browser blocks the normal database for ' +
+        'files opened from disk, so Armoury is using a simpler store. It works, ' +
+        'but it is easier to lose \u2014 export a backup regularly, or publish the ' +
+        'app to a URL.</p>'
+      : '<h2>Nothing will be saved</h2><p>This browser is blocking all storage for ' +
+        'local files. You can browse and compose, but everything disappears when you ' +
+        'close the tab. Use EXPORT before leaving, or publish the app to a URL.</p>';
+  }
+
+  render();
+  updateTotals();
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function render(){
+  const slug   = document.getElementById('faction').value;
+  const q      = document.getElementById('q').value.trim().toLowerCase();
+  const onlyOw = document.getElementById('fOwned').checked;
+  const showL  = document.getElementById('fLegends').checked;
+  const showC  = document.getElementById('fCrucible').checked;
+
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+
+  // El select puede estar vacío en el primer render o traer un slug viejo
+  // guardado de una versión anterior de los datos. Sin esta guarda, la app
+  // revienta con "Cannot read properties of undefined".
+  const faction = DATA.factions.find(f => f.slug === slug) ?? DATA.factions[0];
+  if (!faction) { list.innerHTML = '<p class="note">No factions in the catalogue.</p>'; return; }
+
+  let units = faction.units.filter(u => {
+    if (u.m === 'legends'  && !showL) return false;
+    if (u.m === 'crucible' && !showC) return false;
+    if (onlyOw && !(owned.get(u.id) > 0)) return false;
+    if (q && !u.n.toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  if (!units.length) {
+    list.innerHTML = '<p class="note">No entries match. Clear the search or turn a filter back on.</p>';
+    return;
+  }
+
+  const modeOrder  = { standard:0, legends:1, crucible:2 };
+  const modeLabels = { standard:'MATCHED PLAY', legends:'LEGENDS', crucible:'CRUCIBLE' };
+  const roleOrder  = new Map(DATA.roles.map((r,i) => [r.id, i]));
+  const roleLabels = new Map(DATA.roles.map(r => [r.id, r.label]));
+
+  const groupBy = document.getElementById('groupBy').value;
+
+  if (groupBy === 'name') {
+    units.sort((a,b) => a.n.localeCompare(b.n));
+    for (const u of units) list.appendChild(lineFor(u));
+    return;
+  }
+
+  // Siempre se corta primero por legalidad: mezclar Legends con matched play
+  // en la misma lista de roles hace que el jugador arme listas ilegales sin verlo.
+  units.sort((a,b) =>
+    modeOrder[a.m] - modeOrder[b.m] ||
+    (groupBy === 'role' ? roleOrder.get(a.r) - roleOrder.get(b.r) : 0) ||
+    a.n.localeCompare(b.n)
+  );
+
+  let curMode = null, curRole = null;
+  for (const u of units) {
+    if (u.m !== curMode) {
+      curMode = u.m; curRole = null;
+      const h = document.createElement('div');
+      h.className = 'group';
+      h.textContent = modeLabels[u.m];
+      list.appendChild(h);
+    }
+    if (groupBy === 'role' && u.r !== curRole) {
+      curRole = u.r;
+      const n = units.filter(x => x.m === curMode && x.r === curRole).length;
+      const owns = units
+        .filter(x => x.m === curMode && x.r === curRole)
+        .reduce((s,x) => s + (owned.get(x.id) ?? 0), 0);
+      const h = document.createElement('div');
+      h.className = 'role';
+      h.innerHTML = '<div>' + roleLabels.get(u.r) + '</div>' +
+                    '<span>' + (owns ? owns + ' models · ' : '') + n + ' entries</span>';
+      list.appendChild(h);
+    }
+    list.appendChild(lineFor(u));
+  }
+}
+
+function lineFor(u){
+  const qty = owned.get(u.id) ?? 0;
+
+  const row = document.createElement('div');
+  row.className = 'line' + (qty ? ' owned' : '');
+
+  const tag = u.m === 'legends'  ? '<span class="tag t-leg">LEGENDS</span>'
+            : u.m === 'crucible' ? '<span class="tag t-cru">CRUCIBLE</span>' : '';
+
+  const info = document.createElement('div');
+  info.className = 'id';
+  // Escalera de precios: 170 pts @10 · 330 @20. El coste base miente en el
+  // 18 % de las entradas — Khorne Berzerkers valen 170 o 330 según el tamaño.
+  let price;
+  if (u.L) {
+    price = u.L.map(([from, pts]) => pts + ' @' + from + '+').join(' · ');
+  } else if (u.p != null) {
+    price = u.p + ' pts';
+  } else {
+    price = 'no pts';
+  }
+
+  info.innerHTML =
+    '<div class="nm">' + esc(u.n) + '</div>' +
+    '<div class="meta">' + tag + price +
+      (u.max > 1 ? ' · max ' + u.max : '') +
+    '</div>';
+
+  const step = document.createElement('div');
+  step.className = 'step';
+
+  const minus = mkBtn('−', 'Remove one ' + u.n);
+  const input = document.createElement('input');
+  input.type = 'text'; input.inputMode = 'numeric';
+  input.value = qty; input.setAttribute('aria-label', 'Models owned: ' + u.n);
+  if (!qty) input.classList.add('zero');
+  const plus = mkBtn('+', 'Add one ' + u.n);
+
+  const set = v => {
+    const n = Math.max(0, Math.min(999, v|0));
+    owned.set(u.id, n);
+    saveQty(u.id, n);
+    input.value = n;
+    input.classList.toggle('zero', n === 0);
+    row.classList.toggle('owned', n > 0);
+    updateTotals();
+  };
+
+  minus.onclick = () => set((owned.get(u.id) ?? 0) - 1);
+  plus.onclick  = () => set((owned.get(u.id) ?? 0) + 1);
+  input.onchange = () => set(parseInt(input.value, 10) || 0);
+
+  step.append(minus, input, plus);
+  row.append(info, step);
+
+  // Ficha desplegable. Va aparte de la fila para no romper la alineación.
+  if (hasSheet(u)) {
+    const wrap = document.createElement('div');
+    const tog = mkBtn('', 'Datasheet for ' + u.n);
+    tog.className = 'tog'; tog.textContent = 'DATASHEET';
+    tog.style.cssText = 'width:auto;height:auto;margin:0 0 0 8px';
+    let open = false, sheet = null;
+    tog.onclick = () => {
+      open = !open;
+      if (open) { sheet = datasheetFor(u); wrap.append(sheet); }
+      else if (sheet) { sheet.remove(); sheet = null; }
+    };
+    step.append(tog);
+    wrap.append(row);
+    return wrap;
+  }
+  return row;
+}
+
+function mkBtn(txt, label){
+  const b = document.createElement('button');
+  b.textContent = txt; b.setAttribute('aria-label', label);
+  return b;
+}
+const esc = s => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+/* ------------------------------------------------------------------
+ * VALOR ESTIMADO
+ *
+ * Una colección no tiene un total de puntos exacto. 20 Berzerkers valen
+ * 330 como una unidad de 20, o 340 como dos de 10. El número depende de
+ * cómo los repartas, y eso se decide al armar la lista.
+ *
+ * Acá se calcula el escenario más barato: empaquetar en las unidades más
+ * grandes posibles. Por eso dice "approx.".
+ *
+ * Los tamaños salen del umbral de la escalera: si el precio sube a partir
+ * de 11 modelos, las unidades son de 10 y 20. Verificado contra el
+ * catálogo (Berzerkers 11→10/20, Terminators 6→5/10, Eightbound 4→3/6).
+ * ---------------------------------------------------------------- */
+function unitOptions(u){
+  if (u.L && u.L.length >= 2) {
+    const small = u.L[0], big = u.L[1];
+    return [
+      { size: big[0] - 1 + (big[0] - 1), pts: big[1] },   // 2×(umbral−1)
+      { size: small[0] + (big[0] - 1) - 1, pts: small[1] } // umbral−1
+    ].map((o, i) => i === 0
+        ? { size: (big[0] - 1) * 2, pts: big[1] }
+        : { size: big[0] - 1,       pts: small[1] });
+  }
+  if (u.p == null) return [];
+  return [{ size: (u.max && u.max > 1) ? u.max : 1, pts: u.p }];
+}
+
+function valueOf(u, models){
+  const opts = unitOptions(u).sort((a, b) => b.size - a.size);
+  if (!opts.length) return 0;
+  let left = models, total = 0;
+  for (const o of opts) {
+    while (left >= o.size) { total += o.pts; left -= o.size; }
+  }
+  if (left > 0) total += opts[opts.length - 1].pts;   // resto: una unidad chica
+  return total;
+}
+
+let UNIT_BY_ID = null;
+function unitById(id){
+  if (!UNIT_BY_ID) {
+    UNIT_BY_ID = new Map();
+    for (const f of DATA.factions) for (const u of f.units) if (!UNIT_BY_ID.has(u.id)) UNIT_BY_ID.set(u.id, u);
+  }
+  return UNIT_BY_ID.get(id);
+}
+
+function updateTotals(){
+  let models = 0, entries = 0, pts = 0;
+  for (const [id, n] of owned) {
+    if (n <= 0) continue;
+    models += n; entries++;
+    const u = unitById(id);
+    if (u) pts += valueOf(u, n);
+  }
+  document.getElementById('tModels').textContent = models;
+  document.getElementById('tUnits').textContent  = entries;
+  document.getElementById('tPts').textContent    = pts.toLocaleString();
+}
+
+/* ============================================================
+   EXPORTAR / IMPORTAR — el respaldo del usuario en la v0.
+   schemaVersion existe para que un archivo viejo siga siendo
+   legible cuando el formato cambie.
+   ============================================================ */
+document.getElementById('bExport').onclick = () => {
+  const payload = {
+    schemaVersion: 1,
+    name: document.getElementById('cname').value || null,
+    exportedAt: new Date().toISOString(),
+    dataRevision: DATA?.revision?.sha ?? null,
+    items: [...owned].filter(([,q]) => q > 0).map(([id,qty]) => ({ id, qty })),
+  };
+  const url = URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)], {type:'application/json'}));
+  const a = document.createElement('a');
+  a.href = url;
+  const slug = (payload.name || 'armoury').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  a.download = slug + '-' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+};
+
+document.getElementById('bImport').onclick = () => {
+  const f = document.createElement('input');
+  f.type = 'file'; f.accept = 'application/json';
+  f.onchange = async () => {
+    try {
+      const data = JSON.parse(await f.files[0].text());
+      if (!Array.isArray(data.items)) throw new Error('no items');
+      if (data.name) {
+        document.getElementById('cname').value = data.name;
+        store.put('col', { id: '__name__', qty: data.name });
+      }
+      for (const it of data.items) {
+        owned.set(it.id, it.qty);
+        saveQty(it.id, it.qty);
+      }
+      render(); updateTotals();
+    } catch {
+      alert('That is not an Armoury backup.\n\nIMPORT only restores a file you ' +
+            'previously saved with EXPORT. It is not for collection-data.json — ' +
+            'the catalogue loads on its own.');
+    }
+  };
+  f.click();
+};
+
+/* ============================================================
+   LISTAS — compositor, no validador.
+   
+   Lo que SÍ verifica: total contra el tope de puntos, tope de
+   repetición por unidad, legalidad de Legends y Crucible según el
+   formato, y si tenés las miniaturas en la colección.
+   
+   Lo que NO: mejoras, mínimos de línea, enganche de personajes,
+   restricciones propias del destacamento, armamento. Por eso la app
+   nunca dice "válida" — dice qué revisó y qué no.
+   ============================================================ */
+let lists = [];        // [{ id, name, faction, detachment, limit, legends, crucible, slots:[{unitId,size}] }]
+let editing = null;    // id de la lista abierta, o null
+
+function saveList(l){ store.put('lists', l); }
+function loadLists(){ return store.getAll('lists'); }
+
+/* Tamaños de unidad posibles. Con escalera: umbral−1 y su doble
+   (Berzerkers 11 → 10 y 20). Sin escalera: una sola opción. */
+/* Tamaños posibles. Con MFM (u.B) son los oficiales; si no, se deducen del
+ * salto de precio de BSData, que es una aproximación. */
+function sizesFor(u){
+  if (u.B && u.B.length) return u.B[0].s.map(([n, pts]) => ({ n, pts }));
+  if (u.L && u.L.length >= 2) {
+    const small = u.L[0][1], t = u.L[1][0], big = u.L[1][1];
+    return [{ n: t - 1, pts: small }, { n: (t - 1) * 2, pts: big }];
+  }
+  return [{ n: (u.max && u.max > 1) ? u.max : 1, pts: u.p ?? 0 }];
+}
+
+/* UMBRALES DE REQUISICIÓN: repetir una unidad la encarece.
+ * Chaos Terminators cuesta 165 las dos primeras veces y 175 de la tercera
+ * en adelante. `copy` es el número de copia (1 = la primera). */
+function ptsFor(u, size, copy = 1){
+  if (u.B && u.B.length) {
+    const band = u.B.find(b => copy >= b.f && (b.t == null || copy <= b.t)) ?? u.B[u.B.length - 1];
+    const hit = band.s.filter(([n]) => n <= size).pop() ?? band.s[0];
+    return hit ? hit[1] : 0;
+  }
+  const s = sizesFor(u).filter(x => x.n <= size).pop();
+  return s ? s.pts : (sizesFor(u)[0]?.pts ?? 0);
+}
+
+/* Número de copia de cada slot: cuántas veces apareció ya esa unidad. */
+function copyIndex(l){
+  const seen = new Map(), out = [];
+  for (const sl of l.slots) {
+    const n = (seen.get(sl.unitId) ?? 0) + 1;
+    seen.set(sl.unitId, n);
+    out.push(n);
+  }
+  return out;
+}
+
+function factionOf(slug){ return DATA.factions.find(f => f.slug === slug); }
+
+/* ---------- revisión: devuelve avisos, nunca un booleano "válida" ---------- */
+function review(l){
+  const f = factionOf(l.faction);
+  if (!f) return { total: 0, issues: [{ hard:true, t:'Faction missing', d:'Not in the current catalogue.' }] };
+  const out = [];
+  let total = 0;
+
+  const byUnit = new Map();
+  const needed = new Map();
+
+  const copies = copyIndex(l);
+  for (const [si, s] of l.slots.entries()) {
+    const u = f.units.find(x => x.id === s.unitId);
+    if (!u) { out.push({ hard:true, t:'Entry removed from the catalogue', d:'This unit no longer exists in the current data.' }); continue; }
+    const copy = copies[si];
+    total += ptsFor(u, s.size, copy);
+    if (u.B && u.B.length > 1 && copy >= u.B[1].f)
+      out.push({ hard:false, t:u.n + ': copy #' + copy + ' costs more',
+                 d:'Requisition threshold \u2014 ' + ptsFor(u, s.size, copy) + ' instead of ' + ptsFor(u, s.size, 1) + '.' });
+    byUnit.set(u.id, (byUnit.get(u.id) ?? 0) + 1);
+    needed.set(u.id, (needed.get(u.id) ?? 0) + s.size);
+
+    if (u.m === 'legends'  && !l.legends)  out.push({ hard:true, t:u.n + ' is Legends', d:'Not allowed under this list\u2019s format.' });
+    if (u.m === 'crucible' && !l.crucible) out.push({ hard:true, t:u.n + ' is Crucible', d:'Not allowed under this list\u2019s format.' });
+  }
+
+  // Puntos de destacamento. El presupuesto por tamaño de partida NO está en
+  // el dato (las entradas de Battle Size no traen costLimits), así que se usa
+  // el valor de las reglas: 3 en Strike Force. Es lo único acá que no sale
+  // del catálogo, y por eso es aviso suave.
+  const dets = l.dets || [];
+  if (dets.length && f.det) {
+    const info = new Map(f.det.map((d) => [d[0], d]));
+    const spent = dets.reduce((a, n) => a + (info.get(n)?.[1] ?? 0), 0);
+    const budget = dpBudget(l);
+    if (spent > budget)
+      out.push({ hard:true, t:'Over the DP budget', d:spent + ' DP spent, ' + budget + ' available.' });
+
+    // Etiqueta Unique: dos destacamentos con la misma no se combinan.
+    const tags = new Map();
+    for (const n of dets) {
+      const u = info.get(n)?.[3];
+      if (!u) continue;
+      if (tags.has(u))
+        out.push({ hard:true, t:'Two "' + u + '" detachments', d:tags.get(u) + ' and ' + n + ' share a unique tag.' });
+      else tags.set(u, n);
+    }
+  }
+
+  // Las mejoras cargadas a mano suman al total.
+  for (const e of (l.enh || [])) total += +e.pts || 0;
+
+  if (total > l.limit)
+    out.push({ hard:true, t:'Over the points limit', d:(total - l.limit) + ' pts above ' + l.limit + '.' });
+
+  for (const [id, times] of byUnit) {
+    const u = f.units.find(x => x.id === id);
+    if (!u?.c) continue;
+    const cap = (l.limit <= 1000 && u.c.at1000 != null) ? u.c.at1000 : u.c.max;
+    if (times > cap)
+      out.push({ hard:true, t:u.n + ' \u00d7' + times, d:'Maximum ' + cap + ' in a ' + l.limit + ' pt army.' });
+  }
+
+  // Enganche de líderes. Los destinos salen de leer la regla `Leader`, que es
+  // prosa, no dato estructurado. Por eso es aviso suave: si la redacción cambia
+  // en BSData, prefiero equivocarme avisando de más que bloquear una lista legal.
+  for (const [i, sl] of l.slots.entries()) {
+    const u = f.units.find(x => x.id === sl.unitId);
+    if (!u || !u.ld) continue;
+    // Ir suelto es legal: muchos personajes operan solos. No se avisa.
+    if (!sl.attach) continue;
+    const host = l.slots[sl.attach - 1];
+    const hu = host && f.units.find(x => x.id === host.unitId);
+    if (!hu || !u.ld.includes(hu.id))
+      out.push({ hard:false, i, t:u.n + ' cannot lead that unit', d:'Its Leader rule lists other targets.' });
+  }
+
+  // Variantes de arma que superan el tamaño de la unidad.
+  //
+  // Se cuenta POR GRUPO, no sumando todo: la pistola del campeón y las
+  // variantes de la tropa son grupos distintos y sumarlos no significa nada.
+  //
+  // Y se ignoran las claves cuyo grupo ya no existe en el catálogo. Sin esto,
+  // valores guardados por una versión vieja de la app siguen contando aunque
+  // la interfaz ya no los muestre — invisibles e imposibles de corregir.
+  for (const sl of l.slots) {
+    if (!sl.gear) continue;
+    const u = f.units.find(x => x.id === sl.unitId);
+    if (!u || !u.o || !u.o.length) continue;
+
+    const perGroup = new Map();
+    for (const [k, v] of Object.entries(sl.gear)) {
+      if (typeof v !== 'number') continue;
+      const [gi, oi] = k.split(':').map(Number);
+      const g = u.o[gi];
+      if (!g || g.k !== 'many' || !g.opts[oi]) continue;   // clave huérfana
+      perGroup.set(gi, (perGroup.get(gi) ?? 0) + v);
+    }
+
+    for (const [gi, picked] of perGroup) {
+      if (picked <= sl.size) continue;
+      out.push({
+        hard: false,
+        t: u.n + ' \u2014 ' + esc(u.o[gi].n) + ': ' + picked + ' models',
+        d: 'The unit only has ' + sl.size + '.',
+      });
+    }
+  }
+
+  // En una lista del rival, avisar "te faltan miniaturas" no tiene sentido.
+  for (const [id, models] of (l.foreign ? [] : needed)) {
+    const have = owned.get(id) ?? 0;
+    if (have < models) {
+      const u = f.units.find(x => x.id === id);
+      out.push({ hard:false, t:'Short ' + (models - have) + ' \u00d7 ' + u.n, d:'You own ' + have + ', this list uses ' + models + '.' });
+    }
+  }
+
+  return { total, issues: out };
+}
+
+/* ---------- render ---------- */
+function renderLists(){
+  try { renderListsInner(); }
+  catch (e) {
+    // Un fallo acá antes dejaba la pantalla a medias sin decir nada.
+    const v = document.getElementById('viewLists');
+    v.innerHTML = '';
+    const w = el('div','warn');
+    w.innerHTML = '<b>LIST VIEW FAILED</b>' + escSafe(e.message);
+    const back = el('button','btn'); back.textContent = '\u2190 ALL LISTS';
+    back.onclick = () => { editing = null; creating = false; renderLists(); };
+    v.append(w, back);
+  }
+}
+
+function renderListsInner(){
+  const v = document.getElementById('viewLists');
+  v.innerHTML = '';
+
+  if (creating) { renderNew(v); return; }
+
+  if (editing == null) {
+    const bar = el('div','bar');
+    const nw = el('button','btn pri'); nw.textContent = 'NEW LIST';
+    nw.onclick = newList;
+    const imp = el('button','btn'); imp.textContent = 'LOAD A LIST';
+    imp.onclick = importList;
+    bar.append(nw, imp); v.append(bar);
+
+    if (!lists.length) { v.append(note('No lists yet. Create one to start composing.')); return; }
+
+    for (const l of [...lists].sort((a,b) => b.id - a.id)) {
+      const f = factionOf(l.faction);
+      const { total } = f ? review(l) : { total: 0 };
+      const c = el('div','card');
+      c.innerHTML = '<div><div class="nm">' + esc(l.name || 'Untitled') +
+        (l.foreign ? ' <span class="tag t-cru">OPPONENT</span>' : '') + '</div>' +
+        '<div class="meta">' + esc(f ? f.name : '?') + ' \u00b7 ' + l.slots.length + ' units</div></div>' +
+        '<div class="pts">' + total + ' / ' + l.limit + '</div>';
+      c.onclick = () => { editing = l.id; renderLists(); };
+      v.append(c);
+    }
+    return;
+  }
+
+  const l = lists.find(x => x.id === editing);
+  if (!l) { editing = null; return renderLists(); }
+
+  // Una lista guardada puede apuntar a una facción que ya no está en los datos.
+  const f = factionOf(l.faction);
+  if (!f) {
+    v.append(note('This list points at a faction that is no longer in the catalogue.'));
+    const back = el('button','btn'); back.textContent = '\u2190 ALL LISTS';
+    back.onclick = () => { editing = null; renderLists(); };
+    v.append(back);
+    return;
+  }
+  const { total, issues } = review(l);
+
+  // --- barra de cabecera
+  const bar = el('div','bar');
+  const back = el('button','btn'); back.textContent = '\u2190 ALL LISTS';
+  back.onclick = () => { editing = null; renderLists(); };
+  const name = el('input'); name.type='text'; name.value = l.name; name.placeholder='List name';
+  name.style.cssText = 'flex:1 1 180px;font-family:var(--disp);font-weight:600;font-size:18px';
+  name.oninput = () => { l.name = name.value; saveList(l); };
+  const shr = el('button','btn'); shr.textContent = 'SHARE';
+  shr.onclick = () => exportList(l);
+  const prn = el('button','btn'); prn.textContent = 'PRINT';
+  prn.onclick = () => printList(l);
+  const del = el('button','btn'); del.textContent = 'DELETE';
+  del.onclick = () => { if (confirm('Delete this list?')) { store.del('lists', l.id); lists = lists.filter(x=>x.id!==l.id); editing=null; renderLists(); } };
+  bar.append(back, name, shr, prn, del); v.append(bar);
+
+  // --- formato
+  const bar2 = el('div','bar');
+  // El tope no se edita: se fijó al crear la lista. Mostrarlo como campo
+  // editable invitaba a cambiarlo y dejar una lista inconsistente.
+  const lim = el('span'); lim.style.cssText = 'font-family:var(--mono);font-size:13px';
+  lim.textContent = l.limit + ' pts';
+  bar2.append(labelled('Limit', lim));
+
+  const mis = el('input'); mis.type = 'text'; mis.placeholder = 'mission';
+  mis.style.cssText = 'width:150px;font-size:13px';
+  mis.value = l.mission || '';
+  mis.oninput = () => { l.mission = mis.value; saveList(l); };
+  bar2.append(labelled('Mission', mis));
+  bar2.append(check('Legends', l.legends, v2 => { l.legends = v2; saveList(l); renderLists(); }));
+  bar2.append(check('Crucible', l.crucible, v2 => { l.crucible = v2; saveList(l); renderLists(); }));
+  v.append(bar2);
+
+  // --- total
+  const head = el('div','ledger');
+  const dinfo = new Map((f.det || []).map((d) => [d[0], d]));
+  const dpSpent = (l.dets || []).reduce((a, n) => a + (dinfo.get(n)?.[1] ?? 0), 0);
+  const over = total > l.limit;
+  head.innerHTML =
+    '<div class="lf">' + esc(f.name) + '</div>' +
+    '<div class="lm"><b class="' + (over ? 'bad' : '') + '">' + total + '</b>/' + l.limit + '<i>pts</i></div>' +
+    ((l.dets || []).length
+      ? '<div class="lm"><b>' + dpSpent + '</b>/' + dpBudget(l) + '<i>dp</i></div>' : '');
+  v.append(head);
+
+  // --- avisos
+  for (const i of issues) {
+    const w = el('div', 'warn' + (i.hard ? '' : ' soft'));
+    w.innerHTML = '<b>' + (i.hard ? 'BLOCKS PLAY' : 'COLLECTION') + '</b>' + esc(i.t) + ' \u2014 ' + esc(i.d);
+    v.append(w);
+  }
+  v.append(hint('Checked: points, repeat limits, Legends/Crucible, leader attachment, wargear caps, your collection. Not checked: enhancements, battleline minimums, detachment rules, ratio limits like one per five models. Wargear is free in 10th/11th, so it does not change the total.'));
+
+  // --- añadir unidad
+  const add = el('div','bar');
+  const sel = el('select'); sel.style.flex = '1 1 260px';
+  const ph = el('option'); ph.textContent = 'Add unit\u2026'; ph.value = ''; sel.append(ph);
+  for (const u of [...f.units].sort((a,b) => a.n.localeCompare(b.n))) {
+    if (u.m === 'legends'  && !l.legends)  continue;
+    if (u.m === 'crucible' && !l.crucible) continue;
+    for (const sz of sizesFor(u)) {
+      const o = el('option');
+      o.value = u.id + '|' + sz.n;
+      o.textContent = u.n + (sz.n > 1 ? '  \u00d7' + sz.n : '') + '  \u2014 ' + sz.pts + ' pts';
+      sel.append(o);
+    }
+  }
+  sel.onchange = () => {
+    if (!sel.value) return;
+    const [unitId, size] = sel.value.split('|');
+    l.slots.push({ unitId, size: +size });
+    saveList(l); sel.value = ''; renderLists();
+  };
+  add.append(sel); v.append(add);
+
+  v.append(detachmentsFor(l, f));
+  v.append(enhancementsFor(l, f));
+
+  // --- unidades de la lista
+  for (const [i, sl] of l.slots.entries()) {
+    const u = f.units.find(x => x.id === sl.unitId);
+    const row = el('div','slot');
+    const att = sl.attach && l.slots[sl.attach - 1];
+    const attU = att && f.units.find(x => x.id === att.unitId);
+    row.innerHTML = '<div class="id"><div class="nm">' + esc(u ? u.n : 'Unknown entry') +
+      (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</div>' +
+      '<div class="meta">' + (u ? ptsFor(u, sl.size, copyIndex(l)[i]) + ' pts' : '\u2014') +
+      (attU ? ' \u00b7 leading ' + esc(attU.n) : '') + '</div></div>';
+    // Si la unidad es líder, se puede engancharla a otra de la lista.
+    if (u && u.ld) {
+      const at = el('select');
+      at.style.cssText = 'font-size:12px;padding:5px 7px';
+      const none = el('option'); none.value=''; none.textContent='not attached'; at.append(none);
+      for (const [j, other] of l.slots.entries()) {
+        if (j === i) continue;
+        const ou = f.units.find(x => x.id === other.unitId);
+        if (!ou || !u.ld.includes(ou.id)) continue;
+        const o = el('option');
+        o.value = String(j + 1);
+        o.textContent = '\u2192 ' + ou.n + (other.size > 1 ? ' \u00d7' + other.size : '');
+        if (sl_eq(sl.attach, j + 1)) o.selected = true;
+        at.append(o);
+      }
+      at.onchange = () => { sl.attach = at.value ? +at.value : null; saveList(l); renderLists(); };
+      row.append(at);
+    }
+
+    const rm = el('button','btn'); rm.textContent = 'REMOVE';
+    rm.onclick = () => { l.slots.splice(i,1); saveList(l); renderLists(); };
+    row.append(rm);
+    v.append(row);
+
+    if (u && hasSheet(u)) {
+      const tog = el('button','tog'); tog.textContent = 'DATASHEET';
+      let sheet = null;
+      tog.onclick = () => {
+        if (sheet) { sheet.remove(); sheet = null; }
+        else { sheet = datasheetFor(u); row.after ? row.after(sheet) : v.append(sheet); }
+      };
+      row.append(tog);
+    }
+
+    if (u && u.o && u.o.length) v.append(wargearFor(l, sl, u));
+  }
+}
+
+/* ---------- helpers de UI ---------- */
+/* ------------------------------------------------------------------
+ * ARMAMENTO
+ *
+ * En 11e el armamento no cuesta puntos (72 excepciones en 4426 opciones de
+ * todo el repo), así que esto NO mueve el total: registra el detalle de la
+ * lista para que puedas reproducirla en la mesa.
+ *
+ * Dos formas: "one" = elegir una opción del grupo; "many" = cuántos modelos
+ * llevan cada variante, con su tope.
+ *
+ * Los topes que dependen del tamaño ("1 cada 5 modelos") viven en modifiers
+ * y no se resuelven. Por eso el tope mostrado es el máximo absoluto.
+ * ---------------------------------------------------------------- */
+function wargearFor(l, sl, u){
+  sl.gear = sl.gear || {};
+  const box = el('div');
+  box.style.cssText = 'padding:2px 0 12px 14px;border-left:2px solid var(--rule);margin-bottom:6px';
+
+  for (const [gi, g] of u.o.entries()) {
+    const head = el('div');
+    head.style.cssText = 'font-family:var(--mono);font-size:10px;letter-spacing:.1em;' +
+      'color:var(--ink2);margin:8px 0 3px';
+    head.textContent = g.n.toUpperCase();
+    box.append(head);
+
+    if (g.k === 'one') {
+      const sel = el('select');
+      sel.style.cssText = 'font-size:13px;padding:5px 8px;max-width:100%';
+      const none = el('option'); none.value=''; none.textContent='\u2014'; sel.append(none);
+      for (const [name] of g.opts) {
+        const o = el('option'); o.value = name; o.textContent = name;
+        if (sl.gear[gi] === name) o.selected = true;
+        sel.append(o);
+      }
+      sel.onchange = () => { sl.gear[gi] = sel.value || undefined; saveList(l); };
+      box.append(sel);
+      continue;
+    }
+
+    for (const [oi, [name, max]] of g.opts.entries()) {
+      const key = gi + ':' + oi;
+      const row = el('div');
+      row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:3px 0';
+
+      const lab = el('div');
+      lab.style.cssText = 'flex:1;min-width:0;font-size:13px';
+      lab.textContent = name + (max ? '  (max ' + max + ')' : '');
+
+      const step = el('div','step');
+      const minus = el('button'); minus.textContent = '\u2212';
+      const val   = el('input'); val.type='text'; val.inputMode='numeric';
+      val.value = sl.gear[key] ?? 0;
+      const plus  = el('button'); plus.textContent = '+';
+
+      const set = (n) => {
+        n = Math.max(0, Math.min(max ?? 99, n | 0));
+        if (n) sl.gear[key] = n; else delete sl.gear[key];
+        val.value = n; saveList(l);
+      };
+      minus.onclick = () => set((sl.gear[key] ?? 0) - 1);
+      plus.onclick  = () => set((sl.gear[key] ?? 0) + 1);
+      val.onchange  = () => set(parseInt(val.value,10) || 0);
+
+      step.append(minus, val, plus);
+      row.append(lab, step);
+      box.append(row);
+    }
+  }
+  return box;
+}
+
+/* Ficha de datos: stats de la unidad y tabla de armas. Sale del mismo
+ * catálogo, así que se actualiza sola con los datos. */
+function datasheetFor(u){
+  const box = el('div','sheet');
+
+  if (u.st) {
+    const row = el('div','stats');
+    const labels = ['M','T','SV','W','LD','OC'];
+    u.st.forEach((v, i) => {
+      if (v == null || v === '') return;
+      const c = el('div','stat');
+      c.innerHTML = '<b>' + labels[i] + '</b><span>' + esc(String(v)) + '</span>';
+      row.append(c);
+    });
+    box.append(row);
+  }
+
+  // Habilidades antes de las armas: es el orden de la ficha oficial.
+  if (u.ab && u.ab.length) {
+    const b = el('div','band'); b.textContent = 'ABILITIES'; box.append(b);
+    const w = el('div','abil');
+    w.innerHTML = u.ab.map(([n, d]) => '<h4>' + esc(n) + '</h4><p>' + esc(d) + '</p>').join('');
+    box.append(w);
+  }
+
+  for (const melee of [0, 1]) {
+    const ws = (u.w || []).filter(w => w[1] === melee);
+    if (!ws.length) continue;
+    const b = el('div','band');
+    b.textContent = melee ? 'MELEE WEAPONS' : 'RANGED WEAPONS';
+    box.append(b);
+    const t = el('table','wp');
+    t.innerHTML =
+      '<tr><th>Weapon</th><th>Range</th><th>A</th><th>' + (melee ? 'WS' : 'BS') +
+      '</th><th>S</th><th>AP</th><th>D</th></tr>' +
+      ws.map(w =>
+        '<tr><td>' + esc(w[0]) +
+        (w[8] ? '<span class="wkw">' + esc(w[8]) + '</span>' : '') + '</td>' +
+        '<td>' + esc(w[2]) + '</td><td>' + esc(w[3]) + '</td><td>' + esc(w[4]) +
+        '</td><td>' + esc(w[5]) + '</td><td>' + esc(w[6]) + '</td><td>' + esc(w[7]) +
+        '</td></tr>').join('');
+    box.append(t);
+  }
+
+  if (u.kw && u.kw.length) {
+    const k = el('div','kwbar');
+    k.innerHTML = u.kw.map(x => '<span>' + esc(x) + '</span>').join('');
+    box.append(k);
+  }
+
+  return box;
+}
+
+function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.length) || (u.kw && u.kw.length)); }
+function sl_eq(a,b){ return a != null && +a === b; }
+function el(tag, cls){ const e = document.createElement(tag); if (cls) e.className = cls; return e; }
+function note(t){ const p = el('p','note'); p.textContent = t; return p; }
+function hint(t){ const p = el('div','hint'); p.textContent = t; return p; }
+function labelled(text, node){
+  const w = el('label'); w.style.cssText='display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2)';
+  w.append(text, node); return w;
+}
+/* Tamaños de batalla oficiales, tal como los declara el game system de
+ * BSData. Son los mismos nombres de los que salen los topes de repetición
+ * ("2 en Incursion, 3 normalmente"), así que conviene usar los suyos. */
+const BATTLE_SIZES = [
+  [1000, 'Incursion'],
+  [2000, 'Strike Force'],
+  [3000, 'Onslaught'],
+  [500,  'Combat Patrol'],
+  [1500, 'Custom'],
+  [2500, 'Custom'],
+];
+
+function numSelect(values, current, cb){
+  const s = el('select');
+  const names = new Map(BATTLE_SIZES);
+  for (const n of values){
+    const o = el('option'); o.value = n;
+    o.textContent = n + ' pts' + (names.has(n) && names.get(n) !== 'Custom' ? '  \u00b7 ' + names.get(n) : '');
+    if (n === current) o.selected = true;
+    s.append(o);
+  }
+  s.onchange = () => cb(+s.value); return s;
+}
+/* `onPick` permite al formulario de creación reaccionar sin pasar por
+ * renderLists(): redibujar ahí reconstruye el borrador desde cero y le
+ * resetea la facción. Ese era el bug de "elijo destacamento y cambia de
+ * facción". */
+function detachInput(f, l, onPick){
+  const done = onPick || (() => { saveList(l); renderLists(); });
+  if (f.det && f.det.length){
+    const s = el('select');
+    const o0 = el('option'); o0.value=''; o0.textContent='\u2014'; s.append(o0);
+    for (const [name, dp, obj] of f.det){
+      const o = el('option'); o.value = name;
+      o.textContent = name + '  \u00b7 ' + dp + ' DP' + (obj ? '  \u00b7 ' + obj : '');
+      if (name === l.detachment) o.selected = true;
+      s.append(o);
+    }
+    s.onchange = () => { l.detachment = s.value; done(); };
+    return s;
+  }
+  const i = el('input'); i.type='text'; i.placeholder='type it'; i.value = l.detachment || '';
+  i.oninput = () => { l.detachment = i.value; onPick ? onPick() : saveList(l); };
+  return i;
+}
+function check(text, val, cb){
+  const w = el('label'); w.style.cssText='display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2)';
+  const c = el('input'); c.type='checkbox'; c.checked = !!val; c.style.accentColor='var(--ochre)';
+  c.onchange = () => cb(c.checked);
+  w.append(c, text); return w;
+}
+/* Formulario de creación. Antes era un prompt() del navegador que sólo
+ * preguntaba la facción — lo mínimo para probar la lógica, inservible como
+ * pantalla. Acá se definen de una vez las cosas que no se pueden cambiar
+ * después sin rehacer la lista: facción y tope de puntos. */
+let creating = false;
+
+let draftList = null;
+
+function renderNew(v){
+  // El borrador persiste entre redibujos: si se recreara acá, cualquier
+  // re-render perdería lo que el usuario ya eligió.
+  const draft = draftList ||= {
+    id: Date.now(), name: '', faction: DATA.factions[0].slug,
+    dets: [], limit: 2000, legends: false, crucible: false, slots: [], enh: [],
+  };
+
+  const head = el('div','group'); head.textContent = 'NEW LIST';
+  v.append(head);
+
+  // nombre
+  const name = el('input'); name.type = 'text'; name.placeholder = 'List name';
+  name.style.cssText = 'width:100%;font-family:var(--disp);font-weight:600;font-size:20px;' +
+    'background:transparent;border:none;border-bottom:1px solid var(--rule2);padding:6px 0;margin-bottom:16px';
+  name.value = draft.name || '';
+  name.oninput = () => draft.name = name.value;
+  v.append(name);
+
+  // facción
+  const fsel = el('select'); fsel.style.cssText = 'width:100%;font-family:var(--disp);font-weight:600;font-size:16px';
+  for (const group of ['Imperium','Chaos','Xenos','Otros']) {
+    const fs = DATA.factions.filter(f => f.group === group);
+    if (!fs.length) continue;
+    const og = document.createElement('optgroup'); og.label = group;
+    for (const f of fs) {
+      const o = el('option'); o.value = f.slug; o.textContent = f.name;
+      if (f.slug === draft.faction) o.selected = true;
+      og.append(o);
+    }
+    fsel.append(og);
+  }
+  fsel.onchange = () => { draft.faction = fsel.value; refreshDet(); };
+  v.append(labelledBlock('Faction', fsel));
+
+  // tope de puntos — inmutable una vez creada
+  const psel = numSelect([500,1000,1500,2000,2500,3000], draft.limit, n => draft.limit = n);
+  psel.style.width = '100%';
+  v.append(labelledBlock('Points limit', psel));
+  v.append(hint('The points limit is fixed when the list is created. Changing it later would silently invalidate what you built.'));
+
+  // destacamento
+  // Los destacamentos se eligen dentro de la lista, no acá: son varios y
+  // dependen del presupuesto de DP.
+  function refreshDet(){}
+
+  // formato
+  const fmt = el('div','bar');
+  fmt.append(check('Allow Legends',  draft.legends,  x => draft.legends  = x));
+  fmt.append(check('Allow Crucible', draft.crucible, x => draft.crucible = x));
+  v.append(fmt);
+
+  // acciones
+  const acts = el('div','bar');
+  const ok = el('button','btn pri'); ok.textContent = 'CREATE';
+  ok.onclick = () => {
+    lists.push(draft); saveList(draft);
+    draftList = null; creating = false; editing = draft.id; renderLists();
+  };
+  const no = el('button','btn'); no.textContent = 'CANCEL';
+  no.onclick = () => { draftList = null; creating = false; renderLists(); };
+  acts.append(ok, no);
+  v.append(acts);
+}
+
+function labelledBlock(text, node){
+  const w = el('div'); w.style.marginBottom = '14px';
+  const l = el('div'); l.style.cssText =
+    'font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ink2);margin-bottom:4px';
+  l.textContent = text.toUpperCase();
+  w.append(l, node); return w;
+}
+
+/* Barre las listas guardadas y borra opciones de armamento que ya no existen
+ * en el catálogo. Pasa cuando el dato cambia o cuando una versión anterior de
+ * la app ofrecía como elegible algo que en realidad era equipo fijo. */
+function pruneGear(){
+  let touched = 0;
+  for (const l of lists) {
+    const f = factionOf(l.faction);
+    if (!f) continue;
+    for (const sl of l.slots) {
+      if (!sl.gear) continue;
+      const u = f.units.find(x => x.id === sl.unitId);
+      for (const k of Object.keys(sl.gear)) {
+        const [gi, oi] = k.split(':').map(Number);
+        const g = u && u.o && u.o[gi];
+        const stale = !g || (Number.isFinite(oi) ? !g.opts[oi] : false);
+        if (stale) { delete sl.gear[k]; touched++; }
+      }
+      if (!Object.keys(sl.gear).length) delete sl.gear;
+    }
+    if (touched) saveList(l);
+  }
+  return touched;
+}
+
+/* ------------------------------------------------------------------
+ * MEJORAS (Enhancements)
+ *
+ * NO están en BSData 11e. Se buscó en grupos, categorías, reglas, perfiles
+ * y tipos de perfil de los 46 archivos: no existen. Los destacamentos sólo
+ * traen nombre, coste y reglas, sin hijos.
+ *
+ * Así que se cargan a mano: nombre + puntos, y opcionalmente a qué personaje
+ * de la lista van. Suman al total, que es lo que rompe una lista de 2000.
+ * La app NO sabe cuáles permite cada destacamento ni cuántas se pueden
+ * llevar, y lo dice en pantalla en vez de fingir que valida.
+ * ---------------------------------------------------------------- */
+/* Presupuesto de DP por tamaño de partida. NO está en ninguna de las dos
+ * fuentes: las entradas de Battle Size no traen costLimits y el MFM remite
+ * a la app oficial. Es lo único del compositor que sale de las reglas y no
+ * del dato, así que se deja editable. */
+function dpBudget(l){
+  if (l.dpBudget != null) return l.dpBudget;
+  return l.limit >= 3000 ? 4 : l.limit >= 2000 ? 3 : 2;
+}
+
+function detachmentsFor(l, f){
+  l.dets = l.dets || [];
+  const box = el('div');
+  box.style.cssText = 'margin:14px 0';
+
+  const info = new Map((f.det || []).map((d) => [d[0], d]));
+  const spent = l.dets.reduce((a, n) => a + (info.get(n)?.[1] ?? 0), 0);
+  const budget = dpBudget(l);
+
+  const head = el('div','group');
+  head.textContent = 'DETACHMENTS \u00b7 ' + spent + ' / ' + budget + ' DP';
+  box.append(head);
+
+  for (const [i, name] of l.dets.entries()) {
+    const d = info.get(name);
+    const row = el('div','slot');
+    row.innerHTML = '<div class="id"><div class="nm">' + esc(name) + '</div>' +
+      '<div class="meta">' + (d ? d[1] + ' DP' : '?') +
+      (d?.[2] ? ' \u00b7 ' + esc(d[2]) : '') +
+      (d?.[3] ? ' \u00b7 unique: ' + esc(d[3]) : '') + '</div></div>';
+    const rm = el('button','btn'); rm.textContent = 'REMOVE';
+    rm.onclick = () => { l.dets.splice(i,1); saveList(l); renderLists(); };
+    row.append(rm);
+    box.append(row);
+  }
+
+  if (f.det && f.det.length) {
+    const sel = el('select');
+    sel.style.cssText = 'width:100%;margin-top:8px;font-size:14px';
+    const o0 = el('option'); o0.value=''; o0.textContent='Add a detachment\u2026'; sel.append(o0);
+    for (const [name, dp, obj, uniq] of f.det) {
+      if (l.dets.includes(name)) continue;
+      const o = el('option'); o.value = name;
+      o.textContent = name + '  \u00b7 ' + dp + ' DP' + (obj ? '  \u00b7 ' + obj : '');
+      sel.append(o);
+    }
+    sel.onchange = () => {
+      if (!sel.value) return;
+      l.dets.push(sel.value); saveList(l); renderLists();
+    };
+    box.append(sel);
+  } else {
+    const i = el('input'); i.type='text'; i.placeholder='type a detachment name';
+    i.style.cssText = 'width:100%;margin-top:8px';
+    i.onchange = () => { if (i.value) { l.dets.push(i.value); saveList(l); renderLists(); } };
+    box.append(i);
+  }
+
+  // presupuesto editable
+  const bwrap = el('div');
+  bwrap.style.cssText = 'display:flex;align-items:center;gap:6px;margin-top:10px;font-size:13px;color:var(--ink2)';
+  const bin = el('input'); bin.type='text'; bin.inputMode='numeric'; bin.value = budget;
+  bin.style.cssText = 'width:52px;text-align:center;font-family:var(--mono);padding:4px 6px;' +
+    'background:var(--panel);border:1px solid var(--rule2);border-radius:2px';
+  bin.onchange = () => { l.dpBudget = parseInt(bin.value,10) || budget; saveList(l); renderLists(); };
+  bwrap.append('DP available', bin);
+  box.append(bwrap);
+
+  box.append(hint('The DP budget for each battle size is not in the data \u2014 it lives in the official app. ' +
+                  'Adjust it here if your event uses a different number.'));
+  return box;
+}
+
+function enhancementsFor(l, f){
+  l.enh = l.enh || [];
+  const box = el('div');
+  box.style.cssText = 'margin:14px 0';
+
+  const head = el('div','group');
+  const sum = l.enh.reduce((a, e) => a + (+e.pts || 0), 0);
+  head.textContent = 'ENHANCEMENTS \u00b7 ' + sum + ' PTS';
+  box.append(head);
+
+  for (const [i, e] of l.enh.entries()) {
+    const row = el('div','slot');
+
+    // Si la facción trae mejoras en el catálogo, se eligen de una lista y los
+    // puntos se completan solos. Si no, queda el campo libre de siempre.
+    let name;
+    // Con MFM, sólo se ofrecen las mejoras del destacamento elegido.
+    // El repertorio es la UNIÓN de las mejoras de los destacamentos elegidos.
+    const pool = f.enhBy
+      ? (l.dets || []).flatMap((n) => f.enhBy[n] || [])
+      : f.enh;
+
+    if (pool && pool.length) {
+      name = el('select');
+      name.style.cssText = 'flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:15px;max-width:100%';
+      const o0 = el('option'); o0.value = ''; o0.textContent = 'choose an enhancement\u2026'; name.append(o0);
+      for (const [n, pts] of pool) {
+        const o = el('option'); o.value = n; o.textContent = n + '  \u00b7 ' + pts + ' pts';
+        if (n === e.n) o.selected = true;
+        name.append(o);
+      }
+      name.onchange = () => {
+        e.n = name.value;
+        const hit = pool.find(([n]) => n === name.value);
+        e.pts = hit ? hit[1] : 0;
+        saveList(l); renderLists();
+      };
+    } else {
+      name = el('input'); name.type = 'text'; name.value = e.n || '';
+      name.placeholder = 'Enhancement name';
+      name.style.cssText = 'flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:15px;' +
+        'background:transparent;border:none;border-bottom:1px solid var(--rule2);padding:3px 0';
+      name.oninput = () => { e.n = name.value; saveList(l); };
+    }
+
+    const pts = el('input'); pts.type = 'text'; pts.inputMode = 'numeric';
+    pts.value = e.pts ?? 0;
+    pts.style.cssText = 'width:64px;text-align:right;font-family:var(--mono);font-size:14px;' +
+      'background:var(--panel);border:1px solid var(--rule2);border-radius:2px;padding:5px 7px';
+    pts.onchange = () => { e.pts = parseInt(pts.value, 10) || 0; saveList(l); renderLists(); };
+
+    // a qué personaje va
+    const on = el('select'); on.style.cssText = 'font-size:12px;padding:5px 7px;max-width:190px';
+    const none = el('option'); none.value = ''; none.textContent = 'unassigned'; on.append(none);
+    for (const [j, sl] of l.slots.entries()) {
+      const u = f.units.find(x => x.id === sl.unitId);
+      if (!u || !(u.kw || []).includes('Character')) continue;
+      const o = el('option'); o.value = String(j);
+      o.textContent = u.n;
+      if (String(e.on) === String(j)) o.selected = true;
+      on.append(o);
+    }
+    on.onchange = () => { e.on = on.value === '' ? null : +on.value; saveList(l); };
+
+    const rm = el('button','btn'); rm.textContent = 'REMOVE';
+    rm.onclick = () => { l.enh.splice(i, 1); saveList(l); renderLists(); };
+
+    row.append(name, on, pts, rm);
+    box.append(row);
+  }
+
+  const add = el('button','btn');
+  add.textContent = '+ ENHANCEMENT';
+  add.style.marginTop = '8px';
+  add.onclick = () => { l.enh.push({ n:'', pts:0, on:null }); saveList(l); renderLists(); };
+  box.append(add);
+
+  box.append(hint(f.enhBy && !(l.dets || []).length
+    ? 'Pick a detachment first \u2014 enhancements belong to detachments.'
+    : f.enhBy
+    ? 'Enhancements and points come from the Munitorum Field Manual, filtered to your detachment. How many you may take is not checked.'
+    : f.enh && f.enh.length
+    ? 'Enhancement points come from the catalogue. Which ones your detachment allows, and how many you may take, are not checked.'
+    : 'This faction has no enhancements in the catalogue yet, so type them in yourself. Their points still count towards the total.'));
+  return box;
+}
+
+function newList(){ draftList = null; creating = true; renderLists(); }
+
+/* ------------------------------------------------------------------
+ * COMPARTIR
+ *
+ * El archivo guarda los NOMBRES además de los ids, y la revisión de datos
+ * con la que se armó. Si el rival tiene un catálogo más nuevo y un id
+ * cambió, la lista sigue siendo legible: se ve qué unidad era aunque no
+ * se pueda recalcular.
+ * ---------------------------------------------------------------- */
+function exportList(l){
+  const f = factionOf(l.faction);
+  const payload = {
+    schemaVersion: 1,
+    kind: 'armoury-list',
+    dataRevision: DATA?.revision?.sha ?? null,
+    exportedAt: new Date().toISOString(),
+    name: l.name || 'Untitled',
+    faction: l.faction,
+    factionName: f ? f.name : null,
+    detachments: l.dets || [],
+    dpBudget: dpBudget(l),
+    mission: l.mission || null,
+    enhancements: (l.enh || []).filter(e => e.n || e.pts),
+    limit: l.limit,
+    legends: !!l.legends,
+    crucible: !!l.crucible,
+    slots: l.slots.map((sl) => {
+      const u = f && f.units.find((x) => x.id === sl.unitId);
+      return {
+        unitId: sl.unitId,
+        unitName: u ? u.n : null,     // respaldo legible si el id ya no existe
+        size: sl.size,
+        attach: sl.attach ?? null,
+        gear: sl.gear ?? null,
+      };
+    }),
+  };
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type:'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = (l.name || 'list').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importList(){
+  const inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = 'application/json';
+  inp.onchange = async () => {
+    try {
+      const d = JSON.parse(await inp.files[0].text());
+      if (d.kind !== 'armoury-list' || !Array.isArray(d.slots))
+        throw new Error('Not an Armoury list file.');
+
+      const l = {
+        id: Date.now(),
+        name: d.name || 'Imported list',
+        faction: d.faction,
+        dets: Array.isArray(d.detachments) ? d.detachments : (d.detachment ? [d.detachment] : []),
+        dpBudget: d.dpBudget ?? null,
+        mission: d.mission || '',
+        enh: Array.isArray(d.enhancements) ? d.enhancements : [],
+        limit: d.limit || 2000,
+        legends: !!d.legends,
+        crucible: !!d.crucible,
+        // Marca de lista ajena: sin esto, la app avisaría que "te faltan
+        // miniaturas" para una lista que no es tuya.
+        foreign: true,
+        importedRevision: d.dataRevision ?? null,
+        slots: d.slots.map((sl) => ({
+          unitId: sl.unitId, size: sl.size,
+          attach: sl.attach ?? null, gear: sl.gear ?? null,
+          unitName: sl.unitName ?? null,
+        })),
+      };
+      lists.push(l); saveList(l); editing = l.id; renderLists();
+    } catch (e) {
+      alert(e.message || 'Could not read that file.');
+    }
+  };
+  inp.click();
+}
+
+/* ------------------------------------------------------------------
+ * IMPRESIÓN — hoja de consulta rápida.
+ * Primero el resumen de la lista, después una ficha por unidad, cada una
+ * sin cortarse entre páginas.
+ * ---------------------------------------------------------------- */
+function printList(l){
+  const f = factionOf(l.faction);
+  const { total } = review(l);
+  const area = document.getElementById('printArea');
+  area.innerHTML = '';
+
+  const head = el('div','pr-head');
+  head.innerHTML = '<h1>' + esc(l.name || 'Untitled') + '</h1>' +
+    '<div class="m">' + esc(f ? f.name : '?') +
+    ((l.dets || []).length ? ' \u00b7 ' + esc(l.dets.join(' + ')) : '') +
+    (l.mission ? ' \u00b7 ' + esc(l.mission) : '') +
+    ' \u00b7 ' + total + ' / ' + l.limit + ' pts' +
+    (l.foreign ? ' \u00b7 OPPONENT LIST' : '') +
+    ' \u00b7 data ' + esc(String(l.importedRevision || DATA?.revision?.sha || '?')) + '</div>';
+  area.append(head);
+
+  // resumen
+  const t = el('table','pr-roster');
+  const prCopies = copyIndex(l);
+  t.innerHTML = l.slots.map((sl, pi) => {
+    const u = f && f.units.find((x) => x.id === sl.unitId);
+    const att = sl.attach && l.slots[sl.attach - 1];
+    const au = att && f && f.units.find((x) => x.id === att.unitId);
+    const gear = sl.gear ? Object.entries(sl.gear).filter(([,v]) => v).map(([k,v]) =>
+      typeof v === 'number' ? gearName(u, k) + ' \u00d7' + v : v).filter(Boolean) : [];
+    return '<tr><td>' + esc(u ? u.n : (sl.unitName || 'Unknown')) +
+      (sl.size > 1 ? ' \u00d7' + sl.size : '') +
+      (au ? '<br><span style="font-size:11px;color:#555">leading ' + esc(au.n) + '</span>' : '') +
+      (gear.length ? '<br><span style="font-size:11px;color:#555">' + esc(gear.join(', ')) + '</span>' : '') +
+      '</td><td>' + (u ? ptsFor(u, sl.size, prCopies[pi]) : '\u2014') + '</td></tr>';
+  }).join('') +
+    (l.enh || []).filter(e => e.n || e.pts).map((e) => {
+      const host = e.on != null && l.slots[e.on];
+      const hu = host && f && f.units.find((x) => x.id === host.unitId);
+      return '<tr><td>' + esc(e.n || 'Enhancement') +
+        (hu ? '<br><span style="font-size:11px;color:#555">on ' + esc(hu.n) + '</span>' : '') +
+        '</td><td>' + (+e.pts || 0) + '</td></tr>';
+    }).join('') +
+    '<tr class="tot"><td>TOTAL</td><td>' + total + '</td></tr>';
+  area.append(t);
+
+  // fichas, una por unidad distinta
+  const seen = new Set();
+  for (const sl of l.slots) {
+    if (seen.has(sl.unitId)) continue;
+    seen.add(sl.unitId);
+    const u = f && f.units.find((x) => x.id === sl.unitId);
+    if (!u || !hasSheet(u)) continue;
+    const card = el('div','pr-unit');
+    card.innerHTML = '<h3>' + esc(u.n) + '</h3>';
+    card.append(datasheetFor(u));
+    area.append(card);
+  }
+
+  window.print();
+}
+
+// nombre legible de una opción de armamento a partir de su clave "grupo:opción"
+function gearName(u, key){
+  if (!u || !u.o) return key;
+  const [gi, oi] = key.split(':').map(Number);
+  return u.o[gi]?.opts?.[oi]?.[0] ?? key;
+}
+
+/* ---------- pestañas ---------- */
+function showTab(which){
+  const isCol = which === 'col';
+  document.getElementById('viewCol').hidden   = !isCol;
+  document.getElementById('viewLists').hidden = isCol;
+  document.querySelector('.totals').hidden    = !isCol;
+  document.getElementById('tabCol').setAttribute('aria-selected', isCol);
+  document.getElementById('tabList').setAttribute('aria-selected', !isCol);
+  if (!isCol) renderLists();
+}
+document.getElementById('tabCol').onclick  = () => showTab('col');
+document.getElementById('tabList').onclick = () => showTab('lists');
+
+boot();
+
+/* Registro del service worker: sólo cuando la app se sirve por http/https.
+ * En file:// no se puede, y no hace falta porque armoury.html ya trae todo. */
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {});
+}
+</script>
+</body>
+</html>
