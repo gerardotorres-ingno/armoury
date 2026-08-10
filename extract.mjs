@@ -40,12 +40,17 @@ async function download() {
   await fs.rm(SRC_DIR, { recursive: true, force: true });
   await execFileP('tar', ['-xzf', tarball, '-C', DATA_DIR]);
 
-  // Revisión: el SHA del commit actual, para versionar la extracción
-  const meta = await fetch(
-    `https://api.github.com/repos/${REPO}/commits/${BRANCH}`
-  ).then((r) => r.json());
+  // Revisión: el SHA del commit actual, para versionar la extracción.
+  // Si la API de GitHub no contesta (sin red, límite de peticiones), se cae a
+  // una versión por fecha: "unknown" en el changelog no le sirve a nadie.
+  try {
+    const meta = await fetch(`https://api.github.com/repos/${REPO}/commits/${BRANCH}`)
+      .then((r) => r.json());
+    if (meta?.sha) return { sha: meta.sha.slice(0, 7), date: meta.commit?.author?.date ?? null };
+  } catch {}
 
-  return { sha: meta.sha?.slice(0, 7) ?? 'unknown', date: meta.commit?.author?.date ?? null };
+  const today = new Date().toISOString().slice(0, 10);
+  return { sha: 'd' + today.replace(/-/g, ''), date: today };
 }
 
 // ---------------------------------------------------------------- helpers
@@ -64,6 +69,17 @@ function buildGlobalIndex(catalogues) {
   for (const cat of catalogues) {
     for (const e of asArray(cat.sharedSelectionEntries)) {
       if (!idx.has(e.id)) idx.set(e.id, e);
+    }
+  }
+  return idx;
+}
+
+/** Igual que el anterior pero para GRUPOS compartidos: ahí viven las mejoras. */
+function buildGroupIndex(catalogues) {
+  const idx = new Map();
+  for (const cat of catalogues) {
+    for (const g of asArray(cat.sharedSelectionEntryGroups)) {
+      if (!idx.has(g.id)) idx.set(g.id, g);
     }
   }
   return idx;
@@ -221,7 +237,7 @@ function leaderTargetsOf(entry) {
  * Se extraen los topes planos (max:N). Las proporciones del tipo "1 cada 5
  * modelos" viven en modifiers y NO se resuelven: eso ya es motor de reglas.
  */
-function optionsOf(entry) {
+function optionsOf(entry, shared) {
   const groups = [];
 
   const capOf = (node) => {
@@ -234,7 +250,19 @@ function optionsOf(entry) {
   const visit = (node, depth) => {
     if (depth > 4) return;
     for (const g of asArray(node.selectionEntryGroups)) {
-      const opts = asArray(g.selectionEntries)
+      // Las alternativas de un grupo llegan de DOS formas: como hijos directos
+      // y como entryLinks a entradas compartidas. Leer sólo las primeras deja
+      // el Defiler con una opción de cuatro: las tres armas de recambio están
+      // enlazadas, no embebidas.
+      const linked = asArray(g.entryLinks)
+        .filter((l) => l.type === 'selectionEntry')
+        .map((l) => {
+          const t = shared?.get(l.targetId);
+          return t ? { ...t, name: l.name || t.name } : null;
+        })
+        .filter(Boolean);
+
+      const opts = [...asArray(g.selectionEntries), ...linked]
         .filter((e) => e.type === 'model' || e.type === 'upgrade')
         .map((e) => ({
           n: e.name,
@@ -415,7 +443,7 @@ function unitProfileOf(entry) {
 
 // ---------------------------------------------------------------- extracción
 
-function extractCatalogue(catalogue, fileName, shared) {
+function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex) {
   if (catalogue.library === true) return null; // las Library no son facciones jugables
 
   const datasheets = [];
@@ -447,7 +475,7 @@ function extractCatalogue(catalogue, fileName, shared) {
       ladder: priceLadder(target),
       cap: forceCapOf(target),
       leads: leaderTargetsOf(target),
-      options: optionsOf(target),
+      options: optionsOf(target, shared),
       weapons: weaponsOf(target),
       abilities: abilitiesOf(target),
       faction: factionOf(target),
@@ -457,18 +485,58 @@ function extractCatalogue(catalogue, fileName, shared) {
     });
   }
 
-  // Destacamentos: viven en una entrada `upgrade` llamada Detachment. Sólo
-  // 22 de 36 catálogos la resuelven — los capítulos de Space Marines la
-  // heredan del catálogo base. Donde no hay, la app deja escribirlo a mano.
-  let detachments = [];
-  for (const link of asArray(catalogue.entryLinks)) {
-    const t = shared.get(link.targetId);
-    if (!t || !/^detachment$/i.test(t.name ?? '')) continue;
-    detachments = asArray(t.selectionEntryGroups)
-      .flatMap((g) => asArray(g.selectionEntries).map((x) => x.name))
-      .filter(Boolean);
-    break;
+  // Destacamentos con su coste en PUNTOS DE DESTACAMENTO.
+  //
+  // El coste no está en un campo aparte: es un `cost` con name "Detachment
+  // Points" (costType 82ae-1066-5107-6ae0). Buscarlo por nombre de grupo no
+  // lo encuentra nunca; hay que mirar los costes.
+  //   Berzerker Warband 3 · Cult of Blood 2 · Brazen Engines 1
+  const costNamed = (node, name) => {
+    const c = asArray(node.costs).find((x) => x.name === name);
+    return c ? Number(c.value) : 0;
+  };
+
+  // Barrido directo por COSTE en lugar de recorrer el árbol.
+  //
+  // La estructura varía demasiado entre facciones: a veces el Detachment
+  // cuelga del catálogo, a veces de su Library, a veces con un nivel extra de
+  // indirección. Perseguir el árbol falla en la mitad de los casos.
+  //
+  // Lo estable es el coste: una entrada con "Detachment Points" > 0 ES un
+  // destacamento, y una con coste "Enhancements" > 0 ES una mejora. Se barre
+  // este catálogo y su Library propia (la que lleva su nombre en el título,
+  // para no arrastrar las de Knights o Agents, que se enlazan como aliados).
+  const core = catalogue.name.replace(/^(Imperium|Chaos|Xenos)\s*-\s*/, '').trim();
+  const sources = [catalogue];
+  for (const cl of asArray(catalogue.catalogueLinks)) {
+    const lib = libIndex.get(cl.targetId);
+    if (lib && lib.library === true && (lib.name ?? '').includes(core)) sources.push(lib);
   }
+
+  const detachments = [];
+  const enhancements = [];
+  const seenDet = new Set();
+  const seenEnh = new Set();
+
+  for (const src of sources) {
+    const stack = [...asArray(src.sharedSelectionEntries), ...asArray(src.sharedSelectionEntryGroups)];
+    while (stack.length) {
+      const n = stack.pop();
+      if (n.name) {
+        const dp = costNamed(n, 'Detachment Points');
+        if (dp > 0 && !seenDet.has(n.name)) { seenDet.add(n.name); detachments.push({ name: n.name, dp }); }
+        if (costNamed(n, 'Enhancements') > 0 && !seenEnh.has(n.name)) {
+          seenEnh.add(n.name);
+          enhancements.push({ name: n.name, pts: costNamed(n, 'pts') });
+        }
+      }
+      for (const e of asArray(n.selectionEntries)) stack.push(e);
+      for (const g of asArray(n.selectionEntryGroups)) stack.push(g);
+    }
+  }
+  detachments.sort((a, b) => a.name.localeCompare(b.name));
+
+  enhancements.sort((a, b) => a.name.localeCompare(b.name));
 
   datasheets.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -496,6 +564,7 @@ function extractCatalogue(catalogue, fileName, shared) {
     catalogueName: catalogue.name,
     nativeFaction,
     detachments,
+    enhancements,
     revision: catalogue.revision,
     file: fileName,
     counts: {
@@ -537,6 +606,8 @@ async function main() {
 
   // PASO 2: índice global para resolver entryLinks entre catálogos
   const shared = buildGlobalIndex(loaded.map((l) => l.cat));
+  const groupIndex = buildGroupIndex(loaded.map((l) => l.cat));
+  const libIndex = new Map(loaded.map(({ cat }) => [cat.id, cat]));
   console.log(`  Índice global: ${shared.size} entradas compartidas de ${loaded.length} archivos`);
 
   const index = [];
@@ -546,7 +617,7 @@ async function main() {
   for (const { file, cat } of loaded) {
     if (factionArg && !file.toLowerCase().includes(factionArg.toLowerCase())) continue;
 
-    const result = extractCatalogue(cat, file, shared);
+    const result = extractCatalogue(cat, file, shared, groupIndex, libIndex);
     if (!result) continue;
     if (result.datasheets.length === 0) continue;
 
