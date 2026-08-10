@@ -1,0 +1,181 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "6e59-e1ee-47ad-6ce5",
+  "catalogueName": "Imperium - Adeptus Astartes - Raven Guard",
+  "nativeFaction": "Adeptus Astartes",
+  "detachments": [],
+  "revision": 1,
+  "file": "Imperium - Raven Guard.json",
+  "counts": {
+    "total": 2,
+    "native": 2,
+    "matched": 2,
+    "legends": 0,
+    "crucible": 0,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "cbb9-15e9-16ae-6597",
+      "linkId": "5519-9de6-e650-d2c7",
+      "name": "Aethon Shaan",
+      "rawName": "Aethon Shaan",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Claws of Severax",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Sustained Hits 2, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Chapter Master of the Raven Guard",
+          "d": "At the start of the Declare Battle Formations step, if your army includes Aethon Shaan and Kayvaan Shrike, until the end of the battle, your Kayvaan Shrike unit loses its Lone Operative ability and it replaces its Chapter Master keyword with Captain."
+        },
+        {
+          "n": "Master of Shadows",
+          "d": "In your Command phase, you can select one unit from your opponent’s army. Until the start of your next Command phase, each time an Adeptus Astartes unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible)."
+        },
+        {
+          "n": "Blackwing Mantle",
+          "d": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP, even if you have already used that Stratagem on a different unit this phase."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Fly",
+        "Jump Pack",
+        "Imperium",
+        "Tacticus",
+        "Chapter Master",
+        "Aethon Shaan"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "339f-9776-243d-69a6",
+      "linkId": "8ec7-1c8b-5540-5f14",
+      "name": "Kayvaan Shrike",
+      "rawName": "Kayvaan Shrike",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "ASSAULT INTERCESSORS WITH JUMP PACKS",
+        "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Blackout",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Pistol, Precision"
+        },
+        {
+          "n": "The Raven's Talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Precision, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Trifold Path of Shadow",
+          "d": "While this model is leading a unit, models in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\"."
+        },
+        {
+          "n": "Echo of the Ravenspire",
+          "d": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "n": "Inspiring Commander",
+          "d": "If you include this model in your army, until the end of the battle, non-Character models in Assault Intercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Imperium",
+        "Fly",
+        "Jump Pack",
+        "Chapter Master",
+        "Kayvaan Shrike",
+        "Phobos"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    }
+  ]
+}

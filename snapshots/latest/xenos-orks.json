@@ -1,0 +1,7724 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "a55f-b7b3-6c65-a05f",
+  "catalogueName": "Xenos - Orks",
+  "nativeFaction": "Orks",
+  "detachments": [],
+  "revision": 2,
+  "file": "Orks.json",
+  "counts": {
+    "total": 94,
+    "native": 94,
+    "matched": 58,
+    "legends": 33,
+    "crucible": 3,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "4229-83f0-b03b-bd44",
+      "linkId": "8f1d-6c04-6c8b-e14a",
+      "name": "Attack Fighta",
+      "rawName": "Attack Fighta [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Interceptor",
+          "d": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll."
+        },
+        {
+          "n": "Small Bomms",
+          "d": "Each time the bearer ends a Normal move, you can select one enemy unit it moved across during that move and roll three D6: for each 4+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Attack Fighta",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "3b35-92f5-bd1a-af8d",
+      "linkId": "a640-2d2e-e97d-4e47",
+      "name": "Bannernob",
+      "rawName": "Bannernob",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "BURNA BOYZ",
+        "FLASH GITZ",
+        "LOOTAS",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Waaagh! Banner",
+          "d": "- This unit has a 5+ InSv. - While the Waaagh! is active for this unit, this unit has +1 T."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Bannernob",
+        "Support"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "6",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "306a-b2ac-aaf1-9a7c",
+      "linkId": "9af5-6820-1ff2-6c01",
+      "name": "Battlewagon",
+      "rawName": "Battlewagon",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 145,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 145
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "’Ard Case",
+              "min": 0,
+              "max": 1,
+              "p": 15
+            }
+          ]
+        },
+        {
+          "n": "Big Gun",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Killkannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Zzap gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Killkannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+1",
+          "skill": "5+",
+          "s": "9",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Zzap gun",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "D6+6",
+          "ap": "-3",
+          "d": "5",
+          "kw": "Anti-Vehicle 4+"
+        },
+        {
+          "n": "➤ Kannon - shell",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Kannon - frag",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+3",
+          "skill": "5+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ramshackle but Rugged",
+          "d": "Each time an attack is allocated to this model, worsen the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "n": "’Ard Case",
+          "d": "Add 2 to the bearer’s Toughness characteristic, but it no longer has the Firing Deck ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Battlewagon",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "b7c3-d00e-daf2-76fb",
+      "linkId": "fd9d-87f3-1895-3470",
+      "name": "Beast Snagga Boyz",
+      "rawName": "Beast Snagga Boyz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        },
+        {
+          "from": 11,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9-19 Beast Snagga Boyz",
+          "min": 9,
+          "max": 19,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Beast Snagga Boy w/ Thump gun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Beast Snagga Boy",
+              "min": 8,
+              "max": 19,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Thump gun",
+          "melee": false,
+          "range": "18\"",
+          "a": "D3",
+          "skill": "5+",
+          "s": "6",
+          "ap": "0",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "Power snappa",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Monster Hunters",
+          "d": "Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, you can re-roll the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Mob",
+        "Battleline",
+        "Beast Snagga",
+        "Beast Snagga Boyz"
+      ],
+      "models": {
+        "min": 9,
+        "max": 21
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "5a5d-c5a4-39b8-4a3f",
+      "linkId": "2f80-26a6-9486-b348",
+      "name": "Beastboss",
+      "rawName": "Beastboss",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Beast Snagga Boyz"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Beast Snagga klaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Monster 4+, Anti-Vehicle 4+"
+        },
+        {
+          "n": "Shoota",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Beastboss",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Ferocious Rage",
+          "d": "Each time this model makes a Charge move, until the end of the turn, melee weapons it is equipped with have the [DEVASTATING WOUNDS] ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Beast Snagga",
+        "Beastboss",
+        "Warboss",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "a8b7-351-d911-a4d6",
+      "linkId": "bd8-4180-6880-1f45",
+      "name": "Beastboss on Squigosaur",
+      "rawName": "Beastboss on Squigosaur",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 95,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 95
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Squigosaur’s jaws",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Devastating Wounds, Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Thundering Stampede",
+          "d": "While this model is leading a unit, add 1 to Charge rolls made for that unit."
+        },
+        {
+          "n": "Single-minded Predator",
+          "d": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: ▪ That use is ‑1 CP. ▪ That use does not prevent any uses of that stratagem on other units this phase."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Beast Snagga",
+        "Beastboss on Squigosaur",
+        "Warboss",
+        "Mounted",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "7eb0-5bc7-24c-6cb4",
+      "linkId": "0133-cc5f-db14-d397",
+      "name": "Big Gunz",
+      "rawName": "Big Gunz [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": null,
+      "ladder": null,
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Big Gunz",
+          "min": 1,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big Gunz w/ Kannon",
+              "min": 0,
+              "max": 2,
+              "p": 20
+            },
+            {
+              "n": "Big Gunz w/ Lobba",
+              "min": 0,
+              "max": 2,
+              "p": 20
+            },
+            {
+              "n": "Big Gunz w/ Zzap gun",
+              "min": 0,
+              "max": 2,
+              "p": 20
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Kannon - frag",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6",
+          "skill": "6+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "➤ Kannon - shell",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "6+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Lobba",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6",
+          "skill": "6+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy, Indirect Fire"
+        },
+        {
+          "n": "Zzap gun",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "6+",
+          "s": "2D6",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Devastating Wounds, Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Splat!",
+          "d": "Each time a model in this unit makes a ranged attack that targets a unit containing 10 or more models, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Big Gunz",
+          "d": "Designer’s Note: *Place two Grot Crew tokens next to each Big Gun model when this unit is first set up, removing one each time its Big Gun model loses a wound (a Big Gun model itself is considered to represent its final wound).*"
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Artillery",
+        "Big Gunz",
+        "Grots"
+      ],
+      "models": {
+        "min": null,
+        "max": 6
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "fbee-427a-1c46-f621",
+      "linkId": "99b2-4eb8-9183-d1f1",
+      "name": "Big Mek",
+      "rawName": "Big Mek",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "LOOTAS",
+        "MEK GUNZ",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "More Dakka",
+          "d": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Shokk-boosta",
+          "d": "You can re‑roll Advance rolls made for this model’s unit. In addition, each time this model’s unit makes a Normal, Advance or Fall Back move, models in that unit can move through models and terrain features. When doing so, they can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Mek",
+        "Big Mek",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "78a7-cf35-aa8d-c420",
+      "linkId": "c5f9-b0ad-28ca-c6be",
+      "name": "Big Mek Dakkarig",
+      "rawName": "Big Mek Dakkarig",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Stompy feet",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Blitzkannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "8",
+          "skill": "5+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Heavy, Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Dakkablitz",
+          "d": "In your Shooting phase, while making attacks with this unit, if its blitzkannon targeted a non‑MONSTER/VEHICLE unit, that weapon has +6 A."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Big Mek",
+        "Dakkarig",
+        "Walker"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "95e9-6da3-5e75-2566",
+      "linkId": "f552-367d-f8b5-d220",
+      "name": "Big Mek in Mega Armour",
+      "rawName": "Big Mek in Mega Armour",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Additional Options",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Tellyport blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Grot Oiler",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Grot oiler",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Tellyport blasta",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "5+",
+          "s": "8",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "More Dakka",
+          "d": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Fix Dat Armour Up",
+          "d": "While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit."
+        },
+        {
+          "n": "Grot Oiler",
+          "d": "Once per battle, at the end of your Movement phase, one model in the bearer’s unit regains D3 lost wounds. Designer’s Note: Place a Grot Oiler token next to the unit, removing it once this ability has been used."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Big Mek in Mega Armour",
+        "Mega Armour",
+        "Mek",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "8b2-ca6b-b00c-d64c",
+      "linkId": "b41a-b9f6-9b3f-abd5",
+      "name": "Big Mek on Warbike",
+      "rawName": "Big Mek on Warbike [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 105,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 105
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "NOBZ ON WARBIKES",
+        "SKORCHAS",
+        "WARBIKERS",
+        "WARBUGGIES"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "More Dakka",
+          "d": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Mekaniak",
+          "d": "At the end of your Movement phase, you can select one friendly ORKS VEHICLE model within 3\" of this model. That VEHICLE model regains up to D3 lost wounds, and, until the start of your next Movement phase, each time that VEHICLE model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Mounted",
+        "Speed Freeks",
+        "Grenades",
+        "Big Mek on Warbike",
+        "Big Mek",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "e1b6-48a1-2598-7cae",
+      "linkId": "8cd0-5b75-881b-868d",
+      "name": "Big Mek with Kustom Force Field",
+      "rawName": "Big Mek with Kustom Force Field [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BURNA BOYZ",
+        "LOOTAS",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
+      "options": [
+        {
+          "n": "Grot Helper",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Grot helper",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "More Dakka",
+          "d": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Kustom Force Field",
+          "d": "While this model is leading a unit, models in that unit have a 5+ invulnerable save against ranged attacks. Once per battle, at the start of any phase, this model can overcharge its kustom force field. If it does, until the end of the phase, this invulnerable save is improved to 4+."
+        },
+        {
+          "n": "Grot Helper",
+          "d": "Once per battle, the bearer can overcharge its kustom force field one additional time. Designer’s Note: Place a Grot Helper token next to the bearer, removing it once this ability has been used."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Big Mek with Kustom Force Field",
+        "Big Mek",
+        "Mek",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "dde2-ca42-e3bc-2ef6",
+      "linkId": "5a0a-1194-3fed-a785",
+      "name": "Big Mek with Shokk Attack Gun",
+      "rawName": "Big Mek with Shokk Attack Gun",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "LOOTAS",
+        "MEK GUNZ",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
+      "options": [
+        {
+          "n": "Grot Assistant",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Grot assistant",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "More Dakka",
+          "d": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Deranged Snotling Assault",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks; that unit must take a Battle-shock test."
+        },
+        {
+          "n": "Grot Assistant",
+          "d": "Once per battle, after rolling to determine how many attacks the bearer’s shokk attack gun makes, you can re-roll that dice. Designer’s Note: *Place a Grot Assistant token next to the bearer, removing it once this ability has been used.*"
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Big Mek with Shokk Attack Gun",
+        "Mek",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "609a-6ef1-a3e3-3baa",
+      "linkId": "8a3b-d391-efcc-6322",
+      "name": "Big Trakk",
+      "rawName": "Big Trakk [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Spiked Ram",
+          "d": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Big Trakk"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "9",
+        "Sv": "4+",
+        "W": "12",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "b82a-6b65-7050-ac48",
+      "linkId": "f5ac-46c9-972f-c0c3",
+      "name": "Big'ed Bossbunka",
+      "rawName": "Big'ed Bossbunka",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Gaze of Gork - glare",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6",
+          "skill": "5+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Sustained Hits D3"
+        },
+        {
+          "n": "➤ Gaze of Gork - squint",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "12",
+          "ap": "-4",
+          "d": "3",
+          "kw": "Sustained Hits D3"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ramshackle Cover",
+          "d": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack."
+        },
+        {
+          "n": "Shoutin’ Pole (Aura)",
+          "d": "While a friendly ORKS unit is within 6\" of this FORTIFICATION, improve the Leadership characteristic of models in that unit by 1."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Fortification",
+        "Vehicle",
+        "Transport",
+        "Big'ed Bossbunka"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "10",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "181e-be55-d9c6-2b69",
+      "linkId": "73cf-dea3-8634-6e15",
+      "name": "Bigboss",
+      "rawName": "Bigboss",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "NOBZ"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Two-handed big choppa",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Cleave 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Somethin’ to Prove",
+          "d": "This unit has +1 to charge rolls."
+        },
+        {
+          "n": "Breakin’ Heads",
+          "d": "This unit’s melee weapons have [SUSTAINED HITS 1]."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Bigboss",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a20-d3af-2c3e-3267",
+      "linkId": "afcb-b401-34f3-80fa",
+      "name": "Blitza-bommer",
+      "rawName": "Blitza-bommer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 105,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 105
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Boom Bomb",
+          "d": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll one D6 for that unit: On a 4+, that unit suffers D6 mortal wounds."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Blitza-bommer",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "7+",
+        "OC": "-",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "c7c8-6b5b-6bfc-52d1",
+      "linkId": "7e79-aa94-9f9c-5652",
+      "name": "Boomdakka Snazzwagon",
+      "rawName": "Boomdakka Snazzwagon",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Mek speshul",
+          "melee": false,
+          "range": "24\"",
+          "a": "12",
+          "skill": "5+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Rapid Fire 4, Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Billowing Fumes (Aura)",
+          "d": "While an enemy unit (excluding MONSTER/VEHICLE units) is within 6\" of this unit, when that enemy unit is selected to shoot, that unit’s targets have the benefit of cover until that unit has shot."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Grenades",
+        "Boomdakka Snazzwagon",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "7",
+        "Sv": "4+",
+        "W": "9",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "e651-5901-35e5-dc35",
+      "linkId": "e2d-60fc-decf-8062",
+      "name": "Boss Snikrot",
+      "rawName": "Boss Snikrot",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Mork’s Teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Precision, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Red Skull Kommandos",
+          "d": "This unit has +1 Sv against ranged attacks."
+        },
+        {
+          "n": "Kunnin’ Infiltrator (Once per battle, per army)",
+          "d": "In your Movement phase, if this unit is unengaged, you can use this ability. If you do: - Place this unit in strategic reserves. - This unit has Deep Strike. - This unit must make an ingress move this phase (including in your first turn)."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Boss Snikrot",
+        "Smoke",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "ec71-71e2-6601-31b8",
+      "linkId": "8f04-7fb2-9d7-13ae",
+      "name": "Boss Zagstruk",
+      "rawName": "Boss Zagstruk [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Stormboyz"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Da Vulcha’s Klaws and choppa",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Drill Boss",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Plummeting Descent",
+          "d": "You can re-roll Charge rolls made for this model’s unit in a turn in which it was set up on the battlefield from Reserves."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Jump Pack",
+        "Fly",
+        "Boss Zagstruk",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "e3b1-1240-2476-cd86",
+      "linkId": "187-93d6-1ac7-dbde",
+      "name": "Boyz",
+      "rawName": "Boyz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        },
+        {
+          "from": 11,
+          "pts": 160
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9-19 Boyz",
+          "min": 9,
+          "max": 19,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Boy",
+              "min": 0,
+              "max": 19,
+              "p": 0
+            },
+            {
+              "n": "Boy w/ Shoota",
+              "min": 0,
+              "max": 19,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Special Weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boy w/ Big shoota",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Boy w/ Rokkit launcha",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Big Choppa and Slugga",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Big choppa and slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kombi-weapon and close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Big Choppa",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Big choppa and kustom shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big choppa, kombi-rokkit and kombi-shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Get Da Good Bitz",
+          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Mob",
+        "Grenades",
+        "Boyz"
+      ],
+      "models": {
+        "min": 1,
+        "max": 43
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a596-3d99-257e-0ea1",
+      "linkId": "16f3-7b41-33dc-02c3",
+      "name": "Breaka Boyz",
+      "rawName": "Breaka Boyz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Breaka Boyz",
+          "min": 5,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Breaka Boy",
+              "min": 3,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Breaka Boy w/ Tankhammer",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Breaka Boy w/ Knucklebustas",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Tankhammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-Monster 4+, Anti-Vehicle 4+, Devastating Wounds, Hazardous"
+        },
+        {
+          "n": "Knucklebustas",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-Monster 4+, Anti-Vehicle 4+, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a BOYZ unit, it can be attached to this unit instead."
+        },
+        {
+          "n": "Trophy Hunters",
+          "d": "Each time this unit declares a charge, you can re-roll the Charge roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Breaka Boyz",
+        "Leader"
+      ],
+      "models": {
+        "min": 4,
+        "max": 8
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "71b2-e955-6588-87f4",
+      "linkId": "2bb2-839a-20cc-1531",
+      "name": "Burna Boyz",
+      "rawName": "Burna Boyz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        },
+        {
+          "from": 6,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Unit Composition",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "1 Spanner and 4 Burna Boyz",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Spanners and 8 Burna Boyz",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Pyromaniaks",
+          "d": "Each time a model in this unit makes a ranged attack with a burna that targets an enemy unit within 6\", re-roll a Wound roll of 1. If the target of that attack is also within range of an objective marker, you can re-roll the Wound roll instead."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Burna Boyz"
+      ],
+      "models": {
+        "min": null,
+        "max": null
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "93a1-386a-e40f-472f",
+      "linkId": "5436-293d-d31b-4f00",
+      "name": "Burna-bommer",
+      "rawName": "Burna-bommer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Skorcha Missile Rack",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Skorcha missile rack",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Skorcha missile rack",
+          "melee": false,
+          "range": "36\"",
+          "a": "2D6",
+          "skill": "5+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast, Ignores Cover"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Burna Bomb",
+          "d": "At the end of your opponent’s Fight phase, you can select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit: - Friendly ORKS units' ranged attacks that target that enemy unit have [IGNORES COVER] until the end of your next turn. - Roll one D6 for each model in that enemy unit: -- For each 6, that enemy unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Burna-bommer",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "7+",
+        "OC": "-",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "f6cb-323b-3c25-75f7",
+      "linkId": "eadf-ee81-cf8a-7e5",
+      "name": "Chinork Warkopta",
+      "rawName": "Chinork Warkopta [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 105,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 105
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Big Bomms (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big bomms",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Deffguns",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 Deffguns",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Rattler kannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Deffgun",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "5+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "Rattler kannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "5+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Aerial Deployment",
+          "d": "If this model starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+        },
+        {
+          "n": "Big Bomms",
+          "d": "Once per battle, after the bearer ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 4+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Transport",
+        "Chinork Warkopta",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "8",
+        "Sv": "4+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "a43d-27a9-7d83-42e4",
+      "linkId": "ed2f-40cb-3b55-6239",
+      "name": "Da Red Gobbo",
+      "rawName": "Da Red Gobbo [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 40,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 40
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Kustom grot blasta",
+          "melee": false,
+          "range": "12\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds, Pistol"
+        },
+        {
+          "n": "Icon of da Revolushun",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Da Revolushun!",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Has Yoo Been a Good Little Grot This Year?",
+          "d": "Once per battle, in your Shooting phase, you can target this model’s unit with the Grenade Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Da Red Gobbo",
+        "Grots",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "2",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6610-3cb7-dc72-8852",
+      "linkId": "b7bb-3da3-d2f2-ed0f",
+      "name": "Da Red Gobbo's A-bomb-inable Snowman",
+      "rawName": "Da Red Gobbo's A-bomb-inable Snowman [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 40,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 40
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Kustom grot blasta",
+          "melee": false,
+          "range": "12\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Explosive Snowballs",
+          "d": "Once in each of your Shooting phases, you can target this unit with the Grenades stratagem for 0CP. After resolving this stratagem, this unit can make a Normal move of up to 6\"."
+        },
+        {
+          "n": "A-bomb-inable Snowman",
+          "d": "When this model is destroyed, its Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Da Red Gobbo A-bomb-inable Snowman"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "2",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "070f-5f7f-2cab-6ee6",
+      "linkId": "654e-3175-0294-7507",
+      "name": "Da Red Gobbo's Tinboy",
+      "rawName": "Da Red Gobbo's Tinboy [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Tinboy's kustom shoota",
+          "melee": false,
+          "range": "18\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Tinboy's klaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Redistributin' da Gifts",
+          "d": "Once in each of your Shooting phases, you can target this unit with the Grenade Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Da Red Gobbo",
+        "Grots",
+        "Vehicle",
+        "Walker"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "3b42-b41f-d11e-bdca",
+      "linkId": "a62d-3859-516c-cf9",
+      "name": "Dakkajet",
+      "rawName": "Dakkajet",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Dakkastorm",
+          "d": "Each time this model makes a ranged attack, every successful Hit roll scores a Critical Hit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Dakkajet",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "7+",
+        "OC": "-",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "1594-b986-e77e-d89d",
+      "linkId": "b3d0-f6cd-c898-bfa4",
+      "name": "Deff Dread",
+      "rawName": "Deff Dread",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 110,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear Options",
+          "min": 4,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Dread klaw",
+              "min": 2,
+              "max": 4,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Stompy feet",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Dread klaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Dead Choppy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Piston-driven Brutality",
+          "d": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2‑5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Deff Dread"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "8c96-c1f0-63ff-d6a9",
+      "linkId": "29b1-7ab6-fb3-db22",
+      "name": "Deff Rolla Battle Fortress",
+      "rawName": "Deff Rolla Battle Fortress [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 250,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 250
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Big Gunz",
+          "min": 3,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Zzap gun",
+              "min": 2,
+              "max": 3,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Zzap gun",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "2D6",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rolling Fortress",
+          "d": "Each time a ranged attack is allocated to an ORKS model from your army, if that model is not fully visible to every model in the attacking unit because of this DEFF ROLLA BATTLE FORTRESS model, that model has the Benefit of Cover against that attack."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Transport",
+        "Deff Rolla Battle Fortress"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "3+",
+        "W": "22",
+        "LD": "7+",
+        "OC": "8",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "ca85-1d18-dc30-d64e",
+      "linkId": "8816-46a6-6b0f-833d",
+      "name": "Deffkilla Wartrike",
+      "rawName": "Deffkilla Wartrike",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "NOBZ ON WARBIKES",
+        "SKORCHAS",
+        "WARBIKERS",
+        "WARBUGGIES"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Deffkilla boomstikks",
+          "melee": false,
+          "range": "12\"",
+          "a": "6",
+          "skill": "5+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault"
+        },
+        {
+          "n": "➤ Killa jet - burna",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "➤ Killa jet - cutta",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Snagga klaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Speedboss",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Fuel-mixa Grot",
+          "d": "Each time this model’s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Warboss",
+        "Deffkilla Wartrike",
+        "Character",
+        "Speed Freeks",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "9",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "2d6e-aa3b-c28c-5ef0",
+      "linkId": "a1db-c39f-ce22-5ec3",
+      "name": "Deffkoptas",
+      "rawName": "Deffkoptas",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        },
+        {
+          "from": 4,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Deffkoptas (3-6)",
+          "min": 3,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Deffkopta",
+              "min": 2,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Deffkopta w/ Kustom mega-blasta",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Deff from Above",
+          "d": "Each time this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Grenades",
+        "Deffkoptas",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 2,
+        "max": 8
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "51a5-6c92-806e-57d6",
+      "linkId": "6350-4743-fc4a-b0dc",
+      "name": "Deffkoptas with Big Shootas",
+      "rawName": "Deffkoptas with Big Shootas [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 130,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 130
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Deff from Above",
+          "d": "Each time this unit ends a Normal move, you can select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Deffkoptas with Big Shootas",
+        "Fly",
+        "Grenades"
+      ],
+      "models": {
+        "min": 3,
+        "max": 3
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "dd02-c92c-fb0a-54ec",
+      "linkId": "b17f-9600-ce79-6f33",
+      "name": "Fighta-Bommer",
+      "rawName": "Fighta-Bommer [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear Options",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 Wing missiles",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Grot-guided bomms",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Small bomms",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Grot-guided bomm",
+          "melee": false,
+          "range": "72\"",
+          "a": "D6",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast, One Shot, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Strafing Run",
+          "d": "Each time this model makes a ranged attack that targets a unit that cannot FLY, add 1 to the Hit roll."
+        },
+        {
+          "n": "Small Bomms",
+          "d": "Each time the bearer ends a Normal move, you can select one enemy unit it moved across during that move and roll three D6: for each 4+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Fighta-Bommer",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "1de9-b138-28a1-9c4b",
+      "linkId": "585b-5a33-1b48-f990",
+      "name": "Flash Gitz",
+      "rawName": "Flash Gitz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        },
+        {
+          "from": 6,
+          "pts": 150
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Ammo Runt",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Ammo Runt",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "4-9 Flash Gitz",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Flash Gitz",
+              "min": 4,
+              "max": 9,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Gun-crazy Show-offs",
+          "d": "Each time a model in this unit targets the closest eligible target with its snazzgun, until the end of the phase, that weapon has an Attacks characteristic of 4."
+        },
+        {
+          "n": "Ammo Runt",
+          "d": "Once per battle, when this unit is selected to shoot, it can use this ability. If it does, until the end of the phase, ranged weapons equipped by models in this unit have the [LETHAL HITS] ability. Designer’s Note: *Place an Ammo Runt token next to the unit, removing it after this ability has been used.*"
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Flash Gitz"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "aeed-c6d9-4b90-376a",
+      "linkId": "2cf5-6167-32d7-23df",
+      "name": "Gargantuan Squiggoth",
+      "rawName": "Gargantuan Squiggoth",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 440,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 440
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear Options",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Supa-kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Huge tusks - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "12",
+          "kw": "Lance"
+        },
+        {
+          "n": "➤ Huge tusks - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "18",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Supa-kannon",
+          "melee": false,
+          "range": "60\"",
+          "a": "2D6",
+          "skill": "5+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Gargantuan",
+          "d": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there."
+        },
+        {
+          "n": "Walking Bastion",
+          "d": "This model does not suffer the penalty to its Hit rolls for making ranged attacks while enemy units are within Engagement Range of it."
+        },
+        {
+          "n": "Damaged: 1-10 Wounds Remaining",
+          "d": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Monster",
+        "Titanic",
+        "Towering",
+        "Transport",
+        "Gargantuan Squiggoth",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "13",
+        "Sv": "3+",
+        "W": "30",
+        "LD": "7+",
+        "OC": "12",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "4ea0-6b70-c17c-bc00",
+      "linkId": "473e-73f9-493d-6a0a",
+      "name": "Ghazghkull Thraka",
+      "rawName": "Ghazghkull Thraka",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 235,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 235
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "MEGANOBZ",
+        "NOBZ"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Mork’s Roar",
+          "melee": false,
+          "range": "36\"",
+          "a": "12",
+          "skill": "5+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 4"
+        },
+        {
+          "n": "➤ Gork’s Klaw - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "14",
+          "ap": "-3",
+          "d": "4",
+          "kw": ""
+        },
+        {
+          "n": "➤ Gork’s Klaw - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Makari’s stabba",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Supreme Commander",
+          "d": "If this unit is in your army, its Ghazghkull Thraka model must be your Warlord."
+        },
+        {
+          "n": "Prophet of Da Great Waaagh!",
+          "d": "While this unit is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll and add 1 to the Wound roll and if the Waaagh! is active for your army, a Critical Hit is scored on a successful unmodified Hit roll of 5+."
+        },
+        {
+          "n": "Ghazghkull’s Waaagh! Banner (Aura)",
+          "d": "While a friendly ORKS unit is within 12\" of Makari, if the Waaagh! is active for your army, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+        },
+        {
+          "n": "Invulnerable Save (2+*)",
+          "d": "While a friendly Makari model is on the battlefield, you cannot re‑roll save rolls for this unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Epic Hero",
+        "Character",
+        "Leader"
+      ],
+      "models": {
+        "min": 2,
+        "max": 2
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "56d6-a7fc-fa08-4345",
+      "linkId": "c5a3-4245-9b6a-fb8",
+      "name": "Gorkanaut",
+      "rawName": "Gorkanaut",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 255,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 255
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Deffstorm mega-shoota",
+          "melee": false,
+          "range": "36\"",
+          "a": "20",
+          "skill": "5+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Rapid Fire 10"
+        },
+        {
+          "n": "➤ Klaw of Gork - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "18",
+          "ap": "-3",
+          "d": "6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Klaw of Gork - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "15",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Clankin’ Forward",
+          "d": "Each time this model makes a Normal, Advance or Fall Back move, it can move over enemy models (excluding MONSTER and VEHICLE models) and terrain features that are 4\" or less in height as if they were not there."
+        },
+        {
+          "n": "Big an’ Stompy",
+          "d": "Each time this model makes a melee attack, if the Waaagh! is active for your army, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Towering",
+        "Walker",
+        "Transport",
+        "Gorkanaut"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "12",
+        "Sv": "3+",
+        "W": "20",
+        "LD": "7+",
+        "OC": "8",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "de8f-24f9-c543-92b7",
+      "linkId": "8e01-6763-69a8-a25a",
+      "name": "Gretchin",
+      "rawName": "Gretchin",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        },
+        {
+          "from": 12,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Unit Composition",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "0-1 Runtherd and 10 Gretchin",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "0-2 Runtherds and 20 Gretchin",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Runtherd",
+          "d": "Each time an attack targets this unit, if it contains one or more Gretchin models, until that attack is resolved, Runtherd models in this unit have a Toughness characteristic of 2."
+        },
+        {
+          "n": "Thievin’ Scavengers",
+          "d": "At the start of your Movement phase, roll one D6 for each objective marker you control that has one or more units from your army with this ability within range of it (excluding Battle‑shocked units). If one or more of those rolls is a 4+, you gain 1CP."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Gretchin",
+        "Grots"
+      ],
+      "models": {
+        "min": 30,
+        "max": 30
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "410e-7847-bcfc-1b62",
+      "linkId": "e080-7410-597-40bb",
+      "name": "Grot Bomm Launcha",
+      "rawName": "Grot Bomm Launcha [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Grot-guided bomms",
+          "melee": false,
+          "range": "72\"",
+          "a": "D6",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast, One Shot, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Furious Barrage",
+          "d": "Each time this model makes a ranged attack that targets an enemy unit that contains five or more models, you can re-roll the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Speed Freeks",
+        "Grot Bomm Launcha",
+        "Grots"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "2d97-52db-2c1b-de5e",
+      "linkId": "1ebe-3538-a79c-513e",
+      "name": "Grot Mega-Tank",
+      "rawName": "Grot Mega-Tank [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 110,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear Options",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Twin grotzooka",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Twin kustom mega-blasta",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Twin rokkit launcha",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Twin skorcha",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Mega-tank weapons",
+          "melee": false,
+          "range": "18\"",
+          "a": "10",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 10"
+        },
+        {
+          "n": "Twin big shoota",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2, Twin-linked"
+        },
+        {
+          "n": "Twin grotzooka",
+          "melee": false,
+          "range": "18\"",
+          "a": "D3+3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast, Ignores Cover, Twin-linked"
+        },
+        {
+          "n": "Twin kustom mega-blasta",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": "Hazardous, Twin-linked"
+        },
+        {
+          "n": "Twin rokkit launcha",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast, Twin-linked"
+        },
+        {
+          "n": "Twin skorcha",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bizarrely Resilient",
+          "d": "Each time an attack targets this model, worsen the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Grot Mega-Tank",
+        "Grots"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "8+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6cc1-586e-5d7c-9a34",
+      "linkId": "b8ac-a1b4-9950-8d39",
+      "name": "Grot Tanks",
+      "rawName": "Grot Tanks [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 155,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 155
+        },
+        {
+          "from": 5,
+          "pts": 310
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Grot Tanks",
+          "min": 4,
+          "max": 8,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grot Tank w/ Grot tank shoota",
+              "min": 0,
+              "max": 8,
+              "p": 0
+            },
+            {
+              "n": "Grot Tank w/ Grotzooka",
+              "min": 0,
+              "max": 8,
+              "p": 0
+            },
+            {
+              "n": "Grot Tank w/ Kustom mega-blasta",
+              "min": 0,
+              "max": 8,
+              "p": 0
+            },
+            {
+              "n": "Grot Tank w/ Rokkit launcha",
+              "min": 0,
+              "max": 8,
+              "p": 0
+            },
+            {
+              "n": "Grot Tank w/ Skorcha",
+              "min": 0,
+              "max": 8,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Grot Tank w/ additional weapon",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grot Tank w/ additional weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Scatter!",
+          "d": "In your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Grot Tanks",
+        "Grots"
+      ],
+      "models": {
+        "min": null,
+        "max": 40
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "3e53-68fa-a7b4-d6c6",
+      "linkId": "e760-b949-e4ca-ef85",
+      "name": "Grotmas Gitz",
+      "rawName": "Grotmas Gitz [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 40,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 40
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bludgeoning bag of gifts",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Massive gift-filled gob",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bludgeoning Cheer",
+          "d": "Each time this model ends a Normal, Advance, Fall Back or Charge move, select one enemy unit within 3\" of this model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound. That enemy unit must then take a Battle-shock test."
+        },
+        {
+          "n": "Gifts for All! (Aura)",
+          "d": "While a GRETCHIN unit is within 6\" of this model, that unit’s Thievin’ Scavengers ability is successful on D6 rolls of 2+, instead of rolls of 4+."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Mounted",
+        "Gretchin",
+        "Fly",
+        "Grotmas Gitz"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "3",
+        "Sv": "4+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "2ba9-e97a-909d-3ac5",
+      "linkId": "cab8-7238-2445-067b",
+      "name": "Hordeboss",
+      "rawName": "Hordeboss [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Boyz",
+        "Nobz"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "More Lads, More Swagger",
+          "d": "Improve this model's Leadership characteristic by 1 for every 5 models in this unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Hordeboss",
+        "Crucible",
+        "Grenades"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "70de-d621-8465-f7b8",
+      "linkId": "6c3-44bd-6ba4-5348",
+      "name": "Hunta Rig",
+      "rawName": "Hunta Rig",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "On Da Hunt",
+          "d": "For each model embarked within this TRANSPORT, add 1 to the Attacks characteristic of this model’s butcha boyz weapon (to a maximum of +6)."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Transport",
+        "Beast Snagga",
+        "Hunta Rig",
+        "Monster"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "91c2-d40a-1f09-9e81",
+      "linkId": "b9c2-b38-cb82-9a8b",
+      "name": "Kannonwagon",
+      "rawName": "Kannonwagon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Spiked ram",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Big Booms",
+          "d": "In your Shooting phase, just after selecting a target for this model’s supa-kannon, roll one D6 for the target unit and every other unit within 3\" of that unit: on a 5+, the unit being rolled for is struck by a concussive wave. After this model has finished making its attacks against that target unit this phase, each unit struck by a concussive wave this phase suffers D3 mortal wounds."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Kannonwagon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "10",
+        "Sv": "4+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "4",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "ffa6-66d3-dfa5-557e",
+      "linkId": "b4ef-752c-df61-fac6",
+      "name": "Kaptin Badrukk",
+      "rawName": "Kaptin Badrukk [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Flash Gitz"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Choppa",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Da Rippa - standard",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "5+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Heavy, Sustained Hits 1"
+        },
+        {
+          "n": "➤ Da Rippa - supercharge",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "5+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Hazardous, Heavy, Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Flashiest Gitz",
+          "d": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Hit roll."
+        },
+        {
+          "n": "Ded Glowy Ammo (Aura)",
+          "d": "While an enemy INFANTRY unit is within 6\" of this model, subtract 1 from the Toughness characteristic of models in that unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Infantry",
+        "Character",
+        "Kaptin Badrukk",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "3444-a152-c9e6-31aa",
+      "linkId": "27-16c-6bc2-634b",
+      "name": "Kill Krusha",
+      "rawName": "Kill Krusha [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 230,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 230
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear Options (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "2 Rokkit launchas",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Krusha kannon - tankhamma shell",
+          "melee": false,
+          "range": "60\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "16",
+          "ap": "-3",
+          "d": "6",
+          "kw": "Heavy"
+        },
+        {
+          "n": "➤ Krusha kannon - blast burna",
+          "melee": false,
+          "range": "48\"",
+          "a": "3D6",
+          "skill": "5+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "Tracks and wheels",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Da Biggest Booms",
+          "d": "In your Shooting phase, just after selecting a target for this model’s krusha kannon, the target unit and every other enemy INFANTRY unit within 3\" of that unit must take a Battle-shock test."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Transport",
+        "Kill Krusha"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "3+",
+        "W": "22",
+        "LD": "7+",
+        "OC": "8",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "eb21-c97f-2d9a-b363",
+      "linkId": "2d8d-94ae-de2-19fe",
+      "name": "Kill Rig",
+      "rawName": "Kill Rig",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 145,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 145
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Wurrtower",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3",
+          "skill": "N/A",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Hazardous, Psychic, Torrent"
+        }
+      ],
+      "abilities": null,
+      "faction": "Orks",
+      "keywords": [
+        "Transport",
+        "Psyker",
+        "Beast Snagga",
+        "Kill Rig",
+        "Monster"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b8fe-c7af-20fd-631d",
+      "linkId": "331d-9059-d87-480",
+      "name": "Kill Tank",
+      "rawName": "Kill Tank [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 295,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 295
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Bursta Kannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bursta kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Giga shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Reinforced ram",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Bursta kannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "3D6",
+          "skill": "5+",
+          "s": "14",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Giga shoota",
+          "melee": false,
+          "range": "48\"",
+          "a": "30",
+          "skill": "5+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Wall of Dakka",
+          "d": "Each time this model makes a ranged attack that targets a unit within half range, add 1 to the Hit roll."
+        },
+        {
+          "n": "Damaged: 1-8 Wounds Remaining",
+          "d": "While this model has 1-8 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Transport",
+        "Kill Tank"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "12",
+        "Sv": "3+",
+        "W": "24",
+        "LD": "6+",
+        "OC": "10",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "8c36-c946-2e0f-f648",
+      "linkId": "7e0e-317a-ac55-3a79",
+      "name": "Killa Kans",
+      "rawName": "Killa Kans",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        },
+        {
+          "from": 4,
+          "pts": 240
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Killa Kans (3-6)",
+          "min": 3,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Killa Kan w/ Kan shoota",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Killa Kan w/ Grotzooka",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Killa Kan w/ Rokkit launcha",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Killa Kan w/ Skorcha",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Kan shoota",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds, Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Shooty Power Trip",
+          "d": "Each time this unit is selected to shoot, you can roll one D6: - On a 1‑2, this unit suffers D3 mortal wounds. - On a 3‑4, until the end of the phase, add 1 to the Strength characteristic of ranged weapons equipped by models in this unit. - On a 5‑6, until the end of the phase, add 1 to the Attacks characteristic of ranged weapons equipped by models in this unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Killa Kans",
+        "Grots"
+      ],
+      "models": {
+        "min": null,
+        "max": 24
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "303-267f-e45c-6aa9",
+      "linkId": "8a76-5b36-455d-2c49",
+      "name": "Kommandos",
+      "rawName": "Kommandos",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9 Kommandos",
+          "min": 9,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kommandos w/ Slugga and choppa",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Kommandos w/ Kustom shoota",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Kommandos w/ Breacha ram",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kommandos w/ Burna",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kommandos w/ Rokkit launcha",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Distraction Grot",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bomb Squig",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Breacha ram",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Sneaky Gitz",
+          "d": "Enemy units cannot target this unit with snap shooting attacks."
+        },
+        {
+          "n": "Patrol Squad",
+          "d": "At the start of the Declare Battle Formations step this unit can be split into two units, each containing five models. (when splitting a unit in this way, make a note of which models form each of the two new units. If you are splitting a unit that is equipped with 1 bomb squig and/or 1 distraction grot, only one of the new units can use that ability during the battle – make a note of which of the new units this will be)."
+        },
+        {
+          "n": "Distraction Grot",
+          "d": "Once per battle, in your opponent’s Shooting phase, before making a saving throw for a model in this unit, it can deploy the distraction grot. If it does, until the end of the phase, models in this unit have a 5+ invulnerable save. Designer’s Note: *Place a Distraction Grot token next to the unit, removing it when this unit uses this ability.*"
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Kommandos",
+        "Smoke"
+      ],
+      "models": {
+        "min": 1,
+        "max": 15
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b803-bafc-2b52-160d",
+      "linkId": "fae0-ad89-fca0-b787",
+      "name": "Kustom Boosta-blasta",
+      "rawName": "Kustom Boosta-blasta",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Burna exhausts",
+          "melee": false,
+          "range": "6\"",
+          "a": "2D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent, Twin-linked"
+        },
+        {
+          "n": "Rivet kannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "5+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Assault, Rapid Fire 3"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rivetin’ Dakka",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks made with a rivet kannon. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes a ranged attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Kustom Boosta-blasta",
+        "Grenades",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "7",
+        "Sv": "4+",
+        "W": "9",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "afab-635c-23c5-cacc",
+      "linkId": "b0b0-e68a-cf7a-20f8",
+      "name": "Lifta Wagon",
+      "rawName": "Lifta Wagon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Gunz",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "1 Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Big shootas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "1 Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Rokkit launchas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "1 Big shoota and 1 rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Lifta-droppa",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "5+",
+          "s": "6",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Anti-Vehicle 3+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Da Bigger Dey Are, da Better Dey Drop",
+          "d": "Each time an attack made with this model’s lifta-droppa destroys an enemy model that has the Deadly Demise ability, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 3+ instead of on a 6."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Lifta Wagon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "3bff-9fad-2d11-7866",
+      "linkId": "e309-2952-cbea-9b73",
+      "name": "Lootas",
+      "rawName": "Lootas",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        },
+        {
+          "from": 6,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Unit Composition",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 Spanners and 8 Lootas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "1 Spanner and 4 Lootas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Dat’s Our Loot!",
+          "d": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1. If that attack targets a unit that is within range of an objective marker, you can re-roll the Hit roll instead."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Lootas"
+      ],
+      "models": {
+        "min": null,
+        "max": null
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "7d51-e2a3-aab6-f7de",
+      "linkId": "4d31-2ca3-4691-6396",
+      "name": "Mad Dok Grotsnik",
+      "rawName": "Mad Dok Grotsnik [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Boyz",
+        "Burna Boyz",
+        "Tankbustas",
+        "Lootas",
+        "Nobz"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Power klaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Mad Dok",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+        },
+        {
+          "n": "One Scalpel Short of a Medpack",
+          "d": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Fell Back."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Painboy",
+        "Mad Dok Grotsnik"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "5c83-d9c7-5c58-8357",
+      "linkId": "3a19-c4fe-8f9e-f21",
+      "name": "Mega Dread",
+      "rawName": "Mega Dread [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 225,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 225
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Boombits",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Mega Carnage",
+          "d": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds."
+        },
+        {
+          "n": "Dead Rippy",
+          "d": "If this model is equipped with 2 dread killsaws, those weapons have the [TWIN-LINKED] ability. If this model is equipped with 2 dread rippa klaws, those weapons have the [TWIN-LINKED] ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Mega Dread",
+        "Walker"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "7067-34f4-5272-e05f",
+      "linkId": "adb5-432-b3e1-6952",
+      "name": "Meganobz",
+      "rawName": "Meganobz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        },
+        {
+          "from": 3,
+          "pts": 90
+        },
+        {
+          "from": 4,
+          "pts": 150
+        },
+        {
+          "from": 6,
+          "pts": 180
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-6 Meganobz",
+          "min": 2,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Meganob w/ Kustom shoota and power klaw",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Meganob w/ Kombi-weapon and power klaw",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Meganob w/ Kombi-weapon and killsaw",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Meganob w/ Kustom shoota and killsaw",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Meganob w/ Killsaw and power klaw",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Meganob w/ Twin killsaw",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin killsaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Krumpin’ Time",
+          "d": "While the Waaagh! is active for your army, models in this unit have the Feel No Pain 5+ ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Meganobz",
+        "Mega Armour"
+      ],
+      "models": {
+        "min": null,
+        "max": 36
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "8dd-f235-ef18-d36",
+      "linkId": "801a-1eb0-92-72b4",
+      "name": "Megatrakk Scrapjet",
+      "rawName": "Megatrakk Scrapjet",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Nose drill",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Rokkit cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+1",
+          "skill": "5+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Wing missiles",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Drill Through",
+          "d": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Megatrakk Scrapjet",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "7",
+        "Sv": "4+",
+        "W": "9",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "3b2-8c11-616a-1005",
+      "linkId": "3ec6-40d0-f2d2-814b",
+      "name": "Mek",
+      "rawName": "Mek",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "LOOTAS",
+        "MEK GUNZ",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
+      "options": [
+        {
+          "n": "Wrench",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Wrench",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Wrench",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Killsaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Know-wotz",
+          "d": "While this model is within 3\" of one or more friendly ORKS VEHICLE units, this model has the Lone Operative ability."
+        },
+        {
+          "n": "Mekaniak",
+          "d": "At the end of your Movement phase, you can select one friendly ORKS VEHICLE model within 3\" of this model. That VEHICLE model regains up to D3 lost wounds, and, until the start of your next Movement phase, each time that VEHICLE model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Mek",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b37a-8686-db2c-8cbd",
+      "linkId": "be4b-3825-50f7-3407",
+      "name": "Mek Gunz",
+      "rawName": "Mek Gunz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        },
+        {
+          "from": 3,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Mek Gunz (1-3)",
+          "min": 1,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Mek Gun w/ Smasha gun",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Mek Gun w/ Bubblechukka",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Mek Gun w/ Kustom mega-kannon",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Mek Gun w/ Traktor kannon",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Smasha gun",
+          "melee": false,
+          "range": "48\"",
+          "a": "D3+1",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "1-2 Bubblechukka - big bubble",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D6",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast, Bubblechukka"
+        },
+        {
+          "n": "3-4 Bubblechukka - wobbly bubble",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast, Bubblechukka"
+        },
+        {
+          "n": "5-6 Bubblechukka - dense bubble",
+          "melee": false,
+          "range": "48\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+3",
+          "kw": "Blast, Bubblechukka"
+        },
+        {
+          "n": "Kustom mega-kannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-1",
+          "d": "D6",
+          "kw": "Blast, Hazardous"
+        },
+        {
+          "n": "Traktor kannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Anti-Fly 2+, Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Splat!",
+          "d": "Each time a model in this unit makes a ranged attack that targets a unit that is at its Starting Strength (excluding MONSTERS and VEHICLES), re-roll a Hit roll of 1."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Mek Gunz",
+        "Grots"
+      ],
+      "models": {
+        "min": null,
+        "max": 12
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "121b-9fda-2ccb-e38c",
+      "linkId": "c812-1b6f-43bc-5559",
+      "name": "Meka-Dread",
+      "rawName": "Meka-Dread [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 210,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 210
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Mekaniak",
+          "d": "At the end of your Movement phase, you can select one friendly ORKS VEHICLE model within 3\" of this model. That VEHICLE model regains up to D3 lost wounds, and, until the start of your next Movement phase, each time that VEHICLE model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Meka-Dread"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "2ecf-280b-32e2-3189",
+      "linkId": "5fc6-c343-113c-db46",
+      "name": "Mekboy Workshop",
+      "rawName": "Mekboy Workshop [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Ramshackle Cover",
+          "d": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack."
+        },
+        {
+          "n": "Workshop",
+          "d": "When this FORTIFICATION is set up, all parts of it must be set up within 1” of another part. At the end of your Movement phase, each friendly ORKS VEHICLE model within 12” of this FORTIFICATION can regain up to D3 lost wounds (roll separately for each model). Each model can only be affected by this ability once per turn."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Fortification",
+        "Vehicle",
+        "Mekboy Workshop"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "9",
+        "Sv": "4+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "9ee5-2b39-de06-dda6",
+      "linkId": "5267-f96c-4491-eebe",
+      "name": "Morkanaut",
+      "rawName": "Morkanaut",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 270,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 270
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Klaw of Mork - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "18",
+          "ap": "-3",
+          "d": "6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Klaw of Mork - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Kustom mega-zappa",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+3",
+          "skill": "5+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6",
+          "kw": "Blast, Hazardous"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Clankin’ Forward",
+          "d": "Each time this model makes a Normal, Advance or Fall Back move, it can move over enemy models (excluding MONSTER and VEHICLE models) and terrain features that are 4\" or less in height as if they were not there."
+        },
+        {
+          "n": "Big an’ Shooty",
+          "d": "Each time this model makes a ranged attack, if the Waaagh! is active for your army, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Towering",
+        "Transport",
+        "Walker",
+        "Morkanaut"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "12",
+        "Sv": "3+",
+        "W": "20",
+        "LD": "7+",
+        "OC": "8",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "b42b-ea0-38f1-6300",
+      "linkId": "5900-ac22-4595-69be",
+      "name": "Mozrog Skragbad",
+      "rawName": "Mozrog Skragbad",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Squighog Boyz"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Big Chompa’s jaws",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "4",
+          "kw": "Devastating Wounds, Extra Attacks"
+        },
+        {
+          "n": "Gutrippa",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Anti-Monster 4+, Anti-Vehicle 4+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Da Bigger Dey Iz…",
+          "d": "Each time this model makes an attack that targets a Monster or Vehicle unit, add 1 to the Damage characteristic of that attack. Each time this model makes an attack that targets a Titanic unit, add 2 to the Damage characteristic of that attack instead."
+        },
+        {
+          "n": "One Last Kill",
+          "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll on D6; on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Beast Snagga",
+        "Mozrog Skragbad",
+        "Mounted",
+        "Warboss",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "b16a-7132-3f8a-abe5",
+      "linkId": "9c08-238c-554d-1719",
+      "name": "Nobz",
+      "rawName": "Nobz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 105,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 105
+        },
+        {
+          "from": 6,
+          "pts": 210
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "4-9 Nobz",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Nob w/ Slugga and big choppa",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Nob w/ Slugga and power klaw",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Nob w/ Kombi-weapon",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ammo Runts",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Ammo Runt",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Slugga and big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Slugga and power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kombi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Da Boss’ Ladz",
+          "d": "While a WARBOSS model is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll."
+        },
+        {
+          "n": "Ammo Runt",
+          "d": "Once per battle for each ammo runt this unit has, when this unit is selected to shoot, it can use this ability. If it does, until the end of the phase, ranged weapons equipped by models in this unit have the [LETHAL HITS] ability. Designer’s Note: Place the relevant number of Ammo Runt tokens next to the unit, removing one each time the unit uses this ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Nobz",
+        "Grenades"
+      ],
+      "models": {
+        "min": 1,
+        "max": 28
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "47ad-4934-ea67-a2b0",
+      "linkId": "106-2955-ed6a-ad5d",
+      "name": "Nobz on Warbikes",
+      "rawName": "Nobz on Warbikes [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Choppa",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power stabba",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin dakkagun",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "5+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault, Rapid Fire 2, Twin-linked"
+        },
+        {
+          "n": "Power stabba",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Lance"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Drive-by Krumpin'",
+          "d": "Each time this unit Consolidates, each model in this unit can move up to 6\" instead of up to 3\"."
+        },
+        {
+          "n": "Speed Freeks Mob",
+          "d": "If a model from your army with the Leader ability can be attached to a Warbikers unit, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Speed Freeks",
+        "Nobz on Warbikes",
+        "Grenades"
+      ],
+      "models": {
+        "min": 3,
+        "max": 3
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "a74a-107a-e2ac-7e4c",
+      "linkId": "a917-fc12-41a-8cb1",
+      "name": "Painboss",
+      "rawName": "Painboss",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BEAST SNAGGA BOYZ"
+      ],
+      "options": [
+        {
+          "n": "Grot Orderly",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grot orderly",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Beast Snagga klaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Monster 4+, Anti-Vehicle 4+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Dok’s Toolz",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+        },
+        {
+          "n": "Sawbonez",
+          "d": "At the end of your Movement phase, select one friendly BEAST SNAGGA CHARACTER model within 3\" of this model. That model is healed and regains up to 3 lost wounds. Each model can only be healed once per turn"
+        },
+        {
+          "n": "Grot Orderly",
+          "d": "Once per battle, in your Command phase, if the bearer is leading a unit that is below its Starting Strength, you can return up to D3 destroyed Bodyguard models to that unit. Designer’s Note: *Place a Grot Orderly token next to the unit, removing it once this ability has been used.*"
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Beast Snagga",
+        "Painboss",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "7669-1442-2c0b-e0c9",
+      "linkId": "5177-1de8-ebd5-e09d",
+      "name": "Painboy",
+      "rawName": "Painboy",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "BURNA BOYZ",
+        "LOOTAS",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
+      "options": [
+        {
+          "n": "Grot Orderly",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grot orderly",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Dok’s Toolz",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+        },
+        {
+          "n": "Hold Still and Say ‘Aargh!’",
+          "d": "Each time an attack made by this model with its ’urty syringe scores a Critical Wound against a unit (excluding VEHICLE units), that unit suffers D6 mortal wounds."
+        },
+        {
+          "n": "Grot Orderly",
+          "d": "Once per battle, in your Command phase, if the bearer is leading a unit that is below its Starting Strength, you can return up to D3 destroyed Bodyguard models to that unit. Designer’s Note: *Place a Grot Orderly token next to the unit, removing it once this ability has been used.*"
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Painboy",
+        "Support"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "4852-225b-c426-c9b5",
+      "linkId": "228-9ee1-af87-229e",
+      "name": "Painboy on Warbike",
+      "rawName": "Painboy on Warbike [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "NOBZ ON WARBIKES",
+        "SKORCHAS",
+        "WARBIKERS",
+        "WARBUGGIES"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Hold Still and Say ‘Aargh!’",
+          "d": "Each time an attack made by this model with its ’urty syringe scores a Critical Wound against a unit (excluding VEHICLE units), that unit suffers D6 mortal wounds."
+        },
+        {
+          "n": "Dok’s Toolz",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Speed Freeks",
+        "Character",
+        "Painboy on Warbike",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "a856-30b7-e56d-57db",
+      "linkId": "29e4-80d1-2f8c-75db",
+      "name": "Rukkatrukk Squigbuggy",
+      "rawName": "Rukkatrukk Squigbuggy",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Sawn-off shotgun",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault"
+        },
+        {
+          "n": "Squig launchas",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+6",
+          "skill": "5+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Ignores Cover, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Buzzer Squigs",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks made with squig-launchas and roll one D6; on a 4+, until the end of your opponent's next turn, that enemy unit is hindered. While a unit is hindered, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it."
+        },
+        {
+          "n": "Squig Mine",
+          "d": "Once per battle, at the start of any phase, select one enemy unit within 3\" of this model and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds. Designer’s Note: Place a Squig Mine token next to the model, removing it once this ability has been used."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Rukkatrukk Squigbuggy",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "7",
+        "Sv": "4+",
+        "W": "9",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "1d12-e2ae-33bb-4558",
+      "linkId": "856a-4d5d-f93c-336b",
+      "name": "Shokkjump Dragsta",
+      "rawName": "Shokkjump Dragsta",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Kustom shokk rifle",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Devastating Wounds, Hazardous, Precision"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Shokk Tunnel",
+          "d": "In your Movement phase, when this unit is selected to make an advance move, you can use this ability. If you do: - That move has no maximum distance. - This unit can move through all types of model (including enemy models and MONSTER/VEHICLE models). - After moving, your unit must be more than 8\" horizontally from all enemy units."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Shokkjump Dragsta",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "7",
+        "Sv": "4+",
+        "W": "9",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "939f-63bc-4a63-4d93",
+      "linkId": "df05-d522-70d8-cf08",
+      "name": "Skorchas",
+      "rawName": "Skorchas [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": null,
+      "ladder": null,
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Skorchas (1-2)",
+          "min": 1,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Skorchas",
+              "min": 1,
+              "max": 2,
+              "p": 45
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Pyromaniaks",
+          "d": "Each time a model in this unit makes a ranged attack with a Torrent weapon that targets an enemy unit within 6\", re-roll a Wound roll of 1. If the target of that attack is also within range of an objective marker, you can re-roll the Wound roll instead."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Speed Freeks",
+        "Skorchas"
+      ],
+      "models": {
+        "min": 1,
+        "max": 2
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "df63-56a0-92e1-6191",
+      "linkId": "e424-4de8-5ce4-3ce0",
+      "name": "Squiggoth",
+      "rawName": "Squiggoth [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 150,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 150
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Gorin’ horns - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "➤ Gorin’ horns - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Trample",
+          "d": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds."
+        },
+        {
+          "n": "Damaged: 1-6 Wounds Remaining",
+          "d": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Monster",
+        "Transport",
+        "Squiggoth"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "18",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6a83-8e1f-63ef-50c3",
+      "linkId": "6c12-6df4-9d3a-2cc",
+      "name": "Squighog Boyz",
+      "rawName": "Squighog Boyz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        },
+        {
+          "from": 5,
+          "pts": 270
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Bomb Squigs",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Bomb squig",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Unit Composition",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "1 Nob on Smasha Squig and 3 Squighog Boyz",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Nobz on Smasha Squig and 6 Squighog Boyz",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Wild Ride",
+          "d": "You can ignore any or all modifiers to this unit’s Move characteristic and to Advance and Charge rolls made for this unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Beast Snagga",
+        "Grenades",
+        "Squighog Boyz"
+      ],
+      "models": {
+        "min": null,
+        "max": null
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "6c08-9131-14a3-a3b4",
+      "linkId": "4dc0-5822-5cfb-6a02",
+      "name": "Stompa",
+      "rawName": "Stompa",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 600,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 600
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Deffkannon",
+          "melee": false,
+          "range": "72\"",
+          "a": "3D6",
+          "skill": "5+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Mega-choppa - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "24",
+          "ap": "-5",
+          "d": "10",
+          "kw": ""
+        },
+        {
+          "n": "➤ Mega-choppa - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "18",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Supa-gatler",
+          "melee": false,
+          "range": "24\"",
+          "a": "20",
+          "skill": "5+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Supa-rokkits",
+          "melee": false,
+          "range": "100\"",
+          "a": "D6",
+          "skill": "5+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+2",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-10 Wounds Remaining",
+          "d": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Waaagh! Effigy (Aura)",
+          "d": "While a friendly ORKS unit is within 12\" of this model, each time you take a Battle-shock test for that unit, add 1 to that test."
+        },
+        {
+          "n": "Stompin’ Forward",
+          "d": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding Titanic models) and terrain features that are 4\" or less in height as if they were not there."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Titanic",
+        "Towering",
+        "Walker",
+        "Stompa",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "14",
+        "Sv": "2+",
+        "W": "30",
+        "LD": "6+",
+        "OC": "12",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "4adf-8249-c6b2-dd4f",
+      "linkId": "c3c8-5dc4-bb03-3687",
+      "name": "Stormboyz",
+      "rawName": "Stormboyz",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        },
+        {
+          "from": 6,
+          "pts": 130
+        }
+      ],
+      "cap": {
+        "max": 3
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "4-9 Stormboyz",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Stormboy",
+              "min": 4,
+              "max": 9,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Full Throttle",
+          "d": "This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Jump Pack",
+        "Fly",
+        "Grenades",
+        "Stormboyz"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "dadc-d370-ef10-853c",
+      "linkId": "8fe6-8fee-a58c-2ed",
+      "name": "Tankbustas",
+      "rawName": "Tankbustas",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Tankbustas",
+          "min": 5,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Tankbusta w/ Rokkit launcha",
+              "min": 4,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Tankbusta w/ Two rokkit launchas",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Tankbusta w/ Pulsa rokkit",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Tank Hunters",
+          "d": "Each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a LOOTAS unit, it can be attached to this unit instead."
+        },
+        {
+          "n": "Pulsa Rokkit",
+          "d": "Once per battle, when the bearer’s unit is selected to shoot in your Shooting phase, the bearer can use its pulsa rokkit. If it does, until the end of the phase, improve the Strength and Armour Penetration characteristics of ranged weapons equipped by models in the bearer’s unit by 1."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Tankbustas",
+        "Grenades"
+      ],
+      "models": {
+        "min": 5,
+        "max": 8
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1291-7ba8-2c5a-4a92",
+      "linkId": "4b64-6e46-f990-e5df",
+      "name": "Trukk",
+      "rawName": "Trukk",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Grot Riggers",
+          "d": "At the start of your Command phase, this model regains 1 lost wound."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Dedicated Transport",
+        "Vehicle",
+        "Transport",
+        "Trukk",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "8",
+        "Sv": "4+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "21c1-62d6-9682-4fb6",
+      "linkId": "aff6-96f3-9e7-4fe5",
+      "name": "Ufthak Blackhawk",
+      "rawName": "Ufthak Blackhawk [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "BOYZ",
+        "NOBZ"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Shokk rifle",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Devastating Wounds, Hazardous, Precision"
+        },
+        {
+          "n": "Princess' jaws",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Extra Attacks"
+        },
+        {
+          "n": "Snazzhammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Tellyporta Tech",
+          "d": "While this model is leading a unit, models in that unit have the Deep Strike ability."
+        },
+        {
+          "n": "Gargantsmasha",
+          "d": "Each time this model makes an attack that targets a Titanic* unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Infantry",
+        "Epic Hero",
+        "Character",
+        "Grenades",
+        "Warboss",
+        "Ufthak Blackhawk",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "6a69-8e75-49ae-408f",
+      "linkId": "e9e4-d332-9c57-f71b",
+      "name": "Upstart Gretchin",
+      "rawName": "Upstart Gretchin [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 40,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 40
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Gretchin"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Skulkin' Grot",
+          "d": "While this model is leading a unit, models in that unit have the Infiltrators and Stealth abilities."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Crucible",
+        "Grenades",
+        "Grots",
+        "Upstart Gretchin"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "2",
+        "Sv": "7+",
+        "W": "3",
+        "LD": "8+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "83a7-ea20-ed9-d14a",
+      "linkId": "a187-8fd-2a3f-684b",
+      "name": "Warbikers",
+      "rawName": "Warbikers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        },
+        {
+          "from": 4,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Warbikers (2-5)",
+          "min": 2,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Warbiker",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Warbiker w/ Slugga",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Warbiker w/ Choppa",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Drive-by Dakka",
+          "d": "Each time a model in this unit makes a ranged attack that targets a unit within 9\", improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Grenades",
+        "Warbikers",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 16
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "2efc-c4b3-2ecc-5a37",
+      "linkId": "9189-6889-492c-a43e",
+      "name": "Warboss",
+      "rawName": "Warboss",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "NOBZ"
+      ],
+      "options": [
+        {
+          "n": "Kombi-weapon, Twin Sluggas and Big Choppa",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Kombi-weapon, twin sluggas and big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom choppa and kustom shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kombi-weapon, twin sluggas and power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin sluggas",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol, Twin-linked"
+        },
+        {
+          "n": "Kustom choppa",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Cleave 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Might is Right",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Da Biggest and da Best",
+          "d": "While the Waaagh! is active for your army, add 4 to the Attacks characteristic of this model’s melee weapons."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Warboss",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "494b-11ce-5af-5b50",
+      "linkId": "5c34-a534-2c39-a073",
+      "name": "Warboss in Mega Armour",
+      "rawName": "Warboss in Mega Armour",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Meganobz"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Big shoota",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Might is Right",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Dead Brutal",
+          "d": "While the Waaagh! is active for your army, this model’s ’uge choppa has a Damage characteristic of 3."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Warboss in Mega Armour",
+        "Mega Armour",
+        "Warboss",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "7",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "6aed-92bb-49d6-12da",
+      "linkId": "e38-2e97-b43b-387c",
+      "name": "Warboss on Warbike",
+      "rawName": "Warboss on Warbike [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "NOBZ ON WARBIKES",
+        "SKORCHAS",
+        "WARBIKERS",
+        "WARBUGGIES"
+      ],
+      "options": [
+        {
+          "n": "Killsaw",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Killsaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Speedboss",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "High-octane Fuel",
+          "d": "Each time this model’s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this model’s unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Speed Freeks",
+        "Grenades",
+        "Warboss",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "7",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "e969-cbc8-60a6-affb",
+      "linkId": "59f4-c2c8-1623-bf18",
+      "name": "Warbuggies",
+      "rawName": "Warbuggies [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": null,
+      "ladder": null,
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Warbuggies (1-2)",
+          "min": 1,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Warbuggies w/ Twin big shoota",
+              "min": 0,
+              "max": 2,
+              "p": 40
+            },
+            {
+              "n": "Warbuggies w/ Rack of rokkits",
+              "min": 0,
+              "max": 2,
+              "p": 40
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Outflank",
+          "d": "When this unit arrives from Strategic Reserves, it can be set up within your opponent’s deployment zone (all other restrictions still apply)."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Speed Freeks",
+        "Warbuggies"
+      ],
+      "models": {
+        "min": null,
+        "max": 4
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "54de-2004-bbc1-3ac6",
+      "linkId": "3049-3ebe-9129-ff02",
+      "name": "Warphead",
+      "rawName": "Warphead [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Boyz",
+        "Nobz",
+        "Gretchin"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Channellin' da Waaagh!",
+          "d": "Each time this model attacks with a Psychic weapon, until the end of the phase, improve the Attacks, Strength and Damage characteristics of that weapon by 1 for every 5 models in this unit. While this unit contains 10 or more models, those weapons have the [HAZARDOUS] ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Crucible",
+        "Psyker",
+        "Warphead"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "9e51-a749-18ba-2ea4",
+      "linkId": "ecf3-eb15-5d42-173d",
+      "name": "Wartrakk",
+      "rawName": "Wartrakk",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Choppas",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Indiscriminate Detonations",
+          "d": "In your Shooting phase, when this unit has resolved its attacks, select one enemy unit hit by one or more of those attacks. That enemy unit is suppressed until the start of your next Command phase. (While a unit is suppressed, it has ‑1 to hit rolls.)"
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Mounted",
+        "Speed Freeks",
+        "Wartrakk"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "7",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "3832-ad97-2b3b-8775",
+      "linkId": "5996-535f-507b-3177",
+      "name": "Wazbom Blastajet",
+      "rawName": "Wazbom Blastajet",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 165,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 165
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Twin Wazbom Mega-kannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin wazbom mega-kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin tellyport mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Blastajet Force Field",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin supa-shoota",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Smasha gun",
+          "melee": false,
+          "range": "48\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-3",
+          "d": "4",
+          "kw": "Blast"
+        },
+        {
+          "n": "Twin wazbom mega-kannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-2",
+          "d": "D6",
+          "kw": "Blast, Hazardous, Twin-linked"
+        },
+        {
+          "n": "Twin tellyport mega-blasta",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "5+",
+          "s": "9",
+          "ap": "-1",
+          "d": "D6+1",
+          "kw": "Blast, Twin-linked"
+        },
+        {
+          "n": "Twin supa-shoota",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Rapid Fire 2, Sustained Hits 1, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Blastajet Attack Run",
+          "d": "Each time this model makes a ranged attack that targets a unit that cannot FLY, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Blastajet Force Field",
+          "d": "The bearer has a 4+ invulnerable save, but it loses the Grenades keyword."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Grenades",
+        "Wazbom Blastajet",
+        "Speed Freeks"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "7+",
+        "OC": "-",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "2ab7-ab71-0af4-5d39",
+      "linkId": "9f96-0177-abbe-926e",
+      "name": "Wazdakka Gutsmek",
+      "rawName": "Wazdakka Gutsmek",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 175,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 175
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Fixit's wrench",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Extra Attacks"
+        },
+        {
+          "n": "Psyko-gatler",
+          "melee": false,
+          "range": "24\"",
+          "a": "12",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Assault, Sustained Hits 1"
+        },
+        {
+          "n": "Grabba dragga",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Lance"
+        },
+        {
+          "n": "Speeding bulk and flaming exhaust",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Fixit da Grot",
+          "d": "At the start of your Command phase, this model regains up to D3 lost wounds."
+        },
+        {
+          "n": "Waaagh! Wazdakka",
+          "d": "If this model is your Warlord, Warbiker units from your army have the Battleline keyword."
+        },
+        {
+          "n": "Throttlerokkit Shokka Engine",
+          "d": "In your Command phase, select one of the abilities in the Throttlerokkit Shokka Engine section. Until the start of your next Command phase, this model has that ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Wazdakka Gutsmek",
+        "Mounted",
+        "Vehicle",
+        "Speed Freeks",
+        "Smoke"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "260d-9ce4-ea1f-a957",
+      "linkId": "fe9e-86a2-ca17-27f1",
+      "name": "Weirdboy",
+      "rawName": "Weirdboy",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BOYZ",
+        "BREAKA BOYZ"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Da Jump (Psychic)",
+          "d": "Once per turn, at the end of your Movement phase, one WEIRDBOY from your army can use this ability. If it does, roll one D6: on a 1, that WEIRDBOY’s unit suffers D6 mortal wounds; on a 2+, remove this WEIRDBOY’s unit from the battlefield and set it up again anywhere on the battlefield that is more than 8\" horizontally away from all enemy models."
+        },
+        {
+          "n": "Waaagh! Energy",
+          "d": "While this model is leading a unit, add 1 to the Strength and Damage characteristics of this model’s ’Eadbanger weapon for every 5 models in that unit (rounding down), but while that unit contains 10 or more models, that weapon has the [HAZARDOUS] ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Weirdboy",
+        "Character",
+        "Infantry",
+        "Psyker",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "290-ff5a-b14f-e432",
+      "linkId": "619c-3098-8a90-8fa5",
+      "name": "Wurrboy",
+      "rawName": "Wurrboy",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Beast Snagga Boyz"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Roar of Mork (Psychic)",
+          "d": "In your opponent’s Command phase, you can select one enemy unit within 18\" of and visible to this Psyker and roll one D6: on a 1, this Psyker’s unit suffers D3 mortal wounds; on a 2+, until the start of your opponent’s next Command phase, that enemy unit is confrazzled. While a unit is confrazzled, each time a Battle-shock or Leadership test is taken for it, subtract 2 from that test."
+        },
+        {
+          "n": "Unstable Oracle",
+          "d": "While this model is leading a unit, add 2 to the Attacks characteristic of this model’s Eyez of Mork weapon for every 5 models in that unit (rounding down), but while that unit contains 10 or more models, that weapon has the [HAZARDOUS] ability."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Wurrboy",
+        "Psyker",
+        "Beast Snagga",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "ce45-db08-3795-18a9",
+      "linkId": "56d-75fd-cbd1-88a5",
+      "name": "Zodgrod Wortsnagga",
+      "rawName": "Zodgrod Wortsnagga",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Gretchin"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Da Grabzappa",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Squigstoppa",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-Monster 4+, Pistol"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Super Runts",
+          "d": "While this model is leading a unit: - Models in that unit have the Scouts 9\" ability. - Each time a model in that unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll. - Each time an attack targets that unit, subtract 1 from the Wound roll."
+        },
+        {
+          "n": "Special Dose",
+          "d": "While the Waaagh! is active for your army, add 6\" to the Move characteristic of models in this model’s unit."
+        }
+      ],
+      "faction": "Orks",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Zodgrod Wortsnagga",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "5+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    }
+  ]
+}

@@ -1,0 +1,1617 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "f89b-84e0-6e3b-f1e2",
+  "catalogueName": "Imperium - Adeptus Astartes - Deathwatch",
+  "nativeFaction": "Adeptus Astartes",
+  "detachments": [],
+  "revision": 4,
+  "file": "Imperium - Deathwatch.json",
+  "counts": {
+    "total": 10,
+    "native": 10,
+    "matched": 10,
+    "legends": 0,
+    "crucible": 0,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "d861-972b-54f9-bdfa",
+      "linkId": "319e-5b9d-5c49-4e57",
+      "name": "Corvus Blackstar",
+      "rawName": "Corvus Blackstar",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hurricane bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Centreline weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Missile choice",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 Blackstar rocket launchers",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "2 Stormstrike missile launchers",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Auspex array",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Infernum halo-launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Hurricane bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 6, Twin-Linked"
+        },
+        {
+          "n": "Twin assault cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds, Twin-Linked"
+        },
+        {
+          "n": "Twin lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Twin-Linked"
+        },
+        {
+          "n": "Blackstar rocket launcher",
+          "melee": false,
+          "range": "30\"",
+          "a": "D6+1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "Stormstrike missile launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Blackstar Cluster Launcher",
+          "d": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 5+, that unit suffers 1 mortal wound."
+        },
+        {
+          "n": "Damaged: 1-5 Wounds Remaining",
+          "d": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Transport",
+          "d": "This model has a transport capacity of 12 ADEPTUS ASTARTES INFANTRY or KILL TEAM models. Each JUMP PACK, GRAVIS or TERMINATOR model takes up the space of 2 models and each CENTURION model takes up the space of 3 models."
+        },
+        {
+          "n": "Auspex Array",
+          "d": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
+        },
+        {
+          "n": "Infernum Halo-launcher",
+          "d": "The bearer has the SMOKE keyword."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Fly",
+        "Vehicle",
+        "Imperium",
+        "Transport",
+        "Corvus Blackstar",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "390e-706b-a059-378b",
+      "linkId": "9a-d0b0-480d-21cd",
+      "name": "Deathwatch Terminator Squad",
+      "rawName": "Deathwatch Terminator Squad",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        },
+        {
+          "from": 6,
+          "pts": 330
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Deathwatch Terminators",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Deathwatch Terminator",
+              "min": 1,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Deathwatch Terminator w/ Heavy Weapon",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Deathwatch Terminator Sergeant",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Terminator Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power Fist & Storm Bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Storm Bolter & Power Weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer & Storm Shield",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Storm Bolter & Chainfist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Terminator Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power Fist & Storm Bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Storm Bolter & Power Weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer & Storm Shield",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Storm Bolter & Chainfist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Power Weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Thunder Hammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Chainfist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8+",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Vehicle 3+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Terminatus Assault",
+          "d": "You can re-roll Charge rolls made for this unit. Each time this unit ends a Charge move, each enemy unit within Engagement Range of this unit must take a Battle-shock test. If that enemy unit does not have the IMPERIUM or CHAOS keywords, subtract 1 from that test."
+        },
+        {
+          "n": "Teleport Homer",
+          "d": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" of that token and not within 9\" of any enemy models. That token is then removed."
+        },
+        {
+          "n": "Invulnerable Save",
+          "d": "Models in this unit have a 4+ invulnerable save."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a TERMINATOR SQUAD, it can be attached to this unit instead."
+        },
+        {
+          "n": "Storm Shield",
+          "d": "The bearer has a Wounds characteristic of 4."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Imperium",
+        "Deathwatch Terminator Squad",
+        "Terminator",
+        "Kill Team"
+      ],
+      "models": {
+        "min": 2,
+        "max": 13
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "66ab-476a-134e-ec7b",
+      "linkId": "e17b-05e3-61c0-2ad9",
+      "name": "Deathwatch Veterans",
+      "rawName": "Deathwatch Veterans",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        },
+        {
+          "from": 6,
+          "pts": 190
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Squad Loadout",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Veteran w/ boltgun and power weapon",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ Deathwatch thunder hammer",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ frag cannon and CCW",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ infernus heavy bolter and CCW",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ Astartes shield and boltgun",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ Astartes shield and power weapon",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ stalker-pattern boltgun and CCW",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ Deathwatch shotgun and CCW",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Veteran w/ Black Shield blades",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Sergeant-specific loadouts (for others, use the above)",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Sgt w/ Astartes shield and xenophase blade",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Sgt w/ boltgun and xenophase blade",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Sgt w/ combi-weapon and power weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Sgt w/ combi-weapon and xenophase blade",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Sgt w/ Astartes shield and combi-weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Deathwatch thunder hammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Frag cannon",
+          "melee": false,
+          "range": "18\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Heavy, Rapid Fire D3"
+        },
+        {
+          "n": "Stalker-pattern boltgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Precision"
+        },
+        {
+          "n": "Deathwatch shotgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "2",
+          "kw": "Assault"
+        },
+        {
+          "n": "Blackshield blades",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Death to the Alien",
+          "d": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the IMPERIUM or CHAOS keywords, you can re-roll the Hit roll instead."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a STERNGUARD VETERAN SQUAD, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Ordo Xenos",
+        "Retinue",
+        "Deathwatch Kill Team"
+      ],
+      "models": {
+        "min": null,
+        "max": 38
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "b169-ff89-b05e-3884",
+      "linkId": "8b60-d2f3-62a3-e41f",
+      "name": "Decimus Kill Team",
+      "rawName": "Decimus Kill Team",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Unit composition",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "5 models",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "10 models",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Xenophase blade",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Death to the Alien",
+          "d": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the Imperium or Chaos keywords, you can re-roll the Hit roll instead."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a Character unit from your army can be attached to a Fortis Kill Team unit, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Kill Team",
+        "Tacticus",
+        "Decimus Kill Team"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "a077-e1c9-f8f0-d38",
+      "linkId": "a5ae-26d2-12a0-13d7",
+      "name": "Fortis Kill Team",
+      "rawName": "Fortis Kill Team",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 195,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 195
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Squad Members",
+          "min": 9,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Intercessor",
+              "min": 2,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Intercessor w/ grenade launcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Intercessor w/ heavy bolt pistol",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Intercessor w/ pyreblaster",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kill Team Intercessor w/ plasma incinerator",
+          "min": 0,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Intercessor w/ plasma pistol and incinerator",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Intercessor w/ bolt pistol and incinerator",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kill Team Intercessor w/ missile launcher",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Intercessor w/ vengor launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Intercessor w/ superfrag missile launcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Intercessor w/ superkrak missile launcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Heavy bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Superfrag missile launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+1",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "Superkrak missile launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Fortis Doctrines",
+          "d": "Each time a model in this unit makes an attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll instead."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER from your army with the Leader ability can be attached to an INTERCESSOR SQUAD, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Fortis Kill Team",
+        "Tacticus",
+        "Kill Team"
+      ],
+      "models": {
+        "min": 3,
+        "max": 30
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6cb-912c-c43-210b",
+      "linkId": "6942-fa3c-d518-295f",
+      "name": "Indomitor Kill Team",
+      "rawName": "Indomitor Kill Team",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 275,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 275
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Kill Team Heavy Intercessors w/ melta weapons",
+          "min": 0,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Heavy Intercessor w/ melta rifle",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Heavy Intercessor w/ multi-melta",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kill Team Heavy Intercessors w/ twin power fists",
+          "min": 0,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Heavy Intercessor w/ power fists & auto boltstorm gauntlets",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Heavy Intercessor w/ power fists & flamestorm gauntlets",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kill Team Heavy Intercessors",
+          "min": 3,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Heavy Intercessor",
+              "min": 2,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Heavy Intercessor w/ heavy bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Auto boltstorm gauntlets",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Twin power fists",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Flamestorm gauntlets",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+1",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent, Twin-linked"
+        },
+        {
+          "n": "Deathwatch heavy bolt rifle",
+          "melee": false,
+          "range": "30\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Assault, Heavy, Lethal Hits"
+        },
+        {
+          "n": "Deathwatch heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Assault, Heavy, Lethal Hits, Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Indomitor Doctrines",
+          "d": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, or makes a melee attack in a turn in which it made a Charge move, improve the Strength characteristic of that attack by 2."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army can be attached to a HEAVY INTERCESSOR SQUAD, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Indomitor Kill Team",
+        "Gravis",
+        "Kill Team"
+      ],
+      "models": {
+        "min": 2,
+        "max": 21
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "2544-5189-7806-30f3",
+      "linkId": "6482-591d-fe98-7961",
+      "name": "Spectrus Kill Team",
+      "rawName": "Spectrus Kill Team",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 170,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Squad Members",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Infiltrator",
+              "min": 3,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Infiltrator w/ occulus bolt carbine",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Infiltrator w/ wargear",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kill Team Infiltrators w/ combat knives",
+          "min": 0,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Infiltrator w/ combat knife",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Infiltrator w/ bolt carbine",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kill Team Infiltrators w/ bolt sniper rifles",
+          "min": 0,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Infiltrator w/ instigator bolt carbine",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Infiltrator w/ las fusil",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Kill Team Infiltrator w/ bolt sniper rifle",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Equipment",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Helix Gauntlet",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Infiltrator Comms Array",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Deathwatch marksman bolt carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Heavy, Lethal Hits"
+        },
+        {
+          "n": "Deathwatch occulus bolt carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Ignores Cover, Lethal Hits"
+        },
+        {
+          "n": "Paired combat blades",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Special-issue bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol, Precision"
+        },
+        {
+          "n": "Combat knife",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Precision"
+        },
+        {
+          "n": "Deathwatch Bolt carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits, Precision"
+        },
+        {
+          "n": "Instigator bolt carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Bolt sniper rifle",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Heavy, Precision"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER from your army with the Leader ability can be attached to an INFILTRATOR SQUAD, it can be attached to this unit instead. If this unit has a Leader unit attached to it during the Declare Battle Formations step, that Leader unit gains the Infiltrators and Scouts 6\" abilities."
+        },
+        {
+          "n": "Spectrus Doctrines",
+          "d": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "n": "Helix Gauntlet",
+          "d": "Models in the bearer’s unit have the Feel No Pain 6+ ability."
+        },
+        {
+          "n": "Infiltrator Comms Array",
+          "d": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "n": "Instigator Bolt Carbine",
+          "d": "In your Shooting phase, after the bearer’s unit has shot, the bearer’s unit can make a Normal move. If it does, until the end of the turn, the bearer’s unit is not eligible to declare a charge."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Smoke",
+        "Spectrus Kill Team",
+        "Kill Team",
+        "Phobos"
+      ],
+      "models": {
+        "min": 3,
+        "max": 30
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "c679-f252-32b1-ebcc",
+      "linkId": "3fda-b554-1ac7-a635",
+      "name": "Talonstrike Kill Team",
+      "rawName": "Talonstrike Kill Team",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 265,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 265
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Unit Composition",
+          "min": 9,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Intercessor w/ heavy bolt pistol and Jump Pack",
+              "min": 4,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Heavy Intercessor w/ Jump Pack",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Intercessor w/ plasma pistol and Jump Pack",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Assault bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma exterminators",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Assault bolters",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Assault, Pistol, Sustained Hits 2, Twin-linked"
+        },
+        {
+          "n": "➤ Plasma exterminators - standard",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Assault, Pistol, Twin-linked"
+        },
+        {
+          "n": "➤ Plasma exterminators - supercharge",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Assault, Hazardous, Pistol, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Talonstrike Doctrines",
+          "d": "Each time this unit is set up on the battlefield, until the end of the turn: - Improve the Armour Penetration characteristic of weapons equipped by models in this unit by 1. - Melee weapons equipped by models in this unit have the [LANCE] ability."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to an ASSAULT INTERCESSORS WITH JUMP PACKS unit, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Jump Pack",
+        "Grenades",
+        "Imperium",
+        "Kill Team",
+        "Talonstrike Kill Team"
+      ],
+      "models": {
+        "min": 5,
+        "max": 16
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3d7c-2de-31ea-b028",
+      "linkId": "4bc4-95ae-422d-1469",
+      "name": "Watch Captain Artemis",
+      "rawName": "Watch Captain Artemis",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "DEATHWATCH VETERANS",
+        "FORTIS KILL TEAM"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Hellfire Extremis",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-Infantry 4+, Devastating Wounds, Ignores Cover, Torrent"
+        },
+        {
+          "n": "Master-crafted power weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Invulnerable Save",
+          "d": "This model has a 4+ invulnerable save."
+        },
+        {
+          "n": "Tactical Instinct",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+        },
+        {
+          "n": "Unstoppable Champion",
+          "d": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 1 wound remaining."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Watch Captain Artemis",
+        "Captain"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "f7c3-45d2-a7ac-d8bc",
+      "linkId": "d7e1-13bb-2177-b6bc",
+      "name": "Watch Master",
+      "rawName": "Watch Master",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 95,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 95
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "DEATHWATCH VETERANS",
+        "FORTIS KILL TEAM"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Vigil spear",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Invulnerable Save",
+          "d": "This model has a 4+ invulnerable save."
+        },
+        {
+          "n": "Strategic Knowledge",
+          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+        },
+        {
+          "n": "Watch Master",
+          "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Captain",
+        "Grenades",
+        "Imperium",
+        "Watch Master"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    }
+  ]
+}

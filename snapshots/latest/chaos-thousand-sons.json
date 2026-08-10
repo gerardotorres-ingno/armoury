@@ -1,0 +1,6968 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "1069-10ff-3ba9-873b",
+  "catalogueName": "Chaos - Thousand Sons",
+  "nativeFaction": "Thousand Sons",
+  "detachments": [
+    "Hexwarp Thrallband",
+    "Grand Coven",
+    "Changehost of Deceit",
+    "Warpmeld Pact",
+    "Rubricae Phalanx",
+    "Warpforged Cabal",
+    "Ritual of Regeneration",
+    "Sekhetar Cohort",
+    "Servants of Change"
+  ],
+  "revision": 8,
+  "file": "Chaos - Thousand Sons.json",
+  "counts": {
+    "total": 66,
+    "native": 34,
+    "matched": 29,
+    "legends": 2,
+    "crucible": 3,
+    "allied": 32
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "3bfa-bf00-b5ed-cc81",
+      "linkId": "5847-34cb-f4d4-f5f0",
+      "name": "Ahriman",
+      "rawName": "Ahriman",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 1
+      },
+      "leads": [
+        "Rubric Marines",
+        "Tzaangor Enlightened",
+        "Tzaangor Enlightened with Fatecaster Greatbows"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Transmogrifying Blast",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6+1",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Blast, Psychic"
+        },
+        {
+          "n": "Black Staff of Ahriman",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Scryer of Fates (Psychic)",
+          "d": "if your army includes this model, after both players have deployed their armies, you can select up to 3 Thousand Sons units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "n": "Arch-Sorcerer of Tzeentch (Psychic)",
+          "d": "Each time this model attempts a Ritual, add 1 to the Psychic test result."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Fly",
+        "Mounted",
+        "Ahriman"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "aec5-4419-39e7-3e63",
+      "linkId": "f91f-6730-445a-22b0",
+      "name": "Blue Horrors",
+      "rawName": "Blue Horrors",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Coruscating Yellow flames (ref. only)",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "5+",
+          "s": "2",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol, Psychic"
+        },
+        {
+          "n": "Yellow claws (ref. only)",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "5+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Coruscating Blue flames",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "3",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol, Psychic"
+        },
+        {
+          "n": "Blue claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "5+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Split",
+          "d": "Each time a Blue Horror model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, add one Brimstone Horror model to this unit."
+        },
+        {
+          "n": "Sullen Malevolence (Aura)",
+          "d": "While an enemy unit is within 6\" of this unit, if this unit contains one or more Blue Horror models, worsen the Leadership characteristic of models in that enemy unit by 1."
+        },
+        {
+          "n": "Exploding Horrors",
+          "d": "Each time this unit is selected to fight, you can select one enemy unit within Engagement Range of it, then select one or more Brimstone Horror models in this unit. For each Brimstone Horror model you select, roll one D6: on a 4+, that model is destroyed and that enemy unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Scintillating Legions",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Chaos",
+        "Daemon",
+        "Tzeentch",
+        "Summoned",
+        "Horrors"
+      ],
+      "models": {
+        "min": 10,
+        "max": 10
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "7+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "d288-821d-7fef-f3ae",
+      "linkId": "3c36-4b1e-3485-5336",
+      "name": "Brayherd Chieftain",
+      "rawName": "Brayherd Chieftain [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Tzaangors"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Fate's Guide",
+          "d": "If this unit starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third turn, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting up this unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Chaos",
+        "Tzeentch",
+        "Mutant",
+        "Brayherd Chieftain"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "f75a-a5e6-f478-6f55",
+      "linkId": "df5d-5a8e-adb0-a94b",
+      "name": "Brayherd Shaman",
+      "rawName": "Brayherd Shaman [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Tzaangors"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Bestial Prophet",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Chaos",
+        "Tzeentch",
+        "Mutant",
+        "Psyker",
+        "Brayherd Shaman"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "4044-b458-fb4d-d05b",
+      "linkId": "4a7d-9d6d-4e47-e990",
+      "name": "Cerberus",
+      "rawName": "Cerberus [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 270,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 270
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Cerberus neutron pulse array",
+          "melee": false,
+          "range": "48\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-4",
+          "d": "D6+3",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Atomantic Arc-reactor",
+          "d": "Each time this unit shoots its Cerberus neutron pulse array in your Shooting phase, provided it Remained Stationary this turn, that weapon has the [LETHAL HITS] ability."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Cerberus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "dfde-eaff-e63e-3aae",
+      "linkId": "0e64-a79a-af7c-5b5f",
+      "name": "Chaos Land Raider",
+      "rawName": "Chaos Land Raider",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 220,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 220
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Armoured tracks",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "8",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Soulshatter lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Assault Ramp",
+          "d": "Each time a unit disembarks from this Transport after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Chaos",
+        "Tzeentch",
+        "Land Raider",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a619-beee-4bde-d049",
+      "linkId": "70e3-266d-822c-677c",
+      "name": "Chaos Predator Annihilator",
+      "rawName": "Chaos Predator Annihilator",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 inferno heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Predator twin lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ensorcelled Annihilation",
+          "d": "Each time this model makes a ranged attack that targets a Monster or Vehicle unit that was hit by one or more Psychic attacks made by a Thousand Sons Psyker unit from your army this turn, you can re-roll the Hit roll and you can re-roll the Damage roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Chaos",
+        "Tzeentch",
+        "Predator Annihilator",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "4819-dbbe-8547-4e23",
+      "linkId": "482e-2586-c4e4-37f7",
+      "name": "Chaos Predator Destructor",
+      "rawName": "Chaos Predator Destructor",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 inferno heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Predator autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ensorcelled Destruction",
+          "d": "Each time this model makes a ranged attack that targets a unit (excluding Monsters and Vehicles) that was hit by one or more Psychic attacks made by a Thousand Sons Psyker unit from your army this turn, improve the Strength and Armour Penetration characteristic of that attack by 1."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Chaos",
+        "Tzeentch",
+        "Predator Destructor",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "8d9b-b949-2557-dcc4",
+      "linkId": "1957-3e4e-c38b-9c31",
+      "name": "Chaos Rhino",
+      "rawName": "Chaos Rhino",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Sorcerous Support",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes a Psychic attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Dedicated Transport",
+        "Chaos",
+        "Tzeentch",
+        "Rhino",
+        "Smoke",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "60de-4c77-95e1-1337",
+      "linkId": "9d98-ef75-6e9a-0616",
+      "name": "Chaos Spawn",
+      "rawName": "Chaos Spawn",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Hideous Mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "D6+2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Regenerating Monstrosities",
+          "d": "At the start of each player’s Command phase, one model in this unit regains up to 3 lost wounds."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Beast",
+        "Chaos",
+        "Tzeentch",
+        "Spawn",
+        "Mutant"
+      ],
+      "models": {
+        "min": 2,
+        "max": 2
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "dd17-8cb8-ed8c-f6c8",
+      "linkId": "40b5-1872-0f11-5f6b",
+      "name": "Chaos Spawn (Flesh Change)",
+      "rawName": "Chaos Spawn (Flesh Change)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Hideous Mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "D6+2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Regenerating Monstrosities",
+          "d": "At the start of each player’s Command phase, one model in this unit regains up to 3 lost wounds."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Beast",
+        "Chaos",
+        "Tzeentch",
+        "Spawn",
+        "Mutant"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "6844-986c-b0ea-6dd5",
+      "linkId": "893b-fe01-6569-9fcb",
+      "name": "Chaos Thunderhawk",
+      "rawName": "Chaos Thunderhawk [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 840,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 840
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Bombs or missiles",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Thunderhawk cluster bombs",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hellstrike missile array",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Thunderhawk heavy cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Turbo-laser destructor",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Hellstrike missile array",
+          "melee": false,
+          "range": "72\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-Fly 3+"
+        },
+        {
+          "n": "Thunderhawk heavy cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Turbo-laser destructor",
+          "melee": false,
+          "range": "96\"",
+          "a": "D3+1",
+          "skill": "3+",
+          "s": "20",
+          "ap": "-4",
+          "d": "D6+6",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-10 wounds remaining",
+          "d": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Aerial Assault",
+          "d": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+        },
+        {
+          "n": "Thunderhawk cluster bombs",
+          "d": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Fly",
+        "Aircraft",
+        "Transport",
+        "Chaos",
+        "Thunderhawk"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20\"+",
+        "T": "12",
+        "Sv": "2+",
+        "W": "30",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3413-b8fd-e22c-da4f",
+      "linkId": "f24f-e542-0dc3-0f35",
+      "name": "Chaos Vindicator",
+      "rawName": "Chaos Vindicator",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 185,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 185
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Demolisher cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Siege Shield",
+          "d": "When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Chaos",
+        "Tzeentch",
+        "Vindicator",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "eccd-e442-607b-3fd0",
+      "linkId": "8b7c-94a7-c872-438d",
+      "name": "Daemon Prince of Tzeentch",
+      "rawName": "Daemon Prince of Tzeentch",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 170,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Dark Blessing",
+          "melee": false,
+          "range": "24\"",
+          "a": "9",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Psychic, Sustained Hits 1"
+        },
+        {
+          "n": "➤ Hellforged weapons - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Devastating Wounds, Psychic"
+        },
+        {
+          "n": "➤ Hellforged weapons - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Devastating Wounds, Psychic"
+        },
+        {
+          "n": "Infernal cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Spirit Snare",
+          "d": "Each time a friendly Thousand Sons Psyker model with the Cabal of Sorcerers ability is destroyed while within 9\" of one or more models with this ability, select one of those models with this ability: until the end of the battle, each time the selected model attempts a Ritual, add 1 to the Psychic test result (to a maximum of +2)."
+        },
+        {
+          "n": "Servile Pawns",
+          "d": "While this model is within 3\" of one or more friendly Thousand Sons Infantry units, this model has the Lone Operative ability."
+        },
+        {
+          "n": "Glamour of Tzeentch (Aura, Psychic)",
+          "d": "While a friendly Thousand Sons Infantry unit is within 6\" of this model, models in that unit have the Stealth ability."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Daemon",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Daemon Prince"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "66f4-929e-1769-f277",
+      "linkId": "2d6b-f5cf-6f01-9475",
+      "name": "Daemon Prince of Tzeentch with wings",
+      "rawName": "Daemon Prince of Tzeentch with wings",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 170,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Dark Blessing",
+          "melee": false,
+          "range": "24\"",
+          "a": "9",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Psychic, Sustained Hits 1"
+        },
+        {
+          "n": "➤ Hellforged weapons - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Devastating Wounds, Psychic"
+        },
+        {
+          "n": "➤ Hellforged weapons - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Devastating Wounds, Psychic"
+        },
+        {
+          "n": "Infernal cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Aetherstride (Psychic)",
+          "d": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does: - It can be set up anywhere on the battlefield more than 6\" horizontally away from all enemy units. - Until the end of the turn, its Dark Blessing has the [Sustained Hits D3] ability. - Until the end of the turn, it is not eligible to declare a charge."
+        },
+        {
+          "n": "Hunter of Souls",
+          "d": "Each time this model makes an attack that targets a Character unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a Psyker Character unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a Character unit, this model regains up to D3 lost wounds (if that Character unit was a Psyker, this model regains up to 3 lost wounds instead)."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Daemon",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Daemon Prince",
+        "Fly"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "13\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "8597-d6dd-511e-80ae",
+      "linkId": "921c-0798-f8ec-2975",
+      "name": "Daemonic Charioteer",
+      "rawName": "Daemonic Charioteer [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Nurgle",
+        "Slaanesh",
+        "Tzeentch"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Malefic Impact",
+          "d": "Melee weapons equipped by models in this unit have the [Lance] ability."
+        }
+      ],
+      "faction": "Legiones Daemonica",
+      "keywords": [
+        "Character",
+        "Chaos",
+        "Daemon",
+        "Crucible",
+        "Mounted",
+        "Daemonic Charioteer",
+        "Shadow Legion",
+        "Non-Monster Character"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "7",
+        "Sv": "6+",
+        "W": "8",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3a39-0b56-25e0-eff8",
+      "linkId": "d0e7-c332-619f-3a3d",
+      "name": "Daemonic Herald",
+      "rawName": "Daemonic Herald [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Nurgle",
+        "Slaanesh",
+        "Tzeentch"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Daemonic Locus",
+          "d": "While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model, or D3 destroyed models with the Battleline keyword, to that unit."
+        }
+      ],
+      "faction": "Legiones Daemonica",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Chaos",
+        "Daemon",
+        "Summoned",
+        "Daemonic Herald",
+        "Crucible",
+        "Shadow Legion",
+        "Non-Monster Character"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "7+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "f158-2979-c38b-65b5",
+      "linkId": "2a95-aeda-e244-35f4",
+      "name": "Defiler",
+      "rawName": "Defiler",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 300,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 300
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Replace heavy missile launcher",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main cannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Hades battle cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ectoplasma destructor",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace heavy baleflamer",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy baleflamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace excruciator cannons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two excruciator cannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two pyraflux magma cutters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Shearing claws - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Shearing claws - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Heavy missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Heavy missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Hades battle cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Ectoplasma destructor",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Heavy baleflamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "Excruciator cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Pyraflux magma cutter",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Scuttling Walker",
+          "d": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding Titanic models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+        },
+        {
+          "n": "Destroyer of Futures (Once per phase, per unit)",
+          "d": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is ‑1 CP. - That use does not prevent any uses of that stratagem on other units this phase.'"
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Chaos",
+        "Daemon",
+        "Defiler",
+        "Tzeentch"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "11",
+        "Sv": "3+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "d38d-c3a2-f753-efea",
+      "linkId": "52ff-2d98-cbb6-a38f",
+      "name": "Deredeo Dreadnought",
+      "rawName": "Deredeo Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Carapace weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Aiolos missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Boreas air defence missiles",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Anvilus autocannon battery",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Arachnus heavy lascannon battery",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Volkite falconet battery",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hellfire plasma carronade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Aiolos missile launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "Boreas air defence missiles",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Anti-FLY 2+"
+        },
+        {
+          "n": "Anvilus autocannon battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Arachnus heavy lascannon battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Volkite falconet battery",
+          "melee": false,
+          "range": "30\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "➤ Hellfire plasma carronade - standard",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "➤ Hellfire plasma carronade - supercharge",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Hazardous"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Deredeo Strike",
+          "d": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Smoke",
+        "Dreadnought",
+        "Deredeo Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "c3a6-8fab-45f0-2d45",
+      "linkId": "bccb-bed8-e98d-c278",
+      "name": "Exalted Sorcerer",
+      "rawName": "Exalted Sorcerer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Rubric Marines"
+      ],
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Astral Blast",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Prosperine khopesh",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Astral Blast",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Blast, Devastating Wounds, Psychic"
+        },
+        {
+          "n": "Prosperine khopesh",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Arcane Shield (Psychic)",
+          "d": "While this model is leading a unit, models in that unit have a 4+ invulnerable save."
+        },
+        {
+          "n": "Rebind Rubricae (Psychic)",
+          "d": "In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Exalted Sorcerer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "1724-8c9c-c385-16c6",
+      "linkId": "a8c7-bbea-e81d-f2db",
+      "name": "Exalted Sorcerer on Disc of Tzeentch",
+      "rawName": "Exalted Sorcerer on Disc of Tzeentch",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Rubric Marines",
+        "Tzaangor Enlightened"
+      ],
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Arcane Fire",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Prosperine khopesh",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Arcane Fire",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Ignores Cover, Psychic, Torrent"
+        },
+        {
+          "n": "Prosperine khopesh",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Arcane Shield (Psychic)",
+          "d": "While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+        },
+        {
+          "n": "Binding Tendrils (Psychic)",
+          "d": "In your Shooting phase, after this model has shot, select one enemy Infantry unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Exalted Sorcerer",
+        "Fly",
+        "Grenades",
+        "Mounted"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "625b-29e4-7be7-db5a",
+      "linkId": "a308-d6b5-4187-d7b7",
+      "name": "Falchion",
+      "rawName": "Falchion [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 420,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 420
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two quad lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two laser destroyers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin Falchion volcano cannon",
+          "melee": false,
+          "range": "120\"",
+          "a": "D3+1",
+          "skill": "3+",
+          "s": "24",
+          "ap": "-5",
+          "d": "12",
+          "kw": "Blast, Twin-linked"
+        },
+        {
+          "n": "Quad lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Titan-killer",
+          "d": "Each time this model makes a ranged attack with its twin Falchion volcano cannon that targets a MONSTER or VEHICLE unit, that attack has the [DEVASTATING WOUNDS] ability."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Smoke",
+        "Falchion"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "13",
+        "Sv": "2+",
+        "W": "24",
+        "LD": "6+",
+        "OC": "8",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "585d-722b-4304-2f63",
+      "linkId": "bdb1-c3b2-7bcf-1b17",
+      "name": "Fellblade",
+      "rawName": "Fellblade [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 480,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 480
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two quad lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two laser destroyers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two quad heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Demolisher cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Fellblade accelerator cannon - AP shells",
+          "melee": false,
+          "range": "72\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Fellblade accelerator cannon - HE shells",
+          "melee": false,
+          "range": "72\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "Quad lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Quad heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Sustained Hits 1, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rolling Fortress",
+          "d": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Smoke",
+        "Fellblade"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "13",
+        "Sv": "2+",
+        "W": "24",
+        "LD": "6+",
+        "OC": "8",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "1fc7-7880-e4d4-acbf",
+      "linkId": "3082-c9fe-b2b6-2594",
+      "name": "Fire Raptor Gunship",
+      "rawName": "Fire Raptor Gunship [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 290,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 290
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Door weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin autocannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two quad heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wing weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin hellstrike launchers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin avenger bolt cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "10",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Quad heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Twin-linked, Sustained Hits 1"
+        },
+        {
+          "n": "Twin hellstrike launcher",
+          "melee": false,
+          "range": "72\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Anti-Fly 2+, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Strafing Run",
+          "d": "Each time this model makes a ranged attack that targets a unit that cannot FLY, add 1 to the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Fire Raptor Gunship"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "694f-a205-b260-783c",
+      "linkId": "36e4-5064-b0f1-564a",
+      "name": "Flamers",
+      "rawName": "Flamers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        },
+        {
+          "from": 4,
+          "pts": 130
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Flamer mouths",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Flickering flames",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Psychic, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bounding Leaps",
+          "d": "This unit is eligible to shoot in a turn in which it Fell Back."
+        }
+      ],
+      "faction": "Scintillating Legions",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Chaos",
+        "Daemon",
+        "Tzeentch",
+        "Summoned",
+        "Flamers"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "4",
+        "Sv": "7+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "d2f1-7a0b-f7cd-9b46",
+      "linkId": "407b-59cb-a040-856e",
+      "name": "Forgefiend",
+      "rawName": "Forgefiend",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Arm weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 ectoplasma cannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Hades autocannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Head weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Ectoplasma cannon and claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Forgefiend jaws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Forgefiend claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Forgefiend jaws",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "7",
+          "ap": "0",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Blazing Salvos",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit that was hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the hit roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Daemon",
+        "Chaos",
+        "Tzeentch",
+        "Forgefiend"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "5b9d-e3c1-3d55-8276",
+      "linkId": "10b3-2b43-9984-b652",
+      "name": "Helbrute",
+      "rawName": "Helbrute",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 110,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Missile launcher",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Helbrute fist with combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute fist with heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power scourge",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Multi-melta",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute fist with heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute fist with combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute plasma cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "Helbrute hammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "4+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Power scourge",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Twin autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Helbrute plasma cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast, Hazardous"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Terrifying Assault",
+          "d": "In your Shooting phase and the Fight phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test, subtracting 1 if that unit is within 9\" of one or more Thousand Sons Psyker units from your army."
+        },
+        {
+          "n": "Devoted to Destruction",
+          "d": "If this model is equipped with 2 melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Chaos",
+        "Tzeentch",
+        "Helbrute"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "637a-d542-35aa-e95c",
+      "linkId": "e16d-0390-e80b-618c",
+      "name": "Heldrake",
+      "rawName": "Heldrake",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 175,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 175
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Mouth weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Baleflamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Heldrake claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-FLY 2+, Devastating Wounds"
+        },
+        {
+          "n": "Baleflamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Flame-wreathed",
+          "d": "Each time this model ends a Normal move, select one enemy unit it moved over during that move. Until the end of the turn, models in that unit cannot have the Benefit of Cover."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Chaos",
+        "Tzeentch",
+        "Heldrake"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "-",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "3a8-a34f-76aa-b56a",
+      "linkId": "b838-70c8-756e-dc55",
+      "name": "Hell Talon",
+      "rawName": "Hell Talon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Autocannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bomb Rack",
+          "d": "Each time this model ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Chaos",
+        "Tzeentch",
+        "Hell Talon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "c4ab-b52d-3ac0-5d56",
+      "linkId": "b66b-33d2-80fe-567e",
+      "name": "Hellblade",
+      "rawName": "Hellblade [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin autocannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Interceptor",
+          "d": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Chaos",
+        "Tzeentch",
+        "Hellblade"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "3594-bf68-4a46-fbf8",
+      "linkId": "e343-a706-337b-ed54",
+      "name": "Immortal Champion",
+      "rawName": "Immortal Champion [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Infernal Attendants",
+          "d": "While this model is within 3\" of one or more friendly Daemon Infantry units, this model has the Lone Operative ability."
+        },
+        {
+          "n": "Font of Unreality",
+          "d": "Each time an attack is allocated to a friendly Daemon unit within 3\" of this model, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Legiones Daemonica",
+      "keywords": [
+        "Character",
+        "Chaos",
+        "Daemon",
+        "Crucible",
+        "Monster",
+        "Immortal Champion",
+        "Shadow Legion"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "1693-5e00-da69-57bb",
+      "linkId": "fa01-afbc-eb36-3fcf",
+      "name": "Infernal Master",
+      "rawName": "Infernal Master",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 95,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 95
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Rubric Marines"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Fires of the Abyss - witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Psychic, Torrent"
+        },
+        {
+          "n": "➤ Fires of the Abyss - focused witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "2D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Hazardous, Psychic, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Malefic Maelstrom (Psychic)",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Glimpse of Eternity (Psychic)",
+          "d": "Once per turn, you can change the result of one Hit roll, one Wound roll or one saving throw made for this model to an unmodified 6."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Infernal Master"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "8f70-9bec-9b83-216b",
+      "linkId": "bd22-9def-df57-baad",
+      "name": "Kairos Fateweaver",
+      "rawName": "Kairos Fateweaver",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 305,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 305
+        }
+      ],
+      "cap": {
+        "max": 1
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Infernal Gateway - witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+3",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Blast, Indirect Fire, Psychic"
+        },
+        {
+          "n": "➤ Infernal Gateway - focused witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3+6",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast, Hazardous, Indirect Fire, Psychic"
+        },
+        {
+          "n": "Staff of Tomorrow",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2D3",
+          "kw": "Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "One Head Looks Forward",
+          "d": "At the end of your Command phase, if this model is on the battlefield, take a Leadership test for this model; if that test is passed, you gain 1CP."
+        },
+        {
+          "n": "One Head Looks Back (Aura)",
+          "d": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP"
+        },
+        {
+          "n": "Damaged: 1-7 wounds remaining",
+          "d": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Scintillating Legions",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Epic Hero",
+        "Fly",
+        "Psyker",
+        "Chaos",
+        "Daemon",
+        "Tzeentch",
+        "Summoned",
+        "Kairos Fateweaver"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "10",
+        "Sv": "6+",
+        "W": "20",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "78aa-3f99-5fb7-7f83",
+      "linkId": "bf31-6313-ef6f-92a2",
+      "name": "Kratos",
+      "rawName": "Kratos [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 240,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 240
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Hull guns",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite calivers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two autocannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Kratos battlecannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Melta blast-gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Volkite cardanelle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Volkite caliver",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "➤ Kratos battlecannon - AP",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "18",
+          "ap": "-4",
+          "d": "D6+3",
+          "kw": "Heavy"
+        },
+        {
+          "n": "➤ Kratos battlecannon - HE",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Melta blast-gun",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Volkite cardanelle",
+          "melee": false,
+          "range": "36\"",
+          "a": "9",
+          "skill": "3+",
+          "s": "9",
+          "ap": "0",
+          "d": "3",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Twin boltgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Volkite culverin",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Line-breaker",
+          "d": "When making ranged attacks, this model can target enemy units within Engagement Range of it with Blast weapons (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Kratos"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3006-ffe-2b0c-6b1b",
+      "linkId": "8468-f7fa-78b-466e",
+      "name": "Land Raider Achilles",
+      "rawName": "Land Raider Achilles [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 230,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 230
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin multi-meltas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Quad launcher - shatter shells",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "➤ Quad launcher - thunderfire shells",
+          "melee": false,
+          "range": "60\"",
+          "a": "D6+4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Indirect Fire"
+        },
+        {
+          "n": "Twin multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2, Twin-linked"
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Land Raider Achilles"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "34c8-1025-33f7-baaf",
+      "linkId": "ca3f-6404-8f96-c869",
+      "name": "Land Raider Proteus",
+      "rawName": "Land Raider Proteus [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 220,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 220
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Explorator augury web",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Explorator Augury Web",
+          "d": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of the bearer, but the bearer must halve its Transport Capacity."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Land Raider Proteus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "14d4-8062-f090-6719",
+      "linkId": "c0d7-3b1b-480a-3692",
+      "name": "Leviathan Dreadnought",
+      "rawName": "Leviathan Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Arm weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grav-flux bombard",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Cyclonic melta-lance",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Storm cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Siege claw and meltagun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Siege drill  and meltagun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace heavy flamers",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin volkite calivers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Grav-flux bombard",
+          "melee": false,
+          "range": "24\"",
+          "a": "2D3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-Vehicle 2+, Blast"
+        },
+        {
+          "n": "Cyclonic melta-lance",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Storm cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Leviathan siege claw",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Leviathan siege drill",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Twin volkite caliver",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Duty Eternal",
+          "d": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Smoke",
+        "Dreadnought",
+        "Leviathan Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "c964-c75a-2a9d-e451",
+      "linkId": "623a-7117-a6cf-b8b0",
+      "name": "Lord of Change",
+      "rawName": "Lord of Change",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 320,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 320
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Rod of sorcery",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Baleful sword",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Bolt of Change - witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "9",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Psychic"
+        },
+        {
+          "n": "➤ Bolt of Change - focused witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "9",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Hazardous, Psychic"
+        },
+        {
+          "n": "Staff of Tzeentch",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Rod of sorcery",
+          "melee": false,
+          "range": "18\"",
+          "a": "6",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Baleful sword",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-7 wounds remaining",
+          "d": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Daemon Lord of Tzeentch (Aura)",
+          "d": "While a friendly Scintillating Legions unit is within 6\" of this model, each time a model in that unit makes a ranged attack, add 1 to the Strength characteristic of that attack."
+        },
+        {
+          "n": "Master of Magicks (Aura)",
+          "d": "In your Shooting phase, select one of the following abilities: [Ignores Cover], [Lethal Hits], [Sustained Hits D3]. Until the end of the phase, this model's Bolt of Change has that ability."
+        }
+      ],
+      "faction": "Scintillating Legions",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Fly",
+        "Psyker",
+        "Chaos",
+        "Daemon",
+        "Tzeentch",
+        "Summoned",
+        "Lord of Change"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "10",
+        "Sv": "6+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "8e43-1b14-4d87-7d17",
+      "linkId": "c7c7-adcf-d20e-5634",
+      "name": "Magister",
+      "rawName": "Magister [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 105,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 105
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Rubric Marines"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Rebinding (Psychic)",
+          "d": "In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds, on a 2+, you can return 1 destroyed Bodyguard model to that unit."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Magister"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "91dc-9aad-0505-52a8",
+      "linkId": "87e5-234f-587c-b917",
+      "name": "Magnus the Red",
+      "rawName": "Magnus the Red",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 455,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 455
+        }
+      ],
+      "cap": {
+        "max": 1
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Gaze of Magnus",
+          "melee": false,
+          "range": "24\"",
+          "a": "3D3",
+          "skill": "2+",
+          "s": "11",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Devastating Wounds, Psychic"
+        },
+        {
+          "n": "➤ Blade of Magnus - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "16",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Devastating Wounds, Psychic"
+        },
+        {
+          "n": "➤ Blade of Magnus - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "14",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Tzeentch's Firestorm",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+3",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Ignores Cover, Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-6 wounds remaining",
+          "d": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Unearthly Power",
+          "d": "At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability."
+        },
+        {
+          "n": "Lord of the Planet of the Sorcerers (Psychic)",
+          "d": "This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Monster",
+        "Psyker",
+        "Fly",
+        "Character",
+        "Epic Hero",
+        "Daemon",
+        "Chaos",
+        "Tzeentch",
+        "Primarch",
+        "Magnus the Red"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "5+",
+        "OC": "6",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "e337-7f05-f1b3-d64e",
+      "linkId": "8913-1061-dda9-5c2",
+      "name": "Mastodon",
+      "rawName": "Mastodon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 540,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 540
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Front sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Rear sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Siege melta array",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Skyreaper battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "8",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-FLY 4+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-10 wounds remaining",
+          "d": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Inviolable Transport",
+          "d": "Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Transport",
+        "Smoke",
+        "Mastodon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "14",
+        "Sv": "2+",
+        "W": "30",
+        "LD": "6+",
+        "OC": "12",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "f2aa-19fd-335a-09b3",
+      "linkId": "1837-8c0d-0123-817d",
+      "name": "Maulerfiend",
+      "rawName": "Maulerfiend",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Head weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 magma cutters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Lasher tendrils",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Maulerfiend fists",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Magma cutter",
+          "melee": false,
+          "range": "6\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Lasher tendrils",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Snarling Protector",
+          "d": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is ‑1 CP. - That use does not prevent any uses of that stratagem on other units this phase. - When this unit declares a charge, if a friendly engaged PSYKER unit is within 12\" of this unit, you can use this part of this ability. If you do: - This unit can re‑roll that charge roll. - This unit must end that charge move engaged with an enemy unit engaged with that friendly PSYKER unit."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Daemon",
+        "Chaos",
+        "Tzeentch",
+        "Maulerfiend"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "094c-c618-92c1-b394",
+      "linkId": "0d44-a7e3-517e-cc85",
+      "name": "Mutalith Vortex Beast",
+      "rawName": "Mutalith Vortex Beast",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 170,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Betentacled maw",
+          "melee": true,
+          "range": "Melee",
+          "a": "15",
+          "skill": "3+",
+          "s": "7",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Mutalith claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "➤ Warp vortex - blast",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Warp vortex - beam",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "18",
+          "ap": "-3",
+          "d": "D6+6",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "➤ Warp vortex - torrent",
+          "melee": false,
+          "range": "18\"",
+          "a": "2D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Mutating Vortex (Aura)",
+          "d": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds. Each enemy unit within range of this ability must then take a Battle-shock test."
+        },
+        {
+          "n": "Immaterial Flare (Aura)",
+          "d": "While a friendly Thousand Sons Psyker model is within 6\" of this model, each time that model Channels the Warp, add 1 to the Psychic test result. This is not cumulative with any other modifiers to the Psychic test result."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Monster",
+        "Chaos",
+        "Tzeentch",
+        "Mutalith Vortex Beast",
+        "Mutant"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "4+",
+        "W": "13",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "4c73-cbd1-f052-80c3",
+      "linkId": "bc65-1734-335d-a810",
+      "name": "Pink Horrors",
+      "rawName": "Pink Horrors",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Blue claws (ref. only)",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "5+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Coruscating blue flames (ref. only)",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "3",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol, Psychic"
+        },
+        {
+          "n": "Coruscating yellow flames (ref. only)",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "5+",
+          "s": "2",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol, Psychic"
+        },
+        {
+          "n": "Yellow claws (ref. only)",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "5+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Coruscating pink flames",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol, Psychic"
+        },
+        {
+          "n": "Pink claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Split",
+          "d": "Each time a Pink Horror or Blue Horror model in this unit is destroyed, after the attacking unit has finished making its attacks, if this unit is not destroyed, roll one D6 for that model. On a 4+, if it was a Pink Horror, add 2 Blue Horror models to this unit and if it was a Blue Horror, add one Brimstone Horror model to this unit."
+        },
+        {
+          "n": "Horrors are Pink. Horrors are Blue. Where once there was one, now there are two.",
+          "d": "If, at any point, this unit contains no Pink Horrors models, use the Blue Horrors datasheet for this unit. _Designer’s Note: While this unit contains one or more Pink Horrors models, the Sullen Malevolence and Exploding Horrors abilities from the Blue Horrors datasheet do not apply to this unit._"
+        },
+        {
+          "n": "Daemonic Icon",
+          "d": "Models in the bearer's unit have a Leadership characteristic of 6+"
+        },
+        {
+          "n": "Instrument of Chaos",
+          "d": "Add 1 to Charge rolls made for the bearer's unit."
+        }
+      ],
+      "faction": "Scintillating Legions",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Chaos",
+        "Daemon",
+        "Tzeentch",
+        "Summoned",
+        "Horrors"
+      ],
+      "models": {
+        "min": 10,
+        "max": 10
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "7+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "2aee-e03c-836e-4c6e",
+      "linkId": "26c2-72ff-ff15-cd",
+      "name": "Rapier Carrier",
+      "rawName": "Rapier Carrier [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Graviton cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Laser destroyer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Quad heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Quad launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Boltgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Graviton cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Vehicle 2+, Blast, Heavy"
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Quad heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Twin-linked, Sustained Hits 1"
+        },
+        {
+          "n": "➤ Quad launcher - shatter shells",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Heavy"
+        },
+        {
+          "n": "➤ Quad launcher - thunderfire shells",
+          "melee": false,
+          "range": "60\"",
+          "a": "D6+4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Powerful Volley",
+          "d": "Each time this model shoots in your Shooting phase, provided it Remained Stationary this turn, all [HEAVY] weapons equipped by models in this unit have the [LETHAL HITS] ability."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Artillery",
+        "Vehicle",
+        "Rapier Carrier"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "3\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "783a-1c02-b377-b169",
+      "linkId": "2c93-c337-c4f0-e3c6",
+      "name": "Relic Contemptor Dreadnought",
+      "rawName": "Relic Contemptor Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Cyclone missile launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Arm weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Heavy plasma cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Conversion beam cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Kheres assault cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Dreadnought chainfist",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Dreadnought combat weapon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Fist weapons",
+          "min": 0,
+          "max": 0,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Plasma blaster",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Graviton blaster",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Cyclone missile launcher - frag",
+          "melee": false,
+          "range": "36\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Cyclone missile launcher - krak",
+          "melee": false,
+          "range": "36\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Heavy plasma cannon - standard",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Heavy plasma cannon - supercharge",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast, Hazardous"
+        },
+        {
+          "n": "Conversion beam cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Conversion, Sustained Hits D3"
+        },
+        {
+          "n": "Kheres assault cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Dreadnought chainfist",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Dreadnought combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Combi-bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        },
+        {
+          "n": "➤ Plasma blaster - standard",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Plasma blaster - supercharge",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous"
+        },
+        {
+          "n": "Graviton blaster",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-Vehicle 2+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Even In Death I Serve",
+          "d": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Dreadnought",
+        "Relic Contemptor Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "5d3d-e13b-8b76-dad3",
+      "linkId": "4b-186d-15aa-8749",
+      "name": "Rubric Marines",
+      "rawName": "Rubric Marines",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        },
+        {
+          "from": 6,
+          "pts": 190
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "4-9 Rubric Marines",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Rubric Marine w/ inferno boltgun",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Rubric Marine w/ warpflamer",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Rubric Marine w/ soulreaper cannon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Inferno bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Warpflame pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Force weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Malefic Curse",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-3",
+          "d": "1",
+          "kw": "Anti-INFANTRY 4+, Devastating Wounds, Psychic"
+        },
+        {
+          "n": "Inferno bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Warpflame pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "3",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Pistol, Torrent"
+        },
+        {
+          "n": "Inferno boltgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Warpflamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "Soulreaper cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bringers of Change",
+          "d": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+        },
+        {
+          "n": "Icon of Flame",
+          "d": "Ranged weapons equipped by models in the bearer's unit (excluding Characters) have the [Ignores Cover] ability."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Chaos",
+        "Tzeentch",
+        "Rubric Marines",
+        "Rubricae"
+      ],
+      "models": {
+        "min": 1,
+        "max": 20
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "b1cf-c5-5121-92a4",
+      "linkId": "ad0-9341-6146-3751",
+      "name": "Scarab Occult Terminators",
+      "rawName": "Scarab Occult Terminators",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        },
+        {
+          "from": 6,
+          "pts": 385
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "4-9 Scarab Occult Terminators",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Scarab Occult Terminator",
+              "min": 3,
+              "max": 9,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Heavy weapons",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Scarab Occult Terminator w/ heavy warpflamer",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Scarab Occult Terminator w/ soulreaper cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Prosperine khopesh",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Force weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Malefic Curse",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-3",
+          "d": "1",
+          "kw": "Anti-INFANTRY 4+, Devastating Wounds, Psychic"
+        },
+        {
+          "n": "Prosperine khopesh",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Hellfyre missile rack",
+          "melee": false,
+          "range": "36\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Inferno combi-bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        },
+        {
+          "n": "Soulreaper cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rites of Coalescence",
+          "d": "While this unit contains one or more Psyker models, each time an attack targets this unit, subtract 1 from the Wound roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Tzeentch",
+        "Scarab Occult",
+        "Rubricae",
+        "Terminator"
+      ],
+      "models": {
+        "min": 4,
+        "max": 14
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "7cbe-2406-8e67-aff5",
+      "linkId": "50e6-c58f-f4b1-bbae",
+      "name": "Screamers",
+      "rawName": "Screamers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        },
+        {
+          "from": 4,
+          "pts": 160
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Lamprey bite",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-MONSTER 4+, Anti-VEHICLE 4+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Slashing Dive",
+          "d": "In your Movement phase, after this unit ends a Normal move, select one enemy unit it moved over during that move and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Scintillating Legions",
+      "keywords": [
+        "Beast",
+        "Fly",
+        "Chaos",
+        "Daemon",
+        "Tzeentch",
+        "Summoned",
+        "Screamers"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "4",
+        "Sv": "6+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "fe4b-b3a4-69b7-3088",
+      "linkId": "870f-4677-0995-a399",
+      "name": "Sekhetar Robots",
+      "rawName": "Sekhetar Robots",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        },
+        {
+          "from": 3,
+          "pts": 175
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-4 Sekhetar Robots",
+          "min": 2,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Sekhetar Robot w/ pyreflux meltagun",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Sekhetar Robot w/ warpflame projector and claw",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Pyreflux meltagun",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "10",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Power claw",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "10",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Warpflame projector",
+          "melee": false,
+          "range": "12\"",
+          "a": "D3",
+          "skill": "N/A",
+          "s": "3",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Prophetic Sentinels",
+          "d": "Once per turn, when you target this unit with the Fire Overwatch/ Heroic Intervention stratagem, that use is ‑1 CP."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Chaos",
+        "Tzeentch",
+        "Sekhetar Robots"
+      ],
+      "models": {
+        "min": null,
+        "max": 8
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "b2f1-197b-fb3b-687f",
+      "linkId": "8a18-8e2f-6a15-5a49",
+      "name": "Sicaran Battle Tank",
+      "rawName": "Sicaran Battle Tank [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Herakles-pattern autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Armoured Spearhead",
+          "d": "Each time this model makes an attack that targets an enemy unit, re-roll a Hit roll of 1 and, if that unit is within range of an objective marker you do not control, you can re-roll the Hit roll instead."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Sicaran Battle Tank"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "68aa-28bf-bd73-3355",
+      "linkId": "3e5d-2c07-bac4-395",
+      "name": "Sicaran Punisher",
+      "rawName": "Sicaran Punisher [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Punisher rotary cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "18",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rotating Death",
+          "d": "This model’s Punisher rotary cannon has the [SUSTAINED HITS 1] ability when targeting INFANTRY units."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Sicaran Punisher"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "e63e-2aa6-f840-b54e",
+      "linkId": "4346-ce92-fe15-867a",
+      "name": "Sicaran Venator",
+      "rawName": "Sicaran Venator [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Venator neutron laser",
+          "melee": false,
+          "range": "48\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-4",
+          "d": "D3+3",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ferocious Assault",
+          "d": "Each time this model makes a ranged attack that targets the closest eligible MONSTER or VEHICLE unit, add 1 to the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Sicaran Venator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "a80f-8343-85f3-716a",
+      "linkId": "148e-92af-5705-bcea",
+      "name": "Sokar-pattern Stormbird",
+      "rawName": "Sokar-pattern Stormbird [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 900,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 900
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "9",
+          "skill": "4+",
+          "s": "9",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Hellstrike missile battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Anti-Fly 3+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-13 wounds remaining",
+          "d": "While this model has 1-13 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Aerial Assault",
+          "d": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Fly",
+        "Transport",
+        "Sokar-pattern Stormbird",
+        "Aircraft"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20\"+",
+        "T": "13",
+        "Sv": "2+",
+        "W": "40",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": "5+ (Ranged)"
+      },
+      "native": false
+    },
+    {
+      "id": "af1e-9a3d-785c-47f8",
+      "linkId": "597b-83ac-60d8-5889",
+      "name": "Sorcerer",
+      "rawName": "Sorcerer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Rubric Marines"
+      ],
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Pandaemonic Delusion",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Prosperine khopesh",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Pandaemonic Delusion",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Psychic, Sustained Hits 3"
+        },
+        {
+          "n": "Prosperine khopesh",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Twisted Sorceries (Psychic)",
+          "d": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Psyker",
+        "Grenades",
+        "Chaos",
+        "Tzeentch",
+        "Sorcerer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "c6d1-e73b-9d26-5d8b",
+      "linkId": "f7d0-f6ee-1fd5-b4da",
+      "name": "Sorcerer in Terminator Armour",
+      "rawName": "Sorcerer in Terminator Armour",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 95,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 95
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Scarab Occult Terminators"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Gaze of Hate",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Anti-MONSTER 4+, Anti-VEHICLE 4+, Devastating Wounds, Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Marked by Fate (Psychic)",
+          "d": "At the start of your Shooting phase, select one enemy unit that is visible to this Psyker model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Sorcerer",
+        "Terminator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "7b3a-9a63-6200-ec7",
+      "linkId": "bd70-e819-4f8d-f85a",
+      "name": "Spartan",
+      "rawName": "Spartan [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 300,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 300
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two quad lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two laser destroyers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Quad lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Spartan"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3b7d-b14e-603-e1ad",
+      "linkId": "a198-c51c-c245-aebe",
+      "name": "Storm Eagle Gunship",
+      "rawName": "Storm Eagle Gunship [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 250,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 250
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Nose weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Typhoon missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wing weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin hellstrike launchers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Vengeance launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "Twin multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2, Twin-linked"
+        },
+        {
+          "n": "➤ Typhoon missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Typhoon missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "Twin hellstrike launcher",
+          "melee": false,
+          "range": "72\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Anti-Fly 2+, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Armoured Resilience",
+          "d": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Transport",
+        "Storm Eagle Gunship"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3d36-e9d7-54c5-deb7",
+      "linkId": "3ffb-3c2c-e402-eefd",
+      "name": "Terrax-pattern Termite",
+      "rawName": "Terrax-pattern Termite [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 200,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 200
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two storm bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin volkite chargers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Termite drill",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "14",
+          "ap": "-2",
+          "d": "D3+3",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Terrax melta cutter",
+          "melee": false,
+          "range": "12\"",
+          "a": "5",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Twin volkite charger",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Termite Assault",
+          "d": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Dedicated Transport",
+        "Terrax-pattern Termite"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "f60c-1b93-9ee8-59d2",
+      "linkId": "ab45-1b93-3f22-12e8",
+      "name": "Typhon",
+      "rawName": "Typhon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 320,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 320
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Dreadhammer siege cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Sunderer of Fortresses",
+          "d": "Each time this model makes an attack that targets a VEHICLE, improve the Strength and Damage characteristic of that attack by 1 (if that attack targets a FORTIFICATION unit, improve the Strength and Damage characteristics of that attack by 2 instead)."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Typhon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "1703-3edd-5eb3-fcef",
+      "linkId": "a714-99f7-a2da-2362",
+      "name": "Tzaangor Enlightened",
+      "rawName": "Tzaangor Enlightened",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        },
+        {
+          "from": 4,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-5 Enlightened",
+          "min": 2,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Divining spear Enlightened",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Pistol and chainsword Enlightened",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Autopistol and chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Prophesied Doom",
+          "d": "Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Mounted",
+        "Fly",
+        "Chaos",
+        "Tzeentch",
+        "Tzaangor Enlightened",
+        "Mutant"
+      ],
+      "models": {
+        "min": 1,
+        "max": 11
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "5+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "8b9f-917f-37c1-99c3",
+      "linkId": "9656-70ca-43b4-bc9d",
+      "name": "Tzaangor Enlightened with Fatecaster greatbows",
+      "rawName": "Tzaangor Enlightened with Fatecaster greatbows",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        },
+        {
+          "from": 4,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Malign Trickery",
+          "d": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\"."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Mounted",
+        "Fly",
+        "Chaos",
+        "Tzeentch",
+        "Tzaangor Enlightened",
+        "Mutant",
+        "Tzaangor Enlightened with Fatecaster Greatbows"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "5+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "c251-bd54-441-4799",
+      "linkId": "bf1b-fbd4-f85a-eb40",
+      "name": "Tzaangor Shaman",
+      "rawName": "Tzaangor Shaman",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Tzaangor Enlightened",
+        "Tzaangors"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Baleful Devolution",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Devastating Wounds, Psychic"
+        },
+        {
+          "n": "Force stave",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Sacrificial Blessing",
+          "d": "While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model."
+        },
+        {
+          "n": "Bestial Prophet",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Fly",
+        "Psyker",
+        "Chaos",
+        "Tzeentch",
+        "Tzaangor Shaman",
+        "Infantry",
+        "Mutant"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "f5b9-50c8-5c60-d8ea",
+      "linkId": "1ba0-1223-9d11-a596",
+      "name": "Tzaangors",
+      "rawName": "Tzaangors",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        },
+        {
+          "from": 11,
+          "pts": 145
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9-19 Tzaangors",
+          "min": 9,
+          "max": 19,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Tzaangor w/ Tzaangor blades",
+              "min": 0,
+              "max": 19,
+              "p": 0
+            },
+            {
+              "n": "Tzaangor w/ pistol and chainsword",
+              "min": 0,
+              "max": 19,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Brayhorn",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Herd banner",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Pistol and chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Tzaangor blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ambushing Hunters",
+          "d": "At the end of your opponent's turn, if this unit is more than 6\" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves."
+        },
+        {
+          "n": "Brayhorn",
+          "d": "You can re-roll Advance and Charge rolls made for the bearer’s unit."
+        },
+        {
+          "n": "Herd banner",
+          "d": "While the bearer's unit is within range of one or more objective markers you control, improve the Leadership characteristic of models in the bearer's unit by 1."
+        }
+      ],
+      "faction": "Thousand Sons",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Tzeentch",
+        "Tzaangors",
+        "Mutant"
+      ],
+      "models": {
+        "min": 1,
+        "max": 39
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "97dc-f0c8-1354-88fb",
+      "linkId": "3d73-b555-e3e8-8100",
+      "name": "Whirlwind Scorpius",
+      "rawName": "Whirlwind Scorpius [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Scorpius multi-launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D3+3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Pinning Bombardment",
+          "d": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Scorpius multi-launcher scored a hit against an enemy INFANTRY unit, that unit must take a Battle-shock test."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Whirlwind Scorpius"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "1aa5-d081-2442-4c37",
+      "linkId": "cb23-5079-6be1-c843",
+      "name": "Xiphon Interceptor",
+      "rawName": "Xiphon Interceptor [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Xiphon missile battery",
+          "melee": false,
+          "range": "60\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Anti-FLY 2+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Interceptor",
+          "d": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Xiphon Interceptor"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    }
+  ]
+}

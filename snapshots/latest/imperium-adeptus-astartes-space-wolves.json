@@ -1,0 +1,3846 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "94bb-3284-ee14-57a1",
+  "catalogueName": "Imperium - Adeptus Astartes - Space Wolves",
+  "nativeFaction": "Adeptus Astartes",
+  "detachments": [],
+  "revision": 3,
+  "file": "Imperium - Space Wolves.json",
+  "counts": {
+    "total": 41,
+    "native": 40,
+    "matched": 21,
+    "legends": 19,
+    "crucible": 0,
+    "allied": 1
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "a9c8-1a6-a0e1-7698",
+      "linkId": "6c92-db55-3bde-cfbf",
+      "name": "Arjac Rockfist",
+      "rawName": "Arjac Rockfist",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 95,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 95
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Wolf Guard Terminators"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Foehammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-Monster 3+, Anti-Vehicle 3+, Precision"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Anvil of Endurance",
+          "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6, on a 4+, do not remove the destroyed model from play. The destroyed model can fight after the attacking unit has finished making its attacks, and then is removed from play"
+        },
+        {
+          "n": "Champion of the Kingsguard",
+          "d": "Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Terminator",
+        "Arjac Rockfist"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "c35a-6d78-2169-3d23",
+      "linkId": "ab8-5df0-71b-e93d",
+      "name": "Bjorn the Fell-Handed",
+      "rawName": "Bjorn the Fell-Handed",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Ranged weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helfrost cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Trueclaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Assault cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "➤ Helfrost cannon - dispersed",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Torrent"
+        },
+        {
+          "n": "➤ Helfrost cannon - focused",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "10",
+          "ap": "-3",
+          "d": "5",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Legendary Tenacity",
+          "d": "Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than this model's Toughness characteristic, subtract 1 from the Wound roll."
+        },
+        {
+          "n": "Ancient Tactician",
+          "d": "At the start of your Command phase, if this model is on the battlefield, you gain 1 CP"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Character",
+        "Epic Hero",
+        "Smoke",
+        "Imperium",
+        "Bjorn the Fell-Handed",
+        "Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "fa8f-f5a2-993-bdbb",
+      "linkId": "498-8bb5-1f55-65c2",
+      "name": "Blood Claws",
+      "rawName": "Blood Claws",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        },
+        {
+          "from": 11,
+          "pts": 270
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Blood Claws",
+          "min": 10,
+          "max": 20,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Blood Claw",
+              "min": 8,
+              "max": 19,
+              "p": 0
+            },
+            {
+              "n": "Blood Claw Pack Leader",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Berserk Charge",
+          "d": "This unit is eligible to declare a charge in a turn in which it Advanced"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Blood Claws",
+        "Tacticus"
+      ],
+      "models": {
+        "min": 9,
+        "max": 20
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "d63f-bf2c-d38b-58c0",
+      "linkId": "5bd6-7d06-3210-f614",
+      "name": "Canis Wolfborn",
+      "rawName": "Canis Wolfborn [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Fenrisian Wolves",
+        "Thunderwolf Cavalry"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Wolf claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Born of Wolves",
+          "d": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Alpha Predator",
+          "d": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy units suffers D3+3 mortal wounds."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Canis Wolfborn"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6a06-e50c-2c7d-3ec3",
+      "linkId": "3f15-36d4-1194-be99",
+      "name": "Cyberwolf",
+      "rawName": "Cyberwolf [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 20,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 20
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Fenrisian Wolves",
+        "You must attach this model to the above unit",
+        "even if Canis Wolfborn has been attached to it. If you do",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Teeth and claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Alpha Hunter",
+          "d": "While this model is leading a unit, models in that unit have the Scouts 6\" ability."
+        },
+        {
+          "n": "Close In for the Kill",
+          "d": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll."
+        },
+        {
+          "n": "Invulnerable Save",
+          "d": "6+"
+        },
+        {
+          "n": "Wolfkin",
+          "d": "This model cannot be your WARLORD and cannot be given Enhancements."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Beast",
+        "Character",
+        "Imperium",
+        "Cyberwolf"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "6+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "dc75-5a79-4121-1d72",
+      "linkId": "b429-8c1b-614c-7e94",
+      "name": "Fenrisian Wolves",
+      "rawName": "Fenrisian Wolves",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        },
+        {
+          "from": 6,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "5-10 Fenrisian Wolves",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Fenrisian Wolf",
+              "min": 5,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Teeth and claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Predatory Instinct",
+          "d": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, it can make a Normal move of up to D6\""
+        },
+        {
+          "n": "Hunting Hounds",
+          "d": "While this unit is within 6\" of one or more SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, models in it have an Objective Control characteristic of 1"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Beast",
+        "Imperium",
+        "Fenrisian Wolves"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "60ce-47ea-50fa-53f2",
+      "linkId": "2e24-116d-87cb-1d8d",
+      "name": "Grey Hunters",
+      "rawName": "Grey Hunters",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 165,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 165
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Replace Carbine",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt Carbine",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Bolt Carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Cunning Hunters",
+          "d": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target is within range of an objective marker, you can re-roll the Wound roll instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Grey Hunters",
+        "Tacticus"
+      ],
+      "models": {
+        "min": 10,
+        "max": 10
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "7d72-63bf-a5f2-bb6c",
+      "linkId": "6c2c-f5a3-41d6-3b93",
+      "name": "Harald Deathwolf",
+      "rawName": "Harald Deathwolf [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Thunderwolf Cavalry"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Glacius",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Crushing teeth and claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Lord of the Wolfkin",
+          "d": "While this model is leading a unit, each time that unit makes a Charge move, until the end of the turn, crushing teeth and claws equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+        },
+        {
+          "n": "Mantle of the Troll King",
+          "d": "Once per phase, when resolving an attack made against this model, after you make a saving throw for this model, you can change the Damage characteristic of that attack to 0."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Epic Hero",
+        "Grenades",
+        "Imperium",
+        "Captain",
+        "Harald Deathwolf"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "7",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "f37d-87d6-e14c-e697",
+      "linkId": "5ee-f1ee-d24d-13ad",
+      "name": "Hounds of Morkai",
+      "rawName": "Hounds of Morkai [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        },
+        {
+          "from": 6,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "5-10 Hounds of Morkai",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Hound of Morkai",
+              "min": 5,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Morkai bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-PSYKER 4+, Devastating Wounds, Pistol, Precision"
+        },
+        {
+          "n": "Morkai combat knife",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-PSYKER 4+, Devastating Wounds, Precision"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Morkai’s Howl",
+          "d": "In your Shooting phase, you can select one enemy unit within 12\" of this unit (if a LIEUTENANT IN REIVER ARMOUR is leading this unit, you can select one enemy unit within 18\" instead). That unit must take a Battle-shock test, subtracting 1 from the result if it is a PSYKER unit. If that test is failed, in addition to being Battle-shocked, that unit is Stunned until the start of your next Shooting phase. While a unit is Stunned, each time a model in that unit makes a Psychic Attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Invulnerable Save",
+          "d": "Models in this unit have a 6+ invulnerable save. This invulnerable save is improved to 4+ against Psychic Attacks."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a REIVER SQUAD, it can instead be attached to this unit."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Smoke",
+        "Imperium",
+        "Phobos",
+        "Hounds of Morkai"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3212-bec7-a50e-3363",
+      "linkId": "81f7-f8b0-3d4d-5cd4",
+      "name": "Iron Priest",
+      "rawName": "Iron Priest",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Wolfguard Headtakers",
+        "Blood Claws",
+        "Grey Hunters"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Helfrost pistol - dispersed",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol, Torrent"
+        },
+        {
+          "n": "➤ Helfrost pistol - focused",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Tempest hammer and Servo-arm",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Iron Priest",
+          "d": "While this model is within 3\" of one or more friendly ADEPTUS ASTARTES VEHICLE units, this model has the Lone Operative ability"
+        },
+        {
+          "n": "Gift of the Iron Wolf",
+          "d": "In your Command phase, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, select one ranged weapon equipped by that model to have the [RAPID FIRE 1] ability. Each model can only be selected for this ability or Blessing of the Omnissiah ability once per turn."
+        },
+        {
+          "n": "Judgement of the Omnissiah",
+          "d": "Each time this model makes an attack that targets an enemy unit within Engagement Range of one or more friendly ADEPTUS ASTARTES VEHICLE units, you can re-roll the wound roll."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Imperium",
+        "Techmarine",
+        "Iron Priest"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "af71-2b1b-2eee-d2be",
+      "linkId": "67e8-1fd4-ceff-2375",
+      "name": "Krom Dragongaze",
+      "rawName": "Krom Dragongaze [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Blood Claws",
+        "Grey Hunters",
+        "Wolf Guard"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Wyrmclaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Refuse to Accept Defeat",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength."
+        },
+        {
+          "n": "The Fierce Eye",
+          "d": "In your Shooting phase, you can select one enemy INFANTRY unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Grenades",
+        "Imperium",
+        "Captain",
+        "Krom Dragongaze"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "c65-46c6-3a62-80c",
+      "linkId": "23f-47a2-1700-86cd",
+      "name": "Logan Grimnar",
+      "rawName": "Logan Grimnar",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Wolf Guard Terminators"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Tyrnak and Fenrir",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "High King of Fenris",
+          "d": "Once per battle round, in your Movement phase, you can select one friendly Space Wolves unit that is in Reserves. If you do, until the end of the phase, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+        },
+        {
+          "n": "Guile of the Wolf (Aura)",
+          "d": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP P (this is not cumulative with any other rules that increase the CP cost of that Stratagem)"
+        },
+        {
+          "n": "Embarking within Transports",
+          "d": "This model can embark within friendly Adeptus Astartes Transport models that can transport Terminator models. When doing, it takes up the space of 4 Infantry models"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Terminator",
+        "Chapter Master",
+        "Logan Grimnar"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "54e3-9fb6-416-8a90",
+      "linkId": "5f20-f7c6-ac3b-189d",
+      "name": "Logan Grimnar on Stormrider",
+      "rawName": "Logan Grimnar on Stormrider [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Thunderwolf Cavalry"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Flurry of teeth and claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Logan Grimnar",
+          "d": "Your army cannot contain both Logan Grimnar and Logan Grimnar on Stormrider"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Chapter Master",
+        "Logan Grimnar on Stormrider"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "47fa-f42-bb06-77d2",
+      "linkId": "257a-e93f-b9f1-989a",
+      "name": "Long Fangs",
+      "rawName": "Long Fangs [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        },
+        {
+          "from": 6,
+          "pts": 145
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "4-5 Long Fangs",
+          "min": 4,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Long Fang w/ boltgun",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Long Fang w/ lascannon",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Long Fang w/ heavy bolter",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Long Fang w/ grav-cannon",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Long Fang w/ missile launcher",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Long Fang w/ plasma cannon",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Long Fang w/ multi-melta",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            },
+            {
+              "n": "Long Fang w/ heavy flamer",
+              "min": 0,
+              "max": 5,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace close combat weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Power weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Sustained Hits 1"
+        },
+        {
+          "n": "Grav-cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Anti-VEHICLE 2+, Heavy"
+        },
+        {
+          "n": "➤ Missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "➤ Missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": "Heavy"
+        },
+        {
+          "n": "➤ Plasma cannon - standard",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "➤ Plasma cannon - supercharge",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Blast, Hazardous, Heavy"
+        },
+        {
+          "n": "Heavy flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Heavy, Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Fire Discipline",
+          "d": "Each time this unit Remains Stationary, if it includes a Long Fang Pack Leader, you can select one enemy unit that is visible to that model. Until the end of the turn, each time a model in this unit makes a ranged attack that targets that enemy unit, re-roll a Hit roll of 1."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a DEVASTATOR SQUAD, it can instead be attached to this unit."
+        },
+        {
+          "n": "Armorium Cherub",
+          "d": "Once per battle, after making a Hit roll for a model in this unit, you can change that roll to an unmodified 6."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Long Fangs"
+      ],
+      "models": {
+        "min": 1,
+        "max": 41
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6044-a19c-fd13-fdb8",
+      "linkId": "ad91-10ab-6d45-ae4e",
+      "name": "Lukas the Trickster",
+      "rawName": "Lukas the Trickster [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Blood Claws"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Claw of the Jackalwolf",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Pelt of the Doppelgangrel:",
+          "d": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Last Laugh",
+          "d": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, roll one D6: on a 4+, the attacking unit suffers D6 mortal wounds and is Battle-shocked."
+        },
+        {
+          "n": "Master of Mischief",
+          "d": "This model cannot be your WARLORD."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Grenades",
+        "Imperium",
+        "Lukas the Trickster"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6ef5-6700-d888-df3b",
+      "linkId": "4bec-dc7d-f031-4d01",
+      "name": "Murderfang",
+      "rawName": "Murderfang",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 150,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 150
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Murderclaws",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Sustained Hits 1, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Murder-maker [Aura]",
+          "d": "In the Fight phase, each time an attack targets a friendly WULFEN unit within 6\" of this model, if a model in that unit is destroyed as a result of that attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "n": "Force of Untamed Destruction",
+          "d": "This model cannot be your WARLORD."
+        },
+        {
+          "n": "Beastial Fury",
+          "d": "You can re-roll Advance and Charge rolls made for this model."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Murderfang",
+        "Wulfen",
+        "Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "bd47-a00a-e70-abd6",
+      "linkId": "ab79-1972-8d44-553f",
+      "name": "Njal Stormcaller",
+      "rawName": "Njal Stormcaller",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Blood Claws",
+        "Grey Hunters",
+        "Wolf Guard Headtakers"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Staff of the Stormcaller",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic, Sustained Hits 2"
+        },
+        {
+          "n": "➤ Living Lightning - witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Psychic, Sustained Hits 2"
+        },
+        {
+          "n": "➤ Living Lightning - focused witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Hazardous, Psychic, Sustained Hits 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Wind Walker (Psychic)",
+          "d": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and each time that unit advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit"
+        },
+        {
+          "n": "Tempest's Wrath (Psychic)",
+          "d": "In your Shooting phase, after this model's unit has shot, select one enemy unit, (excluding MONSTERS and VEHICLES) hit by one or more of those attacks made with this model's Living Lightning weapon. Until the start of your next turn, that enemy is stormwracked. While a unit is stormwracked, subtract 6\" from the Range characteristic of ranged weapons equipped by models in that unit (to a minimum of 12\")"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Psyker",
+        "Imperium",
+        "Njal Stormcaller",
+        "Tacticus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "23d2-ea9a-cc45-476",
+      "linkId": "6c2c-c843-40c-eb60",
+      "name": "Ragnar Blackmane",
+      "rawName": "Ragnar Blackmane",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Blood Claws",
+        "Wolf Guard Headtakers"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Frostfang",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "War Howl",
+          "d": "While this model is leading a BLOOD CLAWS unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll. While this model is leading a WOLF GUARD HEADTAKERS UNIT, that unit is eligible to declare a charge in a turn in which it Advanced."
+        },
+        {
+          "n": "Battle-lust",
+          "d": "Each time this model ends a Charge move, until the end of the turn, add 2 to the Attacks characteristics of this model’s Frostfang."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Grenades",
+        "Tacticus",
+        "Captain",
+        "Ragnar Blackmane"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "b556-b0e1-3b4e-597a",
+      "linkId": "915f-cecb-b52e-5fdb",
+      "name": "Skyclaws",
+      "rawName": "Skyclaws [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        },
+        {
+          "from": 6,
+          "pts": 165
+        },
+        {
+          "from": 11,
+          "pts": 240
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "4-14 Skyclaws",
+          "min": 4,
+          "max": 14,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Skyclaw",
+              "min": 2,
+              "max": 14,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Up to 2",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Skyclaw w/ plasma pistol",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Skyclaw w/ flamer",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Skyclaw w/ grav-gun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Skyclaw w/ plasma gun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Skyclaw w/ meltagun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Headstrong",
+          "d": "You can re-roll Charge rolls made for this unit. Each time this unit makes a Charge move, until the end of the turn, each time a model in this unit makes a melee attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to an ASSAULT INTERCESSOR SQUAD WITH JUMP PACKS or ASSAULT SQUAD WITH JUMP PACKS, it can instead be attached to this unit."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Jump Pack",
+        "Fly",
+        "Grenades",
+        "Imperium",
+        "Skyclaws"
+      ],
+      "models": {
+        "min": 3,
+        "max": 25
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3b8b-19bb-1855-98c5",
+      "linkId": "9a97-a630-1fc6-bccd",
+      "name": "Stormfang Gunship",
+      "rawName": "Stormfang Gunship [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 300,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 300
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Nose weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin stormstrike missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Sponson weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two skyhammer missile launchers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin multi-meltas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Helfrost destructor - dispersed",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "11",
+          "ap": "-3",
+          "d": "7",
+          "kw": "Sustained Hits D3"
+        },
+        {
+          "n": "➤ Helfrost destructor - focused",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+6",
+          "skill": "N/A",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Torrent"
+        },
+        {
+          "n": "Twin stormstrike missile launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Frozen Prey",
+          "d": "In your Shooting phase, after this model has shot, if an enemy MONSTER or VEHICLE unit was hit by one or more of those attacks made with this model’s helfrost destructor, until the end of your opponent’s next turn, that enemy unit is Frozen. While a unit is Frozen, subtract 2 from that unit’s Move characteristic, and subtract 2 from Advance and Charge rolls made for that unit."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Transport",
+        "Stormfang Gunship",
+        "Imperium"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b85d-d565-d3a4-8f8b",
+      "linkId": "891a-8f91-4e3-ceff",
+      "name": "Stormwolf",
+      "rawName": "Stormwolf [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 250,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 250
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponson weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two skyhammer missile launchers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin multi-meltas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Twin helfrost cannon - dispersed",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Torrent, Twin-linked"
+        },
+        {
+          "n": "➤ Twin helfrost cannon - focused",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-3",
+          "d": "5",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Into the Foe",
+          "d": "If a unit disembarks from this TRANSPORT before it moves, until the end of the turn, that unit is eligible to charge in a turn in which it Advanced."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Transport",
+        "Stormwolf",
+        "Imperium"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "7a50-3722-8195-5877",
+      "linkId": "20ee-2cf8-78b6-58df",
+      "name": "Thunderwolf Cavalry",
+      "rawName": "Thunderwolf Cavalry",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        },
+        {
+          "from": 4,
+          "pts": 200
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Thunderwolf Cavalry",
+          "min": 3,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Thunderwolf w/ plasma pistol",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Thunderwolf w/ boltgun",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Thunderwolf w/ storm shield",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Thunderwolf w/ bolt pistol",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Thunderous Charge",
+          "d": "Each time a model in this unit makes a melee attack with its Wolf Guard weapon, if it made a Charge move this turn, add 1 to the Damage characteristic of that attack"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Mounted",
+        "Grenades",
+        "Imperium",
+        "Thunderwolf Cavalry"
+      ],
+      "models": {
+        "min": null,
+        "max": 24
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "fc7c-83a5-7106-41ab",
+      "linkId": "960a-a2d8-2c96-5c24",
+      "name": "Ulrik the Slayer",
+      "rawName": "Ulrik the Slayer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Blood Claws",
+        "Grey Hunters",
+        "Wolf Guard Headtakers"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Plasma pistol - standard",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol - supercharge",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Hazardous, Pistol"
+        },
+        {
+          "n": "Artificer crozius",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Monster 4+, Anti-Vehicle 4+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Slayer’s Oath",
+          "d": "At the start of the battle, select one of the following keywords to be this model's Slayer's Oath: CHARACTER, VEHICLE or MONSTER. The first time this model's unit destroys a unit with this model's Slayer's Oath keyword, if your Detachment has a Saga, until the end of the battle, this model's unit receives the benefits of that Detachment rule as if that Saga had been completed."
+        },
+        {
+          "n": "Oathbound",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll. If that attack targets a unit that has this model's Slayer's Oath keyword (see above), add 1 to the Wound roll as well."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Grenades",
+        "Imperium",
+        "Ulrik the Slayer",
+        "Wolf Priest"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "5+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "c125-1106-f06d-9682",
+      "linkId": "2797-16d2-806b-6cc7",
+      "name": "Venerable Dreadnought",
+      "rawName": "Venerable Dreadnought",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Fenrisian great axe and blizzard shield",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace assault cannon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Helfrost cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Helfrost cannon - dispersed",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Torrent"
+        },
+        {
+          "n": "➤ Helfrost cannon - focused",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "5",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Fervour of the Ancients (Aura)",
+          "d": "While a friendly SPACE WOLVES unit is within 6\" of this model, add 1 to Advance and Charge rolls made for that unit."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Smoke",
+        "Imperium",
+        "Dreadnought",
+        "Venerable Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "8486-fe44-efc3-e51b",
+      "linkId": "c62b-1220-a7b0-5917",
+      "name": "Wolf Guard",
+      "rawName": "Wolf Guard [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        },
+        {
+          "from": 6,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "1 Wolf Guard Pack Leader and 4-9 Wolf Guard",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wolf Guard w/ boltgun",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Wolf Guard w/ combi-weapon",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Wolf Guard w/ plasma pistol",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Wolf Guard w/ storm bolter",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Wolf Guard w/ storm shield",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Wolf Guard w/ bolt pistol",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Chosen Companions",
+          "d": "While a CHARACTER model is leading this unit, each time a model in this unit makes an attack, add 1 to the Hit roll."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to an STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD, it can instead be attached to this unit."
+        },
+        {
+          "n": "Storm Shield",
+          "d": "The bearer has a 4+ invulnerable save."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Wolf Guard"
+      ],
+      "models": {
+        "min": null,
+        "max": 60
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "5+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "bbdb-49fd-da4d-3d7a",
+      "linkId": "5d5e-cd7a-4443-abfb",
+      "name": "Wolf Guard Battle Leader",
+      "rawName": "Wolf Guard Battle Leader",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Blood Claws",
+        "Grey Hunters",
+        "Wolf Guard Headtakers"
+      ],
+      "options": [
+        {
+          "n": "Replace Master-crafted Power Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Master-crafted Power Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace Storm Shield",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm Shield",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Master-crafted Bolt Carbine",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Master-crafted Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Master-crafted Power Weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Master-crafted Bolt Carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Master-crafted Heavy Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Pistol"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Tempered Ferocity",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability and, each time a model in that unit makes an attack that targets an enemy unit within 6\", re-roll a Hit roll of 1"
+        },
+        {
+          "n": "Heroic Last Stand",
+          "d": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and then it is removed from play."
+        },
+        {
+          "n": "Storm Shield",
+          "d": "The bearer has a Wounds characteristic of 6"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Imperium",
+        "Tacticus",
+        "Wolf Guard",
+        "Battle Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "bcab-c09a-6584-3b26",
+      "linkId": "a99b-7a34-a186-8320",
+      "name": "Wolf Guard Battle Leader in Terminator Armour",
+      "rawName": "Wolf Guard Battle Leader in Terminator Armour [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Relic Terminator Squad",
+        "Terminator Assault Squad",
+        "Terminator Squad",
+        "Wolf Guard Terminators",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units",
+        "with their original Starting Strengths"
+      ],
+      "options": [
+        {
+          "n": "Replace storm bolter",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace power weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic shield and close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Chainfist",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Huskarl to the Jarl",
+          "d": "While this model is attached to a unit that contains another CHARACTER model, all CHARACTER models in that unit have the Feel No Pain 4+ ability."
+        },
+        {
+          "n": "Relic shield",
+          "d": "The bearer has a Wounds characteristic of 6."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Imperium",
+        "Terminator",
+        "Wolf Guard Battle Leader in Terminator Armour"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6ec-fcf9-ebb6-7c55",
+      "linkId": "f673-43ae-9348-61fd",
+      "name": "Wolf Guard Battle Leader on Thunderwolf",
+      "rawName": "Wolf Guard Battle Leader on Thunderwolf [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Thunderwolf Cavalry",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units",
+        "with their original Starting Strengths"
+      ],
+      "options": [
+        {
+          "n": "Relic weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm shield and close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Aggressive Hunter",
+          "d": "Once per battle, in your opponent’s Shooting phase, after an enemy unit has finished making its attacks, if this model’s unit was targeted by one or more of those attacks, this model’s unit can make a Normal move of up to D6\", but must end that move as close as possible to the closest enemy unit. When doing so, models in this model’s unit can be moved within Engagement Range of that enemy unit."
+        },
+        {
+          "n": "Storm Shield",
+          "d": "The bearer has a 4+ invulnerable save."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Wolf Guard Battle Leader on Thunderwolf"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "d4ef-1ddc-1ed5-5156",
+      "linkId": "28f3-a24d-0739-681c",
+      "name": "Wolf Guard Headtakers",
+      "rawName": "Wolf Guard Headtakers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Let Loose the Wolves",
+          "d": "At the start of the Declare Battle Formations step, split this unit into two units, one containing all of it's HEADTAKERS models and one containing all of its HUNTING WOLVES models, with new Starting Strengths accordingly."
+        },
+        {
+          "n": "Headhunters",
+          "d": "At the start of the battle, select one unit from your opponent's army to be this unit's quarry. Weapons equipped by HEADTAKERS models in this unit have the [DEVASTATING WOUNDS] and [PRECISION] abilities while targeting it's quarry. Each time this unit's quarry is destroyed, select one new enemy unit to be this unit's quarry. This ability can be used even if this unit is embarked within a Transport"
+        },
+        {
+          "n": "Hunting Hounds",
+          "d": "While this unit is within 6\" of one or more friendly SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, HUNTING WOLVES models in it have an Objective Control characteristic of 1"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry"
+      ],
+      "models": {
+        "min": null,
+        "max": null
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "0f93-6850-8f14-a351",
+      "linkId": "3e0e-a813-a6ff-e8e9",
+      "name": "Wolf Guard Headtakers",
+      "rawName": "Wolf Guard Headtakers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Let Loose the Wolves",
+          "d": "At the start of the Declare Battle Formations step, split this unit into two units, one containing all of it's HEADTAKERS models and one containing all of its HUNTING WOLVES models, with new Starting Strengths accordingly."
+        },
+        {
+          "n": "Headhunters",
+          "d": "At the start of the battle, select one unit from your opponent's army to be this unit's quarry. Weapons equipped by HEADTAKERS models in this unit have the [DEVASTATING WOUNDS] and [PRECISION] abilities while targeting it's quarry. Each time this unit's quarry is destroyed, select one new enemy unit to be this unit's quarry. This ability can be used even if this unit is embarked within a Transport"
+        },
+        {
+          "n": "Hunting Hounds",
+          "d": "While this unit is within 6\" of one or more friendly SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, HUNTING WOLVES models in it have an Objective Control characteristic of 1"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry"
+      ],
+      "models": {
+        "min": null,
+        "max": null
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "5d99-8592-a934-48d9",
+      "linkId": "6def-e315-3442-ca06",
+      "name": "Wolf Guard Pack Leader",
+      "rawName": "Wolf Guard Pack Leader [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 30,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 30
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Blood Claws",
+        "Grey Hunters",
+        "Long Fangs",
+        "You must attach this model to one of the above units",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units"
+      ],
+      "options": [
+        {
+          "n": "Loadout",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm shield",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Storm Shield",
+          "d": "The bearer has a 4+ invulnerable save."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Pack Leader",
+        "Wolf Guard Pack Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a341-f355-7305-58bb",
+      "linkId": "7f3d-fae8-b542-56d2",
+      "name": "Wolf Guard Pack Leader in Terminator Armour",
+      "rawName": "Wolf Guard Pack Leader in Terminator Armour [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 40,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 40
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Blood Claws",
+        "Grey Hunters",
+        "Long Fangs",
+        "You must attach this model to one of the above units",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units"
+      ],
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm shield",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Heavy weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Cyclone missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Cyclone missile launcher - frag",
+          "melee": false,
+          "range": "36\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Cyclone missile launcher - krak",
+          "melee": false,
+          "range": "36\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Storm Shield",
+          "d": "The bearer has a Wounds characteristic of 4."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Terminator",
+        "Pack Leader",
+        "Wolf Guard Pack Leader in Terminator Armour"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a60f-7d3a-d2f8-60cd",
+      "linkId": "19df-5f17-d083-304c",
+      "name": "Wolf Guard Pack Leader with Jump Pack",
+      "rawName": "Wolf Guard Pack Leader with Jump Pack [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 35,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 35
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Skyclaws",
+        "You must attach this model to the above unit",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units"
+      ],
+      "options": [
+        {
+          "n": "Loadout",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm shield",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Storm Shield",
+          "d": "The bearer has a 4+ invulnerable save."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Jump Pack",
+        "Fly",
+        "Grenades",
+        "Imperium",
+        "Pack Leader",
+        "Wolf Guard Pack Leader with Jump Pack"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "ca30-caf3-d7a8-1d32",
+      "linkId": "5167-2675-f8da-b1d7",
+      "name": "Wolf Guard Terminators",
+      "rawName": "Wolf Guard Terminators",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 150,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 150
+        },
+        {
+          "from": 6,
+          "pts": 300
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "4-9 Terminators",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wolf Guard Terminator w/ storm bolter",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Wolf Guard Terminator w/ Assault Cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Wolf Guard Terminator w/ storm shield",
+              "min": 0,
+              "max": 9,
+              "p": 5
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin-linked Lightning Claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic Great Axe",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm Bolter & Master-crafted Power Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm Shield & Master-crafted Power Weapon",
+              "min": 0,
+              "max": null,
+              "p": 5
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin lightning claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Relic Great Axe",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Master-crafted Power Weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Storm Bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        },
+        {
+          "n": "Assault Cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rugged Resilience",
+          "d": "Each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Imperium",
+        "Terminator",
+        "Wolf Guard Terminators",
+        "Wolf Guard"
+      ],
+      "models": {
+        "min": 1,
+        "max": 21
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "295-5df2-e140-7266",
+      "linkId": "5a1f-b53-3b2a-2591",
+      "name": "Wolf Lord on Thunderwolf",
+      "rawName": "Wolf Lord on Thunderwolf [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3
+      },
+      "leads": [
+        "Thunderwolf Cavalry"
+      ],
+      "options": [
+        {
+          "n": "Replace relic weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Relic shield and close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Twin lightning claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Speed of the Hunter",
+          "d": "Add 1 to Advance and Charge rolls made for this model’s unit."
+        },
+        {
+          "n": "Relic shield",
+          "d": "The bearer has a Wounds characteristic of 7."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Captain",
+        "Wolf Lord on Thunderwolf"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b3b1-d1df-d9be-d48e",
+      "linkId": "1a8a-e245-87c8-e38a",
+      "name": "Wolf Priest",
+      "rawName": "Wolf Priest",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Blood Claws",
+        "Grey Hunters",
+        "Wolf Guard Headtakers"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Healing Balms",
+          "d": "While this model is leading a unit, in your Command phase, you can return 1 model (excluding CHARACTER models) to that unit."
+        }
+      ],
+      "faction": "Space Wolves",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Imperium",
+        "Tacticus",
+        "Wolf Priest"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "91e4-38c4-a96f-2090",
+      "linkId": "d8d3-d93e-4ead-3e95",
+      "name": "Wolf Scouts",
+      "rawName": "Wolf Scouts [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        },
+        {
+          "from": 6,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "4-9 Wolf Scouts",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wolf Scout w/ boltgun",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Wolf Scout w/ shotgun",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Wolf Scout w/ combat knife",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Wolf Scout w/ special weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Up to 1 of",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Wolf Scout w/ power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Wolf Scout w/ plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Astartes shotgun",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault"
+        },
+        {
+          "n": "Combat knife",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Guerrilla Tactics",
+          "d": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy models, you can remove this unit from the battlefield and place it into Strategic Reserves."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Smoke",
+        "Imperium",
+        "Scout Squad",
+        "Wolf Scouts"
+      ],
+      "models": {
+        "min": 1,
+        "max": 29
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "ee6b-3815-3a1a-6458",
+      "linkId": "1058-f2e6-8f32-7483",
+      "name": "Wolf Scouts",
+      "rawName": "Wolf Scouts",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        },
+        {
+          "from": 12,
+          "pts": 180
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Wolf Scouts",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "12 Models",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "6 Models",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Teeth and Claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Instigator Bolt Carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Precision"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Hunting Hounds",
+          "d": "While this unit is within 6\" of one or more friendly Space Wolves Character models (excluding Wulfen models), if this unit is not Battle-shocked, Hunting Wolves models in this unit have an Objective Control characteristic of 1."
+        },
+        {
+          "n": "Deadly Stalkers",
+          "d": "Each time a model in this unit makes an attack that targets an enemy unit, if there are no other units from your opponent’s army within 6\" of that target, add 1 to the Wound roll."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Smoke",
+        "Imperium",
+        "Phobos",
+        "Wolf Scouts"
+      ],
+      "models": {
+        "min": 3,
+        "max": 4
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "d937-bd7d-618d-4e2d",
+      "linkId": "b55a-14dc-71ca-8e55",
+      "name": "Wulfen",
+      "rawName": "Wulfen",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        },
+        {
+          "from": 6,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wulfen",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wulfen w/Auto-launcher",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Wulfen w/Death Totem",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Wulfen Weapons",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Savage Frenzy",
+          "d": "Each time an enemy unit, (excluding MONSTERS and VEHICLES) within Engagement Range of this unit Falls Back, all that models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from those tests."
+        },
+        {
+          "n": "Death Totem",
+          "d": "Each time the bearer makes a melee attack, re-roll a hit roll of 1."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Imperium",
+        "Wulfen"
+      ],
+      "models": {
+        "min": null,
+        "max": 20
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "91fa-49ac-5b0a-c155",
+      "linkId": "dd6d-ee77-b9ea-d2e5",
+      "name": "Wulfen Dreadnought",
+      "rawName": "Wulfen Dreadnought",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Great wolf claw",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bestial Rage",
+          "d": "Each time an enemy unit is selected to shoot, after that unit has shot, if this model lost one or more wounds as a result of those attacks, this model can make a Bestial Rage move. To do so, roll one D6, adding 2 to the result: this model can be moved a number of inches up to the result, but must finish that move as close as possible to the closest enemy unit(excluding AIRCRAFT). When doing so, this model can be moved within Engagement Range of that enemy unit. Each model can only make one Bestial Rage move per phase."
+        },
+        {
+          "n": "Violent Fury",
+          "d": "If this model is equipped with two melee weapons, those weapon profiles have the TWIN-LINKED ability."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Wulfen",
+        "Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "4c72-3f0c-7f94-af96",
+      "linkId": "a947-7113-3284-4248",
+      "name": "Wulfen with Storm Shields",
+      "rawName": "Wulfen with Storm Shields",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        },
+        {
+          "from": 6,
+          "pts": 200
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wulfen",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wulfen w/Death Totem",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Wulfen w/Auto-launcher",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Thunder Hammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-Monster 3+, Anti-Vehicle 3+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Hammer Blow",
+          "d": "In the Fight phase, after this unit has fought, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Until the end of the next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Death Totem",
+          "d": "Each time the bearer makes a melee attack, re-roll a hit roll of 1."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Imperium",
+        "Wulfen",
+        "Wulfen with Storm Shields"
+      ],
+      "models": {
+        "min": null,
+        "max": 20
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": "4+"
+      },
+      "native": true
+    }
+  ]
+}

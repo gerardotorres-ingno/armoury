@@ -1,0 +1,2091 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "46d8-abc8-ef3a-9f85",
+  "catalogueName": "Chaos - Chaos Knights",
+  "nativeFaction": "Heretic Astartes",
+  "detachments": [
+    "Traitoris Lance",
+    "Iconoclast Fiefdom",
+    "Lords of Dread",
+    "Houndpack Lance",
+    "Infernal Lance",
+    "Helhunt Lance",
+    "Bastions of Tyranny",
+    "Hunting Warpack"
+  ],
+  "revision": 1,
+  "file": "Chaos - Chaos Knights.json",
+  "counts": {
+    "total": 17,
+    "native": 16,
+    "matched": 6,
+    "legends": 10,
+    "crucible": 0,
+    "allied": 1
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "23aa-b45a-6d5d-e92b",
+      "linkId": "072c-80c6-b7a3-f0e7",
+      "name": "Accursed Cultists",
+      "rawName": "Accursed Cultists",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        },
+        {
+          "from": 9,
+          "pts": 195
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Hideous mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "D6+2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Blasphemous appendages",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Howling Horde",
+          "d": "In your opponent's Shooting phase, when an enemy unit has shot, if a model from this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6\"."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Accursed Cultists",
+        "Damned"
+      ],
+      "models": {
+        "min": 8,
+        "max": 16
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "6+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "cb66-af7-2cca-1c85",
+      "linkId": "8c6e-1ee5-2c50-d61d",
+      "name": "Cultist Firebrand",
+      "rawName": "Cultist Firebrand",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "ACCURSED CULTISTS",
+        "CULTIST MOB"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Balefire pike",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Fiery Faith",
+          "d": "While this model is leading a unit, you can re-roll Leadership tests taken for that unit."
+        },
+        {
+          "n": "Cursed Flames",
+          "d": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks. That unit must make a Battle-shock test."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Chaos",
+        "Damned",
+        "Cultist Firebrand"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1267-78f1-7774-859",
+      "linkId": "affe-d1e3-0377-f6f5",
+      "name": "Cultist Mob",
+      "rawName": "Cultist Mob",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        },
+        {
+          "from": 11,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Autopistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Autopistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "For the Dark Gods",
+          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Chaos",
+        "Cultist Mob",
+        "Damned"
+      ],
+      "models": {
+        "min": 10,
+        "max": 20
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "478-9d24-e5c8-c6f7",
+      "linkId": "7613-f941-5829-876a",
+      "name": "Cultist Mob with Firearms",
+      "rawName": "Cultist Mob with Firearms [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        },
+        {
+          "from": 11,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9 - 19 Cultists",
+          "min": 9,
+          "max": 19,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Cultist w/ autopistol and brutal assault weapon",
+              "min": 0,
+              "max": 19,
+              "p": 0
+            },
+            {
+              "n": "Cultist w/ autogun and close combat weapon",
+              "min": 0,
+              "max": 19,
+              "p": 0
+            },
+            {
+              "n": "Cultist w/ flamer",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Cultist w/ cultist grenade launcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Cultist w/ heavy stubber",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol and brutal assault weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Autopistol and brutal assault weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Autogun and close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Autopistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "➤ Cultist grenade launcher - frag",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Cultist grenade launcher - krak",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D3",
+          "kw": ""
+        },
+        {
+          "n": "Heavy stubber",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Heavy, Rapid Fire 3"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "For the Dark Gods",
+          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Chaos",
+        "Damned",
+        "Cultist Mob with Firearms"
+      ],
+      "models": {
+        "min": 1,
+        "max": 45
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1780-25b8-ce0b-898d",
+      "linkId": "b981-a2ac-86d0-1cbe",
+      "name": "Dark Commune",
+      "rawName": "Dark Commune",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "ACCURSED CULTISTS",
+        "CULTIST MOB"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Commune blade",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Autopistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Warp Curse - witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Psychic"
+        },
+        {
+          "n": "➤ Warp Curse - focused witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Hazardous, Psychic, Sustained Hits 2"
+        },
+        {
+          "n": "Commune stave",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "D3",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Faithful Flock",
+          "d": "While this unit is leading a unit and contains a CULT DEMAGOGUE model, models in that unit have a 5+ invulnerable save."
+        },
+        {
+          "n": "Dark Ritual",
+          "d": "Once per battle, in your Command phase, if this unit contains a CULT DEMAGOGUE model, it can use this ability. If it does, until the end of the turn, this unit can declare a charge in a turn in which it Advanced and each time a model in this unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Character",
+        "Damned",
+        "Infantry",
+        "Grenades",
+        "Dark Commune",
+        "Chaos"
+      ],
+      "models": {
+        "min": 5,
+        "max": 5
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6bf7-888c-7aa6-6831",
+      "linkId": "46d0-40d6-adfb-db29",
+      "name": "Fellgor Beastmen",
+      "rawName": "Fellgor Beastmen",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9 Beastmen",
+          "min": 9,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Beastman",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Beastman w/ great weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Beastman w/ corrupted stave",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol - standard",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol- supercharge",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous, Pistol"
+        },
+        {
+          "n": "Autopistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Great weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "5+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Corrupted stave",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Devastating Wounds, Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bestial Raiders",
+          "d": "If this unit begins the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting it up on the battlefield, treat the current battle round number as being one higher than it actually is."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Chaos",
+        "Fellgor Beastmen",
+        "Damned"
+      ],
+      "models": {
+        "min": 1,
+        "max": 12
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "e1c2-8417-403a-68",
+      "linkId": "e8d2-106a-e195-ae23",
+      "name": "Gellerpox Infected",
+      "rawName": "Gellerpox Infected [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Brutal weapons",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Hideous mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Belly flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Fearsome (Aura)",
+          "d": "While an enemy unit is within 6\" of this unit, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Gellerpox Infected",
+        "Damned"
+      ],
+      "models": {
+        "min": 7,
+        "max": 7
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "afed-8173-a1e0-cbae",
+      "linkId": "f018-ea7f-b4a1-cf2f",
+      "name": "Mutoid Vermin",
+      "rawName": "Mutoid Vermin [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Diseased claws and fangs",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Mischief Makers (Aura)",
+          "d": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this unit, each time a model in that unit makes a melee attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Swarm",
+        "Chaos",
+        "Nurgle",
+        "Mutoid Vermin",
+        "Damned"
+      ],
+      "models": {
+        "min": 16,
+        "max": 16
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "2",
+        "Sv": "7+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "9238-473a-54ee-6b0e",
+      "linkId": "998c-ff18-9548-783b",
+      "name": "Negavolt Cultists",
+      "rawName": "Negavolt Cultists [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Electro-goads",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Sustained Hits 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Voltagheist Field",
+          "d": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound."
+        },
+        {
+          "n": "Servants of the Abyss",
+          "d": "If a unit from your army with the Leader ability can be attached to a CULTIST MOB, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Negavolt Cultists",
+        "Damned"
+      ],
+      "models": {
+        "min": 4,
+        "max": 4
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "7+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "5b66-39e6-aeb5-8011",
+      "linkId": "f200-6a81-b355-eeff",
+      "name": "Renegade Enforcer",
+      "rawName": "Renegade Enforcer [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "TRAITOR GUARDSMEN SQUAD",
+        "RENEGADE HEAVY WEAPONS SQUAD"
+      ],
+      "options": [
+        {
+          "n": "Melee weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Enforcer melee weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Enforcer pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Autogun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Lasgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shotgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Enforcer melee weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Power weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Power fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Enforcer pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Autogun",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "Lasgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "Shotgun",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Brutal Example",
+          "d": "While this model is leading a unit, you can target that unit with the Insane Bravery Stratagem for 0CP, and can do so even if another unit from your army has already been targeted with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed."
+        },
+        {
+          "n": "Enforcer",
+          "d": "This model's unit is eligible to declare a charge in a turn in which it Fell Back."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Renegade Enforcer",
+        "Damned"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "9df-7c70-84d2-e095",
+      "linkId": "847f-5171-f508-4397",
+      "name": "Renegade Heavy Weapons Squad",
+      "rawName": "Renegade Heavy Weapons Squad [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Heavy weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Mortar",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Renegade firearm",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "Close combat weapons",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Heavy stubber",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Heavy, Rapid Fire 3"
+        },
+        {
+          "n": "Heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "5+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Sustained Hits 1"
+        },
+        {
+          "n": "Autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "5+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Heavy"
+        },
+        {
+          "n": "➤ Missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "➤ Missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": "Blast"
+        },
+        {
+          "n": "Mortar",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6",
+          "skill": "5+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Covering Fire",
+          "d": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Chaos",
+        "Renegade Heavy Weapons Squad",
+        "Damned"
+      ],
+      "models": {
+        "min": 3,
+        "max": 3
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "5+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "658e-a63f-bac7-6201",
+      "linkId": "c47c-1579-9a09-1eda",
+      "name": "Renegade Ogryn Beast Handler",
+      "rawName": "Renegade Ogryn Beast Handler [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 40,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 40
+        },
+        {
+          "from": 5,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Mauler goad and ripper claw",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Befouled fangs and claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Beastmaster",
+          "d": "While this unit contains an Ogryn Pack Master model, you can re-roll Charge rolls made for this unit, and each time a Chaos Mauler Hound model in this unit makes an attack, re-roll a Hit roll of 1."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Beast",
+        "Chaos",
+        "Renegade Ogryn Beast Handler",
+        "Damned"
+      ],
+      "models": {
+        "min": 4,
+        "max": 7
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "6",
+        "Sv": "5+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "24c4-fa24-67ff-eef",
+      "linkId": "05d7-76a6-c285-af97",
+      "name": "Renegade Ogryn Brutes",
+      "rawName": "Renegade Ogryn Brutes [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 95,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 95
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Ogryn Brutes",
+          "min": 3,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Brute w/ Ogryn weapon",
+              "min": 2,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Brute w/ power drill",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Ogryn weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Ogryn power drill",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ogryn Combat Stimms",
+          "d": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Renegade Ogryn Brutes",
+        "Damned"
+      ],
+      "models": {
+        "min": 2,
+        "max": 4
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "6",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a7bb-ec24-40e6-5b8c",
+      "linkId": "d8f6-58e4-bac7-6a12",
+      "name": "Renegade Plague Ogryns",
+      "rawName": "Renegade Plague Ogryns [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 95,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 95
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Ogryn plague claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Wall of Muscle",
+          "d": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Renegade Plague Ogryns",
+        "Damned"
+      ],
+      "models": {
+        "min": 3,
+        "max": 3
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "7",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "c0f9-d16c-6caf-5b95",
+      "linkId": "7df5-0ddc-5a83-0252",
+      "name": "Rogue Psyker",
+      "rawName": "Rogue Psyker [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "ACCURSED CULTISTS",
+        "CULTIST MOB",
+        "NEGAVOLT CULTISTS"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Chaos stave",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Laspistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Psychic Strike - focused witchfire",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast, Devastating Wounds, Hazardous, Psychic"
+        },
+        {
+          "n": "➤ Psychic Strike - witchfire",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Blast, Devastating Wounds, Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Cursed Wardings (Psychic)",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+        },
+        {
+          "n": "Psychic Barrier (Psychic)",
+          "d": "At the start of your opponent’s Shooting phase, you can roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2+, until the end of the phase, models in this PSYKER’s unit have a 4+ invulnerable save."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Psyker",
+        "Chaos",
+        "Rogue Psyker",
+        "Damned"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "f69d-2171-5f95-9c88",
+      "linkId": "1a9d-4e67-9d1f-cb91",
+      "name": "Traitor Enforcer",
+      "rawName": "Traitor Enforcer",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "TRAITOR GUARDSMAN SQUAD"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Power fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Ogryn weapons",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Brutal Example",
+          "d": "Once per turn, while this unit is leading a unit and contains a TRAITOR ENFORCER model, you can target that unit with the Fire Overwatch Stratagem for 0CP, and can do so even if you have already targeted a different unit from your army with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed."
+        },
+        {
+          "n": "Mutated Bodyguard",
+          "d": "While this unit contains a Traitor Ogryn model, CHARACTER models in this unit have the Feel No Pain 4+ ability."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Character",
+        "Damned"
+      ],
+      "models": {
+        "min": 2,
+        "max": 2
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "5+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "8dc5-4dcb-d77f-7d23",
+      "linkId": "5e6c-178c-92b1-2de6",
+      "name": "Traitor Guardsmen Squad",
+      "rawName": "Traitor Guardsmen Squad",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9 Traitor Guardsmen",
+          "min": 9,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Guardsman w/ lasgun",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Up to 3:",
+          "min": 0,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Guardsman w/ flamer",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Guardsman w/ plasma gun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Guardsman w/ meltagun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Guardsman w/ Cultist sniper rifle",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Guardsman w/ Cultist grenade launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Corrupted pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Power weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Corrupted pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Boltgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "Lasgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "➤ Plasma gun - standard",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "➤ Plasma gun - supercharge",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous, Rapid Fire 1"
+        },
+        {
+          "n": "Meltagun",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Cultist sniper rifle",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Heavy, Precision"
+        },
+        {
+          "n": "➤ Cultist grenade launcher - frag",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Cultist grenade launcher - krak",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Twisted Defence Force",
+          "d": "While this unit is within range of an objective, this unit has +1 Sv against ranged attacks."
+        }
+      ],
+      "faction": "Heretic Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Chaos",
+        "Traitor Guardsmen Squad",
+        "Damned"
+      ],
+      "models": {
+        "min": 1,
+        "max": 15
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    }
+  ]
+}

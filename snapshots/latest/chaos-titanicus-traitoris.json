@@ -1,0 +1,835 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "880c-c7e-4a43-a0c1",
+  "catalogueName": "Chaos - Titanicus Traitoris",
+  "nativeFaction": null,
+  "detachments": [],
+  "revision": 1,
+  "file": "Chaos - Titanicus Traitoris.json",
+  "counts": {
+    "total": 4,
+    "native": 4,
+    "matched": 4,
+    "legends": 0,
+    "crucible": 0,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "b7e8-f3ae-be53-9ba5",
+      "linkId": "f1e5-9e28-9096-27be",
+      "name": "Reaver Titan",
+      "rawName": "Reaver Titan",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 2200,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 2200
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Reaver gatling blaster",
+              "min": 1,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Reaver laser blaster",
+              "min": 1,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Reaver melta cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Reaver volcano cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Reaver power fist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Reaver feet",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-2",
+          "d": "4",
+          "kw": ""
+        },
+        {
+          "n": "Reaver apocalypse launcher",
+          "melee": false,
+          "range": "200\"",
+          "a": "3D6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Indirect Fire"
+        },
+        {
+          "n": "Reaver gatling blaster",
+          "melee": false,
+          "range": "72\"",
+          "a": "12",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Reaver laser blaster",
+          "melee": false,
+          "range": "72\"",
+          "a": "8",
+          "skill": "3+",
+          "s": "20",
+          "ap": "-3",
+          "d": "D6+2",
+          "kw": "Blast"
+        },
+        {
+          "n": "Reaver melta cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+2",
+          "skill": "3+",
+          "s": "13",
+          "ap": "-4",
+          "d": "6",
+          "kw": "Blast, Melta 4"
+        },
+        {
+          "n": "Reaver volcano cannon",
+          "melee": false,
+          "range": "120\"",
+          "a": "D3+1",
+          "skill": "3+",
+          "s": "24",
+          "ap": "-5",
+          "d": "14",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "➤ Reaver power fist - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "20",
+          "ap": "-4",
+          "d": "14",
+          "kw": ""
+        },
+        {
+          "n": "➤ Reaver power fist - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "6",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-20 wounds remaining",
+          "d": "While this model has 1-20 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "God-machine",
+          "d": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back."
+        },
+        {
+          "n": "Striding Colossus",
+          "d": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Reaver Titan",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "14",
+        "Sv": "2+",
+        "W": "60",
+        "LD": "6+",
+        "OC": "20",
+        "InSv": "5+ (Ranged)"
+      },
+      "native": true
+    },
+    {
+      "id": "8e6f-4e09-12d5-fafd",
+      "linkId": "1258-53bd-b170-2509",
+      "name": "Warbringer Nemesis Titan",
+      "rawName": "Warbringer Nemesis Titan",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 2600,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 2600
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Nemesis weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Nemesis quake cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Nemesis volcano cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Reaver gatling blaster",
+              "min": 1,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Reaver laser blaster",
+              "min": 1,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Reaver melta cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Reaver volcano cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Anvillus defence battery",
+          "melee": false,
+          "range": "72\"",
+          "a": "8",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-FLY 4+"
+        },
+        {
+          "n": "Ardex-defensor mauler",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Nemesis feet",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-2",
+          "d": "4",
+          "kw": ""
+        },
+        {
+          "n": "Nemesis quake cannon",
+          "melee": false,
+          "range": "480\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-4",
+          "d": "4",
+          "kw": "Blast, Indirect Fire"
+        },
+        {
+          "n": "Nemesis volcano cannon",
+          "melee": false,
+          "range": "120\"",
+          "a": "D3+3",
+          "skill": "3+",
+          "s": "24",
+          "ap": "-5",
+          "d": "14",
+          "kw": "Blast"
+        },
+        {
+          "n": "Reaver gatling blaster",
+          "melee": false,
+          "range": "72\"",
+          "a": "12",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Reaver laser blaster",
+          "melee": false,
+          "range": "72\"",
+          "a": "8",
+          "skill": "3+",
+          "s": "20",
+          "ap": "-3",
+          "d": "D6+2",
+          "kw": "Blast"
+        },
+        {
+          "n": "Reaver melta cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+2",
+          "skill": "3+",
+          "s": "13",
+          "ap": "-4",
+          "d": "6",
+          "kw": "Blast, Melta 4"
+        },
+        {
+          "n": "Reaver volcano cannon",
+          "melee": false,
+          "range": "120\"",
+          "a": "D3+1",
+          "skill": "3+",
+          "s": "24",
+          "ap": "-5",
+          "d": "14",
+          "kw": "Blast, Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-26 wounds remaining",
+          "d": "While this model has 1-26 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Titanic Fire Support",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly IMPERIUM model makes an attack that targets that enemy unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+        },
+        {
+          "n": "Striding Colossus",
+          "d": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Warbringer Nemesis Titan",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "14",
+        "Sv": "2+",
+        "W": "80",
+        "LD": "6+",
+        "OC": "20",
+        "InSv": "5+ (Ranged)"
+      },
+      "native": true
+    },
+    {
+      "id": "8eb5-a990-6eb0-9b41",
+      "linkId": "6709-2ef7-6205-9dcb",
+      "name": "Warhound Titan",
+      "rawName": "Warhound Titan",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 1100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 1100
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Warhound vulcan mega-bolter",
+              "min": 1,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Warhound inferno gun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Warhound plasma blastgun",
+              "min": 1,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Warhound turbo-laser destructor",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Warhound feet",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "4+",
+          "s": "10",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Warhound vulcan mega-bolter",
+          "melee": false,
+          "range": "48\"",
+          "a": "20",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Warhound inferno gun",
+          "melee": false,
+          "range": "24\"",
+          "a": "3D6",
+          "skill": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "➤ Warhound plasma blastgun - standard",
+          "melee": false,
+          "range": "72\"",
+          "a": "2D6+3",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-3",
+          "d": "4",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Warhound plasma blastgun - supercharge",
+          "melee": false,
+          "range": "72\"",
+          "a": "2D6+3",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "5",
+          "kw": "Blast, Hazardous"
+        },
+        {
+          "n": "Warhound turbo-laser destructor",
+          "melee": false,
+          "range": "72\"",
+          "a": "D3+3",
+          "skill": "3+",
+          "s": "20",
+          "ap": "-3",
+          "d": "2D6",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Flank Speed",
+          "d": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 8\" to the Move characteristic of this model."
+        },
+        {
+          "n": "Damaged: 1-13 wounds remaining",
+          "d": "While this model has 1-13 wounds remaining, subtract 8 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Striding Colossus",
+          "d": "Each time you target this model with a Stratagem, you must spend twice that Stratagem’s stated CP cost to do so."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Warhound Titan",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "13",
+        "Sv": "2+",
+        "W": "40",
+        "LD": "6+",
+        "OC": "16",
+        "InSv": "5+ (Ranged)"
+      },
+      "native": true
+    },
+    {
+      "id": "eafa-cd47-1c2f-61ee",
+      "linkId": "26dd-509a-d3f4-758c",
+      "name": "Warlord Titan",
+      "rawName": "Warlord Titan",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 3500,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 3500
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Main weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Arioch power claw",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Belicosa volcano cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Macro gatling blaster",
+              "min": 1,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Mori quake cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Sunfury plasma annihilator",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Carapace weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two apocalypse launchers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two laser blasters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Ardex-defensor lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Ardex-defensor mauler",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Warlord feet",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-2",
+          "d": "4",
+          "kw": ""
+        },
+        {
+          "n": "Arioch power claw",
+          "melee": false,
+          "range": "48\"",
+          "a": "20",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "➤ Arioch power claw - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "20",
+          "ap": "-4",
+          "d": "24",
+          "kw": ""
+        },
+        {
+          "n": "➤ Arioch power claw - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "8",
+          "kw": ""
+        },
+        {
+          "n": "Belicosa volcano cannon",
+          "melee": false,
+          "range": "120\"",
+          "a": "D3+3",
+          "skill": "3+",
+          "s": "32",
+          "ap": "-5",
+          "d": "18",
+          "kw": "Blast"
+        },
+        {
+          "n": "Macro gatling blaster",
+          "melee": false,
+          "range": "100\"",
+          "a": "30",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Mori quake cannon",
+          "melee": false,
+          "range": "280\"",
+          "a": "3D6",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-4",
+          "d": "6",
+          "kw": "Blast, Ignores Cover"
+        },
+        {
+          "n": "➤ Sunfury plasma annihilator - standard",
+          "melee": false,
+          "range": "72\"",
+          "a": "2D6+6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "5",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Sunfury plasma annihilator - supercharge",
+          "melee": false,
+          "range": "72\"",
+          "a": "2D6+6",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "8",
+          "kw": "Blast, Hazardous"
+        },
+        {
+          "n": "Apocalypse launcher",
+          "melee": false,
+          "range": "200\"",
+          "a": "20",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast, Indirect Fire"
+        },
+        {
+          "n": "Laser blaster",
+          "melee": false,
+          "range": "72\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-4",
+          "d": "D6+3",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-33 wounds remaining",
+          "d": "While this model has 1-33 wounds remaining, subtract 15 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Wrath of the Omnissiah",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+        },
+        {
+          "n": "Striding Colossus",
+          "d": "Each time you target this model with a Stratagem, you must spend four times that Stratagem’s stated CP cost to do so."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Warlord Titan",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "16",
+        "Sv": "2+",
+        "W": "100",
+        "LD": "6+",
+        "OC": "30",
+        "InSv": "5+ (Ranged)"
+      },
+      "native": true
+    }
+  ]
+}

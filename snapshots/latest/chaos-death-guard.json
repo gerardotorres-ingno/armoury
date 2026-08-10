@@ -1,0 +1,8072 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "5108-f98-63c2-53cb",
+  "catalogueName": "Chaos - Death Guard",
+  "nativeFaction": "Death Guard",
+  "detachments": [
+    "Flyblown Host",
+    "Virulent Vectorium",
+    "Shamblerot Vectorium",
+    "Death Lord's Chosen",
+    "Mortarion's Hammer",
+    "Champions of Contagion",
+    "Tallyband Summoners",
+    "Contagion Engines",
+    "Paragons of Putrescence"
+  ],
+  "revision": 7,
+  "file": "Chaos - Death Guard.json",
+  "counts": {
+    "total": 77,
+    "native": 44,
+    "matched": 30,
+    "legends": 11,
+    "crucible": 3,
+    "allied": 33
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "5f38-3bbb-ce09-485b",
+      "linkId": "f76f-4387-e879-d0a6",
+      "name": "Beasts of Nurgle",
+      "rawName": "Beasts of Nurgle",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 0,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 0
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Putrid appendages",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Grotesque Regeneration",
+          "d": "At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds."
+        }
+      ],
+      "faction": "Plague Legions",
+      "keywords": [
+        "Beast",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Summoned",
+        "Beasts of Nurgle"
+      ],
+      "models": {
+        "min": 1,
+        "max": 2
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "9",
+        "Sv": "6+",
+        "W": "7",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "690b-a189-5935-f32e",
+      "linkId": "ad06-9aca-1787-d1c9",
+      "name": "Biologus Putrifier",
+      "rawName": "Biologus Putrifier",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Hyper blight grenades",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Assault, Blast, Lethal Hits"
+        },
+        {
+          "n": "Injector pistol",
+          "melee": false,
+          "range": "3\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Anti-INFANTRY 2+, Pistol, Precision"
+        },
+        {
+          "n": "Plague knives",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Extraction of Fresh Disease",
+          "d": "The first time this model's unit destroys an enemy unit as a result of a melee attack, until the end of the battle, add 6 to the Objective Control characteristic of this model."
+        },
+        {
+          "n": "Foul Infusion",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [Lethal Hits] ability. In addition, each time a model in that unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only on a 6."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Grenades",
+        "Biologus Putrifier"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "5b4e-dcf1-5c6f-4d35",
+      "linkId": "c5ce-7c31-b5a6-1bd",
+      "name": "Blightlord Terminators",
+      "rawName": "Blightlord Terminators",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        },
+        {
+          "from": 4,
+          "pts": 185
+        },
+        {
+          "from": 6,
+          "pts": 370
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-9 Blightlord Terminators",
+          "min": 2,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Blightlord Terminator w/ combi-bolter",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Blightlord Terminator w/ combi-weapon",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Blightlord Terminator w/ plague spewer and CCW",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Blightlord Terminator w/ flail",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Blightlord Terminator w/ blight launcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Blightlord Terminator w/ reaper autocannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Blightlord Terminator w/ plague spewer and bubotic blade",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Combi-bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits, Rapid Fire 2"
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Flail of corruption",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Reaper autocannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Devastating Wounds, Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Blistering Fusillade",
+          "d": "If this unit has a Starting Strength of 5 or more, or if a Character is leading this unit, then each time a model in this unit makes a ranged attack that targets an Afflicted unit, improve the Strength and Armour Penetration characteristics of that attack by 1."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Blightlord Terminators",
+        "Terminator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 25
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "7",
+        "Sv": "2+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "4044-b458-fb4d-d05b",
+      "linkId": "d55a-594a-2f89-f511",
+      "name": "Cerberus",
+      "rawName": "Cerberus [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 270,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 270
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Cerberus neutron pulse array",
+          "melee": false,
+          "range": "48\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-4",
+          "d": "D6+3",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Atomantic Arc-reactor",
+          "d": "Each time this unit shoots its Cerberus neutron pulse array in your Shooting phase, provided it Remained Stationary this turn, that weapon has the [LETHAL HITS] ability."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Cerberus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "89d-b0c0-6e19-f017",
+      "linkId": "6d9b-82d6-be21-f3b3",
+      "name": "Chaos Land Raider",
+      "rawName": "Chaos Land Raider",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 220,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 220
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Armoured tracks",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "8",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Soulshatter lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Assault Ramp",
+          "d": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Chaos",
+        "Nurgle",
+        "Transport",
+        "Smoke",
+        "Land Raider",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1d25-87a1-2d17-5d02",
+      "linkId": "63a6-8395-a213-e948",
+      "name": "Chaos Lord on Palanquin of Nurgle",
+      "rawName": "Chaos Lord on Palanquin of Nurgle [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "PLAGUE MARINES"
+      ],
+      "options": [
+        {
+          "n": "Replace chainsword",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Paired accursed weapons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Nurgling's claws and teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "5+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": "Extra Attacks"
+        },
+        {
+          "n": "Astartes chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Accursed weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Power fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Paired accursed weapons",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol - standard",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol - supercharge",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous, Pistol"
+        },
+        {
+          "n": "Combi-bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Revolting Regeneration",
+          "d": "At the start of your Command phase, this model regains up to D3 lost wounds."
+        },
+        {
+          "n": "Lord of Chaos",
+          "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Nurgle",
+        "Chaos Lord",
+        "Palanquin of Nurgle"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "3+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "9b58-210d-c12f-4d46",
+      "linkId": "6175-44bb-ff39-6469",
+      "name": "Chaos Predator Annihilator",
+      "rawName": "Chaos Predator Annihilator",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Predator twin lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Metalophagic Infection",
+          "d": "In your Shooting phase, after this model has shot, select one enemy Monster or Vehicle unit hit by one or more of those attacks. Roll one D6, adding 1 to the result if that unit is Afflicted; on a 5+, that unit suffers D3 mortal wounds."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Chaos",
+        "Nurgle",
+        "Predator Annihilator",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "ab4e-466d-e9e8-89d5",
+      "linkId": "a11c-fd5a-5d19-d5ae",
+      "name": "Chaos Predator Destructor",
+      "rawName": "Chaos Predator Destructor",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 145,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 145
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 plague heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Predator autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Lethal Hits, Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Hail of Corrosive Disease",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit (excluding Monsters and Vehicles) hit by one or more of those attacks. Until the end of the phase, each time a friending Death Guard unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Chaos",
+        "Nurgle",
+        "Smoke",
+        "Predator Destructor",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b899-92e2-693a-975f",
+      "linkId": "a0fc-8a48-f51e-f81b",
+      "name": "Chaos Rhino",
+      "rawName": "Chaos Rhino",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Fire Support",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that unit, you can re-roll the Wound roll."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Dedicated Transport",
+        "Smoke",
+        "Chaos",
+        "Nurgle",
+        "Rhino",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1d85-475f-5ab-9823",
+      "linkId": "3ec7-cb34-a128-da74",
+      "name": "Chaos Spawn",
+      "rawName": "Chaos Spawn",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Hideous Mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "D6+2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Lethal Ichor",
+          "d": "Each time a melee attack is allocated to a model in this unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Beast",
+        "Chaos",
+        "Nurgle",
+        "Spawn"
+      ],
+      "models": {
+        "min": 2,
+        "max": 2
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "7",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6844-986c-b0ea-6dd5",
+      "linkId": "4034-1ba6-4214-7211",
+      "name": "Chaos Thunderhawk",
+      "rawName": "Chaos Thunderhawk [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 840,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 840
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Bombs or missiles",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Thunderhawk cluster bombs",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hellstrike missile array",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Thunderhawk heavy cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Turbo-laser destructor",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Hellstrike missile array",
+          "melee": false,
+          "range": "72\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-Fly 3+"
+        },
+        {
+          "n": "Thunderhawk heavy cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Turbo-laser destructor",
+          "melee": false,
+          "range": "96\"",
+          "a": "D3+1",
+          "skill": "3+",
+          "s": "20",
+          "ap": "-4",
+          "d": "D6+6",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-10 wounds remaining",
+          "d": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Aerial Assault",
+          "d": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+        },
+        {
+          "n": "Thunderhawk cluster bombs",
+          "d": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Fly",
+        "Aircraft",
+        "Transport",
+        "Chaos",
+        "Thunderhawk"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20\"+",
+        "T": "12",
+        "Sv": "2+",
+        "W": "30",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "4cb3-e6b6-4e82-23bf",
+      "linkId": "8ea0-48a3-68f8-ee6a",
+      "name": "Daemon Prince of Nurgle",
+      "rawName": "Daemon Prince of Nurgle",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 195,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 195
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Death Guard Defenders",
+          "d": "While this model is within 3\" of one or more friendly Death Guard Infantry units, this model has the Lone Operative ability."
+        },
+        {
+          "n": "Fevered Strategist",
+          "d": "Once per Battle Round, one model from your army with this ability can use it when a friendly Death Guard unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP."
+        },
+        {
+          "n": "Miasma of Pestilence (Aura)",
+          "d": "While a friendly Death Guard unit is within 6\" of this model, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Daemon",
+        "Daemon Prince"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "f4d7-244d-16c4-f2f3",
+      "linkId": "45d5-2e84-1f02-4fd4",
+      "name": "Daemon Prince of Nurgle with wings",
+      "rawName": "Daemon Prince of Nurgle with wings",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 170,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Infernal cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Horrifying Visage",
+          "d": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it. That unit must take a Battle-shock test, subtracting 1 from that test."
+        },
+        {
+          "n": "Enfeebling Miasma (Aura)",
+          "d": "While an enemy unit (excluding *Monsters and Vehicles) is within 6\" of this model, each time that unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those Desperate Escape tests."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Daemon",
+        "Fly",
+        "Daemon Prince with Wings"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "8597-d6dd-511e-80ae",
+      "linkId": "ad75-33ce-c532-c4b9",
+      "name": "Daemonic Charioteer",
+      "rawName": "Daemonic Charioteer [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Nurgle",
+        "Slaanesh",
+        "Tzeentch"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Malefic Impact",
+          "d": "Melee weapons equipped by models in this unit have the [Lance] ability."
+        }
+      ],
+      "faction": "Legiones Daemonica",
+      "keywords": [
+        "Character",
+        "Chaos",
+        "Daemon",
+        "Crucible",
+        "Mounted",
+        "Daemonic Charioteer",
+        "Shadow Legion",
+        "Non-Monster Character"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "7",
+        "Sv": "6+",
+        "W": "8",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3a39-0b56-25e0-eff8",
+      "linkId": "7d12-6c42-770a-fd71",
+      "name": "Daemonic Herald",
+      "rawName": "Daemonic Herald [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Nurgle",
+        "Slaanesh",
+        "Tzeentch"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Daemonic Locus",
+          "d": "While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model, or D3 destroyed models with the Battleline keyword, to that unit."
+        }
+      ],
+      "faction": "Legiones Daemonica",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Chaos",
+        "Daemon",
+        "Summoned",
+        "Daemonic Herald",
+        "Crucible",
+        "Shadow Legion",
+        "Non-Monster Character"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "7+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "cfc1-1741-530c-3335",
+      "linkId": "8d8b-5cae-1e6a-1ddb",
+      "name": "Death Guard Chaos Lord",
+      "rawName": "Death Guard Chaos Lord [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "PLAGUE MARINES"
+      ],
+      "options": [
+        {
+          "n": "Replace chainsword",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Plague bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Astartes chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Plague bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits, Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol - standard",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol - supercharge",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous, Pistol"
+        },
+        {
+          "n": "Combi-weapon",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
+        }
+      ],
+      "abilities": null,
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Grenades",
+        "Chaos Lord"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "bacc-4f1-649-a051",
+      "linkId": "1524-f7fd-4838-ffd7",
+      "name": "Death Guard Chaos Lord in Terminator Armour",
+      "rawName": "Death Guard Chaos Lord in Terminator Armour [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BLIGHTLORD TERMINATORS",
+        "DEATHSHROUD TERMINATORS"
+      ],
+      "options": [
+        {
+          "n": "Replace combi-bolter",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace exalted weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Plague fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Combi-weapon",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
+        },
+        {
+          "n": "Plague fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": null,
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Chaos Lord",
+        "Terminator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "4\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "d579-88cd-c634-f800",
+      "linkId": "7669-5b4f-29dc-73f5",
+      "name": "Death Guard Cultists",
+      "rawName": "Death Guard Cultists [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        },
+        {
+          "from": 11,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9-19 Cultists",
+          "min": 9,
+          "max": 19,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Cultist",
+              "min": 0,
+              "max": 19,
+              "p": 0
+            },
+            {
+              "n": "Cultist w/ flamer",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Cultist w/ heavy stubber",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Cultist w/ grenade launcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "Heavy stubber",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 3"
+        },
+        {
+          "n": "➤ Grenade launcher - frag",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Grenade launcher - krak",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D3",
+          "kw": ""
+        }
+      ],
+      "abilities": null,
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Cultists"
+      ],
+      "models": {
+        "min": 1,
+        "max": 26
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "efa6-3620-2b6c-ce70",
+      "linkId": "85f5-bfd1-2923-c3bf",
+      "name": "Death Guard Possessed",
+      "rawName": "Death Guard Possessed [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 155,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 155
+        },
+        {
+          "from": 6,
+          "pts": 310
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "5-10 Possessed",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Possessed",
+              "min": 5,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Hideous mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Infectious Bloodshed",
+          "d": "Each time this unit makes a Charge move, until the end of the turn, weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Diseased icon",
+          "d": "Melee weapons in the bearer's unit have the [LETHAL HITS] ability."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Daemon",
+        "Possessed"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "93ac-1b31-4238-d60e",
+      "linkId": "9414-da22-4118-5ac3",
+      "name": "Death Guard Sorcerer in Terminator Armour",
+      "rawName": "Death Guard Sorcerer in Terminator Armour [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "BLIGHTLORD TERMINATORS",
+        "DEATHSHROUD TERMINATORS"
+      ],
+      "options": [
+        {
+          "n": "Replace force weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Force weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plague fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Curse of the Leper - witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Psychic"
+        },
+        {
+          "n": "➤ Curse of the Leper - focused witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Hazardous, Psychic"
+        },
+        {
+          "n": "Force weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Chainfist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Plague fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Twin lightning claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Putrescent Vitality (Psychic)",
+          "d": "At the start of the Fight phase, you can roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2+, until the end of the phase, each time an attack is allocated to a model in this PSYKER’s unit, subtract 1 from the Damage characteristic of that attack."
+        },
+        {
+          "n": "Pestilent Familiar (Psychic)",
+          "d": "Once per battle, after selecting targets for a Psychic weapon equipped by this model, until the end of the phase, improve the Strength and Damage characteristics of that weapon by 2."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Psyker",
+        "Sorcerer",
+        "Terminator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "4\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "83e8-ebb7-785a-2115",
+      "linkId": "76ab-697e-17ea-5edf",
+      "name": "Deathshroud Terminators",
+      "rawName": "Deathshroud Terminators",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        },
+        {
+          "from": 4,
+          "pts": 305
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-5 Deathshroud Terminators",
+          "min": 2,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Deathshroud Terminator",
+              "min": 2,
+              "max": 5,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Silent Bodyguard",
+          "d": "While a Character model is leading this unit, that Character model has the Feel No Pain 4+ ability."
+        },
+        {
+          "n": "Death Approaches",
+          "d": "In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from any other enemy units."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Deathshroud Terminators",
+        "Terminator"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "7",
+        "Sv": "2+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "bc88-0833-743e-0146",
+      "linkId": "cf37-5524-8172-85c8",
+      "name": "Defiler",
+      "rawName": "Defiler",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 300,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 300
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Replace heavy missile launcher",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main cannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Hades battle cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ectoplasma destructor",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace heavy baleflamer",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy baleflamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace excruciator cannons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two excruciator cannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two magma cutters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Shearing claws - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Shearing claws - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "➤ Heavy missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast, Lethal Hits"
+        },
+        {
+          "n": "➤ Heavy missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Hades battle cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Blast, Lethal Hits"
+        },
+        {
+          "n": "Ectoplasma destructor",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast, Lethal Hits"
+        },
+        {
+          "n": "Heavy baleflamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "Excruciator cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Magma cutter",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Lethal Hits, Melta 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Scuttling Walker",
+          "d": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding Titanic models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+        },
+        {
+          "n": "Barrage of Filth",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Defiler"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "11",
+        "Sv": "3+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "d38d-c3a2-f753-efea",
+      "linkId": "874-93d4-cf01-d8c2",
+      "name": "Deredeo Dreadnought",
+      "rawName": "Deredeo Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Carapace weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Aiolos missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Boreas air defence missiles",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Anvilus autocannon battery",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Arachnus heavy lascannon battery",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Volkite falconet battery",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hellfire plasma carronade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Aiolos missile launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "Boreas air defence missiles",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Anti-FLY 2+"
+        },
+        {
+          "n": "Anvilus autocannon battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Arachnus heavy lascannon battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Volkite falconet battery",
+          "melee": false,
+          "range": "30\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "➤ Hellfire plasma carronade - standard",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "➤ Hellfire plasma carronade - supercharge",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Hazardous"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Deredeo Strike",
+          "d": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Smoke",
+        "Dreadnought",
+        "Deredeo Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "625b-29e4-7be7-db5a",
+      "linkId": "5c4-93b0-7d7d-6681",
+      "name": "Falchion",
+      "rawName": "Falchion [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 420,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 420
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two quad lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two laser destroyers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin Falchion volcano cannon",
+          "melee": false,
+          "range": "120\"",
+          "a": "D3+1",
+          "skill": "3+",
+          "s": "24",
+          "ap": "-5",
+          "d": "12",
+          "kw": "Blast, Twin-linked"
+        },
+        {
+          "n": "Quad lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Titan-killer",
+          "d": "Each time this model makes a ranged attack with its twin Falchion volcano cannon that targets a MONSTER or VEHICLE unit, that attack has the [DEVASTATING WOUNDS] ability."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Smoke",
+        "Falchion"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "13",
+        "Sv": "2+",
+        "W": "24",
+        "LD": "6+",
+        "OC": "8",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "585d-722b-4304-2f63",
+      "linkId": "c8a4-91de-cd54-31cd",
+      "name": "Fellblade",
+      "rawName": "Fellblade [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 480,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 480
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two quad lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two laser destroyers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two quad heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Demolisher cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Fellblade accelerator cannon - AP shells",
+          "melee": false,
+          "range": "72\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Fellblade accelerator cannon - HE shells",
+          "melee": false,
+          "range": "72\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "Quad lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Quad heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Sustained Hits 1, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rolling Fortress",
+          "d": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Smoke",
+        "Fellblade"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "13",
+        "Sv": "2+",
+        "W": "24",
+        "LD": "6+",
+        "OC": "8",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "1fc7-7880-e4d4-acbf",
+      "linkId": "5a24-5d3b-949f-984c",
+      "name": "Fire Raptor Gunship",
+      "rawName": "Fire Raptor Gunship [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 290,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 290
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Door weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin autocannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two quad heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wing weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin hellstrike launchers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin avenger bolt cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "10",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Quad heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Twin-linked, Sustained Hits 1"
+        },
+        {
+          "n": "Twin hellstrike launcher",
+          "melee": false,
+          "range": "72\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Anti-Fly 2+, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Strafing Run",
+          "d": "Each time this model makes a ranged attack that targets a unit that cannot FLY, add 1 to the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Fire Raptor Gunship"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "26d5-ec73-3517-f3f",
+      "linkId": "c935-4db0-a2f-1bd8",
+      "name": "Foetid Bloat-drone",
+      "rawName": "Foetid Bloat-drone",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two plaguespitters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fleshmower",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Plague probe",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Plaguespitter",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-INFANTRY 2+, Ignores Cover, Torrent"
+        },
+        {
+          "n": "Fleshmower",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Hovering Death",
+          "d": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Chaos",
+        "Nurgle",
+        "Daemon",
+        "Foetid Bloat-drone"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "d055-25eb-eb2b-7f6a",
+      "linkId": "dd89-82d3-6866-78d3",
+      "name": "Foetid Bloat-drone with heavy blight launcher",
+      "rawName": "Foetid Bloat-drone with heavy blight launcher",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Heavy blight launcher",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast, Lethal Hits"
+        },
+        {
+          "n": "Plague probe",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Explosive Blight",
+          "d": "In your Shooting phase, each time this model makes an attack that destroys an enemy unit, before removing the last model in that unit from play, roll a D6, adding 1 to the result if that unit is Afflicted; on a 5+, each enemy unit within 6\" of that model is Afflicted until the start of your next turn."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Chaos",
+        "Nurgle",
+        "Daemon",
+        "Foetid Bloat-drone"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "c88f-d4dc-84b3-1b31",
+      "linkId": "b47b-dec2-17a8-fc18",
+      "name": "Foul Blightspawn",
+      "rawName": "Foul Blightspawn",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Plague sprayer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-INFANTRY 2+, Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Putrefying Stink",
+          "d": "Enemy models cannot start or end an Advance move within 9\" of this model."
+        },
+        {
+          "n": "Blinding Spray",
+          "d": "In the Fight phase, you can select one model from your army with this ability to use this ability. If you do, until the end of that phase, that model's unit has the Fights First ability. Each model can only be selected for this ability once per battle."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Grenades",
+        "Foul Blightspawn"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6d29-1c06-c787-64e0",
+      "linkId": "378a-7609-1281-280e",
+      "name": "Gellerpox Infected",
+      "rawName": "Gellerpox Infected [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Brutal weapons",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Hideous mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Belly flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Fearsome (Aura)",
+          "d": "While an enemy unit is within 6\" of this unit, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Gellerpox Infected"
+      ],
+      "models": {
+        "min": 7,
+        "max": 7
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "2425-13a7-77f0-0112",
+      "linkId": "0a84-b5f4-bc9e-6779",
+      "name": "Great Unclean One",
+      "rawName": "Great Unclean One",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 265,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 265
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Flail / Bileblade",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Plague flail",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bileblade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Bilesword / Bell",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bilesword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Doomsday bell",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Putrid vomit",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "Plague flail",
+          "melee": false,
+          "range": "6\"",
+          "a": "D6+1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Bileblade",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Extra Attacks, Lethal Hits"
+        },
+        {
+          "n": "➤ Bilesword - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "➤ Bilesword - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Doomsday bell",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Lethal Hits, Reverberating Summons"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Daemon Lord of Nurgle (Aura)",
+          "d": "While a friendly Plague Legions unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit."
+        },
+        {
+          "n": "Nurgle’s Rot (Psychic)",
+          "d": "At the end of your Movement phase, you can select one enemy unit within 12\" of this model. Until the start of your next Movement phase, that unit is rotted. While a unit is rotted, subtract 1 from the Toughness characteristic of models in that unit."
+        },
+        {
+          "n": "Damaged: 1-7 wounds remaining",
+          "d": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Plague Legions",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Psyker",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Great Unclean One",
+        "Summoned"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "12",
+        "Sv": "5+",
+        "W": "20",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "412c-3499-8275-2637",
+      "linkId": "b5f6-f34-9fa-eeba",
+      "name": "Greater Blight Drone",
+      "rawName": "Greater Blight Drone [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 150,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 150
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bile maw",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Blightreaper cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Greater plague probe",
+          "melee": false,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Hovering Death",
+          "d": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Chaos",
+        "Nurgle",
+        "Daemon",
+        "Greater Blight Drone"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "2a2b-643e-860e-b524",
+      "linkId": "56ad-b86c-3c6a-ff59",
+      "name": "Helbrute",
+      "rawName": "Helbrute",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 110,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Replace helbrute fist",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Helbrute fist with combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute fist with heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace multi-melta",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute fist with heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Helbrute fist with combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Helbrute fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Lethal Hits, Melta 2"
+        },
+        {
+          "n": "Twin autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Twin-linked, Lethal Hits"
+        },
+        {
+          "n": "Plasma cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast, Hazardous, Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Diseased Malice",
+          "d": "Each time this model makes an attack that targets an Afflicted unit, add 1 to the Wound roll."
+        },
+        {
+          "n": "Froth-spattered Frenzy",
+          "d": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Chaos",
+        "Nurgle",
+        "Helbrute"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "8cba-21cc-a3b3-91ed",
+      "linkId": "2a66-a8a1-e783-8e59",
+      "name": "Hell Talon",
+      "rawName": "Hell Talon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Replace autocannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bomb Rack",
+          "d": "Each time this model ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Chaos",
+        "Nurgle",
+        "Hell Talon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "3e86-ef61-9b87-3658",
+      "linkId": "584-40de-76ef-b9c7",
+      "name": "Hellblade",
+      "rawName": "Hellblade [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin autocannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Interceptor",
+          "d": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Aircraft",
+        "Fly",
+        "Chaos",
+        "Nurgle",
+        "Hellblade"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "3e5b-23db-4ccd-ea97",
+      "linkId": "9d60-2b6f-4b65-7d62",
+      "name": "Icon Bearer",
+      "rawName": "Icon Bearer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Plague knife",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Unclean Icon",
+          "d": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+        },
+        {
+          "n": "Blessed Icon of Disease",
+          "d": "Once per battle, at the start of any phase, you can select one friendly Death Guard unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Grenades",
+        "Death Guard Icon Bearer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "5+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3594-bf68-4a46-fbf8",
+      "linkId": "daec-96aa-c905-f9b0",
+      "name": "Immortal Champion",
+      "rawName": "Immortal Champion [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Infernal Attendants",
+          "d": "While this model is within 3\" of one or more friendly Daemon Infantry units, this model has the Lone Operative ability."
+        },
+        {
+          "n": "Font of Unreality",
+          "d": "Each time an attack is allocated to a friendly Daemon unit within 3\" of this model, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Legiones Daemonica",
+      "keywords": [
+        "Character",
+        "Chaos",
+        "Daemon",
+        "Crucible",
+        "Monster",
+        "Immortal Champion",
+        "Shadow Legion"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "78aa-3f99-5fb7-7f83",
+      "linkId": "cd07-156e-de4e-d99d",
+      "name": "Kratos",
+      "rawName": "Kratos [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 240,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 240
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Hull guns",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite calivers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two autocannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Main weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Kratos battlecannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Melta blast-gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Volkite cardanelle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Volkite caliver",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "➤ Kratos battlecannon - AP",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "18",
+          "ap": "-4",
+          "d": "D6+3",
+          "kw": "Heavy"
+        },
+        {
+          "n": "➤ Kratos battlecannon - HE",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Melta blast-gun",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Volkite cardanelle",
+          "melee": false,
+          "range": "36\"",
+          "a": "9",
+          "skill": "3+",
+          "s": "9",
+          "ap": "0",
+          "d": "3",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Twin boltgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Volkite culverin",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Line-breaker",
+          "d": "When making ranged attacks, this model can target enemy units within Engagement Range of it with Blast weapons (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Kratos"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3006-ffe-2b0c-6b1b",
+      "linkId": "3fa3-123a-8f1a-52b9",
+      "name": "Land Raider Achilles",
+      "rawName": "Land Raider Achilles [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 230,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 230
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin multi-meltas",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Quad launcher - shatter shells",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "➤ Quad launcher - thunderfire shells",
+          "melee": false,
+          "range": "60\"",
+          "a": "D6+4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Indirect Fire"
+        },
+        {
+          "n": "Twin multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2, Twin-linked"
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Land Raider Achilles"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "34c8-1025-33f7-baaf",
+      "linkId": "2a8d-61a2-7b7b-9da8",
+      "name": "Land Raider Proteus",
+      "rawName": "Land Raider Proteus [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 220,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 220
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Explorator augury web",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Explorator Augury Web",
+          "d": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of the bearer, but the bearer must halve its Transport Capacity."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Land Raider Proteus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "14d4-8062-f090-6719",
+      "linkId": "a04e-a182-f224-cc6d",
+      "name": "Leviathan Dreadnought",
+      "rawName": "Leviathan Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Arm weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grav-flux bombard",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Cyclonic melta-lance",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Storm cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Siege claw and meltagun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Siege drill  and meltagun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace heavy flamers",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin volkite calivers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Grav-flux bombard",
+          "melee": false,
+          "range": "24\"",
+          "a": "2D3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-Vehicle 2+, Blast"
+        },
+        {
+          "n": "Cyclonic melta-lance",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Storm cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Leviathan siege claw",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Leviathan siege drill",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Twin volkite caliver",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Duty Eternal",
+          "d": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Smoke",
+        "Dreadnought",
+        "Leviathan Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "8700-3d3-efbb-ef8d",
+      "linkId": "10a1-5896-98da-8c7c",
+      "name": "Lord of Contagion",
+      "rawName": "Lord of Contagion",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Blightlord Terminators",
+        "Deathshroud Terminators"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Manreaper - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "➤ Manreaper - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Vector of Disease",
+          "d": "While this model is leading a unit, melee weapons equipped by models in that unit have the [Sustained Hits 1] and [Lance] abilties."
+        },
+        {
+          "n": "Unholy Resilience",
+          "d": "The first time a model with this ability is destroyed in a battle round, roll one D6 at the end of the phase. On a 2+, set that model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining. Each model can only be set up in this way once per battle."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Grenades",
+        "Lord of Contagion",
+        "Terminator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "7",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "c5a7-5f07-2b1a-8f98",
+      "linkId": "212c-8052-8e6b-f33f",
+      "name": "Lord of Poxes",
+      "rawName": "Lord of Poxes",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Plague Marines"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Great plague blade",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds, Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Gift of Poxes",
+          "d": "Add 3\" to the range of this model's Contagion Range."
+        },
+        {
+          "n": "Shroud of Disease",
+          "d": "While this model is leading a unit, that unit cannot be targeted by ranged attacks unless the attacking unit is within 18\"."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Chaos",
+        "Nurgle",
+        "Lord of Poxes"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "c15c-2b5a-dcab-7627",
+      "linkId": "af3-b43-7cc8-c165",
+      "name": "Lord of Virulence",
+      "rawName": "Lord of Virulence",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Blightlord Terminators",
+        "Deathshroud Terminators"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Power fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Twin plague spewer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-INFANTRY 2+, Ignores Cover, Torrent, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Virulent Aura",
+          "d": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Wound roll."
+        },
+        {
+          "n": "Blight Bombardment",
+          "d": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this model. Until the end of the phase, each time a friendly Death Guard unit makes a ranged attack that targets that unit, re-roll a Hit roll of 1 (if that attack is made with a Blast weapon, you can re-roll the Hit roll instead)."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Lord of Virulence",
+        "Terminator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "7",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "9900-77d7-10e3-5c91",
+      "linkId": "83ad-afe0-9ee9-d7e5",
+      "name": "Malignant Plaguecaster",
+      "rawName": "Malignant Plaguecaster",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Plague Marines",
+        "Poxwalkers"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Corrupted staff",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Lethal Hits, Psychic"
+        },
+        {
+          "n": "➤ Plague Wind - witchfire",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic, Torrent"
+        },
+        {
+          "n": "➤ Plague Wind - focused witchfire",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Hazardous, Psychic, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Gift of Contagion (Psychic)",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack which targets a unit which is Afflicted, that attack has the [Sustained Hits 1] ability."
+        },
+        {
+          "n": "Pestilent Fallout (Psychic)",
+          "d": "In your Shooting phase, after this model has shot, select one enemy Infantry unit hit by one or more of those attacks made with its Plague Wind. Until the end of your opponent's next turn, that unit is enfeebled. While a unit is enfeebled, subtract 2\" from the Move characteristic of models in that unit."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Psyker",
+        "Malignant Plaguecaster"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "e337-7f05-f1b3-d64e",
+      "linkId": "3641-6309-27f0-6e1b",
+      "name": "Mastodon",
+      "rawName": "Mastodon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 540,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 540
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Front sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Rear sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two volkite culverins",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Siege melta array",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Skyreaper battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "8",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-FLY 4+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-10 wounds remaining",
+          "d": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Inviolable Transport",
+          "d": "Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Transport",
+        "Smoke",
+        "Mastodon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "14",
+        "Sv": "2+",
+        "W": "30",
+        "LD": "6+",
+        "OC": "12",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "55c7-e5b8-9737-f58e",
+      "linkId": "153c-aeaf-664f-2c67",
+      "name": "Miasmic Malignifier",
+      "rawName": "Miasmic Malignifier",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 105,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 105
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Miasmic gouts",
+          "melee": false,
+          "range": "9\"",
+          "a": "2D6",
+          "skill": "N/A",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Putrescent Fog (Aura)",
+          "d": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+        },
+        {
+          "n": "Diseased Cover",
+          "d": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack."
+        },
+        {
+          "n": "Deployment",
+          "d": "Both parts of this Fortification must be deployed within 1\" of each other. Both parts are then treated as a single model for all rules purposes."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Fortification",
+        "Chaos",
+        "Nurgle",
+        "Miasmic Malignifier",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "10",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "f5ac-4f37-fe7b-36b6",
+      "linkId": "4109-85ad-cf45-d294",
+      "name": "Mortarion",
+      "rawName": "Mortarion",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 390,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 390
+        }
+      ],
+      "cap": {
+        "max": 1
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Rotwind",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+3",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Blast, Devastating Wounds, Lethal Hits, Psychic"
+        },
+        {
+          "n": "Lantern",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "10",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Pistol, Sustained Hits D3"
+        },
+        {
+          "n": "➤ Silence - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Devastating Wounds, Lethal Hits"
+        },
+        {
+          "n": "➤ Silence - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "15",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits, Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Host of Plagues",
+          "d": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model, adding 1 to the result if that unit is Afflicted; on a 3+, that enemy unit suffers D3 mortal wounds."
+        },
+        {
+          "n": "Lord of the Death Guard",
+          "d": "Once per turn, this model can use one of the Lord of the Death Guard abilties."
+        },
+        {
+          "n": "Damaged: 1-6 wounds remaining",
+          "d": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Monster",
+        "Psyker",
+        "Fly",
+        "Character",
+        "Epic Hero",
+        "Daemon",
+        "Grenades",
+        "Chaos",
+        "Nurgle",
+        "Primarch",
+        "Mortarion"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "5+",
+        "OC": "6",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "2dfd-cddb-9fef-494b",
+      "linkId": "cbe6-7a9c-1bd9-d9c",
+      "name": "Mutoid Vermin",
+      "rawName": "Mutoid Vermin [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Diseased claws and fangs",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Mischief Makers (Aura)",
+          "d": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this unit, each time a model in that unit makes a melee attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Swarm",
+        "Chaos",
+        "Nurgle",
+        "Mutoid Vermin"
+      ],
+      "models": {
+        "min": 16,
+        "max": 16
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "2",
+        "Sv": "7+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "35b2-7490-1a7b-cd99",
+      "linkId": "d49b-c44e-3421-4d3f",
+      "name": "Myphitic Blight-hauler",
+      "rawName": "Myphitic Blight-hauler",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bile spurt",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Gnashing maw",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "➤ Missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "Multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Lethal Hits, Melta 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Tank Hunters",
+          "d": "In your Shooting phase, each time a model in this unit makes a attack that targets a Monster or Vehicle unit, add 1 to the Hit roll and add 1 to the Wound roll."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Chaos",
+        "Nurgle",
+        "Daemon",
+        "Smoke",
+        "Myphitic Blight-hauler"
+      ],
+      "models": {
+        "min": 1,
+        "max": 2
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "1ffc-27de-8aea-e7bb",
+      "linkId": "3bac-3a12-8a6e-eaa5",
+      "name": "Noxious Blightbringer",
+      "rawName": "Noxious Blightbringer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Plague Marines",
+        "Poxwalkers",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units",
+        "with their original Starting Strengths.*"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Cursed plague bell",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "2",
+          "kw": "Anti-PSYKER 2+, Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Sickening Vitality",
+          "d": "While this model is leading a unit, add 1\" to the Move characteristic of models in that unit and you can re-roll Advance and Charge rolls made for that unit."
+        },
+        {
+          "n": "Tocsin of Misery (Aura)",
+          "d": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 9\" of this model, that enemy unit must take a Battle-shock test, subtracting 1 from that test if it is a Psyker unit."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Noxious Blightbringer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "7e32-0162-71e2-57a0",
+      "linkId": "b355-7b37-327a-27f4",
+      "name": "Nurglings",
+      "rawName": "Nurglings",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        },
+        {
+          "from": 4,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Diseased claws and teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "5+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Mischief Makers (Aura)",
+          "d": "Each time an enemy unit (excluding Titanic units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Plague Legions",
+      "keywords": [
+        "Swarm",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Summoned",
+        "Nurglings"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "3",
+        "Sv": "7+",
+        "W": "4",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "cd03-e1f3-fa31-a271",
+      "linkId": "b288-a935-3f85-4891",
+      "name": "Plague Drones",
+      "rawName": "Plague Drones",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 110,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 110
+        },
+        {
+          "from": 4,
+          "pts": 220
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Death's heads",
+          "melee": false,
+          "range": "12\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Lethal Hits"
+        },
+        {
+          "n": "Foul mouthparts",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Extra Attacks, Lethal Hits"
+        },
+        {
+          "n": "Plaguesword",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Death’s Heads",
+          "d": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly NURGLE LEGIONES DAEMONICA unit makes an attack that targets that unit, you can re-roll the Wound roll."
+        }
+      ],
+      "faction": "Plague Legions",
+      "keywords": [
+        "Mounted",
+        "Fly",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Summoned",
+        "Plague Drones"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "8",
+        "Sv": "6+",
+        "W": "5",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "89d8-7e90-be47-59b6",
+      "linkId": "2102-8784-0978-f366",
+      "name": "Plague Lord",
+      "rawName": "Plague Lord [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Plague Marines",
+        "Poxwalkers"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Gift of Poxes",
+          "d": "Add 3\" to the range of this model's Contagion Range."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Grenades",
+        "Plague Lord"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "8467-b3a2-2597-de0d",
+      "linkId": "7ff5-9b50-8c58-b32e",
+      "name": "Plague Marines",
+      "rawName": "Plague Marines",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        },
+        {
+          "from": 6,
+          "pts": 125
+        },
+        {
+          "from": 8,
+          "pts": 180
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Plague Marines",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Plague Marine w/ bubotic weapons",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Plague Marine w/ heavy plague weapon",
+              "min": 0,
+              "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Plague Marine w/ blight launcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Plague Marine w/ boltgun",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Plague Marine w/ plague spewer",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Plague Marine w/ icon of despair",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Special weapons",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Plague Marine w/ meltagun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Plague Marine w/ plasma gun",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Plague Marine w/ plague belcher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Enhancements",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Insectile Murmuration",
+              "min": 0,
+              "max": 3,
+              "p": 15
+            },
+            {
+              "n": "Plagueveil",
+              "min": 0,
+              "max": 3,
+              "p": 15
+            }
+          ]
+        },
+        {
+          "n": "Plague knives options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Power fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Heavy plague weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Meltagun",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Plague belcher",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-INFANTRY 4+, Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Infused with the Blessings of Nurgle",
+          "d": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that unit is Afflicted."
+        },
+        {
+          "n": "Insectile Murmuration",
+          "d": "When this unit’s attacks target a unit within Contagion Range of a friendly unit, those attacks can re‑roll wound rolls of 1."
+        },
+        {
+          "n": "Plagueveil",
+          "d": "This unit has ‑3\" detection range."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Grenades",
+        "Battleline",
+        "Plague Marines"
+      ],
+      "models": {
+        "min": 1,
+        "max": 29
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "d037-162a-ac85-9c88",
+      "linkId": "5eb6-cbab-41cd-6509",
+      "name": "Plague Sorcerer",
+      "rawName": "Plague Sorcerer [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Plague Marines",
+        "Poxwalkers"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Gift of Contagion (Psychic)",
+          "d": "Each time a model in this unit makes an attack that targets a unit that is Afflicted, that attack has the [Sustained Hits 1] ability."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Psyker",
+        "Chaos",
+        "Nurgle",
+        "Plague Sorcerer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "9a82-ea13-3511-6c08",
+      "linkId": "50f3-35a7-322d-94cd",
+      "name": "Plague Surgeon",
+      "rawName": "Plague Surgeon",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 50,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 50
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Balesword",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Tainted Narthecium",
+          "d": "While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit."
+        },
+        {
+          "n": "Inflamed Infections",
+          "d": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time this model makes an attack that targets that unit, an unmodified Hit roll of 5+ scores a Critical Hit. If that unit is below Half-strength, an unmodified Hit roll of 4+ scores a Critical Hit instead."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Plague Surgeon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "904b-0319-7b2e-2145",
+      "linkId": "1269-0678-4365-6471",
+      "name": "Plaguebearers",
+      "rawName": "Plaguebearers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Plaguesword",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Infected Outbreak",
+          "d": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        }
+      ],
+      "faction": "Plague Legions",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Plaguebearers",
+        "Summoned"
+      ],
+      "models": {
+        "min": 10,
+        "max": 10
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "7+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "e58b-507a-937f-7abf",
+      "linkId": "6ccf-b8b-fa83-8476",
+      "name": "Plagueburst Crawler",
+      "rawName": "Plagueburst Crawler",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 185,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 185
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Pintle weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Rothail volley gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy slugger",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Sponson weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 entropy cannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 plaguespitters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Plagueburst mortar",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Indirect Fire, Lethal Hits"
+        },
+        {
+          "n": "Rothail volley gun",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits, Rapid Fire 3"
+        },
+        {
+          "n": "Heavy slugger",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Entropy cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Plaguespitter",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-INFANTRY 2+, Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Spore-laced Shock Waves",
+          "d": "In your Shooting phase, each time you select a target for this model's Plagueburst mortar, roll one D6 for the target unit and every other enemy unit within 3\" of the target unit, adding 1 to that roll if the unit being rolled for is Afflicted. On a 6+, the unit being rolled for is struck by spores; after resolving all of this model's attacks against the target unit, each unit struck by spores suffers D3 mortal wounds."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Vehicle",
+        "Chaos",
+        "Nurgle",
+        "Daemon",
+        "Plagueburst Crawler",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "7c30-1e92-2faa-eb03",
+      "linkId": "87a0-216e-215b-d3c8",
+      "name": "Poxwalkers",
+      "rawName": "Poxwalkers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        },
+        {
+          "from": 11,
+          "pts": 130
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "10-20 Poxwalkers",
+          "min": 10,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Poxwalker",
+              "min": 10,
+              "max": 20,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Crusade",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wretched Might",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Improvised weapons",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "5+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Curse of the Walking Pox",
+          "d": "Each time a Poxwalker model in this unit makes an attack that destroys an enemy model (excluding Monster and Vehicle models), after this unit has resolved its attacks, you can return one destroyed Poxwalker model to this unit. While Typhus is leading this unit, enemy models destroyed as a result of Typhus’ Eater Plague ability count as enemy models destroyed by an attack made by a Poxwalker model in this unit for the purposes of this ability."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Nurgle",
+        "Poxwalkers"
+      ],
+      "models": {
+        "min": 10,
+        "max": 20
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "4",
+        "Sv": "7+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "2aee-e03c-836e-4c6e",
+      "linkId": "bb72-b9ec-9abf-a651",
+      "name": "Rapier Carrier",
+      "rawName": "Rapier Carrier [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Graviton cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Laser destroyer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Quad heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Quad launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Boltgun",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Graviton cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Vehicle 2+, Blast, Heavy"
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Quad heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Twin-linked, Sustained Hits 1"
+        },
+        {
+          "n": "➤ Quad launcher - shatter shells",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Heavy"
+        },
+        {
+          "n": "➤ Quad launcher - thunderfire shells",
+          "melee": false,
+          "range": "60\"",
+          "a": "D6+4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Powerful Volley",
+          "d": "Each time this model shoots in your Shooting phase, provided it Remained Stationary this turn, all [HEAVY] weapons equipped by models in this unit have the [LETHAL HITS] ability."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Artillery",
+        "Vehicle",
+        "Rapier Carrier"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "3\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "783a-1c02-b377-b169",
+      "linkId": "c3b2-b8eb-da6b-b5ce",
+      "name": "Relic Contemptor Dreadnought",
+      "rawName": "Relic Contemptor Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Cyclone missile launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Arm weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Heavy plasma cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Conversion beam cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Kheres assault cannon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Dreadnought chainfist",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Dreadnought combat weapon",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Fist weapons",
+          "min": 0,
+          "max": 0,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Plasma blaster",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Graviton blaster",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Cyclone missile launcher - frag",
+          "melee": false,
+          "range": "36\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Cyclone missile launcher - krak",
+          "melee": false,
+          "range": "36\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Heavy plasma cannon - standard",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Heavy plasma cannon - supercharge",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast, Hazardous"
+        },
+        {
+          "n": "Conversion beam cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Conversion, Sustained Hits D3"
+        },
+        {
+          "n": "Kheres assault cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Dreadnought chainfist",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Dreadnought combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Combi-bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        },
+        {
+          "n": "➤ Plasma blaster - standard",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Plasma blaster - supercharge",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous"
+        },
+        {
+          "n": "Graviton blaster",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Anti-Vehicle 2+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Even In Death I Serve",
+          "d": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Dreadnought",
+        "Relic Contemptor Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
+      },
+      "native": false
+    },
+    {
+      "id": "66dd-f8c9-f9a6-0e6b",
+      "linkId": "1b28-6192-7cfa-3019",
+      "name": "Rotigus",
+      "rawName": "Rotigus",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 280,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 280
+        }
+      ],
+      "cap": {
+        "max": 1
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Streams of brackish filth",
+          "melee": false,
+          "range": "12\"",
+          "a": "2D6",
+          "skill": "N/A",
+          "s": "8",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Devastating Wounds, Ignores Cover, Torrent"
+        },
+        {
+          "n": "➤ Gnarlrod - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "10",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Lethal Hits, Psychic"
+        },
+        {
+          "n": "➤ Gnarlrod - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "14",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits, Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Virulent Blessing (Psychic)",
+          "d": "At the start of the Fight phase, you can select one enemy unit within 24\" of and visible to this model. Until the end of the phase, each time an attack made by a Plague Legions model is allocated to a model in that unit, add 1 to the Damage characteristic of that attack."
+        },
+        {
+          "n": "Deluge of Nurgle (Aura)",
+          "d": "While an enemy unit is within 6\" of this model, subtract 2 from the Move characteristic and subtract 1 from the Objective Control characteristic of models in that unit."
+        },
+        {
+          "n": "Damaged: 1-7 wounds remaining",
+          "d": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Plague Legions",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Epic Hero",
+        "Psyker",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Rotigus",
+        "Summoned"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "12",
+        "Sv": "5+",
+        "W": "22",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "b2f1-197b-fb3b-687f",
+      "linkId": "325b-b542-b53f-2298",
+      "name": "Sicaran Battle Tank",
+      "rawName": "Sicaran Battle Tank [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Herakles-pattern autocannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Armoured Spearhead",
+          "d": "Each time this model makes an attack that targets an enemy unit, re-roll a Hit roll of 1 and, if that unit is within range of an objective marker you do not control, you can re-roll the Hit roll instead."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Sicaran Battle Tank"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "68aa-28bf-bd73-3355",
+      "linkId": "b529-f3bd-bd79-e40a",
+      "name": "Sicaran Punisher",
+      "rawName": "Sicaran Punisher [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Punisher rotary cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "18",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rotating Death",
+          "d": "This model’s Punisher rotary cannon has the [SUSTAINED HITS 1] ability when targeting INFANTRY units."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Sicaran Punisher"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "e63e-2aa6-f840-b54e",
+      "linkId": "5bf9-5a2d-cfa5-f117",
+      "name": "Sicaran Venator",
+      "rawName": "Sicaran Venator [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Venator neutron laser",
+          "melee": false,
+          "range": "48\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "16",
+          "ap": "-4",
+          "d": "D3+3",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Ferocious Assault",
+          "d": "Each time this model makes a ranged attack that targets the closest eligible MONSTER or VEHICLE unit, add 1 to the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Sicaran Venator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "a80f-8343-85f3-716a",
+      "linkId": "c454-7590-c271-5827",
+      "name": "Sokar-pattern Stormbird",
+      "rawName": "Sokar-pattern Stormbird [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 900,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 900
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "9",
+          "skill": "4+",
+          "s": "9",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Hellstrike missile battery",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Anti-Fly 3+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-13 wounds remaining",
+          "d": "While this model has 1-13 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Aerial Assault",
+          "d": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Fly",
+        "Transport",
+        "Sokar-pattern Stormbird",
+        "Aircraft"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20\"+",
+        "T": "13",
+        "Sv": "2+",
+        "W": "40",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": "5+ (Ranged)"
+      },
+      "native": false
+    },
+    {
+      "id": "474-6b31-df19-2b49",
+      "linkId": "7e97-7f05-236f-44c2",
+      "name": "Sorcerer on Palanquin of Nurgle",
+      "rawName": "Sorcerer on Palanquin of Nurgle [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "PLAGUE MARINES"
+      ],
+      "options": [
+        {
+          "n": "Replace bolt pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Nurgling's claws and teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "5+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": "Extra Attacks, Lethal Hits"
+        },
+        {
+          "n": "➤ Infernal Gaze - witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic"
+        },
+        {
+          "n": "➤ Infernal Gaze - focused witchfire",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Devastating Wounds, Hazardous, Psychic"
+        },
+        {
+          "n": "Force weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Psychic"
+        },
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Accursed weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Combi-bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        },
+        {
+          "n": "Power fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "➤ Plasma pistol - standard",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "➤ Plasma pistol - supercharge",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous, Pistol"
+        },
+        {
+          "n": "Astartes chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Gift of Poxes (Psychic)",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Feculent Despair (Aura, Psychic)",
+          "d": "While an enemy unit is within 6\" of this model, each time that unit takes a Battle-shock test, subtract 1 from that test."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Psyker",
+        "Chaos",
+        "Nurgle",
+        "Sorcerer",
+        "Palanquin of Nurgle"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "3+",
+        "W": "7",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "7b3a-9a63-6200-ec7",
+      "linkId": "3b6e-1591-a9ca-f737",
+      "name": "Spartan",
+      "rawName": "Spartan [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 300,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 300
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two quad lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two laser destroyers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Quad lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Laser destroyer",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-4",
+          "d": "D6+1",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Spartan"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "3b7d-b14e-603-e1ad",
+      "linkId": "d5ad-77b7-25ef-2a85",
+      "name": "Storm Eagle Gunship",
+      "rawName": "Storm Eagle Gunship [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 250,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 250
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Nose weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Typhoon missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wing weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two twin hellstrike launchers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Vengeance launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "Twin multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2, Twin-linked"
+        },
+        {
+          "n": "➤ Typhoon missile launcher - frag",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D6",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Typhoon missile launcher - krak",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "Twin hellstrike launcher",
+          "melee": false,
+          "range": "72\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Anti-Fly 2+, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Armoured Resilience",
+          "d": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Transport",
+        "Storm Eagle Gunship"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "506c-16a8-68f7-c08a",
+      "linkId": "b0be-a5af-5462-fb7",
+      "name": "Tallyman",
+      "rawName": "Tallyman",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Malicious Calculations",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack's Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll."
+        },
+        {
+          "n": "Seven-fold Chant",
+          "d": "In your Command phase, if this model is on the battlefield, roll 2D6: on a 7+, you gain 1CP."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Tallyman"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3d36-e9d7-54c5-deb7",
+      "linkId": "112-17a-6fa1-d1c3",
+      "name": "Terrax-pattern Termite",
+      "rawName": "Terrax-pattern Termite [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 200,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 200
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two storm bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two heavy flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two twin volkite chargers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Termite drill",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "14",
+          "ap": "-2",
+          "d": "D3+3",
+          "kw": "Anti-VEHICLE 3+"
+        },
+        {
+          "n": "Terrax melta cutter",
+          "melee": false,
+          "range": "12\"",
+          "a": "5",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "Twin volkite charger",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Termite Assault",
+          "d": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Dedicated Transport",
+        "Terrax-pattern Termite"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "fa2a-1b44-a513-318d",
+      "linkId": "2c3f-91a9-1972-01ef",
+      "name": "Tri-lobe Vectors",
+      "rawName": "Tri-lobe Vectors [Crucible]",
+      "type": "unit",
+      "mode": "crucible",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Plague Marines",
+        "Poxwalkers"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Nurgle",
+        "Tri-lobe Vectors"
+      ],
+      "models": {
+        "min": 3,
+        "max": 3
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "f60c-1b93-9ee8-59d2",
+      "linkId": "1317-b13f-7d9e-578a",
+      "name": "Typhon",
+      "rawName": "Typhon [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 320,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 320
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponsons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Two heavy bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Two lascannons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Dreadhammer siege cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Blast"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Sunderer of Fortresses",
+          "d": "Each time this model makes an attack that targets a VEHICLE, improve the Strength and Damage characteristic of that attack by 1 (if that attack targets a FORTIFICATION unit, improve the Strength and Damage characteristics of that attack by 2 instead)."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Typhon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "6",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "e6a4-7055-fd23-5123",
+      "linkId": "17ec-2b07-8c4c-cf1",
+      "name": "Typhus",
+      "rawName": "Typhus",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 1
+      },
+      "leads": [
+        "Blightlord Terminators",
+        "Deathshroud Terminators",
+        "Poxwalkers"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Lakrimae - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "➤ Lakrimae - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "The Destroyer Hive",
+          "d": "While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Eater Plague (Psychic)",
+          "d": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this Psyker (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this Psyker and roll one D6: on a 1, this Psyker's unit suffers D3 mortal wounds; on a 2-5, that enemy unit suffers D6 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+        }
+      ],
+      "faction": "Death Guard",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Chaos",
+        "Nurgle",
+        "Psyker",
+        "Typhus",
+        "Terminator"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "7",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "97dc-f0c8-1354-88fb",
+      "linkId": "a59-50b-2a6b-98ee",
+      "name": "Whirlwind Scorpius",
+      "rawName": "Whirlwind Scorpius [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Scorpius multi-launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "2D3+3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Pinning Bombardment",
+          "d": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Scorpius multi-launcher scored a hit against an enemy INFANTRY unit, that unit must take a Battle-shock test."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Whirlwind Scorpius"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": false
+    },
+    {
+      "id": "1aa5-d081-2442-4c37",
+      "linkId": "2d20-4f52-c14d-a532",
+      "name": "Xiphon Interceptor",
+      "rawName": "Xiphon Interceptor [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 115,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 115
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Armoured hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Xiphon missile battery",
+          "melee": false,
+          "range": "60\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Anti-FLY 2+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Interceptor",
+          "d": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll."
+        }
+      ],
+      "faction": null,
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Xiphon Interceptor"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "20+",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": false
+    }
+  ]
+}

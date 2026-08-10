@@ -1,0 +1,248 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "sys-352e-adc2-7639-d610",
+  "catalogueName": "Warhammer 40,000 11th Edition",
+  "nativeFaction": null,
+  "detachments": [],
+  "revision": 8,
+  "file": "Warhammer 40,000.json",
+  "counts": {
+    "total": 4,
+    "native": 4,
+    "matched": 4,
+    "legends": 0,
+    "crucible": 0,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "4ad0-7f62-b1e4-c6bb",
+      "linkId": "4ed6-4bbd-0a99-4ba3",
+      "name": "Abomination (Unbound Adversaries)",
+      "rawName": "Abomination (Unbound Adversaries)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Hideous mutations",
+          "melee": true,
+          "range": "Melee",
+          "a": "D6+2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Reference",
+        "Unbound Adversaries",
+        "Beast",
+        "Chaos",
+        "Abomination"
+      ],
+      "models": {
+        "min": 2,
+        "max": 4
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "8d9a-d925-56f3-1890",
+      "linkId": "48c5-2a0a-1c81-ebac",
+      "name": "Daemonic Beasts (Unbound Adversaries)",
+      "rawName": "Daemonic Beasts (Unbound Adversaries)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Horns and talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Reference",
+        "Unbound Adversaries",
+        "Chaos",
+        "Daemon",
+        "Beast",
+        "Daemonic Beasts"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "6",
+        "Sv": "7+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "b216-722b-2361-a19f",
+      "linkId": "3de2-29bc-15da-d52d",
+      "name": "Greater Daemon (Unbound Adversaries)",
+      "rawName": "Greater Daemon (Unbound Adversaries)",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Fell weapon - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Fell weapon - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "Infernal scream",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Reference",
+        "Monster",
+        "Character",
+        "Chaos",
+        "Daemon",
+        "Greater Daemon"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "10",
+        "Sv": "5+",
+        "W": "18",
+        "LD": "6+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "b257-5fca-9e35-6c64",
+      "linkId": "8560-d945-b3e4-904a",
+      "name": "Lesser Daemons (Unbound Adversaries)",
+      "rawName": "Lesser Daemons (Unbound Adversaries)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Daemonic weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": null,
+      "faction": null,
+      "keywords": [
+        "Reference",
+        "Unbound Adversaries",
+        "Infantry",
+        "Chaos",
+        "Daemon",
+        "Lesser Daemon"
+      ],
+      "models": {
+        "min": 10,
+        "max": 10
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "7+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    }
+  ]
+}

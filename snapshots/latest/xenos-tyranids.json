@@ -1,0 +1,4791 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "b984-7317-81cc-20f",
+  "catalogueName": "Xenos - Tyranids",
+  "nativeFaction": "Tyranids",
+  "detachments": [],
+  "revision": 1,
+  "file": "Tyranids.json",
+  "counts": {
+    "total": 64,
+    "native": 64,
+    "matched": 56,
+    "legends": 5,
+    "crucible": 3,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "afd0-a0ca-68c3-d912",
+      "linkId": "c08c-3f82-eca5-bc5b",
+      "name": "Barbed Hierodule",
+      "rawName": "Barbed Hierodule [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 340,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 340
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bio-cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "Hierodule scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-2",
+          "d": "D3+3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Overgrown Barbs",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit (excluding Titanic units) that was hit by one or more of those attacks. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Barbed Hierodule",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "8+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6de-ccee-11b4-be3e",
+      "linkId": "2022-800a-5f81-59c3",
+      "name": "Barbgaunts",
+      "rawName": "Barbgaunts",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        },
+        {
+          "from": 6,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Barblauncher",
+          "melee": false,
+          "range": "24\"",
+          "a": "D6",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "Chitinous claws and teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Disruption Bombardment",
+          "d": "In your Shooting phase, after this unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks. Until the end of your opponent’s next turn, that enemy unit is disrupted. While a unit is disrupted, subtract 2 from its Move characteristic, and subtract 2 from Advance and Charge rolls made for it."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Barbgaunts",
+        "Infantry",
+        "Great Devourer"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "4+",
+        "W": "2",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3f2c-85ec-d83c-4a2f",
+      "linkId": "b6ef-5582-5c2c-c917",
+      "name": "Biovores",
+      "rawName": "Biovores",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        },
+        {
+          "from": 3,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Spore mine launcher",
+          "melee": false,
+          "range": "48\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Devastating Wounds, Heavy, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Seed Spore Mines",
+          "d": "Once per turn, in your Shooting Phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new SPORE MINES unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That SPORE MINES unit contains 1 model for each model in this unit."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Biovore"
+      ],
+      "models": {
+        "min": 1,
+        "max": 3
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b86a-b38a-380c-483d",
+      "linkId": "b0ad-ecab-6292-ab67",
+      "name": "Broodlord",
+      "rawName": "Broodlord",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Genestealers"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Broodlord Claws and Talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Vicious Insight",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+        },
+        {
+          "n": "Hypnotic Gaze (Psychic)",
+          "d": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Psyker",
+        "Broodlord",
+        "Great Devourer",
+        "Vanguard Invader",
+        "Synapse",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "9efd-5564-f0f5-21ea",
+      "linkId": "f925-323-cb9f-9de6",
+      "name": "Carnifexes",
+      "rawName": "Carnifexes",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Bio-plasma",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Spine banks",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Carnifex Scything Talon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Carnifex scything talons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Carnifex Extra Scything Talons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy venom cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Stranglethorn cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Carnifex extra scything talons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Chitinous claws and teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Bio-plasma",
+          "melee": false,
+          "range": "12\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Assault, Blast"
+        },
+        {
+          "n": "Spine banks",
+          "melee": false,
+          "range": "6\"",
+          "a": "5",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault"
+        },
+        {
+          "n": "Carnifex scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Heavy venom cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Stranglethorn cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+1",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast"
+        },
+        {
+          "n": "Carnifex extra scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Blistering Assault",
+          "d": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Carnifexes"
+      ],
+      "models": {
+        "min": 1,
+        "max": 2
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "8+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "bc36-92fe-ecc6-58b3",
+      "linkId": "8b6a-3050-501a-db63",
+      "name": "Deathleaper",
+      "rawName": "Deathleaper",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Fear of the Unseen (Aura)",
+          "d": "While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent’s Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test."
+        },
+        {
+          "n": "Hunter Organism",
+          "d": "This model cannot be your Warlord"
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Great Devourer",
+        "Deathleaper",
+        "Infantry",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "7",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "78ca-3743-c254-4404",
+      "linkId": "49a7-35fe-b205-afe6",
+      "name": "Dimachaeron",
+      "rawName": "Dimachaeron [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 200,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 200
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Massive scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Digestion Spine",
+          "d": "Each time this model fights, after it has resolved its attacks, if one or more enemy models (excluding Vehicle models) were destroyed as the result of those attacks, this model regains up to D3 mortal wounds."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Dimachaeron",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "bbfd-5b01-5bd3-a28b",
+      "linkId": "53a9-7a08-b3dd-1547",
+      "name": "Exocrine",
+      "rawName": "Exocrine",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bio-plasmic cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+3",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "Powerful limbs",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "0",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Symbiotic Targeting",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly TYRANIDS model makes an attack that targets that unit, re-roll a Hit roll of 1."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Exocrine"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "8+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "9ce8-7a63-15c3-0347",
+      "linkId": "e9a0-f638-7793-94c8",
+      "name": "Gargoyles",
+      "rawName": "Gargoyles",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        },
+        {
+          "from": 11,
+          "pts": 155
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Blinding venom",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Fleshborer",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Winged Swarm",
+          "d": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Battleline",
+        "Infantry",
+        "Fly",
+        "Gargoyles",
+        "Great Devourer",
+        "Endless Multitude",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 10,
+        "max": 20
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "3",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "853e-48b8-4cc5-3704",
+      "linkId": "b2fd-5fa7-ea48-c851",
+      "name": "Genestealers",
+      "rawName": "Genestealers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        },
+        {
+          "from": 6,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "5-10 Genestealers",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Genestealer",
+              "min": 5,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Genestealers claws and talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Vanguard Predator",
+          "d": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll 1 as well."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Genestealers",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "4",
+        "Sv": "5+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "c679-b06a-750b-e7f7",
+      "linkId": "2a52-f6b1-586a-a4b6",
+      "name": "Harpy",
+      "rawName": "Harpy",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 185,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 185
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Stranglethorn Cannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin stranglethorn cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy venom cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Twin stranglethorn cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D6+1",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Twin-linked"
+        },
+        {
+          "n": "Twin heavy venom cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Blast, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Spore Mine Cysts",
+          "d": "At the end of your opponent’s Fight phase, you can do one of the following: - Select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit and roll six D6 for that unit: for each 3+, that unit suffers 1 mortal wound. - Add a new SPORE MINES unit containing D3 models to your army and set it up anywhere on the battlefield that is within 6\" of this model and more than 8\" horizontally away from all enemy units. You cannot select this option for more than one model per turn."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Harpy",
+        "Monster",
+        "Fly",
+        "Aircraft",
+        "Great Devourer",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "8+",
+        "OC": "-",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "9b5c-3b5a-1f80-9a74",
+      "linkId": "c849-ed0f-bc51-c66a",
+      "name": "Harridan",
+      "rawName": "Harridan",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 610,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 610
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Dire bio-cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Gargantuan scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-10 wounds remaining",
+          "d": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Frenzied Metabolism",
+          "d": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Titanic",
+        "Fly",
+        "Transport",
+        "Great Devourer",
+        "Harridan",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "14\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "30",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6249-358f-27d7-ef60",
+      "linkId": "fd1-a697-de5-e1f9",
+      "name": "Haruspex",
+      "rawName": "Haruspex",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Grasping tongue",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Precision"
+        },
+        {
+          "n": "Shovelling claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Grisly Spectacle",
+          "d": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Haruspex",
+        "Harvester"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "11",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "8+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "fbc0-3a2b-1d7d-23d9",
+      "linkId": "c6bf-2379-d8c9-2ddf",
+      "name": "Hierophant",
+      "rawName": "Hierophant",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 810,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 810
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bio-plasma torrent",
+          "melee": false,
+          "range": "12\"",
+          "a": "3D6",
+          "skill": "N/A",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Assault, Torrent"
+        },
+        {
+          "n": "Dire bio-cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast"
+        },
+        {
+          "n": "Lashwhip pods",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Extra Attacks"
+        },
+        {
+          "n": "Titanic scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "3+",
+          "s": "20",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Damaged: 1-10 wounds remaining",
+          "d": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "n": "Apex-beast",
+          "d": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll."
+        },
+        {
+          "n": "Stalking Forward",
+          "d": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Titanic",
+        "Towering",
+        "Transport",
+        "Great Devourer",
+        "Hierophant",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "14",
+        "Sv": "2+",
+        "W": "30",
+        "LD": "8+",
+        "OC": "12",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "93aa-dd13-de9d-402b",
+      "linkId": "7907-f011-d28f-ec0f",
+      "name": "Hive Crone",
+      "rawName": "Hive Crone",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 170,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Drool cannon",
+          "melee": false,
+          "range": "12\"",
+          "a": "2D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Torrent"
+        },
+        {
+          "n": "Tentaclids",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "7",
+          "ap": "0",
+          "d": "2",
+          "kw": "Anti-vehicle 4+, Devastating Wounds"
+        },
+        {
+          "n": "Thorax spur",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Anti-fly 2+, Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Airborne Predator",
+          "d": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Aircraft",
+        "Monster",
+        "Fly",
+        "Great Devourer",
+        "Hive Crone",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "9",
+        "Sv": "3+",
+        "W": "12",
+        "LD": "8+",
+        "OC": "-",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "ac7a-2560-c083-45b8",
+      "linkId": "e7dc-9c6e-e267-c3de",
+      "name": "Hive Guard",
+      "rawName": "Hive Guard",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        },
+        {
+          "from": 4,
+          "pts": 160
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "3-6 Hive Guard",
+          "min": 3,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Hive Guard w/ shockcannon",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Hive Guard w/ impaler cannon",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Shockcannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "3",
+          "kw": "Anti-Vehicle 2+"
+        },
+        {
+          "n": "Impaler cannon",
+          "melee": false,
+          "range": "36\"",
+          "a": "4",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Heavy, Indirect Fire"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Defensive Stance",
+          "d": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+, or unmodified Hit rolls of 4+ instead if this unit is within range of an objective marker that you control."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Hive Guard"
+      ],
+      "models": {
+        "min": null,
+        "max": 12
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "7",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3e96-8098-3401-77af",
+      "linkId": "d160-2a74-7d96-5e9f",
+      "name": "Hive Tyrant",
+      "rawName": "Hive Tyrant",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 195,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 195
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Tyrant Guard"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Onslaught (Aura, Psychic)",
+          "d": "While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Psyker",
+        "Hive Tyrant",
+        "Great Devourer",
+        "Synapse",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "f15b-9f9c-9bf0-8160",
+      "linkId": "210a-cb5f-b323-6cbb",
+      "name": "Hormagaunts",
+      "rawName": "Hormagaunts",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        },
+        {
+          "from": 11,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "10-20 Hormagaunts",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Hormagaunts",
+              "min": 10,
+              "max": 20,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Hormagaunt talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "3",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bounding Leap",
+          "d": "This unit is eligible to declare a charge in a turn in which it Advanced."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Great Devourer",
+        "Endless Multitude",
+        "Hormagaunts"
+      ],
+      "models": {
+        "min": 10,
+        "max": 20
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "3",
+        "Sv": "5+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "c10d-772e-a54f-a2b9",
+      "linkId": "504c-5d1a-b205-c53b",
+      "name": "Hyperadapted Raveners",
+      "rawName": "Hyperadapted Raveners",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 165,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 165
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Raveners"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Prime claws and talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
+        },
+        {
+          "n": "Venom bolt",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Ignores Cover, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Alpha Invader",
+          "d": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Hypersensory Array",
+          "d": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Vanguard Invader",
+        "Burrowers",
+        "Hyperadapted Raveners",
+        "Character",
+        "Leader"
+      ],
+      "models": {
+        "min": 5,
+        "max": 5
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "da44-72c9-7a27-48aa",
+      "linkId": "deb6-2fc2-a1ad-cde1",
+      "name": "Lictor",
+      "rawName": "Lictor",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Pheromone Trail",
+          "d": "Once per battle round, you can target one model with this ability with the Rapid Ingress Stratagem for 0CP."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Lictor",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "6",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a89f-8ad1-3d79-174f",
+      "linkId": "146f-3560-9929-1ed4",
+      "name": "Macro Organism",
+      "rawName": "Macro Organism [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 150,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 150
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Unstoppable Monstrosity",
+          "d": "At the start of each player's Command phase, this model regains up to D3 lost wounds."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Character",
+        "Crucible",
+        "Great Devourer",
+        "Monster",
+        "Macro Organism"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "8+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "c17f-f55f-a3cb-530b",
+      "linkId": "1913-3800-bc84-cbff",
+      "name": "Malanthrope",
+      "rawName": "Malanthrope [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Venomthropes"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Grasping tail",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Enhanced Toxic Miasma",
+          "d": "While this model is leading a unit, the range of that unit's Foul Spores Aura ability is increased to 9\"."
+        },
+        {
+          "n": "Prey Adaptation",
+          "d": "Each time this model's unit is selected to fight, select one of the following abilities to apply to all melee weapons equipped by models in that unit until the end of the phase: - [SUSTAINED HITS 1] - [LANCE] - [LETHAL HITS]"
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Fly",
+        "Great Devourer",
+        "Synapse",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "2c2d-a2f9-61a8-a6c6",
+      "linkId": "5f55-69a5-636c-c8c1",
+      "name": "Maleceptor",
+      "rawName": "Maleceptor",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 190,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 190
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Massive scything talons - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Massive scything talons - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Encephalic Diffusion (Aura, Psychic)",
+          "d": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll, and, if that enemy unit is Below Half-strength, subtract 1 from the Wound roll as well."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Psyker",
+        "Great Devourer",
+        "Maleceptor",
+        "Synapse"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "11",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "7+",
+        "OC": "4",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "2bbb-d811-15f7-1a81",
+      "linkId": "1893-956f-b717-6cc8",
+      "name": "Mawloc",
+      "rawName": "Mawloc",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Distendible jaw",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "3",
+          "kw": "Anti-infantry 4+, Devastating Wounds, Extra Attacks"
+        },
+        {
+          "n": "Mawloc scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "16",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Terror from the Deep",
+          "d": "Each time this unit is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Mawloc",
+        "Monster",
+        "Great Devourer",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "8+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "707a-9de8-f75b-41c5",
+      "linkId": "fdd6-9c02-ae6b-32c1",
+      "name": "Mucolid Spores",
+      "rawName": "Mucolid Spores",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Mucolid Spores",
+        "Beast",
+        "Fly",
+        "Great Devourer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 2
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "9943-934a-221b-e0c0",
+      "linkId": "4d65-b3c0-b075-e79e",
+      "name": "Mucolid Spores (Sporocyst)",
+      "rawName": "Mucolid Spores (Sporocyst)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Mucolid Spores",
+        "Beast",
+        "Fly",
+        "Great Devourer",
+        "Reference"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "8ccc-3f27-7e4e-da81",
+      "linkId": "adb8-1b04-9c1b-84e4",
+      "name": "Neurogaunts",
+      "rawName": "Neurogaunts",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        },
+        {
+          "from": 12,
+          "pts": 90
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "10-20 Neurogaunts",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Neurogaunt",
+              "min": 10,
+              "max": 20,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Neurocytes",
+          "d": "While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Neurogaunts",
+        "Endless Multitude"
+      ],
+      "models": {
+        "min": 11,
+        "max": 21
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "642f-9302-4fdc-ab68",
+      "linkId": "2de5-fe7f-6b98-5156",
+      "name": "Neurolictor",
+      "rawName": "Neurolictor",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Piercing claws and talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Precision"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Feeder Tendrils",
+          "d": "Each time this model destroys an enemy CHARACTER model, you gain 1CP"
+        },
+        {
+          "n": "Neural Disruption",
+          "d": "In your Command phase, select one enemy unit within 12\" of this model. That unit must take a Battle-shock test"
+        },
+        {
+          "n": "Psychological Saboteur (Aura)",
+          "d": "While an enemy unit is with 12\" of this model, if that unit is Battle-shocked: - Each time a model in that unit makes an attack, subtract 1 from the Hit roll - Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Neurolictor",
+        "Vanguard Invader",
+        "Synapse"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "7",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "1ae1-ed96-5100-eda5",
+      "linkId": "1478-2392-ea1-45cd",
+      "name": "Neurotyrant",
+      "rawName": "Neurotyrant",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 130,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 130
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Neurogaunts",
+        "Tyrant Guard",
+        "Zoanthropes"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Neurotyrant claws and lashes",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Node Lash (Psychic)",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll. If the target is Battle-shocked, add 1 to the Wound roll as well."
+        },
+        {
+          "n": "Psychic Terror (Psychic)",
+          "d": "If one or more Neurotyrants from your army are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result."
+        },
+        {
+          "n": "Neuroloids",
+          "d": "In your Command phase, you can select up to two friendly Tyranids units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army. Designer's Note: *Place a Neuroloid token next to each select unit to remind you.*"
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Character",
+        "Monster",
+        "Fly",
+        "Psyker",
+        "Great Devourer",
+        "Neurotyrant",
+        "Synapse",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "8",
+        "Sv": "4+",
+        "W": "9",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "527c-d3c6-c620-c7c6",
+      "linkId": "1da8-2a1c-0ecf-5e56",
+      "name": "Node Organism",
+      "rawName": "Node Organism [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Tyranid Warriors with Melee Bio-weapons",
+        "Tyranid Warriors with Ranged Bio-weapons"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Alpha Warrior",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Crucible",
+        "Great Devourer",
+        "Synapse",
+        "Node Organism"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6a9b-8e2f-edac-fa2d",
+      "linkId": "28a-e2b8-c42e-3dea",
+      "name": "Norn Assimilator",
+      "rawName": "Norn Assimilator",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 250,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 250
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Monstrous scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Toxinjecter Harpoon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Harpoon Barbs",
+          "d": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Synapse",
+        "Norn Assimilator",
+        "Harvester"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "5720-2873-8c2c-edc3",
+      "linkId": "7f4b-9c76-78fe-6dc0",
+      "name": "Norn Emissary",
+      "rawName": "Norn Emissary",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 250,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 250
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Monstrous rending claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Extra Attacks"
+        },
+        {
+          "n": "Monstrous scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "➤ Psychic tendril - neuroparasite",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Precision, Psychic"
+        },
+        {
+          "n": "➤ Psychic tendril - neurolance",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Melta 2, Psychic"
+        },
+        {
+          "n": "➤ Psychic tendril - neuroblast",
+          "melee": false,
+          "range": "18\"",
+          "a": "2D6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Blast, Psychic"
+        }
+      ],
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Psyker",
+        "Great Devourer",
+        "Synapse",
+        "Norn Emissary"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "9184-9ab6-9238-f558",
+      "linkId": "9e71-1043-e2b3-edf9",
+      "name": "Old One Eye",
+      "rawName": "Old One Eye",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Carnifexes"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Old One Eye’s claws and talons - Strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Old One Eye’s claws and talons - Sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Alpha Leader",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+        },
+        {
+          "n": "Unstoppable Monster",
+          "d": "At the start of each player’s Command phase, this model regains up to D3 lost wounds."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Epic Hero",
+        "Monster",
+        "Character",
+        "Great Devourer",
+        "Old One Eye",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "9",
+        "LD": "8+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "d213-efd8-a2b4-42d2",
+      "linkId": "b027-cb31-1000-7231",
+      "name": "Parasite of Mortrex",
+      "rawName": "Parasite of Mortrex",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Barbed ovipositor",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "2+",
+          "s": "3",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Anti-infantry 3+, Extra Attacks"
+        },
+        {
+          "n": "Clawed limbs",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Parasitic Infection",
+          "d": "Each time an Infantry model is destroyed by an attack made with this model’s barbed ovipositor, after this model has finished making its attacks, you can add one new Ripper Swarms unit to your army consisting of D3 models and set it up within 3\" of this model. If you do, that Ripper Swarms unit can be set up within Engagement Range of the destroyed model’s unit (but not within Engagement Range of any other enemy units)."
+        },
+        {
+          "n": "It Itches!",
+          "d": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. That enemy unit must take a Battle-shock test."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Parasite of Mortrex",
+        "Character",
+        "Fly",
+        "Great Devourer",
+        "Infantry",
+        "Vanguard Invader",
+        "Synapse"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "5",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6f46-0c77-acd0-3f5d",
+      "linkId": "cd0e-9f43-0d24-02ab",
+      "name": "Prime Organism",
+      "rawName": "Prime Organism [Crucible]",
+      "type": "model",
+      "mode": "crucible",
+      "legends": false,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Carnifexes",
+        "Tyrant Guard"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Monstrous Barrage",
+          "d": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Character",
+        "Crucible",
+        "Great Devourer",
+        "Monster",
+        "Prime Organism"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "9",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b6ac-f091-a018-dab2",
+      "linkId": "bb17-5e67-f80d-1479",
+      "name": "Psychophage",
+      "rawName": "Psychophage",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 110,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Talons and betentacled maw",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Anti-Psyker 4+, Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Bio-stimulus",
+          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn."
+        },
+        {
+          "n": "Feeding Frenzy",
+          "d": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half strength, add 1 to the Wound roll as well."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Psychophage",
+        "Harvester",
+        "Smoke"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "8+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "d2c6-bd0b-3205-3319",
+      "linkId": "5d80-6ec1-93d4-b2fc",
+      "name": "Pyrovores",
+      "rawName": "Pyrovores",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 45,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 45
+        },
+        {
+          "from": 3,
+          "pts": 95
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "1-3 Pyrovores",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Pyrovore",
+              "min": 1,
+              "max": 3,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Flamespurt",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+1",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Burning Spray",
+          "d": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Pyrovores",
+        "Infantry",
+        "Great Devourer",
+        "Harvester"
+      ],
+      "models": {
+        "min": 1,
+        "max": 3
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3f5-f7d6-1ce8-e6b9",
+      "linkId": "908f-17f2-34bf-89b4",
+      "name": "Raveners",
+      "rawName": "Raveners",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Ravener claws and talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Death From Below",
+          "d": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Raveners",
+        "Vanguard Invader",
+        "Burrowers"
+      ],
+      "models": {
+        "min": 5,
+        "max": 5
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "3",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1de2-b57b-aa0a-1f0d",
+      "linkId": "cbe1-73ce-de38-219e",
+      "name": "Ripper Swarms",
+      "rawName": "Ripper Swarms",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 30,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 30
+        },
+        {
+          "from": 3,
+          "pts": 50
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Ripper Swarm",
+        "Swarm",
+        "Great Devourer",
+        "Harvester"
+      ],
+      "models": {
+        "min": 1,
+        "max": 3
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "4390-b3c7-64d2-c1b8",
+      "linkId": "06b7-a4b1-ab30-7dd9",
+      "name": "Ripper Swarms (Parasite of Mortrex)",
+      "rawName": "Ripper Swarms (Parasite of Mortrex)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Ripper Swarm",
+        "Swarm",
+        "Great Devourer",
+        "Harvester",
+        "Reference"
+      ],
+      "models": {
+        "min": 1,
+        "max": 3
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "8e53-d4a-a69f-e71d",
+      "linkId": "f664-67d5-9014-79b7",
+      "name": "Screamer-killer",
+      "rawName": "Screamer-killer",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bio-plasmic scream",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6+3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Assault, Blast"
+        },
+        {
+          "n": "Screamer-killer talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Death Scream",
+          "d": "In your Shooting phase, after this model has shot, select one unit hit by one or more of those attacks. That unit must take a Battle-shock test, subtracting 1 from that test."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Screamer-killer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "8+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "218c-639e-22e0-59ce",
+      "linkId": "ca37-6c54-394c-2803",
+      "name": "Scythed Hierodule",
+      "rawName": "Scythed Hierodule [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 330,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 330
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bio-acid spray",
+          "melee": false,
+          "range": "18\"",
+          "a": "3D6",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Torrent"
+        },
+        {
+          "n": "Hierodule scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "14",
+          "ap": "-2",
+          "d": "D3+3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Irresistible Force",
+          "d": "This model is eligible to declare a charge in a turn in which it Fell Back."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Scythed Hierodule",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "18",
+        "LD": "8+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "f46f-9d2b-1f97-aaf6",
+      "linkId": "fc02-c2df-a3fd-a869",
+      "name": "Sky-slasher Swarms",
+      "rawName": "Sky-slasher Swarms [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "3 Sky-slasher Swarms",
+          "min": 3,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Sky-slasher swarm",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Sky-slasher swarm w/ spinemaws",
+              "min": 0,
+              "max": 3,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Claws and teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "5+",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Spinemaws",
+          "melee": false,
+          "range": "6\"",
+          "a": "4",
+          "skill": "5+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Chitinous Horrors",
+          "d": "While an enemy unit is within Engagement Range of one or more units with this ability, halve the Objective Control characteristic of models in that enemy unit."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Swarm",
+        "Great Devourer",
+        "Fly",
+        "Sky-slasher Swarms"
+      ],
+      "models": {
+        "min": null,
+        "max": 6
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "2",
+        "Sv": "6+",
+        "W": "4",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "c590-436d-4fd-ef26",
+      "linkId": "ad62-c34f-470f-a75b",
+      "name": "Spore Mines",
+      "rawName": "Spore Mines",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        },
+        {
+          "from": 4,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Spore Mines",
+        "Beast",
+        "Fly",
+        "Great Devourer"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "80c2-aecc-5b59-7345",
+      "linkId": "8106-c7cc-f5d1-57a5",
+      "name": "Spore Mines (Biovore)",
+      "rawName": "Spore Mines (Biovore)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Spore Mines",
+        "Beast",
+        "Fly",
+        "Great Devourer",
+        "Reference"
+      ],
+      "models": {
+        "min": 1,
+        "max": 3
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "f464-429b-4606-199a",
+      "linkId": "ac36-7939-4242-de37",
+      "name": "Spore Mines (Harpy)",
+      "rawName": "Spore Mines (Harpy)",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": null,
+      "ladder": null,
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": null,
+      "faction": "Tyranids",
+      "keywords": [
+        "Spore Mines",
+        "Beast",
+        "Fly",
+        "Great Devourer",
+        "Reference"
+      ],
+      "models": {
+        "min": 1,
+        "max": 3
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "2cdd-3bf1-55e0-7641",
+      "linkId": "b0f2-86e1-24d3-bd1e",
+      "name": "Sporocyst",
+      "rawName": "Sporocyst",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 145,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 145
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Flensing whips",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Sporocyst bio-weapon",
+          "melee": false,
+          "range": "24\"",
+          "a": "10",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Hive Defences"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Seed Mucolids",
+          "d": "Once per turn, in your shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with it's ranged weapons. If it does, you can add one new MUCOLID SPORES containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units."
+        },
+        {
+          "n": "Hive Defences",
+          "d": "You can target this model with the Fire Overwatch stratagem for 0CP, and can do so even if you have already targeted a different unit with that stratagem this turn. This model can only be targeted with that Stratagem once per turn"
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Sporocyst",
+        "Great Devourer"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "-",
+        "T": "10",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "8+",
+        "OC": "0",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "359c-db2c-681a-8d62",
+      "linkId": "16f9-9c76-2e0e-dc49",
+      "name": "Termagants",
+      "rawName": "Termagants",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        },
+        {
+          "from": 11,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "10-20 Termagants",
+          "min": 10,
+          "max": 20,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Termagants",
+              "min": 7,
+              "max": 20,
+              "p": 0
+            },
+            {
+              "n": "Termagant w/ Shardlauncher",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Termagant w/ Spike rifle",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Termagant w/ Strangleweb",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Fleshborer",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Termagant spinefist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Termagant devourer",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Fleshborer",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault"
+        },
+        {
+          "n": "Termagant spinefist",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault, Pistol, Twin-linked"
+        },
+        {
+          "n": "Termagant devourer",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Shardlauncher",
+          "melee": false,
+          "range": "18\"",
+          "a": "D3",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast, Heavy"
+        },
+        {
+          "n": "Spike rifle",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Strangleweb",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "2",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault, Devastating Wounds, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Skulking Horrors",
+          "d": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\"."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Battleline",
+        "Infantry",
+        "Great Devourer",
+        "Endless Multitude",
+        "Termagants"
+      ],
+      "models": {
+        "min": 7,
+        "max": 26
+      },
+      "profile": null,
+      "native": true
+    },
+    {
+      "id": "cd6d-87b3-125a-f372",
+      "linkId": "6738-f64a-bbeb-f2da",
+      "name": "Tervigon",
+      "rawName": "Tervigon",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 160,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 160
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Massive Scything Talons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Massive scything talons",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Massive crushing claws",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Massive scything talons - strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D6",
+          "kw": ""
+        },
+        {
+          "n": "➤ Massive scything talons - sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Massive crushing claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Spawn Termagants",
+          "d": "In your Command phase, you can select one friendly TERMAGANTS unit within 6\" of this model and return up to D3+3 destroyed TERMAGANT models to that unit. A TERMAGANTS unit cannot be selected for this ability more than once per phase."
+        },
+        {
+          "n": "Brood Progenitor (Aura, Psychic)",
+          "d": "While a friendly TERMAGANTS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Character",
+        "Monster",
+        "Psyker",
+        "Great Devourer",
+        "Tervigon",
+        "Synapse"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "11",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "7+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "7173-1bd9-b60b-6555",
+      "linkId": "d1a5-352d-83ad-9b58",
+      "name": "The Red Terror",
+      "rawName": "The Red Terror",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 130,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 130
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Gaping maw",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-",
+          "d": "D3+2",
+          "kw": "Extra Attacks, Devastating Wounds, Precision"
+        },
+        {
+          "n": "Scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Swallow Whole",
+          "d": "Each time an attack with this model’s gaping maw targets an Infantry, Mounted or Beasts unit, each successful unmodified Wound roll is a Critical Wound. Each time an Infantry, Mounted or Beasts model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds."
+        },
+        {
+          "n": "Subterranean Hunter",
+          "d": "At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Character",
+        "Great Devourer",
+        "Vanguard Invader",
+        "Epic Hero",
+        "Monster",
+        "The Red Terror",
+        "Burrowers",
+        "Mobile"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "9",
+        "LD": "8+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "13f7-1a3-eff-7393",
+      "linkId": "fece-50fa-e019-b6c2",
+      "name": "The Swarmlord",
+      "rawName": "The Swarmlord",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 210,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 210
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Tyrant Guard"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Bone Sabres",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Synaptic Pulse",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Psychic, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Hive Commander",
+          "d": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP"
+        },
+        {
+          "n": "Malign Presence (Aura)",
+          "d": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP."
+        },
+        {
+          "n": "Domination of the Hive Mind (Aura)",
+          "d": "While a friendly TYRANIDS unit is within 9\" of this model, that unit is within your army’s Synapse Range."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Monster",
+        "The Swarmlord",
+        "Great Devourer",
+        "Synapse",
+        "Psyker",
+        "Hive Tyrant",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "30d0-521c-1d45-f57b",
+      "linkId": "abfa-6d02-8cf0-0e7e",
+      "name": "Toxicrene",
+      "rawName": "Toxicrene",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Massive toxic lashes",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-infantry 2+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Grasping Tendrils",
+          "d": "Each time an enemy unit (excluding Titanic units) within Engagement Range of one or more units from your army with this ability is selected to Fall Back, you can roll one D6: on a 3+, that enemy unit must Remain Stationary instead."
+        },
+        {
+          "n": "Hypertoxic Miasma (Aura)",
+          "d": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Toxicrene"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "11",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "8+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "56db-d7c-b349-677f",
+      "linkId": "50be-fcba-8fb6-5e13",
+      "name": "Trygon",
+      "rawName": "Trygon",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Trygon scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "12",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Subterranean Tunnels",
+          "d": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can use a subterranean tunnel. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Trygon",
+        "Monster",
+        "Great Devourer",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "14",
+        "LD": "8+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "31f9-9730-853c-6f13",
+      "linkId": "3440-3278-5d39-b10f",
+      "name": "Tyranid Prime with Lash Whip",
+      "rawName": "Tyranid Prime with Lash Whip",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Hormagaunts",
+        "Termagants",
+        "Tyranid Warriors with Melee Bio-weapons",
+        "Tyranid Warriors with Ranged Bio-weapons"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Rending claw",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Lash whip",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Extra Attacks"
+        },
+        {
+          "n": "Scything talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Alpha Warrior",
+          "d": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Aggressive Leader‑beast",
+          "d": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\"."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Great Devourer",
+        "Synapse",
+        "Tyranid Prime with Lash Whip",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "5",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "5815-871c-9260-287a",
+      "linkId": "a365-c488-23d5-a5e3",
+      "name": "Tyranid Warriors with Melee Bio-Weapons",
+      "rawName": "Tyranid Warriors with Melee Bio-Weapons",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        },
+        {
+          "from": 4,
+          "pts": 150
+        }
+      ],
+      "cap": {
+        "max": 3
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-5 Tyranid Warriors",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Tyranid Warrior",
+              "min": 2,
+              "max": 5,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Adaptive Instincts (Once per turn, per unit)",
+          "d": "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following: ▪ This unit’s melee attacks have +1 S. ▪ <ins>Or</ins>: This unit has +1 T."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Tyranid Warriors with Melee Bio-weapons",
+        "Great Devourer",
+        "Synapse",
+        "Tyranid Warriors"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "a125-b6fb-2945-56a",
+      "linkId": "d950-10bf-1754-d11e",
+      "name": "Tyranid Warriors with Ranged Bio-Weapons",
+      "rawName": "Tyranid Warriors with Ranged Bio-Weapons",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        },
+        {
+          "from": 4,
+          "pts": 120
+        }
+      ],
+      "cap": {
+        "max": 3
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-5 Tyranid Warriors",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Tyranid Warrior",
+              "min": 2,
+              "max": 5,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Adaptable Predators",
+          "d": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Tyranid Warriors with Ranged Bio-weapons",
+        "Synapse",
+        "Great Devourer"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "3",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "fada-677a-f6a4-cd12",
+      "linkId": "968d-6764-71d1-55d",
+      "name": "Tyrannocyte",
+      "rawName": "Tyrannocyte",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Flensing Whips",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Tyrannocyte Bio-weapons",
+          "melee": false,
+          "range": "24\"",
+          "a": "5",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Aerial Seeding",
+          "d": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 8\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Dedicated Transport",
+        "Transport",
+        "Monster",
+        "Fly",
+        "Great Devourer",
+        "Tyrannocyte",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "3+",
+        "W": "10",
+        "LD": "8+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1705-379b-330d-36d4",
+      "linkId": "7548-d2b3-b0e0-595b",
+      "name": "Tyrannofex",
+      "rawName": "Tyrannofex",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 180,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 180
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Fleshborer Hive",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Rupture cannon",
+              "min": 0,
+              "max": null,
+              "p": 20
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Powerful limbs",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "8",
+          "ap": "0",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Rupture cannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "18",
+          "ap": "-4",
+          "d": "D6+6",
+          "kw": "Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Resilient Organism",
+          "d": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Great Devourer",
+        "Tyrannofex"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "9\"",
+        "T": "12",
+        "Sv": "2+",
+        "W": "16",
+        "LD": "8+",
+        "OC": "5",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "1645-5407-92c8-1441",
+      "linkId": "3f5a-9872-f34d-05e3",
+      "name": "Tyrant Guard",
+      "rawName": "Tyrant Guard",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        },
+        {
+          "from": 4,
+          "pts": 160
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "3-6 Tyrant Guard",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Tyrant Guard",
+              "min": 3,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Scything talons and rending claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bone cleaver, lash whip and rending claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Crushing claws and rending claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Scything talons and rending claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Bone cleaver, lash whip and rending claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Crushing claws and rending claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Guardian Organism",
+          "d": "While a CHARACTER model is leading this unit, that Character has the Feel No Pain 5+ ability"
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Tyrant Guard"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "8",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b563-c6d3-d0e5-1b78",
+      "linkId": "b25f-20ce-a25a-1642",
+      "name": "Venomthropes",
+      "rawName": "Venomthropes",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        },
+        {
+          "from": 4,
+          "pts": 110
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "3-6 Venomthropes",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Venomthrope",
+              "min": 3,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Toxic lashes",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-Infantry 2+"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Foul Spores (Aura)",
+          "d": "Friendly TYRANIDS units within 6' of this unit have Stealth."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Venomthropes",
+        "Great Devourer"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "3",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "9bd8-ac8c-2d3b-79f6",
+      "linkId": "25ba-6e30-d587-a57e",
+      "name": "Von Ryan's Leapers",
+      "rawName": "Von Ryan's Leapers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 55,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 55
+        },
+        {
+          "from": 4,
+          "pts": 105
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "3-6 Von Ryan's Leapers",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Von Ryan's Leaper",
+              "min": 3,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Leaper's talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Pouncing Leap",
+          "d": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: ▪ That use is ‑1 CP. ▪ That use does not prevent any uses of that stratagem on other units this phase."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Von Ryan's Leapers",
+        "Vanguard Invader"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "3",
+        "LD": "8+",
+        "OC": "1",
+        "InSv": "6+"
+      },
+      "native": true
+    },
+    {
+      "id": "fa68-fcb9-38c-cd0f",
+      "linkId": "706e-86ff-ae9f-c65f",
+      "name": "Winged Hive Tyrant",
+      "rawName": "Winged Hive Tyrant",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 185,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 185
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Tyrant talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Paroxysm (Psychic)",
+          "d": "At the start of the Fight phase, you can select one enemy unit within 12\" of and visible to this model and roll one D6: on a 1, this Psyker suffers D3 mortal wounds; on a 2+, until the end of the phase, subtract 1 from the Attacks characteristic of weapons equipped by models in that unit."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Monster",
+        "Character",
+        "Psyker",
+        "Winged Hive Tyrant",
+        "Great Devourer",
+        "Fly",
+        "Synapse",
+        "Vanguard Invader",
+        "Hive Tyrant"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "10",
+        "LD": "7+",
+        "OC": "3",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "507d-5ea4-6ef1-bf66",
+      "linkId": "58d8-21cb-ed36-94b6",
+      "name": "Winged Tyranid Prime",
+      "rawName": "Winged Tyranid Prime",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Gargoyles",
+        "Tyranid Warriors With Melee Bio-Weapons",
+        "Tyranid Warriors With Ranged Bio-Weapons"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Prime talons",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Alpha Warrior",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Death Blow",
+          "d": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Winged Tyranid Prime",
+        "Character",
+        "Infantry",
+        "Fly",
+        "Great Devourer",
+        "Synapse",
+        "Vanguard Invader",
+        "Leader"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "5",
+        "Sv": "4+",
+        "W": "6",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "b622-a22-a04f-6303",
+      "linkId": "fe7f-7bff-cc64-ef7",
+      "name": "Zoanthropes",
+      "rawName": "Zoanthropes",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        },
+        {
+          "from": 4,
+          "pts": 200
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "2-5 Zoanthropes",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Zoanthrope",
+              "min": 2,
+              "max": 5,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Spirit Leech (Aura, Psychic)",
+          "d": "While an enemy unit is within 6\" of this unit, if it contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds."
+        },
+        {
+          "n": "Warp Field (Aura, Psychic)",
+          "d": "While a friendly TYRANIDS unit is within 6\" of this unit, models in that unit have a 6+ invulnerable save."
+        }
+      ],
+      "faction": "Tyranids",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Psyker",
+        "Great Devourer",
+        "Zoanthropes",
+        "Synapse"
+      ],
+      "models": {
+        "min": 3,
+        "max": 6
+      },
+      "profile": null,
+      "native": true
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "2261-79a5-19d9-1668",
+  "catalogueName": "Imperium - Adeptus Astartes - Salamanders",
+  "nativeFaction": "Adeptus Astartes",
+  "detachments": [],
+  "revision": 1,
+  "file": "Imperium - Salamanders.json",
+  "counts": {
+    "total": 2,
+    "native": 2,
+    "matched": 2,
+    "legends": 0,
+    "crucible": 0,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "98c-87ea-f51b-1475",
+      "linkId": "287a-5c60-5a7e-80a8",
+      "name": "Adrax Agatone",
+      "rawName": "Adrax Agatone",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "COMPANY HEROES",
+        "INFERNUS SQUAD",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "TACTICAL SQUAD"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Drakkis",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Pistol, Torrent"
+        },
+        {
+          "n": "Malleus Noctum",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Unto the Anvil",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll."
+        },
+        {
+          "n": "Lord of the Pyroclasts",
+          "d": "While an enemy unit is within Engagement Range of this model, halve the Objective Control characteristic of models in that enemy unit"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Captain",
+        "Adrax Agatone",
+        "Imperium",
+        "Tacticus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "b351-fccc-2121-1e1e",
+      "linkId": "e1d6-3316-2209-dc77",
+      "name": "Vulkan He'stan",
+      "rawName": "Vulkan He'stan",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "ASSAULT INTERCESSOR SQUAD",
+        "COMPANY HEROES",
+        "INFERNUS SQUAD",
+        "TACTICAL SQUAD"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Gauntlet of the Forge",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Ignores Cover, Pistol, Torrent"
+        },
+        {
+          "n": "Spear of Vulkan",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Forgefather",
+          "d": "In your Shooting phase, select one enemy unit within 24\" of and visible to this model. Until the end of the phase, each time a friendly Adeptus Astartes model makes a ranged attack with a Torrent or Melta weapon that targets that enemy unit, you can re-roll the Wound roll"
+        },
+        {
+          "n": "Seeker of the Unfound",
+          "d": "The first time this model is set up on the battlefield, select one objective marker on the battlefield. While this model is within range of that objective marker, it has an Objective Control characteristic of 10, a Leadership characteristic of 5+ and the Feel No Pain 4+ ability."
+        },
+        {
+          "n": "Inspiring Commander",
+          "d": "If you include this model in your army, until the end of the battle, non-Character models in Infernus Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Captain",
+        "Imperium",
+        "Grenades",
+        "Vulkan He'stan",
+        "Tacticus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    }
+  ]
+}

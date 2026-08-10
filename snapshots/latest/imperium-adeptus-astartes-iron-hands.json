@@ -1,0 +1,202 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "f27e-18c0-b73e-748e",
+  "catalogueName": "Imperium - Adeptus Astartes - Iron Hands",
+  "nativeFaction": "Iron Hands",
+  "detachments": [],
+  "revision": 1,
+  "file": "Imperium - Iron Hands.json",
+  "counts": {
+    "total": 2,
+    "native": 1,
+    "matched": 1,
+    "legends": 0,
+    "crucible": 0,
+    "allied": 1
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "efbb-2823-7b70-5a7a",
+      "linkId": "bea0-eae7-2100-53a7",
+      "name": "Caanok Var",
+      "rawName": "Caanok Var",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "TERMINATOR ASSAULT SQUAD",
+        "TERMINATOR SQUAD"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Axiom - Strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Axiom - Sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Cold and Calculating",
+          "d": "Each time a model in this model’s unit makes an attack that targets a Monster or Vehicle unit, that attack has the [LETHAL HITS] ability. Each time a model in this model’s unit makes an attack that targets any other unit, that attack has the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "n": "Cerebrex Logic Engine",
+          "d": "■ At the start of the Declare Battle Formations step, you can select one Adeptus Astartes Infantry unit from your army. Until the end of the battle, that unit gains the Scouts 6\" ability. ■ After both players have deployed their armies, you can select one Adeptus Astartes unit from your army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        }
+      ],
+      "faction": "Iron Hands",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Terminator",
+        "Captain",
+        "Caanok Var"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "6c9d-4ec3-69dd-90b2",
+      "linkId": "545-17a0-487d-d535",
+      "name": "Iron Father Feirros",
+      "rawName": "Iron Father Feirros",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "AGGRESSOR SQUAD",
+        "ERADICATOR SQUAD",
+        "HEAVY INTERCESSOR SQUAD"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Gorgon's Wrath",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Sustained Hits 2"
+        },
+        {
+          "n": "Harrowhand",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Medusan Manipuli",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Extra Attacks"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rites of Tempering",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+        },
+        {
+          "n": "Iron Father",
+          "d": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, it has the Lone Operative ability."
+        },
+        {
+          "n": "Master of the Forge",
+          "d": "In your Command phase, select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to 3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. You cannot select a unit for this ability that has already been selected for the Blessing of the Omnissiah ability this phase, and vice versa."
+        },
+        {
+          "n": "Inspiring Commander",
+          "d": "If you include this model in your army, until the end of the battle, non-Character models in Heavy Intercessor Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Imperium",
+        "Gravis",
+        "Iron Father Ferrios"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "5\"",
+        "T": "6",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": false
+    }
+  ]
+}

@@ -1,0 +1,754 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "25dd-7aa0-6bf4-f2d5",
+  "catalogueName": "Imperium - Imperial Knights",
+  "nativeFaction": "Adeptus Mechanicus",
+  "detachments": [],
+  "revision": 1,
+  "file": "Imperium - Imperial Knights.json",
+  "counts": {
+    "total": 5,
+    "native": 5,
+    "matched": 5,
+    "legends": 0,
+    "crucible": 0,
+    "allied": 0
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "b897-e4c6-fcb6-6538",
+      "linkId": "c877-cf82-26d2-cfd8",
+      "name": "Skitarii Marshal",
+      "rawName": "Skitarii Marshal",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 35,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 35
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Control stave",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following units: - Skitarii Rangers - Skitarii Vanguard"
+        },
+        {
+          "n": "Control Edict",
+          "d": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+        },
+        {
+          "n": "Servo-skull Uplink",
+          "d": "Once per battle, at the start of any phase, you can select one friendly Skitarii unit that is Battle-shocked and within 6\" of this model. That unit is no longer Battle-shocked."
+        }
+      ],
+      "faction": "Adeptus Mechanicus",
+      "keywords": [
+        "Marshal",
+        "Imperium",
+        "Skitarii",
+        "Character",
+        "Infantry"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "4+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "de59-f65c-181a-8509",
+      "linkId": "ec2c-94ac-9338-ce57",
+      "name": "Skitarii Rangers",
+      "rawName": "Skitarii Rangers",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "9 Skitarii Rangers",
+          "min": 9,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Skitarii Ranger w/ transuranic arquebus",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Ranger w/ arc rifle",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Ranger w/ plasma caliver",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Ranger w/ galvanic rifle",
+              "min": 5,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Ranger w/ data-tether",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Ranger w/ omnispex",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Galvanic rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Alpha combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Galvanic rifle",
+          "melee": false,
+          "range": "30\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Transuranic arquebus",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Heavy, Precision"
+        },
+        {
+          "n": "Arc rifle",
+          "melee": false,
+          "range": "30\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Anti-Vehicle 4+, Devastating Wounds, Rapid Fire 1"
+        },
+        {
+          "n": "➤ Plasma caliver -  supercharge",
+          "melee": false,
+          "range": "30\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous"
+        },
+        {
+          "n": "➤ Plasma caliver - standard",
+          "melee": false,
+          "range": "30\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Objective Scouted",
+          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        },
+        {
+          "n": "Enhanced data-tether",
+          "d": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "n": "Omnispex",
+          "d": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
+        }
+      ],
+      "faction": "Adeptus Mechanicus",
+      "keywords": [
+        "Rangers",
+        "Imperium",
+        "Infantry",
+        "Skitarii",
+        "Battleline",
+        "Recon Augury"
+      ],
+      "models": {
+        "min": 6,
+        "max": 15
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "4+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "ba33-c21-bddc-ab0",
+      "linkId": "71f9-d22e-3dad-08f0",
+      "name": "Skitarii Vanguard",
+      "rawName": "Skitarii Vanguard",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": {
+        "max": 6,
+        "at1000": 4
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Skitarii Vanguard",
+          "min": 9,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Skitarii Vanguard w/ transuranic arquebus",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Vanguard w/ arc rifle",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Vanguard w/ plasma caliver",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Vanguard w/ radium carbine",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Vanguard w/ data-tether",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skitarii Vanguard w/ omnispex",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Radium carbine",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Alpha combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Radium carbine",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-Infantry 4+"
+        },
+        {
+          "n": "Transuranic arquebus",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Heavy, Precision"
+        },
+        {
+          "n": "Arc rifle",
+          "melee": false,
+          "range": "30\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Anti-Vehicle 4+, Devastating Wounds, Rapid Fire 1"
+        },
+        {
+          "n": "➤ Plasma caliver -  supercharge",
+          "melee": false,
+          "range": "30\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous"
+        },
+        {
+          "n": "➤ Plasma caliver - standard",
+          "melee": false,
+          "range": "30\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Rad-saturation (Aura)",
+          "d": "While an enemy unit (excluding Vehicle units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that unit."
+        },
+        {
+          "n": "Enhanced data-tether",
+          "d": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "n": "Omnispex",
+          "d": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
+        }
+      ],
+      "faction": "Adeptus Mechanicus",
+      "keywords": [
+        "Vanguard",
+        "Imperium",
+        "Infantry",
+        "Skitarii",
+        "Battleline"
+      ],
+      "models": {
+        "min": 1,
+        "max": 15
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "4+",
+        "W": "1",
+        "LD": "7+",
+        "OC": "2",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "6424-ed86-9e15-3e14",
+      "linkId": "fbfe-7348-5b36-ac1e",
+      "name": "Tech-Priest Dominus",
+      "rawName": "Tech-Priest Dominus",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 65,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 65
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Corpuscarii Electro-Priests",
+        "Fulgurite Electro-Priests",
+        "Kataphron Breachers",
+        "Kataphron Destroyers",
+        "Skitarii Rangers",
+        "Skitarii Vanguard"
+      ],
+      "options": [
+        {
+          "n": "Replace macrostubber",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Macrostubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Phosphor serpenta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace volkite blaster",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Eradication ray",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Volkite blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Omnissian axe",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Macrostubber",
+          "melee": false,
+          "range": "12\"",
+          "a": "5",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Phosphor serpenta",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Ignores Cover, Pistol"
+        },
+        {
+          "n": "➤ Eradication ray - dissipated",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Eradication ray - focused",
+          "melee": false,
+          "range": "12\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Volkite blaster",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Lord of the Machine Cult",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the Electro-Priests keyword, models in that unit have the Feel No Pain 4+ ability instead"
+        },
+        {
+          "n": "Data-spike",
+          "d": "At the start of the Fight phase, you can select one enemy Vehicle unit within Engagement Range of this model’s unit and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds and, until the end of the phase, the Weapon Skill characteristic of melee weapons equipped by that enemy unit is worsened by 1."
+        }
+      ],
+      "faction": "Adeptus Mechanicus",
+      "keywords": [
+        "Dominus",
+        "Imperium",
+        "Tech-Priest",
+        "Character",
+        "Infantry",
+        "Cult Mechanicus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "2d9b-610a-dc4d-15ae",
+      "linkId": "5292-3dad-c3d9-75e5",
+      "name": "Tech-Priest Manipulus",
+      "rawName": "Tech-Priest Manipulus",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 60,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 60
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Corpuscarii Electro-Priests",
+        "Fulgurite Electro-Priests",
+        "Kataphron Breachers",
+        "Kataphron Destroyers",
+        "Skitarii Rangers",
+        "Skitarii Vanguard"
+      ],
+      "options": [
+        {
+          "n": "Replace magnarail lance",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Magnarail lance",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Transonic cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Omnissian staff",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Magnarail lance",
+          "melee": false,
+          "range": "36\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Heavy"
+        },
+        {
+          "n": "Transonic cannon",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "2",
+          "kw": "Devastating Wounds, Torrent"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Galvanic Field",
+          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [Lethal Hits] ability."
+        },
+        {
+          "n": "Defend the Divine Work",
+          "d": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, all models in this model’s unit have a 4+ invulnerable save."
+        }
+      ],
+      "faction": "Adeptus Mechanicus",
+      "keywords": [
+        "Manipulus",
+        "Imperium",
+        "Tech-Priest",
+        "Character",
+        "Infantry",
+        "Cult Mechanicus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    }
+  ]
+}

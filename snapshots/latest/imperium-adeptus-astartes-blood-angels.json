@@ -1,0 +1,2513 @@
+{
+  "version": {
+    "sha": "c714a01",
+    "date": "2026-08-10T19:16:59Z"
+  },
+  "catalogueId": "4ef9-15ce-e3e6-36de",
+  "catalogueName": "Imperium - Adeptus Astartes - Blood Angels",
+  "nativeFaction": "Adeptus Astartes",
+  "detachments": [],
+  "revision": 1,
+  "file": "Imperium - Blood Angels.json",
+  "counts": {
+    "total": 26,
+    "native": 25,
+    "matched": 14,
+    "legends": 11,
+    "crucible": 0,
+    "allied": 1
+  },
+  "unresolved": [],
+  "datasheets": [
+    {
+      "id": "f943-72c8-581c-e6f2",
+      "linkId": "1032-6744-7fe5-1975",
+      "name": "Astorath",
+      "rawName": "Astorath",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Death Company Marines with Jump Packs"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "The Executioner's Axe",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Devastating Wounds, Precision"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Redeemer of the Lost",
+          "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        },
+        {
+          "n": "Mass of Doom",
+          "d": "Each time this model’s unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Fly",
+        "Jump Pack",
+        "Imperium",
+        "Chaplain",
+        "Astorath"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "5",
+        "LD": "5+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "640-9969-d5b9-875c",
+      "linkId": "eacb-5067-279-84c4",
+      "name": "Baal Predator",
+      "rawName": "Baal Predator",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Sponson Weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "2 Heavy Flamers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "2 Heavy Bolters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Turret Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Baal Flamestorm Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin Assault Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Heavy Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Ignores Cover, Torrent"
+        },
+        {
+          "n": "Heavy Bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Assault, Sustained Hits 1"
+        },
+        {
+          "n": "Baal Flamestorm Cannon",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6+3",
+          "skill": "N/A",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Assault, Ignores Cover, Torrent"
+        },
+        {
+          "n": "Twin Assault Cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": "Assault, Devastating wounds, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Overcharged Engines",
+          "d": "You can re-roll Advance rolls made for this model."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Imperium",
+        "Smoke",
+        "Vehicle",
+        "Baal Predator",
+        "Frame"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "10",
+        "Sv": "3+",
+        "W": "11",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "829b-da42-2d62-6daf",
+      "linkId": "2f4d-a03c-622b-d553",
+      "name": "Blood Angels Captain",
+      "rawName": "Blood Angels Captain",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Assault Intercessor Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Company Heroes",
+        "Tactical Squad"
+      ],
+      "options": [
+        {
+          "n": "Melee",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Master-crafted Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Master-crafted Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Heavy Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol"
+        }
+      ],
+      "abilities": null,
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Captain",
+        "Tacticus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "8d87-ee8a-6af4-3715",
+      "linkId": "4abd-de59-2daa-fe2e",
+      "name": "Brother Corbulo",
+      "rawName": "Brother Corbulo [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Assault Squad",
+        "Assault Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Devastator Squad",
+        "Tactical Squad",
+        "Vanguard Veteran Squad"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Heaven's Teeth",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Sanguinary Priest",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+        },
+        {
+          "n": "The Red Grail",
+          "d": "While this model is leading a unit, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Sanguinary Priest",
+        "Brother Corbulo"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "ae0a-e23c-2184-7c65",
+      "linkId": "22a0-b94-dd32-bcd3",
+      "name": "Captain Tycho",
+      "rawName": "Captain Tycho [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Assault Squad",
+        "Command Squad",
+        "Assault Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Company Heroes",
+        "Tactical Squad",
+        "Vanguard Veteran Squad"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Blood Song",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Anti-Infantry 4+, Devastating Wounds, Melta 2"
+        },
+        {
+          "n": "Dead Man's Hand",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Gifted Commander",
+          "d": "While this model is leading a unit, each time that unit is selected to shoot, select one of the following abilities to apply to ranged weapons equipped by models in that unit until the end of the phase: ■ [ASSAULT] ■ [HEAVY] ■ [RAPID FIRE 1]"
+        },
+        {
+          "n": "Embittered",
+          "d": "The first time an attack is allocated to this model, after the attacking unit has finished making its attacks, until the end of the battle, change the Attacks characteristic of this model’s Dead Man’s Hand to 12"
+        },
+        {
+          "n": "Tycho",
+          "d": "Your army cannot contain both Captain Tycho and Tycho the Lost."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Captain",
+        "Grenades",
+        "Imperium",
+        "Tycho"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "ab35-2c36-9389-d1d5",
+      "linkId": "af4f-95a4-dbfc-3987",
+      "name": "Chief Librarian Mephiston",
+      "rawName": "Chief Librarian Mephiston",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 110,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 110
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Fury of the Ancients - Witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "D3",
+          "kw": "Pistol, Psychic, Sustained Hits 1"
+        },
+        {
+          "n": "➤ Fury of the Ancients - Focused Witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "3",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-2",
+          "d": "D3",
+          "kw": "Hazardous, Pistol, Psychic, Sustained Hits 3"
+        },
+        {
+          "n": "Vitarus",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-3",
+          "d": "D3",
+          "kw": "Lethal Hits, Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "The Quickening [Psychic]",
+          "d": "This model is eligible to declare a charge in a turn which it Advanced."
+        },
+        {
+          "n": "Transfixing Gaze [Aura, Psychic]",
+          "d": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Tacticus",
+        "Psyker",
+        "Chief Librarian Mephiston"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "7\"",
+        "T": "5",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "5+"
+      },
+      "native": true
+    },
+    {
+      "id": "7323-ebf-9afe-7e7a",
+      "linkId": "d641-aa45-acbb-beff",
+      "name": "Commander Dante",
+      "rawName": "Commander Dante",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Assault Squad with Jump Packs",
+        "Sanguinary Guard",
+        "Vanguard Veteran Squad with Jump Packs",
+        "Assault Intercessors with Jump Packs"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Perdition",
+          "melee": false,
+          "range": "6\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2, Pistol, Sustained Hits D3"
+        },
+        {
+          "n": "The Axe Mortalis",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Lethal Hits"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Death Mask of Sanguinius",
+          "d": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do"
+        },
+        {
+          "n": "Lord Regent of the Imperium Nihilus",
+          "d": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Fly",
+        "Jump Pack",
+        "Tacticus",
+        "Chapter Master",
+        "Commander Dante"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "4743-6dc9-fda7-0a8c",
+      "linkId": "ce7d-96da-55fa-0e0e",
+      "name": "Death Company Captain",
+      "rawName": "Death Company Captain",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Death Company Marines",
+        "Death Company Marines with Bolt Rifles"
+      ],
+      "options": [
+        {
+          "n": "Melee",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Master-crafted Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Master-crafted Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "7",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Heavy Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Forlorn Hero",
+          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+        },
+        {
+          "n": "Death Vision of Sanguinius",
+          "d": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Captain",
+        "Tacticus",
+        "Death Company"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "2574-a949-ae3f-58c2",
+      "linkId": "db59-6442-eafa-f8db",
+      "name": "Death Company Captain with Jump Pack",
+      "rawName": "Death Company Captain with Jump Pack",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Death Company Marines with Jump Packs"
+      ],
+      "options": [
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Heavy Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Death Vision of Sanguinius",
+          "d": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+        },
+        {
+          "n": "Lost to Fury",
+          "d": "When this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability"
+        }
+      ],
+      "faction": "Blood Angels",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Captain",
+        "Grenades",
+        "Fly",
+        "Imperium",
+        "Jump Pack",
+        "Tacticus",
+        "Death Company"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": false
+    },
+    {
+      "id": "3b6e-cc3e-c2a4-0cbd",
+      "linkId": "be32-1b9e-6b1b-e508",
+      "name": "Death Company Dreadnought",
+      "rawName": "Death Company Dreadnought",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 150,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 150
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Melee Weapon Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Blood Fists & Blood Fist Bolt Rifles",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Blood Talons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Blood Fists",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Blood Fist Bolt Rifles",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "➤ Blood Talons - Strike",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "➤ Blood Talons - Sweep",
+          "melee": true,
+          "range": "Melee",
+          "a": "10",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Driven by Fury",
+          "d": "In your opponent’s Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Dreadnought",
+        "Death Company Dreadnought",
+        "Death Company"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "10",
+        "Sv": "2+",
+        "W": "12",
+        "LD": "6+",
+        "OC": "4",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "e7ee-e70-bd87-7c5c",
+      "linkId": "4369-60d9-853-801",
+      "name": "Death Company Dreadnought with Magna-Grapple",
+      "rawName": "Death Company Dreadnought with Magna-Grapple [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 145,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 145
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Smoke Launchers",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon Option 1",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm Bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Storm Bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Frenzied Reprisal",
+          "d": "Each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot as if it were your Shooting phase or fight as if it were the Fight phase."
+        },
+        {
+          "n": "Magna-grapple",
+          "d": "Add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a MOSNTER or VEHICLE unit."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Death Company Dreadnought",
+        "Death Company",
+        "Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3825-ac3a-75ec-fa0d",
+      "linkId": "585d-874f-7f12-77a4",
+      "name": "Death Company Marines",
+      "rawName": "Death Company Marines",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 85,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 85
+        },
+        {
+          "from": 6,
+          "pts": 160
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Death Company Marines",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Death Company Marine w/Eviscerator",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Death Company Marine",
+              "min": 2,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Death Company Marine w/ alternate weapons",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Heavy Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Pistol"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "An Honourable Death in Combat",
+          "d": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessor Squad, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Death Company Marines",
+        "Tacticus",
+        "Death Company"
+      ],
+      "models": {
+        "min": 2,
+        "max": 13
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "4aab-3ca5-0435-ed5e",
+      "linkId": "15ed-2cca-b373-a0a9",
+      "name": "Death Company Marines with Bolt Rifles",
+      "rawName": "Death Company Marines with Bolt Rifles",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 80,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 80
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Death Company Marines",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Death Company Marine w/Bolt Rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Death Company Marine w/Eviscerator",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Death Company Marine w/ alternate weapons",
+              "min": 0,
+              "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace Close Combat Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Close Combat Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power Fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "➤ Astartes Grenade Launcher - Frag",
+          "melee": false,
+          "range": "24\"",
+          "a": "D3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Blast"
+        },
+        {
+          "n": "➤ Astartes Grenade Launcher - Krak",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-2",
+          "d": "D3",
+          "kw": ""
+        },
+        {
+          "n": "Close Combat Weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Power Fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Bolt Rifle",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Heavy"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Attached Unit",
+          "d": "If a Chaplain model from your army with the Leader ability can be attached to Intercessor Squad, it can be attached to this unit instead."
+        },
+        {
+          "n": "Visions of Heresy",
+          "d": "• This unit can re-roll charge rolls. ▪ When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Death Company Marines with Bolt Rifles",
+        "Tacticus",
+        "Death Company"
+      ],
+      "models": {
+        "min": null,
+        "max": 3
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "6562-9dcd-afea-d4ae",
+      "linkId": "4877-5e0e-e27c-75d3",
+      "name": "Death Company Marines with Boltguns",
+      "rawName": "Death Company Marines with Boltguns [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Death Company Marines",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Death Company Marine",
+              "min": 5,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon Options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boltgun and Close Combat Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Melee and Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Thunder Hammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "An Honourable Death in Combat",
+          "d": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+        },
+        {
+          "n": "Attached Leader",
+          "d": "If a Chaplain model from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead. If a Character unit from your army with the Leader ability can be attached to a Death Company Marines unit, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Death Company Marines with Boltguns",
+        "Death Company"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "bcfe-f4fb-5c44-652d",
+      "linkId": "86aa-d4e6-fbbd-db05",
+      "name": "Death Company Marines with Boltguns and Jump Packs",
+      "rawName": "Death Company Marines with Boltguns and Jump Packs [Legends]",
+      "type": "unit",
+      "mode": "legends",
+      "legends": true,
+      "points": 140,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 140
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Death Company Marines",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Death Company Marine",
+              "min": 5,
+              "max": 10,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon Options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boltgun and Close Combat Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Melee and Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Thunder Hammer",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Beserk Fury",
+          "d": "You can re-roll Charge rolls made for this unit"
+        },
+        {
+          "n": "Attached Leader",
+          "d": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs or an Assault Squad with Jump Packs, it can be attached to this unit instead. If a Character unit from your army with the Leader ability can be attached to a Death Company Marines with Jump Packs unit, it can be attached to this unit instead."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Death Company Marines with Boltguns and Jump Packs",
+        "Death Company"
+      ],
+      "models": {
+        "min": 5,
+        "max": 10
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "65f6-18df-f6df-7e39",
+      "linkId": "8e5b-4b8e-a9cc-9dfd",
+      "name": "Death Company Marines with Jump Packs",
+      "rawName": "Death Company Marines with Jump Packs",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 120,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 120
+        },
+        {
+          "from": 6,
+          "pts": 230
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Death Company Marines",
+          "min": 5,
+          "max": 10,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Death Company Marine",
+              "min": 0,
+              "max": 10,
+              "p": 0
+            },
+            {
+              "n": "Death Company Marine w/ alternate weapons",
+              "min": 0,
+              "max": 7,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Savage Fury",
+          "d": "You can re-roll Charge rolls made for this unit."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Death Company Marines with Jump Packs",
+        "Tacticus",
+        "Fly",
+        "Jump Pack",
+        "Death Company"
+      ],
+      "models": {
+        "min": null,
+        "max": 17
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "2",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "c954-8157-25fd-5f99",
+      "linkId": "e2d6-f4d8-8388-2312",
+      "name": "Furioso Dreadnought",
+      "rawName": "Furioso Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 150,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 150
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Weapon Options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Frag Cannon and Furioso Fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Blood Talons and Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin Furioso Fists and Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Heavy Frag Cannon",
+          "melee": false,
+          "range": "18\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Blast, Rapid Fire D6"
+        },
+        {
+          "n": "Furioso Fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "3",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Wrathful Rampage",
+          "d": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Furioso Dreadnought",
+        "Smoke",
+        "Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "462-f17c-3bb-16a",
+      "linkId": "36e-e56f-90cc-8981",
+      "name": "Gabriel Seth",
+      "rawName": "Gabriel Seth [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Assault Squad",
+        "Command Squad",
+        "Tactical Squad",
+        "Vanguard Veteran Squad",
+        "Assault Intercessor Squad",
+        "Company Heroes",
+        "Sternguard Veteran Squad",
+        "Bladeguard Veteran Squad"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Blood Reaver",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Sustained Hits 1"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Lord of Slaughter",
+          "d": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced"
+        },
+        {
+          "n": "Whirlwind of Rage",
+          "d": "Each time this model fights, until that fight is resolved, add 1 to the Attacks characteristic of this model’s Blood Reaver for every 5 enemy models within 6\" of this model."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Chapter Master",
+        "Imperium",
+        "Gabriel Seth"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "cbc2-18c9-45b6-6327",
+      "linkId": "2ac0-a864-7232-daa1",
+      "name": "Lemartes",
+      "rawName": "Lemartes",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Death Company Marines with Jump Packs"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "The Blood Crozius",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lethal Hits"
+        },
+        {
+          "n": "Absolvor Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Pistol"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Guardian of the Lost",
+          "d": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+        },
+        {
+          "n": "Fury Unbound",
+          "d": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Fly",
+        "Chaplain",
+        "Lemartes",
+        "Jump Pack"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "5+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "b6e0-b465-801c-24c8",
+      "linkId": "273-d9f3-a459-c5a3",
+      "name": "Librarian Dreadnought",
+      "rawName": "Librarian Dreadnought [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 170,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 170
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "➤ Blood Lance - Focused Witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+3",
+          "kw": "Hazardous, Psychic, Sustained Hits D3"
+        },
+        {
+          "n": "➤ Blood Lance - Witchfire",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D6",
+          "kw": "Psychic, Sustained Hits D3"
+        },
+        {
+          "n": "Furioso Fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Furioso Force Halberd",
+          "melee": true,
+          "range": "Melee",
+          "a": "1",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-3",
+          "d": "D6+3",
+          "kw": "Extra Attacks, Psychic"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Shield of Sanguinius (Aura, Psychic)",
+          "d": "While a friendly Adeptus Astartes unit is within 6\" of this model, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks."
+        },
+        {
+          "n": "Wings of Sanguinius (Psychic)",
+          "d": "Once per turn, at the end of your Movement phase, one Psyker from your army with this ability can use it. If it does, roll one D6: on a 1, that Psyker suffers D3 mortal wounds; on a 2+, select one friendly Adeptus Astartes Infantry unit within 12\" of that Psyker and remove the selected unit from the battlefield, then set it up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy models."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Psyker",
+        "Imperium",
+        "Librarian Dreadnought",
+        "Smoke",
+        "Dreadnought"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "8\"",
+        "T": "9",
+        "Sv": "2+",
+        "W": "8",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "25e4-ead-faac-2531",
+      "linkId": "60a7-f8f9-1a93-41f0",
+      "name": "Sanguinary Guard",
+      "rawName": "Sanguinary Guard",
+      "type": "unit",
+      "mode": "standard",
+      "legends": false,
+      "points": 125,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 125
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": [
+        {
+          "n": "Sanguinary Guard",
+          "min": 3,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Sanguinary Guard",
+              "min": 0,
+              "max": 6,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Encarmine Blade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Encarmine Spear",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Angelus Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Encarmine Blade",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-3",
+          "d": "2",
+          "kw": ""
+        },
+        {
+          "n": "Encarmine Spear",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lance"
+        },
+        {
+          "n": "Angelus Boltgun",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Angelic Visage",
+          "d": "Each time a melee attack targets this unit, subtract 1 from the Hit roll"
+        },
+        {
+          "n": "Heirs of Azkaellon",
+          "d": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll."
+        },
+        {
+          "n": "Attached Unit",
+          "d": "If a Captain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead."
+        },
+        {
+          "n": "Sanguinary Banner",
+          "d": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Grenades",
+        "Imperium",
+        "Sanguinary Guard",
+        "Jump Pack"
+      ],
+      "models": {
+        "min": null,
+        "max": 6
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "f80-be5-d17c-db23",
+      "linkId": "eea1-54d-9cb-4857",
+      "name": "Sanguinary Priest",
+      "rawName": "Sanguinary Priest",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": null,
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Sanguinary Priest",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+        },
+        {
+          "n": "Blood Chalice",
+          "d": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+        },
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following units: - Assault Intercessor Squad - Bladeguard Veteran Squad - Desolation Squad - Devastator Squad - Hellblaster Squad - Infernus Squad - Intercessor Squad - Tactical Squad - Sternguard Veteran Squad You can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Sanguinary Priest",
+        "Tacticus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "3621-b460-722-8954",
+      "linkId": "7b49-f741-1011-5f29",
+      "name": "Sanguinary Priest on Bike",
+      "rawName": "Sanguinary Priest on Bike [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 135,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 135
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Bike Squad",
+        "Outrider Squad"
+      ],
+      "options": [
+        {
+          "n": "Chainsword Options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power Fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Power Fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Blood Chalice",
+          "d": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+        },
+        {
+          "n": "Sanguinary Priest",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Mounted",
+        "Grenades",
+        "Imperium",
+        "Sanguinary Priest"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "5",
+        "Sv": "3+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "2",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "fa13-ba8a-8711-87b6",
+      "linkId": "518c-6b44-f47b-225",
+      "name": "Sanguinary Priest with Jump Pack",
+      "rawName": "Sanguinary Priest with Jump Pack [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 100,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 100
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "Assault Squad with Jump Packs",
+        "Vanguard Veteran Squad with Jump packs",
+        "Assault Intercessors with Jump Packs",
+        "You can attach this model to one of the above units",
+        "even if one Captain",
+        "and that Bodyguard unit is destroyed",
+        "the Leader units attached to it become separate units",
+        "with their original Starting Strengths"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Astartes Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Sanguinary Priest",
+          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+        },
+        {
+          "n": "Blood Chalice",
+          "d": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Fly",
+        "Jump Pack",
+        "Sanguinary Priest"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "29f1-bb28-6424-6d14",
+      "linkId": "8f52-7888-656e-133a",
+      "name": "The Sanguinor",
+      "rawName": "The Sanguinor",
+      "type": "model",
+      "mode": "standard",
+      "legends": false,
+      "points": 130,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 130
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "options": null,
+      "weapons": [
+        {
+          "n": "Encarmine Broadsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Devastating Wounds"
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Aura of Fervour (Aura)",
+          "d": "While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit"
+        },
+        {
+          "n": "Miraculous Savior",
+          "d": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. . That move does not prevent this unit from being eligible to move"
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Epic Hero",
+        "Character",
+        "Infantry",
+        "Fly",
+        "Imperium",
+        "Jump Pack",
+        "The Sanguinor"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "12\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "7",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
+      "id": "8577-8a5d-75f6-a630",
+      "linkId": "5772-efa1-a8a2-a2e4",
+      "name": "Tycho the Lost",
+      "rawName": "Tycho the Lost [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 90,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 90
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "Death Company Marines"
+      ],
+      "options": null,
+      "weapons": null,
+      "abilities": [
+        {
+          "n": "Forlorn Hero",
+          "d": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced"
+        },
+        {
+          "n": "Death Visions of Sanguinius",
+          "d": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord: on a 2-3, that enemy unit suffers 3 mortal wounds; on a 4-5, that enemy unit suffers D3+3 mortal wounds; on a 6+, that enemy unit suffers D6+3 mortal wounds."
+        },
+        {
+          "n": "Tycho",
+          "d": "Your army cannot contain both Captain Tycho and Tycho the Lost."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Captain",
+        "Imperium",
+        "Grenades",
+        "Tycho the Lost"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "2+",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "InSv": ""
+      },
+      "native": true
+    }
+  ]
+}
