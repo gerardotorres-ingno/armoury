@@ -1,0 +1,11 @@
+{
+  "name": "armoury",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node extract.mjs && node mfm.mjs && node prepare-data.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.5.0"
+  }
+}
