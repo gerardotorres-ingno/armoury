@@ -6,7 +6,186 @@
   "catalogueId": "77b9-2f66-3f9b-5cf3",
   "catalogueName": "Imperium - Adeptus Mechanicus",
   "nativeFaction": "Adeptus Mechanicus",
-  "detachments": [],
+  "detachments": [
+    {
+      "name": "Cohort Acquisitus",
+      "dp": 1
+    },
+    {
+      "name": "Cohort Cybernetica",
+      "dp": 2
+    },
+    {
+      "name": "Data-psalm Conclave",
+      "dp": 2
+    },
+    {
+      "name": "Eradication Cohort",
+      "dp": 3
+    },
+    {
+      "name": "Explorator Maniple",
+      "dp": 2
+    },
+    {
+      "name": "Haloscreed Battleclade",
+      "dp": 3
+    },
+    {
+      "name": "Lords of the Forge",
+      "dp": 1
+    },
+    {
+      "name": "Luminen Autochoir",
+      "dp": 1
+    },
+    {
+      "name": "Rad-zone Corps",
+      "dp": 2
+    },
+    {
+      "name": "Skitarii Hunter Cohort",
+      "dp": 2
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Arch Negator",
+      "pts": 5
+    },
+    {
+      "name": "Artisan",
+      "pts": 10
+    },
+    {
+      "name": "Autoclavic Denounciation",
+      "pts": 15
+    },
+    {
+      "name": "Battle-Sphere Uplink",
+      "pts": 25
+    },
+    {
+      "name": "Belicosa-class Capacitor Vanes",
+      "pts": 25
+    },
+    {
+      "name": "Cantic Thrallnet",
+      "pts": 25
+    },
+    {
+      "name": "Clandestine Infiltrator",
+      "pts": 15
+    },
+    {
+      "name": "Cognitive Reinforcement",
+      "pts": 30
+    },
+    {
+      "name": "Data-blessed Autosermon",
+      "pts": 15
+    },
+    {
+      "name": "Electromiasmic Brazier",
+      "pts": 10
+    },
+    {
+      "name": "Emotionless Clarity",
+      "pts": 10
+    },
+    {
+      "name": "Explorator Dispensation",
+      "pts": 20
+    },
+    {
+      "name": "Genetor",
+      "pts": 20
+    },
+    {
+      "name": "Inloaded Lethality",
+      "pts": 15
+    },
+    {
+      "name": "Logis",
+      "pts": 15
+    },
+    {
+      "name": "Lord of Machines",
+      "pts": 15
+    },
+    {
+      "name": "Magos",
+      "pts": 10
+    },
+    {
+      "name": "Malphonic Susurrus",
+      "pts": 20
+    },
+    {
+      "name": "Mantle of the Gnosticarch",
+      "pts": 10
+    },
+    {
+      "name": "Martial Signatum Amplificator",
+      "pts": 15
+    },
+    {
+      "name": "Mechanicus Locum",
+      "pts": 5
+    },
+    {
+      "name": "Necromechanic",
+      "pts": 20
+    },
+    {
+      "name": "Omnicogitator",
+      "pts": 25
+    },
+    {
+      "name": "Omnissiah's Fury",
+      "pts": 10
+    },
+    {
+      "name": "Peerless Eradicator",
+      "pts": 20
+    },
+    {
+      "name": "Radial Suffusion",
+      "pts": 25
+    },
+    {
+      "name": "Sanctified Ordnance",
+      "pts": 10
+    },
+    {
+      "name": "Stealth-screened Cybercanids",
+      "pts": 15
+    },
+    {
+      "name": "Temporcopia",
+      "pts": 20
+    },
+    {
+      "name": "TL-409",
+      "pts": 30
+    },
+    {
+      "name": "Transoracular Dyad Wafers",
+      "pts": 15
+    },
+    {
+      "name": "Veiled Hunter",
+      "pts": 10
+    },
+    {
+      "name": "Vingh's Wafers of Dynamism",
+      "pts": 25
+    },
+    {
+      "name": "Voltagheist Reliquary",
+      "pts": 15
+    }
+  ],
   "revision": 8,
   "file": "Imperium - Adeptus Mechanicus.json",
   "counts": {
@@ -549,7 +728,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Mechanicus pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Power fist",
@@ -1827,6 +2027,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Archeotech pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         }
@@ -1956,6 +2162,12 @@
               "n": "Galvanic caster",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Archeotech pistol",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -2891,7 +3103,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Control stave",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Mechanicus pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Control stave",
@@ -3017,6 +3250,12 @@
               "n": "Galvanic rifle",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Mechanicus pistol",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -3203,6 +3442,12 @@
               "n": "Radium carbine",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Mechanicus pistol",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -3725,6 +3970,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Sydonian Feet",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Mechanicus pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Replace Radium Jezzail",
           "min": 1,
           "max": 1,
@@ -4017,7 +4282,34 @@
         "Skitarii Rangers",
         "Skitarii Vanguard"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Servo arm",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Omnissian axe",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Mechanicus pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Servo arm",
@@ -4218,7 +4510,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Servo-arc claw",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Mechanicus pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Servo-arc claw",

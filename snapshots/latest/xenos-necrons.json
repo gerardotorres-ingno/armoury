@@ -7,18 +7,208 @@
   "catalogueName": "Xenos - Necrons",
   "nativeFaction": "Necrons",
   "detachments": [
-    "Awakened Dynasty",
-    "Annihilation Legion",
-    "Canoptek Court",
-    "Obeisance Phalanx",
-    "Hypercrypt Legion",
-    "Starshatter Arsenal",
-    "Cryptek Conclave",
-    "Cursed Legion",
-    "Pantheon of Woe",
-    "Hand of the Dynasty",
-    "Skyshroud Spearhead",
-    "The Phaeron's Armoury"
+    {
+      "name": "Annihilation Legion",
+      "dp": 2
+    },
+    {
+      "name": "Awakened Dynasty",
+      "dp": 3
+    },
+    {
+      "name": "Canoptek Court",
+      "dp": 3
+    },
+    {
+      "name": "Cryptek Conclave",
+      "dp": 2
+    },
+    {
+      "name": "Cursed Legion",
+      "dp": 2
+    },
+    {
+      "name": "Hand of the Dynasty",
+      "dp": 1
+    },
+    {
+      "name": "Hypercrypt Legion",
+      "dp": 2
+    },
+    {
+      "name": "Obeisance Phalanx",
+      "dp": 2
+    },
+    {
+      "name": "Pantheon of Woe",
+      "dp": 2
+    },
+    {
+      "name": "Skyshroud Spearhead",
+      "dp": 1
+    },
+    {
+      "name": "Starshatter Arsenal",
+      "dp": 3
+    },
+    {
+      "name": "The Phaeron's Armoury",
+      "dp": 1
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Arisen Tyrant",
+      "pts": 25
+    },
+    {
+      "name": "Atomic Disintegrators",
+      "pts": 10
+    },
+    {
+      "name": "Autodivinator",
+      "pts": 15
+    },
+    {
+      "name": "Chrono-impedance Fields",
+      "pts": 25
+    },
+    {
+      "name": "Cursed Circlet",
+      "pts": 25
+    },
+    {
+      "name": "Deepening Madness",
+      "pts": 20
+    },
+    {
+      "name": "Demanding Leader",
+      "pts": 10
+    },
+    {
+      "name": "Destroyer Ankh",
+      "pts": 20
+    },
+    {
+      "name": "Dimensional Overseer",
+      "pts": 25
+    },
+    {
+      "name": "Dimensional Sanctum",
+      "pts": 20
+    },
+    {
+      "name": "Dread Majesty",
+      "pts": 30
+    },
+    {
+      "name": "Eldritch Nightmare",
+      "pts": 10
+    },
+    {
+      "name": "Enaegic Dermal Bond",
+      "pts": 30
+    },
+    {
+      "name": "Enlivened Sentinels",
+      "pts": 20
+    },
+    {
+      "name": "Eternal Conqueror",
+      "pts": 25
+    },
+    {
+      "name": "Eternal Madness",
+      "pts": 20
+    },
+    {
+      "name": "Gauntlet of Compression",
+      "pts": 20
+    },
+    {
+      "name": "Gravitic Bolas",
+      "pts": 15
+    },
+    {
+      "name": "Honourable Combatant",
+      "pts": 10
+    },
+    {
+      "name": "Hyperphasic Fulcrum",
+      "pts": 15
+    },
+    {
+      "name": "Hyperspatial Transfer Node",
+      "pts": 15
+    },
+    {
+      "name": "Ingrained Superiority",
+      "pts": 5
+    },
+    {
+      "name": "Mark of the Nekrosor",
+      "pts": 20
+    },
+    {
+      "name": "Metalodermal Tesla Weave",
+      "pts": 10
+    },
+    {
+      "name": "Miniaturised Nebuloscope",
+      "pts": 15
+    },
+    {
+      "name": "Mortality Shroud (Aura)",
+      "pts": 10
+    },
+    {
+      "name": "Murdermind",
+      "pts": 15
+    },
+    {
+      "name": "Nether-realm Casket",
+      "pts": 20
+    },
+    {
+      "name": "Osteoclave Fulcrum",
+      "pts": 20
+    },
+    {
+      "name": "Phasal Subjugator",
+      "pts": 35
+    },
+    {
+      "name": "Prelocational Optimiser",
+      "pts": 25
+    },
+    {
+      "name": "Quantum Abacus",
+      "pts": 15
+    },
+    {
+      "name": "Recursive Reanimation",
+      "pts": 5
+    },
+    {
+      "name": "Soulless Reaper",
+      "pts": 15
+    },
+    {
+      "name": "Tools of Dominion",
+      "pts": 15
+    },
+    {
+      "name": "Unflinching Will",
+      "pts": 20
+    },
+    {
+      "name": "Veil of Darkness",
+      "pts": 20
+    },
+    {
+      "name": "Warrior Noble",
+      "pts": 15
+    }
   ],
   "revision": 9,
   "file": "Necrons.json",
@@ -962,6 +1152,12 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Gloom prism",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         }
@@ -1147,7 +1343,34 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Exile cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Tomb Sentinel claws",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Gloom prism",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Exile cannon",
@@ -1216,7 +1439,34 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Gauss slicers",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Tomb Stalker claws",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Gloom prism",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Gauss slicers",
@@ -1426,6 +1676,12 @@
               "n": "Staff of light",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Overlord's blade",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2965,6 +3221,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Resurrection orb",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         }
@@ -3048,6 +3310,20 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Resurrection orb",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Weapon",
           "min": 1,
@@ -3878,6 +4154,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Unit Composition",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Plasmacyte",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "3-6 Destroyers",
           "min": 0,
           "max": null,
@@ -4020,6 +4310,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Resurrection orb",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Weapons",
           "min": 1,
           "max": 1,
@@ -4115,7 +4419,28 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Overlord's blade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Resurrection orb",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -4620,6 +4945,20 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Unit Composition",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Plasmacyte",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "3-6 Destroyers",
           "min": 3,

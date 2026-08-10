@@ -7,6 +7,7 @@
   "catalogueName": "Imperium - Adeptus Astartes - Space Wolves",
   "nativeFaction": "Adeptus Astartes",
   "detachments": [],
+  "enhancements": [],
   "revision": 3,
   "file": "Imperium - Space Wolves.json",
   "counts": {
@@ -262,6 +263,46 @@
               "n": "Blood Claw Pack Leader",
               "min": 1,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace bolt pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace Astartes chainsword",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -553,6 +594,32 @@
       "leads": null,
       "options": [
         {
+          "n": "Replace Chainsword",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Replace Carbine",
           "min": 1,
           "max": 1,
@@ -560,6 +627,12 @@
           "opts": [
             {
               "n": "Bolt Carbine",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
               "min": 0,
               "max": null,
               "p": 0
@@ -1166,6 +1239,50 @@
           ]
         },
         {
+          "n": "Replace boltgun",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grav-gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Replace close combat weapon",
           "min": 1,
           "max": 1,
@@ -1173,6 +1290,24 @@
           "opts": [
             {
               "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
               "min": 0,
               "max": null,
               "p": 0
@@ -1698,6 +1833,52 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Replace bolt pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace Astartes chainsword",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -1761,6 +1942,12 @@
           "opts": [
             {
               "n": "Twin stormstrike missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
               "min": 0,
               "max": null,
               "p": 0
@@ -1877,6 +2064,32 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin helfrost cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Sponson weapons",
           "min": 1,
@@ -2166,6 +2379,12 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Dreadnought Combat Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -2177,6 +2396,38 @@
           "opts": [
             {
               "n": "Helfrost cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Assault Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
               "min": 0,
               "max": null,
               "p": 0
@@ -2381,6 +2632,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -2404,6 +2661,12 @@
             },
             {
               "n": "Master-crafted Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
               "min": 0,
               "max": null,
               "p": 0
@@ -2521,6 +2784,36 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -2540,6 +2833,30 @@
               "n": "Relic shield and close combat weapon",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -2636,6 +2953,86 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Relic weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Bolt pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Master-crafted boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -2706,7 +3103,36 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wolf Guard Headtakers",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wolf Guard Headtakers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Hunting Wolves",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Hunting Wolves",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2752,7 +3178,36 @@
         "max": 3
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wolf Guard Headtakers",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wolf Guard Headtakers",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Hunting Wolves",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Hunting Wolves",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2813,6 +3268,20 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Loadout",
           "min": 2,
           "max": 2,
@@ -2822,6 +3291,90 @@
               "n": "Storm shield",
               "min": 0,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistols",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee weapons",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2908,6 +3461,76 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Assault Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Bolters",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -2991,6 +3614,20 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Loadout",
           "min": 2,
           "max": 2,
@@ -3000,6 +3637,90 @@
               "n": "Storm shield",
               "min": 0,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistols",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee weapons",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -3231,6 +3952,62 @@
       ],
       "options": [
         {
+          "n": "Replace bolt pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Master-crafted boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Replace relic weapon",
           "min": 1,
           "max": 1,
@@ -3244,6 +4021,30 @@
             },
             {
               "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
               "min": 0,
               "max": null,
               "p": 0
@@ -3333,7 +4134,28 @@
         "Grey Hunters",
         "Wolf Guard Headtakers"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Crozius arcanum",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Absolvor bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -3437,6 +4259,152 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grav-gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile Launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistols",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grav-pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee weapons",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -3532,6 +4500,20 @@
               "min": 0,
               "max": null,
               "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Enhancements",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Death in the Dark",
+              "min": 0,
+              "max": 1,
+              "p": 15
             }
           ]
         }
@@ -3704,7 +4686,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Great wolf claw",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Blizzard shield",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Fenrisian great axe",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Great wolf claw",

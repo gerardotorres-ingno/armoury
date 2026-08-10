@@ -7,16 +7,180 @@
   "catalogueName": "Chaos - Emperor's Children",
   "nativeFaction": "Emperor's Children",
   "detachments": [
-    "Slaanesh's Chosen",
-    "Peerless Bladesmen",
-    "Rapid Evisceration",
-    "Coterie of the Conceited",
-    "Mercurial Host",
-    "Carnival of Excess",
-    "Court of the Phoenician",
-    "Elegant Brutes",
-    "Frenzied Host",
-    "Spectacle of Slaughter"
+    {
+      "name": "Carnival of Excess",
+      "dp": 2
+    },
+    {
+      "name": "Coterie of the Conceited",
+      "dp": 3
+    },
+    {
+      "name": "Court of the Phoenician",
+      "dp": 2
+    },
+    {
+      "name": "Elegant Brutes",
+      "dp": 1
+    },
+    {
+      "name": "Frenzied Host",
+      "dp": 1
+    },
+    {
+      "name": "Mercurial Host",
+      "dp": 2
+    },
+    {
+      "name": "Peerless Bladesmen",
+      "dp": 2
+    },
+    {
+      "name": "Rapid Evisceration",
+      "dp": 2
+    },
+    {
+      "name": "Slaanesh's Chosen",
+      "dp": 2
+    },
+    {
+      "name": "Spectacle of Slaughter",
+      "dp": 1
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Accomplished Tactician",
+      "pts": 35
+    },
+    {
+      "name": "Beguiling Grotesquerie",
+      "pts": 15
+    },
+    {
+      "name": "Blinding Speed",
+      "pts": 25
+    },
+    {
+      "name": "Cacophonic Accompaniment",
+      "pts": 20
+    },
+    {
+      "name": "Dark Blessings",
+      "pts": 10
+    },
+    {
+      "name": "Distortion",
+      "pts": 25
+    },
+    {
+      "name": "Eager Patrons",
+      "pts": 20
+    },
+    {
+      "name": "Eager to Prove",
+      "pts": 15
+    },
+    {
+      "name": "Empyric Suffusion",
+      "pts": 15
+    },
+    {
+      "name": "Euphoric Crown",
+      "pts": 20
+    },
+    {
+      "name": "Exalted Patron",
+      "pts": 15
+    },
+    {
+      "name": "Faultless Opportunist",
+      "pts": 15
+    },
+    {
+      "name": "Heretek Adept",
+      "pts": 35
+    },
+    {
+      "name": "Howling Plate",
+      "pts": 20
+    },
+    {
+      "name": "Intoxicating Musk",
+      "pts": 20
+    },
+    {
+      "name": "Loathsome Dexterity",
+      "pts": 10
+    },
+    {
+      "name": "Pledge of Dark Glory",
+      "pts": 25
+    },
+    {
+      "name": "Pledge of Eternal Servitude",
+      "pts": 25
+    },
+    {
+      "name": "Pledge of Mortal Pain",
+      "pts": 15
+    },
+    {
+      "name": "Pledge of Unholy Fortune",
+      "pts": 30
+    },
+    {
+      "name": "Possessed Blade",
+      "pts": 25
+    },
+    {
+      "name": "Proud and Vainglorious",
+      "pts": 20
+    },
+    {
+      "name": "Repulsed by Weakness",
+      "pts": 25
+    },
+    {
+      "name": "Rise to the Challenge",
+      "pts": 30
+    },
+    {
+      "name": "Slayer of Champions",
+      "pts": 15
+    },
+    {
+      "name": "Soulstain Made Manifest",
+      "pts": 15
+    },
+    {
+      "name": "Spearhead Striker",
+      "pts": 20
+    },
+    {
+      "name": "Spiritsliver",
+      "pts": 20
+    },
+    {
+      "name": "Steeped in Suffering",
+      "pts": 20
+    },
+    {
+      "name": "Sublime Presence",
+      "pts": 25
+    },
+    {
+      "name": "Tactical Perfection",
+      "pts": 15
+    },
+    {
+      "name": "Tears of the Phoenix",
+      "pts": 25
+    },
+    {
+      "name": "Warp Walker",
+      "pts": 30
+    }
   ],
   "revision": 4,
   "file": "Chaos - Emperor's Children.json",
@@ -107,7 +271,60 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Soulshatter lascannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Armoured tracks",
@@ -187,7 +404,54 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Armoured tracks",
@@ -404,6 +668,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         },
@@ -461,6 +737,12 @@
               "n": "Power fist and combi-weapon",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Paired accursed weapons",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -856,6 +1138,24 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Electroscourge",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hades lascannon",
+              "min": 0,
+              "max": null,
+              "p": 15
+            },
+            {
+              "n": "Heavy reaper autocannon",
+              "min": 0,
+              "max": null,
+              "p": 15
             }
           ]
         },
@@ -890,6 +1190,24 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Electroscourge",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hades lascannon",
+              "min": 0,
+              "max": null,
+              "p": 15
+            },
+            {
+              "n": "Heavy reaper autocannon",
+              "min": 0,
+              "max": null,
+              "p": 15
             }
           ]
         },
@@ -1636,6 +1954,46 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Rapture lash",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power sword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -1861,6 +2219,26 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Plasma Pistol",
           "min": 1,
           "max": 1,
@@ -1870,6 +2248,18 @@
               "n": "Rapture lash",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -1888,6 +2278,12 @@
             },
             {
               "n": "Master-crafted power sword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Screamer pistol",
               "min": 0,
               "max": null,
               "p": 0
@@ -1999,6 +2395,20 @@
         "Emperor's Children Terminator Squad; Noise Marines"
       ],
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Screamer pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Weapons",
           "min": 1,
@@ -2315,6 +2725,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Sonic blaster",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         }
@@ -2616,7 +3032,34 @@
       "leads": [
         "Infractors; Noise Marines; Tormentors"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Agonising Energies",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Force weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Agonising Energies - witchfire",
@@ -2731,6 +3174,46 @@
               "n": "Tormentor w/ meltagun",
               "min": 0,
               "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Bolt Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Power Sword",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Rapture lash",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power sword",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]

@@ -6,7 +6,166 @@
   "catalogueId": "1f19-6509-d906-ca10",
   "catalogueName": "Imperium - Adeptus Custodes",
   "nativeFaction": "Adeptus Custodes",
-  "detachments": [],
+  "detachments": [
+    {
+      "name": "Auric Champions",
+      "dp": 2
+    },
+    {
+      "name": "Lions of the Emperor",
+      "dp": 2
+    },
+    {
+      "name": "Might of the Moritoi",
+      "dp": 1
+    },
+    {
+      "name": "Null Maiden Vigil",
+      "dp": 2
+    },
+    {
+      "name": "Shield Host",
+      "dp": 2
+    },
+    {
+      "name": "Silent Hunters",
+      "dp": 1
+    },
+    {
+      "name": "Solar Spearhead",
+      "dp": 2
+    },
+    {
+      "name": "Talons of the Emperor",
+      "dp": 3
+    },
+    {
+      "name": "Tharanatoi Hammerblow",
+      "dp": 1
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Adamantine Talisman",
+      "pts": 25
+    },
+    {
+      "name": "Admonimortis",
+      "pts": 30
+    },
+    {
+      "name": "Aegis Projector",
+      "pts": 20
+    },
+    {
+      "name": "Augury Uplink",
+      "pts": 35
+    },
+    {
+      "name": "Auramite Sarcophagus",
+      "pts": 15
+    },
+    {
+      "name": "Auric Mantle",
+      "pts": 15
+    },
+    {
+      "name": "Blade Imperator",
+      "pts": 25
+    },
+    {
+      "name": "Castellan's Mark",
+      "pts": 20
+    },
+    {
+      "name": "Champion of the Imperium",
+      "pts": 25
+    },
+    {
+      "name": "Efficient Aggression",
+      "pts": 25
+    },
+    {
+      "name": "Encircling Hunter",
+      "pts": 15
+    },
+    {
+      "name": "Enhanced Voidsheen Cloak",
+      "pts": 10
+    },
+    {
+      "name": "Fierce Conqueror",
+      "pts": 15
+    },
+    {
+      "name": "From the Hall of Armouries",
+      "pts": 20
+    },
+    {
+      "name": "Gift of Terran Artifice",
+      "pts": 15
+    },
+    {
+      "name": "Honoured Fallen (Aura)",
+      "pts": 15
+    },
+    {
+      "name": "Huntress' Eye",
+      "pts": 15
+    },
+    {
+      "name": "Inspirational Exemplar",
+      "pts": 10
+    },
+    {
+      "name": "Interred Expertise",
+      "pts": 25
+    },
+    {
+      "name": "Martial Philosopher",
+      "pts": 30
+    },
+    {
+      "name": "Mnemo-locked Shrine Cipher",
+      "pts": 25
+    },
+    {
+      "name": "Oblivion Knight",
+      "pts": 25
+    },
+    {
+      "name": "Panoptispex",
+      "pts": 5
+    },
+    {
+      "name": "Praesidius",
+      "pts": 25
+    },
+    {
+      "name": "Psyk-out Grenades",
+      "pts": 10
+    },
+    {
+      "name": "Radiant Mantle",
+      "pts": 30
+    },
+    {
+      "name": "Raptor Blade",
+      "pts": 5
+    },
+    {
+      "name": "Superior Creation",
+      "pts": 25
+    },
+    {
+      "name": "Veiled Blade",
+      "pts": 25
+    },
+    {
+      "name": "Veteran of the Kataphraktoi",
+      "pts": 10
+    }
+  ],
   "revision": 7,
   "file": "Imperium - Adeptus Custodes.json",
   "counts": {
@@ -366,7 +525,34 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm Bolter",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Storm Bolter",
@@ -2235,6 +2421,20 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Balistus grenade launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "equipped with",
           "min": 1,
           "max": 1,
@@ -3005,6 +3205,12 @@
               "n": "Twin heavy bolter",
               "min": 1,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]

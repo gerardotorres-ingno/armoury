@@ -7,6 +7,7 @@
   "catalogueName": "Imperium - Adeptus Astartes - Dark Angels",
   "nativeFaction": "Dark Angels",
   "detachments": [],
+  "enhancements": [],
   "revision": 3,
   "file": "Imperium - Dark Angels.json",
   "counts": {
@@ -232,7 +233,22 @@
         "Terminator Assault Squad",
         "Terminator Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Crusade",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Master of the Deathwing",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Master-crafted storm bolter",
@@ -386,6 +402,30 @@
               "n": "Cyclone Missile Launcher & Storm Bolter",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -955,6 +995,30 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Plasma cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -1446,7 +1510,22 @@
         "Sternguard Veteran Squad",
         "Tactical Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Crusade",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Keeper of the Unseen Ritual",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Bolt pistol",
@@ -1798,6 +1877,26 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Weapon 1",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes grenade launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma Talon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -1866,7 +1965,68 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Plasma Talon Replacement",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes grenade launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma Talon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Plasma Talon Replacement",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes grenade launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma Talon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Plasma Talon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes grenade launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma Talon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Bolt Pistol",

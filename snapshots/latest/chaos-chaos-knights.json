@@ -7,14 +7,144 @@
   "catalogueName": "Chaos - Chaos Knights",
   "nativeFaction": "Heretic Astartes",
   "detachments": [
-    "Traitoris Lance",
-    "Iconoclast Fiefdom",
-    "Lords of Dread",
-    "Houndpack Lance",
-    "Infernal Lance",
-    "Helhunt Lance",
-    "Bastions of Tyranny",
-    "Hunting Warpack"
+    {
+      "name": "Bastions of Tyranny",
+      "dp": 1
+    },
+    {
+      "name": "Helhunt Lance",
+      "dp": 2
+    },
+    {
+      "name": "Houndpack Lance",
+      "dp": 2
+    },
+    {
+      "name": "Hunting Warpack",
+      "dp": 1
+    },
+    {
+      "name": "Iconoclast Fiefdom",
+      "dp": 1
+    },
+    {
+      "name": "Infernal Lance",
+      "dp": 3
+    },
+    {
+      "name": "Lords of Dread",
+      "dp": 2
+    },
+    {
+      "name": "Traitoris Lance",
+      "dp": 2
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Aspect of the Beast",
+      "pts": 30
+    },
+    {
+      "name": "Bestial Aspect",
+      "pts": 30
+    },
+    {
+      "name": "Blade of Celerity",
+      "pts": 35
+    },
+    {
+      "name": "Blasphemous Engine",
+      "pts": 35
+    },
+    {
+      "name": "Blessing of the Dark Master",
+      "pts": 20
+    },
+    {
+      "name": "Cruel Lashmaster",
+      "pts": 25
+    },
+    {
+      "name": "Final Howl (Aura)",
+      "pts": 20
+    },
+    {
+      "name": "Fleshmetal Fusion",
+      "pts": 35
+    },
+    {
+      "name": "Hate-filled Dominion",
+      "pts": 20
+    },
+    {
+      "name": "Hunter's Helm",
+      "pts": 15
+    },
+    {
+      "name": "Iconoclast Idol",
+      "pts": 20
+    },
+    {
+      "name": "Knight Diabolus",
+      "pts": 25
+    },
+    {
+      "name": "Loping Predator",
+      "pts": 10
+    },
+    {
+      "name": "Malevolent Heraldry",
+      "pts": 30
+    },
+    {
+      "name": "Mirror of Fates",
+      "pts": 30
+    },
+    {
+      "name": "Nightmare's Master",
+      "pts": 20
+    },
+    {
+      "name": "Octagram of Conjuration",
+      "pts": 40
+    },
+    {
+      "name": "Panoply of the Cursed Knights",
+      "pts": 15
+    },
+    {
+      "name": "Preyslayer's Mantle",
+      "pts": 15
+    },
+    {
+      "name": "Pterrorshade Rookery",
+      "pts": 20
+    },
+    {
+      "name": "Putrid Carapace",
+      "pts": 30
+    },
+    {
+      "name": "Throne Mechanicum of Skulls",
+      "pts": 25
+    },
+    {
+      "name": "Throne Tyrannicus",
+      "pts": 25
+    },
+    {
+      "name": "Tyrant's Shadow",
+      "pts": 25
+    },
+    {
+      "name": "Veil of Medrengard",
+      "pts": 35
+    },
+    {
+      "name": "Warp-borne Stalker",
+      "pts": 25
+    }
   ],
   "revision": 1,
   "file": "Chaos - Chaos Knights.json",
@@ -1755,7 +1885,28 @@
       "leads": [
         "TRAITOR GUARDSMAN SQUAD"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Power fist",
@@ -1897,6 +2048,12 @@
             },
             {
               "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
               "min": 0,
               "max": null,
               "p": 0

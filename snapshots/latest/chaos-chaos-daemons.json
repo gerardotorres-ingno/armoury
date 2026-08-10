@@ -6,17 +6,8 @@
   "catalogueId": "d265-877b-e03d-30ca",
   "catalogueName": "Chaos - Chaos Daemons",
   "nativeFaction": "Heretic Astartes",
-  "detachments": [
-    "Daemonic Incursion",
-    "Legion of Excess",
-    "Scintillating Legion",
-    "Blood Legion",
-    "Plague Legion",
-    "Shadow Legion",
-    "Cavalcade of Chaos",
-    "Lords of the Warp",
-    "Warptide"
-  ],
+  "detachments": [],
+  "enhancements": [],
   "revision": 1,
   "file": "Chaos - Chaos Daemons.json",
   "counts": {
@@ -164,6 +155,12 @@
           "opts": [
             {
               "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
               "min": 0,
               "max": null,
               "p": 0
@@ -468,6 +465,26 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Bolt pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -648,6 +665,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         },
@@ -661,6 +690,58 @@
               "n": "Combi-bolter and accursed weapon",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Paired accursed weapons",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Accursed Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Combi-bolter",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -800,6 +881,26 @@
           ]
         },
         {
+          "n": "Bolt Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Boltgun and Accursed Weapon",
           "min": 1,
           "max": 1,
@@ -809,6 +910,12 @@
               "n": "Boltgun and accursed weapon",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Paired accursed weapons",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -1238,7 +1345,28 @@
         "CULTIST MOB",
         "LEGIONARIES"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Accursed crozius",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Accursed crozius",
@@ -1757,6 +1885,32 @@
           ]
         },
         {
+          "n": "Melee weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Astartes chainsword",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Ranged weapon",
           "min": 1,
           "max": 1,
@@ -1772,6 +1926,36 @@
               "n": "Plasma gun",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -1988,6 +2172,26 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         },
@@ -2014,6 +2218,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         },
@@ -2039,6 +2255,18 @@
               "n": "Heavy melee weapon",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -2198,7 +2426,34 @@
         "LEGIONARIES",
         "POSSESSED"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Rite of Possession",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Staff of possession",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "➤ Rite of Possession - witchfire",
@@ -2556,6 +2811,52 @@
               "n": "Raptor w/ flamer",
               "min": 0,
               "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes chainsword",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy melee weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -3362,7 +3663,34 @@
         "CHOSEN",
         "LEGIONARIES"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Infernal Gaze",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Force weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -3431,6 +3759,18 @@
               "n": "Chaos Familiar",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Infernal Gaze",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Force weapon",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -3540,7 +3880,28 @@
       "leads": [
         "TRAITOR GUARDSMAN SQUAD"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Power fist",
@@ -3682,6 +4043,12 @@
             },
             {
               "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
               "min": 0,
               "max": null,
               "p": 0

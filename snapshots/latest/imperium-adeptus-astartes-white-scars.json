@@ -7,6 +7,7 @@
   "catalogueName": "Imperium - Adeptus Astartes - White Scars",
   "nativeFaction": "Adeptus Astartes",
   "detachments": [],
+  "enhancements": [],
   "revision": 2,
   "file": "Imperium - White Scars.json",
   "counts": {
@@ -115,7 +116,40 @@
       "leads": [
         "OUTRIDER SQUAD"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Onslaught Gatling Cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Stormtooth",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power Sword",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Onslaught Gatling Cannon",

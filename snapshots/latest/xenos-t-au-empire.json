@@ -6,7 +6,130 @@
   "catalogueId": "d81a-61dd-6d27-a3ce",
   "catalogueName": "Xenos - T'au Empire",
   "nativeFaction": "T'au Empire",
-  "detachments": [],
+  "detachments": [
+    {
+      "name": "Advanced Acquisition Cadre",
+      "dp": 1
+    },
+    {
+      "name": "Auxiliary Cadre",
+      "dp": 1
+    },
+    {
+      "name": "Experimental Prototype Cadre",
+      "dp": 1
+    },
+    {
+      "name": "Kauyon",
+      "dp": 2
+    },
+    {
+      "name": "Kroot Hunting Pack",
+      "dp": 2
+    },
+    {
+      "name": "Mont'ka",
+      "dp": 3
+    },
+    {
+      "name": "Retaliation Cadre",
+      "dp": 3
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Admired Leader",
+      "pts": 20
+    },
+    {
+      "name": "Borthrod Gland",
+      "pts": 15
+    },
+    {
+      "name": "Coordinated Exploitation",
+      "pts": 30
+    },
+    {
+      "name": "Exemplar of the Kauyon",
+      "pts": 20
+    },
+    {
+      "name": "Exemplar of the Mont'ka",
+      "pts": 10
+    },
+    {
+      "name": "Internal Grenade Racks",
+      "pts": 20
+    },
+    {
+      "name": "Kroothawk Flock",
+      "pts": 10
+    },
+    {
+      "name": "Negation Emitters",
+      "pts": 15
+    },
+    {
+      "name": "Nomadic Hunter",
+      "pts": 20
+    },
+    {
+      "name": "Plasma Accelerator Rifle",
+      "pts": 20
+    },
+    {
+      "name": "Precision of the Patient Hunter",
+      "pts": 15
+    },
+    {
+      "name": "Prototype Weapon System",
+      "pts": 15
+    },
+    {
+      "name": "Puretide Engram Neurochip",
+      "pts": 15
+    },
+    {
+      "name": "Root-carved Weapons",
+      "pts": 10
+    },
+    {
+      "name": "Solid-image Projection Unit",
+      "pts": 20
+    },
+    {
+      "name": "Starflare Ignition System",
+      "pts": 20
+    },
+    {
+      "name": "Strategic Conqueror",
+      "pts": 15
+    },
+    {
+      "name": "Strike Swiftly",
+      "pts": 35
+    },
+    {
+      "name": "Student of Kauyon",
+      "pts": 20
+    },
+    {
+      "name": "Supernova Launcher",
+      "pts": 15
+    },
+    {
+      "name": "Thermoneutronic Projector",
+      "pts": 15
+    },
+    {
+      "name": "Through Unity, Devastation",
+      "pts": 30
+    },
+    {
+      "name": "Unmasking Suite",
+      "pts": 15
+    }
+  ],
   "revision": 2,
   "file": "T'au Empire.json",
   "counts": {
@@ -188,6 +311,32 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin heavy rail cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Burst Cannons",
           "min": 1,
           "max": 1,
@@ -201,6 +350,20 @@
             },
             {
               "n": "2 cyclic ion blasters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Seeker Missiles (0-6)",
+          "min": 0,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile",
               "min": 0,
               "max": null,
               "p": 0
@@ -272,6 +435,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Swiftstrike Burst Cannon",
           "min": 1,
           "max": 1,
@@ -285,6 +468,12 @@
             },
             {
               "n": "Ion cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Swiftstrike railgun",
               "min": 0,
               "max": null,
               "p": 0
@@ -305,6 +494,20 @@
             },
             {
               "n": "2 Cyclic ion blasters",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Seeker Missiles (0-4)",
+          "min": 0,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile",
               "min": 0,
               "max": null,
               "p": 0
@@ -462,7 +665,40 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pulse pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pulse blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Support turret",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -537,6 +773,140 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Heavy rail rifle",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy rail rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "High-yield missile pods",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Support Systems (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Seeker missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Secondary Weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin smart missile system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Crushing bulk",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Heavy rail rifle",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy rail rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "High-yield missile pods",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Support Systems (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Seeker missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Secondary Weapons",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin smart missile system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -592,7 +962,28 @@
         "Breacher Team",
         "Strike Team"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Fireblade pulse rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -750,6 +1141,20 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Support Systems (1-4)",
           "min": 1,
           "max": 4,
@@ -759,6 +1164,66 @@
               "n": "High-output burst cannon",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Battlesuit support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shield generator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Airbursting fragmentation projector",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Cyclic ion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma rifle",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -834,7 +1299,90 @@
         "CRISIS STARSCYTHE BATTLESUITS",
         "CRISIS SUNFORGE BATTLESUITS"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Support Systems (1-4)",
+          "min": 1,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shield generator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Airbursting fragmentation projector",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Cyclic ion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -893,7 +1441,90 @@
         "CRISIS STARSCYTHE BATTLESUITS",
         "CRISIS SUNFORGE BATTLESUITS"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Support Systems (1-4)",
+          "min": 1,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shield generator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Airbursting fragmentation projector",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Cyclic ion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1062,7 +1693,172 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Support Systems (1-4)",
+          "min": 1,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shield generator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Airbursting fragmentation projector",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Cyclic ion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Support Systems (1-4)",
+          "min": 1,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shield generator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Airbursting fragmentation projector",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Cyclic ion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1118,7 +1914,76 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Plasma rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1175,7 +2040,76 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1232,7 +2166,48 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1347,6 +2322,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Accelerator burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Twin Pulse Carbines",
           "min": 1,
           "max": 1,
@@ -1360,6 +2355,20 @@
             },
             {
               "n": "2 Smart missile systems",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Seeker Missiles (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile",
               "min": 0,
               "max": null,
               "p": 0
@@ -1440,6 +2449,12 @@
             },
             {
               "n": "Twin missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin burst cannon",
               "min": 0,
               "max": null,
               "p": 0
@@ -1624,7 +2639,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapons",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Longshot pulse rifles",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Pulse pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Close combat weapons",
@@ -1707,6 +2749,18 @@
           "opts": [
             {
               "n": "Twin burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin T'au flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin fusion blaster",
               "min": 0,
               "max": null,
               "p": 0
@@ -1999,6 +3053,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Railgun",
           "min": 1,
           "max": 1,
@@ -2012,6 +3080,20 @@
             },
             {
               "n": "Ion cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Seeker Missiles (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile",
               "min": 0,
               "max": null,
               "p": 0
@@ -2157,6 +3239,46 @@
               "n": "Heavy Gun Drone w/ Twin burst cannon",
               "min": 0,
               "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin burst cannon",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2358,6 +3480,46 @@
               "n": "Kroot Carnivore w/ tanglebomb launcher",
               "min": 0,
               "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kroot pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kroot Rifle",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Kroot carbine",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kroot rifle",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2576,7 +3738,28 @@
         "Kroot Carnivores",
         "Kroot Farstalkers"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin ritualistic blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kroot scattergun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2718,6 +3901,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kalamandra's bite",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Wargear Options",
           "min": 1,
           "max": 1,
@@ -2725,6 +3928,12 @@
           "opts": [
             {
               "n": "Blast javelin and hunting javelin",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kroot long gun",
               "min": 0,
               "max": null,
               "p": 0
@@ -2811,7 +4020,28 @@
         "Kroot Carnivores",
         "Kroot Farstalkers"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kroot rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shaper's blade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2870,7 +4100,48 @@
         "Kroot Carnivores",
         "Kroot Farstalkers"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Shaper's blade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kroot pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bladestave and prey-hook",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Dart-bow and tri-blade",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -3099,6 +4370,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Seeker Missiles (0-2)",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Railgun",
           "min": 1,
           "max": 1,
@@ -3231,7 +4516,52 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy rail cannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Long-barrelled burst cannon array",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Ion cannon",
+              "min": 6,
+              "max": 6,
+              "p": 0
+            },
+            {
+              "n": "Seeker missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Armoured hull",
@@ -3350,7 +4680,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Long-barrelled burst cannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Armoured hull",
@@ -3468,6 +4825,38 @@
               "n": "Pathfinders w/ rail rifle",
               "min": 0,
               "max": 3,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Pulse carbine",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pulse pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Semi-automatic grenade launcher",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -3612,6 +5001,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin pulse carbine",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Piranha Burst Cannon",
           "min": 1,
           "max": 1,
@@ -3625,6 +5034,20 @@
             },
             {
               "n": "Piranha fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Seeker Missiles (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile",
               "min": 0,
               "max": null,
               "p": 0
@@ -3705,7 +5128,42 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Pulse submunitions cannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Missile Drones (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Missile Drone",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Pulse submunitions cannon",
@@ -3769,7 +5227,54 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Quad ion turret",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Seeker missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Accelerator Burst Cannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Accelerator burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "➤ Quad ion turret - standard",
@@ -4004,6 +5509,20 @@
           ]
         },
         {
+          "n": "Missile Drones (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Missile Drone",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Twin Plasma Rifles",
           "min": 1,
           "max": 1,
@@ -4011,6 +5530,18 @@
           "opts": [
             {
               "n": "Twin smart missile system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin plasma rifle",
               "min": 0,
               "max": null,
               "p": 0
@@ -4278,6 +5809,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile rack",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Twin Pulse Carbines",
           "min": 1,
           "max": 1,
@@ -4387,6 +5938,46 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pulse pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Burst cannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -4476,6 +6067,12 @@
             },
             {
               "n": "Twin burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin T'au flamer",
               "min": 0,
               "max": null,
               "p": 0
@@ -4666,6 +6263,38 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pulse pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pulse rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Support turret",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -4738,6 +6367,32 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin ion rifle",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Seeker missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Missile Pod",
           "min": 1,
           "max": 1,
@@ -4745,6 +6400,12 @@
           "opts": [
             {
               "n": "Twin missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
               "min": 0,
               "max": null,
               "p": 0
@@ -4837,6 +6498,32 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Crushing feet",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Burst cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Smart missile system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Arm Weapons",
           "min": 2,
@@ -5089,6 +6776,26 @@
               "n": "Tetra",
               "min": 2,
               "max": 4,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapons",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Pulse rifle",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -5447,6 +7154,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Missile pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Burst Cannons",
           "min": 1,
           "max": 1,
@@ -5486,6 +7213,20 @@
             },
             {
               "n": "2 Swiftstrike railguns",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Seeker Missiles (0-6)",
+          "min": 0,
+          "max": 6,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Seeker missile",
               "min": 0,
               "max": null,
               "p": 0
@@ -5614,6 +7355,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Plasma Rifles",
           "min": 1,
           "max": 1,
@@ -5723,6 +7478,18 @@
               "n": "Oversight Drone",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Stingwing claws",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Neutron blaster",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -5847,6 +7614,32 @@
           ]
         },
         {
+          "n": "Support System",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Battlesuit support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shield generator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Weapon support system",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Weapons",
           "min": 2,
           "max": 2,
@@ -5958,7 +7751,54 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Flechette pod",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Ionic discharge cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Phased plasma-flamer",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Battlesuit fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Missile Drones (0-2)",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Missile Drone",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Flechette pod",

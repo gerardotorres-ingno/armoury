@@ -7,6 +7,7 @@
   "catalogueName": "Xenos - Drukhari",
   "nativeFaction": "Drukhari",
   "detachments": [],
+  "enhancements": [],
   "revision": 1,
   "file": "Aeldari - Drukhari.json",
   "counts": {
@@ -721,6 +722,54 @@
             },
             {
               "n": "Spar glaive",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Aeldari missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Blaster",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shredder",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Splinter cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Dark lance",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shuriken cannon",
               "min": 0,
               "max": null,
               "p": 0
@@ -4975,6 +5024,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Shuriken Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -5245,7 +5300,28 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close Combat Weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Shuriken Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Close Combat Weapon",
@@ -5825,6 +5901,18 @@
               "n": "Shuriken Pistol",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Fusion Pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Neuro Disruptor",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -6423,6 +6511,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close Combat Weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Shuriken Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Weapon",
           "min": 1,
           "max": 1,
@@ -6602,6 +6710,44 @@
           ]
         },
         {
+          "n": "Ranged Weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Torturer's tool",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hexrifle",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Liquifier gun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Ossefactor",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Stinger pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Melee Weapon",
           "min": 0,
           "max": 1,
@@ -6609,6 +6755,12 @@
           "opts": [
             {
               "n": "Power weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Torturer's tool",
               "min": 0,
               "max": 1,
               "p": 0

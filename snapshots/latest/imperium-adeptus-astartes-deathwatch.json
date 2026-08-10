@@ -7,6 +7,7 @@
   "catalogueName": "Imperium - Adeptus Astartes - Deathwatch",
   "nativeFaction": "Adeptus Astartes",
   "detachments": [],
+  "enhancements": [],
   "revision": 4,
   "file": "Imperium - Deathwatch.json",
   "counts": {
@@ -315,6 +316,12 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -346,6 +353,12 @@
               "n": "Storm Bolter & Chainfist",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin lightning claws",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -818,6 +831,82 @@
               "n": "Kill Team Intercessor w/ superkrak missile launcher",
               "min": 0,
               "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace bolt rifle",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Deathwatch bolt rifle",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace CCW",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -1379,6 +1468,58 @@
               "n": "Plasma exterminators",
               "min": 0,
               "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]

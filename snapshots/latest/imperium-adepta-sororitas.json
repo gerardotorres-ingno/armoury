@@ -7,14 +7,136 @@
   "catalogueName": "Imperium - Adepta Sororitas",
   "nativeFaction": "Adepta Sororitas",
   "detachments": [
-    "Hallowed Martyrs",
-    "Penitent Host",
-    "Bringers of Flame",
-    "Army of Faith",
-    "Champions of Faith",
-    "Chorus of Condemnation",
-    "Sacred Champions",
-    "Sanctified Orators"
+    {
+      "name": "Army of Faith",
+      "dp": 2
+    },
+    {
+      "name": "Bringers of Flame",
+      "dp": 2
+    },
+    {
+      "name": "Champions of Faith",
+      "dp": 2
+    },
+    {
+      "name": "Chorus of Condemnation",
+      "dp": 1
+    },
+    {
+      "name": "Hallowed Martyrs",
+      "dp": 3
+    },
+    {
+      "name": "Penitent Host",
+      "dp": 2
+    },
+    {
+      "name": "Sacred Champions",
+      "dp": 1
+    },
+    {
+      "name": "Sanctified Orators",
+      "dp": 1
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Blade of Saint Ellynor",
+      "pts": 15
+    },
+    {
+      "name": "Catechism of Divine Penitence",
+      "pts": 15
+    },
+    {
+      "name": "Chaplet of Sacrifice",
+      "pts": 25
+    },
+    {
+      "name": "Clarion of Urgency",
+      "pts": 15
+    },
+    {
+      "name": "Divine Aspect",
+      "pts": 5
+    },
+    {
+      "name": "Eyes of the Oracle",
+      "pts": 10
+    },
+    {
+      "name": "Fire and Fury",
+      "pts": 30
+    },
+    {
+      "name": "Iron Surplice of Saint Istalela",
+      "pts": 10
+    },
+    {
+      "name": "Litanies of Faith",
+      "pts": 10
+    },
+    {
+      "name": "Mantle of Ophelia",
+      "pts": 20
+    },
+    {
+      "name": "Manual of Saint Griselda",
+      "pts": 20
+    },
+    {
+      "name": "Mark of Devotion",
+      "pts": 30
+    },
+    {
+      "name": "Perfervid Haste",
+      "pts": 10
+    },
+    {
+      "name": "Psalm of Righteous Judgement",
+      "pts": 20
+    },
+    {
+      "name": "Refrain of Enduring Faith",
+      "pts": 15
+    },
+    {
+      "name": "Righteous Rage",
+      "pts": 15
+    },
+    {
+      "name": "Saintly Example",
+      "pts": 10
+    },
+    {
+      "name": "Sanctified Amulet",
+      "pts": 25
+    },
+    {
+      "name": "Symphonic Payload",
+      "pts": 10
+    },
+    {
+      "name": "Through Suffering, Strength",
+      "pts": 25
+    },
+    {
+      "name": "Triptych of Judgement",
+      "pts": 15
+    },
+    {
+      "name": "Triptych of the Macharian Crusade",
+      "pts": 20
+    },
+    {
+      "name": "Verse of Holy Piety",
+      "pts": 15
+    },
+    {
+      "name": "Writ of Compunction",
+      "pts": 20
+    }
   ],
   "revision": 11,
   "file": "Imperium - Adepta Sororitas.json",
@@ -697,6 +819,26 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Secondary weapons",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-Killer Missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -828,6 +970,26 @@
               "n": "Insidiant w/ simulacrum",
               "min": 0,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Inferno pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Condemnor bolt pistol",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -993,6 +1155,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Sacresants",
+          "min": 4,
+          "max": 9,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Celestian Sacresant (Anointed Halberd)",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Celestian Sacresant (Hallowed Mace)",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Enhancements",
           "min": 0,
           "max": 1,
@@ -1014,6 +1196,18 @@
           "opts": [
             {
               "n": "Spear of the Faithful",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Anointed Halberd",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hallowed Mace",
               "min": 0,
               "max": null,
               "p": 0
@@ -1283,7 +1477,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Dialogus Staff",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Dialogus staff",
@@ -1354,7 +1569,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Mace of the Righteous",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Mace of the Righteous",
@@ -1561,6 +1797,32 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Heavy Bolter",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-Killer Missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Main Weapon",
           "min": 1,
           "max": 1,
@@ -1687,7 +1949,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Chirugeon's tools",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Chirugeon's tools",
@@ -1758,7 +2041,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Close combat weapon",
@@ -1831,6 +2141,32 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Heavy Bolter",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-Killer Missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Immolator Weapons",
           "min": 1,
@@ -2015,7 +2351,46 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Melta missile array",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Mace of Saint Praxedes",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Throne of Blame",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Ministorum heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Heavy bolter",
@@ -2813,6 +3188,26 @@
               "min": 0,
               "max": 1,
               "p": 10
+            },
+            {
+              "n": "Ministorum heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -2873,6 +3268,12 @@
               "min": 0,
               "max": 1,
               "p": 10
+            },
+            {
+              "n": "Ministorum heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -3253,6 +3654,38 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Dozer Ram",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Repressor twin heavy flamer",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-Killer Missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "May be equipped with",
           "min": 0,
           "max": 1,
@@ -3260,6 +3693,12 @@
           "opts": [
             {
               "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
               "min": 0,
               "max": null,
               "p": 0
@@ -3357,7 +3796,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Retributor Weapons",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Ministorum heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -3891,6 +4357,18 @@
               "min": 0,
               "max": 2,
               "p": 0
+            },
+            {
+              "n": "Sister Novitiate (Autogun)",
+              "min": 0,
+              "max": 9,
+              "p": 0
+            },
+            {
+              "n": "Sister Novitiate (Melee Weapon)",
+              "min": 0,
+              "max": 9,
+              "p": 0
             }
           ]
         },
@@ -3966,7 +4444,34 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-Killer Missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -4134,7 +4639,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Power weapon",

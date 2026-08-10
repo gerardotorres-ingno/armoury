@@ -6,7 +6,166 @@
   "catalogueId": "50c4-3e83-fe54-97c4",
   "catalogueName": "Imperium - Grey Knights",
   "nativeFaction": "Grey Knights",
-  "detachments": [],
+  "detachments": [
+    {
+      "name": "Argent Assault",
+      "dp": 1
+    },
+    {
+      "name": "Augurium Task Force",
+      "dp": 2
+    },
+    {
+      "name": "Banishers",
+      "dp": 2
+    },
+    {
+      "name": "Brotherhood Strike",
+      "dp": 2
+    },
+    {
+      "name": "Fires of Purgation",
+      "dp": 1
+    },
+    {
+      "name": "Hallowed Conclave",
+      "dp": 2
+    },
+    {
+      "name": "Immaterial Interdiction",
+      "dp": 1
+    },
+    {
+      "name": "Sanctic Spearhead",
+      "dp": 2
+    },
+    {
+      "name": "Warpbane Task Force",
+      "dp": 3
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Astral Overlap",
+      "pts": 10
+    },
+    {
+      "name": "Banishing Wave (Psychic)",
+      "pts": 20
+    },
+    {
+      "name": "Blinding Aura",
+      "pts": 10
+    },
+    {
+      "name": "Boons of Deimos",
+      "pts": 20
+    },
+    {
+      "name": "Doomseer's Amulet",
+      "pts": 25
+    },
+    {
+      "name": "Driven by Duty",
+      "pts": 10
+    },
+    {
+      "name": "Ephemeral Tome",
+      "pts": 15
+    },
+    {
+      "name": "Eye of the Augurium",
+      "pts": 25
+    },
+    {
+      "name": "Grimoire of Conjunctions",
+      "pts": 10
+    },
+    {
+      "name": "Inescapable Judgement (Psychic)",
+      "pts": 20
+    },
+    {
+      "name": "Mandulian Reliquary",
+      "pts": 20
+    },
+    {
+      "name": "Nemesis Rounds",
+      "pts": 10
+    },
+    {
+      "name": "One Foot in the Future",
+      "pts": 15
+    },
+    {
+      "name": "Paragon of Sanctity",
+      "pts": 10
+    },
+    {
+      "name": "Phial of the Abyss",
+      "pts": 15
+    },
+    {
+      "name": "Precognicient Volleys",
+      "pts": 10
+    },
+    {
+      "name": "Predestined Coordinates",
+      "pts": 10
+    },
+    {
+      "name": "Psychic Celerity",
+      "pts": 15
+    },
+    {
+      "name": "Purity of Purpose",
+      "pts": 15
+    },
+    {
+      "name": "Pyresoul (Psychic)",
+      "pts": 20
+    },
+    {
+      "name": "Quickening Foci",
+      "pts": 15
+    },
+    {
+      "name": "Radiant Champion",
+      "pts": 15
+    },
+    {
+      "name": "Sanctic Reaper",
+      "pts": 15
+    },
+    {
+      "name": "Shield of Prophecy",
+      "pts": 20
+    },
+    {
+      "name": "Sigil of Exigence",
+      "pts": 30
+    },
+    {
+      "name": "Sigil of the Hunt",
+      "pts": 10
+    },
+    {
+      "name": "Sixty-sixth Seal",
+      "pts": 25
+    },
+    {
+      "name": "Spiritus Machina",
+      "pts": 25
+    },
+    {
+      "name": "Tome of Forbidden Ways",
+      "pts": 25
+    },
+    {
+      "name": "Vigilance of Titan",
+      "pts": 20
+    }
+  ],
   "revision": 1,
   "file": "Imperium - Grey Knights.json",
   "counts": {
@@ -42,7 +201,54 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Nemesis force weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Storm Bolter",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psilencer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -172,7 +378,28 @@
         "Purgation Squad",
         "Strike Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Nemesis force weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Nemesis force weapon",
@@ -243,7 +470,28 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Crozius arcanum",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -303,11 +551,37 @@
         {
           "n": "Wargear",
           "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Nemesis force weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Vortex of Doom",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
           "max": 1,
           "pick": "one",
           "opts": [
             {
               "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
               "min": 0,
               "max": null,
               "p": 0
@@ -398,7 +672,40 @@
         "Purgation Squad",
         "Purifier Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Servo-arm",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Omnissian power axe",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grav-pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Forge bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -499,6 +806,64 @@
               "n": "Terminator with Heavy Weapon",
               "min": 0,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon Choice",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psilencer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Heavy Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psilencer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psycannon",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -745,7 +1110,54 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Nemesis force weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Storm Bolter",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psilencer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -799,7 +1211,92 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Fragstorm grenade launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Dreadfists",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Nemesis mace",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Nemesis flail",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Dreadfists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Nemesis daemon greathammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Nemesis greatsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged Weapons",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Sublimator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Gatling psilencer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -960,6 +1457,38 @@
           ]
         },
         {
+          "n": "Assault Cannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy plasma cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Storm Bolter and Dreadnought Combat Weapon",
           "min": 1,
           "max": 1,
@@ -1062,6 +1591,32 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Twin Heavy Bolter",
           "min": 1,
           "max": 1,
@@ -1069,6 +1624,30 @@
           "opts": [
             {
               "n": "Twin Psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
               "min": 0,
               "max": null,
               "p": 0
@@ -1140,6 +1719,32 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Lascannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Armoured Hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Thunderhawk Heavy Cannon",
           "min": 1,
@@ -1479,7 +2084,52 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Godhammer lascannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Godhammer lascannon",
@@ -1543,7 +2193,52 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hurricane bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1596,7 +2291,52 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Flamestorm cannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Flamestorm cannon",
@@ -1661,7 +2401,60 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Dreadfists",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Nemesis greatsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Nemesis daemon greathammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Dreadfists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged Weapons",
+          "min": 0,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Gatling psilencer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1750,6 +2543,64 @@
               "n": "Paladin with Narthecium",
               "min": 0,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Storm Bolter",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psilencer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Heavy Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psilencer",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -1992,7 +2843,54 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Twin Heavy Bolter",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2045,7 +2943,34 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2239,6 +3164,52 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Skyhammer missile launcher",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Typhoon missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skyhammer missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Las-talon",
           "min": 1,
           "max": 1,
@@ -2371,6 +3342,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -2382,6 +3365,18 @@
           "opts": [
             {
               "n": "Twin multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Typhoon missile launcher",
               "min": 0,
               "max": null,
               "p": 0
@@ -2495,7 +3490,60 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Skyhammer missile launcher",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Typhoon missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skyhammer missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2567,6 +3615,32 @@
               "n": "Grey Knight with Heavy Weapon",
               "min": 0,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Heavy Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psycannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Psilencer",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2675,6 +3749,32 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Assault Cannon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy plasma cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Storm Bolter and Dreadnought Combat Weapon",
           "min": 1,

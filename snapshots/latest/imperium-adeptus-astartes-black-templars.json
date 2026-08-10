@@ -7,6 +7,16 @@
   "catalogueName": "Imperium - Adeptus Astartes - Black Templars",
   "nativeFaction": "Adeptus Astartes",
   "detachments": [],
+  "enhancements": [
+    {
+      "name": "Fervent Exemplars",
+      "pts": 10
+    },
+    {
+      "name": "Inheritors of Sigismund",
+      "pts": 15
+    }
+  ],
   "revision": 1,
   "file": "Imperium - Black Templars.json",
   "counts": {
@@ -54,6 +64,26 @@
             },
             {
               "n": "Master-crafted Power Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
               "min": 0,
               "max": null,
               "p": 0
@@ -246,7 +276,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Master-crafted Power Weapon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Master-crafted Power Weapon",
@@ -371,6 +422,26 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pyre Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -450,7 +521,28 @@
         "Sword Brethren",
         "Sternguard Veteran Squad"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Black Sword",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "➤ Black Sword - Strike",
@@ -537,6 +629,26 @@
         "Sternguard Veteran Squad"
       ],
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Black Sword",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Battle Tallies",
           "min": 0,
@@ -661,6 +773,32 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Crozius arcanum",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Pyre Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Absolvor bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -734,6 +872,52 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Lancer Laser Destroyer",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured Hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Icarus Rocket Pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle Mount Option",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Ironhail Heavy Stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Sponson Weapons",
           "min": 1,
@@ -817,7 +1001,60 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Tempest Bolter",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Twin Heavy Onslaught Gatling Cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured Hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Icarus Rocket Pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle Mount Option",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Ironhail Heavy Stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Tempest Bolter",
@@ -891,7 +1128,54 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin Las-talon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured Hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Icarus Rocket Pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle Mount Option",
+          "min": 0,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Ironhail Heavy Stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Twin Las-talon",
@@ -1050,6 +1334,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured Hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Option",
           "min": 0,
           "max": 1,
@@ -1069,6 +1367,32 @@
             },
             {
               "n": "Ironhail Skytalon Array",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bellicatus Missile Array",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle Mount Option",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Ironhail Heavy Stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
               "min": 0,
               "max": null,
               "p": 0
@@ -1170,7 +1494,52 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured Tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hurricane Bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin assault cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1248,6 +1617,12 @@
           "opts": [
             {
               "n": "Plasma Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
               "min": 0,
               "max": null,
               "p": 0
@@ -1347,6 +1722,58 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured Hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-slayer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Repulsor Defensive Array",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Hull Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Turret Weapon",
           "min": 1,
           "max": 1,
@@ -1354,6 +1781,12 @@
           "opts": [
             {
               "n": "Las-talon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Onslaught Gatling Cannon",
               "min": 0,
               "max": null,
               "p": 0
@@ -1430,6 +1863,70 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Repulsor Executioner Defensive Array",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured Hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Onslaught Gatling Cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Icarus Rocket Pod",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin Icarus ironhail heavy stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle Mount Option",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Ironhail Heavy Stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Turret Weapon",
           "min": 1,
           "max": 1,
@@ -1440,6 +1937,12 @@
               "min": 0,
               "max": null,
               "p": 10
+            },
+            {
+              "n": "Macro Plasma Incinerator",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -1556,6 +2059,26 @@
           ]
         },
         {
+          "n": "Weapon Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Sternguard Bolt Rifle",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Melee Option",
           "min": 0,
           "max": 1,
@@ -1575,6 +2098,26 @@
             },
             {
               "n": "Power Fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Pyrecannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Sternguard Heavy Bolter",
               "min": 0,
               "max": null,
               "p": 0
@@ -1687,6 +2230,32 @@
               "n": "Sword Brother w/ Twin Lightning Claws",
               "min": 0,
               "max": 0,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Pyre Pistol",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -1875,6 +2444,32 @@
           ]
         },
         {
+          "n": "Weapon Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Ranged Weapon Option",
           "min": 1,
           "max": 1,
@@ -1882,6 +2477,18 @@
           "opts": [
             {
               "n": "Cyclone Missile Launcher & Storm Bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Assault Cannon",
               "min": 0,
               "max": null,
               "p": 0
@@ -1896,6 +2503,12 @@
           "opts": [
             {
               "n": "Power Fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Chainfist",
               "min": 0,
               "max": null,
               "p": 0

@@ -7,16 +7,176 @@
   "catalogueName": "Xenos - Leagues of Votann",
   "nativeFaction": "Leagues of Votann",
   "detachments": [
-    "Hearthband",
-    "Persecution Prospect",
-    "Needgaârd Oathband",
-    "Hearthfyre Arsenal",
-    "Dêlve Assault Shift",
-    "Brandfast Oathband",
-    "Mercenary Oathband",
-    "Armoured Trailblazers",
-    "Farseekers",
-    "Hearthguard Covenant"
+    {
+      "name": "Armoured Trailblazers",
+      "dp": 1
+    },
+    {
+      "name": "Brandfast Oathband",
+      "dp": 2
+    },
+    {
+      "name": "Dêlve Assault Shift",
+      "dp": 2
+    },
+    {
+      "name": "Farseekers",
+      "dp": 1
+    },
+    {
+      "name": "Hearthband",
+      "dp": 3
+    },
+    {
+      "name": "Hearthfyre Arsenal",
+      "dp": 2
+    },
+    {
+      "name": "Hearthguard Covenant",
+      "dp": 1
+    },
+    {
+      "name": "Mercenary Oathband",
+      "dp": 2
+    },
+    {
+      "name": "Needgaârd Oathband",
+      "dp": 2
+    },
+    {
+      "name": "Persecution Prospect",
+      "dp": 2
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Ancestral Crest",
+      "pts": 15
+    },
+    {
+      "name": "Asset Manipulator",
+      "pts": 25
+    },
+    {
+      "name": "Bastion Shield",
+      "pts": 25
+    },
+    {
+      "name": "Calculated Tenacity",
+      "pts": 15
+    },
+    {
+      "name": "Dead Reckoning",
+      "pts": 10
+    },
+    {
+      "name": "Dêlvwerke Navigator",
+      "pts": 25
+    },
+    {
+      "name": "Etacarn SB9 Targeting Implant",
+      "pts": 15
+    },
+    {
+      "name": "Eye For Weakness",
+      "pts": 25
+    },
+    {
+      "name": "Fârstryder Node",
+      "pts": 20
+    },
+    {
+      "name": "Graviton Vault",
+      "pts": 5
+    },
+    {
+      "name": "High Kâhl",
+      "pts": 30
+    },
+    {
+      "name": "Iron Ambassador",
+      "pts": 5
+    },
+    {
+      "name": "Ironskein",
+      "pts": 10
+    },
+    {
+      "name": "Mantle of Elders",
+      "pts": 10
+    },
+    {
+      "name": "Mercenary Prospector",
+      "pts": 20
+    },
+    {
+      "name": "Metaphysical Brokerage",
+      "pts": 20
+    },
+    {
+      "name": "Multiwave System Jammer",
+      "pts": 10
+    },
+    {
+      "name": "Nomad Strategist",
+      "pts": 20
+    },
+    {
+      "name": "Oathbound Speculator",
+      "pts": 30
+    },
+    {
+      "name": "Optimised Attack Lines",
+      "pts": 15
+    },
+    {
+      "name": "Pan-spectral Lockons",
+      "pts": 10
+    },
+    {
+      "name": "Piledriver",
+      "pts": 15
+    },
+    {
+      "name": "Precursive Judgement",
+      "pts": 15
+    },
+    {
+      "name": "Quake Multigenerator",
+      "pts": 15
+    },
+    {
+      "name": "Quake Supervisor",
+      "pts": 20
+    },
+    {
+      "name": "Saturation Rounds",
+      "pts": 15
+    },
+    {
+      "name": "Shroudwërke Talismans",
+      "pts": 15
+    },
+    {
+      "name": "Signature Restoration",
+      "pts": 5
+    },
+    {
+      "name": "Surgical Saboteur",
+      "pts": 10
+    },
+    {
+      "name": "Tactical Alchemy",
+      "pts": 10
+    },
+    {
+      "name": "Trivârg Cyber Implant",
+      "pts": 40
+    },
+    {
+      "name": "Writ of Acquisition",
+      "pts": 10
+    }
   ],
   "revision": 2,
   "file": "Leagues of Votann.json",
@@ -860,6 +1020,20 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Autoch-pattern combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Crest",
           "min": 1,
           "max": 1,
@@ -869,6 +1043,12 @@
               "n": "Weavefield crest",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Teleport crest",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -1089,6 +1269,12 @@
               "n": "Teleport crest",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Weavefield crest",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -1585,6 +1771,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured wheels",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "MATR autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Main weapon",
           "min": 1,
           "max": 1,
@@ -1620,6 +1826,12 @@
               "n": "Twin ion beamer",
               "min": 0,
               "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Twin bolt cannon",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2197,6 +2409,26 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Melee Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Plasma sword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Concussion gauntlet",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -2252,6 +2484,26 @@
       ],
       "options": [
         {
+          "n": "Crest",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Rampart crest",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Teleport crest",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Melee weapon",
           "min": 1,
           "max": 1,
@@ -2265,6 +2517,26 @@
             },
             {
               "n": "Forgewrought plasma axe",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Autoch-pattern combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Volkanite disintegrator",
               "min": 0,
               "max": null,
               "p": 0
@@ -2371,6 +2643,12 @@
               "min": 1,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Twin magna-coil autocannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
             }
           ]
         }
@@ -2465,6 +2743,12 @@
             {
               "n": "Smoke launcher",
               "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin magna-coil autocannon",
+              "min": 1,
               "max": 1,
               "p": 0
             }
@@ -2766,6 +3050,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured wheels",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin bolt cannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Turret weapon",
           "min": 1,
           "max": 1,
@@ -2779,6 +3083,12 @@
             },
             {
               "n": "L7 missile launcher and Sagitaur missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "MATR autocannon",
               "min": 0,
               "max": null,
               "p": 0

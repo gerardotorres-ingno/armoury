@@ -7,6 +7,7 @@
   "catalogueName": "Imperium - Adeptus Astartes - Blood Angels",
   "nativeFaction": "Adeptus Astartes",
   "detachments": [],
+  "enhancements": [],
   "revision": 1,
   "file": "Imperium - Blood Angels.json",
   "counts": {
@@ -110,6 +111,32 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured Tracks",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Sponson Weapons",
           "min": 0,
@@ -265,6 +292,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -276,6 +315,12 @@
           "opts": [
             {
               "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno pistol",
               "min": 0,
               "max": null,
               "p": 0
@@ -702,6 +747,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -713,6 +770,12 @@
           "opts": [
             {
               "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno pistol",
               "min": 0,
               "max": null,
               "p": 0
@@ -803,6 +866,32 @@
       ],
       "options": [
         {
+          "n": "Melee",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Relic Weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Pistol",
           "min": 1,
           "max": 1,
@@ -810,6 +899,18 @@
           "opts": [
             {
               "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
               "min": 0,
               "max": null,
               "p": 0
@@ -889,6 +990,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin Icarus ironhail heavy stubber",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Melee Weapon Option",
           "min": 1,
           "max": 1,
@@ -902,6 +1017,26 @@
             },
             {
               "n": "Blood Talons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Ranged Weapon Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin multi-melta",
               "min": 0,
               "max": null,
               "p": 0
@@ -1021,6 +1156,26 @@
           ]
         },
         {
+          "n": "Melee Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Blood Talons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin Furioso Fists",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Weapon Option 1",
           "min": 1,
           "max": 1,
@@ -1028,6 +1183,32 @@
           "opts": [
             {
               "n": "Storm Bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon Option 2",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Flamer",
               "min": 0,
               "max": null,
               "p": 0
@@ -1144,6 +1325,56 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace Chainsword",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -1256,6 +1487,62 @@
             },
             {
               "n": "Power Fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Replace Bolt Rifle",
+          "min": 1,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Bolt Rifle",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
               "min": 0,
               "max": null,
               "p": 0
@@ -1414,6 +1701,64 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Melee Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -1522,6 +1867,64 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Melee Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -1614,6 +2017,70 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Pistol Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Eviscerator",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -1675,6 +2142,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Magna-grapple",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Weapon Options",
           "min": 1,
           "max": 1,
@@ -1694,6 +2175,78 @@
             },
             {
               "n": "Twin Furioso Fists and Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Underslung Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Underslung Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Underslung Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
               "min": 0,
               "max": null,
               "p": 0
@@ -1931,7 +2484,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Weapon Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "➤ Blood Lance - Focused Witchfire",
@@ -2079,6 +2659,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -2180,7 +2766,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Absolvor bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2245,6 +2852,76 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pistol Options",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hand flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Inferno Pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grav-pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Chainsword Options",
           "min": 1,
           "max": 1,
@@ -2252,6 +2929,24 @@
           "opts": [
             {
               "n": "Power Fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Thunder Hammer",
               "min": 0,
               "max": null,
               "p": 0
@@ -2334,7 +3029,28 @@
         "the Leader units attached to it become separate units",
         "with their original Starting Strengths"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Astartes Chainsword",

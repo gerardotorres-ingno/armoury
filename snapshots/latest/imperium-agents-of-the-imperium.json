@@ -7,12 +7,28 @@
   "catalogueName": "Imperium - Agents of the Imperium",
   "nativeFaction": "Agents of the Imperium",
   "detachments": [
-    "Ordo Xenos, Alien Hunters",
-    "Ordo Hereticus, Purgation Force",
-    "Ordo Malleus, Daemon Hunters",
-    "Imperialis Fleet",
-    "Veiled Blade Elimination Force"
+    {
+      "name": "Imperialis Fleet",
+      "dp": 2
+    },
+    {
+      "name": "Ordo Hereticus, Purgation Force",
+      "dp": 2
+    },
+    {
+      "name": "Ordo Malleus, Daemon Hunters",
+      "dp": 2
+    },
+    {
+      "name": "Ordo Xenos, Alien Hunters",
+      "dp": 2
+    },
+    {
+      "name": "Veiled Blade Elimination Force",
+      "dp": 1
+    }
   ],
+  "enhancements": [],
   "revision": 8,
   "file": "Imperium - Agents of the Imperium.json",
   "counts": {
@@ -616,6 +632,26 @@
           "pick": "one",
           "opts": [
             {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
               "n": "Plasma gun",
               "min": 0,
               "max": null,
@@ -623,6 +659,12 @@
             },
             {
               "n": "Flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
               "min": 0,
               "max": null,
               "p": 0
@@ -657,6 +699,12 @@
               "n": "Plasma pistol and astartes chainsword",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Boltgun",
+              "min": 1,
+              "max": 1,
               "p": 0
             }
           ]
@@ -880,6 +928,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Black Shield blades",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Deathwatch thunder hammer",
+              "min": 0,
+              "max": 2,
+              "p": 0
             }
           ]
         },
@@ -894,6 +954,18 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Boltgun",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Astartes shield",
+              "min": 0,
+              "max": 2,
+              "p": 0
             }
           ]
         },
@@ -907,6 +979,18 @@
               "n": "Xenophase blade",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Astartes shield",
+              "min": 0,
+              "max": 2,
               "p": 0
             }
           ]
@@ -1469,6 +1553,50 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Long Vigil melee weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Melee Option",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Astartes chainsword",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Long Vigil melee weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -1826,6 +1954,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -2021,7 +2155,34 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Storm bolter",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Storm bolter",
@@ -3602,6 +3763,52 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Lasgun array",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Hull weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Pintle weapon",
           "min": 0,
           "max": 1,
@@ -3629,6 +3836,18 @@
           "opts": [
             {
               "n": "Multi-laser",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
               "min": 0,
               "max": null,
               "p": 0
@@ -4391,6 +4610,26 @@
           ]
         },
         {
+          "n": "Additional Equipment",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Long Vigil melee weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Terminator Weapons",
           "min": 1,
           "max": 1,
@@ -4803,6 +5042,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -4938,6 +5183,32 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Turret weapon",
           "min": 1,
@@ -5103,6 +5374,56 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Artificer-crafted storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ministorum flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Artificer-crafted storm bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Meltagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ministorum flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -5166,6 +5487,12 @@
               "n": "Boltgun",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -5784,6 +6111,18 @@
               "n": "Astartes Shield",
               "min": 0,
               "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Long Vigil ranged weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Long Vigil melee weapon",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]

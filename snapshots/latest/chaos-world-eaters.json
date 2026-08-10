@@ -7,14 +7,144 @@
   "catalogueName": "Chaos - World Eaters",
   "nativeFaction": "World Eaters",
   "detachments": [
-    "Berzerker Warband",
-    "Vessels of Wrath",
-    "Cult of Blood",
-    "Khorne Daemonkin",
-    "Possessed Slaughterband",
-    "Goretrack Onslaught",
-    "Brazen Engines",
-    "Butchers of Khorne"
+    {
+      "name": "Berzerker Warband",
+      "dp": 3
+    },
+    {
+      "name": "Brazen Engines",
+      "dp": 1
+    },
+    {
+      "name": "Butchers of Khorne",
+      "dp": 1
+    },
+    {
+      "name": "Cult of Blood",
+      "dp": 2
+    },
+    {
+      "name": "Goretrack Onslaught",
+      "dp": 2
+    },
+    {
+      "name": "Khorne Daemonkin",
+      "dp": 2
+    },
+    {
+      "name": "Possessed Slaughterband",
+      "dp": 2
+    },
+    {
+      "name": "Vessels of Wrath",
+      "dp": 1
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "Aggressive Deployment",
+      "pts": 20
+    },
+    {
+      "name": "Archslaughterer",
+      "pts": 30
+    },
+    {
+      "name": "Battle-lust",
+      "pts": 20
+    },
+    {
+      "name": "Berzerker Glaive",
+      "pts": 35
+    },
+    {
+      "name": "Blade of Endless Bloodshed",
+      "pts": 30
+    },
+    {
+      "name": "Blood-forged Armour",
+      "pts": 20
+    },
+    {
+      "name": "Brazen Form",
+      "pts": 25
+    },
+    {
+      "name": "Butcher Lord",
+      "pts": 10
+    },
+    {
+      "name": "Chosen of the Blood God",
+      "pts": 15
+    },
+    {
+      "name": "Disciple of Khorne",
+      "pts": 15
+    },
+    {
+      "name": "Favoured of Khorne",
+      "pts": 20
+    },
+    {
+      "name": "Frenzied Focus",
+      "pts": 20
+    },
+    {
+      "name": "Gateways to Glory",
+      "pts": 10
+    },
+    {
+      "name": "Gore-stained Veterans",
+      "pts": 20
+    },
+    {
+      "name": "Helm of Brazen Ire",
+      "pts": 30
+    },
+    {
+      "name": "Icon of War",
+      "pts": 25
+    },
+    {
+      "name": "Infernal Infusion",
+      "pts": 25
+    },
+    {
+      "name": "Killing Clarity",
+      "pts": 15
+    },
+    {
+      "name": "Malicious Vigour",
+      "pts": 30
+    },
+    {
+      "name": "Murder-forged Entity",
+      "pts": 15
+    },
+    {
+      "name": "Murderous Onslaught",
+      "pts": 5
+    },
+    {
+      "name": "Sanctified in Slaughter",
+      "pts": 15
+    },
+    {
+      "name": "Strategic Slaughter",
+      "pts": 20
+    },
+    {
+      "name": "Talons of Butchery",
+      "pts": 20
+    },
+    {
+      "name": "Unleash Hell",
+      "pts": 10
+    },
+    {
+      "name": "Violent Demise",
+      "pts": 10
+    }
   ],
   "revision": 6,
   "file": "Chaos - World Eaters.json",
@@ -598,6 +728,38 @@
       "leads": null,
       "options": [
         {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Sponsons",
           "min": 0,
           "max": 1,
@@ -678,7 +840,60 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Soulshatter lascannon",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Armoured tracks",
@@ -755,6 +970,52 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Predator twin lascannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Sponsons",
           "min": 0,
@@ -841,6 +1102,52 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Predator autocannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Sponsons",
           "min": 0,
           "max": 1,
@@ -924,7 +1231,54 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Combi-bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1099,6 +1453,32 @@
           ]
         },
         {
+          "n": "Melee weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Accursed weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Heavy weapon",
           "min": 1,
           "max": 1,
@@ -1106,6 +1486,12 @@
           "opts": [
             {
               "n": "Reaper autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
               "min": 0,
               "max": null,
               "p": 0
@@ -1172,6 +1558,12 @@
               "n": "Combi-bolter, power fist",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Paired accursed weapons",
+              "min": 0,
+              "max": 2,
               "p": 0
             }
           ]
@@ -1245,6 +1637,32 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Bombs or missiles",
           "min": 1,
@@ -1694,6 +2112,24 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Electroscourge",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hades lascannon",
+              "min": 0,
+              "max": null,
+              "p": 15
+            },
+            {
+              "n": "Heavy reaper autocannon",
+              "min": 0,
+              "max": null,
+              "p": 15
             }
           ]
         },
@@ -1728,6 +2164,24 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Heavy reaper autocannon",
+              "min": 0,
+              "max": null,
+              "p": 15
+            },
+            {
+              "n": "Electroscourge",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hades lascannon",
+              "min": 0,
+              "max": null,
+              "p": 15
             }
           ]
         },
@@ -1919,6 +2373,26 @@
             },
             {
               "n": "Boreas air defence missiles",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Chest weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy flamer",
               "min": 0,
               "max": null,
               "p": 0
@@ -2275,6 +2749,58 @@
       "leads": null,
       "options": [
         {
+          "n": "Frontal weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Sponsons",
           "min": 1,
           "max": 1,
@@ -2376,6 +2902,96 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Demolisher cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Fellblade accelerator cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Frontal weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Sponsons",
           "min": 1,
@@ -3114,6 +3730,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -3273,6 +3901,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Hades autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -3353,6 +3987,26 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Replace autocannon",
           "min": 1,
           "max": 1,
@@ -3362,6 +4016,12 @@
               "n": "Autocannon",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -3850,6 +4510,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Bolt pistol",
+              "min": 0,
+              "max": 1,
+              "p": 0
             }
           ]
         }
@@ -4084,6 +4750,32 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Hull guns",
           "min": 1,
           "max": 1,
@@ -4151,6 +4843,36 @@
               "n": "Twin boltgun",
               "min": 0,
               "max": null,
+              "p": 0
+            },
+            {
+              "n": "Combi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Havoc launcher",
+              "min": 0,
+              "max": 1,
               "p": 0
             }
           ]
@@ -4401,6 +5123,70 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Quad launcher",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Additional weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Sponsons",
           "min": 1,
           "max": 1,
@@ -4508,6 +5294,62 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Additional weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -4559,6 +5401,26 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured feet",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Arm weapons",
           "min": 2,
@@ -4832,7 +5694,34 @@
         "Exalted Eightbound",
         "Khorne Berzerkers"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Bladed horn",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Exalted chainblade",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Plasma pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Bladed horn",
@@ -5407,6 +6296,12 @@
               "min": 0,
               "max": 1,
               "p": 0
+            },
+            {
+              "n": "Armoured feet",
+              "min": 1,
+              "max": 1,
+              "p": 0
             }
           ]
         },
@@ -5445,6 +6340,36 @@
               "min": 0,
               "max": 2,
               "p": 0
+            },
+            {
+              "n": "Twin autocannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin volkite culverin",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -5470,6 +6395,12 @@
               "n": "Graviton blaster",
               "min": 0,
               "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -5656,6 +6587,44 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Herakles-pattern autocannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Sponsons",
           "min": 0,
           "max": 1,
@@ -5735,6 +6704,44 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Punisher rotary cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Sponsons",
           "min": 0,
           "max": 1,
@@ -5813,6 +6820,44 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Venator neutron laser",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Sponsons",
           "min": 0,
@@ -6061,7 +7106,40 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hellstrike missile battery",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Armoured hull",
@@ -6138,6 +7216,58 @@
       "cap": null,
       "leads": null,
       "options": [
+        {
+          "n": "Frontal weapon",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Sponsons",
           "min": 1,
@@ -6238,6 +7368,12 @@
             },
             {
               "n": "Typhoon missile launcher",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin heavy bolter",
               "min": 0,
               "max": null,
               "p": 0
@@ -6478,6 +7614,38 @@
       "leads": null,
       "options": [
         {
+          "n": "Pintle weapon",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Heavy bolter",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Heavy flamer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Multi-melta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Sponsons",
           "min": 0,
           "max": 1,
@@ -6555,7 +7723,40 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Scorpius multi-launcher",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured tracks",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Hunter-killer missile",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Storm bolter",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Scorpius multi-launcher",
@@ -6613,7 +7814,34 @@
       ],
       "cap": null,
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Xiphon missile battery",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin lascannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Armoured hull",

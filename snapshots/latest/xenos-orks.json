@@ -6,7 +6,246 @@
   "catalogueId": "a55f-b7b3-6c65-a05f",
   "catalogueName": "Xenos - Orks",
   "nativeFaction": "Orks",
-  "detachments": [],
+  "detachments": [
+    {
+      "name": "Blitz Brigade",
+      "dp": 2
+    },
+    {
+      "name": "Bully Boyz",
+      "dp": 2
+    },
+    {
+      "name": "Da Big Hunt",
+      "dp": 2
+    },
+    {
+      "name": "Dread Mob",
+      "dp": 2
+    },
+    {
+      "name": "Equatorial Hordes",
+      "dp": 1
+    },
+    {
+      "name": "Freebooter Krew",
+      "dp": 2
+    },
+    {
+      "name": "Green Tide",
+      "dp": 3
+    },
+    {
+      "name": "Kult of Speed",
+      "dp": 2
+    },
+    {
+      "name": "More Dakka!",
+      "dp": 1
+    },
+    {
+      "name": "Rollin' Deff",
+      "dp": 1
+    },
+    {
+      "name": "Speedwaaagh!",
+      "dp": 2
+    },
+    {
+      "name": "Taktikal Brigade",
+      "dp": 1
+    },
+    {
+      "name": "War Horde",
+      "dp": 3
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "'Eadstompa",
+      "pts": 10
+    },
+    {
+      "name": "Big Gob",
+      "pts": 20
+    },
+    {
+      "name": "Bionik Workshop",
+      "pts": 15
+    },
+    {
+      "name": "Blitzkaptin",
+      "pts": 25
+    },
+    {
+      "name": "Bloodthirsty Belligerence",
+      "pts": 15
+    },
+    {
+      "name": "Boarding Ramps",
+      "pts": 10
+    },
+    {
+      "name": "Brutal But Kunnin'",
+      "pts": 25
+    },
+    {
+      "name": "Da Biggest Boss",
+      "pts": 15
+    },
+    {
+      "name": "Da Gobshot Thunderbuss",
+      "pts": 15
+    },
+    {
+      "name": "Da Kaptin",
+      "pts": 10
+    },
+    {
+      "name": "Dakkamek",
+      "pts": 25
+    },
+    {
+      "name": "Dead Shiny Shootas",
+      "pts": 15
+    },
+    {
+      "name": "Fasta Than Yooz",
+      "pts": 35
+    },
+    {
+      "name": "Ferocious Show Off",
+      "pts": 10
+    },
+    {
+      "name": "Follow Me Ladz",
+      "pts": 25
+    },
+    {
+      "name": "Git-spotter Squig",
+      "pts": 20
+    },
+    {
+      "name": "Gitfinder Gogglez",
+      "pts": 10
+    },
+    {
+      "name": "Glory Hog",
+      "pts": 30
+    },
+    {
+      "name": "Headwoppa’s Killchoppa",
+      "pts": 20
+    },
+    {
+      "name": "Kunnin’ But Brutal",
+      "pts": 15
+    },
+    {
+      "name": "Kunnin' Hunta",
+      "pts": 25
+    },
+    {
+      "name": "Kustom Shokk Box",
+      "pts": 10
+    },
+    {
+      "name": "Living Battering Ram",
+      "pts": 0
+    },
+    {
+      "name": "Master Meknologist",
+      "pts": 20
+    },
+    {
+      "name": "Mork's Kunnin'",
+      "pts": 20
+    },
+    {
+      "name": "Press It Fasta!",
+      "pts": 35
+    },
+    {
+      "name": "Proper Killy",
+      "pts": 15
+    },
+    {
+      "name": "Raucous Warcaller",
+      "pts": 20
+    },
+    {
+      "name": "Razgit's Magik Map",
+      "pts": 25
+    },
+    {
+      "name": "Runnin' Boots",
+      "pts": 10
+    },
+    {
+      "name": "Scarred Brute",
+      "pts": 0
+    },
+    {
+      "name": "Skrag Every Stash!",
+      "pts": 25
+    },
+    {
+      "name": "Slippery Git",
+      "pts": 15
+    },
+    {
+      "name": "Smoky Gubbinz",
+      "pts": 15
+    },
+    {
+      "name": "Speed Makes Right",
+      "pts": 25
+    },
+    {
+      "name": "Squig-hide Tyres",
+      "pts": 15
+    },
+    {
+      "name": "Supa-burny Fuel",
+      "pts": 15
+    },
+    {
+      "name": "Supa-Cybork Body",
+      "pts": 15
+    },
+    {
+      "name": "Supa-glowy Fing",
+      "pts": 20
+    },
+    {
+      "name": "Supercharged Squig Oil",
+      "pts": 10
+    },
+    {
+      "name": "Surly As A Squiggoth",
+      "pts": 20
+    },
+    {
+      "name": "Targetin' Gizmos",
+      "pts": 15
+    },
+    {
+      "name": "Tellyporta",
+      "pts": 25
+    },
+    {
+      "name": "Tuff Git",
+      "pts": 5
+    },
+    {
+      "name": "Unkillable Scourge",
+      "pts": 25
+    },
+    {
+      "name": "Wazblasta",
+      "pts": 10
+    }
+  ],
   "revision": 2,
   "file": "Orks.json",
   "counts": {
@@ -39,7 +278,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Wing missiles",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -102,7 +368,28 @@
         "NOBZ",
         "TANKBUSTAS"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -164,6 +451,30 @@
               "min": 0,
               "max": 1,
               "p": 15
+            },
+            {
+              "n": "Lobba",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Wreckin' ball",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grabbin' klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         },
@@ -187,6 +498,26 @@
             },
             {
               "n": "Kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Tracks and Wheels",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Deff rolla",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Tracks and wheels",
               "min": 0,
               "max": null,
               "p": 0
@@ -404,7 +735,34 @@
       "leads": [
         "Beast Snagga Boyz"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Beast Snagga klaw",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Shoota",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Beastchoppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Beast Snagga klaw",
@@ -483,7 +841,48 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Squigosaur’s jaws",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Beastchoppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Thump Gun",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Thump gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Squigosaur’s jaws",
@@ -570,6 +969,66 @@
               "min": 0,
               "max": 2,
               "p": 20
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Lobba",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapons",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Zzap gun",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapons",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -671,7 +1130,48 @@
         "NOBZ",
         "TANKBUSTAS"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Power Klaw",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Drilla",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kustom Mega-blasta",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Traktor blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -727,7 +1227,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Stompy feet",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Blitzkannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Stompy feet",
@@ -802,6 +1329,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Additional Options",
           "min": 0,
           "max": 1,
@@ -809,6 +1350,12 @@
           "opts": [
             {
               "n": "Tellyport blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom force field",
               "min": 0,
               "max": null,
               "p": 0
@@ -823,6 +1370,38 @@
           "opts": [
             {
               "n": "Grot oiler",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Kustom-mega Blaster",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kombi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Killsaw",
               "min": 0,
               "max": null,
               "p": 0
@@ -906,7 +1485,146 @@
         "WARBIKERS",
         "WARBUGGIES"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin dakkagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Slugga",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kombi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom force field",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shokk attack gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Choppa",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Kombi-weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -970,6 +1688,26 @@
         "TANKBUSTAS"
       ],
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Grot Helper",
           "min": 0,
@@ -1054,6 +1792,26 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Shokk attack gun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Grot Assistant",
           "min": 0,
           "max": 1,
@@ -1127,7 +1885,48 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Supa-kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1176,7 +1975,22 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Big Shootas (1-4)",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "➤ Gaze of Gork - glare",
@@ -1257,7 +2071,28 @@
         "BREAKA BOYZ",
         "NOBZ"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Two-handed big choppa",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Two-handed big choppa",
@@ -1323,7 +2158,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin supa-shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -1374,7 +2236,40 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Mek speshul",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grot blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Spiked wheels",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Mek speshul",
@@ -1652,6 +2547,18 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -1729,6 +2636,26 @@
               "n": "Breaka Boy w/ Knucklebustas",
               "min": 0,
               "max": 1,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Rokkit pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Smash hammer",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -1885,6 +2812,32 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin supa-shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Skorcha Missile Rack",
           "min": 0,
           "max": 1,
@@ -1963,6 +2916,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Big Bomms (0-2)",
           "min": 0,
           "max": 2,
@@ -1972,6 +2939,38 @@
               "n": "Big bomms",
               "min": 0,
               "max": 2,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Big Shoota",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2297,7 +3296,36 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Twin Supa-shootas (2-3)",
+          "min": 2,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin supa-shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2359,6 +3387,30 @@
               "n": "Dread klaw",
               "min": 2,
               "max": 4,
+              "p": 0
+            },
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2437,6 +3489,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Deff rolla",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Big Gunz",
           "min": 3,
           "max": 3,
@@ -2446,6 +3512,58 @@
               "n": "Zzap gun",
               "min": 2,
               "max": 3,
+              "p": 0
+            },
+            {
+              "n": "Kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Lobba",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Big Shootas (0-5)",
+          "min": 0,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Twin Big Shootas",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
               "p": 0
             }
           ]
@@ -2642,6 +3760,58 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kopta rokkits",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Spinnin’ blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Spinnin’ blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -2686,7 +3856,68 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Spinnin’ blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Killsaw",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Twin Big Shootas",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kopta rokkits",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -2729,6 +3960,26 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Wargear Options",
           "min": 0,
@@ -2920,6 +4171,12 @@
               "min": 0,
               "max": null,
               "p": 0
+            },
+            {
+              "n": "Kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -3019,7 +4276,22 @@
         "MEGANOBZ",
         "NOBZ"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Crusade",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Waaagh!boss",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Mork’s Roar",
@@ -3126,7 +4398,46 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Deffstorm mega-shoota",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Klaw of Gork",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Deffstorm mega-shoota",
@@ -3285,7 +4596,28 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grot-guided bomms",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Spiked wheel",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Grot-guided bomms",
@@ -3557,6 +4889,106 @@
           ]
         },
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grot tank shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ramshackle hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grotzooka",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ramshackle hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ramshackle hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Ramshackle hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Ramshackle hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Grot Tank w/ additional weapon",
           "min": 0,
           "max": 2,
@@ -3564,6 +4996,58 @@
           "opts": [
             {
               "n": "Grot Tank w/ additional weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Ramshackle hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Weapons",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grot tank shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Grotzooka",
               "min": 0,
               "max": null,
               "p": 0
@@ -3738,7 +5222,46 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "’Eavy lobba",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Butcha boyz",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Savage horns and hooves",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Saw blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Stikka kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -3788,7 +5311,42 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Spiked ram",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Supa-kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Big Shootas (0-3)",
+          "min": 0,
+          "max": 3,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Spiked ram",
@@ -3949,6 +5507,18 @@
               "min": 0,
               "max": 2,
               "p": 0
+            },
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
             }
           ]
         }
@@ -4036,7 +5606,52 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Wurrtower",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "’Eavy lobba",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Butcha boyz",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Savage horns and hooves",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Saw blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Stikka kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Wurrtower",
@@ -4095,6 +5710,32 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Reinforced ram",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Bursta Kannon",
           "min": 1,
@@ -4239,6 +5880,86 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kan shoota",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kan klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grotzooka",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kan klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kan klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kan klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -4352,6 +6073,32 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Choppa",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -4423,7 +6170,40 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Burna exhausts",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Rivet kannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Grot blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Spiked wheels",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Burna exhausts",
@@ -4497,6 +6277,46 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear Options",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Grabbin' klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Wreckin' ball",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Tracks and Wheels",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Deff rolla",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Tracks and wheels",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Gunz",
           "min": 0,
@@ -4738,7 +6558,54 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Boombits",
+              "min": 2,
+              "max": 2,
+              "p": 0
+            },
+            {
+              "n": "Stompy feet",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Dread killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Killkannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Dread rippa klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Boombits",
@@ -4922,7 +6789,40 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Nose drill",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Rokkit cannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Wing missiles",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Nose drill",
@@ -5012,6 +6912,20 @@
         "TANKBUSTAS"
       ],
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kustom mega-slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Wrench",
           "min": 1,
@@ -5145,6 +7059,86 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Smasha gun",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Grot crew",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Bubblechukka",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Grot crew",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kustom mega-kannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Grot crew",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Traktor kannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Grot crew",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": [
@@ -5254,7 +7248,48 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Stompy feet",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Dread killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Killkannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Dread rippa klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -5356,7 +7391,46 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Klaw of Mork",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-zappa",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Kustom mega-blasta",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "➤ Klaw of Mork - strike",
@@ -5445,7 +7519,22 @@
       "leads": [
         "Squighog Boyz"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Crusade",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Waaagh!boss",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Big Chompa’s jaws",
@@ -5651,6 +7740,20 @@
       "leads": null,
       "options": [
         {
+          "n": "Slugga",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Choppa",
           "min": 1,
           "max": 1,
@@ -5658,6 +7761,36 @@
           "opts": [
             {
               "n": "Power stabba",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Slugga",
               "min": 0,
               "max": null,
               "p": 0
@@ -5838,6 +7971,26 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "’Urty syringe",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Grot Orderly",
           "min": 0,
           "max": null,
@@ -5914,7 +8067,48 @@
         "WARBIKERS",
         "WARBUGGIES"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "’Urty syringe",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin dakkagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
+          "n": "Power Klaw",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -5969,7 +8163,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Sawn-off shotgun",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Squig launchas",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Saw blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Sawn-off shotgun",
@@ -6045,7 +8266,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kustom shokk rifle",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Saw blades",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Kustom shokk rifle",
@@ -6165,7 +8413,22 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Kannon",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kannon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "➤ Gorin’ horns - sweep",
@@ -6322,7 +8585,58 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Deffkannon",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Mega-choppa",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Supa-gatler",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Supa-rokkits",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Skorcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Twin big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Deffkannon",
@@ -6456,6 +8770,26 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Choppa",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -6509,6 +8843,26 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Smash hammer",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Rokkit pistol",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Tankbustas",
           "min": 5,
@@ -6592,7 +8946,34 @@
         "at1000": 4
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Wreckin' ball",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Spiked wheel",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -6643,7 +9024,22 @@
         "BOYZ",
         "NOBZ"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Crusade",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Waaagh!boss",
+              "min": 0,
+              "max": 1,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Shokk rifle",
@@ -6814,6 +9210,32 @@
               "p": 0
             }
           ]
+        },
+        {
+          "n": "Wargear Options",
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Slugga",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
         }
       ],
       "weapons": null,
@@ -6870,6 +9292,20 @@
         "NOBZ"
       ],
       "options": [
+        {
+          "n": "Attack Squig",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Attack squig",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Kombi-weapon, Twin Sluggas and Big Choppa",
           "min": 1,
@@ -6976,7 +9412,28 @@
       "leads": [
         "Meganobz"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Big shoota",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "’Uge choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Big shoota",
@@ -7051,6 +9508,20 @@
       ],
       "options": [
         {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Twin dakkagun",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
+        {
           "n": "Killsaw",
           "min": 1,
           "max": 1,
@@ -7058,6 +9529,18 @@
           "opts": [
             {
               "n": "Killsaw",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Big choppa",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Power klaw",
               "min": 0,
               "max": null,
               "p": 0
@@ -7241,7 +9724,34 @@
         "at1000": 2
       },
       "leads": null,
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Choppas",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Rokkit launcha",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Kustom shoota",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": [
         {
           "n": "Choppas",
@@ -7303,6 +9813,26 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Smasha gun",
+              "min": 1,
+              "max": 1,
+              "p": 0
+            },
+            {
+              "n": "Armoured hull",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        },
         {
           "n": "Twin Wazbom Mega-kannon",
           "min": 1,
@@ -7550,7 +10080,28 @@
         "BOYZ",
         "BREAKA BOYZ"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Weirdboy staff",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "’Eadbanger",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
@@ -7607,7 +10158,28 @@
       "leads": [
         "Beast Snagga Boyz"
       ],
-      "options": null,
+      "options": [
+        {
+          "n": "Wargear",
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Eyez of Mork",
+              "min": 0,
+              "max": null,
+              "p": 0
+            },
+            {
+              "n": "Close combat weapon",
+              "min": 0,
+              "max": null,
+              "p": 0
+            }
+          ]
+        }
+      ],
       "weapons": null,
       "abilities": [
         {
