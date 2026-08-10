@@ -884,7 +884,7 @@ function review(l){
     const u = f.units.find(x => x.id === s.unitId);
     if (!u) { out.push({ hard:true, t:'Entry removed from the catalogue', d:'This unit no longer exists in the current data.' }); continue; }
     const copy = copies[si];
-    total += ptsFor(u, s.size, copy);
+    total += ptsFor(u, s.size, copy) + gearPoints(u, s);
     if (u.B && u.B.length > 1 && copy >= u.B[1].f)
       out.push({ hard:false, t:u.n + ': copy #' + copy + ' costs more',
                  d:'Requisition threshold \u2014 ' + ptsFor(u, s.size, copy) + ' instead of ' + ptsFor(u, s.size, 1) + '.' });
@@ -1099,7 +1099,7 @@ function renderListsInner(){
     w.innerHTML = '<b>' + (i.hard ? 'BLOCKS PLAY' : 'COLLECTION') + '</b>' + esc(i.t) + ' \u2014 ' + esc(i.d);
     v.append(w);
   }
-  v.append(hint('Checked: points, repeat limits, Legends/Crucible, leader attachment, wargear caps, your collection. Not checked: enhancements, battleline minimums, detachment rules, ratio limits like one per five models. Wargear is free in 10th/11th, so it does not change the total.'));
+  v.append(hint('Checked: points including requisition thresholds and paid wargear, repeat limits, DP budget, unique tags, Legends/Crucible, leader attachment, wargear caps, your collection. Not checked: battleline minimums, detachment rules, and ratio limits like one per five models.'));
 
   // --- añadir unidad
   const add = el('div','bar');
@@ -1134,7 +1134,7 @@ function renderListsInner(){
     const attU = att && f.units.find(x => x.id === att.unitId);
     row.innerHTML = '<div class="id"><div class="nm">' + esc(u ? u.n : 'Unknown entry') +
       (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</div>' +
-      '<div class="meta">' + (u ? ptsFor(u, sl.size, copyIndex(l)[i]) + ' pts' : '\u2014') +
+      '<div class="meta">' + (u ? (ptsFor(u, sl.size, copyIndex(l)[i]) + gearPoints(u, sl)) + ' pts' : '\u2014') +
       (attU ? ' \u00b7 leading ' + esc(attU.n) : '') + '</div></div>';
     // Si la unidad es líder, se puede engancharla a otra de la lista.
     if (u && u.ld) {
@@ -1205,7 +1205,9 @@ function wargearFor(l, sl, u){
       sel.style.cssText = 'font-size:13px;padding:5px 8px;max-width:100%';
       const none = el('option'); none.value=''; none.textContent='\u2014'; sel.append(none);
       for (const [name] of g.opts) {
-        const o = el('option'); o.value = name; o.textContent = name;
+        const cost = gearCost(u, name);
+        const o = el('option'); o.value = name;
+        o.textContent = name + (cost ? '  \u00b7 +' + cost + ' pts' : '');
         if (sl.gear[gi] === name) o.selected = true;
         sel.append(o);
       }
@@ -1219,9 +1221,11 @@ function wargearFor(l, sl, u){
       const row = el('div');
       row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:3px 0';
 
+      const cost = gearCost(u, name);
       const lab = el('div');
       lab.style.cssText = 'flex:1;min-width:0;font-size:13px';
-      lab.textContent = name + (max ? '  (max ' + max + ')' : '');
+      lab.textContent = name + (cost ? '  +' + cost + ' pts' : '') +
+                        (max ? '  (max ' + max + ')' : '');
 
       const step = el('div','step');
       const minus = el('button'); minus.textContent = '\u2212';
@@ -1300,6 +1304,27 @@ function datasheetFor(u){
 }
 
 function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.length) || (u.kw && u.kw.length)); }
+/* Precio de un arma opcional. La mayoría vale 0, pero 71 unidades cobran:
+ * el Defiler suma 15 por Hades lascannon y 15 por heavy reaper autocannon.
+ * Los precios los trae el MFM; BSData no los tiene. */
+function gearCost(u, name){
+  if (!u.wg || !name) return 0;
+  return u.wg[String(name).toLowerCase().replace(/[^a-z0-9]/g, '')] ?? 0;
+}
+
+/* Puntos de armamento de un slot: opciones únicas más variantes por cantidad. */
+function gearPoints(u, sl){
+  if (!u.wg || !sl.gear) return 0;
+  let t = 0;
+  for (const [k, v] of Object.entries(sl.gear)) {
+    if (typeof v === 'string') { t += gearCost(u, v); continue; }
+    const [gi, oi] = k.split(':').map(Number);
+    const name = u.o?.[gi]?.opts?.[oi]?.[0];
+    if (name) t += gearCost(u, name) * v;
+  }
+  return t;
+}
+
 function sl_eq(a,b){ return a != null && +a === b; }
 function el(tag, cls){ const e = document.createElement(tag); if (cls) e.className = cls; return e; }
 function note(t){ const p = el('p','note'); p.textContent = t; return p; }
@@ -1755,7 +1780,7 @@ function printList(l){
       (sl.size > 1 ? ' \u00d7' + sl.size : '') +
       (au ? '<br><span style="font-size:11px;color:#555">leading ' + esc(au.n) + '</span>' : '') +
       (gear.length ? '<br><span style="font-size:11px;color:#555">' + esc(gear.join(', ')) + '</span>' : '') +
-      '</td><td>' + (u ? ptsFor(u, sl.size, prCopies[pi]) : '\u2014') + '</td></tr>';
+      '</td><td>' + (u ? (ptsFor(u, sl.size, prCopies[pi]) + gearPoints(u, sl)) : '\u2014') + '</td></tr>';
   }).join('') +
     (l.enh || []).filter(e => e.n || e.pts).map((e) => {
       const host = e.on != null && l.slots[e.on];
