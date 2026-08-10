@@ -72,7 +72,14 @@ async function main() {
         };
       });
       if (bands.length > 1) tierCount++;
-      return { name: u.name, bands, leaderTo: u.leaderTo ?? null };
+      // Armamento con coste. 71 unidades lo tienen: el Defiler cobra 15 por
+      // Hades lascannon y 15 por heavy reaper autocannon. BSData no trae esos
+      // precios, así que sin el MFM el total sale corto.
+      return {
+        name: u.name, bands,
+        leaderTo: u.leaderTo ?? null,
+        wargear: (u.wargear ?? []).map((w) => ({ item: w.item, pts: w.points })),
+      };
     });
     unitCount += units.length;
 
