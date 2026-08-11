@@ -394,6 +394,94 @@ function optionsOf(entry, ctx) {
   return groups.length ? groups : null;
 }
 
+/**
+ * COMPOSICIÓN DE LA UNIDAD.
+ *
+ * BSData no trae el bloque "Unit Composition" como texto: no existe ese tipo
+ * de perfil. Pero la información está en la estructura — los modelos con sus
+ * topes y sus armas de fábrica:
+ *
+ *   Assault Intercessor Sergeant  min 1 / max 1
+ *   Assault Intercessors          min 4 / max 9
+ *
+ * Se reconstruye a partir de eso. El armamento base sale de los hijos y
+ * enlaces de cada modelo que resuelven a un arma.
+ */
+function compositionOf(entry, ctx, weaponNames) {
+  const rows = [];
+  const seen = new Set();
+
+  const gearOf = (model) => {
+    const out = [];
+    const add = (nm) => { if (nm && weaponNames.has(nm) && !out.includes(nm)) out.push(nm); };
+    for (const e of asArray(model.selectionEntries)) add(e.name);
+    for (const l of asArray(model.entryLinks)) {
+      if (l.type !== 'selectionEntry') continue;
+      add(l.name);
+      const t = ctx?.shared?.get(l.targetId);
+      if (t) add(t.name);
+    }
+    return out;
+  };
+
+  const resolve = (list) => list
+    .map((l) => {
+      if (l.type === 'model' || l.type === 'upgrade') return l;
+      if (l.targetId) {
+        const t = ctx?.shared?.get(l.targetId);
+        return t ? { ...t, name: l.name || t.name } : null;
+      }
+      return l;
+    })
+    .filter(Boolean);
+
+  const addModel = (e) => {
+    if (!e || e.type !== 'model' || seen.has(e.name)) return;
+    const cs = asArray(e.constraints).filter((c) => c.field === 'selections');
+    const mn = cs.find((c) => c.type === 'min');
+    const mx = cs.find((c) => c.type === 'max');
+    seen.add(e.name);
+    rows.push({
+      n: e.name,
+      min: mn ? Number(mn.value) : (mx ? null : 1),
+      max: mx ? Number(mx.value) : null,
+      w: gearOf(e),
+    });
+  };
+
+  // PRIMER NIVEL únicamente. La composición son los modelos que cuelgan
+  // directo de la unidad o de sus grupos inmediatos. Las variantes de arma
+  // viven en subgrupos anidados y ya salen en `options`; incluirlas hacía
+  // que Berzerkers mostrara cuatro filas de tropa en vez de dos.
+  for (const e of resolve([...asArray(entry.selectionEntries), ...asArray(entry.entryLinks)]))
+    addModel(e);
+
+  for (const g of asArray(entry.selectionEntryGroups))
+    for (const e of resolve([...asArray(g.selectionEntries), ...asArray(g.entryLinks)]))
+      addModel(e);
+
+  // Unidad de un solo modelo: personajes y vehículos no tienen grupo.
+  if (!rows.length && entry.type === 'model')
+    rows.push({ n: entry.name, min: 1, max: 1, w: gearOf(entry) });
+
+  // Las filas "w/ algo" son variantes de armamento, no composición. Se
+  // descartan si queda al menos una fila normal; si TODAS son variantes
+  // (Necron Warriors, que sólo existe como "w/ gauss flayer" y "w/ gauss
+  // reaper"), se colapsan en una sola con el nombre de la unidad.
+  const isVariant = (r) => / w\/ | with /i.test(' ' + r.n + ' ');
+  const plain = rows.filter((r) => !isVariant(r));
+
+  if (plain.length) return plain;
+
+  if (rows.length) {
+    const max = Math.max(...rows.map((r) => r.max ?? 0)) || null;
+    const min = Math.min(...rows.map((r) => r.min ?? max ?? 1)) || null;
+    const w = [...new Set(rows.flatMap((r) => r.w))];
+    return [{ n: entry.name, min, max, w }];
+  }
+  return null;
+}
+
 /** Facción declarada en categoryLinks: "Faction: Necrons" */
 function factionOf(entry) {
   for (const cl of asArray(entry.categoryLinks)) {
@@ -566,6 +654,7 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
       leads: leaderTargetsOf(target),
       options: optionsOf(target, ctx),
       weapons: weaponsOf(target, ctx),
+      composition: null,   // se completa abajo, necesita los nombres de armas
       abilities: abilitiesOf(target, ctx),
       faction: factionOf(target),
       keywords: keywordsOf(target),
@@ -626,6 +715,15 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
   detachments.sort((a, b) => a.name.localeCompare(b.name));
 
   enhancements.sort((a, b) => a.name.localeCompare(b.name));
+
+  // La composición necesita saber qué nombres son armas, así que se calcula
+  // después de extraerlas.
+  for (const ds of datasheets) {
+    const target = shared.get(ds.id);
+    if (!target) continue;
+    const names = new Set((ds.weapons ?? []).map((w) => w.n));
+    ds.composition = compositionOf(target, ctx, names);
+  }
 
   datasheets.sort((a, b) => a.name.localeCompare(b.name));
 
