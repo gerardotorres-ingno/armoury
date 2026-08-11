@@ -350,7 +350,7 @@ function optionsOf(entry, ctx) {
     return { min: mn ? Number(mn.value) : 0, max: mx ? Number(mx.value) : null };
   };
 
-  const readGroup = (g) => {
+  const readGroup = (g, owner) => {
     if (!g || !g.name || seenG.has(g.id ?? g.name)) return;
     if (SKIP_BRANCH.test(g.name) || SKIP_EXACT.test(g.name.trim())) return;
     seenG.add(g.id ?? g.name);
@@ -378,16 +378,22 @@ function optionsOf(entry, ctx) {
     const gc = capOf(g);
     const pick = gc.max === 1 ? 'one' : 'many';
     const isChoice = opts.some((o) => o.min !== o.max) || (pick === 'one' && opts.length > 1);
-    if (isChoice) groups.push({ n: g.name, min: gc.min, max: gc.max, pick, opts });
+    // De qué MODELO son estas opciones. En una escuadra, "Weapon 1" es del
+    // sargento y la tropa lleva equipo fijo; mostrarlas planas hace creer que
+    // la elección aplica a toda la unidad.
+    if (isChoice) groups.push({ n: g.name, owner: owner ?? null, min: gc.min, max: gc.max, pick, opts });
   };
 
   walkAll(entry, ctx, (n) => {
-    for (const g of asArray(n.selectionEntryGroups)) readGroup(g);
-    // grupos que llegan por enlace: "Sister Superior Ranged Weapons"
+    // El dueño es el modelo más cercano hacia arriba. `n` es ese nodo cuando
+    // es de tipo model; si no, las opciones son de la unidad entera.
+    const owner = n.type === 'model' && n.name !== entry.name ? n.name : null;
+
+    for (const g of asArray(n.selectionEntryGroups)) readGroup(g, owner);
     for (const l of asArray(n.entryLinks)) {
       if (l.type !== 'selectionEntryGroup') continue;
       const g = ctx?.groups?.get(l.targetId);
-      if (g) readGroup({ ...g, name: l.name || g.name });
+      if (g) readGroup({ ...g, name: l.name || g.name }, owner);
     }
   });
 
@@ -723,6 +729,19 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
     if (!target) continue;
     const names = new Set((ds.weapons ?? []).map((w) => w.n));
     ds.composition = compositionOf(target, ctx, names);
+
+    // Los grupos de COMPOSICIÓN se colaban entre las opciones de equipo:
+    // "Assault Intercessors [many]: Sergeant / Assault Intercessors" no es
+    // una elección de armamento, es la tropa de la unidad. Se descartan los
+    // grupos cuyas opciones son todas modelos de la composición.
+    const compNames = new Set((ds.composition ?? []).map((c) => c.n));
+    if (ds.options) {
+      ds.options = ds.options.filter((g) => {
+        const allComp = g.opts.every((o) => compNames.has(o.n));
+        return !allComp;
+      });
+      if (!ds.options.length) ds.options = null;
+    }
   }
 
   datasheets.sort((a, b) => a.name.localeCompare(b.name));
