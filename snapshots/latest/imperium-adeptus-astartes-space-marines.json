@@ -922,27 +922,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Aggressors",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Aggressors",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            },
-            {
-              "n": "Aggressor Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon Option",
+          "owner": "Aggressors",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -963,6 +944,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Aggressor Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1097,6 +1079,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1111,6 +1094,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1245,6 +1229,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1271,6 +1256,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1462,6 +1448,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1482,6 +1469,7 @@
         },
         {
           "n": "Pistol Options",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1741,6 +1729,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1870,6 +1859,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1985,6 +1975,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2108,27 +2099,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Assault Intercessors",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Assault Intercessor Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Assault Intercessors",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon 1",
+          "owner": "Assault Intercessor Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2155,6 +2127,7 @@
         },
         {
           "n": "Weapon 2",
+          "owner": "Assault Intercessor Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2346,6 +2319,7 @@
       "options": [
         {
           "n": "Assault Intercessors with Jump Packs",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -2372,6 +2346,7 @@
         },
         {
           "n": "Weapon 1",
+          "owner": "Assault Intercessor Sergeant with Jump Pack",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2398,6 +2373,7 @@
         },
         {
           "n": "Weapon 2",
+          "owner": "Assault Intercessor Sergeant with Jump Pack",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2567,6 +2543,7 @@
       "options": [
         {
           "n": "Assault Marines",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -2599,6 +2576,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": "Assault Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2637,6 +2615,7 @@
         },
         {
           "n": "Melee Option",
+          "owner": "Assault Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2675,6 +2654,7 @@
         },
         {
           "n": "Options",
+          "owner": "Assault Sergeant",
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2695,6 +2675,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": "Assault Marine w/ Eviscerator",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2715,6 +2696,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Assault Marine w/ Special Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2996,6 +2978,7 @@
       "options": [
         {
           "n": "Assault Marines with Jump Packs",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -3028,6 +3011,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": "Assault Sergeant with Jump Pack",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3066,6 +3050,7 @@
         },
         {
           "n": "Melee Option",
+          "owner": "Assault Sergeant with Jump Pack",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3104,6 +3089,7 @@
         },
         {
           "n": "Options",
+          "owner": "Assault Sergeant with Jump Pack",
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3124,6 +3110,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": "Assault Marine with Jump Pack w/ Eviscerator",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3144,6 +3131,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Assault Marine with Jump Pack w/ Special Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3422,6 +3410,7 @@
       "options": [
         {
           "n": "Astartes Servitors",
+          "owner": null,
           "min": 4,
           "max": 4,
           "pick": "many",
@@ -3442,6 +3431,7 @@
         },
         {
           "n": "Heavy Weapon",
+          "owner": "Astartes Servitor w/ Heavy Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3599,6 +3589,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -3631,6 +3622,7 @@
         },
         {
           "n": "Hull weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3651,6 +3643,7 @@
         },
         {
           "n": "Sponson weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3833,6 +3826,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": "Attack Bike",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4080,6 +4074,7 @@
       "options": [
         {
           "n": "Space Marine Bikers",
+          "owner": null,
           "min": 3,
           "max": 6,
           "pick": "many",
@@ -4112,6 +4107,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Attack Bike",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4132,6 +4128,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Biker Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4212,6 +4209,7 @@
         },
         {
           "n": "Special Weapon",
+          "owner": "Space Marine Bikers w/  Special Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4565,6 +4563,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -4677,27 +4676,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Bladeguard Veterans",
-          "min": 3,
-          "max": 6,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Bladeguard Veterans",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            },
-            {
-              "n": "Bladeguard Veteran Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Pistol Option",
+          "owner": "Bladeguard Veteran Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4851,6 +4831,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -4865,6 +4846,7 @@
         },
         {
           "n": "Melee Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4885,6 +4867,7 @@
         },
         {
           "n": "Ranged Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5165,6 +5148,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5191,6 +5175,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5217,6 +5202,7 @@
         },
         {
           "n": "Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5243,6 +5229,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5437,6 +5424,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5457,6 +5445,7 @@
         },
         {
           "n": "Relic Weapon Selection",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5633,6 +5622,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5764,6 +5754,7 @@
       "options": [
         {
           "n": "Weapon 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5784,6 +5775,7 @@
         },
         {
           "n": "Weapon 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5920,6 +5912,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5940,6 +5933,7 @@
         },
         {
           "n": "Replace bolt pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6014,6 +6008,7 @@
         },
         {
           "n": "Replace Astartes chainsword",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6289,6 +6284,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6315,6 +6311,7 @@
         },
         {
           "n": "Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6341,6 +6338,7 @@
         },
         {
           "n": "Melee",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6659,27 +6657,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Assault Centurions",
-          "min": 3,
-          "max": 6,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Assault Centurion Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Assault Centurion",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Centurion Option",
+          "owner": "Assault Centurion Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6700,6 +6679,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Assault Centurion Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6720,6 +6700,7 @@
         },
         {
           "n": "Centurion Option",
+          "owner": "Assault Centurion",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6740,6 +6721,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Assault Centurion",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6877,27 +6859,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Devastator Centurions",
-          "min": 3,
-          "max": 6,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Devastator Centurion Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Devastator Centurion",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Centurion Option",
+          "owner": "Devastator Centurion Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6918,6 +6881,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Devastator Centurion Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6944,6 +6908,7 @@
         },
         {
           "n": "Centurion Option",
+          "owner": "Devastator Centurion",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6964,6 +6929,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Devastator Centurion",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7123,6 +7089,7 @@
       "options": [
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -7155,6 +7122,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -7317,6 +7285,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -7427,6 +7396,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7543,6 +7513,7 @@
         },
         {
           "n": "Weapons",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -7563,6 +7534,7 @@
         },
         {
           "n": "Chapter",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -7595,6 +7567,7 @@
         },
         {
           "n": "Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -7663,6 +7636,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -7737,6 +7711,7 @@
         },
         {
           "n": "Melee Weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -7847,6 +7822,7 @@
         },
         {
           "n": "Ravenwing Weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -8629,6 +8605,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -8743,6 +8720,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -8757,6 +8735,7 @@
         },
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -8871,6 +8850,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -8995,6 +8975,7 @@
       "options": [
         {
           "n": "Left Arm Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9039,6 +9020,7 @@
         },
         {
           "n": "Right Arm Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9263,6 +9245,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -9277,6 +9260,7 @@
         },
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9543,6 +9527,7 @@
       "options": [
         {
           "n": "Pistol",
+          "owner": "Apothecary",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9581,6 +9566,7 @@
         },
         {
           "n": "Pistol",
+          "owner": "Company Ancient",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9631,6 +9617,7 @@
         },
         {
           "n": "Pistol",
+          "owner": "Company Champion",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9669,6 +9656,7 @@
         },
         {
           "n": "Weapon Option 1",
+          "owner": "Company Veterans",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9713,6 +9701,7 @@
         },
         {
           "n": "Weapon Option 2",
+          "owner": "Company Veterans",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10266,6 +10255,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -10537,27 +10527,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Company Veterans on Bikes [Legends]",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Veteran Biker Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Veteran Bikers",
-              "min": 1,
-              "max": 4,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Pistol Options",
+          "owner": "Veteran Biker Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10602,6 +10573,7 @@
         },
         {
           "n": "Chainsword Options",
+          "owner": "Veteran Biker Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10634,6 +10606,7 @@
         },
         {
           "n": "Chainsword Options",
+          "owner": "Veteran Bikers",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10708,6 +10681,7 @@
         },
         {
           "n": "Pistol Options",
+          "owner": "Veteran Bikers",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11016,6 +10990,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11117,6 +11092,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -11143,6 +11119,7 @@
         },
         {
           "n": "Sponson Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -11169,6 +11146,7 @@
         },
         {
           "n": "Turrent Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11383,6 +11361,7 @@
       "options": [
         {
           "n": "Carapace weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -11403,6 +11382,7 @@
         },
         {
           "n": "Chest weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11423,6 +11403,7 @@
         },
         {
           "n": "Main weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11630,6 +11611,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": "Desolation Marine",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11650,6 +11632,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Desolation Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11821,6 +11804,7 @@
       "options": [
         {
           "n": "Devastators",
+          "owner": null,
           "min": 4,
           "max": 9,
           "pick": "many",
@@ -11841,6 +11825,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Devastator Marine w/ Heavy Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11885,6 +11870,7 @@
         },
         {
           "n": "Wargear",
+          "owner": "Devastator Sergeant",
           "min": 0,
           "max": null,
           "pick": "many",
@@ -11899,6 +11885,7 @@
         },
         {
           "n": "Weapon 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11949,6 +11936,7 @@
         },
         {
           "n": "Weapon 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12266,6 +12254,7 @@
       "options": [
         {
           "n": "Dreadnought Arm Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12292,6 +12281,7 @@
         },
         {
           "n": "Dreadnought Heavy Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12633,6 +12623,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": "Eliminator Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12653,6 +12644,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Eliminator",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12805,6 +12797,7 @@
       "options": [
         {
           "n": "Eradicators",
+          "owner": null,
           "min": 3,
           "max": 6,
           "pick": "many",
@@ -13054,6 +13047,7 @@
       "options": [
         {
           "n": "Frontal weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13074,6 +13068,7 @@
         },
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -13106,6 +13101,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13297,6 +13293,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -13329,6 +13326,7 @@
         },
         {
           "n": "Frontal weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13349,6 +13347,7 @@
         },
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -13387,6 +13386,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13741,6 +13741,7 @@
       "options": [
         {
           "n": "Door weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13761,6 +13762,7 @@
         },
         {
           "n": "Wing weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13905,21 +13907,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Firestrike Servo-Turrets",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Firestrike Servo-Turret",
-              "min": 1,
-              "max": 2,
-              "p": 75
-            }
-          ]
-        },
-        {
           "n": "Wargear",
+          "owner": "Firestrike Servo-Turret",
           "min": 0,
           "max": null,
           "pick": "many",
@@ -13934,6 +13923,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -14047,6 +14037,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -14079,6 +14070,7 @@
         },
         {
           "n": "Sponson Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -14230,6 +14222,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -14388,6 +14381,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -14546,6 +14540,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -14679,34 +14674,7 @@
         "at1000": 4
       },
       "leads": null,
-      "options": [
-        {
-          "n": "Heavy Intercessors",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Heavy Intercessors",
-              "min": 3,
-              "max": 9,
-              "p": 0
-            },
-            {
-              "n": "Heavy Intercessor Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Heavy Intercessor w/Heavy Bolter",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Heavy Bolt Rifle",
@@ -14837,27 +14805,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Hellblasters",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Hellblaster Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Hellblaster",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Pistol Option",
+          "owner": "Hellblaster Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15016,6 +14965,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -15165,6 +15115,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -15289,6 +15240,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -15309,6 +15261,7 @@
         },
         {
           "n": "Option",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -15341,6 +15294,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15521,27 +15475,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Inceptors",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Inceptor Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Inceptor",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon Option",
+          "owner": "Inceptor Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15562,6 +15497,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Inceptor",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15695,28 +15631,7 @@
         "at1000": 2
       },
       "leads": null,
-      "options": [
-        {
-          "n": "Incursors",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Incursor Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Incursor",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Occulus Bolt Carbine",
@@ -15828,28 +15743,7 @@
         "at1000": 2
       },
       "leads": null,
-      "options": [
-        {
-          "n": "Infernus Marines",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Infernus Marines",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            },
-            {
-              "n": "Infernus Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Pyreblaster",
@@ -15956,28 +15850,7 @@
         "at1000": 2
       },
       "leads": null,
-      "options": [
-        {
-          "n": "Infiltrators",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Infiltrator",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            },
-            {
-              "n": "Infiltrator Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Marksman Bolt Carbine",
@@ -16096,6 +15969,7 @@
       "options": [
         {
           "n": "Intercessors",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -16122,6 +15996,7 @@
         },
         {
           "n": "Weapon 1",
+          "owner": "Intercessor Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16166,6 +16041,7 @@
         },
         {
           "n": "Weapon 2",
+          "owner": "Intercessor Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16414,6 +16290,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -16440,6 +16317,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16576,6 +16454,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -16608,6 +16487,7 @@
         },
         {
           "n": "Main Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16759,6 +16639,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -16779,6 +16660,7 @@
         },
         {
           "n": "Weapon 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16805,6 +16687,7 @@
         },
         {
           "n": "Underslung Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16825,6 +16708,7 @@
         },
         {
           "n": "Arm Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16996,6 +16880,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -17016,6 +16901,7 @@
         },
         {
           "n": "Gunner weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17036,6 +16922,7 @@
         },
         {
           "n": "Main weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17206,6 +17093,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -17314,6 +17202,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -17340,6 +17229,7 @@
         },
         {
           "n": "Hull guns",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17372,6 +17262,7 @@
         },
         {
           "n": "Main weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17398,6 +17289,7 @@
         },
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -17442,6 +17334,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17713,6 +17606,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -17890,6 +17784,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -17922,6 +17817,7 @@
         },
         {
           "n": "Additional weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -17954,6 +17850,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -18159,6 +18056,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -18341,6 +18239,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -18545,6 +18444,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -18707,6 +18607,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -18866,6 +18767,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -18904,6 +18806,7 @@
         },
         {
           "n": "Additional weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -19092,6 +18995,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -19274,6 +19178,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -19408,6 +19313,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -19533,6 +19439,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -19663,6 +19570,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -19677,6 +19585,7 @@
         },
         {
           "n": "Weapon Option 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -19697,6 +19606,7 @@
         },
         {
           "n": "Weapon Option 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -19832,6 +19742,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -19852,6 +19763,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -19984,6 +19896,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -20004,6 +19917,7 @@
         },
         {
           "n": "Arm weapons",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -20042,6 +19956,7 @@
         },
         {
           "n": "Replace heavy flamers",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -20250,6 +20165,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -20393,6 +20309,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -20536,6 +20453,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -20556,6 +20474,7 @@
         },
         {
           "n": "Weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -20700,6 +20619,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -20720,6 +20640,7 @@
         },
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -20956,6 +20877,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -20976,6 +20898,7 @@
         },
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -21234,6 +21157,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -21344,6 +21268,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -21460,6 +21385,7 @@
         },
         {
           "n": "Weapons",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -21480,6 +21406,7 @@
         },
         {
           "n": "Chapter",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -21512,6 +21439,7 @@
         },
         {
           "n": "Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -21580,6 +21508,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -21654,6 +21583,7 @@
         },
         {
           "n": "Melee Weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -21764,6 +21694,7 @@
         },
         {
           "n": "Ravenwing Weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -22531,6 +22462,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -22551,6 +22483,7 @@
         },
         {
           "n": "Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -22571,6 +22504,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -22597,6 +22531,7 @@
         },
         {
           "n": "Replace Bolter",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -22802,6 +22737,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -23024,6 +22960,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -23134,6 +23071,7 @@
       "options": [
         {
           "n": "Front sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -23166,6 +23104,7 @@
         },
         {
           "n": "Rear sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -23340,6 +23279,7 @@
       "options": [
         {
           "n": "Weapon Selections",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -23577,27 +23517,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Outriders",
-          "min": 3,
-          "max": 6,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Outrider",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            },
-            {
-              "n": "Outrider Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Wargear",
+          "owner": "Invader ATV",
           "min": 0,
           "max": null,
           "pick": "many",
@@ -23624,6 +23545,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -23801,6 +23723,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -23833,6 +23756,7 @@
         },
         {
           "n": "Sponson Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -23983,6 +23907,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -24015,6 +23940,7 @@
         },
         {
           "n": "Sponson Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -24160,6 +24086,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -24265,6 +24192,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -24433,6 +24361,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -24459,6 +24388,7 @@
         },
         {
           "n": "Turret Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -24601,6 +24531,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -24621,6 +24552,7 @@
         },
         {
           "n": "Weapon Option 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -24641,6 +24573,7 @@
         },
         {
           "n": "Weapon Option 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -24661,6 +24594,7 @@
         },
         {
           "n": "Weapon Option 3",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -24844,27 +24778,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Reivers",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Reivers",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            },
-            {
-              "n": "Reiver Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon Option",
+          "owner": "Reivers",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -25012,6 +24927,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -25032,6 +24948,7 @@
         },
         {
           "n": "Arm weapons",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -25100,6 +25017,7 @@
         },
         {
           "n": "Fist weapons",
+          "owner": null,
           "min": 0,
           "max": 0,
           "pick": "many",
@@ -25401,6 +25319,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -25427,6 +25346,7 @@
         },
         {
           "n": "Turret Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -25602,6 +25522,7 @@
       "options": [
         {
           "n": "Relic Terminators",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -25646,6 +25567,7 @@
         },
         {
           "n": "Ranged Weapon Option",
+          "owner": "Relic Terminator Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -25672,6 +25594,7 @@
         },
         {
           "n": "Melee Weapon Option",
+          "owner": "Relic Terminator Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -25698,6 +25621,7 @@
         },
         {
           "n": "Ranged Weapon Option",
+          "owner": "Relic Terminator w/ Heavy Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -25718,6 +25642,7 @@
         },
         {
           "n": "Melee Weapon Option",
+          "owner": "Relic Terminator w/ Heavy Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -25924,6 +25849,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -25950,6 +25876,7 @@
         },
         {
           "n": "Hull Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -25970,6 +25897,7 @@
         },
         {
           "n": "Turret Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -26137,6 +26065,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -26187,6 +26116,7 @@
         },
         {
           "n": "Turret Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -26387,6 +26317,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -26513,6 +26444,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -26652,6 +26584,7 @@
       "options": [
         {
           "n": "Scout Bikers",
+          "owner": null,
           "min": 3,
           "max": 6,
           "pick": "many",
@@ -26678,6 +26611,7 @@
         },
         {
           "n": "Bike Weapon",
+          "owner": "Scout Biker Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -26698,6 +26632,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Scout Biker Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -27028,6 +26963,7 @@
       "options": [
         {
           "n": "Scout Snipers",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -27184,6 +27120,7 @@
       "options": [
         {
           "n": "Scouts",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -27228,6 +27165,7 @@
         },
         {
           "n": "Weapon option",
+          "owner": "Scout Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -27260,6 +27198,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Scout w/ Heavy Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -27451,6 +27390,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -27489,6 +27429,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -27636,6 +27577,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -27674,6 +27616,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -27820,6 +27763,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -27858,6 +27802,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -28016,6 +27961,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -28054,6 +28000,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -28200,6 +28147,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -28238,6 +28186,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -28384,6 +28333,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -28523,6 +28473,7 @@
       "options": [
         {
           "n": "Frontal weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -28543,6 +28494,7 @@
         },
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -28575,6 +28527,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -28758,6 +28711,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -28898,6 +28852,7 @@
       "options": [
         {
           "n": "Sternguard Veterans",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -28930,6 +28885,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Sternguard Veteran Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -28950,6 +28906,7 @@
         },
         {
           "n": "Melee Option",
+          "owner": "Sternguard Veteran Sergeant",
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -28976,6 +28933,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Sternguard Veteran w/ Special Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -29156,6 +29114,7 @@
       "options": [
         {
           "n": "Nose weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -29182,6 +29141,7 @@
         },
         {
           "n": "Wing weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -29355,6 +29315,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -29492,6 +29453,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -29629,6 +29591,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -29766,6 +29729,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -29786,6 +29750,7 @@
         },
         {
           "n": "Weapon Option 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -29806,6 +29771,7 @@
         },
         {
           "n": "Weapon Option 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -29982,6 +29948,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -30008,6 +29975,7 @@
         },
         {
           "n": "Weapon Option 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -30034,6 +30002,7 @@
         },
         {
           "n": "Weapon Option 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -30250,6 +30219,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -30270,6 +30240,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -30548,39 +30519,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Tactical Marines",
-          "min": 10,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Tactical Marine",
-              "min": 7,
-              "max": 9,
-              "p": 0
-            },
-            {
-              "n": "Tactical Marine Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Tactical Marine w/Special Weapon",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Tactical Marine w/Heavy or Special Weapon",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon 1",
+          "owner": "Tactical Marine Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -30631,6 +30571,7 @@
         },
         {
           "n": "Weapon 2",
+          "owner": "Tactical Marine Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -30681,6 +30622,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Tactical Marine w/Special Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -30713,6 +30655,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Tactical Marine w/Heavy or Special Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -31236,6 +31179,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -31348,6 +31292,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -31497,6 +31442,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -31511,6 +31457,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -31543,6 +31490,7 @@
         },
         {
           "n": "Ranged Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -31587,6 +31535,7 @@
         },
         {
           "n": "Servo Harness",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -31858,6 +31807,7 @@
       "options": [
         {
           "n": "Assault Terminators",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -31884,6 +31834,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Assault Terminator Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -31994,6 +31945,7 @@
       "options": [
         {
           "n": "Terminators",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -32026,6 +31978,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": "Terminator Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -32052,6 +32005,7 @@
         },
         {
           "n": "Ranged Weapon Option",
+          "owner": "Terminator w/ Heavy Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -32078,6 +32032,7 @@
         },
         {
           "n": "Melee Weapon Option",
+          "owner": "Terminator w/ Heavy Weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -32252,6 +32207,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -32435,6 +32391,7 @@
       "options": [
         {
           "n": "Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -32580,6 +32537,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": "Techmarine Gunner",
           "min": 0,
           "max": null,
           "pick": "many",
@@ -32618,6 +32576,7 @@
         },
         {
           "n": "Wargear",
+          "owner": "Thunderfire Cannon",
           "min": 0,
           "max": null,
           "pick": "many",
@@ -32774,6 +32733,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -32800,6 +32760,7 @@
         },
         {
           "n": "Bombs or missiles",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -32820,6 +32781,7 @@
         },
         {
           "n": "Main weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -32976,6 +32938,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -33103,6 +33066,7 @@
       "options": [
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -33135,6 +33099,7 @@
         },
         {
           "n": "Sponsons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -33298,27 +33263,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Vanguard Veterans",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Vanguard Veterans",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            },
-            {
-              "n": "Vanguard Veteran Sergeant",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Pistol Option",
+          "owner": "Vanguard Veterans",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -33363,6 +33309,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": "Vanguard Veteran Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -33569,6 +33516,7 @@
       "options": [
         {
           "n": "Vanguard Veterans with Jump Packs",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -33589,6 +33537,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": "Vanguard Veterans with Jump Packs",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -33639,6 +33588,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": "Vanguard Veterans with Jump Packs",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -33659,6 +33609,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": "Vanguard Veteran Sergeant with Jump Pack",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -33709,6 +33660,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": "Vanguard Veteran Sergeant with Jump Pack",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -33895,6 +33847,7 @@
       "options": [
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -34011,6 +33964,7 @@
         },
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -34121,6 +34075,7 @@
         },
         {
           "n": "Chapter",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -34153,6 +34108,7 @@
         },
         {
           "n": "Weapon Arm 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -34191,6 +34147,7 @@
         },
         {
           "n": "Weapon Arm 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -34217,6 +34174,7 @@
         },
         {
           "n": "Aux Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -34249,6 +34207,7 @@
         },
         {
           "n": "Icarus Rocket Pod",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -34690,6 +34649,7 @@
       "options": [
         {
           "n": "Dreadnought Arm Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -34722,6 +34682,7 @@
         },
         {
           "n": "Dreadnought Heavy Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -35016,6 +34977,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -35153,6 +35115,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -35304,6 +35267,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -35441,6 +35405,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -35577,6 +35542,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",

@@ -643,6 +643,7 @@
       "options": [
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -669,6 +670,7 @@
         },
         {
           "n": "Ranged Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -880,6 +882,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1032,6 +1035,7 @@
       "options": [
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1058,6 +1062,7 @@
         },
         {
           "n": "Ranged Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1545,6 +1550,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1670,6 +1676,7 @@
       "options": [
         {
           "n": "Heavy Weapons [Legends]",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1861,21 +1868,8 @@
       "leads": null,
       "options": [
         {
-          "n": "3-6 Corsair Cloud Dancers",
-          "min": 3,
-          "max": 6,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Corsair Cloud Dancer",
-              "min": 0,
-              "max": null,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Replace twin shuriken catapult",
+          "owner": "Cloud Dancer Felarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1914,6 +1908,7 @@
         },
         {
           "n": "Felarch weapon",
+          "owner": "Cloud Dancer Felarch",
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -1934,6 +1929,7 @@
         },
         {
           "n": "Replace twin shuriken catapult",
+          "owner": "Corsair Cloud Dancer",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2146,6 +2142,7 @@
       "options": [
         {
           "n": "5-10 Corsair Reavers",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -2166,6 +2163,7 @@
         },
         {
           "n": "Main weapon",
+          "owner": "Reaver Felarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2234,6 +2232,7 @@
         },
         {
           "n": "Felarch weapon",
+          "owner": "Reaver Felarch",
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2254,6 +2253,7 @@
         },
         {
           "n": "Reaver w/ heavy or special weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2548,6 +2548,7 @@
       "options": [
         {
           "n": "4 -9 Skyreavers",
+          "owner": null,
           "min": 4,
           "max": 9,
           "pick": "many",
@@ -2562,6 +2563,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Skyreaver Felarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2588,6 +2590,7 @@
         },
         {
           "n": "Skyreavers w/ alternative weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -2799,6 +2802,7 @@
       "options": [
         {
           "n": "4-9 Voidreavers",
+          "owner": null,
           "min": 4,
           "max": 9,
           "pick": "many",
@@ -2825,6 +2829,7 @@
         },
         {
           "n": "Voidreaver with special weapon",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -2845,6 +2850,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Voidreaver with Heavy weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2865,6 +2871,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Voidreaver Felarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3075,33 +3082,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4 -9 Voidscarred",
-          "min": 0,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Shade Runner",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Soul Weaver",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Way Seeker",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Voidscarred",
+          "owner": null,
           "min": 4,
           "max": null,
           "pick": "many",
@@ -3152,6 +3134,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Voidscarred with heavy weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3172,6 +3155,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Voidscarred with special weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3192,6 +3176,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Voidscarred Felarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3493,6 +3478,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3537,6 +3523,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3569,6 +3556,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -3589,6 +3577,7 @@
         },
         {
           "n": "Melee Weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -3663,6 +3652,7 @@
         },
         {
           "n": "Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3743,6 +3733,7 @@
         },
         {
           "n": "Ghost Warrior Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 4,
           "pick": "many",
@@ -4206,6 +4197,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4442,21 +4434,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Dark Reapers",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Dark Reaper",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon",
+          "owner": "Dark Reaper Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4738,21 +4717,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Dire Avengers",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Dire Avenger",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon(s)",
+          "owner": "Dire Avenger Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4936,21 +4902,8 @@
       "leads": null,
       "options": [
         {
-          "n": "2-5 Dragon Knights",
-          "min": 2,
-          "max": 5,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Dragon Knight",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Drakolithe",
+          "owner": null,
           "min": 0,
           "max": 4,
           "pick": "many",
@@ -5188,6 +5141,7 @@
       "options": [
         {
           "n": "Hull weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5208,6 +5162,7 @@
         },
         {
           "n": "Heavy Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5416,6 +5371,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5550,6 +5506,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5697,21 +5654,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Fire Dragons",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Fire Dragon",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon",
+          "owner": "Fire Dragon Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5898,6 +5842,7 @@
       "options": [
         {
           "n": "Hull weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6039,6 +5984,7 @@
       "options": [
         {
           "n": "Hull weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6267,6 +6213,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -6311,6 +6258,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6343,6 +6291,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -6363,6 +6312,7 @@
         },
         {
           "n": "Melee Weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -6437,6 +6387,7 @@
         },
         {
           "n": "Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -6517,6 +6468,7 @@
         },
         {
           "n": "Ghost Warrior Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 4,
           "pick": "many",
@@ -6982,6 +6934,7 @@
       "options": [
         {
           "n": "Heavy Weapons",
+          "owner": "Heavy Weapon Platform",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7275,6 +7228,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -7471,21 +7425,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Howling Banshees",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Howling Banshee",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapons",
+          "owner": "Howling Banshee Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -8108,6 +8049,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -8343,6 +8285,7 @@
       "options": [
         {
           "n": "Heavy Weapons [Legends]",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -8613,6 +8556,7 @@
       "options": [
         {
           "n": "Hull weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -8840,6 +8784,7 @@
       "options": [
         {
           "n": "D-bombard Replacement",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -8878,6 +8823,7 @@
         },
         {
           "n": "Phantom pulsar Replacement",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -8916,6 +8862,7 @@
         },
         {
           "n": "Phantom starcannon replacement",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9421,6 +9368,7 @@
       "options": [
         {
           "n": "Left Arm",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9441,6 +9389,7 @@
         },
         {
           "n": "Right Arm",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9586,6 +9535,7 @@
       "options": [
         {
           "n": "Heavy Weapons [Legends]",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -9775,22 +9725,7 @@
         "at1000": 2
       },
       "leads": null,
-      "options": [
-        {
-          "n": "5-10 Shadow Spectres",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Shadow Spectre",
-              "min": 0,
-              "max": null,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "➤ Prism Rifle - dispersed",
@@ -9995,6 +9930,7 @@
       "options": [
         {
           "n": "Pistol Choice",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10128,21 +10064,8 @@
       "leads": null,
       "options": [
         {
-          "n": "2-5 Shining Spears",
-          "min": 2,
-          "max": 5,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Shining Spear",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon Choice",
+          "owner": "Shining Spear Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10169,6 +10092,7 @@
         },
         {
           "n": "Bike Weapon",
+          "owner": "Shining Spear Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10436,6 +10360,7 @@
       "options": [
         {
           "n": "Left Arm",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10462,6 +10387,7 @@
         },
         {
           "n": "Right Arm",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10482,6 +10408,7 @@
         },
         {
           "n": "Secondary Weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -10657,6 +10584,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -10701,6 +10629,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -10733,6 +10662,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -10753,6 +10683,7 @@
         },
         {
           "n": "Melee Weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -10827,6 +10758,7 @@
         },
         {
           "n": "Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -10907,6 +10839,7 @@
         },
         {
           "n": "Ghost Warrior Ranged Weapons",
+          "owner": null,
           "min": 0,
           "max": 4,
           "pick": "many",
@@ -11375,6 +11308,7 @@
       "options": [
         {
           "n": "Bike Weapon",
+          "owner": "Skyweaver",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11395,6 +11329,7 @@
         },
         {
           "n": "Rider Weapon",
+          "owner": "Skyweaver",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -11797,6 +11732,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -11905,6 +11841,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -12065,6 +12002,7 @@
       "options": [
         {
           "n": "10 Storm Guardians",
+          "owner": null,
           "min": 10,
           "max": 10,
           "pick": "many",
@@ -12249,21 +12187,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Striking Scorpions",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Striking Scorpion",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapons",
+          "owner": "Striking Scorpion Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12422,21 +12347,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Swooping Hawks",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Swooping Hawk",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon",
+          "owner": "Swooping Hawk Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12837,6 +12749,7 @@
       "options": [
         {
           "n": "4-11 Players",
+          "owner": null,
           "min": 4,
           "max": 11,
           "pick": "many",
@@ -12869,6 +12782,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Player with Fusion Pistol",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12889,6 +12803,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Player with Neuro Disruptor",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12909,6 +12824,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": "Lead Player",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -12935,6 +12851,7 @@
         },
         {
           "n": "Pistol",
+          "owner": "Lead Player",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13094,6 +13011,7 @@
       "options": [
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13114,6 +13032,7 @@
         },
         {
           "n": "Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13586,6 +13505,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -13606,6 +13526,7 @@
         },
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13748,6 +13669,7 @@
       "options": [
         {
           "n": "Bright Lance Replacement",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13774,6 +13696,7 @@
         },
         {
           "n": "Shuriken Cannon Replacement",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -13936,6 +13859,7 @@
       "options": [
         {
           "n": "Heavy Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -14119,6 +14043,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -14254,6 +14179,7 @@
       "options": [
         {
           "n": "2-4 Warlocks",
+          "owner": null,
           "min": 2,
           "max": 4,
           "pick": "many",
@@ -14394,6 +14320,7 @@
       "options": [
         {
           "n": "1-2 Warlock Skyrunners",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -14543,6 +14470,7 @@
       "options": [
         {
           "n": "Hull weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -14686,21 +14614,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Warp Spiders",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Warp Spider",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon(s)",
+          "owner": "Warp Spider Exarch",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -14888,6 +14803,7 @@
       "options": [
         {
           "n": "Heavy Weapons [Legends]",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15064,6 +14980,7 @@
       "options": [
         {
           "n": "Hull weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15084,6 +15001,7 @@
         },
         {
           "n": "Turret Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15358,6 +15276,7 @@
       "options": [
         {
           "n": "Windriders",
+          "owner": null,
           "min": 3,
           "max": 6,
           "pick": "many",
@@ -15493,6 +15412,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": "Wraithblade",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15603,6 +15523,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15723,6 +15644,7 @@
       "options": [
         {
           "n": "Left Arm",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15743,6 +15665,7 @@
         },
         {
           "n": "Right Arm",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15763,6 +15686,7 @@
         },
         {
           "n": "Secondary Weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -15931,6 +15855,7 @@
       "options": [
         {
           "n": "Left Arm",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -15951,6 +15876,7 @@
         },
         {
           "n": "Secondary Weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -16115,6 +16041,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -16135,6 +16062,7 @@
         },
         {
           "n": "Arm Weapons",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -16155,6 +16083,7 @@
         },
         {
           "n": "Heavy Weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -16380,6 +16309,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16599,6 +16529,7 @@
       "options": [
         {
           "n": "Pistol Choice",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16723,21 +16654,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Incubi",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Incubi",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Wargear",
+          "owner": "Klaivex",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16858,6 +16776,7 @@
       "options": [
         {
           "n": "9 Kabalite Warriors",
+          "owner": null,
           "min": 9,
           "max": 9,
           "pick": "many",
@@ -16896,6 +16815,7 @@
         },
         {
           "n": "Ranged Weapon",
+          "owner": "Sybarite",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -16922,6 +16842,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": "Sybarite",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17113,6 +17034,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17233,6 +17155,7 @@
       "options": [
         {
           "n": "2-5 Reavers",
+          "owner": null,
           "min": 2,
           "max": 5,
           "pick": "many",
@@ -17259,6 +17182,7 @@
         },
         {
           "n": "Reaver Wargear",
+          "owner": "Reaver",
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -17279,6 +17203,7 @@
         },
         {
           "n": "Bike Weapon",
+          "owner": "Arena Champion",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17455,6 +17380,7 @@
       "options": [
         {
           "n": "Pistol Choice",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -17573,6 +17499,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -17689,6 +17616,7 @@
       "options": [
         {
           "n": "Pistol Choice",
+          "owner": "Hekatrix",
           "min": 0,
           "max": 1,
           "pick": "one",

@@ -122,6 +122,7 @@
       "options": [
         {
           "n": "Ranged weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -285,27 +286,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Blood Claws",
-          "min": 10,
-          "max": 20,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Blood Claw",
-              "min": 8,
-              "max": 19,
-              "p": 0
-            },
-            {
-              "n": "Blood Claw Pack Leader",
-              "min": 1,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Replace bolt pistol",
+          "owner": "Blood Claw Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -326,6 +308,7 @@
         },
         {
           "n": "Replace Astartes chainsword",
+          "owner": "Blood Claw Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -656,22 +639,7 @@
       ],
       "cap": null,
       "leads": null,
-      "options": [
-        {
-          "n": "5-10 Fenrisian Wolves",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Fenrisian Wolf",
-              "min": 5,
-              "max": 10,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Teeth and claws",
@@ -746,6 +714,7 @@
       "options": [
         {
           "n": "Replace Chainsword",
+          "owner": "Grey Hunter Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -772,6 +741,7 @@
         },
         {
           "n": "Replace Carbine",
+          "owner": "Grey Hunter Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1047,22 +1017,7 @@
       ],
       "cap": null,
       "leads": null,
-      "options": [
-        {
-          "n": "5-10 Hounds of Morkai",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Hound of Morkai",
-              "min": 5,
-              "max": 10,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Morkai bolt pistol",
@@ -1593,6 +1548,7 @@
       "options": [
         {
           "n": "4-5 Long Fangs",
+          "owner": null,
           "min": 4,
           "max": 5,
           "pick": "many",
@@ -1649,6 +1605,7 @@
         },
         {
           "n": "Replace boltgun",
+          "owner": "Long Fang Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1693,6 +1650,7 @@
         },
         {
           "n": "Replace close combat weapon",
+          "owner": "Long Fang Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2454,21 +2412,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-14 Skyclaws",
-          "min": 4,
-          "max": 14,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Skyclaw",
-              "min": 2,
-              "max": 14,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Replace bolt pistol",
+          "owner": "Skyclaw Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2489,6 +2434,7 @@
         },
         {
           "n": "Replace Astartes chainsword",
+          "owner": "Skyclaw Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2515,6 +2461,7 @@
         },
         {
           "n": "Up to 2",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -2757,6 +2704,7 @@
       "options": [
         {
           "n": "Nose weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2777,6 +2725,7 @@
         },
         {
           "n": "Sponson weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2954,6 +2903,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2980,6 +2930,7 @@
         },
         {
           "n": "Sponson weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3153,6 +3104,7 @@
       "options": [
         {
           "n": "Thunderwolf Cavalry",
+          "owner": null,
           "min": 3,
           "max": 6,
           "pick": "many",
@@ -3419,6 +3371,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -3439,6 +3392,7 @@
         },
         {
           "n": "Replace assault cannon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3465,6 +3419,7 @@
         },
         {
           "n": "Ranged Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3654,6 +3609,7 @@
       "options": [
         {
           "n": "1 Wolf Guard Pack Leader and 4-9 Wolf Guard",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -3853,6 +3809,7 @@
       "options": [
         {
           "n": "Replace Master-crafted Power Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3873,6 +3830,7 @@
         },
         {
           "n": "Replace Storm Shield",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4046,6 +4004,7 @@
       "options": [
         {
           "n": "Replace storm bolter",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4090,6 +4049,7 @@
         },
         {
           "n": "Replace power weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4297,6 +4257,7 @@
       "options": [
         {
           "n": "Relic weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4341,6 +4302,7 @@
         },
         {
           "n": "Bolt pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4591,35 +4553,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Wolf Guard Headtakers",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Wolf Guard Headtakers",
-              "min": 0,
-              "max": null,
-              "p": 0
-            }
-          ]
-        },
-        {
-          "n": "Hunting Wolves",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Hunting Wolves",
-              "min": 0,
-              "max": null,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4762,6 +4697,7 @@
       "options": [
         {
           "n": "Wolf Guard Headtakers",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -4776,6 +4712,7 @@
         },
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4796,6 +4733,7 @@
         },
         {
           "n": "Hunting Wolves",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -4920,6 +4858,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -4934,6 +4873,7 @@
         },
         {
           "n": "Loadout",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -4948,6 +4888,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -4968,6 +4909,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -4994,6 +4936,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -5238,6 +5181,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -5252,6 +5196,7 @@
         },
         {
           "n": "Heavy weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5278,6 +5223,7 @@
         },
         {
           "n": "Bolters",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5298,6 +5244,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5534,6 +5481,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5548,6 +5496,7 @@
         },
         {
           "n": "Loadout",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -5562,6 +5511,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5582,6 +5532,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5608,6 +5559,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -5854,6 +5806,7 @@
       "options": [
         {
           "n": "4-9 Terminators",
+          "owner": null,
           "min": 4,
           "max": 9,
           "pick": "many",
@@ -5880,6 +5833,7 @@
         },
         {
           "n": "Weapons",
+          "owner": "Wolf Guard Terminator Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6044,6 +5998,7 @@
       "options": [
         {
           "n": "Replace bolt pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6100,6 +6055,7 @@
         },
         {
           "n": "Replace relic weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6354,6 +6310,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -6466,6 +6423,7 @@
       "options": [
         {
           "n": "4-9 Wolf Scouts",
+          "owner": null,
           "min": 4,
           "max": 9,
           "pick": "many",
@@ -6498,6 +6456,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -6524,6 +6483,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -6562,6 +6522,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -6600,6 +6561,7 @@
         },
         {
           "n": "Up to 1 of",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -6620,6 +6582,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Wolf Scout w/ special weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7004,6 +6967,7 @@
       "options": [
         {
           "n": "Wolf Scouts",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7209,28 +7173,7 @@
         "at1000": 2
       },
       "leads": null,
-      "options": [
-        {
-          "n": "Wulfen",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Wulfen w/Auto-launcher",
-              "min": 0,
-              "max": 10,
-              "p": 0
-            },
-            {
-              "n": "Wulfen w/Death Totem",
-              "min": 0,
-              "max": 10,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Wulfen Weapons",
@@ -7328,6 +7271,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -7468,28 +7412,7 @@
         "at1000": 2
       },
       "leads": null,
-      "options": [
-        {
-          "n": "Wulfen",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Wulfen w/Death Totem",
-              "min": 0,
-              "max": 10,
-              "p": 0
-            },
-            {
-              "n": "Wulfen w/Auto-launcher",
-              "min": 0,
-              "max": 10,
-              "p": 0
-            }
-          ]
-        }
-      ],
+      "options": null,
       "weapons": [
         {
           "n": "Thunder Hammer",

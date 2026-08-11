@@ -600,6 +600,7 @@
       "options": [
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -839,6 +840,7 @@
       "options": [
         {
           "n": "5 - 10 Beserks",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -865,6 +867,7 @@
         },
         {
           "n": "Squad weapon choice",
+          "owner": "Beserk",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -885,6 +888,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Beserk w/ mole grenade launcher",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1016,6 +1020,7 @@
       "options": [
         {
           "n": "Main weapon",
+          "owner": "Cthonian Earthshaker",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1153,6 +1158,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1167,6 +1173,7 @@
         },
         {
           "n": "Crest",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1187,6 +1194,7 @@
         },
         {
           "n": "Melee weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1319,21 +1327,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Hearthguard",
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Einhyr Hearthguard",
-              "min": 0,
-              "max": null,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Ranged weapon",
+          "owner": "Hesyr",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1354,6 +1349,7 @@
         },
         {
           "n": "Exchange melee weapon for hammer",
+          "owner": "Hesyr",
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -1380,6 +1376,7 @@
         },
         {
           "n": "Crest",
+          "owner": "Hesyr",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1400,6 +1397,7 @@
         },
         {
           "n": "Squad ranged weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1420,6 +1418,7 @@
         },
         {
           "n": "Squad melee weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1722,6 +1721,7 @@
       "options": [
         {
           "n": "Hearthkyn Warriors",
+          "owner": null,
           "min": 9,
           "max": 9,
           "pick": "many",
@@ -1748,6 +1748,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Theyn",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1774,6 +1775,7 @@
         },
         {
           "n": "Heavy weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -2031,6 +2033,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2051,6 +2054,7 @@
         },
         {
           "n": "Main weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2077,6 +2081,7 @@
         },
         {
           "n": "Sponson weapons",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -2097,6 +2102,7 @@
         },
         {
           "n": "Wargear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2285,6 +2291,7 @@
       "options": [
         {
           "n": "3 - 6 Pioneers",
+          "owner": null,
           "min": 3,
           "max": 6,
           "pick": "many",
@@ -2317,6 +2324,7 @@
         },
         {
           "n": "Heavy weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -2485,6 +2493,7 @@
       "options": [
         {
           "n": "9 Hernkyn Yaegir",
+          "owner": null,
           "min": 9,
           "max": 9,
           "pick": "many",
@@ -2517,6 +2526,7 @@
         },
         {
           "n": "Weapon",
+          "owner": "Yaegir Theyn",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2672,21 +2682,8 @@
       "leads": null,
       "options": [
         {
-          "n": "2-5 Ironkin Steeljacks",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Ironkin Steeljack",
-              "min": 2,
-              "max": 5,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapons",
+          "owner": "Steeljack Theyn",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2831,6 +2828,7 @@
       "options": [
         {
           "n": "2-5 Ironkin Steeljacks",
+          "owner": null,
           "min": 2,
           "max": 5,
           "pick": "many",
@@ -2851,6 +2849,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": "Steeljack Theyn",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2976,6 +2975,7 @@
       "options": [
         {
           "n": "Crest",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2996,6 +2996,7 @@
         },
         {
           "n": "Melee weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3016,6 +3017,7 @@
         },
         {
           "n": "Ranged weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3155,6 +3157,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -3290,6 +3293,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": "Kapricus Defender",
           "min": 0,
           "max": null,
           "pick": "many",
@@ -3316,6 +3320,7 @@
         },
         {
           "n": "Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3452,6 +3457,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3490,6 +3496,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3534,6 +3541,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3614,6 +3622,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -3646,6 +3655,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -4176,6 +4186,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -4214,6 +4225,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4258,6 +4270,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -4338,6 +4351,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -4370,6 +4384,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -4990,6 +5005,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5010,6 +5026,7 @@
         },
         {
           "n": "Turret weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5185,6 +5202,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5223,6 +5241,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5267,6 +5286,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5347,6 +5367,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -5379,6 +5400,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",

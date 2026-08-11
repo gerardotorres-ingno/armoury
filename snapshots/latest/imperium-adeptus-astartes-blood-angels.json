@@ -128,6 +128,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -154,6 +155,7 @@
         },
         {
           "n": "Sponson Weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -174,6 +176,7 @@
         },
         {
           "n": "Turret Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -343,6 +346,7 @@
       "options": [
         {
           "n": "Melee",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -369,6 +373,7 @@
         },
         {
           "n": "Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -940,6 +945,7 @@
       "options": [
         {
           "n": "Melee",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -966,6 +972,7 @@
         },
         {
           "n": "Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1114,6 +1121,7 @@
       "options": [
         {
           "n": "Melee",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1140,6 +1148,7 @@
         },
         {
           "n": "Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1316,6 +1325,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1330,6 +1340,7 @@
         },
         {
           "n": "Melee Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1350,6 +1361,7 @@
         },
         {
           "n": "Ranged Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1517,6 +1529,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1531,6 +1544,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1551,6 +1565,7 @@
         },
         {
           "n": "Weapon Option 1",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1571,6 +1586,7 @@
         },
         {
           "n": "Weapon Option 2",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1720,6 +1736,7 @@
       "options": [
         {
           "n": "Death Company Marines",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -1746,6 +1763,7 @@
         },
         {
           "n": "Replace Pistol",
+          "owner": "Death Company Marine w/ alternate weapons",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1778,6 +1796,7 @@
         },
         {
           "n": "Replace Chainsword",
+          "owner": "Death Company Marine w/ alternate weapons",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2001,6 +2020,7 @@
       "options": [
         {
           "n": "Death Company Marines",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -2027,6 +2047,7 @@
         },
         {
           "n": "Replace Close Combat Weapon",
+          "owner": "Death Company Marine w/ alternate weapons",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2065,6 +2086,7 @@
         },
         {
           "n": "Replace Bolt Rifle",
+          "owner": "Death Company Marine w/ alternate weapons",
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -2350,21 +2372,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Death Company Marines",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Death Company Marine",
-              "min": 5,
-              "max": 10,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon Options",
+          "owner": "Death Company Marine",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2391,6 +2400,7 @@
         },
         {
           "n": "Melee Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2417,6 +2427,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2638,21 +2649,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Death Company Marines",
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Death Company Marine",
-              "min": 5,
-              "max": 10,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Weapon Options",
+          "owner": "Death Company Marine",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2679,6 +2677,7 @@
         },
         {
           "n": "Melee Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2705,6 +2704,7 @@
         },
         {
           "n": "Pistol Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2931,6 +2931,7 @@
       "options": [
         {
           "n": "Death Company Marines",
+          "owner": null,
           "min": 5,
           "max": 10,
           "pick": "many",
@@ -2951,6 +2952,7 @@
         },
         {
           "n": "Pistol Weapon",
+          "owner": "Death Company Marine w/ alternate weapons",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2983,6 +2985,7 @@
         },
         {
           "n": "Melee Weapon",
+          "owner": "Death Company Marine w/ alternate weapons",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3189,6 +3192,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -3203,6 +3207,7 @@
         },
         {
           "n": "Weapon Options",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3229,6 +3234,7 @@
         },
         {
           "n": "Underslung Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3249,6 +3255,7 @@
         },
         {
           "n": "Underslung Weapons",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -3275,6 +3282,7 @@
         },
         {
           "n": "Underslung Weapons",
+          "owner": null,
           "min": 2,
           "max": 2,
           "pick": "many",
@@ -3636,6 +3644,7 @@
       "options": [
         {
           "n": "Weapon Option",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3805,21 +3814,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Sanguinary Guard",
-          "min": 3,
-          "max": 6,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Sanguinary Guard",
-              "min": 0,
-              "max": 6,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Melee Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3840,6 +3836,7 @@
         },
         {
           "n": "Ranged Weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3978,6 +3975,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -4093,6 +4091,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -4107,6 +4106,7 @@
         },
         {
           "n": "Pistol Options",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4163,6 +4163,7 @@
         },
         {
           "n": "Chainsword Options",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4423,6 +4424,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",

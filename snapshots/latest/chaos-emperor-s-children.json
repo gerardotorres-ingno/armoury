@@ -228,6 +228,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -248,6 +249,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -286,6 +288,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -348,6 +351,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -374,6 +378,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -828,6 +833,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -860,6 +866,7 @@
         },
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -1013,6 +1020,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1039,6 +1047,7 @@
         },
         {
           "n": "Pintle weapon",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -1239,113 +1248,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4 Terminators",
-          "min": 4,
-          "max": 4,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Accursed weapon and combi-bolter",
-              "min": 0,
-              "max": 4,
-              "p": 0
-            },
-            {
-              "n": "Accursed weapon and combi-weapon",
-              "min": 0,
-              "max": 4,
-              "p": 0
-            },
-            {
-              "n": "Power fist and combi-weapon",
-              "min": 0,
-              "max": 3,
-              "p": 0
-            },
-            {
-              "n": "Chainfist and combi-bolter",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Heavy weapon",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Power fist and combi-bolter",
-              "min": 0,
-              "max": 3,
-              "p": 0
-            },
-            {
-              "n": "Chainfist and combi-weapon",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            },
-            {
-              "n": "Paired accursed weapons",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
-          "n": "Wargear",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Accursed weapon and combi-bolter",
-              "min": 0,
-              "max": null,
-              "p": 0
-            },
-            {
-              "n": "Accursed weapon and combi-weapon",
-              "min": 0,
-              "max": null,
-              "p": 0
-            },
-            {
-              "n": "Chainfist and combi-bolter",
-              "min": 0,
-              "max": null,
-              "p": 0
-            },
-            {
-              "n": "Chainfist and combi-weapon",
-              "min": 0,
-              "max": null,
-              "p": 0
-            },
-            {
-              "n": "Power fist and combi-bolter",
-              "min": 0,
-              "max": null,
-              "p": 0
-            },
-            {
-              "n": "Power fist and combi-weapon",
-              "min": 0,
-              "max": null,
-              "p": 0
-            },
-            {
-              "n": "Paired accursed weapons",
-              "min": 0,
-              "max": 1,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Ranged weapon",
+          "owner": "Heavy weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1366,6 +1270,7 @@
         },
         {
           "n": "Melee weapon",
+          "owner": "Heavy weapon",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1899,6 +1804,7 @@
       "options": [
         {
           "n": "Patron Specialisms",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -1931,6 +1837,7 @@
         },
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -1945,6 +1852,7 @@
         },
         {
           "n": "Khorne",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1965,6 +1873,7 @@
         },
         {
           "n": "Nurgle",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -1985,6 +1894,7 @@
         },
         {
           "n": "Slaanesh",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2005,6 +1915,7 @@
         },
         {
           "n": "Tzeentch",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2025,6 +1936,7 @@
         },
         {
           "n": "Khorne",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2051,6 +1963,7 @@
         },
         {
           "n": "Nurgle",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2077,6 +1990,7 @@
         },
         {
           "n": "Slaanesh",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2103,6 +2017,7 @@
         },
         {
           "n": "Tzeentch",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2129,6 +2044,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2143,6 +2059,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -2175,6 +2092,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2201,6 +2119,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -2251,6 +2170,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2271,6 +2191,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -2309,6 +2230,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2329,6 +2251,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -2748,6 +2671,7 @@
       "options": [
         {
           "n": "Patron Specialisms",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -2780,6 +2704,7 @@
         },
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2794,6 +2719,7 @@
         },
         {
           "n": "Khorne",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2814,6 +2740,7 @@
         },
         {
           "n": "Nurgle",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2834,6 +2761,7 @@
         },
         {
           "n": "Slaanesh",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2854,6 +2782,7 @@
         },
         {
           "n": "Tzeentch",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2874,6 +2803,7 @@
         },
         {
           "n": "Khorne",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2900,6 +2830,7 @@
         },
         {
           "n": "Nurgle",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2926,6 +2857,7 @@
         },
         {
           "n": "Slaanesh",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2952,6 +2884,7 @@
         },
         {
           "n": "Tzeentch",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -2978,6 +2911,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -2992,6 +2926,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -3024,6 +2959,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3050,6 +2986,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -3100,6 +3037,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3120,6 +3058,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -3158,6 +3097,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3178,6 +3118,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -3594,6 +3535,7 @@
       "options": [
         {
           "n": "Replace heavy missile launcher",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3626,6 +3568,7 @@
         },
         {
           "n": "Main cannon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3646,6 +3589,7 @@
         },
         {
           "n": "Replace heavy baleflamer",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3678,6 +3622,7 @@
         },
         {
           "n": "Replace excruciator cannons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3904,6 +3849,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -3924,6 +3870,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3962,6 +3909,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -4024,6 +3972,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -4050,6 +3999,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -4679,6 +4629,7 @@
       "options": [
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -4699,6 +4650,7 @@
         },
         {
           "n": "Abilities",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -4737,6 +4689,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -4799,6 +4752,7 @@
         },
         {
           "n": "Pistols",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -4825,6 +4779,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -5404,6 +5359,7 @@
       "options": [
         {
           "n": "Mouth weapon",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5523,6 +5479,7 @@
       "options": [
         {
           "n": "Patron Specialisms",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -5555,6 +5512,7 @@
         },
         {
           "n": "Specialisms",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5569,6 +5527,7 @@
         },
         {
           "n": "Khorne",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5589,6 +5548,7 @@
         },
         {
           "n": "Nurgle",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5609,6 +5569,7 @@
         },
         {
           "n": "Slaanesh",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5629,6 +5590,7 @@
         },
         {
           "n": "Tzeentch",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5649,6 +5611,7 @@
         },
         {
           "n": "Khorne",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5675,6 +5638,7 @@
         },
         {
           "n": "Nurgle",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5701,6 +5665,7 @@
         },
         {
           "n": "Slaanesh",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5727,6 +5692,7 @@
         },
         {
           "n": "Tzeentch",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -5753,6 +5719,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5767,6 +5734,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -5799,6 +5767,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5825,6 +5794,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 0,
           "max": 2,
           "pick": "many",
@@ -5875,6 +5845,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5895,6 +5866,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -5933,6 +5905,7 @@
         },
         {
           "n": "Ranged weapons",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -5953,6 +5926,7 @@
         },
         {
           "n": "Melee weapons",
+          "owner": null,
           "min": 1,
           "max": 2,
           "pick": "many",
@@ -6371,21 +6345,8 @@
       "leads": null,
       "options": [
         {
-          "n": "4-9 Infractors",
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Infractor",
-              "min": 4,
-              "max": 9,
-              "p": 0
-            }
-          ]
-        },
-        {
           "n": "Pistol",
+          "owner": "Obsessionist",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6406,6 +6367,7 @@
         },
         {
           "n": "Melee weapon",
+          "owner": "Obsessionist",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6567,6 +6529,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": 1,
           "pick": "one",
@@ -6733,6 +6696,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -6753,6 +6717,7 @@
         },
         {
           "n": "Plasma Pistol",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6779,6 +6744,7 @@
         },
         {
           "n": "Phoenix Power Spear",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -6973,6 +6939,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -6987,6 +6954,7 @@
         },
         {
           "n": "Weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7195,6 +7163,7 @@
       "options": [
         {
           "n": "Head weapons",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7314,6 +7283,7 @@
       "options": [
         {
           "n": "5 Noise Marines",
+          "owner": null,
           "min": 5,
           "max": 5,
           "pick": "many",
@@ -7334,6 +7304,7 @@
         },
         {
           "n": "Sonic Blaster",
+          "owner": "Disharmonist",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7717,6 +7688,7 @@
       "options": [
         {
           "n": "Wargear",
+          "owner": null,
           "min": 0,
           "max": null,
           "pick": "many",
@@ -7855,6 +7827,7 @@
       "options": [
         {
           "n": "4-9 Tormentors",
+          "owner": null,
           "min": 4,
           "max": 9,
           "pick": "many",
@@ -7881,6 +7854,7 @@
         },
         {
           "n": "Bolt Pistol",
+          "owner": "Obsessionist",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -7901,6 +7875,7 @@
         },
         {
           "n": "Power Sword",
+          "owner": "Obsessionist",
           "min": 1,
           "max": 1,
           "pick": "one",
