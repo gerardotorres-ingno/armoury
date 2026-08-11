@@ -1387,6 +1387,25 @@ function datasheetFor(u, sl){
     box.append(t);
   }
 
+  // Composición. NO viene como texto en el catálogo: se reconstruye a partir
+  // de los modelos y sus topes, así que puede diferir de la ficha oficial en
+  // casos raros. Por eso la cabecera lo dice.
+  if (u.cp && u.cp.length) {
+    const b = el('div','band'); b.textContent = 'UNIT COMPOSITION'; box.append(b);
+    const w = el('div','abil');
+    w.innerHTML = '<ul style="margin:0 0 6px 16px;font-size:13px;line-height:1.6">' +
+      u.cp.map(([n, min, max]) => {
+        const qty = (min != null && max != null && min !== max) ? min + '\u2013' + max
+                  : (max ?? min ?? 1);
+        return '<li>' + qty + ' \u00d7 ' + esc(n) + '</li>';
+      }).join('') + '</ul>' +
+      (u.cp.some(([,,,g]) => g && g.length)
+        ? '<p style="font-size:12.5px">Equipped with: ' +
+          esc([...new Set(u.cp.flatMap(([,,,g]) => g || []))].join('; ')) + '</p>'
+        : '');
+    box.append(w);
+  }
+
   if (u.kw && u.kw.length) {
     const k = el('div','kwbar');
     k.innerHTML = u.kw.map(x => '<span>' + esc(x) + '</span>').join('');
@@ -1396,7 +1415,7 @@ function datasheetFor(u, sl){
   return box;
 }
 
-function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.length) || (u.kw && u.kw.length)); }
+function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.length) || (u.kw && u.kw.length) || (u.cp && u.cp.length)); }
 /* Precio de un arma opcional. La mayoría vale 0, pero 71 unidades cobran:
  * el Defiler suma 15 por Hades lascannon y 15 por heavy reaper autocannon.
  * Los precios los trae el MFM; BSData no los tiene. */
