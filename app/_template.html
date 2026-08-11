@@ -1400,9 +1400,16 @@ function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.len
 /* Precio de un arma opcional. La mayoría vale 0, pero 71 unidades cobran:
  * el Defiler suma 15 por Hades lascannon y 15 por heavy reaper autocannon.
  * Los precios los trae el MFM; BSData no los tiene. */
+/* Precio de un arma opcional. Dos fuentes: el MFM (u.wg) y el propio catálogo,
+ * que trae precio en 72 opciones. Gana el MFM por ser la fuente oficial. */
 function gearCost(u, name){
-  if (!u.wg || !name) return 0;
-  return u.wg[String(name).toLowerCase().replace(/[^a-z0-9]/g, '')] ?? 0;
+  if (!name) return 0;
+  const k = String(name).toLowerCase().replace(/[^a-z0-9]/g, '');
+  if (u.wg && u.wg[k] != null) return u.wg[k];
+  for (const g of (u.o || []))
+    for (const [n, , p] of g.opts)
+      if (p && String(n).toLowerCase().replace(/[^a-z0-9]/g, '') === k) return p;
+  return 0;
 }
 
 /* Puntos de armamento de un slot: opciones únicas más variantes por cantidad. */
