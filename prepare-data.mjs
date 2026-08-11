@@ -22,6 +22,33 @@ const files = (await fs.readdir(OUT_DIR)).filter(
 );
 
 /* ------------------------------------------------------------------
+ * MFM — la fuente oficial de puntos.
+ *
+ * Precedencia: para PUNTOS manda el MFM (trae umbrales de requisición,
+ * tamaños exactos y mejoras por destacamento). Para el resto —keywords,
+ * armas, habilidades, roles— manda BSData.
+ *
+ * Si no se corrió `node mfm.mjs`, sigue funcionando con lo de BSData.
+ * ---------------------------------------------------------------- */
+let MFM = null;
+try {
+  MFM = JSON.parse(await fs.readFile('./output-mfm/mfm.json', 'utf8'));
+  console.log(`  MFM v${MFM.version} (${MFM.lastUpdated}) cargado`);
+} catch {
+  console.log('  Sin MFM (corré `node mfm.mjs` para precios oficiales)');
+}
+
+// Los nombres difieren en los prefijos: "Imperium - Adeptus Astartes -
+// Space Marines" contra "Space Marines". Se normaliza y se compara.
+const normF = (x) => x.toLowerCase()
+  .replace(/^(imperium|chaos|xenos)\s*-\s*/, '')
+  .replace(/adeptus astartes\s*-\s*/, '')
+  .replace(/[^a-z0-9]/g, '');
+const normU = (x) => x.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+const mfmByFaction = new Map((MFM?.factions ?? []).map((f) => [normF(f.name), f]));
+
+/* ------------------------------------------------------------------
  * ROLES — dos ejes cruzados: CHASIS × RANGO.
  *
  * No es una lista de precedencia plana. Una unidad tiene un chasis
@@ -121,6 +148,7 @@ for (const file of files) {
   // Sólo nativas. Las aliadas se muestran desde SU propia facción: si un
   // jugador tiene Guardia Imperial, la carga en Astra Militarum, no dentro
   // de Genestealer Cults.
+  let factionExtras = null;
   const units = d.datasheets
     .filter((x) => x.native)
     .map((x) => ({
@@ -146,6 +174,10 @@ for (const file of files) {
       st: x.profile
             ? [x.profile.M, x.profile.T, x.profile.Sv, x.profile.W, x.profile.LD, x.profile.OC]
             : null,
+      // habilidades: [nombre, descripción]
+      ab: (x.abilities ?? []).map((a) => [a.n, a.d]),
+      // palabras clave del datasheet (sin la de facción, que es redundante)
+      kw: (x.keywords ?? []).filter((k) => k !== x.name),
       // armas: [nombre, cuerpoACuerpo, alcance, A, hab, F, AP, D, palabras]
       w: (x.weapons ?? []).map((k) =>
            [k.n, k.melee ? 1 : 0, k.range, k.a, k.skill, k.s, k.ap, k.d, k.kw]),
@@ -158,6 +190,37 @@ for (const file of files) {
   // (GUARDIAN DEFENDERS vs Guardian Defenders). Se resuelven contra las
   // unidades de la facción y se guardan como ids; lo que no resuelve se
   // descarta, porque suele ser una unidad aliada de otro catálogo.
+  // --- superponer el MFM ---
+  const mf = mfmByFaction.get(normF(d.catalogueName));
+  if (mf) {
+    const mUnits = new Map(mf.units.map((u) => [normU(u.name), u]));
+    for (const u of units) {
+      const m = mUnits.get(normU(u.n));
+      if (!m || !m.bands?.length) continue;
+
+      // bands = tramos de repetición. Cada uno con su escalera por tamaño.
+      // [{ from, to, tiers:[{models, pts}] }]
+      u.B = m.bands.map((b) => ({
+        f: b.from, t: b.to,
+        s: b.tiers.map((x) => [x.models, x.pts]),
+      }));
+      // Precio del armamento opcional, indexado por nombre normalizado para
+      // poder cruzarlo con las opciones que vienen de BSData.
+      if (m.wargear?.length)
+        u.wg = Object.fromEntries(m.wargear.map((w) => [normU(w.item), w.pts]));
+      // precio de referencia: el tramo 1, escalón más chico
+      u.p = u.B[0]?.s?.[0]?.[1] ?? u.p;
+    }
+    factionExtras = {
+      det: mf.detachments.map((x) => [x.name, x.dp, x.objective, x.unique ?? null]),
+      // mejoras agrupadas POR destacamento, que es como se juegan
+      enhBy: Object.fromEntries(
+        mf.detachments.map((x) => [x.name, x.enhancements.map((e) => [e.name, e.pts])])
+      ),
+      mfm: true,
+    };
+  }
+
   const byName = new Map(units.map((u) => [u.n.toLowerCase(), u.id]));
   for (const u of units) {
     if (!u.ld) continue;
@@ -166,18 +229,42 @@ for (const file of files) {
   }
 
   factions.push({
+    catalogueName: d.catalogueName,
     slug: file.replace(/\.json$/, ''),
     name: d.catalogueName.replace(/^(Imperium|Chaos|Xenos) - /, ''),
     group: (d.catalogueName.match(/^(Imperium|Chaos|Xenos)/) ?? ['Otros'])[0],
-    detachments: d.detachments ?? [],
+    // Destacamentos y mejoras: si hay MFM, gana el MFM (trae la agrupación
+    // por destacamento). Si no, se usa lo que se pudo sacar de BSData.
+    // Nombres de catálogo de los que puede tomar unidades. Se convierten a
+    // slugs después, cuando ya están todas las facciones cargadas.
+    linkNames: d.links ?? [],
+    det: factionExtras?.det ?? (d.detachments ?? []).map((x) => [x.name, x.dp, null]),
+    enhBy: factionExtras?.enhBy ?? null,
+    enh: (d.enhancements ?? []).map((x) => [x.name, x.pts]),
     units,
   });
 }
 
+// Resolver los enlaces entre catálogos a slugs. Sólo se conservan los que
+// apuntan a una facción jugable: las Library no tienen unidades propias.
+const bySlugName = new Map(factions.map((f) => [f.catalogueName, f.slug]));
+for (const f of factions) {
+  f.al = (f.linkNames || [])
+    .map((n) => bySlugName.get(n))
+    .filter((x) => x && x !== f.slug);
+  delete f.linkNames;
+}
+
 factions.sort((a, b) => a.name.localeCompare(b.name));
 
+/* Sello de compilación. Sin esto, un reporte de "no me anda" es inútil:
+ * no se sabe qué versión probó la persona. Va visible en el encabezado. */
+const build = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+
 const payload = {
+  build,
   roles: [...roleTable.values()].sort((a, b) => a.order - b.order),
+  mfmVersion: MFM?.version ?? null,
   revision: JSON.parse(await fs.readFile(path.join(OUT_DIR, '_index.json'), 'utf8')).version,
   generatedAt: new Date().toISOString(),
   factions,
