@@ -48,6 +48,20 @@ const normU = (x) => x.toLowerCase().replace(/[^a-z0-9]/g, '');
 
 const mfmByFaction = new Map((MFM?.factions ?? []).map((f) => [normF(f.name), f]));
 
+/* Índice global de armamento con coste, por nombre de unidad.
+ *
+ * El MFM lista las unidades por capítulo (Blood Angels :: Redemptor
+ * Dreadnought) pero la app las guarda una sola vez, en el catálogo base de
+ * Space Marines. Sin este respaldo, 25 unidades quedaban sin el precio.
+ *
+ * Sólo se usa para el ARMAMENTO, que cuesta lo mismo en todos los capítulos.
+ * Los puntos de la unidad NO se toman de acá: esos sí varían. */
+const mfmWargear = new Map();
+for (const f of (MFM?.factions ?? []))
+  for (const u of f.units)
+    if (u.wargear?.length && !mfmWargear.has(normU(u.name)))
+      mfmWargear.set(normU(u.name), u.wargear);
+
 /* ------------------------------------------------------------------
  * ROLES — dos ejes cruzados: CHASIS × RANGO.
  *
@@ -168,7 +182,12 @@ for (const file of files) {
       o: (x.options ?? [])
            // el grupo que sólo repite el tamaño de la unidad ya lo cubre la escalera
            .filter((g) => !(g.pick === 'many' && g.opts.length === 1 && g.opts[0].max > 4))
-           .map((g) => ({ n: g.n, k: g.pick, opts: g.opts.map((e) => [e.n, e.max]) }))
+           // [nombre, tope, precio]. El precio venía de BSData y se estaba
+           // descartando: 72 opciones lo tienen (Dark Lance de Drukhari = 5).
+           .map((g) => ({
+             n: g.n, k: g.pick,
+             opts: g.opts.map((e) => [e.n, e.max, Number(e.p) || 0]),
+           }))
            .slice(0, 8),
       // perfil de la unidad: M T Sv W LD OC
       st: x.profile
@@ -206,8 +225,8 @@ for (const file of files) {
       }));
       // Precio del armamento opcional, indexado por nombre normalizado para
       // poder cruzarlo con las opciones que vienen de BSData.
-      if (m.wargear?.length)
-        u.wg = Object.fromEntries(m.wargear.map((w) => [normU(w.item), w.pts]));
+      const wg = m.wargear?.length ? m.wargear : mfmWargear.get(normU(u.n));
+      if (wg?.length) u.wg = Object.fromEntries(wg.map((w) => [normU(w.item), w.pts]));
       // precio de referencia: el tramo 1, escalón más chico
       u.p = u.B[0]?.s?.[0]?.[1] ?? u.p;
     }
@@ -219,6 +238,13 @@ for (const file of files) {
       ),
       mfm: true,
     };
+  }
+
+  // Capítulos y catálogos sin MFM propio: al menos el armamento con coste.
+  for (const u of units) {
+    if (u.wg) continue;
+    const wg = mfmWargear.get(normU(u.n));
+    if (wg?.length) u.wg = Object.fromEntries(wg.map((w) => [normU(w.item), w.pts]));
   }
 
   const byName = new Map(units.map((u) => [u.n.toLowerCase(), u.id]));
