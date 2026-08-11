@@ -69,25 +69,73 @@ const asArray = (v) => (Array.isArray(v) ? v : v ? [v] : []);
  * Todos los extractores usan este mismo recorrido. Cada uno que resolvía
  * enlaces por su cuenta se olvidaba de alguno.
  */
+// Ramas que NO son parte de la ficha de juego emparejado. Crusade es el modo
+// campaña: trae Battle Traits, Battle Scars, Requisitions y reliquias, decenas
+// de miles de textos que no van en la ficha.
+/**
+ * Ramas que no son parte de la ficha de juego emparejado.
+ *
+ * OJO con "Crusade": es el modo campaña, pero también aparece en nombres de
+ * unidades reales — Crusader Squad, Land Raider Crusader, Crusade Ancient.
+ * Filtrar por la palabra suelta borraba media facción de Black Templars.
+ * Por eso los patrones son específicos del modo, no de la palabra.
+ */
+const SKIP_BRANCH = new RegExp([
+  'crusade (relic|upgrade|point|card|rule|faction)',
+  'battle trait', 'battle scar', 'battle honour',
+  'requisition', 'agenda', 'enhancement',
+  'boarding (action|patrol)',
+].join('|'), 'i');
+
+// Contenedores cuyo nombre es EXACTAMENTE el del modo. El grupo se llama
+// "Crusade" a secas (236 apariciones) y colgaba Battle Traits como "Holy
+// Crusader" de cada unidad de Sororitas. No se puede filtrar por la palabra
+// suelta porque "Crusader Squad" es una unidad real.
+const SKIP_EXACT = /^(crusade|trials|trials of .*|relics|honours)$/i;
+
+/** Las entradas de Crusade se reconocen por su tipo de coste. */
+function isCrusade(n) {
+  return asArray(n.costs).some((c) => /^crusade/i.test(c.name) && Number(c.value) > 0);
+}
+
+/** Una mejora se reconoce por su coste, no por dónde esté colgada. */
+function isEnhancement(n) {
+  return asArray(n.costs).some((c) => c.name === 'Enhancements' && Number(c.value) > 0);
+}
+
 function walkAll(root, ctx, fn, maxDepth = 6) {
+  // El control de repetidos va por DESTINO, no por destino+profundidad.
+  // Indexar con la profundidad hacía que la misma entrada compartida se
+  // recorriera a cada nivel: el JSON pasó de 1,3 MB a 54 MB.
   const seen = new Set();
 
   const visit = (n, d) => {
     if (!n || d > maxDepth) return;
+    const nm = n.name ?? '';
+    if (SKIP_BRANCH.test(nm) || SKIP_EXACT.test(nm.trim()) || isEnhancement(n) || isCrusade(n)) return;
     fn(n, d);
+
+    // Perfiles referenciados. Se envuelven en un nodo sintético para que los
+    // recolectores no tengan que distinguir entre perfil propio y enlazado.
+    for (const il of asArray(n.infoLinks)) {
+      const t = ctx?.profiles?.get(il.targetId);
+      if (!t) continue;
+      if (t.characteristics) fn({ profiles: [t] }, d);
+      if (t.profiles) fn({ profiles: asArray(t.profiles) }, d);
+    }
 
     for (const e of asArray(n.selectionEntries)) visit(e, d + 1);
     for (const g of asArray(n.selectionEntryGroups)) visit(g, d + 1);
 
     for (const l of asArray(n.entryLinks)) {
+      const ln = (l.name ?? '').trim();
+      if (SKIP_BRANCH.test(ln) || SKIP_EXACT.test(ln)) continue;
+      if (seen.has(l.targetId)) continue;
+      seen.add(l.targetId);
       const t = l.type === 'selectionEntryGroup'
         ? ctx?.groups?.get(l.targetId)
         : ctx?.shared?.get(l.targetId);
-      if (!t) continue;
-      const key = l.targetId + '@' + d;
-      if (seen.has(key)) continue;      // corta ciclos entre entradas compartidas
-      seen.add(key);
-      visit(t, d + 1);
+      if (t) visit(t, d + 1);
     }
   };
 
@@ -107,6 +155,23 @@ function buildGlobalIndex(catalogues) {
     for (const e of asArray(cat.sharedSelectionEntries)) {
       if (!idx.has(e.id)) idx.set(e.id, e);
     }
+  }
+  return idx;
+}
+
+/**
+ * Índice de PERFILES compartidos.
+ *
+ * Muchas unidades no llevan su perfil adentro: lo referencian con un
+ * `infoLink` de tipo `profile`. Cadian Shock Troops llega a sus stats así,
+ * pasando por el modelo "Shock Trooper Sergeant". Sin seguir infoLinks,
+ * 80 unidades salían sin M/T/Sv.
+ */
+function buildProfileIndex(catalogues) {
+  const idx = new Map();
+  for (const cat of catalogues) {
+    for (const p of asArray(cat.sharedProfiles)) if (!idx.has(p.id)) idx.set(p.id, p);
+    for (const g of asArray(cat.sharedInfoGroups)) if (!idx.has(g.id)) idx.set(g.id, g);
   }
   return idx;
 }
@@ -287,6 +352,7 @@ function optionsOf(entry, ctx) {
 
   const readGroup = (g) => {
     if (!g || !g.name || seenG.has(g.id ?? g.name)) return;
+    if (SKIP_BRANCH.test(g.name) || SKIP_EXACT.test(g.name.trim())) return;
     seenG.add(g.id ?? g.name);
 
     const linked = asArray(g.entryLinks)
@@ -297,8 +363,12 @@ function optionsOf(entry, ctx) {
       })
       .filter(Boolean);
 
+    // Las mejoras se cuelan acá cuando llegan por enlace: el grupo puede no
+    // llamarse "Enhancements" aunque sus opciones lo sean. Se reconocen por
+    // el coste, igual que en el resto del extractor.
     const opts = [...asArray(g.selectionEntries), ...linked]
-      .filter((e) => e.type === 'model' || e.type === 'upgrade')
+      .filter((e) => (e.type === 'model' || e.type === 'upgrade') &&
+                     !isEnhancement(e) && !isCrusade(e))
       .map((e) => ({
         n: e.name, ...capOf(e),
         p: asArray(e.costs).find((c) => c.name === 'pts')?.value ?? 0,
@@ -461,8 +531,8 @@ function unitProfileOf(entry, ctx) {
 
 // ---------------------------------------------------------------- extracción
 
-function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex) {
-  const ctx = { shared, groups: groupIndex };
+function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, profileIndex) {
+  const ctx = { shared, groups: groupIndex, profiles: profileIndex };
   if (catalogue.library === true) return null; // las Library no son facciones jugables
 
   const datasheets = [];
@@ -634,6 +704,7 @@ async function main() {
   const shared = buildGlobalIndex(loaded.map((l) => l.cat));
   const groupIndex = buildGroupIndex(loaded.map((l) => l.cat));
   const libIndex = new Map(loaded.map(({ cat }) => [cat.id, cat]));
+  const profileIndex = buildProfileIndex(loaded.map((l) => l.cat));
   console.log(`  Índice global: ${shared.size} entradas compartidas de ${loaded.length} archivos`);
 
   const index = [];
@@ -643,7 +714,7 @@ async function main() {
   for (const { file, cat } of loaded) {
     if (factionArg && !file.toLowerCase().includes(factionArg.toLowerCase())) continue;
 
-    const result = extractCatalogue(cat, file, shared, groupIndex, libIndex);
+    const result = extractCatalogue(cat, file, shared, groupIndex, libIndex, profileIndex);
     if (!result) continue;
     if (result.datasheets.length === 0) continue;
 
