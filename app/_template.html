@@ -869,6 +869,37 @@ function copyIndex(l){
 
 function factionOf(slug){ return DATA.factions.find(f => f.slug === slug); }
 
+/* Repertorio de una lista: las unidades propias MÁS las de los catálogos
+ * enlazados. Un ejército Ultramarines lleva 11 unidades propias y las 136
+ * genéricas de Space Marines; ofrecerle sólo las 11 era el bug.
+ *
+ * La COLECCIÓN no usa esto: ahí cada miniatura se carga una sola vez, en su
+ * facción, o los Intercessors aparecerían en trece capítulos. */
+function poolOf(l){
+  const own = factionOf(l.faction);
+  if (!own) return [];
+  const out = own.units.map((u) => ({ u, from: null }));
+  for (const slug of (own.al || [])) {
+    const alt = factionOf(slug);
+    if (!alt) continue;
+    for (const u of alt.units) out.push({ u, from: alt.name });
+  }
+  return out;
+}
+
+/* Busca una unidad en todo el repertorio, no sólo en la facción propia. */
+function unitOf(l, id){
+  const own = factionOf(l.faction);
+  const mine = own && own.units.find((x) => x.id === id);
+  if (mine) return mine;
+  for (const slug of (own?.al || [])) {
+    const alt = factionOf(slug);
+    const hit = alt && alt.units.find((x) => x.id === id);
+    if (hit) return hit;
+  }
+  return null;
+}
+
 /* ---------- revisión: devuelve avisos, nunca un booleano "válida" ---------- */
 function review(l){
   const f = factionOf(l.faction);
@@ -881,7 +912,7 @@ function review(l){
 
   const copies = copyIndex(l);
   for (const [si, s] of l.slots.entries()) {
-    const u = f.units.find(x => x.id === s.unitId);
+    const u = unitOf(l, s.unitId);
     if (!u) { out.push({ hard:true, t:'Entry removed from the catalogue', d:'This unit no longer exists in the current data.' }); continue; }
     const copy = copies[si];
     total += ptsFor(u, s.size, copy) + gearPoints(u, s);
@@ -925,7 +956,7 @@ function review(l){
     out.push({ hard:true, t:'Over the points limit', d:(total - l.limit) + ' pts above ' + l.limit + '.' });
 
   for (const [id, times] of byUnit) {
-    const u = f.units.find(x => x.id === id);
+    const u = unitOf(l, id);
     if (!u?.c) continue;
     const cap = (l.limit <= 1000 && u.c.at1000 != null) ? u.c.at1000 : u.c.max;
     if (times > cap)
@@ -936,12 +967,12 @@ function review(l){
   // prosa, no dato estructurado. Por eso es aviso suave: si la redacción cambia
   // en BSData, prefiero equivocarme avisando de más que bloquear una lista legal.
   for (const [i, sl] of l.slots.entries()) {
-    const u = f.units.find(x => x.id === sl.unitId);
+    const u = unitOf(l, sl.unitId);
     if (!u || !u.ld) continue;
     // Ir suelto es legal: muchos personajes operan solos. No se avisa.
     if (!sl.attach) continue;
     const host = l.slots[sl.attach - 1];
-    const hu = host && f.units.find(x => x.id === host.unitId);
+    const hu = host && unitOf(l, host.unitId);
     if (!hu || !u.ld.includes(hu.id))
       out.push({ hard:false, i, t:u.n + ' cannot lead that unit', d:'Its Leader rule lists other targets.' });
   }
@@ -956,7 +987,7 @@ function review(l){
   // la interfaz ya no los muestre — invisibles e imposibles de corregir.
   for (const sl of l.slots) {
     if (!sl.gear) continue;
-    const u = f.units.find(x => x.id === sl.unitId);
+    const u = unitOf(l, sl.unitId);
     if (!u || !u.o || !u.o.length) continue;
 
     const perGroup = new Map();
@@ -982,7 +1013,7 @@ function review(l){
   for (const [id, models] of (l.foreign ? [] : needed)) {
     const have = owned.get(id) ?? 0;
     if (have < models) {
-      const u = f.units.find(x => x.id === id);
+      const u = unitOf(l, id);
       out.push({ hard:false, t:'Short ' + (models - have) + ' \u00d7 ' + u.n, d:'You own ' + have + ', this list uses ' + models + '.' });
     }
   }
@@ -1105,15 +1136,29 @@ function renderListsInner(){
   const add = el('div','bar');
   const sel = el('select'); sel.style.flex = '1 1 260px';
   const ph = el('option'); ph.textContent = 'Add unit\u2026'; ph.value = ''; sel.append(ph);
-  for (const u of [...f.units].sort((a,b) => a.n.localeCompare(b.n))) {
+  // Agrupadas por origen: primero las propias, después las de los catálogos
+  // enlazados, para que se vea de dónde sale cada unidad.
+  const pool = poolOf(l);
+  const groups = new Map();
+  for (const { u, from } of pool) {
     if (u.m === 'legends'  && !l.legends)  continue;
     if (u.m === 'crucible' && !l.crucible) continue;
-    for (const sz of sizesFor(u)) {
-      const o = el('option');
-      o.value = u.id + '|' + sz.n;
-      o.textContent = u.n + (sz.n > 1 ? '  \u00d7' + sz.n : '') + '  \u2014 ' + sz.pts + ' pts';
-      sel.append(o);
+    const key = from || f.name;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(u);
+  }
+  for (const [label, units] of groups) {
+    const og = document.createElement('optgroup');
+    og.label = label;
+    for (const u of units.sort((a,b) => a.n.localeCompare(b.n))) {
+      for (const sz of sizesFor(u)) {
+        const o = el('option');
+        o.value = u.id + '|' + sz.n;
+        o.textContent = u.n + (sz.n > 1 ? '  \u00d7' + sz.n : '') + '  \u2014 ' + sz.pts + ' pts';
+        og.append(o);
+      }
     }
+    sel.append(og);
   }
   sel.onchange = () => {
     if (!sel.value) return;
@@ -1128,10 +1173,10 @@ function renderListsInner(){
 
   // --- unidades de la lista
   for (const [i, sl] of l.slots.entries()) {
-    const u = f.units.find(x => x.id === sl.unitId);
+    const u = unitOf(l, sl.unitId);
     const row = el('div','slot');
     const att = sl.attach && l.slots[sl.attach - 1];
-    const attU = att && f.units.find(x => x.id === att.unitId);
+    const attU = att && unitOf(l, att.unitId);
     row.innerHTML = '<div class="id"><div class="nm">' + esc(u ? u.n : 'Unknown entry') +
       (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</div>' +
       '<div class="meta">' + (u ? (ptsFor(u, sl.size, copyIndex(l)[i]) + gearPoints(u, sl)) + ' pts' : '\u2014') +
@@ -1143,7 +1188,7 @@ function renderListsInner(){
       const none = el('option'); none.value=''; none.textContent='not attached'; at.append(none);
       for (const [j, other] of l.slots.entries()) {
         if (j === i) continue;
-        const ou = f.units.find(x => x.id === other.unitId);
+        const ou = unitOf(l, other.unitId);
         if (!ou || !u.ld.includes(ou.id)) continue;
         const o = el('option');
         o.value = String(j + 1);
@@ -1165,7 +1210,7 @@ function renderListsInner(){
       let sheet = null;
       tog.onclick = () => {
         if (sheet) { sheet.remove(); sheet = null; }
-        else { sheet = datasheetFor(u); row.after ? row.after(sheet) : v.append(sheet); }
+        else { sheet = datasheetFor(u, sl); row.after ? row.after(sheet) : v.append(sheet); }
       };
       row.append(tog);
     }
@@ -1211,7 +1256,7 @@ function wargearFor(l, sl, u){
         if (sl.gear[gi] === name) o.selected = true;
         sel.append(o);
       }
-      sel.onchange = () => { sl.gear[gi] = sel.value || undefined; saveList(l); };
+      sel.onchange = () => { sl.gear[gi] = sel.value || undefined; saveList(l); renderLists(); };
       box.append(sel);
       continue;
     }
@@ -1252,8 +1297,56 @@ function wargearFor(l, sl, u){
 
 /* Ficha de datos: stats de la unidad y tabla de armas. Sale del mismo
  * catálogo, así que se actualiza sola con los datos. */
-function datasheetFor(u){
+/* Normaliza para cruzar el nombre de una OPCIÓN con el de un PERFIL de arma.
+ * No coinciden literalmente: la opción dice "Two magma cutters" y el perfil
+ * "Magma cutter"; "Heavy missile launcher" se parte en "- frag" y "- krak".
+ * Se recorta el sufijo tras el guion, se quitan los numerales y el plural. */
+function wkey(name){
+  return String(name)
+    .split(' - ')[0]
+    .replace(/^[\u27a4\s]+/, '')
+    .toLowerCase()
+    .replace(/^(two|three|four|2|3|4)\s+/, '')
+    .replace(/[^a-z0-9 ]/g, '')
+    .trim()
+    .replace(/s$/, '');
+}
+
+/* Armas que quedan tras aplicar el equipamiento elegido.
+ *
+ * Cada grupo de tipo "one" es un reemplazo: sus opciones son excluyentes, así
+ * que sólo sobrevive la elegida (o la primera, que es el equipo de fábrica).
+ * Las armas que no pertenecen a ningún grupo son fijas y se muestran siempre. */
+function weaponsAfterGear(u, sl){
+  if (!u.w || !u.o || !u.o.length) return u.w || [];
+
+  // Un arma puede figurar en VARIOS grupos: el Hades lascannon es opción tanto
+  // del baleflamer como del lanzamisiles. Por eso no alcanza con marcar para
+  // borrar grupo por grupo — hay que juntar primero todo lo elegido y recién
+  // después descartar. Si no, elegir un arma en un grupo la borra desde otro.
+  const inGroups = new Set();
+  const chosen = new Set();
+
+  for (const [gi, g] of u.o.entries()) {
+    if (g.k !== 'one') continue;
+    const names = g.opts.map(([n]) => n);
+    for (const n of names) inGroups.add(wkey(n));
+    const pick = (sl?.gear && typeof sl.gear[gi] === 'string') ? sl.gear[gi] : names[0];
+    chosen.add(wkey(pick));
+  }
+  if (!inGroups.size) return u.w;
+
+  // Se conserva lo elegido y todo lo que no participa de ningún reemplazo
+  // (el equipo fijo, como las garras del Defiler).
+  return u.w.filter((w) => {
+    const k = wkey(w[0]);
+    return chosen.has(k) || !inGroups.has(k);
+  });
+}
+
+function datasheetFor(u, sl){
   const box = el('div','sheet');
+  const weapons = weaponsAfterGear(u, sl);
 
   if (u.st) {
     const row = el('div','stats');
@@ -1276,7 +1369,7 @@ function datasheetFor(u){
   }
 
   for (const melee of [0, 1]) {
-    const ws = (u.w || []).filter(w => w[1] === melee);
+    const ws = weapons.filter(w => w[1] === melee);
     if (!ws.length) continue;
     const b = el('div','band');
     b.textContent = melee ? 'MELEE WEAPONS' : 'RANGED WEAPONS';
@@ -1628,7 +1721,7 @@ function enhancementsFor(l, f){
     const on = el('select'); on.style.cssText = 'font-size:12px;padding:5px 7px;max-width:190px';
     const none = el('option'); none.value = ''; none.textContent = 'unassigned'; on.append(none);
     for (const [j, sl] of l.slots.entries()) {
-      const u = f.units.find(x => x.id === sl.unitId);
+      const u = unitOf(l, sl.unitId);
       if (!u || !(u.kw || []).includes('Character')) continue;
       const o = el('option'); o.value = String(j);
       o.textContent = u.n;
@@ -1688,7 +1781,7 @@ function exportList(l){
     legends: !!l.legends,
     crucible: !!l.crucible,
     slots: l.slots.map((sl) => {
-      const u = f && f.units.find((x) => x.id === sl.unitId);
+      const u = unitOf(l, sl.unitId);
       return {
         unitId: sl.unitId,
         unitName: u ? u.n : null,     // respaldo legible si el id ya no existe
@@ -1771,9 +1864,9 @@ function printList(l){
   const t = el('table','pr-roster');
   const prCopies = copyIndex(l);
   t.innerHTML = l.slots.map((sl, pi) => {
-    const u = f && f.units.find((x) => x.id === sl.unitId);
+    const u = unitOf(l, sl.unitId);
     const att = sl.attach && l.slots[sl.attach - 1];
-    const au = att && f && f.units.find((x) => x.id === att.unitId);
+    const au = att && unitOf(l, att.unitId);
     const gear = sl.gear ? Object.entries(sl.gear).filter(([,v]) => v).map(([k,v]) =>
       typeof v === 'number' ? gearName(u, k) + ' \u00d7' + v : v).filter(Boolean) : [];
     return '<tr><td>' + esc(u ? u.n : (sl.unitName || 'Unknown')) +
@@ -1784,7 +1877,7 @@ function printList(l){
   }).join('') +
     (l.enh || []).filter(e => e.n || e.pts).map((e) => {
       const host = e.on != null && l.slots[e.on];
-      const hu = host && f && f.units.find((x) => x.id === host.unitId);
+      const hu = host && unitOf(l, host.unitId);
       return '<tr><td>' + esc(e.n || 'Enhancement') +
         (hu ? '<br><span style="font-size:11px;color:#555">on ' + esc(hu.n) + '</span>' : '') +
         '</td><td>' + (+e.pts || 0) + '</td></tr>';
@@ -1793,15 +1886,18 @@ function printList(l){
   area.append(t);
 
   // fichas, una por unidad distinta
+  // Una ficha por combinación unidad+equipamiento: dos Defilers con armas
+  // distintas necesitan dos fichas distintas.
   const seen = new Set();
   for (const sl of l.slots) {
-    if (seen.has(sl.unitId)) continue;
-    seen.add(sl.unitId);
-    const u = f && f.units.find((x) => x.id === sl.unitId);
+    const key = sl.unitId + '|' + JSON.stringify(sl.gear || {});
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const u = unitOf(l, sl.unitId);
     if (!u || !hasSheet(u)) continue;
     const card = el('div','pr-unit');
-    card.innerHTML = '<h3>' + esc(u.n) + '</h3>';
-    card.append(datasheetFor(u));
+    card.innerHTML = '<h3>' + esc(u.n) + (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</h3>';
+    card.append(datasheetFor(u, sl));
     area.append(card);
   }
 
