@@ -1238,7 +1238,20 @@ function wargearFor(l, sl, u){
   const box = el('div');
   box.style.cssText = 'padding:2px 0 12px 14px;border-left:2px solid var(--rule);margin-bottom:6px';
 
+  // Las opciones se agrupan por MODELO. En una escuadra, "Weapon 1" es del
+  // sargento y la tropa lleva equipo fijo; mostrarlas planas hace creer que
+  // la elección aplica a los diez.
+  let lastOwner;
   for (const [gi, g] of u.o.entries()) {
+    if (g.ow !== lastOwner) {
+      lastOwner = g.ow;
+      const oh = el('div');
+      oh.style.cssText = 'font-family:var(--disp);font-weight:600;font-size:13.5px;' +
+        'margin:12px 0 2px;padding-bottom:2px;border-bottom:1px solid var(--rule)';
+      oh.textContent = g.ow || 'Whole unit';
+      box.append(oh);
+    }
+
     const head = el('div');
     head.style.cssText = 'font-family:var(--mono);font-size:10px;letter-spacing:.1em;' +
       'color:var(--ink2);margin:8px 0 3px';
