@@ -186,6 +186,7 @@ for (const file of files) {
            // descartando: 72 opciones lo tienen (Dark Lance de Drukhari = 5).
            .map((g) => ({
              n: g.n, k: g.pick,
+             ow: g.owner || null,        // modelo al que pertenece la elección
              opts: g.opts.map((e) => [e.n, e.max, Number(e.p) || 0]),
            }))
            .slice(0, 8),
