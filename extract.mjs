@@ -58,6 +58,43 @@ async function download() {
 const asArray = (v) => (Array.isArray(v) ? v : v ? [v] : []);
 
 /**
+ * RESOLVEDOR DE ENLACES.
+ *
+ * En 11e casi todo el contenido de una unidad cuelga de `entryLinks`, no de
+ * hijos directos: Battle Sisters Squad tiene 19 enlaces y ni un solo perfil
+ * propio. Y los enlaces apuntan a DOS cosas distintas — entradas compartidas
+ * (`selectionEntry`) y grupos compartidos (`selectionEntryGroup`)— que viven
+ * en índices separados.
+ *
+ * Todos los extractores usan este mismo recorrido. Cada uno que resolvía
+ * enlaces por su cuenta se olvidaba de alguno.
+ */
+function walkAll(root, ctx, fn, maxDepth = 6) {
+  const seen = new Set();
+
+  const visit = (n, d) => {
+    if (!n || d > maxDepth) return;
+    fn(n, d);
+
+    for (const e of asArray(n.selectionEntries)) visit(e, d + 1);
+    for (const g of asArray(n.selectionEntryGroups)) visit(g, d + 1);
+
+    for (const l of asArray(n.entryLinks)) {
+      const t = l.type === 'selectionEntryGroup'
+        ? ctx?.groups?.get(l.targetId)
+        : ctx?.shared?.get(l.targetId);
+      if (!t) continue;
+      const key = l.targetId + '@' + d;
+      if (seen.has(key)) continue;      // corta ciclos entre entradas compartidas
+      seen.add(key);
+      visit(t, d + 1);
+    }
+  };
+
+  visit(root, 0);
+}
+
+/**
  * Índice GLOBAL id -> entry.
  *
  * Clave: muchas facciones (Astra Militarum, Craftworlds, Knights...) tienen
@@ -237,8 +274,9 @@ function leaderTargetsOf(entry) {
  * Se extraen los topes planos (max:N). Las proporciones del tipo "1 cada 5
  * modelos" viven en modifiers y NO se resuelven: eso ya es motor de reglas.
  */
-function optionsOf(entry, shared) {
+function optionsOf(entry, ctx) {
   const groups = [];
+  const seenG = new Set();
 
   const capOf = (node) => {
     const cs = asArray(node.constraints);
@@ -247,47 +285,42 @@ function optionsOf(entry, shared) {
     return { min: mn ? Number(mn.value) : 0, max: mx ? Number(mx.value) : null };
   };
 
-  const visit = (node, depth) => {
-    if (depth > 4) return;
-    for (const g of asArray(node.selectionEntryGroups)) {
-      // Las alternativas de un grupo llegan de DOS formas: como hijos directos
-      // y como entryLinks a entradas compartidas. Leer sólo las primeras deja
-      // el Defiler con una opción de cuatro: las tres armas de recambio están
-      // enlazadas, no embebidas.
-      const linked = asArray(g.entryLinks)
-        .filter((l) => l.type === 'selectionEntry')
-        .map((l) => {
-          const t = shared?.get(l.targetId);
-          return t ? { ...t, name: l.name || t.name } : null;
-        })
-        .filter(Boolean);
+  const readGroup = (g) => {
+    if (!g || !g.name || seenG.has(g.id ?? g.name)) return;
+    seenG.add(g.id ?? g.name);
 
-      const opts = [...asArray(g.selectionEntries), ...linked]
-        .filter((e) => e.type === 'model' || e.type === 'upgrade')
-        .map((e) => ({
-          n: e.name,
-          ...capOf(e),
-          p: asArray(e.costs).find((c) => c.name === 'pts')?.value ?? 0,
-        }));
+    const linked = asArray(g.entryLinks)
+      .filter((l) => l.type === 'selectionEntry')
+      .map((l) => {
+        const t = ctx?.shared?.get(l.targetId);
+        return t ? { ...t, name: l.name || t.name } : null;
+      })
+      .filter(Boolean);
 
-      if (opts.length) {
-        const gc = capOf(g);
-        const pick = gc.max === 1 ? 'one' : 'many';
+    const opts = [...asArray(g.selectionEntries), ...linked]
+      .filter((e) => e.type === 'model' || e.type === 'upgrade')
+      .map((e) => ({
+        n: e.name, ...capOf(e),
+        p: asArray(e.costs).find((c) => c.name === 'pts')?.value ?? 0,
+      }));
+    if (!opts.length) return;
 
-        // Un grupo es una ELECCIÓN sólo si algo puede variar. Si todas sus
-        // opciones tienen min === max, son cantidades fijas: equipo, no menú.
-        // El Master of Executions lleva hacha y bolt pistol siempre (1 y 1);
-        // mostrarlo como desplegable era ruido.
-        const isChoice = opts.some((o) => o.min !== o.max) ||
-                         (pick === 'one' && opts.length > 1);
-        if (isChoice) groups.push({ n: g.name, min: gc.min, max: gc.max, pick, opts });
-      }
-      visit(g, depth + 1);
-    }
-    for (const e of asArray(node.selectionEntries)) visit(e, depth + 1);
+    const gc = capOf(g);
+    const pick = gc.max === 1 ? 'one' : 'many';
+    const isChoice = opts.some((o) => o.min !== o.max) || (pick === 'one' && opts.length > 1);
+    if (isChoice) groups.push({ n: g.name, min: gc.min, max: gc.max, pick, opts });
   };
 
-  visit(entry, 0);
+  walkAll(entry, ctx, (n) => {
+    for (const g of asArray(n.selectionEntryGroups)) readGroup(g);
+    // grupos que llegan por enlace: "Sister Superior Ranged Weapons"
+    for (const l of asArray(n.entryLinks)) {
+      if (l.type !== 'selectionEntryGroup') continue;
+      const g = ctx?.groups?.get(l.targetId);
+      if (g) readGroup({ ...g, name: l.name || g.name });
+    }
+  });
+
   return groups.length ? groups : null;
 }
 
@@ -353,18 +386,15 @@ function modelCountOf(entry, shared) {
  * El marcado ^^ y ** del texto se limpia: es sintaxis de BattleScribe para
  * resaltar, no contenido.
  */
-function abilitiesOf(entry) {
+function abilitiesOf(entry, ctx) {
   const acc = [];
   const seen = new Set();
 
   const clean = (t) => String(t ?? '')
-    .replace(/\^\^/g, '')
-    .replace(/\*\*/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/\^\^/g, '').replace(/\*\*/g, '')
+    .replace(/\s+/g, ' ').trim();
 
-  const visit = (n, d) => {
-    if (d > 5) return;
+  walkAll(entry, ctx, (n) => {
     for (const p of asArray(n.profiles)) {
       if (p.typeName !== 'Abilities') continue;
       if (p.name === 'Leader' || seen.has(p.name)) continue;
@@ -373,11 +403,8 @@ function abilitiesOf(entry) {
         .map((c) => clean(c.$text ?? c['#text'])).filter(Boolean).join(' ');
       if (desc) acc.push({ n: p.name, d: desc });
     }
-    for (const e of asArray(n.selectionEntries)) visit(e, d + 1);
-    for (const g of asArray(n.selectionEntryGroups)) visit(g, d + 1);
-  };
+  });
 
-  visit(entry, 0);
   return acc.length ? acc : null;
 }
 
@@ -386,12 +413,11 @@ function abilitiesOf(entry) {
  * Una unidad puede repetir la misma arma en varias variantes de modelo, así
  * que se deduplica por nombre.
  */
-function weaponsOf(entry) {
+function weaponsOf(entry, ctx) {
   const acc = [];
   const seen = new Set();
 
-  const visit = (n, d) => {
-    if (d > 5) return;
+  walkAll(entry, ctx, (n) => {
     for (const p of asArray(n.profiles)) {
       const t = p.typeName;
       if (t !== 'Ranged Weapons' && t !== 'Melee Weapons') continue;
@@ -412,26 +438,18 @@ function weaponsOf(entry) {
         kw: ch.Keywords && ch.Keywords !== '-' ? ch.Keywords : '',
       });
     }
-    for (const e of asArray(n.selectionEntries)) visit(e, d + 1);
-    for (const g of asArray(n.selectionEntryGroups)) visit(g, d + 1);
-  };
+  });
 
-  visit(entry, 0);
   return acc.length ? acc : null;
 }
 
 /** Perfil de la unidad (M, T, SV, W, LD, OC) desde profiles con typeName "Unit". */
-function unitProfileOf(entry) {
-  const collect = (node, depth = 0, acc = []) => {
-    if (!node || depth > 3) return acc;
-    for (const p of asArray(node.profiles)) acc.push(p);
-    for (const child of asArray(node.selectionEntries)) collect(child, depth + 1, acc);
-    for (const g of asArray(node.selectionEntryGroups)) collect(g, depth + 1, acc);
-    return acc;
-  };
-
-  const profiles = collect(entry);
-  const unit = profiles.find((p) => p.typeName === 'Unit');
+function unitProfileOf(entry, ctx) {
+  let unit = null;
+  walkAll(entry, ctx, (n) => {
+    if (unit) return;
+    for (const p of asArray(n.profiles)) if (p.typeName === 'Unit') { unit = p; return; }
+  });
   if (!unit) return null;
 
   const out = {};
@@ -444,6 +462,7 @@ function unitProfileOf(entry) {
 // ---------------------------------------------------------------- extracción
 
 function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex) {
+  const ctx = { shared, groups: groupIndex };
   if (catalogue.library === true) return null; // las Library no son facciones jugables
 
   const datasheets = [];
@@ -475,13 +494,13 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex) {
       ladder: priceLadder(target),
       cap: forceCapOf(target),
       leads: leaderTargetsOf(target),
-      options: optionsOf(target, shared),
-      weapons: weaponsOf(target),
-      abilities: abilitiesOf(target),
+      options: optionsOf(target, ctx),
+      weapons: weaponsOf(target, ctx),
+      abilities: abilitiesOf(target, ctx),
       faction: factionOf(target),
       keywords: keywordsOf(target),
       models: modelCountOf(target, shared),
-      profile: unitProfileOf(target),
+      profile: unitProfileOf(target, ctx),
     });
   }
 
@@ -563,6 +582,13 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex) {
     catalogueId: catalogue.id,
     catalogueName: catalogue.name,
     nativeFaction,
+    // Catálogos de los que esta facción puede tomar unidades al armar una
+    // lista. Ultramarines enlaza a "Imperium - Space Marines" (su base) más
+    // Imperial Knights y Agents como aliados. La COLECCIÓN sigue mostrando
+    // sólo lo nativo — si no, tus Intercessors aparecerían en trece capítulos.
+    links: asArray(catalogue.catalogueLinks)
+      .map((cl) => libIndex.get(cl.targetId)?.name ?? cl.name)
+      .filter(Boolean),
     detachments,
     enhancements,
     revision: catalogue.revision,
