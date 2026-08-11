@@ -193,6 +193,8 @@ for (const file of files) {
       st: x.profile
             ? [x.profile.M, x.profile.T, x.profile.Sv, x.profile.W, x.profile.LD, x.profile.OC]
             : null,
+      // composición: [nombre, min, max, armas de fábrica]
+      cp: (x.composition ?? []).map((c) => [c.n, c.min, c.max, c.w]),
       // habilidades: [nombre, descripción]
       ab: (x.abilities ?? []).map((a) => [a.n, a.d]),
       // palabras clave del datasheet (sin la de facción, que es redundante)
