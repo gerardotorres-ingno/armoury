@@ -997,6 +997,12 @@ function review(l){
       const g = u.o[gi];
       if (!g || g.k !== 'many' || !g.opts[oi]) continue;   // clave huérfana
       perGroup.set(gi, (perGroup.get(gi) ?? 0) + v);
+
+      // Tope propio de la opción, ya escalado al tamaño de la unidad.
+      const cap = capFor(g.opts[oi], sl.size);
+      if (cap != null && v > cap)
+        out.push({ hard:false, t:u.n + ' \u2014 ' + g.opts[oi][0] + ': ' + v,
+                   d:'Maximum ' + cap + ' in a unit of ' + sl.size + '.' });
     }
 
     for (const [gi, picked] of perGroup) {
@@ -1274,16 +1280,19 @@ function wargearFor(l, sl, u){
       continue;
     }
 
-    for (const [oi, [name, max]] of g.opts.entries()) {
+    for (const [oi, opt] of g.opts.entries()) {
+      const name = opt[0];
+      const max = capFor(opt, sl.size);
       const key = gi + ':' + oi;
       const row = el('div');
       row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:3px 0';
 
       const cost = gearCost(u, name);
+      const scaled = opt[3] && opt[3].length;
       const lab = el('div');
       lab.style.cssText = 'flex:1;min-width:0;font-size:13px';
       lab.textContent = name + (cost ? '  +' + cost + ' pts' : '') +
-                        (max ? '  (max ' + max + ')' : '');
+                        (max ? '  (max ' + max + (scaled ? ' at ' + sl.size : '') + ')' : '');
 
       const step = el('div','step');
       const minus = el('button'); minus.textContent = '\u2212';
@@ -1434,6 +1443,19 @@ function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.len
  * Los precios los trae el MFM; BSData no los tiene. */
 /* Precio de un arma opcional. Dos fuentes: el MFM (u.wg) y el propio catálogo,
  * que trae precio en 72 opciones. Gana el MFM por ser la fuente oficial. */
+/* Tope efectivo de una opción para un tamaño de unidad dado.
+ *
+ * "1 cada 5 modelos" viene como un máximo base más una escalera: el
+ * Terminator w/ Heavy Weapon es max 1, y max 2 cuando la unidad tiene 10.
+ * Sin esto, la app permitía uno solo aunque llevaras diez. */
+function capFor(opt, size){
+  const [, max, , scale] = opt;
+  if (!scale || !scale.length) return max;
+  let eff = max;
+  for (const [at, v] of scale) if (size >= at) eff = v;
+  return eff;
+}
+
 function gearCost(u, name){
   if (!name) return 0;
   const k = String(name).toLowerCase().replace(/[^a-z0-9]/g, '');
