@@ -415,7 +415,10 @@ function optionsOf(entry, ctx, weaponNames) {
         n: e.name, ...capOf(e),
         p: asArray(e.costs).find((c) => c.name === 'pts')?.value ?? 0,
         model: e.type === 'model',
-        w: e.type === 'model' ? armsOf(e) : null,
+        // También para las mejoras: una opción puede agrupar varias armas
+        // ("Bolt Carbine and Close Combat Weapon" son dos perfiles), y sin
+        // esto el recuento por miniatura no las encuentra por el nombre.
+        w: armsOf(e),
       }));
     if (!opts.length) return;
 
@@ -426,6 +429,25 @@ function optionsOf(entry, ctx, weaponNames) {
     // sargento y la tropa lleva equipo fijo; mostrarlas planas hace creer que
     // la elección aplica a toda la unidad.
     if (isChoice) groups.push({ n: g.name, owner: owner ?? null, min: gc.min, max: gc.max, pick, opts });
+  };
+
+  // Equipamiento opcional SUELTO: entradas `upgrade` colgadas directo de la
+  // unidad o de un modelo, sin grupo que las contenga. Así vienen el Reiver
+  // Grav-chute y el Grapnel Launcher ("all models can each be equipped with
+  // 1 grapnel launcher"), y leyendo sólo grupos se perdían por completo.
+  const loose = new Map();          // dueño -> [opciones]
+
+  const optionalUpgrade = (e) => {
+    if (e.type !== 'upgrade' || !e.name) return null;
+    if (isEnhancement(e) || isCrusade(e)) return null;
+    const cs = asArray(e.constraints).filter((c) => c.field === 'selections');
+    const mx = cs.find((c) => c.type === 'max');
+    const mn = cs.find((c) => c.type === 'min');
+    if (!mx) return null;
+    if (mn && Number(mn.value) > 0) return null;      // obligatorio: es equipo fijo
+    return { n: e.name, ...capOf(e),
+             p: asArray(e.costs).find((c) => c.name === 'pts')?.value ?? 0,
+             model: false, w: [] };
   };
 
   walkAll(entry, ctx, (n) => {
@@ -439,7 +461,20 @@ function optionsOf(entry, ctx, weaponNames) {
       const g = ctx?.groups?.get(l.targetId);
       if (g) readGroup({ ...g, name: l.name || g.name }, owner);
     }
+
+    if (n === entry || n.type === 'model') {
+      for (const e of asArray(n.selectionEntries)) {
+        const o = optionalUpgrade(e);
+        if (!o) continue;
+        const k = owner ?? '';
+        if (!loose.has(k)) loose.set(k, []);
+        if (!loose.get(k).some((x) => x.n === o.n)) loose.get(k).push(o);
+      }
+    }
   });
+
+  for (const [owner, opts] of loose)
+    groups.push({ n: 'Equipment', owner: owner || null, min: 0, max: null, pick: 'many', opts });
 
   return groups.length ? groups : null;
 }
