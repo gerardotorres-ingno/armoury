@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#E4E3DD">
+<meta name="theme-color" content="#0F1720">
 <title>Armoury — collection manifest</title>
 <link rel="manifest" href="./manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,13 +11,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --field:#E4E3DD; --panel:#F4F3EF; --ink:#14161A; --ink2:#63625D;
-  --rule:#C7C6BF; --rule2:#AEACA3;
-  --ochre:#9A7614; --ochre-bg:#F0E7C9;
-  --oxide:#96382A; --oxide-bg:#F2DED9;
-  --slate:#4A5560; --slate-bg:#E0E4E8;
-  /* granate de las fichas oficiales: sólo vive dentro de la data-slate */
-  --plate:#6E1F26; --plate-ink:#FBF7F4; --plate-line:#D8C6C4;
+  /* Cogitador: modo oscuro real. En la mesa, con luz baja o de noche, una
+     pantalla clara a página completa encandila; ésta no. El acento cian
+     mantiene contraste alto sin gritar. */
+  --field:#0F1720; --panel:#16212C; --ink:#DDE7EF; --ink2:#7C93A6;
+  --rule:#26384A; --rule2:#33495F;
+  --ochre:#39C6C0; --ochre-bg:#123236;
+  --oxide:#FF6B5E; --oxide-bg:#331A1B;
+  --slate:#9DB4C6; --slate-bg:#1B2A38;
+  --plate:#1E2E3D; --plate-ink:#39C6C0; --plate-line:#26384A;
+  --chrome:#0A1219;
   --tap:44px;   /* objetivo táctil mínimo */
   --disp:"Archivo Narrow",system-ui,sans-serif;
   --body:"IBM Plex Sans",system-ui,sans-serif;
@@ -31,9 +34,74 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.wide{max-width:1180px}
+
+/* ---------- maestro-detalle ---------- */
+.mx{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
+@media (min-width:940px){ .mx{grid-template-columns:minmax(0,1fr) 400px} }
+
+.pane{min-width:0}
+.side{position:sticky;top:74px;max-height:calc(100vh - 96px);overflow:auto;
+  background:var(--panel);border:1px solid var(--rule2);border-radius:3px}
+.side .hd{position:sticky;top:0;background:var(--chrome);color:var(--ink);
+  padding:9px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.side .hd h3{font-family:var(--disp);font-weight:600;font-size:16px;letter-spacing:.02em;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.side .hd button{background:transparent;border:1px solid var(--rule2);color:var(--ink);
+  font-family:var(--mono);font-size:10px;letter-spacing:.08em;padding:4px 7px;border-radius:2px;cursor:pointer}
+.side .bd{padding:12px}
+.side .empty{padding:26px 14px;font-family:var(--mono);font-size:11.5px;
+  color:var(--ink2);line-height:1.7;text-align:center}
+
+/* ---------- filas del roster ---------- */
+.rrole{display:flex;align-items:baseline;justify-content:space-between;
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ink2);
+  border-bottom:1px solid var(--rule);padding:12px 0 4px;margin-bottom:1px}
+.runit{display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  background:transparent;border:none;border-bottom:1px solid var(--rule);
+  padding:9px 8px 9px 0;cursor:pointer;font:inherit;color:inherit}
+.runit:hover{background:var(--panel)}
+.runit[aria-current=true]{background:var(--ochre-bg);
+  box-shadow:inset 3px 0 0 var(--ochre);padding-left:9px}
+.runit .rn{flex:1;min-width:0}
+.runit .rn b{display:block;font-family:var(--disp);font-weight:600;font-size:16.5px;
+  line-height:1.2;overflow-wrap:anywhere}
+.runit .rn i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--ink2)}
+.runit .rp{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.runit .rx{font-family:var(--mono);font-size:14px;color:var(--ink2);padding:2px 6px;border-radius:2px}
+.runit .rx:hover{background:var(--oxide-bg);color:var(--oxide)}
+
+/* ---------- buscador de unidades ---------- */
+.warn ul{list-style:none}
+.warn li{padding:1px 0}
+.warn li::before{content:'\2022';margin-right:6px;opacity:.5}
+
+details.cfg,details.scope{border:1px solid var(--rule2);border-radius:3px;
+  background:var(--panel);margin:14px 0}
+details.cfg>summary,details.scope>summary{cursor:pointer;padding:9px 12px;
+  font-family:var(--disp);font-weight:600;font-size:14px;letter-spacing:.02em;
+  display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+details.cfg>summary span{font-family:var(--mono);font-size:10.5px;font-weight:400;color:var(--ink2)}
+details.cfg>div{padding:0 12px 10px;border-top:1px solid var(--rule)}
+details.scope{background:transparent;border-color:var(--rule)}
+details.scope>summary{font-family:var(--mono);font-size:10.5px;font-weight:400;
+  letter-spacing:.1em;color:var(--ink2);text-transform:uppercase}
+details.scope p{padding:0 12px 10px;font-size:12px;line-height:1.6;color:var(--ink2)}
+details.scope b{color:var(--ink)}
+
+.finder input{width:100%;margin-bottom:8px}
+.fres{max-height:340px;overflow:auto;border:1px solid var(--rule);border-radius:2px}
+.fres button{display:flex;width:100%;gap:8px;align-items:baseline;text-align:left;
+  background:var(--panel);border:none;border-bottom:1px solid var(--rule);padding:8px 10px;
+  cursor:pointer;font:inherit}
+.fres button:hover{background:var(--ochre-bg)}
+.fres b{flex:1;font-family:var(--disp);font-weight:600;font-size:15px}
+.fres i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--ink2)}
+.fres .fh{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--ink2);
+  background:var(--field);padding:5px 10px;border-bottom:1px solid var(--rule)}
 
 /* ---- manifest header: el bloque de control documental ---- */
-header{border-bottom:2px solid var(--ink);margin-bottom:20px}
+header{border-bottom:2px solid var(--rule2);margin-bottom:20px}
 .masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:22px 0 12px;flex-wrap:wrap}
 h1{font-family:var(--disp);font-weight:600;font-size:32px;letter-spacing:.01em;line-height:.95}
 h1 small{display:block;font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.14em;color:var(--ink2);margin-top:6px}
@@ -42,7 +110,7 @@ h1 small{display:block;font-family:var(--mono);font-size:11px;font-weight:400;le
 
 /* ---- controles ---- */
 .controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-select,input[type=search]{
+select,input[type=search],input[type=text]{
   font:inherit;background:var(--panel);color:var(--ink);
   border:1px solid var(--rule2);border-radius:2px;padding:9px 11px;
 }
@@ -58,7 +126,7 @@ input[type=search]::placeholder{color:var(--ink2)}
 
 /* ---- líneas del manifiesto ---- */
 .group{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--ink2);
-  border-bottom:2px solid var(--ink);padding-bottom:5px;margin:26px 0 2px}
+  border-bottom:2px solid var(--rule2);padding-bottom:5px;margin:26px 0 2px}
 .group:first-of-type{margin-top:0}
 .role{display:flex;align-items:baseline;justify-content:space-between;gap:10px;
   font-family:var(--disp);font-weight:600;font-size:13px;letter-spacing:.06em;
@@ -67,7 +135,7 @@ input[type=search]::placeholder{color:var(--ink2)}
 .role span{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--ink2);letter-spacing:.04em}
 
 .line{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule)}
-.line.owned{background:linear-gradient(90deg,rgba(154,118,20,.07),transparent 60%)}
+.line.owned{background:linear-gradient(90deg,rgba(57,198,192,.10),transparent 60%)}
 .id{flex:1;min-width:0}
 .nm{font-family:var(--disp);font-size:17px;line-height:1.25;overflow-wrap:anywhere}
 .meta{font-family:var(--mono);font-size:11px;color:var(--ink2);margin-top:2px}
@@ -83,7 +151,7 @@ input[type=search]::placeholder{color:var(--ink2)}
   background:var(--panel);border:1px solid var(--rule2);color:var(--ink);
   cursor:pointer;border-radius:2px;
 }
-.step button:hover{background:#fff;border-color:var(--ink)}
+.step button:hover{background:var(--rule);border-color:var(--ochre)}
 .step button:active{background:var(--ochre-bg)}
 .step input{
   font-family:var(--mono);font-size:15px;font-weight:500;text-align:center;
@@ -94,7 +162,7 @@ input[type=search]::placeholder{color:var(--ink2)}
 /* ---- barra inferior ---- */
 .totals{
   position:fixed;left:0;right:0;bottom:0;background:var(--panel);
-  border-top:2px solid var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  border-top:2px solid var(--rule2);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
 }
 .totals .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0;flex-wrap:wrap}
 .count{font-family:var(--mono);font-size:12px;color:var(--ink2)}
@@ -105,11 +173,11 @@ input[type=search]::placeholder{color:var(--ink2)}
   background:transparent;border:1px solid var(--rule2);border-radius:2px;
   color:var(--ink);cursor:pointer
 }
-.acts button:hover:not(:disabled){border-color:var(--ink);background:#fff}
+.acts button:hover:not(:disabled){border-color:var(--ochre);background:var(--rule)}
 .acts button:disabled{opacity:.4;cursor:not-allowed}
 
 .note{font-family:var(--mono);font-size:12px;color:var(--ink2);padding:28px 0;line-height:1.8}
-.tabs{display:flex;gap:0;border-bottom:2px solid var(--ink);margin-bottom:18px}
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--rule2);margin-bottom:18px}
 .tabs button{font-family:var(--disp);font-weight:600;font-size:14px;letter-spacing:.08em;
   text-transform:uppercase;padding:9px 16px;background:transparent;border:none;
   border-bottom:3px solid transparent;margin-bottom:-2px;color:var(--ink2);cursor:pointer}
@@ -117,7 +185,7 @@ input[type=search]::placeholder{color:var(--ink2)}
 .card{background:var(--panel);border:1px solid var(--rule2);border-radius:2px;
   padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;
   align-items:center;gap:12px;cursor:pointer}
-.card:hover{border-color:var(--ink)}
+.card:hover{border-color:var(--ochre)}
 .card .nm{font-family:var(--disp);font-weight:600;font-size:18px}
 .card .meta{font-family:var(--mono);font-size:11px;color:var(--ink2);margin-top:2px}
 .card .pts{font-family:var(--mono);font-size:15px;white-space:nowrap}
@@ -126,9 +194,9 @@ input[type=search]::placeholder{color:var(--ink2)}
   border-radius:2px;padding:8px 10px;color:var(--ink)}
 .btn{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:9px 13px;
   background:transparent;border:1px solid var(--rule2);border-radius:2px;color:var(--ink);cursor:pointer}
-.btn:hover{border-color:var(--ink);background:#fff}
-.btn.pri{background:var(--ink);color:var(--field);border-color:var(--ink)}
-.btn.pri:hover{background:#000}
+.btn:hover{border-color:var(--ochre);background:var(--rule)}
+.btn.pri{background:var(--ochre);color:#06181A;border-color:var(--ochre);font-weight:500}
+.btn.pri:hover{background:#5FE0DA}
 .warn{border-left:3px solid var(--oxide);background:var(--oxide-bg);padding:9px 12px;
   margin-bottom:6px;font-size:13px}
 .warn.soft{border-left-color:var(--ochre);background:var(--ochre-bg)}
@@ -137,40 +205,42 @@ input[type=search]::placeholder{color:var(--ink2)}
 .slot .id{flex:1;min-width:0}
 .hint{font-family:var(--mono);font-size:11px;color:var(--ink2);margin:-6px 0 14px}
 /* ---------- data-slate: la ficha, único lugar donde la app sube el volumen ---------- */
-.sheet{background:#fff;border:1px solid var(--plate-line);border-radius:3px;
+.sheet{background:var(--panel);border:1px solid var(--plate-line);border-radius:3px;
   overflow:hidden;margin:2px 0 10px}
 .stats{display:flex;gap:5px;flex-wrap:wrap;padding:10px 12px 4px}
-.stat{border:1.5px solid var(--plate);border-radius:4px;padding:2px 7px 3px;
-  text-align:center;min-width:42px;background:#fff}
+.stat{border:1.5px solid var(--plate-ink);border-radius:4px;padding:2px 7px 3px;
+  text-align:center;min-width:42px;background:var(--field)}
 .stat b{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;
-  color:var(--plate);font-weight:500}
+  color:var(--plate-ink);font-weight:500}
 .stat span{font-family:var(--disp);font-weight:600;font-size:17px;line-height:1.1}
-.band{background:var(--plate);color:var(--plate-ink);font-family:var(--disp);
+.band{background:var(--plate);color:var(--plate-ink);border-top:1px solid var(--rule2);font-family:var(--disp);
   font-weight:600;font-size:11.5px;letter-spacing:.14em;padding:4px 12px;margin-top:6px}
 /* Columnas numéricas angostas y fijas: los valores se agrupan a la derecha,
  * como en la ficha oficial, y el nombre del arma se queda con el resto. */
 .wp{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
 .wp th:nth-child(2),.wp td:nth-child(2){width:58px}
 .wp th:nth-child(n+3),.wp td:nth-child(n+3){width:38px}
-.wp th{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;color:var(--plate);
-  text-align:right;padding:5px 6px 4px;font-weight:500;border-bottom:1px solid var(--plate-line)}
+.wp th{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;color:var(--plate-ink);
+  text-align:right;padding:5px 6px 4px;font-weight:500;border-bottom:1px solid var(--plate-line);color:var(--ink2)}
 .wp th:first-child{text-align:left}
 .wp td{padding:5px 6px;text-align:right;border-bottom:1px solid var(--plate-line);
   font-family:var(--mono);font-size:12.5px}
 .wp td:first-child{text-align:left;font-family:var(--body);font-size:13px;
   overflow-wrap:anywhere;padding-right:10px}
 .wp tr:last-child td{border-bottom:none}
-.wkw{display:block;font-size:10px;color:var(--plate);letter-spacing:.02em;margin-top:1px}
+.wct{font-family:var(--mono);font-size:11px;color:var(--ochre);font-weight:500;
+  border:1px solid var(--rule2);border-radius:2px;padding:0 4px;margin-left:4px}
+.wkw{display:block;font-size:10px;color:var(--plate-ink);letter-spacing:.02em;margin-top:1px}
 .abil{padding:8px 12px 2px}
 .abil h4{font-family:var(--disp);font-weight:600;font-size:14px;margin-bottom:1px}
-.abil p{font-size:12.5px;line-height:1.5;color:#33363a;margin-bottom:8px}
-.kwbar{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px 10px;background:#FAF8F7;
+.abil p{font-size:12.5px;line-height:1.5;color:var(--ink2);margin-bottom:8px}
+.kwbar{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px 10px;background:var(--field);
   border-top:1px solid var(--plate-line)}
 .kwbar span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
-  background:#fff;border:1px solid var(--plate-line);color:var(--plate);padding:2px 6px;border-radius:2px}
+  background:var(--panel);border:1px solid var(--plate-line);color:var(--plate);padding:2px 6px;border-radius:2px}
 .tog{font-family:var(--mono);font-size:10px;letter-spacing:.06em;background:transparent;
   border:1px solid var(--rule2);border-radius:2px;padding:5px 8px;color:var(--ink2);cursor:pointer}
-.tog:hover{border-color:var(--ink);color:var(--ink)}
+.tog:hover{border-color:var(--ochre);color:var(--ochre)}
 @media (max-width:560px){
   body{font-size:15.5px;padding-bottom:112px}
   .wrap{padding:0 12px}
@@ -190,7 +260,7 @@ input[type=search]::placeholder{color:var(--ink2)}
   .filters{gap:10px 14px}
 }
 .ledger{position:sticky;top:0;z-index:5;display:flex;align-items:baseline;gap:14px;
-  background:var(--field);border-bottom:2px solid var(--ink);padding:10px 0 7px;margin:18px 0 10px}
+  background:var(--field);border-bottom:2px solid var(--rule2);padding:10px 0 7px;margin:18px 0 10px}
 .ledger .lf{flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:16px;
   letter-spacing:.04em;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ledger .lm{font-family:var(--mono);font-size:12px;color:var(--ink2);white-space:nowrap}
@@ -207,7 +277,10 @@ input[type=search]::placeholder{color:var(--ink2)}
 #printArea{display:none}
 @media print{
   @page{margin:14mm}
-  body{background:#fff;padding:0}
+  /* El papel no tiene modo oscuro: se fuerza la paleta clara al imprimir. */
+  :root{--field:#fff;--panel:#fff;--ink:#000;--ink2:#444;--rule:#bbb;--rule2:#888;
+        --plate:#000;--plate-ink:#fff;--plate-line:#999;--ochre:#7a5c00;--ochre-bg:#f4eccd}
+  body{background:#fff;color:#000;padding:0}
   .tabs,.totals,.controls,.filters,.bar,#viewCol,#viewLists,header,#fatal{display:none !important}
   #printArea{display:block}
   .pr-head{border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:12px}
@@ -234,7 +307,7 @@ input[type=search]::placeholder{color:var(--ink2)}
 </head>
 <body>
 
-<div class="wrap">
+<div class="wrap" id="shell">
   <header>
     <div class="masthead">
       <h1>Armoury<small>COLLECTION MANIFEST</small></h1>
@@ -826,6 +899,8 @@ document.getElementById('bImport').onclick = () => {
    ============================================================ */
 let lists = [];        // [{ id, name, faction, detachment, limit, legends, crucible, slots:[{unitId,size}] }]
 let editing = null;    // id de la lista abierta, o null
+let selected = null;   // índice del slot abierto en el panel derecho
+let picking = false;   // buscador de unidades abierto
 
 function saveList(l){ store.put('lists', l); }
 function loadLists(){ return store.getAll('lists'); }
@@ -1045,6 +1120,7 @@ function renderLists(){
 function renderListsInner(){
   const v = document.getElementById('viewLists');
   v.innerHTML = '';
+  document.getElementById('shell').className = 'wrap' + (editing != null ? ' wide' : '');
 
   if (creating) { renderNew(v); return; }
 
@@ -1066,7 +1142,7 @@ function renderListsInner(){
         (l.foreign ? ' <span class="tag t-cru">OPPONENT</span>' : '') + '</div>' +
         '<div class="meta">' + esc(f ? f.name : '?') + ' \u00b7 ' + l.slots.length + ' units</div></div>' +
         '<div class="pts">' + total + ' / ' + l.limit + '</div>';
-      c.onclick = () => { editing = l.id; renderLists(); };
+      c.onclick = () => { editing = l.id; selected = null; picking = false; renderLists(); };
       v.append(c);
     }
     return;
@@ -1080,7 +1156,7 @@ function renderListsInner(){
   if (!f) {
     v.append(note('This list points at a faction that is no longer in the catalogue.'));
     const back = el('button','btn'); back.textContent = '\u2190 ALL LISTS';
-    back.onclick = () => { editing = null; renderLists(); };
+    back.onclick = () => { editing = null; selected = null; picking = false; renderLists(); };
     v.append(back);
     return;
   }
@@ -1089,7 +1165,7 @@ function renderListsInner(){
   // --- barra de cabecera
   const bar = el('div','bar');
   const back = el('button','btn'); back.textContent = '\u2190 ALL LISTS';
-  back.onclick = () => { editing = null; renderLists(); };
+  back.onclick = () => { editing = null; selected = null; picking = false; renderLists(); };
   const name = el('input'); name.type='text'; name.value = l.name; name.placeholder='List name';
   name.style.cssText = 'flex:1 1 180px;font-family:var(--disp);font-weight:600;font-size:18px';
   name.oninput = () => { l.name = name.value; saveList(l); };
@@ -1131,98 +1207,263 @@ function renderListsInner(){
   v.append(head);
 
   // --- avisos
-  for (const i of issues) {
-    const w = el('div', 'warn' + (i.hard ? '' : ' soft'));
-    w.innerHTML = '<b>' + (i.hard ? 'BLOCKS PLAY' : 'COLLECTION') + '</b>' + esc(i.t) + ' \u2014 ' + esc(i.d);
+  // Avisos compactos. Antes cada uno era un bloque suelto y cuatro faltantes
+  // de colección empujaban la lista fuera de pantalla.
+  const hard = issues.filter((x) => x.hard);
+  const soft = issues.filter((x) => !x.hard);
+
+  for (const [list, cls, title] of [[hard, '', 'BLOCKS PLAY'], [soft, ' soft', 'COLLECTION']]) {
+    if (!list.length) continue;
+    const w = el('div', 'warn' + cls);
+    w.innerHTML = '<b>' + title + ' \u00b7 ' + list.length + '</b>' +
+      '<ul style="margin:2px 0 0 15px;padding:0">' +
+      list.map((x) => '<li>' + esc(x.t) + ' \u2014 ' + esc(x.d) + '</li>').join('') + '</ul>';
     v.append(w);
   }
-  v.append(hint('Checked: points including requisition thresholds and paid wargear, repeat limits, DP budget, unique tags, Legends/Crucible, leader attachment, wargear caps, your collection. Not checked: battleline minimums, detachment rules, and ratio limits like one per five models.'));
 
-  // --- añadir unidad
-  const add = el('div','bar');
-  const sel = el('select'); sel.style.flex = '1 1 260px';
-  const ph = el('option'); ph.textContent = 'Add unit\u2026'; ph.value = ''; sel.append(ph);
-  // Agrupadas por origen: primero las propias, después las de los catálogos
-  // enlazados, para que se vea de dónde sale cada unidad.
-  const pool = poolOf(l);
-  const groups = new Map();
-  for (const { u, from } of pool) {
-    if (u.m === 'legends'  && !l.legends)  continue;
-    if (u.m === 'crucible' && !l.crucible) continue;
-    const key = from || f.name;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(u);
-  }
-  for (const [label, units] of groups) {
-    const og = document.createElement('optgroup');
-    og.label = label;
-    for (const u of units.sort((a,b) => a.n.localeCompare(b.n))) {
-      for (const sz of sizesFor(u)) {
-        const o = el('option');
-        o.value = u.id + '|' + sz.n;
-        o.textContent = u.n + (sz.n > 1 ? '  \u00d7' + sz.n : '') + '  \u2014 ' + sz.pts + ' pts';
-        og.append(o);
+  const sc = document.createElement('details');
+  sc.className = 'scope';
+  sc.innerHTML = '<summary>What this checks</summary>' +
+    '<p><b>Checked:</b> points including requisition thresholds and paid wargear, ' +
+    'repeat limits, DP budget, unique tags, Legends/Crucible, leader attachment, ' +
+    'wargear caps, your collection.<br>' +
+    '<b>Not checked:</b> battleline minimums, detachment rules, and ratio limits ' +
+    'beyond those declared in the data.</p>';
+  v.append(sc);
+
+  // ============ MAESTRO-DETALLE ============
+  // Antes todo era una columna: abrir el armamento de una unidad empujaba el
+  // resto de la lista fuera de pantalla. Ahora el roster queda a la izquierda
+  // y lo que estás editando a la derecha, fijo.
+  const mx = el('div','mx');
+  const pane = el('div','pane');
+  const side = el('div','side');
+  mx.append(pane, side);
+  v.append(mx);
+
+  // ---- izquierda: configuración + roster
+  // Configuración plegada: se toca una vez al empezar y después estorba.
+  const cfg = document.createElement('details');
+  cfg.className = 'cfg';
+  const dpSum = (l.dets || []).reduce((a, n) =>
+    a + (((f.det || []).find(([x]) => x === n) || [])[1] ?? 0), 0);
+  const enhSum = (l.enh || []).reduce((a, e) => a + (+e.pts || 0), 0);
+  const sum = document.createElement('summary');
+  sum.innerHTML = 'Detachments &amp; enhancements <span>' +
+    (l.dets || []).length + ' det \u00b7 ' + dpSum + '/' + dpBudget(l) + ' DP \u00b7 ' +
+    (l.enh || []).length + ' enh \u00b7 ' + enhSum + ' pts</span>';
+  cfg.append(sum);
+  cfg.open = !(l.dets || []).length;
+  const cfgBody = el('div');
+  cfgBody.append(detachmentsFor(l, f), enhancementsFor(l, f));
+  cfg.append(cfgBody);
+  pane.append(cfg);
+
+  const addBtn = el('button','btn pri');
+  addBtn.textContent = '+ ADD UNIT';
+  addBtn.style.cssText = 'width:100%;margin:16px 0 4px;padding:11px';
+  addBtn.onclick = () => { picking = true; selected = null; renderLists(); };
+  pane.append(addBtn);
+
+  // Roster agrupado por rol, como la ficha oficial y New Recruit.
+  const roleLabel = new Map(DATA.roles.map((r) => [r.id, r.label]));
+  const roleOrder = new Map(DATA.roles.map((r, i) => [r.id, i]));
+  const copies = copyIndex(l);
+
+  const rows = l.slots.map((sl, i) => ({ sl, i, u: unitOf(l, sl.unitId) }));
+  rows.sort((a, b) =>
+    (roleOrder.get(a.u?.r) ?? 99) - (roleOrder.get(b.u?.r) ?? 99) ||
+    (a.u?.n || '').localeCompare(b.u?.n || ''));
+
+  if (!rows.length) {
+    pane.append(note('No units yet. Add one to start.'));
+  } else {
+    let curRole;
+    for (const { sl, i, u } of rows) {
+      if (u?.r !== curRole) {
+        curRole = u?.r;
+        const rh = el('div','rrole');
+        const sub = rows.filter((x) => x.u?.r === curRole)
+          .reduce((a, x) => a + (x.u ? ptsFor(x.u, x.sl.size, copies[x.i]) + gearPoints(x.u, x.sl) : 0), 0);
+        rh.innerHTML = '<span>' + (roleLabel.get(curRole) || 'OTHER').toUpperCase() +
+                       '</span><span>' + sub + ' pts</span>';
+        pane.append(rh);
       }
-    }
-    sel.append(og);
-  }
-  sel.onchange = () => {
-    if (!sel.value) return;
-    const [unitId, size] = sel.value.split('|');
-    l.slots.push({ unitId, size: +size });
-    saveList(l); sel.value = ''; renderLists();
-  };
-  add.append(sel); v.append(add);
 
-  v.append(detachmentsFor(l, f));
-  v.append(enhancementsFor(l, f));
+      const att = sl.attach && l.slots[sl.attach - 1];
+      const attU = att && unitOf(l, att.unitId);
+      const pts = u ? ptsFor(u, sl.size, copies[i]) + gearPoints(u, sl) : 0;
 
-  // --- unidades de la lista
-  for (const [i, sl] of l.slots.entries()) {
-    const u = unitOf(l, sl.unitId);
-    const row = el('div','slot');
-    const att = sl.attach && l.slots[sl.attach - 1];
-    const attU = att && unitOf(l, att.unitId);
-    row.innerHTML = '<div class="id"><div class="nm">' + esc(u ? u.n : 'Unknown entry') +
-      (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</div>' +
-      '<div class="meta">' + (u ? (ptsFor(u, sl.size, copyIndex(l)[i]) + gearPoints(u, sl)) + ' pts' : '\u2014') +
-      (attU ? ' \u00b7 leading ' + esc(attU.n) : '') + '</div></div>';
-    // Si la unidad es líder, se puede engancharla a otra de la lista.
-    if (u && u.ld) {
-      const at = el('select');
-      at.style.cssText = 'font-size:12px;padding:5px 7px';
-      const none = el('option'); none.value=''; none.textContent='not attached'; at.append(none);
-      for (const [j, other] of l.slots.entries()) {
-        if (j === i) continue;
-        const ou = unitOf(l, other.unitId);
-        if (!ou || !u.ld.includes(ou.id)) continue;
-        const o = el('option');
-        o.value = String(j + 1);
-        o.textContent = '\u2192 ' + ou.n + (other.size > 1 ? ' \u00d7' + other.size : '');
-        if (sl_eq(sl.attach, j + 1)) o.selected = true;
-        at.append(o);
-      }
-      at.onchange = () => { sl.attach = at.value ? +at.value : null; saveList(l); renderLists(); };
-      row.append(at);
-    }
+      const row = el('button','runit');
+      row.setAttribute('aria-current', selected === i ? 'true' : 'false');
+      row.innerHTML =
+        '<span class="rn"><b>' + esc(u ? u.n : 'Unknown entry') +
+        (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</b>' +
+        '<i>' + (attU ? 'leading ' + esc(attU.n) : (u && u.m !== 'standard' ? u.m.toUpperCase() : '&nbsp;')) +
+        '</i></span><span class="rp">' + pts + '</span>';
+      row.onclick = () => { selected = i; picking = false; renderLists(); };
 
-    const rm = el('button','btn'); rm.textContent = 'REMOVE';
-    rm.onclick = () => { l.slots.splice(i,1); saveList(l); renderLists(); };
-    row.append(rm);
-    v.append(row);
-
-    if (u && hasSheet(u)) {
-      const tog = el('button','tog'); tog.textContent = 'DATASHEET';
-      let sheet = null;
-      tog.onclick = () => {
-        if (sheet) { sheet.remove(); sheet = null; }
-        else { sheet = datasheetFor(u, sl); row.after ? row.after(sheet) : v.append(sheet); }
+      const x = el('span','rx');
+      x.textContent = '\u2715';
+      x.title = 'Remove';
+      x.onclick = (ev) => {
+        ev.stopPropagation();
+        l.slots.splice(i, 1);
+        // Los enganches apuntan por índice: hay que correrlos.
+        for (const s2 of l.slots) {
+          if (s2.attach == null) continue;
+          if (s2.attach - 1 === i) s2.attach = null;
+          else if (s2.attach - 1 > i) s2.attach -= 1;
+        }
+        selected = null;
+        saveList(l); renderLists();
       };
-      row.append(tog);
+      row.append(x);
+      pane.append(row);
     }
-
-    if (u && u.o && u.o.length) v.append(wargearFor(l, sl, u));
   }
+
+  // ---- derecha: buscador o detalle de la unidad elegida
+  if (picking) side.append(unitFinder(l, f));
+  else if (selected != null && l.slots[selected]) side.append(unitDetail(l, selected));
+  else {
+    const hd = el('div','hd'); hd.innerHTML = '<h3>Details</h3>';
+    const em = el('div','empty');
+    em.textContent = 'Pick a unit from the roster to set its wargear, ' +
+                     'attach a leader, or read its datasheet.';
+    side.append(hd, em);
+  }
+}
+
+/* Buscador de unidades. Reemplaza al desplegable gigante: con 190 entradas y
+ * varios tamaños cada una, el select llegaba a 400 líneas. */
+function unitFinder(l, f){
+  const box = el('div');
+  const hd = el('div','hd');
+  hd.innerHTML = '<h3>Add a unit</h3>';
+  const close = el('button'); close.textContent = 'CLOSE';
+  close.onclick = () => { picking = false; renderLists(); };
+  hd.append(close);
+
+  const bd = el('div','bd finder');
+  const q = el('input'); q.type = 'search'; q.placeholder = 'Search\u2026';
+  const res = el('div','fres');
+  bd.append(q, res);
+
+  const roleLabel = new Map(DATA.roles.map((r) => [r.id, r.label]));
+  const roleOrder = new Map(DATA.roles.map((r, i) => [r.id, i]));
+
+  const draw = () => {
+    const term = q.value.trim().toLowerCase();
+    res.innerHTML = '';
+
+    const items = poolOf(l)
+      .filter(({ u }) => {
+        if (u.m === 'legends'  && !l.legends)  return false;
+        if (u.m === 'crucible' && !l.crucible) return false;
+        return !term || u.n.toLowerCase().includes(term);
+      })
+      .sort((a, b) =>
+        (roleOrder.get(a.u.r) ?? 99) - (roleOrder.get(b.u.r) ?? 99) ||
+        a.u.n.localeCompare(b.u.n));
+
+    if (!items.length) { res.append(note('Nothing matches.')); return; }
+
+    let curRole;
+    for (const { u, from } of items.slice(0, 200)) {
+      if (u.r !== curRole) {
+        curRole = u.r;
+        const h = el('div','fh');
+        h.textContent = (roleLabel.get(u.r) || 'OTHER').toUpperCase();
+        res.append(h);
+      }
+      for (const sz of sizesFor(u)) {
+        const b = el('button');
+        b.innerHTML = '<b>' + esc(u.n) + (sz.n > 1 ? ' \u00d7' + sz.n : '') + '</b>' +
+          '<i>' + sz.pts + ' pts' + (from ? ' \u00b7 ' + esc(from) : '') + '</i>';
+        b.onclick = () => {
+          l.slots.push({ unitId: u.id, size: sz.n });
+          selected = l.slots.length - 1;
+          picking = false;
+          saveList(l); renderLists();
+        };
+        res.append(b);
+      }
+    }
+  };
+
+  q.oninput = draw;
+  draw();
+  box.append(hd, bd);
+  return box;
+}
+
+/* Detalle de la unidad seleccionada: enganche, armamento y ficha. */
+function unitDetail(l, i){
+  const sl = l.slots[i];
+  const u = unitOf(l, sl.unitId);
+  const box = el('div');
+
+  const hd = el('div','hd');
+  hd.innerHTML = '<h3>' + esc(u ? u.n : 'Unknown') + (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</h3>';
+  const close = el('button'); close.textContent = 'CLOSE';
+  close.onclick = () => { selected = null; renderLists(); };
+  hd.append(close);
+
+  const bd = el('div','bd');
+
+  if (!u) {
+    bd.append(note('This entry is no longer in the catalogue.'));
+    box.append(hd, bd);
+    return box;
+  }
+
+  // tamaño de la unidad
+  const sizes = sizesFor(u);
+  if (sizes.length > 1) {
+    const w = el('div'); w.style.marginBottom = '12px';
+    const lab = el('div');
+    lab.style.cssText = 'font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--ink2);margin-bottom:4px';
+    lab.textContent = 'UNIT SIZE';
+    const sel = el('select'); sel.style.width = '100%';
+    for (const sz of sizes) {
+      const o = el('option'); o.value = sz.n;
+      o.textContent = sz.n + ' models \u00b7 ' + sz.pts + ' pts';
+      if (sz.n === sl.size) o.selected = true;
+      sel.append(o);
+    }
+    sel.onchange = () => { sl.size = +sel.value; saveList(l); renderLists(); };
+    w.append(lab, sel);
+    bd.append(w);
+  }
+
+  // enganche
+  if (u.ld) {
+    const w = el('div'); w.style.marginBottom = '12px';
+    const lab = el('div');
+    lab.style.cssText = 'font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--ink2);margin-bottom:4px';
+    lab.textContent = 'ATTACHED TO';
+    const at = el('select'); at.style.width = '100%';
+    const none = el('option'); none.value=''; none.textContent='not attached'; at.append(none);
+    for (const [j, other] of l.slots.entries()) {
+      if (j === i) continue;
+      const ou = unitOf(l, other.unitId);
+      if (!ou || !u.ld.includes(ou.id)) continue;
+      const o = el('option'); o.value = String(j + 1);
+      o.textContent = ou.n + (other.size > 1 ? ' \u00d7' + other.size : '');
+      if (sl_eq(sl.attach, j + 1)) o.selected = true;
+      at.append(o);
+    }
+    at.onchange = () => { sl.attach = at.value ? +at.value : null; saveList(l); renderLists(); };
+    w.append(lab, at);
+    bd.append(w);
+  }
+
+  if (u.o && u.o.length) bd.append(wargearFor(l, sl, u));
+  if (hasSheet(u)) bd.append(datasheetFor(u, sl));
+
+  box.append(hd, bd);
+  return box;
 }
 
 /* ---------- helpers de UI ---------- */
@@ -1366,9 +1607,77 @@ function weaponsAfterGear(u, sl){
   });
 }
 
+/* ------------------------------------------------------------------
+ * CUÁNTAS MINIATURAS LLEVAN CADA ARMA
+ *
+ * Se reparte el tamaño de la unidad entre sus filas de composición y las
+ * variantes de modelo elegidas, y se suma el armamento de cada una:
+ *   Terminator Squad x5 → Storm bolter x5, Power fist x1
+ *
+ * Las filas fijas (sargento, min = max) toman su número; las variantes toman
+ * lo que hayas puesto en el armamento; el resto va a la fila de tropa.
+ * ---------------------------------------------------------------- */
+function weaponCounts(u, sl){
+  if (!sl || !sl.size) return null;
+  const counts = new Map();
+  const bump = (name, n) => {
+    if (!name || n <= 0) return;
+    const k = wkey(name);
+    counts.set(k, (counts.get(k) ?? 0) + n);
+  };
+
+  let left = sl.size;
+  const flexible = [];
+
+  // 1. filas de composición con número fijo
+  for (const [n, min, max, arms] of (u.cp || [])) {
+    if (min != null && min === max) {
+      left -= min;
+      for (const a of (arms || [])) bump(a, min);
+    } else {
+      flexible.push({ n, arms: arms || [] });
+    }
+  }
+
+  // 2. variantes de modelo elegidas en el armamento
+  const gear = sl.gear || {};
+  for (const [gi, g] of (u.o || []).entries()) {
+    if (g.k !== 'many') continue;
+    for (const [oi, opt] of g.opts.entries()) {
+      const qty = gear[gi + ':' + oi];
+      if (!Number.isFinite(qty) || qty <= 0) continue;
+      if (!opt[4]) continue;                    // sólo entradas de modelo
+      left -= qty;
+      for (const a of (opt[5] || [])) bump(a, qty);
+    }
+  }
+
+  // 3. el resto son modelos de tropa con su equipo de fábrica
+  if (left > 0) {
+    const base = flexible[0] ||
+      ((u.o || []).flatMap((g) => g.opts).find((o) => o[4] && (o[5] || []).length)
+        ? { arms: ((u.o || []).flatMap((g) => g.opts).find((o) => o[4] && (o[5] || []).length))[5] }
+        : null);
+    if (base) for (const a of base.arms) bump(a, left);
+  }
+
+  // 4. armas elegidas en grupos de una sola opción: las lleva su modelo
+  for (const [gi, g] of (u.o || []).entries()) {
+    if (g.k !== 'one') continue;
+    const chosen = typeof gear[gi] === 'string' ? gear[gi] : null;
+    if (!chosen) continue;
+    const row = (u.cp || []).find(([n]) => n === g.ow);
+    const n = row ? (row[1] === row[2] ? row[1] : 1) : 1;
+    bump(chosen, n);
+  }
+
+  return counts.size ? counts : null;
+}
+
 function datasheetFor(u, sl){
   const box = el('div','sheet');
   const weapons = weaponsAfterGear(u, sl);
+  const counts = weaponCounts(u, sl);
 
   if (u.st) {
     const row = el('div','stats');
@@ -1400,12 +1709,16 @@ function datasheetFor(u, sl){
     t.innerHTML =
       '<tr><th>Weapon</th><th>Range</th><th>A</th><th>' + (melee ? 'WS' : 'BS') +
       '</th><th>S</th><th>AP</th><th>D</th></tr>' +
-      ws.map(w =>
-        '<tr><td>' + esc(w[0]) +
+      ws.map(w => {
+        // "Storm bolter x5": cuántas miniaturas de la unidad llevan esa arma.
+        const c = counts && counts.get(wkey(w[0]));
+        return '<tr><td>' + esc(w[0]) +
+        (c > 1 ? ' <b class="wct">\u00d7' + c + '</b>' : '') +
         (w[8] ? '<span class="wkw">' + esc(w[8]) + '</span>' : '') + '</td>' +
         '<td>' + esc(w[2]) + '</td><td>' + esc(w[3]) + '</td><td>' + esc(w[4]) +
         '</td><td>' + esc(w[5]) + '</td><td>' + esc(w[6]) + '</td><td>' + esc(w[7]) +
-        '</td></tr>').join('');
+        '</td></tr>';
+      }).join('');
     box.append(t);
   }
 
@@ -1673,8 +1986,8 @@ function detachmentsFor(l, f){
   const spent = l.dets.reduce((a, n) => a + (info.get(n)?.[1] ?? 0), 0);
   const budget = dpBudget(l);
 
-  const head = el('div','group');
-  head.textContent = 'DETACHMENTS \u00b7 ' + spent + ' / ' + budget + ' DP';
+  const head = el('div','rrole');
+  head.innerHTML = '<span>DETACHMENTS</span><span>' + spent + ' / ' + budget + ' DP</span>';
   box.append(head);
 
   for (const [i, name] of l.dets.entries()) {
@@ -1732,9 +2045,9 @@ function enhancementsFor(l, f){
   const box = el('div');
   box.style.cssText = 'margin:14px 0';
 
-  const head = el('div','group');
+  const head = el('div','rrole');
   const sum = l.enh.reduce((a, e) => a + (+e.pts || 0), 0);
-  head.textContent = 'ENHANCEMENTS \u00b7 ' + sum + ' PTS';
+  head.innerHTML = '<span>ENHANCEMENTS</span><span>' + sum + ' pts</span>';
   box.append(head);
 
   for (const [i, e] of l.enh.entries()) {
@@ -1975,6 +2288,7 @@ function gearName(u, key){
 /* ---------- pestañas ---------- */
 function showTab(which){
   const isCol = which === 'col';
+  if (isCol) document.getElementById('shell').className = 'wrap';
   document.getElementById('viewCol').hidden   = !isCol;
   document.getElementById('viewLists').hidden = isCol;
   document.querySelector('.totals').hidden    = !isCol;
