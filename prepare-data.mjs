@@ -187,7 +187,8 @@ for (const file of files) {
            .map((g) => ({
              n: g.n, k: g.pick,
              ow: g.owner || null,        // modelo al que pertenece la elección
-             opts: g.opts.map((e) => [e.n, e.max, Number(e.p) || 0]),
+             // [nombre, tope, precio, escala por tamaño]
+             opts: g.opts.map((e) => [e.n, e.max, Number(e.p) || 0, e.scale || null]),
            }))
            .slice(0, 8),
       // perfil de la unidad: M T Sv W LD OC
