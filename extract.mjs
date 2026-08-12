@@ -343,11 +343,38 @@ function optionsOf(entry, ctx) {
   const groups = [];
   const seenG = new Set();
 
+  /**
+   * Tope de una opción, incluida su ESCALA POR TAMAÑO.
+   *
+   * "1 cada 5 modelos" no está como proporción: está como un máximo base más
+   * un modificador que lo sube cuando la unidad alcanza cierto tamaño.
+   *   Terminator w/ Heavy Weapon → max 1, y `set max = 2` si la unidad tiene 10.
+   * Se devuelve como escalera [[10, 2]] y la app elige según el tamaño elegido.
+   */
   const capOf = (node) => {
     const cs = asArray(node.constraints);
     const mx = cs.find((c) => c.type === 'max' && c.field === 'selections');
     const mn = cs.find((c) => c.type === 'min' && c.field === 'selections');
-    return { min: mn ? Number(mn.value) : 0, max: mx ? Number(mx.value) : null };
+
+    const scale = [];
+    if (mx) {
+      for (const m of [...asArray(node.modifiers),
+                       ...asArray(node.modifierGroups).flatMap((g) => asArray(g.modifiers))]) {
+        if (m.type !== 'set' || m.field !== mx.id) continue;
+        const cond = asArray(m.conditions)[0];
+        if (!cond || cond.field !== 'selections') continue;
+        const at = Number(cond.value);
+        if (!Number.isFinite(at)) continue;
+        scale.push([at, Number(m.value)]);
+      }
+      scale.sort((a, b) => a[0] - b[0]);
+    }
+
+    return {
+      min: mn ? Number(mn.value) : 0,
+      max: mx ? Number(mx.value) : null,
+      scale: scale.length ? scale : null,
+    };
   };
 
   const readGroup = (g, owner) => {
