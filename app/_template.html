@@ -89,6 +89,20 @@ details.scope>summary{font-family:var(--mono);font-size:10.5px;font-weight:400;
 details.scope p{padding:0 12px 10px;font-size:12px;line-height:1.6;color:var(--ink2)}
 details.scope b{color:var(--ink)}
 
+/* Alineado al borde DERECHO del botón: el botón vive al final de la barra,
+   así que abrir hacia la derecha se salía de la pantalla. */
+.shmenu{position:absolute;top:calc(100% + 5px);right:0;z-index:20;width:270px;max-width:78vw;
+  background:var(--panel);border:1px solid var(--rule2);border-radius:3px;
+  box-shadow:0 6px 20px rgba(0,0,0,.45);overflow:hidden}
+.shmenu button{display:block;width:100%;text-align:left;background:transparent;
+  border:none;border-bottom:1px solid var(--rule);padding:9px 12px;cursor:pointer;
+  color:var(--ink);font:inherit}
+.shmenu button:last-child{border-bottom:none}
+.shmenu button:hover{background:var(--ochre-bg)}
+.shmenu b{display:block;font-family:var(--disp);font-weight:600;font-size:14.5px}
+.shmenu i{display:block;font-style:normal;font-family:var(--mono);font-size:10px;
+  color:var(--ink2);margin-top:1px}
+
 .finder input{width:100%;margin-bottom:8px}
 .fres{max-height:340px;overflow:auto;border:1px solid var(--rule);border-radius:2px}
 .fres button{display:flex;width:100%;gap:8px;align-items:baseline;text-align:left;
@@ -290,15 +304,31 @@ input[type=search]::placeholder{color:var(--ink2)}
   .pr-roster td{padding:3px 6px;border-bottom:1px solid #ccc}
   .pr-roster td:last-child{text-align:right;font-family:var(--mono)}
   .pr-roster tr.tot td{border-top:2px solid #000;border-bottom:none;font-weight:600}
-  .pr-unit{break-inside:avoid;page-break-inside:avoid;border:1px solid #999;
-    border-radius:2px;padding:8px 10px;margin-bottom:8px}
-  .pr-unit h3{font-family:var(--disp);font-size:16px;font-weight:600;
-    border-bottom:1px solid #999;padding-bottom:3px;margin-bottom:6px}
-  .pr-unit .sheet{border:none;margin:0}
-  .pr-unit .band{background:#000;color:#fff;padding:3px 8px}
-  .pr-unit .stats{padding:6px 0 2px}
-  .pr-unit .abil{padding:6px 0 0}
-  .pr-unit .kwbar{background:none;padding:6px 0 0}
+  /* Fichas de referencia en dos columnas. La versión de una ficha completa
+     por unidad se iba a tres páginas con cuatro unidades. */
+  .pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .pr-card{break-inside:avoid;page-break-inside:avoid;
+    border:1px solid #999;border-radius:2px;padding:6px 8px}
+  .pr-card h3{font-family:var(--disp);font-size:13.5px;font-weight:600;
+    border-bottom:1px solid #999;padding-bottom:3px;margin-bottom:5px;
+    display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .pr-card h3 em{font-style:normal;font-family:var(--mono);font-size:9.5px;
+    color:#555;white-space:nowrap}
+  .pr-strip{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+  .pr-strip span{border:1px solid #000;border-radius:3px;padding:0 4px;
+    font-family:var(--disp);font-weight:600;font-size:11.5px;min-width:29px;text-align:center}
+  .pr-strip span i{display:block;font-style:normal;font-family:var(--mono);
+    font-size:6.5px;letter-spacing:.1em;color:#555}
+  .pr-w{width:100%;border-collapse:collapse}
+  .pr-w td{font-family:var(--mono);font-size:9.5px;padding:1px 3px;
+    border-bottom:1px solid #ddd;text-align:right}
+  .pr-w td:first-child{text-align:left;font-family:var(--body);font-size:10.5px}
+  .pr-w td b{font-family:var(--mono);font-size:9px;color:#555;font-weight:500}
+  /* Las de cuerpo a cuerpo se agrupan al final; la columna de alcance ya
+     dice "Melee", así que no hace falta ningún icono. */
+  .pr-abs{font-size:9px;color:#444;margin-top:4px;line-height:1.45}
+  .pr-abs b{color:#000}
+  .pr-more{font-family:var(--mono);font-size:8.5px;color:#777;margin-top:3px}
   .pr-unit .abil p{font-size:11px}
   .pr-unit .wp{font-size:11px}
   .pr-unit .stat{border-color:#999}
@@ -1169,13 +1199,10 @@ function renderListsInner(){
   const name = el('input'); name.type='text'; name.value = l.name; name.placeholder='List name';
   name.style.cssText = 'flex:1 1 180px;font-family:var(--disp);font-weight:600;font-size:18px';
   name.oninput = () => { l.name = name.value; saveList(l); };
-  const shr = el('button','btn'); shr.textContent = 'SHARE';
-  shr.onclick = () => exportList(l);
-  const prn = el('button','btn'); prn.textContent = 'PRINT';
-  prn.onclick = () => printList(l);
+  const shr = shareMenu(l);
   const del = el('button','btn'); del.textContent = 'DELETE';
   del.onclick = () => { if (confirm('Delete this list?')) { store.del('lists', l.id); lists = lists.filter(x=>x.id!==l.id); editing=null; renderLists(); } };
-  bar.append(back, name, shr, prn, del); v.append(bar);
+  bar.append(back, name, shr, del); v.append(bar);
 
   // --- formato
   const bar2 = el('div','bar');
@@ -2175,6 +2202,113 @@ function exportList(l){
   URL.revokeObjectURL(url);
 }
 
+/* ------------------------------------------------------------------
+ * COMPARTIR
+ *
+ * Tres formas, cada una para un destinatario distinto:
+ *   .json  → otro usuario de Armoury, que la importa entera
+ *   PDF    → papel o celular. La app NO genera el PDF: abre el diálogo de
+ *            impresión, donde el navegador ofrece "Guardar como PDF".
+ *            Generarlo en el archivo costaría sumar una librería de 300 KB.
+ *   texto  → WhatsApp o Discord, que es como se comparte en la práctica.
+ * ---------------------------------------------------------------- */
+function shareMenu(l){
+  const wrap = el('div');
+  wrap.style.cssText = 'position:relative';
+
+  const btn = el('button','btn');
+  btn.textContent = 'SHARE \u25be';
+
+  const menu = el('div','shmenu');
+  menu.hidden = true;
+
+  const item = (title, sub, fn) => {
+    const b = el('button');
+    b.innerHTML = '<b>' + title + '</b><i>' + sub + '</i>';
+    b.onclick = () => { menu.hidden = true; fn(); };
+    return b;
+  };
+
+  menu.append(
+    item('Armoury file', 'A .json another Armoury user can import', () => exportList(l)),
+    item('PDF or print', 'Opens the print dialog \u2014 choose Save as PDF', () => printList(l)),
+    item('Copy as text', 'Plain text for chat', () => copyListText(l)),
+  );
+
+  btn.onclick = () => { menu.hidden = !menu.hidden; };
+  document.addEventListener('click', (ev) => {
+    if (!wrap.contains || menu.hidden) return;
+    if (!wrap.contains(ev.target)) menu.hidden = true;
+  });
+
+  wrap.append(btn, menu);
+  return wrap;
+}
+
+/* Texto plano, con el formato que se usa para pegar una lista en un chat. */
+function listAsText(l){
+  const f = factionOf(l.faction);
+  const { total } = review(l);
+  const copies = copyIndex(l);
+  const lines = [];
+
+  lines.push((l.name || 'Untitled') + '  (' + total + '/' + l.limit + ' pts)');
+  lines.push(f ? f.name : '?');
+  if ((l.dets || []).length) lines.push('Detachment: ' + l.dets.join(' + '));
+  if (l.mission) lines.push('Mission: ' + l.mission);
+  lines.push('');
+
+  for (const [i, sl] of l.slots.entries()) {
+    const u = unitOf(l, sl.unitId);
+    if (!u) { lines.push('- ' + (sl.unitName || 'Unknown')); continue; }
+    const pts = ptsFor(u, sl.size, copies[i]) + gearPoints(u, sl);
+    lines.push('- ' + u.n + (sl.size > 1 ? ' x' + sl.size : '') + '  [' + pts + ']');
+
+    const gear = [];
+    for (const [k, v] of Object.entries(sl.gear || {})) {
+      if (typeof v === 'string') { gear.push(v); continue; }
+      const [gi, oi] = k.split(':').map(Number);
+      const nm = u.o?.[gi]?.opts?.[oi]?.[0];
+      if (nm && v > 0) gear.push(nm + ' x' + v);
+    }
+    if (gear.length) lines.push('    ' + gear.join(', '));
+
+    const att = sl.attach && l.slots[sl.attach - 1];
+    const au = att && unitOf(l, att.unitId);
+    if (au) lines.push('    leading ' + au.n);
+  }
+
+  for (const e of (l.enh || [])) {
+    if (!e.n && !e.pts) continue;
+    const host = e.on != null && l.slots[e.on];
+    const hu = host && unitOf(l, host.unitId);
+    lines.push('- ' + (e.n || 'Enhancement') + '  [' + (+e.pts || 0) + ']' +
+               (hu ? '  on ' + hu.n : ''));
+  }
+
+  lines.push('');
+  lines.push('Total: ' + total + ' / ' + l.limit + ' pts');
+  return lines.join('\n');
+}
+
+function copyListText(l){
+  const txt = listAsText(l);
+  const done = () => alert('List copied. Paste it wherever you like.');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(txt).then(done, () => fallback());
+  } else fallback();
+
+  function fallback(){
+    // Sin portapapeles (pasa en file://): se descarga como .txt.
+    const url = URL.createObjectURL(new Blob([txt], { type:'text/plain' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = (l.name || 'list').toLowerCase().replace(/[^a-z0-9]+/g,'-') + '.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+}
+
 function importList(){
   const inp = document.createElement('input');
   inp.type = 'file'; inp.accept = 'application/json';
@@ -2260,20 +2394,55 @@ function printList(l){
   area.append(t);
 
   // fichas, una por unidad distinta
-  // Una ficha por combinación unidad+equipamiento: dos Defilers con armas
-  // distintas necesitan dos fichas distintas.
+  // Fichas de referencia, dos por fila. Una ficha por combinación de unidad
+  // y equipamiento: dos Defilers con armas distintas son dos fichas.
+  const grid = el('div','pr-grid');
   const seen = new Set();
-  for (const sl of l.slots) {
+
+  for (const [si, sl] of l.slots.entries()) {
     const key = sl.unitId + '|' + JSON.stringify(sl.gear || {});
     if (seen.has(key)) continue;
     seen.add(key);
     const u = unitOf(l, sl.unitId);
     if (!u || !hasSheet(u)) continue;
-    const card = el('div','pr-unit');
-    card.innerHTML = '<h3>' + esc(u.n) + (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</h3>';
-    card.append(datasheetFor(u, sl));
-    area.append(card);
+
+    const card = el('div','pr-card');
+    const pts = ptsFor(u, sl.size, copyIndex(l)[si]) + gearPoints(u, sl);
+    let inner = '<h3><span>' + esc(u.n) + '</span><em>\u00d7' + sl.size + ' \u00b7 ' + pts + ' pts</em></h3>';
+
+    if (u.st) {
+      const labs = ['M','T','SV','W','LD','OC'];
+      inner += '<div class="pr-strip">' + u.st
+        .map((v, i) => v ? '<span><i>' + labs[i] + '</i>' + esc(v) + '</span>' : '')
+        .join('') + '</div>';
+    }
+
+    // Sólo las armas que la unidad lleva de verdad, con cuántas la portan.
+    const ws = weaponsAfterGear(u, sl);
+    const counts = weaponCounts(u, sl);
+    if (ws.length) {
+      // Ranged primero, melee después: es el orden de la ficha oficial.
+      const shown = [...ws].sort((a, b) => a[1] - b[1]).slice(0, 6);
+      inner += '<table class="pr-w">' + shown.map((w) => {
+        const c = counts && counts.get(wkey(w[0]));
+        return '<tr' + (w[1] ? ' class="mel"' : '') + '><td>' + esc(w[0]) +
+          (c > 1 ? ' <b>\u00d7' + c + '</b>' : '') + '</td>' +
+          '<td>' + esc(w[2]) + '</td><td>' + esc(w[3]) + '</td><td>' + esc(w[4]) +
+          '</td><td>' + esc(w[5]) + '</td><td>' + esc(w[6]) + '</td><td>' + esc(w[7]) + '</td></tr>';
+      }).join('') + '</table>';
+      if (ws.length > shown.length)
+        inner += '<div class="pr-more">+' + (ws.length - shown.length) + ' more weapons</div>';
+    }
+
+    // Habilidades por NOMBRE. El texto completo es lo que hacía que esto
+    // ocupara tres páginas; los nombres alcanzan para recordar cuál aplica.
+    if (u.ab && u.ab.length)
+      inner += '<div class="pr-abs">' + u.ab.map(([n]) => '<b>' + esc(n) + '</b>').join(' \u00b7 ') + '</div>';
+
+    card.innerHTML = inner;
+    grid.append(card);
   }
+  area.append(grid);
 
   window.print();
 }
