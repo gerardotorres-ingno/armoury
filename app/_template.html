@@ -326,8 +326,11 @@ input[type=search]::placeholder{color:var(--ink2)}
   .pr-w td b{font-family:var(--mono);font-size:9px;color:#555;font-weight:500}
   /* Las de cuerpo a cuerpo se agrupan al final; la columna de alcance ya
      dice "Melee", así que no hace falta ningún icono. */
-  .pr-abs{font-size:9px;color:#444;margin-top:4px;line-height:1.45}
-  .pr-abs b{color:#000}
+  .pr-abs{font-size:8.5px;color:#333;margin-top:4px;line-height:1.4}
+  .pr-abs p{margin-bottom:2px}
+  .pr-abs b{color:#000;font-weight:600}
+  .pr-kw{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;color:#555;
+    text-transform:uppercase;border-top:1px solid #ccc;margin-top:5px;padding-top:3px}
   .pr-more{font-family:var(--mono);font-size:8.5px;color:#777;margin-top:3px}
   .pr-unit .abil p{font-size:11px}
   .pr-unit .wp{font-size:11px}
@@ -2352,6 +2355,10 @@ function importList(){
  * Primero el resumen de la lista, después una ficha por unidad, cada una
  * sin cortarse entre páginas.
  * ---------------------------------------------------------------- */
+/* Longitud máxima del texto de una habilidad impresa. Es la perilla que
+ * regula cuántas páginas ocupa la lista. */
+const PRINT_AB_LEN = 190;
+
 function printList(l){
   const f = factionOf(l.faction);
   const { total } = review(l);
@@ -2434,10 +2441,19 @@ function printList(l){
         inner += '<div class="pr-more">+' + (ws.length - shown.length) + ' more weapons</div>';
     }
 
-    // Habilidades por NOMBRE. El texto completo es lo que hacía que esto
-    // ocupara tres páginas; los nombres alcanzan para recordar cuál aplica.
-    if (u.ab && u.ab.length)
-      inner += '<div class="pr-abs">' + u.ab.map(([n]) => '<b>' + esc(n) + '</b>').join(' \u00b7 ') + '</div>';
+    // Habilidades con su texto. Ocupa bastante, así que va en cuerpo 8,5 y
+    // el texto muy largo se recorta: en la mesa alcanza con el enunciado
+    // para saber qué hace, y el detalle se consulta en la app.
+    if (u.ab && u.ab.length) {
+      inner += '<div class="pr-abs">' + u.ab.map(([n, t]) => {
+        const cut = t.length > PRINT_AB_LEN ? t.slice(0, PRINT_AB_LEN).replace(/\s+\S*$/, '') + '\u2026' : t;
+        return '<p><b>' + esc(n) + '.</b> ' + esc(cut) + '</p>';
+      }).join('') + '</div>';
+    }
+
+    // Palabras clave: la línea que se consulta para saber si una regla aplica.
+    if (u.kw && u.kw.length)
+      inner += '<div class="pr-kw">' + esc(u.kw.join(' \u00b7 ')) + '</div>';
 
     card.innerHTML = inner;
     grid.append(card);
