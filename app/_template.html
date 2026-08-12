@@ -106,6 +106,37 @@ details.scope b{color:var(--ink)}
 .shmenu i{display:block;font-style:normal;font-family:var(--mono);font-size:10px;
   color:var(--ink2);margin-top:1px}
 
+/* ---------- batallas ---------- */
+.clock{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.clock .clkf{grid-column:1/-1;display:flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:11px;color:var(--ink2)}
+.clks{background:var(--panel);border:1px solid var(--rule2);border-radius:3px;
+  padding:12px;text-align:center}
+.clks.on{border-color:var(--ochre);box-shadow:inset 0 0 0 1px var(--ochre)}
+.clkl{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--ink2);
+  text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.clkt{font-family:var(--disp);font-weight:600;font-size:40px;line-height:1.05;
+  font-variant-numeric:tabular-nums}
+/* Nombres propios: `warn` ya era la clase de los avisos y el reloj heredaba
+   su fondo rojo. */
+.clkt.over{color:var(--ochre)}
+.clkt.late{color:var(--oxide)}
+.clkp{font-family:var(--mono);font-size:10.5px;color:var(--ink2);margin-bottom:9px}
+.clks .btn{width:100%}
+
+.score{width:100%;border-collapse:collapse;margin-bottom:6px}
+.score th{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink2);
+  padding:4px 3px;border-bottom:1px solid var(--rule)}
+.score th.who{text-align:left;font-family:var(--disp);font-size:14px;font-weight:600;
+  color:var(--ink);letter-spacing:0;white-space:nowrap;padding-right:8px}
+.score td{padding:3px 2px;border-bottom:1px solid var(--rule);text-align:center}
+.score td input{width:100%;max-width:42px;text-align:center;font-family:var(--mono);
+  font-size:13px;padding:4px 2px;background:var(--field);border:1px solid var(--rule);
+  border-radius:2px;color:var(--ink);display:block;margin:0 auto 2px}
+.score td.tot{font-family:var(--disp);font-weight:600;font-size:19px}
+.score tr.lg td{font-family:var(--mono);font-size:9.5px;color:var(--ink2);
+  border-bottom:none;text-align:left;padding-top:2px}
+
 .finder input{width:100%;margin-bottom:8px}
 .fres{max-height:340px;overflow:auto;border:1px solid var(--rule);border-radius:2px}
 .fres button{display:flex;width:100%;gap:8px;align-items:baseline;text-align:left;
@@ -230,6 +261,10 @@ input[type=search]::placeholder{color:var(--ink2)}
 .stat b{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;
   color:var(--plate-ink);font-weight:500}
 .stat span{font-family:var(--disp);font-weight:600;font-size:17px;line-height:1.1}
+.inv{margin:-4px 12px 6px;display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--plate-ink);
+  border:1px dashed var(--plate-ink);border-radius:3px;padding:2px 7px}
+.inv span{font-family:var(--disp);font-weight:600;font-size:15px;letter-spacing:0}
 .band{background:var(--plate);color:var(--plate-ink);border-top:1px solid var(--rule2);font-family:var(--disp);
   font-weight:600;font-size:11.5px;letter-spacing:.14em;padding:4px 12px;margin-top:6px}
 /* Columnas numéricas angostas y fijas: los valores se agrupan a la derecha,
@@ -323,6 +358,7 @@ input[type=search]::placeholder{color:var(--ink2)}
     font-family:var(--disp);font-weight:600;font-size:11.5px;min-width:29px;text-align:center}
   .pr-strip span i{display:block;font-style:normal;font-family:var(--mono);
     font-size:6.5px;letter-spacing:.1em;color:#555}
+  .pr-strip span.wide{min-width:48px}
   .pr-w{width:100%;border-collapse:collapse}
   .pr-w td{font-family:var(--mono);font-size:9.5px;padding:1px 3px;
     border-bottom:1px solid #ddd;text-align:right}
@@ -358,7 +394,10 @@ input[type=search]::placeholder{color:var(--ink2)}
   <div class="tabs" role="tablist">
     <button id="tabCol" role="tab" aria-selected="true">Collection</button>
     <button id="tabList" role="tab" aria-selected="false">Lists</button>
+    <button id="tabBattle" role="tab" aria-selected="false">Battles</button>
   </div>
+
+  <div id="viewBattles" hidden></div>
 
   <div id="viewLists" hidden></div>
 
@@ -424,7 +463,7 @@ const DB_NAME = 'armoury';
  *
  * Los datos son chicos (colección + listas), así que localStorage sobra.
  * ---------------------------------------------------------------- */
-const NS = { col: 'collection', lists: 'lists' };
+const NS = { col: 'collection', lists: 'lists', battles: 'battles' };
 let db = null;
 
 const store = {
@@ -443,7 +482,7 @@ const store = {
       const finish = (v) => { if (!done) { done = true; ok(v); } };
       try {
         if (!self.indexedDB) return finish(false);
-        const r = indexedDB.open(DB_NAME, 2);
+        const r = indexedDB.open(DB_NAME, 3);
         r.onupgradeneeded = () => {
           const d = r.result;
           for (const name of Object.values(NS))
@@ -616,6 +655,7 @@ async function start(){
     document.getElementById(id).addEventListener('input', render));
 
   lists = await loadLists();
+  battles = await loadBattles();
 
   // Limpieza: la versión anterior guardaba el borrador del formulario antes
   // de apretar CREATE, así que pudieron quedar listas vacías sin nombre.
@@ -981,6 +1021,29 @@ function copyIndex(l){
 
 function factionOf(slug){ return DATA.factions.find(f => f.slug === slug); }
 
+/* Destacamentos y mejoras HEREDANDO de los catálogos enlazados.
+ * Ultramarines no declara ninguno propio: los toma de Space Marines, igual
+ * que las unidades. Sin esto el selector quedaba vacío y caía al campo libre. */
+function detsOf(f){
+  if (!f) return [];
+  if (f.det && f.det.length) return f.det;
+  for (const slug of (f.al || [])) {
+    const alt = factionOf(slug);
+    if (alt && alt.det && alt.det.length) return alt.det;
+  }
+  return [];
+}
+
+function enhByOf(f){
+  if (!f) return null;
+  if (f.enhBy) return f.enhBy;
+  for (const slug of (f.al || [])) {
+    const alt = factionOf(slug);
+    if (alt && alt.enhBy) return alt.enhBy;
+  }
+  return null;
+}
+
 /* Repertorio de una lista: las unidades propias MÁS las de los catálogos
  * enlazados. Un ejército Ultramarines lleva 11 unidades propias y las 136
  * genéricas de Space Marines; ofrecerle sólo las 11 era el bug.
@@ -1043,8 +1106,8 @@ function review(l){
   // el valor de las reglas: 3 en Strike Force. Es lo único acá que no sale
   // del catálogo, y por eso es aviso suave.
   const dets = l.dets || [];
-  if (dets.length && f.det) {
-    const info = new Map(f.det.map((d) => [d[0], d]));
+  if (dets.length && detsOf(f).length) {
+    const info = new Map(detsOf(f).map((d) => [d[0], d]));
     const spent = dets.reduce((a, n) => a + (info.get(n)?.[1] ?? 0), 0);
     const budget = dpBudget(l);
     if (spent > budget)
@@ -1126,6 +1189,18 @@ function review(l){
       if (cap != null && v > cap)
         out.push({ hard:false, t:u.n + ' \u2014 ' + g.opts[oi][0] + ': ' + v,
                    d:'Maximum ' + cap + ' in a unit of ' + sl.size + '.' });
+    }
+
+    // Suma del grupo contra el tamaño de la unidad.
+    for (const [gi, g] of (u.o || []).entries()) {
+      if (!g.opts.some((o) => o[4])) continue;
+      const used = g.opts.reduce((a, o, j) => {
+        const q = sl.gear[gi + ':' + j];
+        return a + (Number.isFinite(q) ? q : (o[1] === 1 && !o[3] ? 1 : 0));
+      }, 0);
+      if (used > sl.size)
+        out.push({ hard:true, t:u.n + ': ' + used + ' models assigned',
+                   d:'The unit has ' + sl.size + '.' });
     }
 
     for (const [gi, picked] of perGroup) {
@@ -1237,7 +1312,7 @@ function renderListsInner(){
 
   // --- total
   const head = el('div','ledger');
-  const dinfo = new Map((f.det || []).map((d) => [d[0], d]));
+  const dinfo = new Map(detsOf(f).map((d) => [d[0], d]));
   const dpSpent = (l.dets || []).reduce((a, n) => a + (dinfo.get(n)?.[1] ?? 0), 0);
   const over = total > l.limit;
   head.innerHTML =
@@ -1287,7 +1362,7 @@ function renderListsInner(){
   const cfg = document.createElement('details');
   cfg.className = 'cfg';
   const dpSum = (l.dets || []).reduce((a, n) =>
-    a + (((f.det || []).find(([x]) => x === n) || [])[1] ?? 0), 0);
+    a + ((detsOf(f).find(([x]) => x === n) || [])[1] ?? 0), 0);
   const enhSum = (l.enh || []).reduce((a, e) => a + (+e.pts || 0), 0);
   const sum = document.createElement('summary');
   sum.innerHTML = 'Detachments &amp; enhancements <span>' +
@@ -1525,7 +1600,22 @@ function unitDetail(l, i){
  * Las filas fijas (sargento) valen su número; la de tropa se queda con el
  * resto. Hace falta para saber si una elección es de UN modelo o de varios. */
 function modelCount(u, sl, name){
-  if (!name || !u.cp) return 1;
+  if (!name) return 1;
+
+  // Variantes que viven en un grupo de opciones, no en la composición:
+  // "Terminator w/ Heavy Weapon" son 2 en una unidad de 10, y cada uno
+  // elige su arma por separado.
+  for (const [gi, g] of (u.o || []).entries()) {
+    if (g.k !== 'many') continue;
+    for (const [oi, opt] of g.opts.entries()) {
+      if (!opt[4] || opt[0] !== name) continue;
+      const chosen = (sl.gear || {})[gi + ':' + oi];
+      if (Number.isFinite(chosen)) return chosen;
+      return opt[1] === 1 && !opt[3] ? 1 : 0;
+    }
+  }
+
+  if (!u.cp) return 1;
   const row = u.cp.find(([n]) => n === name);
   if (!row) return 1;
   const [, min, max] = row;
@@ -1621,9 +1711,31 @@ function wargearFor(l, sl, u){
       continue;
     }
 
+    // Un grupo cuyas opciones son MODELOS está acotado por el tamaño de la
+    // unidad: sin esto se podían poner 9 con puño y 9 con garra en una
+    // escuadra de 10. El tope de cada opción es el menor entre el suyo y
+    // lo que queda libre.
+    const modelGroup = g.opts.some((o) => o[4]);
+    const usedInGroup = g.opts.reduce((a, o, j) => {
+      const q = sl.gear[gi + ':' + j];
+      return a + (Number.isFinite(q) ? q : (o[1] === 1 && !o[3] ? 1 : 0));
+    }, 0);
+    const freeInUnit = modelGroup ? Math.max(0, sl.size - usedInGroup) : Infinity;
+
+    if (modelGroup) {
+      const note = el('div');
+      note.style.cssText = 'font-family:var(--mono);font-size:9.5px;color:var(--ink2);margin:-1px 0 3px';
+      note.textContent = usedInGroup + ' of ' + sl.size + ' models assigned';
+      box.append(note);
+    }
+
     for (const [oi, opt] of g.opts.entries()) {
       const name = opt[0];
-      const max = capFor(opt, sl.size);
+      const own = capFor(opt, sl.size);
+      const cur = sl.gear[gi + ':' + oi] ?? 0;
+      const max = modelGroup
+        ? Math.min(own ?? Infinity, cur + freeInUnit)
+        : own;
       const key = gi + ':' + oi;
       const row = el('div');
       row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:3px 0';
@@ -1641,10 +1753,23 @@ function wargearFor(l, sl, u){
       val.value = sl.gear[key] ?? 0;
       const plus  = el('button'); plus.textContent = '+';
 
+      // El tope se recalcula AL PULSAR, no al dibujar: si dependiera del
+      // render, varios clics seguidos sobre el mismo botón se pasarían del
+      // tamaño de la unidad antes de que la pantalla se actualice.
       const set = (n) => {
-        n = Math.max(0, Math.min(max ?? 99, n | 0));
+        let cap = capFor(opt, sl.size) ?? 99;
+        if (modelGroup) {
+          const others = g.opts.reduce((a, o, j) => {
+            if (j === oi) return a;
+            const q = sl.gear[gi + ':' + j];
+            return a + (Number.isFinite(q) ? q : (o[1] === 1 && !o[3] ? 1 : 0));
+          }, 0);
+          cap = Math.min(cap, Math.max(0, sl.size - others));
+        }
+        n = Math.max(0, Math.min(cap, n | 0));
         if (n) sl.gear[key] = n; else delete sl.gear[key];
-        val.value = n; saveList(l);
+        val.value = n;
+        saveList(l); renderLists();
       };
       minus.onclick = () => set((sl.gear[key] ?? 0) - 1);
       plus.onclick  = () => set((sl.gear[key] ?? 0) + 1);
@@ -1820,6 +1945,14 @@ function datasheetFor(u, sl){
       row.append(c);
     });
     box.append(row);
+
+    // La invulnerable va aparte, no como una caja más: en la ficha oficial
+    // cuelga de la salvación porque es una alternativa a ella, no otro stat.
+    if (u.inv) {
+      const iv = el('div','inv');
+      iv.innerHTML = '<span>' + esc(u.inv) + '</span> INVULNERABLE SAVE';
+      box.append(iv);
+    }
   }
 
   // Habilidades antes de las armas: es el orden de la ficha oficial.
@@ -1968,7 +2101,7 @@ function numSelect(values, current, cb){
  * es un selector con las de tus destacamentos, no un campo libre.
  * ---------------------------------------------------------------- */
 function missionsFor(l, f){
-  const info = new Map((f.det || []).map((d) => [d[0], d]));
+  const info = new Map(detsOf(f).map((d) => [d[0], d]));
   const out = new Map();                       // misión -> destacamentos que la traen
   for (const n of (l.dets || [])) {
     const obj = info.get(n)?.[2];
@@ -2012,10 +2145,11 @@ function missionInput(l, f){
 
 function detachInput(f, l, onPick){
   const done = onPick || (() => { saveList(l); renderLists(); });
-  if (f.det && f.det.length){
+  const dl = detsOf(f);
+  if (dl.length){
     const s = el('select');
     const o0 = el('option'); o0.value=''; o0.textContent='\u2014'; s.append(o0);
-    for (const [name, dp, obj] of f.det){
+    for (const [name, dp, obj] of dl){
       const o = el('option'); o.value = name;
       o.textContent = name + '  \u00b7 ' + dp + ' DP' + (obj ? '  \u00b7 ' + obj : '');
       if (name === l.detachment) o.selected = true;
@@ -2165,7 +2299,7 @@ function detachmentsFor(l, f){
   const box = el('div');
   box.style.cssText = 'margin:14px 0';
 
-  const info = new Map((f.det || []).map((d) => [d[0], d]));
+  const info = new Map(detsOf(f).map((d) => [d[0], d]));
   const spent = l.dets.reduce((a, n) => a + (info.get(n)?.[1] ?? 0), 0);
   const budget = dpBudget(l);
 
@@ -2191,11 +2325,12 @@ function detachmentsFor(l, f){
     box.append(row);
   }
 
-  if (f.det && f.det.length) {
+  const dlist = detsOf(f);
+  if (dlist.length) {
     const sel = el('select');
     sel.style.cssText = 'width:100%;margin-top:8px;font-size:14px';
     const o0 = el('option'); o0.value=''; o0.textContent='Add a detachment\u2026'; sel.append(o0);
-    for (const [name, dp, obj, uniq] of f.det) {
+    for (const [name, dp, obj, uniq] of dlist) {
       if (l.dets.includes(name)) continue;
       const o = el('option'); o.value = name;
       o.textContent = name + '  \u00b7 ' + dp + ' DP' + (obj ? '  \u00b7 ' + obj : '');
@@ -2246,8 +2381,9 @@ function enhancementsFor(l, f){
     let name;
     // Con MFM, sólo se ofrecen las mejoras del destacamento elegido.
     // El repertorio es la UNIÓN de las mejoras de los destacamentos elegidos.
-    const pool = f.enhBy
-      ? (l.dets || []).flatMap((n) => f.enhBy[n] || [])
+    const eb = enhByOf(f);
+    const pool = eb
+      ? (l.dets || []).flatMap((n) => eb[n] || [])
       : f.enh;
 
     if (pool && pool.length) {
@@ -2305,9 +2441,10 @@ function enhancementsFor(l, f){
   add.onclick = () => { l.enh.push({ n:'', pts:0, on:null }); saveList(l); renderLists(); };
   box.append(add);
 
-  box.append(hint(f.enhBy && !(l.dets || []).length
+  const eb2 = enhByOf(f);
+  box.append(hint(eb2 && !(l.dets || []).length
     ? 'Pick a detachment first \u2014 enhancements belong to detachments.'
-    : f.enhBy
+    : eb2
     ? 'Enhancements and points come from the Munitorum Field Manual, filtered to your detachment. How many you may take is not checked.'
     : f.enh && f.enh.length
     ? 'Enhancement points come from the catalogue. Which ones your detachment allows, and how many you may take, are not checked.'
@@ -2578,7 +2715,15 @@ function printList(l){
     if (u.st) {
       const labs = ['M','T','SV','W','LD','OC'];
       inner += '<div class="pr-strip">' + u.st
-        .map((v, i) => v ? '<span><i>' + labs[i] + '</i>' + esc(v) + '</span>' : '')
+        .map((v, i) => {
+          if (!v) return '';
+          // En papel la invulnerable va dentro de la caja de salvación con
+          // una barra: "2+/4+". Una caja aparte gastaba espacio sin ganar nada.
+          const txt = (i === 2 && u.inv) ? v + '/' + u.inv : v;
+          const lab = (i === 2 && u.inv) ? 'SV/INV' : labs[i];
+          return '<span' + (i === 2 && u.inv ? ' class="wide"' : '') +
+                 '><i>' + lab + '</i>' + esc(txt) + '</span>';
+        })
         .join('') + '</div>';
     }
 
@@ -2630,17 +2775,332 @@ function gearName(u, key){
 
 /* ---------- pestañas ---------- */
 function showTab(which){
-  const isCol = which === 'col';
-  if (isCol) document.getElementById('shell').className = 'wrap';
-  document.getElementById('viewCol').hidden   = !isCol;
-  document.getElementById('viewLists').hidden = isCol;
-  document.querySelector('.totals').hidden    = !isCol;
-  document.getElementById('tabCol').setAttribute('aria-selected', isCol);
-  document.getElementById('tabList').setAttribute('aria-selected', !isCol);
-  if (!isCol) renderLists();
+  if (which === 'col') document.getElementById('shell').className = 'wrap';
+  for (const [tab, view] of [['tabCol','viewCol'], ['tabList','viewLists'], ['tabBattle','viewBattles']]) {
+    const on = tab === ({ col:'tabCol', lists:'tabList', battles:'tabBattle' })[which];
+    document.getElementById(view).hidden = !on;
+    document.getElementById(tab).setAttribute('aria-selected', on);
+  }
+  document.querySelector('.totals').hidden = which !== 'col';
+  if (which === 'lists')   renderLists();
+  if (which === 'battles') renderBattles();
 }
-document.getElementById('tabCol').onclick  = () => showTab('col');
-document.getElementById('tabList').onclick = () => showTab('lists');
+document.getElementById('tabCol').onclick    = () => showTab('col');
+document.getElementById('tabList').onclick   = () => showTab('lists');
+document.getElementById('tabBattle').onclick = () => showTab('battles');
+
+/* ============================================================
+   BATALLAS
+   
+   Registro de una partida: tus listas contra un rival, la misión, el
+   marcador ronda por ronda y un reloj por jugador.
+   
+   El reloj es lo que más pediste y lo que ninguna app resuelve bien:
+   marca el ritmo. A 2000 puntos y 5 rondas, cada jugador tiene unos
+   80 minutos; si vas 10 minutos por encima del ritmo, lo avisa antes
+   de que se acabe el tiempo, no después.
+   ============================================================ */
+let battles = [];
+let openBattle = null;
+
+function saveBattle(b){ store.put('battles', b); }
+function loadBattles(){ return store.getAll('battles'); }
+
+const ROUNDS = 5;
+
+function newBattle(){
+  const b = {
+    id: Date.now(),
+    date: new Date().toISOString().slice(0, 10),
+    mine: lists[0]?.id ?? null,
+    opponent: '',
+    oppList: null,          // id de una lista importada, si la cargaste
+    mission: '',
+    limit: 2000,
+    // marcador: [{ primary, secondary }] por ronda y jugador
+    me: Array.from({ length: ROUNDS }, () => ({ p: 0, s: 0 })),
+    them: Array.from({ length: ROUNDS }, () => ({ p: 0, s: 0 })),
+    cp: { me: 0, them: 0 },
+    clock: { me: 0, them: 0, budget: 80 * 60, running: null, since: null },
+    round: 1,
+    notes: '',
+    done: false,
+  };
+  battles.push(b); saveBattle(b); openBattle = b.id; renderBattles();
+}
+
+/* --- reloj: se guarda el acumulado y el instante de arranque, no un
+   intervalo. Así el tiempo sigue corriendo aunque cierres la pestaña. --- */
+let clockTimer = null;
+
+function elapsed(b, who){
+  const c = b.clock;
+  let t = c[who] || 0;
+  if (c.running === who && c.since) t += Math.floor((Date.now() - c.since) / 1000);
+  return t;
+}
+
+function toggleClock(b, who){
+  const c = b.clock;
+  if (c.running === who) {
+    c[who] = elapsed(b, who);
+    c.running = null; c.since = null;
+  } else {
+    if (c.running) { c[c.running] = elapsed(b, c.running); }
+    c.running = who; c.since = Date.now();
+  }
+  saveBattle(b); renderBattles();
+}
+
+function mmss(s){
+  const m = Math.floor(s / 60), r = s % 60;
+  return m + ':' + String(r).padStart(2, '0');
+}
+
+/* Ritmo esperado: el presupuesto repartido entre las rondas jugadas. */
+function pace(b, who){
+  const spent = elapsed(b, who);
+  const should = Math.round(b.clock.budget * (b.round - 1 + 0.5) / ROUNDS);
+  return { spent, should, over: spent - should };
+}
+
+function battleTotals(b){
+  const sum = (arr) => arr.reduce((a, r) => a + (+r.p || 0) + (+r.s || 0), 0);
+  return { me: sum(b.me), them: sum(b.them) };
+}
+
+function renderBattles(){
+  try { renderBattlesInner(); }
+  catch (e) {
+    const v = document.getElementById('viewBattles');
+    v.innerHTML = '';
+    const w = el('div','warn');
+    w.innerHTML = '<b>BATTLE VIEW FAILED</b>' + escSafe(e.message);
+    v.append(w);
+  }
+}
+
+function renderBattlesInner(){
+  const v = document.getElementById('viewBattles');
+  v.innerHTML = '';
+
+  if (clockTimer) { clearInterval(clockTimer); clockTimer = null; }
+
+  if (openBattle == null) {
+    const bar = el('div','bar');
+    const nw = el('button','btn pri'); nw.textContent = 'NEW BATTLE';
+    nw.onclick = newBattle;
+    bar.append(nw); v.append(bar);
+
+    if (!battles.length) { v.append(note('No battles yet. Start one to track the score and the clock.')); return; }
+
+    for (const b of [...battles].sort((a, c) => c.id - a.id)) {
+      const t = battleTotals(b);
+      const mine = lists.find((x) => x.id === b.mine);
+      const c = el('div','card');
+      c.innerHTML = '<div><div class="nm">' + esc(mine ? mine.name || 'Untitled' : '?') +
+        ' vs ' + esc(b.opponent || '?') + '</div>' +
+        '<div class="meta">' + esc(b.date) + (b.mission ? ' · ' + esc(b.mission) : '') +
+        (b.done ? ' · finished' : ' · round ' + b.round) + '</div></div>' +
+        '<div class="pts">' + t.me + ' – ' + t.them + '</div>';
+      c.onclick = () => { openBattle = b.id; renderBattles(); };
+      v.append(c);
+    }
+    return;
+  }
+
+  const b = battles.find((x) => x.id === openBattle);
+  if (!b) { openBattle = null; return renderBattles(); }
+
+  // ---- cabecera
+  const bar = el('div','bar');
+  const back = el('button','btn'); back.textContent = '\u2190 ALL BATTLES';
+  back.onclick = () => { openBattle = null; renderBattles(); };
+  const del = el('button','btn'); del.textContent = 'DELETE';
+  del.onclick = () => {
+    if (!confirm('Delete this battle?')) return;
+    store.del('battles', b.id);
+    battles = battles.filter((x) => x.id !== b.id);
+    openBattle = null; renderBattles();
+  };
+  bar.append(back, del); v.append(bar);
+
+  // ---- configuración
+  const cfg = el('div','bar');
+  const mySel = el('select');
+  const none = el('option'); none.value=''; none.textContent='(no list)'; mySel.append(none);
+  for (const l of lists) {
+    if (l.foreign) continue;
+    const o = el('option'); o.value = l.id; o.textContent = l.name || 'Untitled';
+    if (l.id === b.mine) o.selected = true;
+    mySel.append(o);
+  }
+  mySel.onchange = () => { b.mine = mySel.value ? +mySel.value : null; saveBattle(b); renderBattles(); };
+  cfg.append(labelled('My list', mySel));
+
+  const opp = el('input'); opp.type='text'; opp.placeholder='opponent';
+  opp.style.cssText='width:150px;font-size:13px'; opp.value = b.opponent;
+  opp.oninput = () => { b.opponent = opp.value; saveBattle(b); };
+  cfg.append(labelled('Against', opp));
+
+  // Lista del rival: sólo las importadas, que son las suyas.
+  const foreign = lists.filter((x) => x.foreign);
+  if (foreign.length) {
+    const os = el('select');
+    const n0 = el('option'); n0.value=''; n0.textContent='—'; os.append(n0);
+    for (const l of foreign) {
+      const o = el('option'); o.value = l.id; o.textContent = l.name || 'Untitled';
+      if (l.id === b.oppList) o.selected = true;
+      os.append(o);
+    }
+    os.onchange = () => { b.oppList = os.value ? +os.value : null; saveBattle(b); };
+    cfg.append(labelled('Their list', os));
+  }
+
+  const mis = el('input'); mis.type='text'; mis.placeholder='mission';
+  mis.style.cssText='width:140px;font-size:13px'; mis.value = b.mission;
+  mis.oninput = () => { b.mission = mis.value; saveBattle(b); };
+  cfg.append(labelled('Mission', mis));
+  v.append(cfg);
+
+  // ---- reloj
+  v.append(clockPanel(b));
+
+  // ---- marcador
+  const t = battleTotals(b);
+  const head = el('div','ledger');
+  head.innerHTML = '<div class="lf">Round ' + b.round + '</div>' +
+    '<div class="lm"><b>' + t.me + '</b><i>me</i></div>' +
+    '<div class="lm"><b>' + t.them + '</b><i>them</i></div>';
+  v.append(head);
+  v.append(scoreTable(b));
+
+  // ---- puntos de mando y notas
+  const cpBar = el('div','bar');
+  for (const who of ['me','them']) {
+    const i = el('input'); i.type='text'; i.inputMode='numeric';
+    i.style.cssText='width:56px;text-align:center;font-family:var(--mono)';
+    i.value = b.cp[who];
+    i.onchange = () => { b.cp[who] = parseInt(i.value,10) || 0; saveBattle(b); };
+    cpBar.append(labelled(who === 'me' ? 'My CP' : 'Their CP', i));
+  }
+  // Selector simple: numSelect() rotula en puntos y mostraba "3 pts".
+  const rnd = el('select');
+  for (let i = 1; i <= ROUNDS; i++) {
+    const o = el('option'); o.value = i; o.textContent = 'Round ' + i;
+    if (i === b.round) o.selected = true;
+    rnd.append(o);
+  }
+  rnd.onchange = () => { b.round = +rnd.value; saveBattle(b); renderBattles(); };
+  cpBar.append(rnd);
+  const fin = check('Finished', b.done, (x) => { b.done = x; saveBattle(b); renderBattles(); });
+  cpBar.append(fin);
+  v.append(cpBar);
+
+  const nt = el('textarea');
+  nt.placeholder = 'Notes — deployment, what went wrong, what to change';
+  nt.style.cssText = 'width:100%;min-height:80px;margin-top:12px;padding:10px;' +
+    'background:var(--panel);border:1px solid var(--rule2);border-radius:2px;' +
+    'color:var(--ink);font:inherit;resize:vertical';
+  nt.value = b.notes;
+  nt.oninput = () => { b.notes = nt.value; saveBattle(b); };
+  v.append(nt);
+
+  // Redibujar sólo el reloj cada segundo: volver a dibujar todo perdería
+  // el foco de los campos mientras escribís.
+  if (b.clock.running) {
+    clockTimer = setInterval(() => {
+      for (const who of ['me','them']) {
+        const box = document.getElementById('clk-' + who);
+        if (!box) continue;
+        const p = pace(b, who);
+        box.textContent = mmss(p.spent);
+        box.className = 'clkt' + (p.over > 600 ? ' late' : (p.over > 0 ? ' over' : ''));
+      }
+    }, 1000);
+  }
+}
+
+function clockPanel(b){
+  const box = el('div','clock');
+
+  for (const who of ['me','them']) {
+    const p = pace(b, who);
+    const side = el('div','clks' + (b.clock.running === who ? ' on' : ''));
+
+    const lab = el('div','clkl');
+    lab.textContent = who === 'me' ? 'Me' : (b.opponent || 'Opponent');
+
+    const t = el('div');
+    t.id = 'clk-' + who;
+    t.className = 'clkt' + (p.over > 600 ? ' late' : (p.over > 0 ? ' over' : ''));
+    t.textContent = mmss(p.spent);
+
+    const sub = el('div','clkp');
+    sub.textContent = p.over > 0
+      ? '+' + mmss(p.over) + ' over pace'
+      : mmss(-p.over) + ' under pace';
+
+    const btn = el('button','btn' + (b.clock.running === who ? ' pri' : ''));
+    btn.textContent = b.clock.running === who ? 'PAUSE' : 'START';
+    btn.onclick = () => toggleClock(b, who);
+
+    side.append(lab, t, sub, btn);
+    box.append(side);
+  }
+
+  const foot = el('div','clkf');
+  const bud = el('input'); bud.type='text'; bud.inputMode='numeric';
+  bud.style.cssText='width:54px;text-align:center;font-family:var(--mono);padding:3px 5px;' +
+    'background:var(--panel);border:1px solid var(--rule2);border-radius:2px;color:var(--ink)';
+  bud.value = Math.round(b.clock.budget / 60);
+  bud.onchange = () => {
+    b.clock.budget = Math.max(10, parseInt(bud.value,10) || 80) * 60;
+    saveBattle(b); renderBattles();
+  };
+  foot.append('Minutes per player ', bud);
+  const rst = el('button','btn'); rst.textContent='RESET';
+  rst.style.marginLeft='10px';
+  rst.onclick = () => {
+    if (!confirm('Reset both clocks?')) return;
+    b.clock.me = 0; b.clock.them = 0; b.clock.running = null; b.clock.since = null;
+    saveBattle(b); renderBattles();
+  };
+  foot.append(rst);
+  box.append(foot);
+  return box;
+}
+
+function scoreTable(b){
+  const t = el('table','score');
+  const hdr = '<tr><th></th>' +
+    Array.from({length:ROUNDS}, (_,i) => '<th>R' + (i+1) + '</th>').join('') +
+    '<th>Total</th></tr>';
+
+  const row = (who, label) => {
+    const cells = b[who].map((r, i) =>
+      '<td><input data-w="' + who + '" data-i="' + i + '" data-k="p" value="' + (r.p||0) + '">' +
+      '<input data-w="' + who + '" data-i="' + i + '" data-k="s" value="' + (r.s||0) + '"></td>').join('');
+    const tot = b[who].reduce((a, r) => a + (+r.p||0) + (+r.s||0), 0);
+    return '<tr><th class="who">' + esc(label) + '</th>' + cells + '<td class="tot">' + tot + '</td></tr>';
+  };
+
+  t.innerHTML = hdr + row('me','Me') + row('them', b.opponent || 'Them') +
+    '<tr class="lg"><th></th><td colspan="' + (ROUNDS+1) + '">primary / secondary</td></tr>';
+
+  // Un solo manejador para las 20 celdas.
+  t.addEventListener('input', (ev) => {
+    const el2 = ev.target;
+    if (!el2.dataset || !el2.dataset.w) return;
+    const n = Math.max(0, Math.min(99, parseInt(el2.value, 10) || 0));
+    b[el2.dataset.w][+el2.dataset.i][el2.dataset.k] = n;
+    saveBattle(b);
+    const tot = b[el2.dataset.w].reduce((a, r) => a + (+r.p||0) + (+r.s||0), 0);
+    const cell = el2.closest('tr').querySelector('.tot');
+    if (cell) cell.textContent = tot;
+  });
+  return t;
+}
 
 boot();
 
