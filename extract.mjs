@@ -339,7 +339,7 @@ function leaderTargetsOf(entry) {
  * Se extraen los topes planos (max:N). Las proporciones del tipo "1 cada 5
  * modelos" viven en modifiers y NO se resuelven: eso ya es motor de reglas.
  */
-function optionsOf(entry, ctx) {
+function optionsOf(entry, ctx, weaponNames) {
   const groups = [];
   const seenG = new Set();
 
@@ -393,12 +393,29 @@ function optionsOf(entry, ctx) {
     // Las mejoras se cuelan acá cuando llegan por enlace: el grupo puede no
     // llamarse "Enhancements" aunque sus opciones lo sean. Se reconocen por
     // el coste, igual que en el resto del extractor.
+    // Armas que lleva una entrada de modelo. Hace falta para contar cuántas
+    // miniaturas portan cada arma: "Storm bolter x5".
+    const armsOf = (e) => {
+      const out = [];
+      const add = (nm) => { if (nm && weaponNames.has(nm) && !out.includes(nm)) out.push(nm); };
+      for (const c of asArray(e.selectionEntries)) add(c.name);
+      for (const l of asArray(e.entryLinks)) {
+        if (l.type !== 'selectionEntry') continue;
+        add(l.name);
+        const t = ctx?.shared?.get(l.targetId);
+        if (t) add(t.name);
+      }
+      return out;
+    };
+
     const opts = [...asArray(g.selectionEntries), ...linked]
       .filter((e) => (e.type === 'model' || e.type === 'upgrade') &&
                      !isEnhancement(e) && !isCrusade(e))
       .map((e) => ({
         n: e.name, ...capOf(e),
         p: asArray(e.costs).find((c) => c.name === 'pts')?.value ?? 0,
+        model: e.type === 'model',
+        w: e.type === 'model' ? armsOf(e) : null,
       }));
     if (!opts.length) return;
 
@@ -685,7 +702,7 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
       ladder: priceLadder(target),
       cap: forceCapOf(target),
       leads: leaderTargetsOf(target),
-      options: optionsOf(target, ctx),
+      options: null,   // se completa abajo: necesita los nombres de armas
       weapons: weaponsOf(target, ctx),
       composition: null,   // se completa abajo, necesita los nombres de armas
       abilities: abilitiesOf(target, ctx),
@@ -755,6 +772,7 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
     const target = shared.get(ds.id);
     if (!target) continue;
     const names = new Set((ds.weapons ?? []).map((w) => w.n));
+    ds.options = optionsOf(target, ctx, names);
     ds.composition = compositionOf(target, ctx, names);
 
     // Los grupos de COMPOSICIÓN se colaban entre las opciones de equipo:
