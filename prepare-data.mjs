@@ -197,6 +197,9 @@ for (const file of files) {
       st: x.profile
             ? [x.profile.M, x.profile.T, x.profile.Sv, x.profile.W, x.profile.LD, x.profile.OC]
             : null,
+      // Salvación invulnerable. 612 unidades la tienen y se estaba
+      // descartando; en la ficha oficial cuelga debajo de la salvación.
+      inv: x.profile && String(x.profile.InSv || '').trim() ? String(x.profile.InSv).trim() : null,
       // composición: [nombre, min, max, armas de fábrica]
       cp: (x.composition ?? []).map((c) => [c.n, c.min, c.max, c.w]),
       // habilidades: [nombre, descripción]
