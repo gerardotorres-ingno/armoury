@@ -1057,6 +1057,17 @@ function review(l){
     }
   }
 
+  // La misión tiene que venir de alguno de los destacamentos elegidos.
+  const missions = missionsFor(l, f);
+  if (missions.size) {
+    if (!l.mission)
+      out.push({ hard:false, t:'No mission chosen',
+                 d:'Your detachments offer: ' + [...missions.keys()].join(', ') + '.' });
+    else if (!missions.has(l.mission))
+      out.push({ hard:true, t:'Mission does not match your detachments',
+                 d:l.mission + ' is not offered by ' + (l.dets || []).join(' or ') + '.' });
+  }
+
   // Las mejoras cargadas a mano suman al total.
   for (const e of (l.enh || [])) total += +e.pts || 0;
 
@@ -1215,11 +1226,7 @@ function renderListsInner(){
   lim.textContent = l.limit + ' pts';
   bar2.append(labelled('Limit', lim));
 
-  const mis = el('input'); mis.type = 'text'; mis.placeholder = 'mission';
-  mis.style.cssText = 'width:150px;font-size:13px';
-  mis.value = l.mission || '';
-  mis.oninput = () => { l.mission = mis.value; saveList(l); };
-  bar2.append(labelled('Mission', mis));
+  bar2.append(labelled('Mission', missionInput(l, f)));
   bar2.append(check('Legends', l.legends, v2 => { l.legends = v2; saveList(l); renderLists(); }));
   bar2.append(check('Crucible', l.crucible, v2 => { l.crucible = v2; saveList(l); renderLists(); }));
   v.append(bar2);
@@ -1510,6 +1517,20 @@ function unitDetail(l, i){
  * Los topes que dependen del tamaño ("1 cada 5 modelos") viven en modifiers
  * y no se resuelven. Por eso el tope mostrado es el máximo absoluto.
  * ---------------------------------------------------------------- */
+/* Cuántos modelos hay de una fila de composición, dado el tamaño elegido.
+ * Las filas fijas (sargento) valen su número; la de tropa se queda con el
+ * resto. Hace falta para saber si una elección es de UN modelo o de varios. */
+function modelCount(u, sl, name){
+  if (!name || !u.cp) return 1;
+  const row = u.cp.find(([n]) => n === name);
+  if (!row) return 1;
+  const [, min, max] = row;
+  if (min != null && min === max) return min;
+  let left = sl.size;
+  for (const [n2, mn, mx] of u.cp) if (n2 !== name && mn != null && mn === mx) left -= mn;
+  return Math.max(0, left);
+}
+
 function wargearFor(l, sl, u){
   sl.gear = sl.gear || {};
   const box = el('div');
@@ -1534,6 +1555,51 @@ function wargearFor(l, sl, u){
       'color:var(--ink2);margin:8px 0 3px';
     head.textContent = g.n.toUpperCase();
     box.append(head);
+
+    // "Cada modelo de esta unidad puede cambiar X por Y": si el grupo pertenece
+    // a una fila con varios modelos, no es UNA elección sino un reparto. Con
+    // 5 Reivers podés tener 3 con cuchillo y 2 con carabina.
+    const owned = modelCount(u, sl, g.ow);
+    const perModel = g.k === 'one' && g.ow && owned > 1;
+
+    if (perModel) {
+      const tot = g.opts.reduce((a, _, oi) => a + (sl.gear[gi + ':' + oi] ?? 0), 0);
+      const restKey = gi + ':base';
+      const note = el('div');
+      note.style.cssText = 'font-family:var(--mono);font-size:9.5px;color:var(--ink2);margin:-1px 0 3px';
+      note.textContent = 'each of the ' + owned + ' \u00b7 ' + (owned - tot) + ' unchanged';
+      box.append(note);
+
+      for (const [oi, opt] of g.opts.entries()) {
+        const key = gi + ':' + oi;
+        const row = el('div');
+        row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:3px 0';
+        const lab = el('div');
+        lab.style.cssText = 'flex:1;min-width:0;font-size:13px';
+        const cost = gearCost(u, opt[0]);
+        lab.textContent = opt[0] + (cost ? '  +' + cost + ' pts' : '');
+
+        const step = el('div','step');
+        const minus = el('button'); minus.textContent = '\u2212';
+        const val = el('input'); val.type='text'; val.inputMode='numeric';
+        val.value = sl.gear[key] ?? 0;
+        const plus = el('button'); plus.textContent = '+';
+        const set = (n) => {
+          const others = g.opts.reduce((a, _, j) =>
+            a + (j === oi ? 0 : (sl.gear[gi + ':' + j] ?? 0)), 0);
+          n = Math.max(0, Math.min(owned - others, n | 0));
+          if (n) sl.gear[key] = n; else delete sl.gear[key];
+          saveList(l); renderLists();
+        };
+        minus.onclick = () => set((sl.gear[key] ?? 0) - 1);
+        plus.onclick  = () => set((sl.gear[key] ?? 0) + 1);
+        val.onchange  = () => set(parseInt(val.value,10) || 0);
+        step.append(minus, val, plus);
+        row.append(lab, step);
+        box.append(row);
+      }
+      continue;
+    }
 
     if (g.k === 'one') {
       const sel = el('select');
@@ -1623,6 +1689,18 @@ function weaponsAfterGear(u, sl){
   for (const [gi, g] of u.o.entries()) {
     if (g.k !== 'one') continue;
     const names = g.opts.map(([n]) => n);
+
+    // Reparto entre varios modelos: todas las opciones con cantidad puesta
+    // conviven en la unidad, así que ninguna se descarta.
+    const spread = g.opts.some((_, oi) => (sl?.gear || {})[gi + ':' + oi] > 0);
+    if (spread) {
+      for (const [oi, o] of g.opts.entries()) {
+        if ((sl.gear[gi + ':' + oi] ?? 0) <= 0) continue;
+        for (const a of (o[5] && o[5].length ? o[5] : [o[0]])) chosen.add(wkey(a));
+      }
+      continue;
+    }
+
     for (const n of names) inGroups.add(wkey(n));
     const pick = (sl?.gear && typeof sl.gear[gi] === 'string') ? sl.gear[gi] : names[0];
     chosen.add(wkey(pick));
@@ -1669,16 +1747,35 @@ function weaponCounts(u, sl){
     }
   }
 
-  // 2. variantes de modelo elegidas en el armamento
+  // 2. variantes de modelo y repartos de arma elegidos en el armamento
   const gear = sl.gear || {};
   for (const [gi, g] of (u.o || []).entries()) {
-    if (g.k !== 'many') continue;
+    let taken = 0;
     for (const [oi, opt] of g.opts.entries()) {
       const qty = gear[gi + ':' + oi];
       if (!Number.isFinite(qty) || qty <= 0) continue;
-      if (!opt[4]) continue;                    // sólo entradas de modelo
-      left -= qty;
-      for (const a of (opt[5] || [])) bump(a, qty);
+      taken += qty;
+      if (opt[4]) {                             // variante de modelo
+        left -= qty;
+        for (const a of (opt[5] || [])) bump(a, qty);
+      } else {
+        // Cambio de arma repartido entre modelos: "3 con cuchillo".
+        // Una opción puede agrupar varias armas ("Bolt Carbine and Close
+        // Combat Weapon"), así que se usan las suyas y el nombre de respaldo.
+        const arms = opt[5] && opt[5].length ? opt[5] : [opt[0]];
+        for (const a of arms) bump(a, qty);
+      }
+    }
+
+    // Reparto sobre una fila de varios modelos: los que no cambiaron siguen
+    // con la primera opción, que es el equipo de fábrica.
+    if (g.k === 'one' && g.ow) {
+      const owned = modelCount(u, sl, g.ow);
+      const rest = owned - taken;
+      if (rest > 0 && owned > 1) {
+        const base = g.opts[0];
+        for (const a of (base[5] && base[5].length ? base[5] : [base[0]])) bump(a, rest);
+      }
     }
   }
 
@@ -1857,6 +1954,58 @@ function numSelect(values, current, cb){
  * renderLists(): redibujar ahí reconstruye el borrador desde cero y le
  * resetea la facción. Ese era el bug de "elijo destacamento y cambia de
  * facción". */
+/* ------------------------------------------------------------------
+ * MISIÓN (Force Disposition)
+ *
+ * Cada destacamento trae la suya declarada en el MFM: Awakened Dynasty juega
+ * TAKE AND HOLD, Hypercrypt Legion juega RECONNAISSANCE. Hay cinco en total.
+ *
+ * Con varios destacamentos hay varias misiones posibles, y elegís una: por eso
+ * es un selector con las de tus destacamentos, no un campo libre.
+ * ---------------------------------------------------------------- */
+function missionsFor(l, f){
+  const info = new Map((f.det || []).map((d) => [d[0], d]));
+  const out = new Map();                       // misión -> destacamentos que la traen
+  for (const n of (l.dets || [])) {
+    const obj = info.get(n)?.[2];
+    if (!obj) continue;
+    if (!out.has(obj)) out.set(obj, []);
+    out.get(obj).push(n);
+  }
+  return out;
+}
+
+function missionInput(l, f){
+  const opts = missionsFor(l, f);
+
+  // Sin destacamentos con misión declarada, queda el campo libre.
+  if (!opts.size) {
+    const i = el('input'); i.type = 'text'; i.placeholder = 'mission';
+    i.style.cssText = 'width:150px;font-size:13px';
+    i.value = l.mission || '';
+    i.oninput = () => { l.mission = i.value; saveList(l); };
+    return i;
+  }
+
+  // Una sola posible: se aplica sola, no tiene sentido preguntarlo.
+  if (opts.size === 1 && !l.mission) {
+    l.mission = [...opts.keys()][0];
+    saveList(l);
+  }
+
+  const sel = el('select');
+  sel.style.cssText = 'font-size:13px;max-width:230px';
+  const o0 = el('option'); o0.value = ''; o0.textContent = '\u2014'; sel.append(o0);
+  for (const [m, from] of opts) {
+    const o = el('option'); o.value = m;
+    o.textContent = m + (opts.size > 1 ? '  \u00b7 ' + from[0] : '');
+    if (m === l.mission) o.selected = true;
+    sel.append(o);
+  }
+  sel.onchange = () => { l.mission = sel.value; saveList(l); renderLists(); };
+  return sel;
+}
+
 function detachInput(f, l, onPick){
   const done = onPick || (() => { saveList(l); renderLists(); });
   if (f.det && f.det.length){
@@ -2025,10 +2174,15 @@ function detachmentsFor(l, f){
     const row = el('div','slot');
     row.innerHTML = '<div class="id"><div class="nm">' + esc(name) + '</div>' +
       '<div class="meta">' + (d ? d[1] + ' DP' : '?') +
-      (d?.[2] ? ' \u00b7 ' + esc(d[2]) : '') +
+      (d?.[2] ? ' \u00b7 ' + esc(d[2]) + (l.mission === d[2] ? ' \u2713' : '') : '') +
       (d?.[3] ? ' \u00b7 unique: ' + esc(d[3]) : '') + '</div></div>';
     const rm = el('button','btn'); rm.textContent = 'REMOVE';
-    rm.onclick = () => { l.dets.splice(i,1); saveList(l); renderLists(); };
+    rm.onclick = () => {
+      l.dets.splice(i,1);
+      // Si la misión venía sólo de ese destacamento, se limpia.
+      if (l.mission && !missionsFor(l, f).has(l.mission)) l.mission = '';
+      saveList(l); renderLists();
+    };
     row.append(rm);
     box.append(row);
   }
