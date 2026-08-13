@@ -49,6 +49,9 @@ jobs:
           cat changelog-new.md
 
       # ---- 4. generar la app ---------------------------------------
+      - name: Fetch mission data
+        run: node missions.mjs
+
       - name: Build app
         run: node prepare-data.mjs
 
