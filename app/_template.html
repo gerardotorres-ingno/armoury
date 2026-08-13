@@ -124,6 +124,20 @@ details.scope b{color:var(--ink)}
 .clkp{font-family:var(--mono);font-size:10.5px;color:var(--ink2);margin-bottom:9px}
 .clks .btn{width:100%}
 
+.chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
+  background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
+  color:var(--ink);cursor:pointer}
+.chip:hover{border-color:var(--ochre)}
+.chip.on{background:var(--ochre-bg);border-color:var(--ochre);color:var(--ochre)}
+
+.misres{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.misres>div{background:var(--panel);border:1px solid var(--rule2);border-left:3px solid var(--ochre);
+  border-radius:3px;padding:9px 12px}
+.misres b{display:block;font-family:var(--disp);font-weight:600;font-size:17px}
+.misres i{display:block;font-style:normal;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);margin-top:1px}
+.misres .empty{grid-column:1/-1;border-left-color:var(--rule2)}
+
 .score{width:100%;border-collapse:collapse;margin-bottom:6px}
 .score th{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink2);
   padding:4px 3px;border-bottom:1px solid var(--rule)}
@@ -656,6 +670,7 @@ async function start(){
 
   lists = await loadLists();
   battles = await loadBattles();
+  await loadLib();
 
   // Limpieza: la versión anterior guardaba el borrador del formulario antes
   // de apretar CREATE, así que pudieron quedar listas vacías sin nombre.
@@ -2808,6 +2823,50 @@ function loadBattles(){ return store.getAll('battles'); }
 
 const ROUNDS = 5;
 
+/* ------------------------------------------------------------------
+ * MISIONES DE EVENTO
+ *
+ * Tu Force Disposition contra la del rival determina la Misión Primaria de
+ * cada uno. Las cinco disposiciones dan 15 combinaciones, y las trae el
+ * Warhammer Event Companion (v1.1). Cada combinación tiene además tres
+ * disposiciones de terreno recomendadas: A, B y C.
+ *
+ * Se guarda sólo el mapa de nombres — lo necesario para saber qué jugás.
+ * Las condiciones de puntuación de cada carta son de la baraja de GW y no
+ * están acá: el marcador sigue siendo manual.
+ * ---------------------------------------------------------------- */
+const DISPOSITIONS = ['TAKE AND HOLD','PURGE THE FOE','DISRUPTION','RECONNAISSANCE','PRIORITY ASSETS'];
+
+const MISSION_TABLE = {
+  'TAKE AND HOLD|TAKE AND HOLD':      ['Battlefield Dominance','Battlefield Dominance'],
+  'TAKE AND HOLD|PURGE THE FOE':      ['Immovable Object','Unstoppable Force'],
+  'TAKE AND HOLD|DISRUPTION':         ['Determined Acquisition','Death Trap'],
+  'TAKE AND HOLD|RECONNAISSANCE':     ['Purge and Secure','Reconnaissance Sweep'],
+  'TAKE AND HOLD|PRIORITY ASSETS':    ['Inescapable Dominion','Secure Asset'],
+  'PURGE THE FOE|PURGE THE FOE':      ['Meatgrinder','Meatgrinder'],
+  'PURGE THE FOE|DISRUPTION':         ['Punishment','Delaying Action'],
+  'PURGE THE FOE|RECONNAISSANCE':     ['Consecrate','Triangulation'],
+  'PURGE THE FOE|PRIORITY ASSETS':    ["Destroyer's Wrath",'Vital Link'],
+  'DISRUPTION|DISRUPTION':            ['Outmanoeuvre','Outmanoeuvre'],
+  'DISRUPTION|RECONNAISSANCE':        ['Smoke and Mirrors','Surveil the Foe'],
+  'DISRUPTION|PRIORITY ASSETS':       ['Locate and Deny','Extract Relic'],
+  'RECONNAISSANCE|RECONNAISSANCE':    ['Gather Intel','Gather Intel'],
+  'RECONNAISSANCE|PRIORITY ASSETS':   ['Search and Scour','Vanguard Operation'],
+  'PRIORITY ASSETS|PRIORITY ASSETS':  ['Sabotage','Sabotage'],
+};
+
+/** Devuelve [misión propia, misión del rival] a partir de las disposiciones. */
+function missionsFrom(mine, theirs){
+  if (!mine || !theirs) return null;
+  const direct = MISSION_TABLE[mine + '|' + theirs];
+  if (direct) return direct;
+  const flip = MISSION_TABLE[theirs + '|' + mine];
+  return flip ? [flip[1], flip[0]] : null;
+}
+
+/* Topes de puntos de victoria del Event Companion. */
+const VP_CAP = { perRound: 15, primary: 45, secondary: 45, painted: 10 };
+
 function newBattle(){
   const b = {
     id: Date.now(),
@@ -2815,7 +2874,9 @@ function newBattle(){
     mine: lists[0]?.id ?? null,
     opponent: '',
     oppList: null,          // id de una lista importada, si la cargaste
-    mission: '',
+    disp: { me: '', them: '' },   // Force Disposition de cada jugador
+    layout: '',                   // A, B o C
+    painted: { me: false, them: false },
     limit: 2000,
     // marcador: [{ primary, secondary }] por ronda y jugador
     me: Array.from({ length: ROUNDS }, () => ({ p: 0, s: 0 })),
@@ -2864,9 +2925,23 @@ function pace(b, who){
   return { spent, should, over: spent - should };
 }
 
+/* Total con los topes del Event Companion aplicados: 15 VP por ronda en
+ * cada fuente, 45 de primaria, 45 de secundarias y 10 por ejército pintado.
+ * Sin esto la app deja sumar cualquier cifra y el marcador no sirve. */
 function battleTotals(b){
-  const sum = (arr) => arr.reduce((a, r) => a + (+r.p || 0) + (+r.s || 0), 0);
-  return { me: sum(b.me), them: sum(b.them) };
+  const side = (who) => {
+    let prim = 0, sec = 0;
+    for (const r of b[who]) {
+      prim += Math.min(+r.p || 0, VP_CAP.perRound);
+      sec  += Math.min(+r.s || 0, VP_CAP.perRound);
+    }
+    prim = Math.min(prim, VP_CAP.primary);
+    sec  = Math.min(sec,  VP_CAP.secondary);
+    const paint = (b.painted && b.painted[who]) ? VP_CAP.painted : 0;
+    return { prim, sec, paint, total: prim + sec + paint };
+  };
+  const me = side('me'), them = side('them');
+  return { me: me.total, them: them.total, detail: { me, them } };
 }
 
 function renderBattles(){
@@ -2957,11 +3032,8 @@ function renderBattlesInner(){
     cfg.append(labelled('Their list', os));
   }
 
-  const mis = el('input'); mis.type='text'; mis.placeholder='mission';
-  mis.style.cssText='width:140px;font-size:13px'; mis.value = b.mission;
-  mis.oninput = () => { b.mission = mis.value; saveBattle(b); };
-  cfg.append(labelled('Mission', mis));
   v.append(cfg);
+  v.append(missionPanel(b));
 
   // ---- reloj
   v.append(clockPanel(b));
@@ -2974,6 +3046,17 @@ function renderBattlesInner(){
     '<div class="lm"><b>' + t.them + '</b><i>them</i></div>';
   v.append(head);
   v.append(scoreTable(b));
+  v.append(secondaryPanel(b));
+
+  const d = t.detail;
+  const brk = el('div','hint');
+  brk.textContent =
+    'Me: ' + d.me.prim + ' primary + ' + d.me.sec + ' secondary' +
+    (d.me.paint ? ' + ' + d.me.paint + ' painted' : '') + '   ·   ' +
+    'Them: ' + d.them.prim + ' + ' + d.them.sec +
+    (d.them.paint ? ' + ' + d.them.paint : '') +
+    '   ·   caps: 15/round, 45 primary, 45 secondary';
+  v.append(brk);
 
   // ---- puntos de mando y notas
   const cpBar = el('div','bar');
@@ -2981,7 +3064,12 @@ function renderBattlesInner(){
     const i = el('input'); i.type='text'; i.inputMode='numeric';
     i.style.cssText='width:56px;text-align:center;font-family:var(--mono)';
     i.value = b.cp[who];
-    i.onchange = () => { b.cp[who] = parseInt(i.value,10) || 0; saveBattle(b); };
+    i.onchange = () => {
+      // El Event Companion limita a 1 PM por ronda además del CP básico.
+      const max = b.round;
+      const n = Math.max(0, Math.min(max, parseInt(i.value,10) || 0));
+      b.cp[who] = n; i.value = n; saveBattle(b);
+    };
     cpBar.append(labelled(who === 'me' ? 'My CP' : 'Their CP', i));
   }
   // Selector simple: numSelect() rotula en puntos y mostraba "3 pts".
@@ -2993,6 +3081,10 @@ function renderBattlesInner(){
   }
   rnd.onchange = () => { b.round = +rnd.value; saveBattle(b); renderBattles(); };
   cpBar.append(rnd);
+  b.painted = b.painted || { me:false, them:false };
+  for (const who of ['me','them'])
+    cpBar.append(check(who === 'me' ? 'Mine painted' : 'Theirs painted', b.painted[who],
+      (x) => { b.painted[who] = x; saveBattle(b); renderBattles(); }));
   const fin = check('Finished', b.done, (x) => { b.done = x; saveBattle(b); renderBattles(); });
   cpBar.append(fin);
   v.append(cpBar);
@@ -3019,6 +3111,69 @@ function renderBattlesInner(){
       }
     }, 1000);
   }
+}
+
+/* Panel de misión: cada jugador elige su Force Disposition y la app deriva
+ * las dos misiones primarias. La disposición propia sale de la lista si ya
+ * la elegiste ahí. */
+function missionPanel(b){
+  b.disp = b.disp || { me:'', them:'' };
+  const box = el('div');
+  box.style.cssText = 'margin:14px 0';
+
+  // Sugerencia desde la lista: si la lista ya fijó su Force Disposition,
+  // no tiene sentido volver a preguntarla.
+  const mine = lists.find((x) => x.id === b.mine);
+  if (mine && mine.mission && !b.disp.me) {
+    const hit = DISPOSITIONS.find((d) => d.toUpperCase() === String(mine.mission).toUpperCase());
+    if (hit) { b.disp.me = hit; saveBattle(b); }
+  }
+
+  const bar = el('div','bar');
+  for (const who of ['me','them']) {
+    const sel = el('select');
+    sel.style.cssText = 'font-size:13px';
+    const o0 = el('option'); o0.value=''; o0.textContent='—'; sel.append(o0);
+    for (const d of DISPOSITIONS) {
+      const o = el('option'); o.value = d; o.textContent = d;
+      if (b.disp[who] === d) o.selected = true;
+      sel.append(o);
+    }
+    sel.onchange = () => { b.disp[who] = sel.value; saveBattle(b); renderBattles(); };
+    bar.append(labelled(who === 'me' ? 'My disposition' : 'Their disposition', sel));
+  }
+
+  const lay = el('select');
+  const l0 = el('option'); l0.value=''; l0.textContent='—'; lay.append(l0);
+  for (const x of ['A','B','C']) {
+    const o = el('option'); o.value=x; o.textContent='Layout ' + x;
+    if (b.layout === x) o.selected = true;
+    lay.append(o);
+  }
+  lay.onchange = () => { b.layout = lay.value; saveBattle(b); };
+  bar.append(labelled('Terrain', lay));
+
+  // El documento dice que la disposición se puede sortear entre las tres.
+  const roll = el('button','btn'); roll.textContent = 'ROLL';
+  roll.onclick = () => {
+    b.layout = ['A','B','C'][Math.floor(Math.random() * 3)];
+    saveBattle(b); renderBattles();
+  };
+  bar.append(roll);
+  box.append(bar);
+
+  const m = missionsFrom(b.disp.me, b.disp.them);
+  const out = el('div','misres');
+  if (m) {
+    b.mission = m[0]; saveBattle(b);
+    out.innerHTML =
+      '<div><b>' + esc(m[0]) + '</b><i>my primary mission</i></div>' +
+      '<div><b>' + esc(m[1]) + '</b><i>theirs</i></div>';
+  } else {
+    out.innerHTML = '<div class="empty">Pick both Force Dispositions to see the primary missions.</div>';
+  }
+  box.append(out);
+  return box;
 }
 
 function clockPanel(b){
@@ -3100,6 +3255,252 @@ function scoreTable(b){
     if (cell) cell.textContent = tot;
   });
   return t;
+}
+
+/* ============================================================
+   MISIONES SECUNDARIAS
+   
+   La app NO trae el texto de las cartas: son de la baraja de GW. Lo que
+   trae es la MECÁNICA — biblioteca propia, barajado, robo de dos por
+   ronda, descarte por 1 PM — y cada quien carga sus cartas con el nombre
+   y el máximo de VP.
+   
+   Se guardan una sola vez y sirven para todas las batallas.
+   ============================================================ */
+let secLib = [];
+
+function saveLib(){ store.put('col', { id: '__secondaries__', qty: JSON.stringify(secLib) }); }
+
+async function loadLib(){
+  const rows = await store.getAll('col');
+  const row = rows.find((r) => r.id === '__secondaries__');
+  try { secLib = row ? JSON.parse(row.qty) : []; } catch { secLib = []; }
+}
+
+/* Barajado Fisher-Yates con semilla guardada: el mazo tiene que sobrevivir
+   a un recargue de página en medio de la partida. */
+function shuffled(ids, seed){
+  const a = [...ids];
+  let s = seed >>> 0;
+  const rnd = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function secOf(id){ return secLib.find((c) => c.id === id); }
+
+/* Estado de secundarias dentro de una batalla. */
+function initSec(b){
+  b.sec = b.sec || { mode: 'tactical', seed: 0, deck: [], active: [], done: [], fixed: [], vp: {} };
+  return b.sec;
+}
+
+/* Roba hasta tener dos activas. Se llama al empezar cada ronda. */
+function drawSecondaries(b){
+  const s = initSec(b);
+  if (s.mode !== 'tactical') return;
+  while (s.active.length < 2 && s.deck.length) s.active.push(s.deck.shift());
+  saveBattle(b);
+}
+
+function secondaryPanel(b){
+  const s = initSec(b);
+  const box = el('div');
+  box.style.cssText = 'margin:16px 0';
+
+  const head = el('div','rrole');
+  const scored = Object.values(s.vp).reduce((a, n) => a + (+n || 0), 0);
+  head.innerHTML = '<span>SECONDARY MISSIONS</span><span>' + scored + ' VP</span>';
+  box.append(head);
+
+  if (!secLib.length) {
+    box.append(note('Your secondary mission library is empty. Add your cards below — ' +
+                    'name and maximum VP. The app does not ship the card text; that is ' +
+                    'in your Chapter Approved deck or the official app.'));
+    box.append(libEditor());
+    return box;
+  }
+
+  // modo
+  const bar = el('div','bar');
+  const mode = el('select');
+  for (const [v, t] of [['tactical','Tactical (draw 2 each round)'], ['fixed','Fixed (pick 2 for the battle)']]) {
+    const o = el('option'); o.value = v; o.textContent = t;
+    if (s.mode === v) o.selected = true;
+    mode.append(o);
+  }
+  mode.onchange = () => {
+    s.mode = mode.value; s.active = []; s.done = []; s.deck = [];
+    saveBattle(b); renderBattles();
+  };
+  bar.append(labelled('Mode', mode));
+
+  if (s.mode === 'tactical') {
+    const sh = el('button','btn');
+    sh.textContent = s.deck.length || s.active.length ? 'RESHUFFLE' : 'SHUFFLE DECK';
+    sh.onclick = () => {
+      s.seed = Date.now() % 2147483647;
+      s.deck = shuffled(secLib.map((c) => c.id), s.seed);
+      s.active = []; s.done = []; s.vp = {};
+      drawSecondaries(b); renderBattles();
+    };
+    bar.append(sh);
+
+    const dr = el('button','btn');
+    dr.textContent = 'DRAW TO 2';
+    dr.onclick = () => { drawSecondaries(b); renderBattles(); };
+    bar.append(dr);
+  }
+  box.append(bar);
+
+  if (s.mode === 'fixed') {
+    const sel = el('div');
+    sel.style.cssText = 'display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px';
+    for (const c of secLib) {
+      const on = s.fixed.includes(c.id);
+      const b2 = el('button', 'chip' + (on ? ' on' : ''));
+      b2.textContent = c.n + ' · ' + c.max;
+      b2.onclick = () => {
+        if (on) s.fixed = s.fixed.filter((x) => x !== c.id);
+        else if (s.fixed.length < 2) s.fixed.push(c.id);
+        saveBattle(b); renderBattles();
+      };
+      sel.append(b2);
+    }
+    box.append(sel);
+    if (s.fixed.length < 2) box.append(hint('Pick two fixed missions.'));
+    for (const id of s.fixed) box.append(secRow(b, id, false));
+    return box;
+  }
+
+  if (!s.deck.length && !s.active.length) {
+    box.append(hint('Shuffle the deck to start drawing.'));
+    return box;
+  }
+
+  for (const id of s.active) box.append(secRow(b, id, true));
+
+  const foot = el('div','hint');
+  foot.textContent = s.deck.length + ' left in deck · ' + s.done.length + ' achieved';
+  box.append(foot);
+  return box;
+}
+
+function secRow(b, id, tactical){
+  const s = b.sec, c = secOf(id);
+  const row = el('div','slot');
+  if (!c) { row.textContent = 'Card removed from the library.'; return row; }
+
+  const info = el('div','id');
+  info.innerHTML = '<div class="nm">' + esc(c.n) + '</div>' +
+    '<div class="meta">max ' + c.max + ' VP</div>';
+
+  const stepv = el('div','step');
+  const minus = el('button'); minus.textContent = '\u2212';
+  const val = el('input'); val.type='text'; val.inputMode='numeric';
+  val.value = s.vp[id] ?? 0;
+  const plus = el('button'); plus.textContent = '+';
+  const set = (n) => {
+    n = Math.max(0, Math.min(+c.max || 99, n | 0));
+    s.vp[id] = n; val.value = n; saveBattle(b); syncSecToScore(b);
+  };
+  minus.onclick = () => set((s.vp[id] ?? 0) - 1);
+  plus.onclick  = () => set((s.vp[id] ?? 0) + 1);
+  val.onchange  = () => set(parseInt(val.value,10) || 0);
+  stepv.append(minus, val, plus);
+
+  row.append(info, stepv);
+
+  if (tactical) {
+    const ok = el('button','btn'); ok.textContent = 'ACHIEVED';
+    ok.onclick = () => {
+      s.active = s.active.filter((x) => x !== id);
+      s.done.push(id);
+      saveBattle(b); renderBattles();
+    };
+    // Descartar cuesta y da 1 PM: es la regla, y conviene que se vea.
+    const dc = el('button','btn'); dc.textContent = 'DISCARD +1CP';
+    dc.onclick = () => {
+      s.active = s.active.filter((x) => x !== id);
+      s.deck.push(id);
+      b.cp.me = Math.min(b.round, (b.cp.me || 0) + 1);
+      saveBattle(b); renderBattles();
+    };
+    row.append(ok, dc);
+  }
+  return row;
+}
+
+/* Los VP de secundarias alimentan la fila del marcador de la ronda actual. */
+function syncSecToScore(b){
+  const s = b.sec;
+  const total = Object.values(s.vp).reduce((a, n) => a + (+n || 0), 0);
+  const prev = b.me.reduce((a, r, i) => i < b.round - 1 ? a + (+r.s || 0) : a, 0);
+  b.me[b.round - 1].s = Math.max(0, Math.min(VP_CAP.perRound, total - prev));
+  saveBattle(b);
+}
+
+/* Editor de la biblioteca. Se comparte entre batallas. */
+function libEditor(){
+  const box = el('div');
+  box.style.cssText = 'margin-top:10px';
+
+  for (const [i, c] of secLib.entries()) {
+    const row = el('div','slot');
+    const n = el('input'); n.type='text'; n.value = c.n; n.placeholder='card name';
+    n.style.cssText = 'flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:15px;' +
+      'background:transparent;border:none;border-bottom:1px solid var(--rule2);padding:3px 0;color:var(--ink)';
+    n.oninput = () => { c.n = n.value; saveLib(); };
+
+    const m = el('input'); m.type='text'; m.inputMode='numeric'; m.value = c.max;
+    m.style.cssText = 'width:56px;text-align:center;font-family:var(--mono);padding:5px;' +
+      'background:var(--panel);border:1px solid var(--rule2);border-radius:2px;color:var(--ink)';
+    m.onchange = () => { c.max = parseInt(m.value,10) || 0; saveLib(); };
+
+    const rm = el('button','btn'); rm.textContent='REMOVE';
+    rm.onclick = () => { secLib.splice(i,1); saveLib(); renderBattles(); };
+
+    row.append(n, m, rm);
+    box.append(row);
+  }
+
+  const bar = el('div','bar');
+  const add = el('button','btn'); add.textContent='+ CARD';
+  add.onclick = () => {
+    secLib.push({ id: 'c' + Date.now(), n: '', max: 5 });
+    saveLib(); renderBattles();
+  };
+  const imp = el('button','btn'); imp.textContent='IMPORT';
+  imp.onclick = importLib;
+  const exp = el('button','btn'); exp.textContent='EXPORT';
+  exp.onclick = () => {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(secLib,null,2)], {type:'application/json'}));
+    const a = document.createElement('a'); a.href=url; a.download='armoury-secondaries.json'; a.click();
+    URL.revokeObjectURL(url);
+  };
+  bar.append(add, imp, exp);
+  box.append(bar);
+  box.append(hint('Cards are shared across every battle. Export to share your set with a friend.'));
+  return box;
+}
+
+function importLib(){
+  const inp = document.createElement('input');
+  inp.type='file'; inp.accept='application/json';
+  inp.onchange = async () => {
+    try {
+      const d = JSON.parse(await inp.files[0].text());
+      if (!Array.isArray(d)) throw new Error('Not a card list.');
+      secLib = d.filter((c) => c && c.n).map((c, i) => ({
+        id: c.id || 'c' + (Date.now() + i), n: String(c.n), max: parseInt(c.max,10) || 5,
+      }));
+      saveLib(); renderBattles();
+    } catch (e) { alert(e.message || 'Could not read that file.'); }
+  };
+  inp.click();
 }
 
 boot();
