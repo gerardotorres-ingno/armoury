@@ -21,6 +21,16 @@ const files = (await fs.readdir(OUT_DIR)).filter(
   (f) => f.endsWith('.json') && f !== '_index.json'
 );
 
+/* Misiones: dataset comunitario IRONBUILT (CC BY-SA 4.0). Opcional —
+ * sin él, la app usa la tabla mínima de nombres y la biblioteca manual. */
+let MISSIONS = null;
+try {
+  MISSIONS = JSON.parse(await fs.readFile('./output-missions/missions.json', 'utf8'));
+  console.log(`  Misiones ${MISSIONS.version} (${MISSIONS.cards.length} secundarias) cargadas`);
+} catch {
+  console.log('  Sin misiones (corré `node missions.mjs`)');
+}
+
 /* ------------------------------------------------------------------
  * MFM — la fuente oficial de puntos.
  *
@@ -300,6 +310,7 @@ const payload = {
   build,
   roles: [...roleTable.values()].sort((a, b) => a.order - b.order),
   mfmVersion: MFM?.version ?? null,
+  missions: MISSIONS,
   revision: JSON.parse(await fs.readFile(path.join(OUT_DIR, '_index.json'), 'utf8')).version,
   generatedAt: new Date().toISOString(),
   factions,
