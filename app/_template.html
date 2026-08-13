@@ -124,6 +124,14 @@ details.scope b{color:var(--ink)}
 .clkp{font-family:var(--mono);font-size:10.5px;color:var(--ink2);margin-bottom:9px}
 .clks .btn{width:100%}
 
+.crules,.misres u{display:block}
+.crules u,.misres u{font-family:var(--mono);font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink2);text-decoration:none;margin-top:6px}
+.crules em,.misres em{display:block;font-style:normal;font-size:12px;line-height:1.45;
+  color:var(--ink);padding-left:14px;text-indent:-14px}
+.crules em b,.misres em b{font-family:var(--mono);color:var(--ochre);margin-right:5px}
+.misres em{font-size:11.5px}
+
 .chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
   background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
   color:var(--ink);cursor:pointer}
@@ -2859,13 +2867,28 @@ const MISSION_TABLE = {
   'PRIORITY ASSETS|PRIORITY ASSETS':  ['Sabotage','Sabotage'],
 };
 
+/* Con el dataset comunitario cargado, las disposiciones y la matriz salen
+ * de ahí; la tabla de arriba queda como respaldo si no se corrió missions.mjs. */
+function dispositionList(){
+  return DATA.missions?.dispositions ?? DISPOSITIONS;
+}
+
+/** Celda completa de la matriz: nombre de misión y sus tramos de puntuación. */
+function primaryCell(mine, theirs){
+  const mx = DATA.missions?.matrix;
+  if (mx && mx[mine] && mx[mine][theirs]) return mx[mine][theirs];
+  const up = (x) => String(x).toUpperCase();
+  const t = MISSION_TABLE[up(mine) + '|' + up(theirs)];
+  if (t) return { n: t[0], score: [] };
+  const f = MISSION_TABLE[up(theirs) + '|' + up(mine)];
+  return f ? { n: f[1], score: [] } : null;
+}
+
 /** Devuelve [misión propia, misión del rival] a partir de las disposiciones. */
 function missionsFrom(mine, theirs){
   if (!mine || !theirs) return null;
-  const direct = MISSION_TABLE[mine + '|' + theirs];
-  if (direct) return direct;
-  const flip = MISSION_TABLE[theirs + '|' + mine];
-  return flip ? [flip[1], flip[0]] : null;
+  const a = primaryCell(mine, theirs), b = primaryCell(theirs, mine);
+  return (a && b) ? [a.n, b.n] : null;
 }
 
 /* Topes de puntos de victoria del Event Companion. */
@@ -3143,7 +3166,7 @@ function missionPanel(b){
   // no tiene sentido volver a preguntarla.
   const mine = lists.find((x) => x.id === b.mine);
   if (mine && mine.mission && !b.disp.me) {
-    const hit = DISPOSITIONS.find((d) => d.toUpperCase() === String(mine.mission).toUpperCase());
+    const hit = dispositionList().find((d) => d.toUpperCase() === String(mine.mission).toUpperCase());
     if (hit) { b.disp.me = hit; saveBattle(b); }
   }
 
@@ -3152,7 +3175,7 @@ function missionPanel(b){
     const sel = el('select');
     sel.style.cssText = 'font-size:13px';
     const o0 = el('option'); o0.value=''; o0.textContent='—'; sel.append(o0);
-    for (const d of DISPOSITIONS) {
+    for (const d of dispositionList()) {
       const o = el('option'); o.value = d; o.textContent = d;
       if (b.disp[who] === d) o.selected = true;
       sel.append(o);
@@ -3184,9 +3207,14 @@ function missionPanel(b){
   const out = el('div','misres');
   if (m) {
     b.mission = m[0]; saveBattle(b);
+    const cellMe = primaryCell(b.disp.me, b.disp.them);
+    const cellTh = primaryCell(b.disp.them, b.disp.me);
+    const tiers = (c) => (c?.score ?? []).map((t) =>
+      '<u>' + esc(t.w) + (t.max ? ' · max ' + esc(t.max) : '') + '</u>' +
+      t.i.map(([vp, tx]) => '<em><b>' + esc(vp) + '</b> ' + esc(tx) + '</em>').join('')).join('');
     out.innerHTML =
-      '<div><b>' + esc(m[0]) + '</b><i>my primary mission</i></div>' +
-      '<div><b>' + esc(m[1]) + '</b><i>theirs</i></div>';
+      '<div><b>' + esc(m[0]) + '</b><i>my primary mission</i>' + tiers(cellMe) + '</div>' +
+      '<div><b>' + esc(m[1]) + '</b><i>theirs</i>' + tiers(cellTh) + '</div>';
   } else {
     out.innerHTML = '<div class="empty">Pick both Force Dispositions to see the primary missions.</div>';
   }
@@ -3295,6 +3323,15 @@ async function loadLib(){
   const rows = await store.getAll('misc');
   const row = rows.find((r) => r.id === 'secondaries');
   try { secLib = row ? JSON.parse(row.qty) : []; } catch { secLib = []; }
+
+  // Sin biblioteca propia, se usa la del dataset comunitario. Se puede
+  // editar: al tocarla queda guardada como tuya y deja de sobreescribirse.
+  if (!secLib.length && DATA.missions?.cards?.length) {
+    secLib = DATA.missions.cards.map((c) => ({
+      id: c.id, n: c.n, max: c.max, pr: 0,
+      type: c.type, drawn: c.drawn, tiers: c.tiers,
+    }));
+  }
 }
 
 /* Barajado Fisher-Yates con semilla guardada: el mazo tiene que sobrevivir
@@ -3352,6 +3389,14 @@ function secondaryPanel(b){
   const scored = Object.values(s.vp).reduce((a, n) => a + (+n || 0), 0);
   head.innerHTML = '<span>SECONDARY MISSIONS</span><span>' + scored + ' VP</span>';
   box.append(head);
+
+  if (DATA.missions) {
+    const cr = el('div','hint');
+    cr.innerHTML = 'Missions and cards from the community dataset ' +
+      '<b>' + esc(DATA.missions.source) + '</b> (' + esc(DATA.missions.licence) + '), ' +
+      'version ' + esc(DATA.missions.version) + '. Unofficial; not affiliated with Games Workshop.';
+    box.append(cr);
+  }
 
   if (secLib.length < 2) {
     box.append(note(secLib.length
@@ -3448,9 +3493,15 @@ function secRow(b, id, tactical){
   const cap = Math.min(capRound, capLeft);
 
   const info = el('div','id');
+  const rules = (c.tiers || []).map((t) =>
+    '<u>' + esc([t.mode, t.w].filter(Boolean).join(' · ')) +
+    (t.max ? ' · max ' + esc(t.max) : '') + '</u>' +
+    (t.i || []).map(([vp, tx]) => '<em><b>' + esc(vp) + '</b> ' + esc(tx) + '</em>').join('')
+  ).join('');
   info.innerHTML = '<div class="nm">' + esc(c.n) + '</div>' +
     '<div class="meta">' + (c.pr ? c.pr + ' per round · ' : '') + 'max ' + c.max +
-    (scoredBefore ? ' · ' + scoredBefore + ' already scored' : '') + '</div>';
+    (scoredBefore ? ' · ' + scoredBefore + ' already scored' : '') + '</div>' +
+    (rules ? '<div class="crules">' + rules + '</div>' : '');
 
   const stepv = el('div','step');
   const minus = el('button'); minus.textContent = '\u2212';
