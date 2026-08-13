@@ -477,7 +477,7 @@ const DB_NAME = 'armoury';
  *
  * Los datos son chicos (colección + listas), así que localStorage sobra.
  * ---------------------------------------------------------------- */
-const NS = { col: 'collection', lists: 'lists', battles: 'battles' };
+const NS = { col: 'collection', lists: 'lists', battles: 'battles', misc: 'misc' };
 let db = null;
 
 const store = {
@@ -496,7 +496,7 @@ const store = {
       const finish = (v) => { if (!done) { done = true; ok(v); } };
       try {
         if (!self.indexedDB) return finish(false);
-        const r = indexedDB.open(DB_NAME, 3);
+        const r = indexedDB.open(DB_NAME, 4);
         r.onupgradeneeded = () => {
           const d = r.result;
           for (const name of Object.values(NS))
@@ -617,6 +617,10 @@ async function start(){
   await store.init();
   for (const row of await loadAll()) {
     if (row.id === '__name__') { document.getElementById('cname').value = row.qty; continue; }
+    // Claves internas: la versión anterior guardó la biblioteca acá y
+    // aparecía como una miniatura con una cantidad absurda.
+    if (String(row.id).startsWith('__')) { store.del('col', row.id); continue; }
+    if (typeof row.qty !== 'number') continue;
     owned.set(row.id, row.qty);
   }
   document.getElementById('cname').addEventListener('input', e => {
@@ -3079,7 +3083,13 @@ function renderBattlesInner(){
     if (i === b.round) o.selected = true;
     rnd.append(o);
   }
-  rnd.onchange = () => { b.round = +rnd.value; saveBattle(b); renderBattles(); };
+  rnd.onchange = () => {
+    b.round = +rnd.value;
+    // Al empezar la ronda se roba hasta tener dos activas: es la regla, y
+    // esperar a que el usuario apriete un botón era un paso de más.
+    drawSecondaries(b);
+    saveBattle(b); renderBattles();
+  };
   cpBar.append(rnd);
   b.painted = b.painted || { me:false, them:false };
   for (const who of ['me','them'])
@@ -3269,11 +3279,13 @@ function scoreTable(b){
    ============================================================ */
 let secLib = [];
 
-function saveLib(){ store.put('col', { id: '__secondaries__', qty: JSON.stringify(secLib) }); }
+/* En su propio almacén: guardarla junto a la colección la hacía aparecer
+ * como una miniatura más, con un JSON gigante en el campo de cantidad. */
+function saveLib(){ store.put('misc', { id: 'secondaries', qty: JSON.stringify(secLib) }); }
 
 async function loadLib(){
-  const rows = await store.getAll('col');
-  const row = rows.find((r) => r.id === '__secondaries__');
+  const rows = await store.getAll('misc');
+  const row = rows.find((r) => r.id === 'secondaries');
   try { secLib = row ? JSON.parse(row.qty) : []; } catch { secLib = []; }
 }
 
@@ -3421,6 +3433,7 @@ function secRow(b, id, tactical){
       s.done.push(id);
       saveBattle(b); renderBattles();
     };
+    ok.title = 'Scored — the card leaves play';
     // Descartar cuesta y da 1 PM: es la regla, y conviene que se vea.
     const dc = el('button','btn'); dc.textContent = 'DISCARD +1CP';
     dc.onclick = () => {
