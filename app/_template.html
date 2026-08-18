@@ -1237,7 +1237,7 @@ function review(l){
       perGroup.set(gi, (perGroup.get(gi) ?? 0) + v);
 
       // Tope propio de la opción, ya escalado al tamaño de la unidad.
-      const cap = capFor(g.opts[oi], sl.size, u);
+      const cap = capFor(g.opts[oi], sl.size, u, g, sl);
       if (cap != null && v > cap)
         out.push({ hard:false, t:u.n + ' \u2014 ' + g.opts[oi][0] + ': ' + v,
                    d:'Maximum ' + cap + ' in a unit of ' + sl.size + '.' });
@@ -1856,11 +1856,11 @@ function wargearFor(l, sl, u){
       if (isFixedOpt(opt)) continue;
 
       const name = opt[0];
-      const own = capFor(opt, sl.size, u);
+      const own = capFor(opt, sl.size, u, g, sl);
       const cur = sl.gear[gi + ':' + oi] ?? 0;
       const max = modelGroup
         ? Math.min(own ?? Infinity, cur + freeInUnit)
-        : own;
+        : (own ?? 1);
       const key = gi + ':' + oi;
       const row = el('div');
       row.style.cssText = 'display:flex;align-items:center;gap:8px;padding:3px 0';
@@ -1882,7 +1882,7 @@ function wargearFor(l, sl, u){
       // render, varios clics seguidos sobre el mismo botón se pasarían del
       // tamaño de la unidad antes de que la pantalla se actualice.
       const set = (n) => {
-        let cap = capFor(opt, sl.size, u) ?? 99;
+        let cap = capFor(opt, sl.size, u, g, sl) ?? 1;
         if (modelGroup) {
           const others = g.opts.reduce((a, o, j) => {
             if (j === oi) return a;
@@ -2170,7 +2170,7 @@ function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.len
  * La proporción es una inferencia, no un dato: si el catálogo declarara la
  * escalera, ganaría ella.
  */
-function capFor(opt, size, u){
+function capFor(opt, size, u, g, sl){
   const [, max, , scale] = opt;
   if (scale && scale.length) {
     let eff = max;
@@ -2179,6 +2179,14 @@ function capFor(opt, size, u){
   }
   if (max != null && u && u.mx && u.mx > 1 && size < u.mx) {
     return Math.floor(size * max / u.mx) || (max > 0 ? 1 : 0);
+  }
+
+  // Sin tope declarado (el 64 % de las opciones), el límite físico es la
+  // cantidad de miniaturas que pueden llevarla: un arma por modelo. El Lord
+  // on Juggernaut es un solo modelo, así que su pistola de plasma es 1 — no
+  // 99, que era el valor de emergencia y en la práctica significaba infinito.
+  if (max == null && g && sl) {
+    return g.ow ? modelCount(u, sl, g.ow) : (sl.size || 1);
   }
   return max;
 }
