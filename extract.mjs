@@ -567,6 +567,77 @@ function compositionOf(entry, ctx, weaponNames) {
   return null;
 }
 
+/**
+ * TOPES DE PUNTOS ALIADOS.
+ *
+ * Algunos destacamentos dejan incluir unidades de otra facción hasta cierto
+ * gasto: World Eaters admite BLOOD LEGIONS por 500 pts en Incursion, 1000 en
+ * Strike Force y 1500 en Onslaught.
+ *
+ * En el dato es una constraint sobre el coste `pts` con scope=force y valor
+ * base 0, más modificadores que la suben según el tamaño de partida elegido.
+ * El tamaño llega como childId, así que hay que resolverlo contra las
+ * entradas de Battle Size del game system.
+ */
+const BATTLE_SIZE_IDS = {
+  'd62d-db22-4893-4bc0': 1000,   // Incursion
+  'baf8-997f-e323-a090': 2000,   // Strike Force
+  '4204-82d0-908c-a62a': 3000,   // Onslaught
+};
+
+function allyCapsOf(sources) {
+  const PTS = '51b2-306e-1021-d207';
+  const out = [];
+  // También la Library propia: Aeldari y T'au declaran ahí sus topes
+  // ("Harlequin Allies", "Non-Kroot") y mirando sólo el catálogo se perdían.
+  const stack = asArray(sources).flatMap((catalogue) => [
+    ...asArray(catalogue.sharedSelectionEntries),
+    ...asArray(catalogue.sharedSelectionEntryGroups),
+    ...asArray(catalogue.entryLinks),
+    ...asArray(catalogue.categoryEntries),
+    ...asArray(catalogue.forceEntries),
+  ]);
+
+  while (stack.length) {
+    const n = stack.pop();
+    const cap = asArray(n.constraints).find((c) => c.field === PTS && c.type === 'max');
+    if (cap && n.name) {
+      const by = {};
+      const mods = [
+        ...asArray(n.modifiers),
+        ...asArray(n.modifierGroups).flatMap((g) => asArray(g.modifiers)),
+      ];
+      for (const m of mods) {
+        if (m.type !== 'set' || m.field !== cap.id) continue;
+        // La condición llega de dos formas: suelta en `conditions` (World
+        // Eaters) o dentro de `conditionGroups` (T'au, Aeldari). Leer sólo
+        // la primera perdía la mitad de los topes.
+        const conds = [
+          ...asArray(m.conditions),
+          ...asArray(m.conditionGroups).flatMap((g) => asArray(g.conditions)),
+        ];
+        const hit = conds.find((c) => BATTLE_SIZE_IDS[c.childId]);
+        if (hit) by[BATTLE_SIZE_IDS[hit.childId]] = Number(m.value);
+      }
+      if (Object.keys(by).length || Number(cap.value) > 0) {
+        out.push({
+          name: n.name.replace(/^Faction:\s*/, ''),
+          base: Number(cap.value),
+          by,
+          scope: cap.scope,
+        });
+      }
+    }
+    for (const e of asArray(n.selectionEntries)) stack.push(e);
+    for (const g of asArray(n.selectionEntryGroups)) stack.push(g);
+    for (const l of asArray(n.entryLinks)) stack.push(l);
+  }
+
+  // Deduplicar por nombre: el mismo tope aparece en varias ramas.
+  const seen = new Set();
+  return out.filter((x) => !seen.has(x.name) && seen.add(x.name));
+}
+
 /** Facción declarada en categoryLinks: "Faction: Necrons" */
 function factionOf(entry) {
   for (const cl of asArray(entry.categoryLinks)) {
@@ -771,9 +842,14 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
   // para no arrastrar las de Knights o Agents, que se enlazan como aliados).
   const core = catalogue.name.replace(/^(Imperium|Chaos|Xenos)\s*-\s*/, '').trim();
   const sources = [catalogue];
+  // Library propia por nombre (Astra Militarum) y, para los topes de aliados,
+  // también la Library de la rama: Craftworlds cuelga de "Aeldari Library".
+  const branch = (catalogue.name.match(/^(?:Imperium|Chaos|Xenos)\s*-\s*(\w+)/) || [])[1] || '';
   for (const cl of asArray(catalogue.catalogueLinks)) {
     const lib = libIndex.get(cl.targetId);
-    if (lib && lib.library === true && (lib.name ?? '').includes(core)) sources.push(lib);
+    if (!lib || lib.library !== true) continue;
+    const n = lib.name ?? '';
+    if (n.includes(core) || (branch && n.includes(branch))) sources.push(lib);
   }
 
   const detachments = [];
@@ -798,6 +874,7 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
     }
   }
   detachments.sort((a, b) => a.name.localeCompare(b.name));
+  const allyCaps = allyCapsOf(sources);
 
   enhancements.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -858,6 +935,7 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
       .filter(Boolean),
     detachments,
     enhancements,
+    allyCaps,
     revision: catalogue.revision,
     file: fileName,
     counts: {
