@@ -17,6 +17,16 @@ import path from 'node:path';
 const OUT_DIR = './output';
 const APP_DIR = './app';
 
+/* Topes de aliados declarados en el game system, comunes a todas las
+ * facciones. Se leen del catálogo raíz de la 11ª edición. */
+let GLOBAL_ALLY_CAPS = [];
+try {
+  const root = JSON.parse(await fs.readFile(
+    path.join(OUT_DIR, 'warhammer-40-000-11th-edition.json'), 'utf8'));
+  GLOBAL_ALLY_CAPS = (root.allyCaps ?? []).filter((a) => a.name !== 'Army Roster');
+  console.log(`  Topes de aliados globales: ${GLOBAL_ALLY_CAPS.map((a) => a.name).join(', ')}`);
+} catch {}
+
 const files = (await fs.readdir(OUT_DIR)).filter(
   (f) => f.endsWith('.json') && f !== '_index.json'
 );
@@ -172,9 +182,27 @@ for (const file of files) {
   // Sólo nativas. Las aliadas se muestran desde SU propia facción: si un
   // jugador tiene Guardia Imperial, la carga en Astra Militarum, no dentro
   // de Genestealer Cults.
+  // Facciones distintas de la nativa presentes en el catálogo: son las que
+  // pueden aparecer como aliadas.
+  const usedFactions = new Set(
+    d.datasheets.filter((x) => x.faction && x.faction !== d.nativeFaction).map((x) => x.faction)
+  );
+
   let factionExtras = null;
+  // Nativas MÁS las facciones aliadas con tope declarado. Bloodletters y
+  // compañía viven sólo dentro del catálogo de World Eaters con facción
+  // "Blood Legions": el filtro de nativas las borraba del mapa, aunque son
+  // parte legítima del ejército hasta cierto gasto.
+  // Los topes globales (Legiones Daemonica, Astra Militarum, Tyranids…) están
+  // declarados en el game system, no en cada facción. Se combinan con los
+  // propios y después se filtran por lo que cada catálogo realmente usa.
+  const caps = new Map();
+  for (const a of GLOBAL_ALLY_CAPS) caps.set(a.name, a.by);
+  for (const a of (d.allyCaps ?? [])) caps.set(a.name, a.by);
+
+  const allyNames = new Set(caps.keys());
   const units = d.datasheets
-    .filter((x) => x.native)
+    .filter((x) => x.native || (x.faction && allyNames.has(x.faction)))
     .map((x) => ({
       id: x.id,
       n: x.name,
@@ -232,6 +260,7 @@ for (const file of files) {
       w: (x.weapons ?? []).map((k) =>
            [k.n, k.melee ? 1 : 0, k.range, k.a, k.skill, k.s, k.ap, k.d, k.kw]),
       r: roleOf(x.keywords),
+      fc: x.faction || null,     // facción declarada: identifica los aliados
     }));
 
   if (!units.length) continue;
@@ -295,6 +324,11 @@ for (const file of files) {
     // Nombres de catálogo de los que puede tomar unidades. Se convierten a
     // slugs después, cuando ya están todas las facciones cargadas.
     linkNames: d.links ?? [],
+    // Topes de puntos para facciones aliadas: [nombre, {tamaño: tope}]
+    // Sólo los grupos que este catálogo puede usar de verdad.
+    ally: [...caps.entries()]
+            .filter(([n, by]) => Object.keys(by || {}).length && usedFactions.has(n))
+            .map(([n, by]) => [n, by]),
     det: factionExtras?.det ?? (d.detachments ?? []).map((x) => [x.name, x.dp, null]),
     enhBy: factionExtras?.enhBy ?? null,
     enh: (d.enhancements ?? []).map((x) => [x.name, x.pts]),
