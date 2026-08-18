@@ -414,6 +414,7 @@ input[type=search]::placeholder{color:var(--ink2)}
   .pr-kw{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;color:#555;
     text-transform:uppercase;border-top:1px solid #ccc;margin-top:5px;padding-top:3px}
   .pr-more{font-family:var(--mono);font-size:8.5px;color:#777;margin-top:3px}
+  .ros td.lead,.pr-roster td.lead{padding-left:20px;color:#333}
   .pr-unit .abil p{font-size:11px}
   .pr-unit .wp{font-size:11px}
   .pr-unit .stat{border-color:#999}
@@ -1233,7 +1234,7 @@ function review(l){
       perGroup.set(gi, (perGroup.get(gi) ?? 0) + v);
 
       // Tope propio de la opción, ya escalado al tamaño de la unidad.
-      const cap = capFor(g.opts[oi], sl.size);
+      const cap = capFor(g.opts[oi], sl.size, u);
       if (cap != null && v > cap)
         out.push({ hard:false, t:u.n + ' \u2014 ' + g.opts[oi][0] + ': ' + v,
                    d:'Maximum ' + cap + ' in a unit of ' + sl.size + '.' });
@@ -1614,18 +1615,31 @@ function unitDetail(l, i){
     lab.textContent = 'ATTACHED TO';
     const at = el('select'); at.style.width = '100%';
     const none = el('option'); none.value=''; none.textContent='not attached'; at.append(none);
+    // Una unidad sólo admite un líder: si ya está tomada, no se ofrece.
+    const taken = new Set();
+    for (const [j, s2] of l.slots.entries())
+      if (j !== i && s2.attach != null) taken.add(s2.attach - 1);
+
+    let free = 0;
     for (const [j, other] of l.slots.entries()) {
       if (j === i) continue;
       const ou = unitOf(l, other.unitId);
       if (!ou || !u.ld.includes(ou.id)) continue;
+      if (taken.has(j) && !sl_eq(sl.attach, j + 1)) continue;
+      free++;
       const o = el('option'); o.value = String(j + 1);
       o.textContent = ou.n + (other.size > 1 ? ' \u00d7' + other.size : '');
       if (sl_eq(sl.attach, j + 1)) o.selected = true;
       at.append(o);
     }
+    if (!free && sl.attach == null) {
+      const h = el('div','hint');
+      h.textContent = 'Every unit it can lead is already taken by another leader.';
+      w.append(lab, at, h);
+      bd.append(w);
+    }
     at.onchange = () => { sl.attach = at.value ? +at.value : null; saveList(l); renderLists(); };
-    w.append(lab, at);
-    bd.append(w);
+    if (!w.children.length) { w.append(lab, at); bd.append(w); }
   }
 
   if (u.o && u.o.length) bd.append(wargearFor(l, sl, u));
@@ -1652,6 +1666,16 @@ function unitDetail(l, i){
 /* Cuántos modelos hay de una fila de composición, dado el tamaño elegido.
  * Las filas fijas (sargento) valen su número; la de tropa se queda con el
  * resto. Hace falta para saber si una elección es de UN modelo o de varios. */
+/* Modelos disponibles para cambiar de arma: el tamaño menos las filas fijas
+ * de la composición, salvo que el propio grupo incluya esa fila. */
+function troopCount(u, sl, g){
+  const inGroup = new Set((g.opts || []).map((o) => o[0]));
+  let fixed = 0;
+  for (const [n, min, max] of (u.cp || []))
+    if (min != null && min === max && !inGroup.has(n)) fixed += min;
+  return Math.max(0, sl.size - fixed);
+}
+
 function modelCount(u, sl, name){
   if (!name) return 1;
 
@@ -1769,22 +1793,31 @@ function wargearFor(l, sl, u){
     // escuadra de 10. El tope de cada opción es el menor entre el suyo y
     // lo que queda libre.
     const modelGroup = g.opts.some((o) => o[4]);
+    // Las variantes salen de la TROPA, no del total: en una unidad de 10 con
+    // campeón fijo, sólo 9 pueden cambiar de arma.
+    const pool = modelGroup ? troopCount(u, sl, g) : sl.size;
     const usedInGroup = g.opts.reduce((a, o, j) => {
       const q = sl.gear[gi + ':' + j];
-      return a + (Number.isFinite(q) ? q : (o[1] === 1 && !o[3] ? 1 : 0));
+      return a + (Number.isFinite(q) ? q : 0);
     }, 0);
-    const freeInUnit = modelGroup ? Math.max(0, sl.size - usedInGroup) : Infinity;
+    const freeInUnit = modelGroup ? Math.max(0, pool - usedInGroup) : Infinity;
 
     if (modelGroup) {
       const note = el('div');
       note.style.cssText = 'font-family:var(--mono);font-size:9.5px;color:var(--ink2);margin:-1px 0 3px';
-      note.textContent = usedInGroup + ' of ' + sl.size + ' models assigned';
+      note.textContent = usedInGroup + ' of ' + pool + ' models assigned';
       box.append(note);
     }
 
     for (const [oi, opt] of g.opts.entries()) {
+      // Equipo FIJO colado en un grupo de elección: el Lord on Juggernaut
+      // trae bladed horn y exalted chainblade con min = max = 1, o sea que
+      // no se eligen, vienen puestos. Mostrarlos como contador hacía creer
+      // que eran opcionales.
+      if (opt[6] != null && opt[1] != null && opt[6] === opt[1] && !opt[4]) continue;
+
       const name = opt[0];
-      const own = capFor(opt, sl.size);
+      const own = capFor(opt, sl.size, u);
       const cur = sl.gear[gi + ':' + oi] ?? 0;
       const max = modelGroup
         ? Math.min(own ?? Infinity, cur + freeInUnit)
@@ -1810,14 +1843,14 @@ function wargearFor(l, sl, u){
       // render, varios clics seguidos sobre el mismo botón se pasarían del
       // tamaño de la unidad antes de que la pantalla se actualice.
       const set = (n) => {
-        let cap = capFor(opt, sl.size) ?? 99;
+        let cap = capFor(opt, sl.size, u) ?? 99;
         if (modelGroup) {
           const others = g.opts.reduce((a, o, j) => {
             if (j === oi) return a;
             const q = sl.gear[gi + ':' + j];
-            return a + (Number.isFinite(q) ? q : (o[1] === 1 && !o[3] ? 1 : 0));
+            return a + (Number.isFinite(q) ? q : 0);
           }, 0);
-          cap = Math.min(cap, Math.max(0, sl.size - others));
+          cap = Math.min(cap, Math.max(0, troopCount(u, sl, g) - others));
         }
         n = Math.max(0, Math.min(cap, n | 0));
         if (n) sl.gear[key] = n; else delete sl.gear[key];
@@ -1868,6 +1901,13 @@ function weaponsAfterGear(u, sl){
   const inGroups = new Set();
   const chosen = new Set();
 
+  // Armas que la composición trae de fábrica: la elección del campeón no
+  // puede borrarlas. Si el campeón cambia su bolt pistol por una de plasma,
+  // los otros nueve siguen llevando bolt pistol.
+  const fromComposition = new Set(
+    (u.cp || []).flatMap(([, , , arms]) => (arms || []).map(wkey))
+  );
+
   for (const [gi, g] of u.o.entries()) {
     if (g.k !== 'one') continue;
     const names = g.opts.map(([n]) => n);
@@ -1893,6 +1933,7 @@ function weaponsAfterGear(u, sl){
   // (el equipo fijo, como las garras del Defiler).
   return u.w.filter((w) => {
     const k = wkey(w[0]);
+    if (fromComposition.has(k)) return true;
     return chosen.has(k) || !inGroups.has(k);
   });
 }
@@ -2078,12 +2119,29 @@ function hasSheet(u){ return !!(u.st || (u.w && u.w.length) || (u.ab && u.ab.len
  * "1 cada 5 modelos" viene como un máximo base más una escalera: el
  * Terminator w/ Heavy Weapon es max 1, y max 2 cuando la unidad tiene 10.
  * Sin esto, la app permitía uno solo aunque llevaras diez. */
-function capFor(opt, size){
+/* Tope efectivo de una opción para un tamaño de unidad.
+ *
+ * Dos casos:
+ *  - Con escalera declarada (Terminator w/ Heavy Weapon: 1, y 2 a los 10),
+ *    manda la escalera: es un dato explícito.
+ *  - Sin escalera, el catálogo declara el tope de la unidad MÁS GRANDE.
+ *    Khorne Berzerkers dice max 4 sobre una unidad de 20 — o sea, uno cada
+ *    cinco. A 10 modelos son 2, no 4. Se deduce por proporción.
+ *
+ * La proporción es una inferencia, no un dato: si el catálogo declarara la
+ * escalera, ganaría ella.
+ */
+function capFor(opt, size, u){
   const [, max, , scale] = opt;
-  if (!scale || !scale.length) return max;
-  let eff = max;
-  for (const [at, v] of scale) if (size >= at) eff = v;
-  return eff;
+  if (scale && scale.length) {
+    let eff = max;
+    for (const [at, v] of scale) if (size >= at) eff = v;
+    return eff;
+  }
+  if (max != null && u && u.mx && u.mx > 1 && size < u.mx) {
+    return Math.floor(size * max / u.mx) || (max > 0 ? 1 : 0);
+  }
+  return max;
 }
 
 function gearCost(u, name){
@@ -2728,15 +2786,29 @@ function printList(l){
   // resumen
   const t = el('table','pr-roster');
   const prCopies = copyIndex(l);
-  t.innerHTML = l.slots.map((sl, pi) => {
+  // Orden de impresión: cada líder inmediatamente después de la unidad que
+  // lidera, sangrado. En la mesa se consultan juntos.
+  const order = [];
+  const placed = new Set();
+  l.slots.forEach((sl, i) => {
+    if (sl.attach != null) return;                 // los líderes van con su unidad
+    order.push(i); placed.add(i);
+    l.slots.forEach((s2, j) => {
+      if (s2.attach - 1 === i && !placed.has(j)) { order.push(j); placed.add(j); }
+    });
+  });
+  l.slots.forEach((_, i) => { if (!placed.has(i)) order.push(i); });
+
+  t.innerHTML = order.map((pi) => {
+    const sl = l.slots[pi];
     const u = unitOf(l, sl.unitId);
     const att = sl.attach && l.slots[sl.attach - 1];
     const au = att && unitOf(l, att.unitId);
     const gear = sl.gear ? Object.entries(sl.gear).filter(([,v]) => v).map(([k,v]) =>
       typeof v === 'number' ? gearName(u, k) + ' \u00d7' + v : v).filter(Boolean) : [];
-    return '<tr><td>' + esc(u ? u.n : (sl.unitName || 'Unknown')) +
+    return '<tr><td' + (au ? ' class="lead"' : '') + '>' +
+      (au ? '\u21b3 ' : '') + esc(u ? u.n : (sl.unitName || 'Unknown')) +
       (sl.size > 1 ? ' \u00d7' + sl.size : '') +
-      (au ? '<br><span style="font-size:11px;color:#555">leading ' + esc(au.n) + '</span>' : '') +
       (gear.length ? '<br><span style="font-size:11px;color:#555">' + esc(gear.join(', ')) + '</span>' : '') +
       '</td><td>' + (u ? (ptsFor(u, sl.size, prCopies[pi]) + gearPoints(u, sl)) : '\u2014') + '</td></tr>';
   }).join('') +
