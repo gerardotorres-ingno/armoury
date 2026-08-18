@@ -152,6 +152,19 @@ details.scope b{color:var(--ink)}
 .req i{display:block;font-style:normal;font-family:var(--mono);font-size:10px;
   color:var(--ink2);margin-top:1px}
 
+.trow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  padding:8px 0;border-bottom:1px solid var(--rule)}
+.trow.dead{opacity:.45}
+.tname{flex:1;min-width:150px}
+.tname b{display:block;font-family:var(--disp);font-weight:600;font-size:16px}
+.tname i{display:block;font-style:normal;font-family:var(--mono);font-size:10px;color:var(--ink2)}
+.tacts{display:flex;gap:4px}
+.ph{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:6px 8px;
+  background:transparent;border:1px solid var(--rule2);border-radius:2px;
+  color:var(--ink2);cursor:pointer;min-width:52px}
+.ph.on{background:var(--ochre-bg);border-color:var(--ochre);color:var(--ochre)}
+.ph:disabled{opacity:.35;cursor:not-allowed}
+
 .chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
   background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
   color:var(--ink);cursor:pointer}
@@ -3294,6 +3307,7 @@ function renderBattlesInner(){
   v.append(head);
   v.append(scoreTable(b));
   v.append(secondaryPanel(b));
+  v.append(trackerPanel(b));
 
   const d = t.detail;
   const brk = el('div','hint');
@@ -3581,33 +3595,41 @@ function initSec(b){
   return b.sec;
 }
 
-/* Roba hasta tener dos activas.
+/* Roba DOS cartas nuevas por ronda, que se SUMAN a las que ya tenías.
  *
- * Si no hay mazo, lo arma solo. Antes había que apretar SHUFFLE primero y,
- * si no lo hacías, el robo no pasaba nada y no explicaba por qué. Un botón
- * que falla en silencio es peor que uno que no está. */
-function drawSecondaries(b){
+ * En la ronda 1 tenés dos; en la 2 sacás dos más y quedan cuatro; y así
+ * hasta la 5. Antes rellenaba hasta dos, que es otro juego: descartaba las
+ * viejas en vez de acumularlas.
+ *
+ * Se lleva registro de en qué ronda se robó por última vez para no repartir
+ * dos veces la misma ronda al redibujar. */
+function drawSecondaries(b, force){
   const s = initSec(b);
   if (s.mode !== 'tactical') return;
   if (secLib.length < 2) return;
+
+  s.drawnFor = s.drawnFor || {};
+  if (!force && s.drawnFor[b.round]) return;
 
   if (!s.deck.length) {
     const used = new Set([...(s.active || []), ...(s.done || [])]);
     const rest = secLib.map((c) => c.id).filter((id) => !used.has(id));
     if (rest.length) {
       s.seed = s.seed || (Date.now() % 2147483647);
-      s.deck = shuffled(rest, s.seed + (s.done || []).length);
+      s.deck = shuffled(rest, s.seed + Object.keys(s.drawnFor).length);
     }
   }
 
-  while (s.active.length < 2 && s.deck.length) s.active.push(s.deck.shift());
+  let n = 0;
+  while (n < 2 && s.deck.length) { s.active.push(s.deck.shift()); n++; }
+  s.drawnFor[b.round] = true;
   saveBattle(b);
 }
 
 function secondaryPanel(b){
   const s = initSec(b);
   // Al entrar ya tenés tus dos cartas: no hace falta ningún paso previo.
-  if (s.mode === 'tactical' && s.active.length < 2 && secLib.length >= 2) drawSecondaries(b);
+  if (s.mode === 'tactical' && secLib.length >= 2) drawSecondaries(b);
   const box = el('div');
   box.style.cssText = 'margin:16px 0';
 
@@ -3655,15 +3677,15 @@ function secondaryPanel(b){
     sh.onclick = () => {
       s.seed = Date.now() % 2147483647;
       s.deck = shuffled(secLib.map((c) => c.id), s.seed);
-      s.active = []; s.done = []; s.vp = {};
-      drawSecondaries(b); renderBattles();
+      s.active = []; s.done = []; s.vp = {}; s.byRound = {}; s.drawnFor = {};
+      drawSecondaries(b, true); renderBattles();
     };
     bar.append(sh);
 
     const dr = el('button','btn');
-    dr.textContent = 'DRAW';
-    dr.title = 'Fill back up to two active cards';
-    dr.onclick = () => { drawSecondaries(b); renderBattles(); };
+    dr.textContent = 'DRAW 2';
+    dr.title = 'Two more cards for this round';
+    dr.onclick = () => { drawSecondaries(b, true); renderBattles(); };
     bar.append(dr);
   }
   box.append(bar);
@@ -3703,8 +3725,22 @@ function secondaryPanel(b){
 
   for (const id of s.active) box.append(secRow(b, id, true));
 
+  if ((s.done || []).length) {
+    const dh = el('div','rrole');
+    dh.innerHTML = '<span>COMPLETED</span><span>' + s.done.length + '</span>';
+    box.append(dh);
+    for (const id of s.done) {
+      const c = secOf(id); if (!c) continue;
+      const r = el('div','slot');
+      r.innerHTML = '<div class="id"><div class="nm" style="opacity:.6">' + esc(c.n) + '</div>' +
+        '<div class="meta">' + (s.vp[id] ?? 0) + ' VP \u00b7 round ' + (s.scored?.[id] ?? '?') + '</div></div>';
+      box.append(r);
+    }
+  }
+
   const foot = el('div','hint');
-  foot.textContent = s.deck.length + ' left in deck · ' + s.done.length + ' achieved';
+  foot.textContent = s.deck.length + ' left in deck · ' + s.active.length +
+    ' in hand · ' + (s.done || []).length + ' completed';
   box.append(foot);
   return box;
 }
@@ -3722,9 +3758,13 @@ function secRow(b, id, tactical){
   const scoredBefore = Object.entries(s.byRound)
     .reduce((a, [k, v]) => k.startsWith(id + '@') && k !== key ? a + (+v || 0) : a, 0);
 
+  // Una carta que ya puntuó queda COMPLETADA: no admite más VP.
+  s.scored = s.scored || {};
+  const completed = !!s.scored[id];
+
   const capRound = +c.pr || +c.max || 99;
   const capLeft  = Math.max(0, (+c.max || 99) - scoredBefore);
-  const cap = Math.min(capRound, capLeft);
+  const cap = completed ? 0 : Math.min(capRound, capLeft);
 
   const info = el('div','id');
   const rules = (c.tiers || []).map((t) =>
@@ -3758,11 +3798,15 @@ function secRow(b, id, tactical){
   if (tactical) {
     const ok = el('button','btn'); ok.textContent = 'ACHIEVED';
     ok.onclick = () => {
-      s.active = s.active.filter((x) => x !== id);
+      // Queda registrada como completada: sigue a la vista con sus puntos,
+      // pero ya no suma más.
+      s.scored = s.scored || {};
+      s.scored[id] = b.round;
       s.done.push(id);
+      s.active = s.active.filter((x) => x !== id);
       saveBattle(b); renderBattles();
     };
-    ok.title = 'Scored — the card leaves play';
+    ok.title = 'Scored — no further points from this card';
     // Descartar cuesta y da 1 PM: es la regla, y conviene que se vea.
     const dc = el('button','btn'); dc.textContent = 'DISCARD +1CP';
     dc.onclick = () => {
@@ -4125,6 +4169,170 @@ function renderWizard(v, l){
   skip.onclick = () => { wizard = false; renderLists(); };
   foot.append(skip);
   v.append(foot);
+}
+
+/* ============================================================
+   TABLERO DE UNIDADES
+   
+   Durante la partida: marcar qué unidad ya actuó en cada fase y anotar
+   las heridas que va recibiendo. Al terminar, eso permite responder
+   preguntas concretas — qué unidad murió en la ronda 2, cuál nunca
+   llegó a disparar, cuánto castigo aguantó cada una.
+   
+   No calcula nada del juego: registra lo que pasó en la mesa.
+   ============================================================ */
+const PHASES = [['m','Move'], ['s','Shoot'], ['c','Charge'], ['f','Fight']];
+
+function trackOf(b){
+  b.track = b.track || {};      // slotIndex -> { w, dead, act:{ '2:s': true } }
+  return b.track;
+}
+
+/* Heridas totales de una unidad: perfil W por cantidad de modelos. */
+function unitWounds(l, sl){
+  const u = unitOf(l, sl.unitId);
+  const w = u && u.st ? parseInt(u.st[3], 10) : 0;
+  return Number.isFinite(w) ? w * (sl.size || 1) : 0;
+}
+
+function trackerPanel(b){
+  const l = lists.find((x) => x.id === b.mine);
+  const box = el('div');
+  box.style.cssText = 'margin:18px 0';
+
+  const head = el('div','rrole');
+  head.innerHTML = '<span>UNITS ON THE TABLE</span><span>round ' + b.round + '</span>';
+  box.append(head);
+
+  if (!l || !l.slots.length) {
+    box.append(note('Pick one of your lists above to track its units.'));
+    return box;
+  }
+
+  const t = trackOf(b);
+  const copies = copyIndex(l);
+
+  for (const [i, sl] of l.slots.entries()) {
+    const u = unitOf(l, sl.unitId);
+    const st = t[i] = t[i] || { w: 0, dead: null, act: {} };
+    const maxW = unitWounds(l, sl);
+    const dead = st.dead != null;
+
+    const row = el('div', 'trow' + (dead ? ' dead' : ''));
+
+    const name = el('div','tname');
+    name.innerHTML = '<b>' + esc(u ? u.n : '?') + (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</b>' +
+      '<i>' + (dead ? 'destroyed in round ' + st.dead
+                    : (maxW ? st.w + ' / ' + maxW + ' wounds' : 'no profile')) + '</i>';
+    row.append(name);
+
+    // fases de ESTA ronda
+    const acts = el('div','tacts');
+    for (const [k, label] of PHASES) {
+      const key = b.round + ':' + k;
+      const on = !!st.act[key];
+      const p = el('button', 'ph' + (on ? ' on' : ''));
+      p.textContent = label;
+      p.disabled = dead;
+      p.onclick = () => {
+        if (on) delete st.act[key]; else st.act[key] = true;
+        saveBattle(b); renderBattles();
+      };
+      acts.append(p);
+    }
+    row.append(acts);
+
+    // heridas
+    const wr = el('div','step');
+    const minus = el('button'); minus.textContent = '\u2212';
+    const val = el('input'); val.type='text'; val.inputMode='numeric'; val.value = st.w;
+    const plus = el('button'); plus.textContent = '+';
+    const set = (n) => {
+      n = Math.max(0, Math.min(maxW || 999, n | 0));
+      st.w = n;
+      // Al llegar al máximo se marca sola, con la ronda: es el dato que
+      // después responde "¿en qué turno la perdí?".
+      if (maxW && n >= maxW && st.dead == null) st.dead = b.round;
+      if (maxW && n < maxW) st.dead = null;
+      saveBattle(b); renderBattles();
+    };
+    minus.onclick = () => set(st.w - 1);
+    plus.onclick  = () => set(st.w + 1);
+    val.onchange  = () => set(parseInt(val.value, 10) || 0);
+    wr.append(minus, val, plus);
+    row.append(wr);
+
+    const kill = el('button','btn');
+    kill.textContent = dead ? 'REVIVE' : 'DESTROYED';
+    kill.onclick = () => {
+      st.dead = dead ? null : b.round;
+      if (!dead && maxW) st.w = maxW;
+      saveBattle(b); renderBattles();
+    };
+    row.append(kill);
+
+    box.append(row);
+  }
+
+  // resumen de la ronda
+  const pend = l.slots.filter((_, i) =>
+    t[i] && t[i].dead == null && !PHASES.some(([k]) => t[i].act[b.round + ':' + k])).length;
+  const foot = el('div','hint');
+  foot.textContent = pend + ' units have not acted this round · ' +
+    l.slots.filter((_, i) => t[i] && t[i].dead != null).length + ' destroyed so far';
+  box.append(foot);
+
+  box.append(analysisPanel(b, l));
+  return box;
+}
+
+/* Análisis: lo que el registro permite responder al terminar. */
+function analysisPanel(b, l){
+  const t = trackOf(b);
+  const det = document.createElement('details');
+  det.className = 'cfg';
+  det.innerHTML = '<summary>Battle analysis <span>after the game</span></summary>';
+  const body = el('div');
+
+  const rows = l.slots.map((sl, i) => {
+    const u = unitOf(l, sl.unitId);
+    const st = t[i] || { w:0, dead:null, act:{} };
+    const maxW = unitWounds(l, sl);
+    const acted = {};
+    for (const [k] of PHASES)
+      acted[k] = Array.from({length:5}, (_, r) => st.act[(r+1) + ':' + k] ? (r+1) : null).filter(Boolean);
+    return { n: u ? u.n : '?', size: sl.size, st, maxW, acted,
+             pts: u ? ptsFor(u, sl.size, copyIndex(l)[i]) + gearPoints(u, sl) : 0 };
+  });
+
+  const lost = rows.filter((r) => r.st.dead != null);
+  const lostPts = lost.reduce((a, r) => a + r.pts, 0);
+  const never = rows.filter((r) => !Object.values(r.acted).some((x) => x.length));
+
+  const sum = el('div','reqbar');
+  const card = (t2, d) => { const c = el('div','req ok'); c.innerHTML = '<b>' + t2 + '</b><i>' + d + '</i>'; return c; };
+  sum.append(
+    card(lost.length + ' units lost', lostPts + ' pts destroyed'),
+    card(never.length + ' never acted', never.map((r) => r.n).slice(0,3).join(', ') || '—'),
+    card('Damage taken', rows.reduce((a, r) => a + r.st.w, 0) + ' wounds'),
+  );
+  body.append(sum);
+
+  const tab = el('table','score');
+  tab.innerHTML = '<tr><th class="who">Unit</th><th>Pts</th><th>Wounds</th><th>Lost</th>' +
+    PHASES.map(([, n]) => '<th>' + n + '</th>').join('') + '</tr>' +
+    rows.map((r) => '<tr><th class="who">' + esc(r.n) + '</th>' +
+      '<td>' + r.pts + '</td>' +
+      '<td>' + r.st.w + (r.maxW ? '/' + r.maxW : '') + '</td>' +
+      '<td>' + (r.st.dead != null ? 'R' + r.st.dead : '\u2014') + '</td>' +
+      PHASES.map(([k]) => '<td>' + (r.acted[k].length ? r.acted[k].map((x) => 'R' + x).join(' ') : '\u2014') + '</td>').join('') +
+      '</tr>').join('');
+  body.append(tab);
+  body.append(hint('Rounds in which each unit acted. Useful afterwards: a unit that ' +
+                   'never charged, or one that died before shooting, is a list problem, ' +
+                   'not bad luck.'));
+  det.append(body);
+  return det;
 }
 
 boot();
