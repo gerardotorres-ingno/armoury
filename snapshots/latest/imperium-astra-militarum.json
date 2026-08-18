@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "7799cb4",
-    "date": "2026-08-17T08:48:19Z"
+    "sha": "5a4a3e6",
+    "date": "2026-08-17T23:52:10Z"
   },
   "catalogueId": "b0ae-12a5-c84-ea45",
   "catalogueName": "Imperium - Astra Militarum",
@@ -212,10 +212,10 @@
   "revision": 1,
   "file": "Imperium - Astra Militarum.json",
   "counts": {
-    "total": 137,
-    "native": 136,
+    "total": 138,
+    "native": 137,
     "matched": 72,
-    "legends": 61,
+    "legends": 62,
     "crucible": 3,
     "allied": 1
   },
@@ -7824,6 +7824,120 @@
         "LD": "7+",
         "OC": "2",
         "InSv": ""
+      },
+      "native": true
+    },
+    {
+      "id": "4aa7-5845-84ad-2d7d",
+      "linkId": "ad2e-a4f4-6664-945e",
+      "name": "Ciaphas Cain",
+      "rawName": "Ciaphas Cain [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": null,
+      "leads": [
+        "CADIAN SHOCK TROOPS",
+        "CATACHAN JUNGLE FIGHTERS",
+        "DEATH KORPS OF KRIEG",
+        "KASRKIN",
+        "TEMPESTUS SCIONS"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Laspistols",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "3",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Precision"
+        },
+        {
+          "n": "Chainsword and gun butt",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "2+",
+          "s": "3",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Meltagun",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-4",
+          "d": "D6",
+          "kw": "Melta 2"
+        }
+      ],
+      "composition": [
+        {
+          "n": "Ciaphas Cain [Legends]",
+          "min": 1,
+          "max": 1,
+          "w": [
+            "Laspistols",
+            "Chainsword and gun butt",
+            "Meltagun"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Unparalleled Luck (Once per battle, per army)",
+          "d": "At the start of a phase, you can use this ability. if you do, this model has 2+ InSv."
+        },
+        {
+          "n": "Psychic Blank",
+          "d": "This model has Feel No Pain 4+ against psychic attacks and mortal wounds."
+        },
+        {
+          "n": "Hero of the Imperium (Aura)",
+          "d": "While a friendly ASTRA MILITARUM unit is within 6\" of this model, that unit can re-roll battle-shock rolls."
+        },
+        {
+          "n": "Trapped by Excuses",
+          "d": "In the Deploy Armies step, you must set this unit up on the battlefield, or embarked within a TRANSPORT unit that is set up on the battlefield. Abilities that allow you to redeploy a unit or place a unit in strategic reserves cannot affect this unit or a TRANSPORT unit this unit is embarked within."
+        }
+      ],
+      "faction": "Astra Militarum",
+      "keywords": [
+        "Imperium",
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Officer",
+        "Leader",
+        "Ciaphas Cain"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "3",
+        "Sv": "4+",
+        "W": "5",
+        "LD": "6+",
+        "OC": "3",
+        "InSv": "5+"
       },
       "native": true
     },
