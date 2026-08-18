@@ -194,6 +194,11 @@ for (const file of files) {
            .filter((g) => !(g.pick === 'many' && g.opts.length === 1 && g.opts[0].max > 4))
            // [nombre, tope, precio]. El precio venía de BSData y se estaba
            // descartando: 72 opciones lo tienen (Dark Lance de Drukhari = 5).
+           // Grupos sin ninguna opción real: todas sus entradas vienen con
+           // min = max, o sea equipo fijo. Los C'tan mostraban un panel de
+           // armamento donde no había nada que elegir.
+           .filter((g) => g.opts.some((e) =>
+             (e.min ?? 0) !== e.max || e.model || e.max == null))
            .map((g) => ({
              n: g.n, k: g.pick,
              ow: g.owner || null,        // modelo al que pertenece la elección
