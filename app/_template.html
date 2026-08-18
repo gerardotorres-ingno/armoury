@@ -132,6 +132,26 @@ details.scope b{color:var(--ink)}
 .crules em b,.misres em b{font-family:var(--mono);color:var(--ochre);margin-right:5px}
 .misres em{font-size:11.5px}
 
+.wsteps{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 10px}
+.wstep{display:flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:600;
+  font-size:14px;background:var(--panel);border:1px solid var(--rule2);color:var(--ink2);
+  border-radius:3px;padding:7px 12px;cursor:pointer}
+.wstep span{font-family:var(--mono);font-size:10px;border:1px solid var(--rule2);
+  border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;
+  justify-content:center}
+.wstep.on{border-color:var(--ochre);color:var(--ochre)}
+.wstep.on span{border-color:var(--ochre)}
+.wstep.done{color:var(--ink)}
+.wstep.done span{background:var(--ochre);border-color:var(--ochre);color:#06181A}
+
+.reqbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:7px;margin:16px 0}
+.req{background:var(--panel);border:1px solid var(--rule2);border-left:3px solid var(--oxide);
+  border-radius:3px;padding:7px 10px}
+.req.ok{border-left-color:var(--ochre)}
+.req b{display:block;font-family:var(--disp);font-weight:600;font-size:13.5px}
+.req i{display:block;font-style:normal;font-family:var(--mono);font-size:10px;
+  color:var(--ink2);margin-top:1px}
+
 .chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
   background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
   color:var(--ink);cursor:pointer}
@@ -1005,6 +1025,7 @@ let lists = [];        // [{ id, name, faction, detachment, limit, legends, cruc
 let editing = null;    // id de la lista abierta, o null
 let selected = null;   // índice del slot abierto en el panel derecho
 let picking = false;   // buscador de unidades abierto
+let wizard  = false;   // asistente paso a paso
 
 function saveList(l){ store.put('lists', l); }
 function loadLists(){ return store.getAll('lists'); }
@@ -1322,7 +1343,10 @@ function renderListsInner(){
   const shr = shareMenu(l);
   const del = el('button','btn'); del.textContent = 'DELETE';
   del.onclick = () => { if (confirm('Delete this list?')) { store.del('lists', l.id); lists = lists.filter(x=>x.id!==l.id); editing=null; renderLists(); } };
-  bar.append(back, name, shr, del); v.append(bar);
+  const wz = el('button','btn'); wz.textContent = 'GUIDE';
+  wz.title = 'Step-by-step: army, detachment, enhancements, units';
+  wz.onclick = () => { wizard = true; wizStep = 0; renderLists(); };
+  bar.append(back, name, wz, shr, del); v.append(bar);
 
   // --- formato
   const bar2 = el('div','bar');
@@ -1373,6 +1397,8 @@ function renderListsInner(){
     '<b>Not checked:</b> battleline minimums, detachment rules, and ratio limits ' +
     'beyond those declared in the data.</p>';
   v.append(sc);
+
+  if (wizard) { renderWizard(v, l); return; }
 
   // ============ MAESTRO-DETALLE ============
   // Antes todo era una columna: abrir el armamento de una unidad empujaba el
@@ -2260,7 +2286,9 @@ function renderNew(v){
   const ok = el('button','btn pri'); ok.textContent = 'CREATE';
   ok.onclick = () => {
     lists.push(draft); saveList(draft);
-    draftList = null; creating = false; editing = draft.id; renderLists();
+    draftList = null; creating = false; editing = draft.id;
+    wizard = true; wizStep = 1;      // facción y puntos ya se eligieron acá
+    renderLists();
   };
   const no = el('button','btn'); no.textContent = 'CANCEL';
   no.onclick = () => { draftList = null; creating = false; renderLists(); };
@@ -3324,14 +3352,20 @@ async function loadLib(){
   const row = rows.find((r) => r.id === 'secondaries');
   try { secLib = row ? JSON.parse(row.qty) : []; } catch { secLib = []; }
 
-  // Sin biblioteca propia, se usa la del dataset comunitario. Se puede
-  // editar: al tocarla queda guardada como tuya y deja de sobreescribirse.
-  if (!secLib.length && DATA.missions?.cards?.length) {
-    secLib = DATA.missions.cards.map((c) => ({
-      id: c.id, n: c.n, max: c.max, pr: 0,
-      type: c.type, drawn: c.drawn, tiers: c.tiers,
-    }));
-  }
+  // Las cartas sin nombre no cuentan: quedaban de probar "+ CARD" y hacían
+  // que la app creyera que ya tenías biblioteca propia, bloqueando la del
+  // dataset. El síntoma era una carta "max 5" sin nombre ni reglas.
+  secLib = secLib.filter((c) => c && String(c.n || '').trim());
+
+  if (!secLib.length) secLib = communityCards();
+}
+
+/** Copia editable de las cartas del dataset comunitario. */
+function communityCards(){
+  return (DATA.missions?.cards ?? []).map((c) => ({
+    id: c.id, n: c.n, max: c.max, pr: 0,
+    type: c.type, drawn: c.drawn, tiers: c.tiers,
+  }));
 }
 
 /* Barajado Fisher-Yates con semilla guardada: el mazo tiene que sobrevivir
@@ -3441,6 +3475,14 @@ function secondaryPanel(b){
     bar.append(dr);
   }
   box.append(bar);
+
+  const libTog = document.createElement('details');
+  libTog.className = 'cfg';
+  libTog.innerHTML = '<summary>Card library <span>' + secLib.length + ' cards</span></summary>';
+  const libBody = el('div');
+  libBody.append(libEditor());
+  libTog.append(libBody);
+  box.append(libTog);
 
   if (s.mode === 'fixed') {
     const sel = el('div');
@@ -3615,9 +3657,20 @@ function libEditor(){
   const bar = el('div','bar');
   const add = el('button','btn'); add.textContent='+ CARD';
   add.onclick = () => {
-    secLib.push({ id: 'c' + Date.now(), n: '', max: 5, pr: 0 });
+    secLib.push({ id: 'c' + Date.now(), n: 'New card', max: 5, pr: 0 });
     saveLib(); renderBattles();
   };
+  if (DATA.missions?.cards?.length) {
+    const rst = el('button','btn');
+    rst.textContent = 'RESET TO COMMUNITY SET';
+    rst.onclick = () => {
+      if (!confirm('Replace your library with the ' + DATA.missions.cards.length +
+                   ' community cards? Your own edits are lost.')) return;
+      secLib = communityCards(); saveLib(); renderBattles();
+    };
+    bar.append(rst);
+  }
+
   const imp = el('button','btn'); imp.textContent='IMPORT';
   imp.onclick = importLib;
   const exp = el('button','btn'); exp.textContent='EXPORT';
@@ -3680,6 +3733,189 @@ function importLib(){
     } catch (e) { alert(e.message || 'Could not read that file.'); }
   };
   inp.click();
+}
+
+/* ============================================================
+   ASISTENTE DE LISTA
+   
+   Cuatro pasos: facción y tamaño → destacamentos → mejoras → unidades.
+   No sugiere qué llevar: no tengo datos de meta y una recomendación
+   inventada es peor que ninguna. Lo que hace es no dejarte avanzar sin
+   lo obligatorio y mostrar en todo momento qué falta.
+   
+   El único mínimo de composición que declara el catálogo es 1 Personaje
+   por ejército; el resto son los topes que la app ya valida.
+   ============================================================ */
+let wizStep = 0;
+
+const WIZ_STEPS = ['Army', 'Detachment', 'Enhancements', 'Units'];
+
+/* Requisitos de una lista, con su estado. Alimenta la barra del asistente
+   y también sirve como resumen dentro del editor. */
+function requirements(l){
+  const f = factionOf(l.faction);
+  const req = [];
+  if (!f) return req;
+
+  const { total } = review(l);
+  const chars = l.slots.filter((sl) => {
+    const u = unitOf(l, sl.unitId);
+    return u && (u.kw || []).includes('Character');
+  }).length;
+
+  req.push({
+    k: 'char', t: 'At least one Character',
+    ok: chars > 0,
+    d: chars ? chars + ' in the list' : 'The army roster requires one',
+  });
+
+  const dl = detsOf(f);
+  const spent = (l.dets || []).reduce((a, n) =>
+    a + ((dl.find(([x]) => x === n) || [])[1] ?? 0), 0);
+  req.push({
+    k: 'det', t: 'A detachment',
+    ok: (l.dets || []).length > 0,
+    d: (l.dets || []).length ? spent + ' / ' + dpBudget(l) + ' DP used' : 'Pick at least one',
+  });
+
+  const missions = missionsFor(l, f);
+  if (missions.size) {
+    req.push({
+      k: 'mis', t: 'Force Disposition',
+      ok: !!l.mission && missions.has(l.mission),
+      d: l.mission || [...missions.keys()].join(' / '),
+    });
+  }
+
+  req.push({
+    k: 'pts', t: 'Within the points limit',
+    ok: total <= l.limit,
+    d: total + ' / ' + l.limit + (total > l.limit ? '  (' + (total - l.limit) + ' over)' : ''),
+  });
+
+  const hard = review(l).issues.filter((i) => i.hard).length;
+  req.push({
+    k: 'legal', t: 'No blocking issues',
+    ok: hard === 0,
+    d: hard ? hard + ' to fix' : 'clear',
+  });
+
+  return req;
+}
+
+function reqBar(l){
+  const box = el('div','reqbar');
+  for (const r of requirements(l)) {
+    const c = el('div', 'req' + (r.ok ? ' ok' : ''));
+    c.innerHTML = '<b>' + (r.ok ? '\u2713' : '\u2022') + ' ' + esc(r.t) + '</b>' +
+                  '<i>' + esc(r.d) + '</i>';
+    box.append(c);
+  }
+  return box;
+}
+
+function renderWizard(v, l){
+  const f = factionOf(l.faction);
+
+  // pasos
+  const nav = el('div','wsteps');
+  WIZ_STEPS.forEach((name, i) => {
+    const b = el('button', 'wstep' + (i === wizStep ? ' on' : (i < wizStep ? ' done' : '')));
+    b.innerHTML = '<span>' + (i + 1) + '</span>' + name;
+    b.onclick = () => { wizStep = i; renderLists(); };
+    nav.append(b);
+  });
+  v.append(nav);
+
+  const body = el('div');
+  body.style.cssText = 'margin-top:4px';
+
+  if (wizStep === 0) {
+    body.append(hint('Faction and points are fixed once the list exists — changing ' +
+                     'them later would silently invalidate what you built.'));
+
+    const fsel = el('select');
+    fsel.style.cssText = 'width:100%;font-family:var(--disp);font-weight:600;font-size:16px';
+    for (const group of ['Imperium','Chaos','Xenos','Otros']) {
+      const fs = DATA.factions.filter((x) => x.group === group);
+      if (!fs.length) continue;
+      const og = document.createElement('optgroup'); og.label = group;
+      for (const x of fs) {
+        const o = el('option'); o.value = x.slug; o.textContent = x.name;
+        if (x.slug === l.faction) o.selected = true;
+        og.append(o);
+      }
+      fsel.append(og);
+    }
+    fsel.onchange = () => {
+      l.faction = fsel.value; l.dets = []; l.enh = []; l.slots = []; l.mission = '';
+      saveList(l); renderLists();
+    };
+    body.append(labelledBlock('Faction', fsel));
+
+    const psel = numSelect([500,1000,1500,2000,2500,3000], l.limit, (n) => {
+      l.limit = n; saveList(l); renderLists();
+    });
+    psel.style.width = '100%';
+    body.append(labelledBlock('Battle size', psel));
+
+    const fmt = el('div','bar');
+    fmt.append(check('Allow Legends',  l.legends,  (x) => { l.legends = x; saveList(l); }));
+    fmt.append(check('Allow Crucible', l.crucible, (x) => { l.crucible = x; saveList(l); }));
+    body.append(fmt);
+  }
+
+  if (wizStep === 1) {
+    body.append(hint('Spend your Detachment Points. Two detachments with the same ' +
+                     'unique tag cannot be combined, and your Force Disposition ' +
+                     'comes from the one you pick.'));
+    body.append(detachmentsFor(l, f));
+    const bar2 = el('div','bar');
+    bar2.append(labelled('Mission', missionInput(l, f)));
+    body.append(bar2);
+  }
+
+  if (wizStep === 2) {
+    body.append(hint('Optional. Enhancements go on Characters and their points ' +
+                     'count towards the limit.'));
+    body.append(enhancementsFor(l, f));
+  }
+
+  if (wizStep === 3) {
+    const add = el('button','btn pri');
+    add.textContent = '+ ADD UNIT';
+    add.style.cssText = 'width:100%;padding:11px;margin-bottom:10px';
+    add.onclick = () => { picking = true; selected = null; wizard = false; renderLists(); };
+    body.append(add);
+    body.append(hint('The assistant stops here: which units to take is a judgement ' +
+                     'call, and I have no tournament data to base a recommendation on. ' +
+                     'What it does check is on the left.'));
+  }
+
+  v.append(body);
+  v.append(reqBar(l));
+
+  // navegación
+  const foot = el('div','bar');
+  foot.style.marginTop = '14px';
+  if (wizStep > 0) {
+    const back = el('button','btn'); back.textContent = '\u2190 BACK';
+    back.onclick = () => { wizStep--; renderLists(); };
+    foot.append(back);
+  }
+  if (wizStep < WIZ_STEPS.length - 1) {
+    const next = el('button','btn pri'); next.textContent = 'NEXT \u2192';
+    next.onclick = () => { wizStep++; renderLists(); };
+    foot.append(next);
+  } else {
+    const done = el('button','btn pri'); done.textContent = 'OPEN THE LIST';
+    done.onclick = () => { wizard = false; renderLists(); };
+    foot.append(done);
+  }
+  const skip = el('button','btn'); skip.textContent = 'SKIP TO EDITOR';
+  skip.onclick = () => { wizard = false; renderLists(); };
+  foot.append(skip);
+  v.append(foot);
 }
 
 boot();
