@@ -1202,6 +1202,33 @@ function review(l){
     }
   }
 
+  // TOPE DE PUNTOS ALIADOS.
+  //
+  // Algunos ejércitos admiten unidades de otra facción hasta cierto gasto:
+  // World Eaters lleva BLOOD LEGIONS por 500 pts en Incursion, 1000 en Strike
+  // Force y 1500 en Onslaught. Sale del catálogo, no de una regla escrita acá.
+  if ((f.ally || []).length) {
+    const spentBy = new Map();
+    for (const [si, sl] of l.slots.entries()) {
+      const u = unitOf(l, sl.unitId);
+      if (!u || !u.fc) continue;
+      const pts = ptsFor(u, sl.size, copies[si]) + gearPoints(u, sl);
+      spentBy.set(u.fc, (spentBy.get(u.fc) ?? 0) + pts);
+    }
+    for (const [name, by] of f.ally) {
+      const cap = by[l.limit];
+      const spent = spentBy.get(name) ?? 0;
+      if (!spent) continue;
+      if (cap == null) {
+        out.push({ hard:false, t:name + ': ' + spent + ' pts',
+                   d:'No cap declared for a ' + l.limit + ' pt game.' });
+      } else if (spent > cap) {
+        out.push({ hard:true, t:name + ' over its allowance',
+                   d:spent + ' / ' + cap + ' pts allowed at ' + l.limit + '.' });
+      }
+    }
+  }
+
   // La misión tiene que venir de alguno de los destacamentos elegidos.
   const missions = missionsFor(l, f);
   if (missions.size) {
@@ -1610,8 +1637,14 @@ function unitFinder(l, f){
       }
       for (const sz of sizesFor(u)) {
         const b = el('button');
+        // Si la unidad pertenece a un grupo con tope de puntos, se avisa acá:
+        // enterarse después de armar media lista es tarde.
+        const capped = (f.ally || []).find(([n]) => n === u.fc);
         b.innerHTML = '<b>' + esc(u.n) + (sz.n > 1 ? ' \u00d7' + sz.n : '') + '</b>' +
-          '<i>' + sz.pts + ' pts' + (from ? ' \u00b7 ' + esc(from) : '') + '</i>';
+          '<i>' + sz.pts + ' pts' + (from ? ' \u00b7 ' + esc(from) : '') +
+          (capped ? ' \u00b7 ' + esc(capped[0]) +
+            (capped[1][l.limit] != null ? ' (max ' + capped[1][l.limit] + ')' : '') : '') +
+          '</i>';
         b.onclick = () => {
           l.slots.push({ unitId: u.id, size: sz.n });
           selected = l.slots.length - 1;
@@ -3951,6 +3984,23 @@ function requirements(l){
     ok: total <= l.limit,
     d: total + ' / ' + l.limit + (total > l.limit ? '  (' + (total - l.limit) + ' over)' : ''),
   });
+
+  // Aliados: sólo aparece si la lista realmente lleva alguno.
+  for (const [name, by] of (f.ally || [])) {
+    const cap = by[l.limit];
+    let spent = 0;
+    const copies2 = copyIndex(l);
+    for (const [si, sl] of l.slots.entries()) {
+      const u = unitOf(l, sl.unitId);
+      if (u && u.fc === name) spent += ptsFor(u, sl.size, copies2[si]) + gearPoints(u, sl);
+    }
+    if (!spent) continue;
+    req.push({
+      k: 'ally:' + name, t: name + ' allowance',
+      ok: cap == null || spent <= cap,
+      d: spent + (cap != null ? ' / ' + cap : '') + ' pts',
+    });
+  }
 
   const hard = review(l).issues.filter((i) => i.hard).length;
   req.push({
