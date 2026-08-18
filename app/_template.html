@@ -338,8 +338,30 @@ input[type=search]::placeholder{color:var(--ink2)}
 .tog{font-family:var(--mono);font-size:10px;letter-spacing:.06em;background:transparent;
   border:1px solid var(--rule2);border-radius:2px;padding:5px 8px;color:var(--ink2);cursor:pointer}
 .tog:hover{border-color:var(--ochre);color:var(--ochre)}
-@media (max-width:560px){
+@media screen and (max-width:560px){
   body{font-size:15.5px;padding-bottom:112px}
+  /* El sello ocupaba un tercio de la primera pantalla; en el celular va
+     como una línea corrida bajo el título. */
+  .masthead{flex-direction:column;align-items:flex-start;gap:3px;padding:14px 0 8px}
+  .stamp{font-size:9.5px;line-height:1.6;opacity:.85}
+  .stamp br{display:none}
+  .stamp b{margin-right:8px}
+  h1{font-size:27px}
+  /* El detalle deja de ser pegajoso: en una columna no tiene sentido. */
+  .side{position:static;max-height:none}
+  .side .hd{position:sticky;top:0;z-index:6}
+  .side .hd h3{font-size:15px}
+  .reqbar{grid-template-columns:1fr 1fr;gap:5px}
+  .req{padding:6px 8px}
+  .req b{font-size:12.5px}
+  .req i{font-size:9.5px}
+  .misres{grid-template-columns:1fr}
+  .clock{grid-template-columns:1fr}
+  .clkt{font-size:34px}
+  .score th.who{font-size:12.5px}
+  .score td input{max-width:34px;font-size:12px;padding:3px 1px}
+  .wsteps{gap:4px}
+  .wstep{font-size:12.5px;padding:6px 9px;flex:1 1 auto;justify-content:center}
   .wrap{padding:0 12px}
   h1{font-size:25px}
   .masthead{padding:16px 0 10px}
@@ -390,7 +412,11 @@ input[type=search]::placeholder{color:var(--ink2)}
   .pr-roster tr.tot td{border-top:2px solid #000;border-bottom:none;font-weight:600}
   /* Fichas de referencia en dos columnas. La versión de una ficha completa
      por unidad se iba a tres páginas con cuatro unidades. */
-  .pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  /* Dos columnas sólo si hay ancho. En el celular la impresión usa el ancho
+     del viewport, y dos columnas de 230 px salían aplastadas e ilegibles. */
+  .pr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:9px}
+  /* Los fondos de las bandas deben imprimirse; si no, quedan cajas vacías. */
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .pr-card{break-inside:avoid;page-break-inside:avoid;
     border:1px solid #999;border-radius:2px;padding:6px 8px}
   .pr-card h3{font-family:var(--disp);font-size:13.5px;font-weight:600;
@@ -1415,6 +1441,8 @@ function renderListsInner(){
   v.append(mx);
 
   // ---- izquierda: configuración + roster
+  pane.append(reqBar(l));
+
   // Configuración plegada: se toca una vez al empezar y después estorba.
   const cfg = document.createElement('details');
   cfg.className = 'cfg';
@@ -1435,7 +1463,7 @@ function renderListsInner(){
   const addBtn = el('button','btn pri');
   addBtn.textContent = '+ ADD UNIT';
   addBtn.style.cssText = 'width:100%;margin:16px 0 4px;padding:11px';
-  addBtn.onclick = () => { picking = true; selected = null; renderLists(); };
+  addBtn.onclick = () => { picking = true; selected = null; renderLists(); scrollToPanel(); };
   pane.append(addBtn);
 
   // Roster agrupado por rol, como la ficha oficial y New Recruit.
@@ -1474,7 +1502,12 @@ function renderListsInner(){
         (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</b>' +
         '<i>' + (attU ? 'leading ' + esc(attU.n) : (u && u.m !== 'standard' ? u.m.toUpperCase() : '&nbsp;')) +
         '</i></span><span class="rp">' + pts + '</span>';
-      row.onclick = () => { selected = i; picking = false; renderLists(); };
+      row.onclick = () => {
+        selected = i; picking = false; renderLists();
+        // En una columna el detalle queda debajo del roster: sin esto
+        // tocabas una unidad y no pasaba nada visible.
+        scrollToPanel();
+      };
 
       // Duplicar: copia tamaño y armamento. Configurar dos veces la misma
       // unidad con el mismo equipo era trabajo repetido puro.
@@ -1528,6 +1561,13 @@ function renderListsInner(){
 
 /* Buscador de unidades. Reemplaza al desplegable gigante: con 190 entradas y
  * varios tamaños cada una, el select llegaba a 400 líneas. */
+/* En pantallas angostas el panel de detalle queda debajo del roster. */
+function scrollToPanel(){
+  if (!window.matchMedia || !window.matchMedia('(max-width:939px)').matches) return;
+  const p = document.querySelector('#viewLists .side');
+  if (p && p.scrollIntoView) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function unitFinder(l, f){
   const box = el('div');
   const hd = el('div','hd');
