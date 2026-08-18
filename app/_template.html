@@ -47,7 +47,7 @@ body{
 .side{position:sticky;top:74px;max-height:calc(100vh - 96px);overflow:auto;
   background:var(--panel);color:var(--ink);border:1px solid var(--rule2);border-radius:3px}
 .side .hd{position:sticky;top:0;background:var(--chrome);color:var(--ink);
-  padding:9px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+  padding:9px 12px;display:flex;align-items:center;justify-content:space-between;gap:6px}
 .side .hd h3{font-family:var(--disp);font-weight:600;font-size:16px;letter-spacing:.02em;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .side .hd button{background:transparent;border:1px solid var(--rule2);color:var(--ink);
@@ -330,8 +330,11 @@ input[type=search]::placeholder{color:var(--ink2)}
 .abil p{font-size:12.5px;line-height:1.5;color:var(--ink2);margin-bottom:8px}
 .kwbar{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px 10px;background:var(--field);
   color:var(--ink);border-top:1px solid var(--plate-line)}
-.kwbar span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--plate-line);color:var(--plate);padding:2px 6px;border-radius:2px}
+/* Estaban en --plate (azul casi negro) sobre panel oscuro: contraste 1.1,
+   ilegibles. Texto claro sobre relleno con cuerpo. */
+.kwbar span{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.09em;
+  text-transform:uppercase;background:var(--slate-bg);border:1px solid var(--rule2);
+  color:var(--ink);padding:3px 7px;border-radius:2px}
 .tog{font-family:var(--mono);font-size:10px;letter-spacing:.06em;background:transparent;
   border:1px solid var(--rule2);border-radius:2px;padding:5px 8px;color:var(--ink2);cursor:pointer}
 .tog:hover{border-color:var(--ochre);color:var(--ochre)}
@@ -1473,6 +1476,24 @@ function renderListsInner(){
         '</i></span><span class="rp">' + pts + '</span>';
       row.onclick = () => { selected = i; picking = false; renderLists(); };
 
+      // Duplicar: copia tamaño y armamento. Configurar dos veces la misma
+      // unidad con el mismo equipo era trabajo repetido puro.
+      const dup = el('span','rx');
+      dup.textContent = '\u29c9';
+      dup.title = 'Duplicate with the same wargear';
+      dup.onclick = (ev) => {
+        ev.stopPropagation();
+        const copy = JSON.parse(JSON.stringify(sl));
+        delete copy.attach;          // el enganche es de esta copia, no de la nueva
+        l.slots.splice(i + 1, 0, copy);
+        // Los enganches apuntan por índice: los posteriores se corren.
+        for (const s2 of l.slots)
+          if (s2 !== copy && s2.attach != null && s2.attach - 1 > i) s2.attach += 1;
+        selected = i + 1;
+        saveList(l); renderLists();
+      };
+      row.append(dup);
+
       const x = el('span','rx');
       x.textContent = '\u2715';
       x.title = 'Remove';
@@ -1576,9 +1597,18 @@ function unitDetail(l, i){
 
   const hd = el('div','hd');
   hd.innerHTML = '<h3>' + esc(u ? u.n : 'Unknown') + (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</h3>';
+  const dup2 = el('button'); dup2.textContent = 'DUPLICATE';
+  dup2.onclick = () => {
+    const copy = JSON.parse(JSON.stringify(sl));
+    delete copy.attach;
+    l.slots.splice(i + 1, 0, copy);
+    for (const s2 of l.slots)
+      if (s2 !== copy && s2.attach != null && s2.attach - 1 > i) s2.attach += 1;
+    selected = i + 1; saveList(l); renderLists();
+  };
   const close = el('button'); close.textContent = 'CLOSE';
   close.onclick = () => { selected = null; renderLists(); };
-  hd.append(close);
+  hd.append(dup2, close);
 
   const bd = el('div','bd');
 
@@ -1642,7 +1672,10 @@ function unitDetail(l, i){
     if (!w.children.length) { w.append(lab, at); bd.append(w); }
   }
 
-  if (u.o && u.o.length) bd.append(wargearFor(l, sl, u));
+  if (u.o && u.o.length) {
+    const wg = wargearFor(l, sl, u);
+    if (wg) bd.append(wg);
+  }
   if (hasSheet(u)) bd.append(datasheetFor(u, sl));
 
   box.append(hd, bd);
@@ -1710,8 +1743,14 @@ function wargearFor(l, sl, u){
   // Las opciones se agrupan por MODELO. En una escuadra, "Weapon 1" es del
   // sargento y la tropa lleva equipo fijo; mostrarlas planas hace creer que
   // la elección aplica a los diez.
-  let lastOwner;
+  const isFixedOpt = (o) => o[6] != null && o[1] != null && o[6] === o[1] && !o[4];
+
+  let lastOwner, shown = 0;
   for (const [gi, g] of u.o.entries()) {
+    // Si al ocultar el equipo fijo no queda nada elegible, el grupo entero
+    // sobra: mostrar una cabecera sin controles hace creer que falta algo.
+    if (!g.opts.some((o) => !isFixedOpt(o))) continue;
+    shown++;
     if (g.ow !== lastOwner) {
       lastOwner = g.ow;
       const oh = el('div');
@@ -1814,7 +1853,7 @@ function wargearFor(l, sl, u){
       // trae bladed horn y exalted chainblade con min = max = 1, o sea que
       // no se eligen, vienen puestos. Mostrarlos como contador hacía creer
       // que eran opcionales.
-      if (opt[6] != null && opt[1] != null && opt[6] === opt[1] && !opt[4]) continue;
+      if (isFixedOpt(opt)) continue;
 
       const name = opt[0];
       const own = capFor(opt, sl.size, u);
