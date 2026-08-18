@@ -198,9 +198,12 @@ for (const file of files) {
              n: g.n, k: g.pick,
              ow: g.owner || null,        // modelo al que pertenece la elección
              // [nombre, tope, precio, escala por tamaño]
-             // [nombre, tope, precio, escala, esModelo, armas]
+             // [nombre, tope, precio, escala, esModelo, armas, mínimo]
+             // El mínimo hace falta para distinguir el equipo FIJO de una
+             // elección: si min === max, esa entrada no se elige, viene puesta.
              opts: g.opts.map((e) =>
-               [e.n, e.max, Number(e.p) || 0, e.scale || null, e.model ? 1 : 0, e.w || null]),
+               [e.n, e.max, Number(e.p) || 0, e.scale || null, e.model ? 1 : 0,
+                e.w || null, e.min ?? 0]),
            }))
            .slice(0, 8),
       // perfil de la unidad: M T Sv W LD OC
@@ -212,6 +215,10 @@ for (const file of files) {
       inv: x.profile && String(x.profile.InSv || '').trim() ? String(x.profile.InSv).trim() : null,
       // composición: [nombre, min, max, armas de fábrica]
       cp: (x.composition ?? []).map((c) => [c.n, c.min, c.max, c.w]),
+      // Tamaño máximo real de la unidad, sumando sus filas. Hace falta para
+      // deducir proporciones del tipo "1 cada 5 modelos", que el catálogo
+      // sólo declara como el tope de la unidad más grande.
+      mx: (x.composition ?? []).reduce((a, c) => a + (c.max ?? c.min ?? 0), 0) || null,
       // habilidades: [nombre, descripción]
       ab: (x.abilities ?? []).map((a) => [a.n, a.d]),
       // palabras clave del datasheet (sin la de facción, que es redundante)
