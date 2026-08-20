@@ -24,6 +24,7 @@ const DIR = './data-missions';
 const SRC = path.join(DIR, 'ironbuilt-data-main', 'datasets');
 const OUT = './output-missions';
 
+// Los datasets vienen con BOM: hay que sacarlo antes de parsear.
 const readJson = async (f) => JSON.parse((await fs.readFile(f, 'utf8')).replace(/^\uFEFF/, ''));
 
 async function download() {
@@ -85,12 +86,18 @@ async function main() {
     c.max = nums.length ? Math.max(...nums) : 5;
   }
 
+  /* Despliegues: 15 emparejamientos de disposiciones x 3 disposiciones de
+   * terreno (A/B/C), con la imagen del mapa servida por el propio dataset.
+   * Se guarda la URL, no la imagen: pesan y se cargan sólo si las mirás. */
   const layouts = (maps?.layouts ?? maps?.maps ?? []).map((l) => ({
     letter: l.layout ?? l.letter ?? null,
-    a: l.attacker ?? l.attackerDisposition ?? null,
-    d: l.defender ?? l.defenderDisposition ?? null,
+    a: l.attacker?.disposition ?? l.attacker ?? null,
+    d: l.defender?.disposition ?? l.defender ?? null,
+    am: l.attacker?.mission ?? null,
+    dm: l.defender?.mission ?? null,
     img: l.image ?? l.imageUrl ?? null,
-  })).filter((l) => l.letter);
+    page: l.page ?? null,
+  })).filter((l) => l.letter && l.img);
 
   await fs.mkdir(OUT, { recursive: true });
   await fs.writeFile(path.join(OUT, 'missions.json'), JSON.stringify({
