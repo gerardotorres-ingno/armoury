@@ -27,17 +27,28 @@ const OUT = './output-missions';
 // Los datasets vienen con BOM: hay que sacarlo antes de parsear.
 const readJson = async (f) => JSON.parse((await fs.readFile(f, 'utf8')).replace(/^\uFEFF/, ''));
 
-async function download() {
-  await fs.mkdir(DIR, { recursive: true });
-  const tar = path.join(DIR, 'src.tar.gz');
-  console.log(`↓ Descargando ${REPO} ...`);
-  const res = await fetch(`https://codeload.github.com/${REPO}/tar.gz/refs/heads/main`);
+async function grab(repo, tarName, folder, members) {
+  const tar = path.join(DIR, tarName);
+  console.log(`↓ Descargando ${repo} ...`);
+  const res = await fetch(`https://codeload.github.com/${repo}/tar.gz/refs/heads/main`);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   await pipeline(res.body, createWriteStream(tar));
-  await fs.rm(path.join(DIR, 'ironbuilt-data-main'), { recursive: true, force: true });
-  // Sólo los datasets: el repo lleva 15 MB de imágenes de mapas.
-  await execFileP('tar', ['-xzf', tar, '-C', DIR,
+  await fs.rm(path.join(DIR, folder), { recursive: true, force: true });
+  await execFileP('tar', ['-xzf', tar, '-C', DIR, ...members]);
+}
+
+async function download() {
+  await fs.mkdir(DIR, { recursive: true });
+  // Sólo los datasets: el repo de IRONBUILT lleva 15 MB de imágenes.
+  await grab(REPO, 'src.tar.gz', 'ironbuilt-data-main', [
     'ironbuilt-data-main/datasets', 'ironbuilt-data-main/LICENSE', 'ironbuilt-data-main/NOTICE']);
+
+  // Metadatos de referencia rápida. Opcional: si falla, la app sigue igual.
+  try {
+    await grab('tabletop-developer-consortium/40kdc-data', 'dc.tar.gz', '40kdc-data-main',
+      ['40kdc-data-main/data/core/weapon-keywords.json',
+       '40kdc-data-main/data/core/stratagems.json']);
+  } catch (e) { console.warn('  (sin 40kdc-data:', e.message + ')'); }
 }
 
 async function main() {
@@ -99,8 +110,33 @@ async function main() {
     page: l.page ?? null,
   })).filter((l) => l.letter && l.img);
 
+  // ---- esqueleto de referencia rápida (40kdc-data) --------------------
+  // Nombres y metadatos de palabras clave y estratagemas. NO traen texto:
+  // el propio dataset los deja vacíos a propósito. Sirven como esqueleto
+  // para que el usuario escriba una línea por entrada en vez de tipear
+  // los 34 nombres a mano.
+  let quickRef = [];
+  try {
+    const dcDir = path.join(DIR, '40kdc-data-main', 'data', 'core');
+    const kw = await readJson(path.join(dcDir, 'weapon-keywords.json'));
+    const st = await readJson(path.join(dcDir, 'stratagems.json'));
+
+    quickRef = [
+      ...kw.map((k) => ({
+        sec: 'Weapon keywords', n: k.name,
+        meta: (k.required_parameters || []).length ? 'takes a value' : '',
+      })),
+      ...st.filter((x) => x.category === 'core').map((x) => ({
+        sec: 'Command', n: x.name,
+        meta: [x.cp_cost != null ? x.cp_cost + ' CP' : '', x.type,
+               (x.phases || []).join('/'), x.timing].filter(Boolean).join(' · '),
+      })),
+    ];
+  } catch { /* opcional */ }
+
   await fs.mkdir(OUT, { recursive: true });
   await fs.writeFile(path.join(OUT, 'missions.json'), JSON.stringify({
+    quickRef,
     version: m.version,
     source: REPO,
     licence: 'CC BY-SA 4.0',
@@ -110,7 +146,8 @@ async function main() {
 
   console.log(`✔ ${m.version}`);
   console.log(`  ${dispositions.length} disposiciones · ${Object.keys(matrix).length} filas de matriz · ` +
-              `${cards.length} secundarias · ${layouts.length} despliegues`);
+              `${cards.length} secundarias · ${layouts.length} despliegues · ` +
+              `${quickRef.length} entradas de referencia`);
 }
 
 main().catch((e) => { console.error('✖', e.message); process.exit(1); });
