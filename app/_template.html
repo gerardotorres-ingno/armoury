@@ -757,6 +757,7 @@ async function start(){
   battles = await loadBattles();
   await loadLib();
   await loadRules();
+  await loadPdf();
 
   // Limpieza: la versión anterior guardaba el borrador del formulario antes
   // de apretar CREATE, así que pudieron quedar listas vacías sin nombre.
@@ -4425,9 +4426,86 @@ async function loadRules(){
   rules = rules.filter((r) => r && String(r.n || '').trim());
 }
 
+/* ------------------------------------------------------------------
+ * REGLAMENTO ADJUNTO
+ *
+ * GW publica las Core Rules gratis, pero gratis-de-descargar no es
+ * libre-de-redistribuir: el PDF no va en el repo. Lo que sí puede hacer la
+ * app es guardar TU copia en TU dispositivo, para tenerla sin señal.
+ *
+ * Se guarda como blob en el almacén `misc`. En localStorage no entra (son
+ * varios MB), así que si el navegador no da IndexedDB se avisa.
+ * ---------------------------------------------------------------- */
+let rulesPdf = null;      // { name, size, blob }
+
+async function loadPdf(){
+  try {
+    const rows = await store.getAll('misc');
+    const row = rows.find((r) => r.id === 'rulesPdf');
+    rulesPdf = row && row.qty && row.qty.blob ? row.qty : null;
+  } catch { rulesPdf = null; }
+}
+
+function pdfPanel(){
+  const box = el('div');
+  box.style.cssText = 'margin-bottom:14px';
+
+  if (rulesPdf) {
+    const row = el('div','slot');
+    const url = URL.createObjectURL(rulesPdf.blob);
+    row.innerHTML = '<div class="id"><div class="nm">' + esc(rulesPdf.name) + '</div>' +
+      '<div class="meta">' + Math.round(rulesPdf.size / 1024) + ' KB \u00b7 stored on this device</div></div>';
+    const open = el('button','btn pri'); open.textContent = 'OPEN';
+    open.onclick = () => window.open(url, '_blank');
+    const rm = el('button','btn'); rm.textContent = 'REMOVE';
+    rm.onclick = () => {
+      if (!confirm('Remove the attached rulebook from this device?')) return;
+      store.del('misc', 'rulesPdf'); rulesPdf = null; renderRules();
+    };
+    row.append(open, rm);
+    box.append(row);
+    return box;
+  }
+
+  const d = document.createElement('details');
+  d.className = 'cfg';
+  d.innerHTML = '<summary>Attach your rulebook <span>PDF, stays on this device</span></summary>';
+  const body = el('div');
+  const p = el('p');
+  p.style.cssText = 'font-size:13px;line-height:1.6;color:var(--ink2);margin-bottom:10px';
+  p.innerHTML = 'The app does not ship the rulebook \u2014 it is Games Workshop\u2019s. ' +
+    'Download the free Core Rules yourself, then attach the file here: it is stored ' +
+    'in this browser only, so you can read it at the table with no signal. ' +
+    'Nothing is uploaded anywhere.<br><br>' +
+    '<a href="https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/" ' +
+    'target="_blank" rel="noopener" style="color:var(--ochre)">Official free download \u2197</a>';
+
+  const inp = el('input'); inp.type = 'file'; inp.accept = 'application/pdf';
+  inp.onchange = async () => {
+    const f = inp.files[0];
+    if (!f) return;
+    if (store.mode !== 'idb') {
+      alert('Attaching a PDF needs the full database, which this browser blocks ' +
+            'for files opened from disk. Publish the app to a URL, or open it there.');
+      return;
+    }
+    try {
+      store.put('misc', { id: 'rulesPdf', qty: { name: f.name, size: f.size, blob: f } });
+      rulesPdf = { name: f.name, size: f.size, blob: f };
+      renderRules();
+    } catch (e) { alert('Could not store that file: ' + (e.message || e)); }
+  };
+
+  body.append(p, inp);
+  d.append(body);
+  box.append(d);
+  return box;
+}
+
 function renderRules(){
   const v = document.getElementById('viewRules');
   v.innerHTML = '';
+  v.append(pdfPanel());
 
   const bar = el('div','bar');
   const q = el('input'); q.type = 'search'; q.placeholder = 'Search rules\u2026';
