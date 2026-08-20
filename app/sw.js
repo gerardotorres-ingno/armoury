@@ -21,8 +21,23 @@ self.addEventListener('activate', (e) => {
   );
 });
 
+/* Los mapas de despliegue viven en un CDN. Se guardan en un caché aparte y
+ * con estrategia inversa —caché primero— porque no cambian nunca y en la mesa
+ * suele no haber señal. */
+const MAPS = 'armoury-maps-v1';
+
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
+
+  if (/cdn\.jsdelivr\.net/.test(e.request.url)) {
+    e.respondWith(
+      caches.open(MAPS).then((c) =>
+        c.match(e.request).then((hit) =>
+          hit || fetch(e.request).then((res) => { c.put(e.request, res.clone()); return res; })))
+    );
+    return;
+  }
+
   e.respondWith(
     fetch(e.request)
       .then((res) => {
