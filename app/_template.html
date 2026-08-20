@@ -165,6 +165,13 @@ details.scope b{color:var(--ink)}
 .ph.on{background:var(--ochre-bg);border-color:var(--ochre);color:var(--ochre)}
 .ph:disabled{opacity:.35;cursor:not-allowed}
 
+details.rule{border:1px solid var(--rule2);border-radius:3px;background:var(--panel);
+  margin-bottom:6px}
+details.rule>summary{cursor:pointer;padding:10px 12px;font-family:var(--disp);
+  font-weight:600;font-size:16px;color:var(--ink)}
+details.rule[open]>summary{border-bottom:1px solid var(--rule)}
+details.rule>div{padding:10px 12px 12px}
+
 .chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
   background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
   color:var(--ink);cursor:pointer}
@@ -480,7 +487,10 @@ input[type=search]::placeholder{color:var(--ink2)}
     <button id="tabCol" role="tab" aria-selected="true">Collection</button>
     <button id="tabList" role="tab" aria-selected="false">Lists</button>
     <button id="tabBattle" role="tab" aria-selected="false">Battles</button>
+    <button id="tabRules" role="tab" aria-selected="false">Rules</button>
   </div>
+
+  <div id="viewRules" hidden></div>
 
   <div id="viewBattles" hidden></div>
 
@@ -746,6 +756,7 @@ async function start(){
   lists = await loadLists();
   battles = await loadBattles();
   await loadLib();
+  await loadRules();
 
   // Limpieza: la versión anterior guardaba el borrador del formulario antes
   // de apretar CREATE, así que pudieron quedar listas vacías sin nombre.
@@ -3036,18 +3047,21 @@ function gearName(u, key){
 /* ---------- pestañas ---------- */
 function showTab(which){
   if (which === 'col') document.getElementById('shell').className = 'wrap';
-  for (const [tab, view] of [['tabCol','viewCol'], ['tabList','viewLists'], ['tabBattle','viewBattles']]) {
-    const on = tab === ({ col:'tabCol', lists:'tabList', battles:'tabBattle' })[which];
+  for (const [tab, view] of [['tabCol','viewCol'], ['tabList','viewLists'],
+                             ['tabBattle','viewBattles'], ['tabRules','viewRules']]) {
+    const on = tab === ({ col:'tabCol', lists:'tabList', battles:'tabBattle', rules:'tabRules' })[which];
     document.getElementById(view).hidden = !on;
     document.getElementById(tab).setAttribute('aria-selected', on);
   }
   document.querySelector('.totals').hidden = which !== 'col';
   if (which === 'lists')   renderLists();
   if (which === 'battles') renderBattles();
+  if (which === 'rules')   renderRules();
 }
 document.getElementById('tabCol').onclick    = () => showTab('col');
 document.getElementById('tabList').onclick   = () => showTab('lists');
 document.getElementById('tabBattle').onclick = () => showTab('battles');
+document.getElementById('tabRules').onclick  = () => showTab('rules');
 
 /* ============================================================
    BATALLAS
@@ -3418,9 +3432,11 @@ function missionPanel(b){
     bar.append(labelled(who === 'me' ? 'My disposition' : 'Their disposition', sel));
   }
 
+  // Sólo las disposiciones de terreno que existen para este emparejamiento.
+  const avail = layoutsFor(b.disp.me, b.disp.them);
   const lay = el('select');
   const l0 = el('option'); l0.value=''; l0.textContent='—'; lay.append(l0);
-  for (const x of ['A','B','C']) {
+  for (const x of (avail.length ? avail.map((z) => z.letter) : ['A','B','C'])) {
     const o = el('option'); o.value=x; o.textContent='Layout ' + x;
     if (b.layout === x) o.selected = true;
     lay.append(o);
@@ -3431,7 +3447,8 @@ function missionPanel(b){
   // El documento dice que la disposición se puede sortear entre las tres.
   const roll = el('button','btn'); roll.textContent = 'ROLL';
   roll.onclick = () => {
-    b.layout = ['A','B','C'][Math.floor(Math.random() * 3)];
+    const pool = avail.length ? avail.map((z) => z.letter) : ['A','B','C'];
+    b.layout = pool[Math.floor(Math.random() * pool.length)];
     saveBattle(b); renderBattles();
   };
   bar.append(roll);
@@ -3453,7 +3470,55 @@ function missionPanel(b){
     out.innerHTML = '<div class="empty">Pick both Force Dispositions to see the primary missions.</div>';
   }
   box.append(out);
+
+  // Mapa de despliegue del dataset comunitario. Se carga sólo al desplegarlo:
+  // son imágenes de varios cientos de KB y en la mesa no siempre hay señal.
+  const map = layoutsFor(b.disp.me, b.disp.them).find((z) => z.letter === b.layout);
+  if (map) {
+    const det = document.createElement('details');
+    det.className = 'cfg';
+    det.innerHTML = '<summary>Deployment map <span>layout ' + esc(b.layout) + '</span></summary>';
+    const body = el('div');
+    const img = el('img');
+    img.loading = 'lazy';
+    img.alt = 'Deployment layout ' + b.layout + ' \u2014 ' + b.disp.me + ' vs ' + b.disp.them;
+    img.style.cssText = 'width:100%;height:auto;border-radius:3px;background:#fff';
+
+    // La imagen vive en un CDN: en el club sin señal no va a cargar. En vez
+    // de dejar un hueco mudo, se avisa y se ofrece el enlace para guardarla
+    // antes de salir de casa.
+    img.onerror = () => {
+      img.remove();
+      const w = el('div','warn soft');
+      w.innerHTML = '<b>MAP NOT AVAILABLE OFFLINE</b>' +
+        'The layout image is hosted online. Open it once while you have signal ' +
+        'and your browser will keep it cached.' +
+        '<div style="margin-top:6px"><a href="' + esc(map.img) + '" target="_blank" ' +
+        'rel="noopener" style="color:var(--ochre)">Open the map</a></div>';
+      body.insertBefore(w, body.firstChild);
+    };
+    img.src = map.img;
+    const cap = el('div','hint');
+    cap.textContent = map.a + ' vs ' + map.d +
+      (map.page ? ' \u00b7 Event Companion p.' + map.page : '') +
+      ' \u00b7 image from ' + (DATA.missions?.source || 'the community dataset') +
+      ' (' + (DATA.missions?.licence || '') + ')';
+    body.append(img, cap);
+    det.append(body);
+    box.append(det);
+  }
+
   return box;
+}
+
+/* Despliegues disponibles para un par de disposiciones. El dataset guarda
+ * el emparejamiento en un sentido, así que se prueba también invertido. */
+function layoutsFor(mine, theirs){
+  const all = DATA.missions?.layouts ?? [];
+  if (!mine || !theirs) return [];
+  const eq = (a, b2) => String(a).toLowerCase() === String(b2).toLowerCase();
+  return all.filter((z) =>
+    (eq(z.a, mine) && eq(z.d, theirs)) || (eq(z.a, theirs) && eq(z.d, mine)));
 }
 
 function clockPanel(b){
@@ -4333,6 +4398,150 @@ function analysisPanel(b, l){
                    'not bad luck.'));
   det.append(body);
   return det;
+}
+
+/* ============================================================
+   REGLAS — referencia rápida
+   
+   La app NO trae el texto de las reglas: son de GW. Lo que trae es el
+   contenedor — secciones, buscador, import/export — para que cargues las
+   chuletas que usás y las compartas con tu club en un archivo.
+   
+   Mismo criterio que la biblioteca de secundarias: uno la carga, todos
+   la importan.
+   ============================================================ */
+let rules = [];          // [{ id, sec, n, d }]
+let ruleQuery = '';
+
+const RULE_SECTIONS = ['Core','Command','Movement','Shooting','Charge','Fight','Terrain','Other'];
+
+function saveRules(){ store.put('misc', { id: 'rules', qty: JSON.stringify(rules) }); }
+
+async function loadRules(){
+  const rows = await store.getAll('misc');
+  const row = rows.find((r) => r.id === 'rules');
+  try { rules = row ? JSON.parse(row.qty) : []; } catch { rules = []; }
+  rules = rules.filter((r) => r && String(r.n || '').trim());
+}
+
+function renderRules(){
+  const v = document.getElementById('viewRules');
+  v.innerHTML = '';
+
+  const bar = el('div','bar');
+  const q = el('input'); q.type = 'search'; q.placeholder = 'Search rules\u2026';
+  q.style.cssText = 'flex:1 1 220px';
+  q.value = ruleQuery;
+  q.oninput = () => { ruleQuery = q.value; drawList(); };
+  bar.append(q);
+
+  const add = el('button','btn'); add.textContent = '+ ENTRY';
+  add.onclick = () => {
+    rules.push({ id: 'r' + Date.now(), sec: 'Core', n: 'New entry', d: '' });
+    saveRules(); renderRules();
+  };
+  const imp = el('button','btn'); imp.textContent = 'IMPORT';
+  imp.onclick = importRules;
+  const exp = el('button','btn'); exp.textContent = 'EXPORT';
+  exp.onclick = () => {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(rules, null, 2)], { type:'application/json' }));
+    const a = document.createElement('a'); a.href = url;
+    a.download = 'armoury-rules.json'; a.click(); URL.revokeObjectURL(url);
+  };
+  bar.append(add, imp, exp);
+  v.append(bar);
+
+  const list = el('div');
+  v.append(list);
+
+  function drawList(){
+    list.innerHTML = '';
+    const term = ruleQuery.trim().toLowerCase();
+
+    if (!rules.length) {
+      list.append(note('No rules loaded. This app does not ship the rules text \u2014 ' +
+        'it belongs to Games Workshop. Add the reminders you actually look up ' +
+        'mid-game, then EXPORT and share the file with your club: one person ' +
+        'types them, everybody imports.'));
+      return;
+    }
+
+    const hits = rules.filter((r) => !term ||
+      (r.n + ' ' + (r.d || '') + ' ' + r.sec).toLowerCase().includes(term));
+
+    if (!hits.length) { list.append(note('Nothing matches.')); return; }
+
+    for (const sec of RULE_SECTIONS) {
+      const inSec = hits.filter((r) => (r.sec || 'Other') === sec);
+      if (!inSec.length) continue;
+
+      const h = el('div','rrole');
+      h.innerHTML = '<span>' + sec.toUpperCase() + '</span><span>' + inSec.length + '</span>';
+      list.append(h);
+
+      for (const r of inSec) list.append(ruleRow(r, drawList));
+    }
+  }
+
+  drawList();
+}
+
+function ruleRow(r, redraw){
+  const det = document.createElement('details');
+  det.className = 'rule';
+
+  const sum = document.createElement('summary');
+  sum.textContent = r.n || '(untitled)';
+  det.append(sum);
+
+  const body = el('div');
+
+  const n = el('input'); n.type = 'text'; n.value = r.n; n.placeholder = 'Rule name';
+  n.style.cssText = 'width:100%;font-family:var(--disp);font-weight:600;font-size:16px;' +
+    'background:transparent;border:none;border-bottom:1px solid var(--rule2);' +
+    'padding:4px 0;color:var(--ink);margin-bottom:8px';
+  n.oninput = () => { r.n = n.value; sum.textContent = n.value || '(untitled)'; saveRules(); };
+
+  const ta = el('textarea');
+  ta.value = r.d || '';
+  ta.placeholder = 'What you need to remember mid-game';
+  ta.style.cssText = 'width:100%;min-height:90px;padding:9px;background:var(--field);' +
+    'border:1px solid var(--rule2);border-radius:2px;color:var(--ink);font:inherit;resize:vertical';
+  ta.oninput = () => { r.d = ta.value; saveRules(); };
+
+  const foot = el('div','bar');
+  const sec = el('select');
+  for (const s of RULE_SECTIONS) {
+    const o = el('option'); o.value = s; o.textContent = s;
+    if ((r.sec || 'Other') === s) o.selected = true;
+    sec.append(o);
+  }
+  sec.onchange = () => { r.sec = sec.value; saveRules(); redraw(); };
+  const rm = el('button','btn'); rm.textContent = 'REMOVE';
+  rm.onclick = () => { rules = rules.filter((x) => x.id !== r.id); saveRules(); redraw(); };
+  foot.append(labelled('Section', sec), rm);
+
+  body.append(n, ta, foot);
+  det.append(body);
+  return det;
+}
+
+function importRules(){
+  const inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = 'application/json';
+  inp.onchange = async () => {
+    try {
+      const d = JSON.parse(await inp.files[0].text());
+      if (!Array.isArray(d)) throw new Error('Not a rules file.');
+      rules = d.filter((r) => r && r.n).map((r, i) => ({
+        id: r.id || 'r' + (Date.now() + i),
+        sec: RULE_SECTIONS.includes(r.sec) ? r.sec : 'Other',
+        n: String(r.n), d: String(r.d ?? r.text ?? ''),
+      }));
+      saveRules(); renderRules();
+    } catch (e) { alert(e.message || 'Could not read that file.'); }
+  };
+  inp.click();
 }
 
 boot();
