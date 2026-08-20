@@ -4413,7 +4413,8 @@ function analysisPanel(b, l){
 let rules = [];          // [{ id, sec, n, d }]
 let ruleQuery = '';
 
-const RULE_SECTIONS = ['Core','Command','Movement','Shooting','Charge','Fight','Terrain','Other'];
+const RULE_SECTIONS = ['Core','Command','Movement','Shooting','Charge','Fight',
+                       'Weapon keywords','Terrain','Other'];
 
 function saveRules(){ store.put('misc', { id: 'rules', qty: JSON.stringify(rules) }); }
 
@@ -4459,10 +4460,35 @@ function renderRules(){
     const term = ruleQuery.trim().toLowerCase();
 
     if (!rules.length) {
-      list.append(note('No rules loaded. This app does not ship the rules text \u2014 ' +
-        'it belongs to Games Workshop. Add the reminders you actually look up ' +
-        'mid-game, then EXPORT and share the file with your club: one person ' +
-        'types them, everybody imports.'));
+      const n = el('div','note');
+      n.innerHTML =
+        'No rules loaded. This app does not ship the rules text \u2014 it belongs to ' +
+        'Games Workshop, who publish the Core Rules as a free download.<br><br>' +
+        '<a href="https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/" ' +
+        'target="_blank" rel="noopener" style="color:var(--ochre)">Official free rules \u2197</a>' +
+        '<br><br>Here you write the reminders you actually look up mid-game. ' +
+        'Then EXPORT and share the file: one person types them, the whole club imports.';
+      list.append(n);
+
+      // Esqueleto: 34 palabras clave de arma y las estratagemas básicas, con
+      // su coste y fase, y el texto en blanco. Evita tipear los nombres.
+      if ((DATA.quickRef || []).length) {
+        const b = el('button','btn pri');
+        b.textContent = 'START FROM A SKELETON (' + DATA.quickRef.length + ' entries)';
+        b.style.cssText = 'margin-top:12px;padding:11px 14px';
+        b.onclick = () => {
+          rules = DATA.quickRef.map((q, i) => ({
+            id: 'q' + i,
+            sec: RULE_SECTIONS.includes(q.sec) ? q.sec : 'Other',
+            n: q.n,
+            d: q.meta ? '[' + q.meta + ']\n' : '',
+          }));
+          saveRules(); renderRules();
+        };
+        list.append(b);
+        list.append(hint('Names, CP cost and phase come from the community dataset ' +
+          '40kdc-data, which deliberately ships no rules text. You fill in one line each.'));
+      }
       return;
     }
 
