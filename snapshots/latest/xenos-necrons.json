@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "85a77d8",
-    "date": "2026-08-18T21:40:05Z"
+    "sha": "9f031d2",
+    "date": "2026-08-20T00:17:54Z"
   },
   "catalogueId": "b654-a18a-ea1-3bf2",
   "catalogueName": "Xenos - Necrons",
@@ -214,13 +214,13 @@
     }
   ],
   "allyCaps": [],
-  "revision": 11,
+  "revision": 15,
   "file": "Necrons.json",
   "counts": {
     "total": 67,
     "native": 67,
-    "matched": 53,
-    "legends": 11,
+    "matched": 52,
+    "legends": 12,
     "crucible": 3,
     "allied": 0
   },
@@ -1588,7 +1588,8 @@
       "keywords": [
         "Beast",
         "Canoptek",
-        "Tomb Crawlers"
+        "Tomb Crawlers",
+        "Canoptek Retinue"
       ],
       "models": {
         "min": 2,
@@ -2446,7 +2447,8 @@
       "faction": "Necrons",
       "keywords": [
         "Infantry",
-        "Cryptothralls"
+        "Cryptothralls",
+        "Canoptek Retinue"
       ],
       "models": {
         "min": 2,
@@ -8324,10 +8326,10 @@
       "id": "d3ee-bc80-1eea-6463",
       "linkId": "e85f-821f-e245-1bc1",
       "name": "Tomb Citadel Walls",
-      "rawName": "Tomb Citadel Walls",
+      "rawName": "Tomb Citadel Walls [Legends]",
       "type": "model",
-      "mode": "standard",
-      "legends": false,
+      "mode": "legends",
+      "legends": true,
       "points": 180,
       "ladder": [
         {
@@ -8392,7 +8394,7 @@
       ],
       "composition": [
         {
-          "n": "Tomb Citadel Walls",
+          "n": "Tomb Citadel Walls [Legends]",
           "min": 1,
           "max": 1,
           "w": []

@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "85a77d8",
-    "date": "2026-08-18T21:40:05Z"
+    "sha": "9f031d2",
+    "date": "2026-08-20T00:17:54Z"
   },
   "catalogueId": "e0af-67df-9d63-8fb7",
   "catalogueName": "Imperium - Adeptus Astartes - Space Marines",
@@ -889,7 +889,7 @@
     }
   ],
   "allyCaps": [],
-  "revision": 6,
+  "revision": 8,
   "file": "Imperium - Space Marines.json",
   "counts": {
     "total": 159,
@@ -1241,8 +1241,8 @@
     {
       "id": "fc7f-8176-c10c-ca8",
       "linkId": "13b9-6251-7254-4b83",
-      "name": "Ancient in Terminator Armor",
-      "rawName": "Ancient in Terminator Armor",
+      "name": "Ancient in Terminator Armour",
+      "rawName": "Ancient in Terminator Armour",
       "type": "model",
       "mode": "standard",
       "legends": false,
@@ -1912,7 +1912,7 @@
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ DESOLATION SQUAD ■ DEVASTATOR SQUAD ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ DESOLATION SQUAD ■ DEVASTATOR SQUAD ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2032,7 +2032,7 @@
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ AGGRESSOR SQUAD ■ ERADICATOR SQUAD ■ HEAVY INTERCESSOR SQUAD ■ INDOMITOR KILL TEAM You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following units: ■ AGGRESSOR SQUAD ■ ERADICATOR SQUAD ■ HEAVY INTERCESSOR SQUAD ■ INDOMITOR KILL TEAM"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -6426,10 +6426,6 @@
         {
           "n": "Rites of Battle",
           "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -6452,7 +6448,7 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -11597,7 +11593,10 @@
           "pts": 105
         }
       ],
-      "cap": null,
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
       "leads": null,
       "options": null,
       "weapons": [
@@ -17573,7 +17572,7 @@
       ],
       "abilities": [
         {
-          "n": "Purge the Foe",
+          "n": "Incendiary Terror",
           "d": "In your Shooting phase, after this unit has shot, you can select one enemy Infantry unit hit by one or more of those attacks made with a pyreblaster. That enemy unit must take a Battle-shock test, subtracting 1 from that test."
         }
       ],
@@ -25321,7 +25320,7 @@
       "abilities": [
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ COMPANY HEROES ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD You can attach this model to a unit it can lead even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ COMPANY HEROES ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD"
         },
         {
           "n": "Target Priority",
@@ -25469,7 +25468,7 @@
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ INCURSOR SQUAD ■ INFILTRATOR SQUAD ■ REIVER SQUAD ■ SPECTRUS KILL TEAM You can attach this model to a unit it can lead units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following units: ■ INCURSOR SQUAD ■ INFILTRATOR SQUAD ■ REIVER SQUAD ■ SPECTRUS KILL TEAM"
         },
         {
           "n": "Tactical Precision",
@@ -25561,7 +25560,7 @@
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following unit: ■ REIVER SQUAD You can attach this model a unit it can lead even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following unit: ■ REIVER SQUAD"
         },
         {
           "n": "Tactical Precision",
