@@ -357,6 +357,7 @@ const payload = {
   roles: [...roleTable.values()].sort((a, b) => a.order - b.order),
   mfmVersion: MFM?.version ?? null,
   missions: MISSIONS,
+  quickRef: MISSIONS?.quickRef ?? [],
   revision: JSON.parse(await fs.readFile(path.join(OUT_DIR, '_index.json'), 'utf8')).version,
   generatedAt: new Date().toISOString(),
   factions,
