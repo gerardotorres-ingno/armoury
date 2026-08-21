@@ -487,10 +487,10 @@ input[type=search]::placeholder{color:var(--ink2)}
     <button id="tabCol" role="tab" aria-selected="true">Collection</button>
     <button id="tabList" role="tab" aria-selected="false">Lists</button>
     <button id="tabBattle" role="tab" aria-selected="false">Battles</button>
-    <button id="tabRules" role="tab" aria-selected="false">Rules</button>
+    <button id="tabStats" role="tab" aria-selected="false">Stats</button>
   </div>
 
-  <div id="viewRules" hidden></div>
+  <div id="viewStats" hidden></div>
 
   <div id="viewBattles" hidden></div>
 
@@ -756,8 +756,9 @@ async function start(){
   lists = await loadLists();
   battles = await loadBattles();
   await loadLib();
-  await loadRules();
-  await loadPdf();
+
+  await loadPool();
+  await loadFeed();
 
   // Limpieza: la versión anterior guardaba el borrador del formulario antes
   // de apretar CREATE, así que pudieron quedar listas vacías sin nombre.
@@ -3049,20 +3050,21 @@ function gearName(u, key){
 function showTab(which){
   if (which === 'col') document.getElementById('shell').className = 'wrap';
   for (const [tab, view] of [['tabCol','viewCol'], ['tabList','viewLists'],
-                             ['tabBattle','viewBattles'], ['tabRules','viewRules']]) {
-    const on = tab === ({ col:'tabCol', lists:'tabList', battles:'tabBattle', rules:'tabRules' })[which];
+                             ['tabBattle','viewBattles'], ['tabStats','viewStats']]) {
+    const on = tab === ({ col:'tabCol', lists:'tabList', battles:'tabBattle',
+                          stats:'tabStats' })[which];
     document.getElementById(view).hidden = !on;
     document.getElementById(tab).setAttribute('aria-selected', on);
   }
   document.querySelector('.totals').hidden = which !== 'col';
   if (which === 'lists')   renderLists();
   if (which === 'battles') renderBattles();
-  if (which === 'rules')   renderRules();
+  if (which === 'stats')   renderStats();
 }
 document.getElementById('tabCol').onclick    = () => showTab('col');
 document.getElementById('tabList').onclick   = () => showTab('lists');
 document.getElementById('tabBattle').onclick = () => showTab('battles');
-document.getElementById('tabRules').onclick  = () => showTab('rules');
+document.getElementById('tabStats').onclick  = () => showTab('stats');
 
 /* ============================================================
    BATALLAS
@@ -4644,6 +4646,361 @@ function importRules(){
       }));
       saveRules(); renderRules();
     } catch (e) { alert(e.message || 'Could not read that file.'); }
+  };
+  inp.click();
+}
+
+/* ============================================================
+   ESTADÍSTICAS
+   
+   Sale de las batallas ya registradas: marcador, disposiciones, misiones,
+   y el tablero de unidades. No pide cargar nada nuevo.
+   
+   Lo que responde: cómo te va con cada facción, con qué emparejamiento de
+   disposiciones ganás y con cuál no, y qué unidades mueren siempre o nunca
+   llegan a actuar.
+   
+   El paquete compartible lleva sólo resúmenes: facción, disposiciones,
+   marcador y unidades. Ni nombres de rivales ni notas.
+   ============================================================ */
+let pool = [];        // batallas importadas de otras personas
+
+function savePool(){ store.put('misc', { id: 'statsPool', qty: JSON.stringify(pool) }); }
+async function loadPool(){
+  const rows = await store.getAll('misc');
+  const row = rows.find((r) => r.id === 'statsPool');
+  try { pool = row ? JSON.parse(row.qty) : []; } catch { pool = []; }
+}
+
+/* Resumen de una batalla: la forma que se comparte y sobre la que se suma. */
+function summarise(b, mine){
+  const t = battleTotals(b);
+  const l = mine || lists.find((x) => x.id === b.mine);
+  const f = l ? factionOf(l.faction) : null;
+  const units = [];
+
+  if (l) {
+    const tr = b.track || {};
+    for (const [i, sl] of l.slots.entries()) {
+      const u = unitOf(l, sl.unitId);
+      if (!u) continue;
+      const st = tr[i] || {};
+      const acted = ['m','s','c','f'].some((k) =>
+        Array.from({length:5}, (_, r) => st.act && st.act[(r+1)+':'+k]).some(Boolean));
+      units.push({ n: u.n, size: sl.size, dead: st.dead ?? null, acted });
+    }
+  }
+
+  return {
+    id: b.id,
+    date: b.date,
+    faction: f ? f.name : null,
+    disp: b.disp?.me ?? null,
+    vsDisp: b.disp?.them ?? null,
+    mission: b.mission ?? null,
+    limit: b.limit ?? 2000,
+    me: t.me, them: t.them,
+    result: t.me > t.them ? 'W' : (t.me < t.them ? 'L' : 'D'),
+    done: !!b.done,
+    units,
+  };
+}
+
+function allSummaries(){
+  const mine = battles.filter((b) => b.done).map((b) => summarise(b));
+  return { mine, pool, all: [...mine, ...pool] };
+}
+
+function tally(rows, keyFn){
+  const m = new Map();
+  for (const r of rows) {
+    const k = keyFn(r);
+    if (!k) continue;
+    const e = m.get(k) || { k, W:0, L:0, D:0, vp:0, avp:0, n:0 };
+    e[r.result]++; e.vp += r.me; e.avp += r.them; e.n++;
+    m.set(k, e);
+  }
+  return [...m.values()].sort((a, b) => b.n - a.n);
+}
+
+function pct(e){ return e.n ? Math.round(e.W * 100 / e.n) : 0; }
+
+/* ------------------------------------------------------------------
+ * COMUNIDAD
+ *
+ * Sin servidor: la app se suscribe a un archivo JSON publicado en cualquier
+ * URL —el repo del club, por ejemplo— y lo trae al abrir. El que consulta no
+ * hace nada; el que aporta le manda su archivo a quien mantiene el repo.
+ *
+ * No es tiempo real. Es lo más cerca que se llega sin backend, cuentas ni
+ * hacerse responsable de datos ajenos.
+ * ---------------------------------------------------------------- */
+let feedUrl = '';
+let feedState = '';
+
+async function loadFeed(){
+  const rows = await store.getAll('misc');
+  const row = rows.find((r) => r.id === 'feedUrl');
+  feedUrl = row ? String(row.qty || '') : '';
+  if (feedUrl) await pullFeed(true);
+}
+
+async function pullFeed(quiet){
+  if (!feedUrl) return;
+  feedState = 'loading';
+  try {
+    const res = await fetch(feedUrl, { cache: 'no-cache' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+
+    // Dos formatos: un JSON publicado (repo, Drive) o una hoja de cálculo
+    // publicada como CSV. La segunda permite que un Formulario recoja los
+    // archivos y la app los lea sola, sin que nadie fusione nada a mano.
+    const list = /^\s*[[{]/.test(text) ? fromJson(text) : fromSheet(text);
+    if (!list.length) throw new Error('no results in that file');
+
+    // Se reemplaza el lote de la comunidad, no se acumula: si alguien
+    // corrige una partida, la corrección tiene que ganar.
+    const localIds = new Set(battles.map((b) => b.id));
+    pool = list.filter((x) => x && x.id != null && !localIds.has(x.id));
+    savePool();
+    feedState = 'ok:' + pool.length;
+  } catch (e) {
+    feedState = 'error:' + (e.message || e);
+  }
+  if (!quiet) renderStats();
+  else if (document.getElementById('tabStats').getAttribute('aria-selected') === 'true') renderStats();
+}
+
+function fromJson(text){
+  const d = JSON.parse(text);
+  return Array.isArray(d) ? d : (d.battles || []);
+}
+
+/* CSV de una hoja publicada. Se busca, en cualquier columna, un valor que
+ * sea el JSON exportado por la app; el resto de las columnas —marca de
+ * tiempo, nombre— se ignoran. */
+function fromSheet(text){
+  const out = [];
+  for (const cell of csvCells(text)) {
+    const t = cell.trim();
+    if (!t.startsWith('{') && !t.startsWith('[')) continue;
+    try {
+      const d = JSON.parse(t);
+      const rows = Array.isArray(d) ? d : (d.battles || (d.id != null ? [d] : []));
+      for (const r of rows) if (r && r.id != null) out.push(r);
+    } catch {}
+  }
+  // Duplicados: la misma partida puede enviarse dos veces.
+  const seen = new Set();
+  return out.filter((r) => !seen.has(r.id) && seen.add(r.id));
+}
+
+/* Lector de CSV con comillas: los JSON traen comas y saltos de línea. */
+function csvCells(text){
+  const cells = [];
+  let cur = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (q) {
+      if (ch === '"' && text[i + 1] === '"') { cur += '"'; i++; }
+      else if (ch === '"') q = false;
+      else cur += ch;
+    } else if (ch === '"') q = true;
+    else if (ch === ',' || ch === '\n' || ch === '\r') { if (cur) cells.push(cur); cur = ''; }
+    else cur += ch;
+  }
+  if (cur) cells.push(cur);
+  return cells;
+}
+
+function feedPanel(){
+  const d = document.createElement('details');
+  d.className = 'cfg';
+  d.open = !feedUrl;
+  const st = feedState.startsWith('ok') ? pool.length + ' results in sync'
+           : feedState.startsWith('error') ? 'could not load'
+           : (feedUrl ? 'not loaded yet' : 'not connected');
+  d.innerHTML = '<summary>Community feed <span>' + esc(st) + '</span></summary>';
+
+  const body = el('div');
+  const p = el('p');
+  p.style.cssText = 'font-size:13px;line-height:1.6;color:var(--ink2);margin-bottom:10px';
+  p.innerHTML = 'Point this at a results file published anywhere. Two formats work:' +
+    '<br><br><b>A JSON file</b> \u2014 in a GitHub repo or a shared Drive link. Somebody ' +
+    'merges the results and publishes it.' +
+    '<br><br><b>A Google Sheet published as CSV</b> \u2014 pair it with a Google Form ' +
+    'where players paste their exported results. The sheet collects them and the app ' +
+    'reads it: nobody merges anything by hand.' +
+    '<br><br>The app pulls it on every open, so everyone sees the same combined numbers.';
+
+  const i = el('input'); i.type = 'url';
+  i.placeholder = 'JSON file, or a Google Sheet published as CSV';
+  i.value = feedUrl;
+  i.style.cssText = 'width:100%;margin-bottom:8px';
+
+  const bar = el('div','bar');
+  const save = el('button','btn pri'); save.textContent = 'CONNECT';
+  save.onclick = async () => {
+    feedUrl = i.value.trim();
+    store.put('misc', { id: 'feedUrl', qty: feedUrl });
+    if (!feedUrl) { pool = []; savePool(); renderStats(); return; }
+    await pullFeed();
+  };
+  const now = el('button','btn'); now.textContent = 'REFRESH';
+  now.onclick = () => pullFeed();
+  bar.append(save, now);
+
+  body.append(p, i, bar);
+
+  if (feedState.startsWith('error')) {
+    const w = el('div','warn soft');
+    w.innerHTML = '<b>FEED NOT LOADED</b>' + esc(feedState.slice(6)) +
+      '. Check the URL points at the raw file, not the GitHub page, and that ' +
+      'the repository is public.';
+    body.append(w);
+  }
+
+  body.append(hint('To contribute, use SHARE MY RESULTS and send the file to whoever ' +
+                   'maintains the repo. Merging is a one-line commit on their side.'));
+  d.append(body);
+  return d;
+}
+
+function renderStats(){
+  const v = document.getElementById('viewStats');
+  v.innerHTML = '';
+  v.append(feedPanel());
+
+  const { mine, all } = allSummaries();
+
+  const bar = el('div','bar');
+  const exp = el('button','btn'); exp.textContent = 'SHARE MY RESULTS';
+  exp.onclick = () => {
+    if (!mine.length) { alert('No finished battles yet. Tick "Finished" on a battle first.'); return; }
+    const url = URL.createObjectURL(new Blob([JSON.stringify({
+      kind: 'armoury-stats', v: 1, exportedAt: new Date().toISOString(), battles: mine,
+    }, null, 2)], { type:'application/json' }));
+    const a = document.createElement('a'); a.href = url;
+    a.download = 'armoury-results.json'; a.click(); URL.revokeObjectURL(url);
+  };
+  const imp = el('button','btn'); imp.textContent = 'ADD SOMEONE ELSE\u2019S';
+  imp.onclick = importPool;
+  bar.append(exp, imp);
+  if (pool.length && !feedUrl) {
+    const clr = el('button','btn'); clr.textContent = 'CLEAR POOL (' + pool.length + ')';
+    clr.onclick = () => { pool = []; savePool(); renderStats(); };
+    bar.append(clr);
+  }
+  v.append(bar);
+
+  if (!all.length) {
+    v.append(note('No finished battles yet. Play one, tick "Finished" in the Battles tab, ' +
+                  'and the numbers appear here. Share the file with your club and everyone ' +
+                  'sees the combined picture.'));
+    return;
+  }
+
+  // ---- resumen propio
+  const rec = tally(mine, () => 'me')[0];
+  if (rec) {
+    const sum = el('div','reqbar');
+    const card = (t, d) => { const c = el('div','req ok'); c.innerHTML = '<b>' + t + '</b><i>' + d + '</i>'; return c; };
+    sum.append(
+      card(rec.W + '–' + rec.L + '–' + rec.D, pct(rec) + '% win rate over ' + rec.n + ' games'),
+      card(Math.round(rec.vp / rec.n) + ' VP', 'average scored'),
+      card(Math.round(rec.avp / rec.n) + ' VP', 'average conceded'),
+      card((rec.vp - rec.avp >= 0 ? '+' : '') + Math.round((rec.vp - rec.avp) / rec.n), 'average margin'),
+    );
+    v.append(sum);
+  }
+
+  v.append(splitTable('By faction played', tally(all, (r) => r.faction)));
+  v.append(splitTable('By Force Disposition', tally(all, (r) => r.disp)));
+  v.append(splitTable('By matchup', tally(all, (r) => r.disp && r.vsDisp ? r.disp + ' vs ' + r.vsDisp : null)));
+  v.append(splitTable('By primary mission', tally(all, (r) => r.mission)));
+  v.append(unitTable(all));
+
+  const foot = el('div','hint');
+  foot.textContent = mine.length + ' of your battles' +
+    (pool.length ? ' · ' + pool.length + ' shared by others' : '') +
+    ' · shared files carry no opponent names or notes';
+  v.append(foot);
+}
+
+function splitTable(title, rows){
+  const box = el('div');
+  box.style.cssText = 'margin:18px 0';
+  const h = el('div','rrole');
+  h.innerHTML = '<span>' + esc(title.toUpperCase()) + '</span><span>' + rows.length + '</span>';
+  box.append(h);
+
+  if (!rows.length) { box.append(hint('Not enough data yet.')); return box; }
+
+  const t = el('table','score');
+  t.innerHTML = '<tr><th class="who">&nbsp;</th><th>Games</th><th>W</th><th>L</th><th>D</th>' +
+    '<th>Win %</th><th>VP for</th><th>VP against</th></tr>' +
+    rows.map((e) => '<tr><th class="who">' + esc(e.k) + '</th>' +
+      '<td>' + e.n + '</td><td>' + e.W + '</td><td>' + e.L + '</td><td>' + e.D + '</td>' +
+      '<td class="tot">' + pct(e) + '</td>' +
+      '<td>' + Math.round(e.vp / e.n) + '</td><td>' + Math.round(e.avp / e.n) + '</td></tr>').join('');
+  box.append(t);
+  return box;
+}
+
+/* Unidades: cuántas veces se llevaron, cuántas murieron, cuántas no actuaron.
+   Es el dato que dice si una unidad está pagando su lugar en la lista. */
+function unitTable(rows){
+  const box = el('div');
+  box.style.cssText = 'margin:18px 0';
+  const m = new Map();
+  for (const r of rows) for (const u of (r.units || [])) {
+    const e = m.get(u.n) || { n: u.n, taken: 0, died: 0, idle: 0, rounds: [] };
+    e.taken++;
+    if (u.dead != null) { e.died++; e.rounds.push(u.dead); }
+    if (!u.acted) e.idle++;
+    m.set(u.n, e);
+  }
+  const list = [...m.values()].sort((a, b) => b.taken - a.taken).slice(0, 25);
+
+  const h = el('div','rrole');
+  h.innerHTML = '<span>UNITS</span><span>' + m.size + '</span>';
+  box.append(h);
+  if (!list.length) { box.append(hint('No unit tracking recorded yet.')); return box; }
+
+  const t = el('table','score');
+  t.innerHTML = '<tr><th class="who">Unit</th><th>Taken</th><th>Died</th><th>Survival</th>' +
+    '<th>Avg round lost</th><th>Never acted</th></tr>' +
+    list.map((e) => {
+      const surv = Math.round((e.taken - e.died) * 100 / e.taken);
+      const avg = e.rounds.length
+        ? (e.rounds.reduce((a, x) => a + x, 0) / e.rounds.length).toFixed(1) : '\u2014';
+      return '<tr><th class="who">' + esc(e.n) + '</th><td>' + e.taken + '</td>' +
+        '<td>' + e.died + '</td><td class="tot">' + surv + '</td>' +
+        '<td>' + avg + '</td><td>' + e.idle + '</td></tr>';
+    }).join('');
+  box.append(t);
+  box.append(hint('A unit with high "never acted" is paying points for nothing. ' +
+                  'One that always dies in round 2 is either bait or misplaced.'));
+  return box;
+}
+
+function importPool(){
+  const inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = 'application/json';
+  inp.multiple = true;
+  inp.onchange = async () => {
+    let added = 0;
+    for (const f of inp.files) {
+      try {
+        const d = JSON.parse(await f.text());
+        if (d.kind !== 'armoury-stats' || !Array.isArray(d.battles)) continue;
+        const seen = new Set(pool.map((x) => x.id));
+        for (const b of d.battles) if (!seen.has(b.id)) { pool.push(b); added++; }
+      } catch {}
+    }
+    if (!added) { alert('No new results found in those files.'); return; }
+    savePool(); renderStats();
   };
   inp.click();
 }
