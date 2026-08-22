@@ -3268,6 +3268,7 @@ function renderBattlesInner(){
   const bar = el('div','bar');
   const back = el('button','btn'); back.textContent = '\u2190 ALL BATTLES';
   back.onclick = () => { openBattle = null; renderBattles(); };
+  const shr = battleShareMenu(b);
   const del = el('button','btn'); del.textContent = 'DELETE';
   del.onclick = () => {
     if (!confirm('Delete this battle?')) return;
@@ -3275,7 +3276,7 @@ function renderBattlesInner(){
     battles = battles.filter((x) => x.id !== b.id);
     openBattle = null; renderBattles();
   };
-  bar.append(back, del); v.append(bar);
+  bar.append(back, shr, del); v.append(bar);
 
   // ---- configuración
   const cfg = el('div','bar');
@@ -3377,8 +3378,7 @@ function renderBattlesInner(){
   for (const who of ['me','them'])
     cpBar.append(check(who === 'me' ? 'Mine painted' : 'Theirs painted', b.painted[who],
       (x) => { b.painted[who] = x; saveBattle(b); renderBattles(); }));
-  const fin = check('Finished', b.done, (x) => { b.done = x; saveBattle(b); renderBattles(); });
-  cpBar.append(fin);
+  // La casilla suelta se fue al menú FINISH: estaba perdida entre los PM.
   v.append(cpBar);
 
   const nt = el('textarea');
@@ -3522,6 +3522,112 @@ function layoutsFor(mine, theirs){
   const eq = (a, b2) => String(a).toLowerCase() === String(b2).toLowerCase();
   return all.filter((z) =>
     (eq(z.a, mine) && eq(z.d, theirs)) || (eq(z.a, theirs) && eq(z.d, mine)));
+}
+
+/* Compartir UNA batalla. El de Stats manda todas juntas, que sirve para el
+ * feed del club pero no para pasarle el resultado a quien acabás de jugar. */
+function battleShareMenu(b){
+  const wrap = el('div');
+  wrap.style.cssText = 'position:relative';
+
+  const btn = el('button','btn');
+  btn.textContent = 'FINISH \u25be';
+
+  const menu = el('div','shmenu');
+  menu.hidden = true;
+
+  const item = (title, sub, fn) => {
+    const x = el('button');
+    x.innerHTML = '<b>' + title + '</b><i>' + sub + '</i>';
+    x.onclick = () => { menu.hidden = true; fn(); };
+    return x;
+  };
+
+  menu.append(
+    item(b.done ? 'Reopen this battle' : 'Mark as finished',
+         b.done ? 'It stops counting as played' : 'Only finished battles count in Stats',
+         () => { b.done = !b.done; saveBattle(b); renderBattles(); }),
+
+    item('Result file', 'Just this battle, for the club feed', () => {
+      if (!b.done) { b.done = true; saveBattle(b); }
+      const payload = { kind:'armoury-stats', v:1,
+        exportedAt: new Date().toISOString(), battles: [summarise(b)] };
+      const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)],
+        { type:'application/json' }));
+      const a = document.createElement('a'); a.href = url;
+      a.download = 'battle-' + b.date + '.json'; a.click(); URL.revokeObjectURL(url);
+      renderBattles();
+    }),
+
+    item('Copy as text', 'For chat', () => copyBattleText(b)),
+  );
+
+  btn.onclick = () => { menu.hidden = !menu.hidden; };
+  document.addEventListener('click', (ev) => {
+    if (menu.hidden || !wrap.contains) return;
+    if (!wrap.contains(ev.target)) menu.hidden = true;
+  });
+
+  wrap.append(btn, menu);
+  return wrap;
+}
+
+function copyBattleText(b){
+  const t = battleTotals(b);
+  const l = lists.find((x) => x.id === b.mine);
+  const f = l ? factionOf(l.faction) : null;
+  const lines = [];
+
+  lines.push((f ? f.name : '?') + '  ' + t.me + ' \u2013 ' + t.them + '  ' + (b.opponent || 'opponent'));
+  if (b.disp?.me) lines.push(b.disp.me + ' vs ' + (b.disp.them || '?') +
+    (b.mission ? '  \u2014  ' + b.mission : ''));
+  lines.push('');
+
+  const d = t.detail;
+  const brk = (x) => x.prim + ' primary + ' + x.sec + ' secondary' +
+                     (x.paint ? ' + ' + x.paint + ' painted' : '');
+  lines.push('Me:   ' + brk(d.me));
+  lines.push('Them: ' + brk(d.them));
+
+  // Marcador ronda por ronda: es lo que permite reconstruir la partida.
+  lines.push('');
+  lines.push('        R1    R2    R3    R4    R5');
+  const rowTxt = (arr) => arr.map((r) => String((+r.p||0) + '+' + (+r.s||0)).padEnd(6)).join('');
+  lines.push('Me      ' + rowTxt(b.me));
+  lines.push('Them    ' + rowTxt(b.them));
+  lines.push('CP: ' + (b.cp?.me ?? 0) + ' \u2013 ' + (b.cp?.them ?? 0));
+
+  // Bajas de los dos lados con su ronda.
+  const lostOf = (list, tr) => {
+    const out = [];
+    if (!list) return out;
+    for (const [i, sl] of list.slots.entries()) {
+      const u = unitOf(list, sl.unitId);
+      if (u && tr[i] && tr[i].dead != null) out.push(u.n + ' (R' + tr[i].dead + ')');
+    }
+    return out;
+  };
+  const mineLost = lostOf(l, b.track || {});
+  const oppList = lists.find((x) => x.id === b.oppList);
+  const theirLost = oppList
+    ? lostOf(oppList, b.trackThem || {})
+    : (b.kills || []).filter((k) => k.n).map((k) => k.n + ' (R' + k.r + ')');
+
+  if (mineLost.length)  { lines.push(''); lines.push('I lost:    ' + mineLost.join(', ')); }
+  if (theirLost.length) { if (!mineLost.length) lines.push(''); lines.push('They lost: ' + theirLost.join(', ')); }
+  if (b.notes) { lines.push(''); lines.push(b.notes.trim()); }
+
+  const txt = lines.join('\n');
+  const done = () => alert('Result copied.');
+  if (navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(txt).then(done, fallback);
+  else fallback();
+
+  function fallback(){
+    const url = URL.createObjectURL(new Blob([txt], { type:'text/plain' }));
+    const a = document.createElement('a'); a.href = url;
+    a.download = 'battle-' + b.date + '.txt'; a.click(); URL.revokeObjectURL(url);
+  }
 }
 
 function clockPanel(b){
@@ -4264,20 +4370,37 @@ function unitWounds(l, sl){
 }
 
 function trackerPanel(b){
-  const l = lists.find((x) => x.id === b.mine);
   const box = el('div');
   box.style.cssText = 'margin:18px 0';
+  box.append(sideTracker(b, 'me'));
+  box.append(sideTracker(b, 'them'));
+
+  const l = lists.find((x) => x.id === b.mine);
+  if (l) box.append(analysisPanel(b, l));
+  return box;
+}
+
+/* Un lado del tablero. El rival se sigue igual que vos si cargaste su lista
+ * con LOAD A LIST; si no, queda una lista libre donde anotás sus bajas, que
+ * es el dato que después importa. */
+function sideTracker(b, side){
+  const mine = side === 'me';
+  const l = lists.find((x) => x.id === (mine ? b.mine : b.oppList));
+  const box = el('div');
+  box.style.cssText = 'margin-bottom:16px';
 
   const head = el('div','rrole');
-  head.innerHTML = '<span>UNITS ON THE TABLE</span><span>round ' + b.round + '</span>';
+  head.innerHTML = '<span>' + (mine ? 'MY UNITS' : esc((b.opponent || 'THEIR') + '\u2019S UNITS').toUpperCase()) +
+    '</span><span>round ' + b.round + '</span>';
   box.append(head);
 
   if (!l || !l.slots.length) {
-    box.append(note('Pick one of your lists above to track its units.'));
+    if (mine) { box.append(note('Pick one of your lists above to track its units.')); return box; }
+    box.append(freeKills(b));
     return box;
   }
 
-  const t = trackOf(b);
+  const t = mine ? trackOf(b) : trackThemOf(b);
   const copies = copyIndex(l);
 
   for (const [i, sl] of l.slots.entries()) {
@@ -4349,8 +4472,50 @@ function trackerPanel(b){
   foot.textContent = pend + ' units have not acted this round · ' +
     l.slots.filter((_, i) => t[i] && t[i].dead != null).length + ' destroyed so far';
   box.append(foot);
+  return box;
+}
 
-  box.append(analysisPanel(b, l));
+function trackThemOf(b){
+  b.trackThem = b.trackThem || {};
+  return b.trackThem;
+}
+
+/* Sin la lista del rival: bajas a mano, con su ronda. Es lo mínimo que
+ * hace falta para reconstruir la partida después. */
+function freeKills(b){
+  b.kills = b.kills || [];
+  const box = el('div');
+
+  box.append(hint('Their list is not loaded. Use LOAD A LIST in the Lists tab to track ' +
+                  'their units properly, or just note what you destroyed and when.'));
+
+  for (const [i, k] of b.kills.entries()) {
+    const row = el('div','slot');
+    const n = el('input'); n.type='text'; n.value = k.n; n.placeholder = 'unit destroyed';
+    n.style.cssText = 'flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:15px;' +
+      'background:transparent;border:none;border-bottom:1px solid var(--rule2);padding:3px 0;color:var(--ink)';
+    n.oninput = () => { k.n = n.value; saveBattle(b); };
+
+    const r = el('select');
+    for (let x = 1; x <= ROUNDS; x++) {
+      const o = el('option'); o.value = x; o.textContent = 'R' + x;
+      if (k.r === x) o.selected = true;
+      r.append(o);
+    }
+    r.onchange = () => { k.r = +r.value; saveBattle(b); };
+
+    const rm = el('button','btn'); rm.textContent = 'REMOVE';
+    rm.onclick = () => { b.kills.splice(i, 1); saveBattle(b); renderBattles(); };
+
+    row.append(n, r, rm);
+    box.append(row);
+  }
+
+  const add = el('button','btn');
+  add.textContent = '+ UNIT DESTROYED';
+  add.style.marginTop = '8px';
+  add.onclick = () => { b.kills.push({ n:'', r:b.round }); saveBattle(b); renderBattles(); };
+  box.append(add);
   return box;
 }
 
@@ -4691,9 +4856,23 @@ function summarise(b, mine){
     }
   }
 
+  // Bajas del rival, si se registraron.
+  const oppL = lists.find((x) => x.id === b.oppList);
+  const theirUnits = oppL
+    ? oppL.slots.map((sl, i) => {
+        const u = unitOf(oppL, sl.unitId);
+        const st = (b.trackThem || {})[i] || {};
+        return u ? { n: u.n, size: sl.size, dead: st.dead ?? null } : null;
+      }).filter(Boolean)
+    : (b.kills || []).filter((k) => k.n).map((k) => ({ n: k.n, dead: k.r }));
+
   return {
     id: b.id,
     date: b.date,
+    rounds: { me: b.me, them: b.them },
+    cp: b.cp || null,
+    painted: b.painted || null,
+    theirUnits,
     faction: f ? f.name : null,
     disp: b.disp?.me ?? null,
     vsDisp: b.disp?.them ?? null,
