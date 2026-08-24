@@ -172,6 +172,48 @@ details.rule>summary{cursor:pointer;padding:10px 12px;font-family:var(--disp);
 details.rule[open]>summary{border-bottom:1px solid var(--rule)}
 details.rule>div{padding:10px 12px 12px}
 
+.flow{margin:10px 0 26px}
+.flow svg{width:100%;height:auto;color:var(--ink2)}
+.flow text{font-family:var(--disp);font-weight:600;font-size:19px;fill:var(--ink)}
+.flow text.cap{font-family:var(--mono);font-size:10px;letter-spacing:.16em;fill:var(--ink2);font-weight:400}
+.flow text.sub{font-family:var(--mono);font-size:11px;fill:var(--ink2);font-weight:400}
+.flow text.n{font-family:var(--disp);font-size:20px;font-weight:600;fill:var(--ochre)}
+.flow text.edge{font-family:var(--mono);font-size:10px;fill:var(--ink2);font-weight:400}
+.flow text.rot{text-anchor:middle}
+.flow .src rect{fill:var(--panel);stroke:var(--rule2);stroke-width:1}
+.flow .src text{text-anchor:middle;font-size:16px}
+.flow .build rect{fill:var(--slate-bg);stroke:var(--rule2)}
+.flow .build text{text-anchor:middle;font-family:var(--mono);font-size:12px;font-weight:400;fill:var(--ink)}
+.flow .step rect{fill:var(--panel);stroke:var(--rule2);transition:none}
+.flow .step:hover rect{stroke:var(--ochre)}
+.flow .ln{stroke:var(--rule2);stroke-width:1.4;fill:none}
+.flow .ln.dash{stroke-dasharray:4 4}
+
+.hero{border-left:3px solid var(--ochre);padding:2px 0 2px 14px;margin:18px 0 22px}
+.hero h2{font-family:var(--disp);font-weight:600;font-size:23px;line-height:1.25;margin-bottom:6px}
+.hero p{font-size:14px;line-height:1.6;color:var(--ink2);max-width:62ch}
+
+#viewHome .step{display:flex;gap:14px;align-items:flex-start;
+  border-bottom:1px solid var(--rule);padding:16px 0}
+#viewHome .sn{font-family:var(--disp);font-weight:600;font-size:20px;color:var(--ochre);
+  border:1px solid var(--ochre);border-radius:50%;width:34px;height:34px;flex:0 0 34px;
+  display:flex;align-items:center;justify-content:center}
+#viewHome .sb{flex:1;min-width:0}
+#viewHome .sb h3{font-family:var(--disp);font-weight:600;font-size:18px;margin-bottom:3px}
+#viewHome .sb p{font-size:13.5px;line-height:1.6;color:var(--ink2);max-width:70ch;margin-bottom:5px}
+#viewHome .sb p.tip{font-family:var(--mono);font-size:11px;color:var(--ink2);opacity:.85}
+#viewHome .sb .btn{margin-top:6px;white-space:nowrap}
+
+.limits{background:var(--panel);border:1px solid var(--rule2);border-radius:3px;
+  padding:14px 16px;margin:18px 0}
+.limits h3{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink2);margin-bottom:8px}
+.limits p{font-size:13px;line-height:1.6;color:var(--ink2);margin-bottom:7px;max-width:74ch}
+.limits p:last-child{margin-bottom:0}
+.limits b{color:var(--ink)}
+.limits p.ok{color:var(--ochre)}
+.limits p.warnt{color:var(--oxide)}
+
 .chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
   background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
   color:var(--ink);cursor:pointer}
@@ -196,8 +238,14 @@ details.rule>div{padding:10px 12px 12px}
   font-size:13px;padding:4px 2px;background:var(--field);border:1px solid var(--rule);
   border-radius:2px;color:var(--ink);display:block;margin:0 auto 2px}
 .score td.tot{font-family:var(--disp);font-weight:600;font-size:19px}
-.score tr.lg td{font-family:var(--mono);font-size:9.5px;color:var(--ink2);
-  border-bottom:none;text-align:left;padding-top:2px}
+.score tr.sec-p th.who{color:var(--ink)}
+.score tr.sec-s th.who{color:var(--ink2);font-weight:400;font-size:12.5px}
+.score tr.sec-s td{border-bottom:2px solid var(--rule2)}
+.score tr.sub th.who{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;
+  color:var(--ink2);font-weight:400}
+.score tr.sub td{border-bottom:none;padding-bottom:10px}
+/* Casilla que llenan las cartas: se distingue de lo escrito a mano. */
+.score td input.auto{border-style:dashed;border-color:var(--ochre);color:var(--ochre)}
 
 .finder input{width:100%;margin-bottom:8px}
 .fres{max-height:340px;overflow:auto;border:1px solid var(--rule);border-radius:2px}
@@ -484,6 +532,7 @@ input[type=search]::placeholder{color:var(--ink2)}
   <div id="fatal" hidden></div>
 
   <div class="tabs" role="tablist">
+    <button id="tabHome" role="tab" aria-selected="false">Start</button>
     <button id="tabCol" role="tab" aria-selected="true">Collection</button>
     <button id="tabList" role="tab" aria-selected="false">Lists</button>
     <button id="tabBattle" role="tab" aria-selected="false">Battles</button>
@@ -494,6 +543,7 @@ input[type=search]::placeholder{color:var(--ink2)}
 
   <div id="viewBattles" hidden></div>
 
+  <div id="viewHome" hidden></div>
   <div id="viewLists" hidden></div>
 
   <div id="viewCol">
@@ -797,6 +847,10 @@ async function start(){
 
   render();
   updateTotals();
+
+  // Primera visita: sin colección ni listas, la guía es más útil que una
+  // pantalla vacía de 1485 unidades.
+  if (!owned.size && !lists.length) showTab('home');
 }
 
 /* ============================================================
@@ -3049,9 +3103,9 @@ function gearName(u, key){
 /* ---------- pestañas ---------- */
 function showTab(which){
   if (which === 'col') document.getElementById('shell').className = 'wrap';
-  for (const [tab, view] of [['tabCol','viewCol'], ['tabList','viewLists'],
+  for (const [tab, view] of [['tabHome','viewHome'], ['tabCol','viewCol'], ['tabList','viewLists'],
                              ['tabBattle','viewBattles'], ['tabStats','viewStats']]) {
-    const on = tab === ({ col:'tabCol', lists:'tabList', battles:'tabBattle',
+    const on = tab === ({ home:'tabHome', col:'tabCol', lists:'tabList', battles:'tabBattle',
                           stats:'tabStats' })[which];
     document.getElementById(view).hidden = !on;
     document.getElementById(tab).setAttribute('aria-selected', on);
@@ -3060,7 +3114,9 @@ function showTab(which){
   if (which === 'lists')   renderLists();
   if (which === 'battles') renderBattles();
   if (which === 'stats')   renderStats();
+  if (which === 'home')    renderHome();
 }
+document.getElementById('tabHome').onclick  = () => showTab('home');
 document.getElementById('tabCol').onclick    = () => showTab('col');
 document.getElementById('tabList').onclick   = () => showTab('lists');
 document.getElementById('tabBattle').onclick = () => showTab('battles');
@@ -3686,25 +3742,55 @@ function scoreTable(b){
     Array.from({length:ROUNDS}, (_,i) => '<th>R' + (i+1) + '</th>').join('') +
     '<th>Total</th></tr>';
 
-  const row = (who, label) => {
-    const cells = b[who].map((r, i) =>
-      '<td><input data-w="' + who + '" data-i="' + i + '" data-k="p" value="' + (r.p||0) + '">' +
-      '<input data-w="' + who + '" data-i="' + i + '" data-k="s" value="' + (r.s||0) + '"></td>').join('');
-    const tot = b[who].reduce((a, r) => a + (+r.p||0) + (+r.s||0), 0);
-    return '<tr><th class="who">' + esc(label) + '</th>' + cells + '<td class="tot">' + tot + '</td></tr>';
+  // Una fila rotulada por concepto y por jugador. Antes eran dos casillas
+  // apiladas sin etiqueta y una leyenda al pie: nadie sabía cuál era cuál.
+  const line = (who, label, k, cls) => {
+    const cells = b[who].map((r, i) => {
+      // Mi secundaria la llenan las cartas. Si la escribís a mano, esa ronda
+      // deja de pisarse: la mano gana sobre el automático.
+      const auto = who === 'me' && k === 's' && !(b.manualSec || {})[i];
+      return '<td><input data-w="' + who + '" data-i="' + i + '" data-k="' + k + '"' +
+        (auto ? ' class="auto" title="Filled by your secondary cards"' : '') +
+        ' value="' + (r[k]||0) + '"></td>';
+    }).join('');
+    const tot = b[who].reduce((a, r) => a + (+r[k]||0), 0);
+    return '<tr class="' + cls + '"><th class="who">' + esc(label) + '</th>' +
+           cells + '<td class="tot">' + tot + '</td></tr>';
   };
 
-  t.innerHTML = hdr + row('me','Me') + row('them', b.opponent || 'Them') +
-    '<tr class="lg"><th></th><td colspan="' + (ROUNDS+1) + '">primary / secondary</td></tr>';
+  const sideTotal = (who) => b[who].reduce((a, r) => a + (+r.p||0) + (+r.s||0), 0);
+  const them = b.opponent || 'Them';
+
+  t.innerHTML = hdr +
+    line('me', 'Me \u00b7 primary', 'p', 'sec-p') +
+    line('me', 'Me \u00b7 secondary', 's', 'sec-s') +
+    '<tr class="sub"><th class="who">Subtotal</th><td colspan="' + ROUNDS + '"></td>' +
+      '<td class="tot">' + sideTotal('me') + '</td></tr>' +
+    line('them', them + ' \u00b7 primary', 'p', 'sec-p') +
+    line('them', them + ' \u00b7 secondary', 's', 'sec-s') +
+    '<tr class="sub"><th class="who">Subtotal</th><td colspan="' + ROUNDS + '"></td>' +
+      '<td class="tot">' + sideTotal('them') + '</td></tr>';
 
   // Un solo manejador para las 20 celdas.
   t.addEventListener('input', (ev) => {
     const el2 = ev.target;
     if (!el2.dataset || !el2.dataset.w) return;
-    const n = Math.max(0, parseInt(el2.value, 10) || 0);
+    const raw = Math.max(0, parseInt(el2.value, 10) || 0);
+    // Tope por ronda: 15 por defecto, o el de la primaria si lo ajustaste.
+    const cap = el2.dataset.k === 'p' ? (b.primCap || VP_CAP.perRound) : VP_CAP.perRound;
+    const n = Math.min(raw, cap);
+    if (n !== raw) el2.value = n;
     b[el2.dataset.w][+el2.dataset.i][el2.dataset.k] = n;
+
+    // Editar mi secundaria a mano desactiva el automático de esa ronda.
+    if (el2.dataset.w === 'me' && el2.dataset.k === 's') {
+      b.manualSec = b.manualSec || {};
+      b.manualSec[+el2.dataset.i] = true;
+      el2.classList.remove('auto');
+    }
+
     saveBattle(b);
-    const tot = b[el2.dataset.w].reduce((a, r) => a + (+r.p||0) + (+r.s||0), 0);
+    const tot = b[el2.dataset.w].reduce((a, r) => a + (+r[el2.dataset.k]||0), 0);
     const cell = el2.closest('tr').querySelector('.tot');
     if (cell) cell.textContent = tot;
   });
@@ -4000,6 +4086,7 @@ function syncSecToScore(b){
   const s = b.sec;
   s.byRound = s.byRound || {};
   const suffix = '@' + b.round;
+  if ((b.manualSec || {})[b.round - 1]) return;   // esa ronda la escribiste vos
   const thisRound = Object.entries(s.byRound)
     .reduce((a, [k, v]) => k.endsWith(suffix) ? a + (+v || 0) : a, 0);
   b.me[b.round - 1].s = Math.min(VP_CAP.perRound, thisRound);
@@ -5182,6 +5269,208 @@ function importPool(){
     savePool(); renderStats();
   };
   inp.click();
+}
+
+/* ============================================================
+   INICIO
+   
+   Primera pantalla: qué es la app, en qué orden usarla y qué NO hace.
+   Aparece sola la primera vez, cuando no hay colección ni listas.
+   
+   Lo último importa tanto como lo primero: quien prueba esto tiene que
+   saber dónde termina la ayuda de la app y empieza su criterio.
+   ============================================================ */
+function renderHome(){
+  const v = document.getElementById('viewHome');
+  v.innerHTML = '';
+
+  const hero = el('div','hero');
+  hero.innerHTML =
+    '<h2>Track what you own. Build lists from it. Record how they played.</h2>' +
+    '<p>Armoury reads the Warhammer 40,000 catalogue from three community data ' +
+    'sources and refreshes itself every week. Nothing is uploaded anywhere: your ' +
+    'collection, lists and battles live in this browser.</p>';
+  v.append(hero);
+  v.append(flowDiagram());
+
+  const steps = [
+    ['1', 'Load your collection', 'collection',
+     'Pick a faction and enter how many miniatures you own of each unit \u2014 ' +
+     'miniatures, not units, so it stays true when unit sizes change. Tap DATASHEET ' +
+     'on any entry to see its stats, weapons and abilities.',
+     'Start with one faction. You do not need the whole shelf to try the rest.'],
+
+    ['2', 'Build a list', 'lists',
+     'NEW LIST opens a guided flow: faction, battle size, detachments, enhancements, ' +
+     'units. The checklist on the left shows what is still missing. Pick a unit to ' +
+     'set its wargear, attach a leader, or read its datasheet.',
+     'GUIDE reopens the walkthrough at any point. SKIP TO EDITOR leaves it.'],
+
+    ['3', 'Share or print it', 'lists',
+     'SHARE gives you three formats: an Armoury file another user can import, a PDF ' +
+     'through the print dialog, or plain text for chat. The printed sheet fits six ' +
+     'units on a page with stats, weapons, abilities and keywords.',
+     'LOAD A LIST imports an opponent\u2019s file. It is marked OPPONENT and does not ' +
+     'check against your collection.'],
+
+    ['4', 'Play a battle', 'battles',
+     'Pick both Force Dispositions and the app derives each primary mission and the ' +
+     'terrain layouts available. Secondary cards are drawn two per round and ' +
+     'accumulate. There is a clock per player that warns when you fall behind pace.',
+     'Mark units as they act each phase and log wounds. A unit that hits its wound ' +
+     'total is recorded as destroyed, with the round.'],
+
+    ['5', 'Look at the numbers', 'stats',
+     'Every finished battle feeds win rates by faction, by disposition matchup and by ' +
+     'mission, plus a unit table: how often each one is taken, how often it dies, and ' +
+     'how often it never acted at all.',
+     'SHARE MY RESULTS exports a file with no opponent names or notes. Point the ' +
+     'community feed at a shared file and everyone sees the combined picture.'],
+  ];
+
+  for (const [n, title, tab, body, note2] of steps) {
+    const c = el('div','step');
+    c.innerHTML =
+      '<div class="sn">' + n + '</div>' +
+      '<div class="sb"><h3>' + title + '</h3><p>' + body + '</p>' +
+      '<p class="tip">' + note2 + '</p></div>';
+    const go = el('button','btn');
+    go.textContent = 'OPEN';
+    go.onclick = () => showTab(tab);
+    c.querySelector('.sb').append(go);
+    v.append(c);
+  }
+
+  // ---- lo que no hace ----
+  const lim = el('div','limits');
+  lim.innerHTML =
+    '<h3>What it does not do</h3>' +
+    '<p><b>It does not tell you what is good.</b> There is no meta data behind it, ' +
+    'so it will never suggest a unit. It checks rules, not judgement.</p>' +
+    '<p><b>It does not carry the rulebook.</b> Unit abilities, weapons and mission ' +
+    'cards come from community datasets. The core rules belong to Games Workshop, ' +
+    'who publish them free.</p>' +
+    '<p><b>It checks part of the list, not all of it.</b> Points, requisition ' +
+    'thresholds, repeat limits, detachment points, unique tags, allied allowances, ' +
+    'Legends, leader attachment and wargear caps are verified. Detachment rules and ' +
+    'ratio limits beyond those declared in the data are not.</p>';
+  v.append(lim);
+
+  // ---- almacenamiento ----
+  const st = el('div','limits');
+  const mode = store.mode === 'idb' ? 'full'
+             : store.mode === 'ls' ? 'limited' : 'none';
+  st.innerHTML =
+    '<h3>Where your data lives</h3>' +
+    '<p>Everything is stored in this browser. Nothing leaves the device unless you ' +
+    'export a file yourself.</p>' +
+    (mode === 'full'
+      ? '<p class="ok">Storage is working normally.</p>'
+      : mode === 'limited'
+      ? '<p class="warnt">This browser blocks the full database for files opened from ' +
+        'disk, so a simpler store is in use. It works, but it is easier to lose \u2014 ' +
+        'export a backup regularly, or open the published version.</p>'
+      : '<p class="warnt">This browser is blocking storage. Nothing will be saved when ' +
+        'you close the tab.</p>');
+  v.append(st);
+
+  const src = el('div','hint');
+  src.innerHTML = 'Catalogue: <b>' + esc(DATA.revision?.sha ?? '—') + '</b> · ' +
+    'MFM <b>' + esc(DATA.mfmVersion ?? '—') + '</b>' +
+    (DATA.missions ? ' · missions <b>' + esc(DATA.missions.version) + '</b>' : '') +
+    ' · build <b>' + esc(DATA.build ?? '—') + '</b><br>' +
+    'Data from BSData, BSData/wh40k-11e-mfm and IRONBUILT-LLC/ironbuilt-data (CC BY-SA 4.0). ' +
+    'Unofficial; not affiliated with Games Workshop.';
+  v.append(src);
+}
+
+/* Diagrama del flujo. Dos bandas: de dónde salen los datos (arriba, sin que
+ * hagas nada) y qué hacés vos con ellos (abajo, en orden). Lo importante es
+ * que se vea la cadena: la colección alimenta las listas, las listas
+ * alimentan las batallas, las batallas alimentan los números. */
+function flowDiagram(){
+  const box = el('div','flow');
+  box.innerHTML = `
+<svg viewBox="0 0 620 560" role="img" aria-label="Three community data sources feed a weekly build. Then: collection, lists, battles and stats, each feeding the next, and what you learn changes the next list.">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text class="cap" x="0" y="14">DATA \u00b7 REFRESHES ITSELF EVERY MONDAY</text>
+  <g class="src">
+    <rect x="0"   y="26" width="196" height="52" rx="4"/>
+    <text x="98"  y="48">BSData</text>
+    <text class="sub" x="98" y="66">units and weapons</text>
+  </g>
+  <g class="src">
+    <rect x="212" y="26" width="196" height="52" rx="4"/>
+    <text x="310" y="48">MFM</text>
+    <text class="sub" x="310" y="66">official points</text>
+  </g>
+  <g class="src">
+    <rect x="424" y="26" width="196" height="52" rx="4"/>
+    <text x="522" y="48">IRONBUILT</text>
+    <text class="sub" x="522" y="66">missions and maps</text>
+  </g>
+
+  <path class="ln" d="M98 82 L98 96 L310 96"/>
+  <path class="ln" d="M522 82 L522 96 L310 96"/>
+  <path class="ln" d="M310 82 L310 118" marker-end="url(#ar)"/>
+
+  <g class="build">
+    <rect x="212" y="122" width="196" height="34" rx="4"/>
+    <text x="310" y="144">1484 units, ready to use</text>
+  </g>
+  <path class="ln" d="M310 160 L310 186" marker-end="url(#ar)"/>
+
+  <text class="cap" x="0" y="204">WHAT YOU DO \u00b7 IN THIS ORDER</text>
+
+  <g class="step" data-tab="col">
+    <rect x="86" y="216" width="448" height="60" rx="4"/>
+    <text class="n" x="106" y="244">1</text>
+    <text x="132" y="242">Collection</text>
+    <text class="sub" x="132" y="261">how many miniatures you actually own</text>
+  </g>
+  <path class="ln" d="M310 278 L310 296" marker-end="url(#ar)"/>
+  <text class="edge" x="330" y="292">what you own limits what you can field</text>
+
+  <g class="step" data-tab="lists">
+    <rect x="86" y="300" width="448" height="60" rx="4"/>
+    <text class="n" x="106" y="328">2</text>
+    <text x="132" y="326">Lists</text>
+    <text class="sub" x="132" y="345">built, checked, printed or shared</text>
+  </g>
+  <path class="ln" d="M310 362 L310 380" marker-end="url(#ar)"/>
+  <text class="edge" x="330" y="376">the list you take to the table</text>
+
+  <g class="step" data-tab="battles">
+    <rect x="86" y="384" width="448" height="60" rx="4"/>
+    <text class="n" x="106" y="412">3</text>
+    <text x="132" y="410">Battles</text>
+    <text class="sub" x="132" y="429">missions, clock, score, casualties</text>
+  </g>
+  <path class="ln" d="M310 446 L310 464" marker-end="url(#ar)"/>
+  <text class="edge" x="330" y="460">every finished battle</text>
+
+  <g class="step" data-tab="stats">
+    <rect x="86" y="468" width="448" height="60" rx="4"/>
+    <text class="n" x="106" y="496">4</text>
+    <text x="132" y="494">Stats</text>
+    <text class="sub" x="132" y="513">what wins, what dies, what never acts</text>
+  </g>
+
+  <path class="ln dash" d="M86 498 L44 498 L44 246 L82 246" marker-end="url(#ar)"/>
+  <text class="edge rot" x="0" y="0" transform="translate(30,380) rotate(-90)">and that changes the next list</text>
+</svg>`;
+
+  for (const g of box.querySelectorAll('.step')) {
+    g.style.cursor = 'pointer';
+    g.onclick = () => showTab(g.dataset.tab);
+  }
+  return box;
 }
 
 boot();
