@@ -214,6 +214,13 @@ details.rule>div{padding:10px 12px 12px}
 .limits p.ok{color:var(--ochre)}
 .limits p.warnt{color:var(--oxide)}
 
+.sswitch{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 4px}
+.sswitch .chip{display:flex;flex-direction:column;align-items:flex-start;
+  line-height:1.2;padding:7px 13px}
+.sswitch .chip i{font-style:normal;font-family:var(--mono);font-size:9.5px;
+  color:var(--ink2);margin-top:2px}
+.sswitch .chip.on i{color:var(--ochre)}
+
 .chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
   background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
   color:var(--ink);cursor:pointer}
@@ -3241,7 +3248,7 @@ function toggleClock(b, who){
     c.running = null; c.since = null;
   } else {
     if (c.running) { c[c.running] = elapsed(b, c.running); }
-    c.running = who; c.since = Date.now();
+    c.running = who; c.since = Date.now(); c.paused = null;
   }
   saveBattle(b); renderBattles();
 }
@@ -3380,7 +3387,12 @@ function renderBattlesInner(){
     '<div class="lm"><b>' + t.them + '</b><i>them</i></div>';
   v.append(head);
   v.append(scoreTable(b));
-  v.append(secondaryPanel(b));
+  // Se muestra el lado que está jugando: dos paneles completos de hasta diez
+  // cartas cada uno no entran en una pantalla. El reloj decide, y se puede
+  // forzar con las pestañas.
+  const side = b.secView || b.clock.running || b.clock.paused || 'me';
+  v.append(secSwitch(b, side));
+  v.append(secondaryPanel(b, side));
   v.append(trackerPanel(b));
 
   const d = t.detail;
@@ -3418,7 +3430,8 @@ function renderBattlesInner(){
     b.round = +rnd.value;
     // Al empezar la ronda se roba hasta tener dos activas: es la regla, y
     // esperar a que el usuario apriete un botón era un paso de más.
-    drawSecondaries(b);
+    drawSecondaries(b, false, 'me');
+    drawSecondaries(b, false, 'them');
     saveBattle(b); renderBattles();
   };
   cpBar.append(rnd);
@@ -3715,6 +3728,27 @@ function clockPanel(b){
   }
 
   const foot = el('div','clkf');
+
+  // Pausa global: en la mesa se interrumpe la partida entera (una consulta,
+  // un juez, un café) y frenar el reloj del que corre y acordarse de quién
+  // era es justo lo que se olvida.
+  const running = b.clock.running;
+  const pz = el('button', 'btn' + (running ? ' pri' : ''));
+  pz.textContent = running ? '\u23f8 PAUSE BOTH' : (b.clock.paused ? '\u25b6 RESUME' : '\u23f8 PAUSED');
+  pz.disabled = !running && !b.clock.paused;
+  pz.onclick = () => {
+    const c = b.clock;
+    if (c.running) {
+      c[c.running] = elapsed(b, c.running);
+      c.paused = c.running;          // se recuerda a quién reanudar
+      c.running = null; c.since = null;
+    } else if (c.paused) {
+      c.running = c.paused; c.since = Date.now(); c.paused = null;
+    }
+    saveBattle(b); renderBattles();
+  };
+  foot.append(pz);
+
   const bud = el('input'); bud.type='text'; bud.inputMode='numeric';
   bud.style.cssText='width:54px;text-align:center;font-family:var(--mono);padding:3px 5px;' +
     'background:var(--panel);border:1px solid var(--rule2);border-radius:2px;color:var(--ink)';
@@ -3748,7 +3782,8 @@ function scoreTable(b){
     const cells = b[who].map((r, i) => {
       // Mi secundaria la llenan las cartas. Si la escribís a mano, esa ronda
       // deja de pisarse: la mano gana sobre el automático.
-      const auto = who === 'me' && k === 's' && !(b.manualSec || {})[i];
+      const manual = who === 'me' ? (b.manualSec || {}) : (b.manualSecThem || {});
+      const auto = k === 's' && !manual[i];
       return '<td><input data-w="' + who + '" data-i="' + i + '" data-k="' + k + '"' +
         (auto ? ' class="auto" title="Filled by your secondary cards"' : '') +
         ' value="' + (r[k]||0) + '"></td>';
@@ -3783,9 +3818,10 @@ function scoreTable(b){
     b[el2.dataset.w][+el2.dataset.i][el2.dataset.k] = n;
 
     // Editar mi secundaria a mano desactiva el automático de esa ronda.
-    if (el2.dataset.w === 'me' && el2.dataset.k === 's') {
-      b.manualSec = b.manualSec || {};
-      b.manualSec[+el2.dataset.i] = true;
+    if (el2.dataset.k === 's') {
+      const key = el2.dataset.w === 'me' ? 'manualSec' : 'manualSecThem';
+      b[key] = b[key] || {};
+      b[key][+el2.dataset.i] = true;
       el2.classList.remove('auto');
     }
 
@@ -3850,9 +3886,13 @@ function shuffled(ids, seed){
 function secOf(id){ return secLib.find((c) => c.id === id); }
 
 /* Estado de secundarias dentro de una batalla. */
-function initSec(b){
-  b.sec = b.sec || { mode: 'tactical', seed: 0, deck: [], active: [], done: [], fixed: [], vp: {} };
-  return b.sec;
+function initSec(b, who){
+  // Dos mazos independientes: el rival roba sus propias cartas, no comparte
+  // las tuyas. `sec` es el tuyo (nombre histórico) y `secThem` el suyo.
+  const k = who === 'them' ? 'secThem' : 'sec';
+  b[k] = b[k] || { mode: 'tactical', seed: 0, deck: [], active: [], done: [],
+                   fixed: [], vp: {}, byRound: {}, scored: {}, drawnFor: {} };
+  return b[k];
 }
 
 /* Roba DOS cartas nuevas por ronda, que se SUMAN a las que ya tenías.
@@ -3863,8 +3903,8 @@ function initSec(b){
  *
  * Se lleva registro de en qué ronda se robó por última vez para no repartir
  * dos veces la misma ronda al redibujar. */
-function drawSecondaries(b, force){
-  const s = initSec(b);
+function drawSecondaries(b, force, who){
+  const s = initSec(b, who);
   if (s.mode !== 'tactical') return;
   if (secLib.length < 2) return;
 
@@ -3886,19 +3926,43 @@ function drawSecondaries(b, force){
   saveBattle(b);
 }
 
-function secondaryPanel(b){
-  const s = initSec(b);
-  // Al entrar ya tenés tus dos cartas: no hace falta ningún paso previo.
-  if (s.mode === 'tactical' && secLib.length >= 2) drawSecondaries(b);
+/* Selector de lado. Sigue al reloj salvo que lo fuerces. */
+function secSwitch(b, side){
+  const row = el('div','sswitch');
+  for (const [who, label] of [['me','Me'], ['them', b.opponent || 'Them']]) {
+    const active = side === who;
+    const s2 = initSec(b, who);
+    const vp = Object.values(s2.vp).reduce((a, n) => a + (+n || 0), 0);
+    const btn = el('button', 'chip' + (active ? ' on' : ''));
+    btn.innerHTML = esc(label) + '<i>' + s2.active.length + ' in hand \u00b7 ' + vp + ' VP</i>';
+    btn.onclick = () => { b.secView = who; saveBattle(b); renderBattles(); };
+    row.append(btn);
+  }
+  if (b.secView) {
+    const auto = el('button','chip');
+    auto.textContent = 'follow the clock';
+    auto.onclick = () => { b.secView = null; saveBattle(b); renderBattles(); };
+    row.append(auto);
+  }
+  return row;
+}
+
+function secondaryPanel(b, who){
+  who = who || 'me';
+  const s = initSec(b, who);
+  // Al entrar ya están las dos cartas: no hace falta ningún paso previo.
+  if (s.mode === 'tactical' && secLib.length >= 2) drawSecondaries(b, false, who);
   const box = el('div');
   box.style.cssText = 'margin:16px 0';
 
   const head = el('div','rrole');
   const scored = Object.values(s.vp).reduce((a, n) => a + (+n || 0), 0);
-  head.innerHTML = '<span>SECONDARY MISSIONS</span><span>' + scored + ' VP</span>';
+  head.innerHTML = '<span>SECONDARY MISSIONS \u00b7 ' +
+    esc((who === 'me' ? 'ME' : (b.opponent || 'THEM')).toUpperCase()) +
+    '</span><span>' + scored + ' VP</span>';
   box.append(head);
 
-  if (DATA.missions) {
+  if (DATA.missions && who === 'me') {
     const cr = el('div','hint');
     cr.innerHTML = 'Missions and cards from the community dataset ' +
       '<b>' + esc(DATA.missions.source) + '</b> (' + esc(DATA.missions.licence) + '), ' +
@@ -3937,19 +4001,20 @@ function secondaryPanel(b){
     sh.onclick = () => {
       s.seed = Date.now() % 2147483647;
       s.deck = shuffled(secLib.map((c) => c.id), s.seed);
-      s.active = []; s.done = []; s.vp = {}; s.byRound = {}; s.drawnFor = {};
-      drawSecondaries(b, true); renderBattles();
+      s.active = []; s.done = []; s.vp = {}; s.byRound = {}; s.drawnFor = {}; s.scored = {};
+      drawSecondaries(b, true, who); renderBattles();
     };
     bar.append(sh);
 
     const dr = el('button','btn');
     dr.textContent = 'DRAW 2';
     dr.title = 'Two more cards for this round';
-    dr.onclick = () => { drawSecondaries(b, true); renderBattles(); };
+    dr.onclick = () => { drawSecondaries(b, true, who); renderBattles(); };
     bar.append(dr);
   }
   box.append(bar);
 
+  if (who === 'me') {
   const libTog = document.createElement('details');
   libTog.className = 'cfg';
   libTog.innerHTML = '<summary>Card library <span>' + secLib.length + ' cards</span></summary>';
@@ -3957,6 +4022,7 @@ function secondaryPanel(b){
   libBody.append(libEditor());
   libTog.append(libBody);
   box.append(libTog);
+  }
 
   if (s.mode === 'fixed') {
     const sel = el('div');
@@ -3974,7 +4040,7 @@ function secondaryPanel(b){
     }
     box.append(sel);
     if (s.fixed.length < 2) box.append(hint('Pick two fixed missions.'));
-    for (const id of s.fixed) box.append(secRow(b, id, false));
+    for (const id of s.fixed) box.append(secRow(b, id, false, who));
     return box;
   }
 
@@ -3983,7 +4049,7 @@ function secondaryPanel(b){
     return box;
   }
 
-  for (const id of s.active) box.append(secRow(b, id, true));
+  for (const id of s.active) box.append(secRow(b, id, true, who));
 
   if ((s.done || []).length) {
     const dh = el('div','rrole');
@@ -4005,8 +4071,9 @@ function secondaryPanel(b){
   return box;
 }
 
-function secRow(b, id, tactical){
-  const s = b.sec, c = secOf(id);
+function secRow(b, id, tactical, who){
+  who = who || 'me';
+  const s = initSec(b, who), c = secOf(id);
   const row = el('div','slot');
   if (!c) { row.textContent = 'Card removed from the library.'; return row; }
 
@@ -4046,7 +4113,7 @@ function secRow(b, id, tactical){
     n = Math.max(0, Math.min(cap, n | 0));
     s.byRound[key] = n;
     s.vp[id] = scoredBefore + n;
-    val.value = n; saveBattle(b); syncSecToScore(b);
+    val.value = n; saveBattle(b); syncSecToScore(b, who);
   };
   minus.onclick = () => set((s.byRound[key] ?? 0) - 1);
   plus.onclick  = () => set((s.byRound[key] ?? 0) + 1);
@@ -4072,7 +4139,7 @@ function secRow(b, id, tactical){
     dc.onclick = () => {
       s.active = s.active.filter((x) => x !== id);
       s.deck.push(id);
-      b.cp.me = Math.min(b.round, (b.cp.me || 0) + 1);
+      b.cp[who] = Math.min(b.round, (b.cp[who] || 0) + 1);
       saveBattle(b); renderBattles();
     };
     row.append(ok, dc);
@@ -4082,14 +4149,15 @@ function secRow(b, id, tactical){
 
 /* Los VP de secundarias alimentan la fila del marcador de la ronda actual. */
 /* Los VP de la ronda actual salen de las cartas puntuadas EN esa ronda. */
-function syncSecToScore(b){
-  const s = b.sec;
-  s.byRound = s.byRound || {};
+function syncSecToScore(b, who){
+  who = who || 'me';
+  const s = initSec(b, who);
   const suffix = '@' + b.round;
-  if ((b.manualSec || {})[b.round - 1]) return;   // esa ronda la escribiste vos
+  const manual = who === 'me' ? (b.manualSec || {}) : (b.manualSecThem || {});
+  if (manual[b.round - 1]) return;               // esa ronda la escribiste a mano
   const thisRound = Object.entries(s.byRound)
     .reduce((a, [k, v]) => k.endsWith(suffix) ? a + (+v || 0) : a, 0);
-  b.me[b.round - 1].s = Math.min(VP_CAP.perRound, thisRound);
+  b[who][b.round - 1].s = Math.min(VP_CAP.perRound, thisRound);
   saveBattle(b);
 }
 
