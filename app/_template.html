@@ -5548,6 +5548,23 @@ boot();
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
   navigator.serviceWorker.register('./sw.js').catch(() => {});
 }
+<div>
+  👁️ Visitas: <span id="visit-counter">Cargando...</span>
+</div>
+
+<script>
+fetch('https://TU-USUARIO.goatcounter.com/counter/visits')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('visit-counter').textContent = data.count;
+  })
+  .catch(() => {
+    document.getElementById('visit-counter').textContent = '—';
+  });
+</script>
+
+
+  
 </script>
 </body>
 </html>
