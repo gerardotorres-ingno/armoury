@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "767c593",
-    "date": "2026-08-21T18:13:18Z"
+    "sha": "4027db6",
+    "date": "2026-08-24T02:06:35Z"
   },
   "catalogueId": "94bb-3284-ee14-57a1",
   "catalogueName": "Imperium - Adeptus Astartes - Space Wolves",
@@ -1042,15 +1042,15 @@
       "type": "unit",
       "mode": "legends",
       "legends": true,
-      "points": 80,
+      "points": 95,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 95
         },
         {
           "from": 6,
-          "pts": 160
+          "pts": 190
         }
       ],
       "cap": null,
@@ -1412,7 +1412,7 @@
         },
         {
           "n": "Guile of the Wolf (Aura)",
-          "d": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP P (this is not cumulative with any other rules that increase the CP cost of that Stratagem)"
+          "d": "Once per turn, when your opponent targets a unit from their army within 12” of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP."
         },
         {
           "n": "Embarking within Transports",
@@ -5060,7 +5060,8 @@
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
-        "Infantry"
+        "Infantry",
+        "Wolf Guard Headtakers"
       ],
       "models": {
         "min": null,
@@ -6977,10 +6978,6 @@
           "d": "While this model is leading a unit, in your Command phase, you can return 1 model (excluding CHARACTER models) to that unit."
         },
         {
-          "n": "Invulnerable Save",
-          "d": "4+"
-        },
-        {
           "n": "Litany of Hate",
           "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
         }
@@ -7005,7 +7002,7 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": false
     },

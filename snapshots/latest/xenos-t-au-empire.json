@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "767c593",
-    "date": "2026-08-21T18:13:18Z"
+    "sha": "4027db6",
+    "date": "2026-08-24T02:06:35Z"
   },
   "catalogueId": "d81a-61dd-6d27-a3ce",
   "catalogueName": "Xenos - T'au Empire",
@@ -8757,6 +8757,10 @@
         {
           "n": "Harnessed Alien Instincts",
           "d": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey‑marked: - While a unit is prey‑marked, that unit has +3\" detection range."
+        },
+        {
+          "n": "Pech'ra",
+          "d": "Ranged weapons equipped by the bearer’s unit have the [IGNORES COVER] ability."
         }
       ],
       "faction": "T'au Empire",
@@ -10374,9 +10378,9 @@
               "p": 0,
               "model": true,
               "w": [
-                "Pulse carbine",
                 "Pulse pistol",
-                "Close combat weapon"
+                "Close combat weapon",
+                "Pulse carbine"
               ]
             },
             {
@@ -10387,9 +10391,9 @@
               "p": 0,
               "model": true,
               "w": [
-                "Pulse carbine",
                 "Pulse pistol",
-                "Close combat weapon"
+                "Close combat weapon",
+                "Pulse carbine"
               ]
             }
           ]
@@ -10437,8 +10441,8 @@
           "opts": [
             {
               "n": "Pulse carbine",
-              "min": 1,
-              "max": 1,
+              "min": 0,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -10572,17 +10576,6 @@
       ],
       "weapons": [
         {
-          "n": "Pulse carbine",
-          "melee": false,
-          "range": "20\"",
-          "a": "2",
-          "skill": "4+",
-          "s": "5",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
           "n": "Pulse pistol",
           "melee": false,
           "range": "12\"",
@@ -10600,6 +10593,17 @@
           "a": "1",
           "skill": "5+",
           "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Pulse carbine",
+          "melee": false,
+          "range": "20\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
