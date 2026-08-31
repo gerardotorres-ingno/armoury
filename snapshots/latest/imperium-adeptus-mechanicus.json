@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "46d8cc5",
-    "date": "2026-08-24T22:46:05Z"
+    "sha": "3972c41",
+    "date": "2026-08-31T15:40:37Z"
   },
   "catalogueId": "77b9-2f66-3f9b-5cf3",
   "catalogueName": "Imperium - Adeptus Mechanicus",
@@ -192,7 +192,7 @@
     }
   ],
   "allyCaps": [],
-  "revision": 10,
+  "revision": 12,
   "file": "Imperium - Adeptus Mechanicus.json",
   "counts": {
     "total": 41,
@@ -1770,10 +1770,10 @@
       "keywords": [
         "Cybernetica Datasmith",
         "Tech-Priest",
-        "Infantry",
         "Character",
         "Imperium",
-        "Legio Cybernetica"
+        "Legio Cybernetica",
+        "Vehicle"
       ],
       "models": {
         "min": 1,
@@ -3070,15 +3070,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 160,
+      "points": 150,
       "ladder": [
         {
           "from": 1,
-          "pts": 160
+          "pts": 150
         },
         {
           "from": 3,
-          "pts": 320
+          "pts": 300
         }
       ],
       "cap": {
@@ -4600,7 +4600,7 @@
           "range": "36\"",
           "a": "3D3",
           "skill": "4+",
-          "s": "10",
+          "s": "9",
           "ap": "-2",
           "d": "2",
           "kw": "Blast, Sustained Hits 1"
@@ -4719,11 +4719,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 80,
+      "points": 75,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 75
         },
         {
           "from": 6,
@@ -4843,15 +4843,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 80,
+      "points": 75,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 75
         },
         {
           "from": 6,
-          "pts": 160
+          "pts": 150
         }
       ],
       "cap": {
@@ -5283,8 +5283,8 @@
           "n": "Alpha close combat weapon",
           "melee": true,
           "range": "Melee",
-          "a": "4",
-          "skill": "4",
+          "a": "2",
+          "skill": "4+",
           "s": "5",
           "ap": "-1",
           "d": "1",
@@ -7703,11 +7703,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 65,
+      "points": 60,
       "ladder": [
         {
           "from": 1,
-          "pts": 65
+          "pts": 60
         }
       ],
       "cap": {

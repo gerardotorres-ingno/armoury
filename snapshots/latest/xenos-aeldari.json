@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "46d8cc5",
-    "date": "2026-08-24T22:46:05Z"
+    "sha": "3972c41",
+    "date": "2026-08-31T15:40:37Z"
   },
   "catalogueId": "34a5-8c7e-f468-82d1",
   "catalogueName": "Xenos - Aeldari",
@@ -443,7 +443,7 @@
       "scope": "force"
     }
   ],
-  "revision": 1,
+  "revision": 2,
   "file": "Aeldari - Craftworlds.json",
   "counts": {
     "total": 102,
@@ -1046,7 +1046,6 @@
         "Mounted",
         "Fly",
         "Aeldari",
-        "Frame",
         "Leader"
       ],
       "models": {
@@ -1725,7 +1724,8 @@
         "Exodite",
         "Mobile",
         "Leader",
-        "Clanblade"
+        "Clanblade",
+        "Ynnari"
       ],
       "models": {
         "min": 1,
@@ -1932,8 +1932,7 @@
         "Titanic",
         "Fly",
         "Cobra",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -2241,8 +2240,7 @@
         "Anhrathe",
         "Corsair Cloud Dancer Band",
         "Corsairs and Travelling Players",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": null,
@@ -4962,15 +4960,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 95,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 95
         },
         {
           "from": 6,
-          "pts": 210
+          "pts": 200
         }
       ],
       "cap": {
@@ -5257,15 +5255,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 70,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 70
         },
         {
           "from": 6,
-          "pts": 150
+          "pts": 140
         }
       ],
       "cap": {
@@ -5585,7 +5583,8 @@
         "Mounted",
         "Exodite",
         "Mobile",
-        "Dragon Knights"
+        "Dragon Knights",
+        "Ynnari"
       ],
       "models": {
         "min": 3,
@@ -5610,11 +5609,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 130,
+      "points": 120,
       "ladder": [
         {
           "from": 1,
-          "pts": 130
+          "pts": 120
         }
       ],
       "cap": null,
@@ -6725,8 +6724,7 @@
         "Vehicle",
         "Fly",
         "Firestorm",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -8183,8 +8181,7 @@
         "Vehicle",
         "Fly",
         "Hornet",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -8976,7 +8973,8 @@
         "Mounted",
         "Exodite",
         "Mobile",
-        "Leystalker"
+        "Leystalker",
+        "Ynnari"
       ],
       "models": {
         "min": 1,
@@ -9287,8 +9285,7 @@
         "Vehicle",
         "Fly",
         "Lynx",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -9600,8 +9597,7 @@
         "Fly",
         "Aircraft",
         "Nightwing",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -10026,8 +10022,7 @@
         "Aeldari",
         "Aircraft",
         "Fly",
-        "Phoenix",
-        "Frame"
+        "Phoenix"
       ],
       "models": {
         "min": 1,
@@ -10621,8 +10616,7 @@
         "Vehicle",
         "Fly",
         "Titanic",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -12645,11 +12639,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 55,
+      "points": 50,
       "ladder": [
         {
           "from": 1,
-          "pts": 55
+          "pts": 50
         }
       ],
       "cap": {
@@ -13038,7 +13032,7 @@
           "melee": false,
           "range": "12\"",
           "a": "3",
-          "skill": "6+",
+          "skill": "-",
           "s": "3",
           "ap": "-2",
           "d": "2",
@@ -13094,7 +13088,8 @@
         "Mobile",
         "Psyker",
         "Support",
-        "Stonesinger"
+        "Stonesinger",
+        "Ynnari"
       ],
       "models": {
         "min": 1,
@@ -13119,11 +13114,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 110,
+      "points": 100,
       "ladder": [
         {
           "from": 1,
-          "pts": 110
+          "pts": 100
         }
       ],
       "cap": {
@@ -13718,29 +13713,15 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 90,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 90
+          "pts": 80
         }
       ],
       "cap": null,
-      "leads": [
-        "CORSAIR REAVER BAND",
-        "CORSAIR VOIDREAVERS",
-        "CORSAIR VOIDSCARRED",
-        "GUARDIAN DEFENDERS",
-        "STORM GUARDIANS",
-        "YNNARI INCUBI",
-        "YNNARI KABALITE WARRIORS",
-        "YNNARI WYCHES",
-        "You can attach this unit to one of the above units",
-        "even if Yvraine has already been attached to it. If you do",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units",
-        "with their original Starting Strengths"
-      ],
+      "leads": null,
       "options": null,
       "weapons": [
         {
@@ -13795,6 +13776,10 @@
           "d": "While this model is leading a unit, other Character models attached to that unit have the Feel No Pain 4+ ability."
         },
         {
+          "n": "Support",
+          "d": "This model can be attached to the following units: - CORSAIR REAVER BAND - CORSAIR VOIDREAVERS - CORSAIR VOIDSCARRED - GUARDIAN DEFENDERS - STORM GUARDIANS - YNNARI INCUBI - YNNARI KABALITE WARRIORS - YNNARI WYCHES You can attach this unit to one of the above units, even if Yvraine has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        },
+        {
           "n": "Servant of the Whispering God",
           "d": "If your army includes The Visarch, it cannot include any Epic Hero units (excluding Ynnari units). If your army includes any Epic Hero units (excluding Ynnari units), it cannot include The Visarch."
         }
@@ -13806,7 +13791,7 @@
         "Epic Hero",
         "Character",
         "Aeldari",
-        "Leader"
+        "Support"
       ],
       "models": {
         "min": 1,
@@ -14525,8 +14510,7 @@
         "Aircraft",
         "Titanic",
         "Vampire Hunter",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -14628,8 +14612,7 @@
         "Titanic",
         "Transport",
         "Vampire Raider",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
@@ -15133,11 +15116,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 85,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 85
+          "pts": 80
         },
         {
           "from": 2,
@@ -15329,25 +15312,18 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 45,
+      "points": 40,
       "ladder": [
         {
           "from": 1,
-          "pts": 45
+          "pts": 40
         }
       ],
       "cap": {
         "max": 3,
         "at1000": 2
       },
-      "leads": [
-        "Guardian Defenders",
-        "Storm Guardians",
-        "You can attach this model to a unit",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units",
-        "with their original Starting Strengths"
-      ],
+      "leads": null,
       "options": [
         {
           "n": "Weapon",
@@ -15433,6 +15409,10 @@
       ],
       "abilities": [
         {
+          "n": "Support",
+          "d": "This model can be attached to the following units: - Guardian Defenders - Storm Guardians You can attach this model to a unit, even if one Autarch or Farseer model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        },
+        {
           "n": "Runes of Fortune (Psychic)",
           "d": "Each time an enemy unit declares a charge, if one or more units with this ability are selected as a target of that charge, subtract 2 from the Charge roll."
         },
@@ -15489,7 +15469,7 @@
         "max": 3,
         "at1000": 2
       },
-      "leads": [],
+      "leads": null,
       "options": [
         {
           "n": "2-4 Warlocks",
@@ -15594,6 +15574,10 @@
         {
           "n": "Psychic Communion (Psychic)",
           "d": "Each time this unit is selected to shoot, for each Warlock model in this unit, until the end of the phase, add 1 to the Attacks and Strength characteristics of that model's Destructor weapon for each other friendly Aeldari Psyker model within 6\" of this model (to a maximum of +2)."
+        },
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following units: - Guardian Defenders - Storm Guardians"
         }
       ],
       "faction": "Asuryani",
@@ -15604,7 +15588,7 @@
         "Aeldari",
         "Warlock",
         "Ynnari",
-        "Leader"
+        "Support"
       ],
       "models": {
         "min": null,
@@ -15629,11 +15613,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 55,
+      "points": 45,
       "ladder": [
         {
           "from": 1,
-          "pts": 55
+          "pts": 45
         },
         {
           "from": 2,
@@ -15644,7 +15628,7 @@
         "max": 3,
         "at1000": 2
       },
-      "leads": [],
+      "leads": null,
       "options": [
         {
           "n": "1-2 Warlock Skyrunners",
@@ -15761,6 +15745,10 @@
           "d": "Each time this unit is selected to shoot, for each Warlock model in this unit, until the end of the phase, add 1 to the Attacks and Strength characteristics of that model's Destructor weapon for each other friendly Aeldari Psyker model within 6\" of this model (to a maximum of +2)."
         },
         {
+          "n": "Support",
+          "d": "This model can be attached to the following unit: - WINDRIDERS"
+        },
+        {
           "n": "Runes of Battle (Psychic)",
           "d": "Weapons equipped by models in this unit have the [IGNORES COVER] ability."
         }
@@ -15774,7 +15762,7 @@
         "Aeldari",
         "Fly",
         "Ynnari",
-        "Leader"
+        "Support"
       ],
       "models": {
         "min": null,
@@ -15920,8 +15908,7 @@
         "Vehicle",
         "Fly",
         "Warp Hunter",
-        "Aeldari",
-        "Frame"
+        "Aeldari"
       ],
       "models": {
         "min": 1,
