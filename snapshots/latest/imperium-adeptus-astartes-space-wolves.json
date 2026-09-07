@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3972c41",
-    "date": "2026-08-31T15:40:37Z"
+    "sha": "377901e",
+    "date": "2026-09-07T14:09:09Z"
   },
   "catalogueId": "94bb-3284-ee14-57a1",
   "catalogueName": "Imperium - Adeptus Astartes - Space Wolves",
@@ -14,7 +14,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 4,
+  "revision": 7,
   "file": "Imperium - Space Wolves.json",
   "counts": {
     "total": 41,
@@ -572,13 +572,7 @@
         }
       ],
       "cap": null,
-      "leads": [
-        "Fenrisian Wolves",
-        "You must attach this model to the above unit",
-        "even if Canis Wolfborn has been attached to it. If you do",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units"
-      ],
+      "leads": null,
       "options": null,
       "weapons": [
         {
@@ -611,8 +605,8 @@
           "d": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll."
         },
         {
-          "n": "Invulnerable Save",
-          "d": "6+"
+          "n": "Support",
+          "d": "This model can be attached to the following unit: ■ Fenrisian Wolves"
         },
         {
           "n": "Wolfkin",
@@ -637,7 +631,7 @@
         "W": "2",
         "LD": "7+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "6+"
       },
       "native": true
     },
@@ -1003,10 +997,6 @@
         {
           "n": "Mantle of the Troll King",
           "d": "Once per phase, when resolving an attack made against this model, after you make a saving throw for this model, you can change the Damage characteristic of that attack to 0."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1030,7 +1020,7 @@
         "W": "7",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -1125,7 +1115,7 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "6+*"
       },
       "native": true
     },
@@ -1297,10 +1287,6 @@
         {
           "n": "The Fierce Eye",
           "d": "In your Shooting phase, you can select one enemy INFANTRY unit within 12\" of and visible to this model. That enemy unit must take a Battle-shock test."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1324,7 +1310,7 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -1534,10 +1520,6 @@
         {
           "n": "The Great Wolf",
           "d": "Each time this model destroys an enemy unit, you gain 1CP."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1560,7 +1542,7 @@
         "W": "12",
         "LD": "6+",
         "OC": "4",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -4550,10 +4532,6 @@
           "d": "While this model is attached to a unit that contains another CHARACTER model, all CHARACTER models in that unit have the Feel No Pain 4+ ability."
         },
         {
-          "n": "Invulnerable Save",
-          "d": "4+"
-        },
-        {
           "n": "Tactical Precision",
           "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
         },
@@ -4581,7 +4559,7 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -4602,10 +4580,7 @@
       ],
       "cap": null,
       "leads": [
-        "Thunderwolf Cavalry",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units",
-        "with their original Starting Strengths"
+        "Thunderwolf Cavalry"
       ],
       "options": [
         {
@@ -5268,14 +5243,7 @@
         }
       ],
       "cap": null,
-      "leads": [
-        "Blood Claws",
-        "Grey Hunters",
-        "Long Fangs",
-        "You must attach this model to one of the above units",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units"
-      ],
+      "leads": null,
       "options": [
         {
           "n": "Wargear",
@@ -5575,6 +5543,10 @@
       ],
       "abilities": [
         {
+          "n": "Support",
+          "d": "This model can be attached to the following units: ■ Blood Claws ■ Grey Hunters ■ Long Fangs"
+        },
+        {
           "n": "Inspiring Leader",
           "d": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test."
         },
@@ -5627,14 +5599,7 @@
         }
       ],
       "cap": null,
-      "leads": [
-        "Blood Claws",
-        "Grey Hunters",
-        "Long Fangs",
-        "You must attach this model to one of the above units",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units"
-      ],
+      "leads": null,
       "options": [
         {
           "n": "Wargear",
@@ -5905,6 +5870,10 @@
       ],
       "abilities": [
         {
+          "n": "Support",
+          "d": "This model can be attached to the following units: ■ Blood Claws ■ Grey Hunters ■ Long Fangs"
+        },
+        {
           "n": "Inspiring Leader",
           "d": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test."
         },
@@ -5962,12 +5931,7 @@
         }
       ],
       "cap": null,
-      "leads": [
-        "Skyclaws",
-        "You must attach this model to the above unit",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units"
-      ],
+      "leads": null,
       "options": [
         {
           "n": "Wargear",
@@ -6266,6 +6230,10 @@
         }
       ],
       "abilities": [
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following unit: Skyclaws"
+        },
         {
           "n": "Inspiring Leader",
           "d": "While this model is leading a unit, once per battle, when a Battle-shock test is taken for that unit, you can re-roll that test."
@@ -6851,10 +6819,6 @@
           "d": "Add 1 to Advance and Charge rolls made for this model’s unit."
         },
         {
-          "n": "Invulnerable Save",
-          "d": "4+"
-        },
-        {
           "n": "Rites of Battle",
           "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
         },
@@ -6883,7 +6847,7 @@
         "W": "6",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },

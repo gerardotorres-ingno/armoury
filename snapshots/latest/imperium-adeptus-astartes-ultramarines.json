@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3972c41",
-    "date": "2026-08-31T15:40:37Z"
+    "sha": "377901e",
+    "date": "2026-09-07T14:09:09Z"
   },
   "catalogueId": "4029-9237-e8db-af55",
   "catalogueName": "Imperium - Adeptus Astartes - Ultramarines",
@@ -14,7 +14,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 2,
+  "revision": 3,
   "file": "Imperium - Ultramarines.json",
   "counts": {
     "total": 12,
@@ -44,12 +44,15 @@
       "cap": null,
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "BLADEGUARD VETERAN SQUAD",
+        "COMMAND SQUAD",
         "COMPANY HEROES",
         "HELLBLASTER SQUAD",
         "INFERNUS SQUAD",
         "INTERCESSOR SQUAD",
         "STERNGUARD VETERAN SQUAD",
+        "VANGUARD VETERAN SQUAD",
         "VICTRIX HONOUR GUARD",
         "WARDENS OF ULTRAMAR"
       ],
@@ -64,7 +67,7 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Anti-infantry 2+"
+          "kw": "Anti-Infantry 2+"
         },
         {
           "n": "Master-crafted Bolter",
@@ -364,12 +367,14 @@
       "cap": null,
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "BLADEGUARD VETERAN SQUAD",
         "DESOLATION SQUAD",
         "DEVASTATOR SQUAD",
         "INTERCESSOR SQUAD",
         "STERNGUARD VETERAN SQUAD",
-        "TACTICAL SQUAD"
+        "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -483,16 +488,19 @@
       "leads": [
         "AGGRESSOR SQUAD",
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "BLADEGUARD VETERAN SQUAD",
+        "COMMAND SQUAD",
         "COMPANY HEROES",
-        "ERADICATOR SQUAD",
+        "ERADICATOR SQUAD STERNGUARD VETERAN SQUAD TERMINATOR SQUAD",
         "HEAVY INTERCESSOR SQUAD",
         "INFERNUS SQUAD",
         "INTERCESSOR SQUAD",
-        "STERNGUARD VETERAN SQUAD",
+        "RELIC TERMINATOR SQUAD",
         "TACTICAL SQUAD",
         "TERMINATOR ASSAULT SQUAD",
         "TERMINATOR SQUAD",
+        "VANGUARD VETERAN SQUAD",
         "VICTRIX HONOUR GUARD"
       ],
       "options": null,
@@ -962,11 +970,15 @@
       "cap": null,
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "BLADEGUARD VETERAN SQUAD",
+        "COMMAND SQUAD",
         "COMPANY HEROES",
         "INTERCESSOR SQUAD",
         "STERNGUARD VETERAN SQUAD",
-        "TACTICAL SQUAD"
+        "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD",
+        "VICTRIX HONOUR GUARD"
       ],
       "options": null,
       "weapons": [
@@ -1349,6 +1361,10 @@
         {
           "n": "Strategium Command",
           "d": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
         },
         {
           "n": "Storm Shield",

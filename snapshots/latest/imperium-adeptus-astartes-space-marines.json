@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3972c41",
-    "date": "2026-08-31T15:40:37Z"
+    "sha": "377901e",
+    "date": "2026-09-07T14:09:09Z"
   },
   "catalogueId": "e0af-67df-9d63-8fb7",
   "catalogueName": "Imperium - Adeptus Astartes - Space Marines",
@@ -889,13 +889,13 @@
     }
   ],
   "allyCaps": [],
-  "revision": 8,
+  "revision": 12,
   "file": "Imperium - Space Marines.json",
   "counts": {
-    "total": 159,
-    "native": 136,
+    "total": 161,
+    "native": 138,
     "matched": 83,
-    "legends": 50,
+    "legends": 52,
     "crucible": 3,
     "allied": 23
   },
@@ -1206,7 +1206,7 @@
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ DESOLATION SQUAD ■ DEVASTATOR SQUAD ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD"
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD"
         },
         {
           "n": "Astartes Banner",
@@ -1448,7 +1448,7 @@
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ DEATHWATCH TERMINATOR SQUAD ■ DEATHWING KNIGHTS ■ DEATHWING TERMINATOR SQUAD ■ TERMINATOR ASSAULT SQUAD ■ TERMINATOR SQUAD You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, RELIC TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD"
         },
         {
           "n": "Astartes Banner",
@@ -1503,8 +1503,9 @@
         "at1000": 2
       },
       "leads": [
-        "Bike Squad",
-        "Outrider Squad"
+        "BIKE SQUAD",
+        "COMPANY VETERANS ON BIKES",
+        "OUTRIDER SQUAD"
       ],
       "options": [
         {
@@ -1912,7 +1913,7 @@
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ DESOLATION SQUAD ■ DEVASTATOR SQUAD ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD"
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2079,8 +2080,9 @@
         "at1000": 2
       },
       "leads": [
-        "Bike Squad",
-        "Outrider Squad"
+        "BIKE SQUAD",
+        "COMPANY VETERANS ON BIKES",
+        "OUTRIDER SQUAD"
       ],
       "options": [
         {
@@ -5615,7 +5617,9 @@
       },
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "BLADEGUARD VETERAN SQUAD",
+        "COMMAND SQUAD",
         "COMPANY HEROES",
         "CRUSADER SQUAD",
         "DEATHWATCH VETERANS",
@@ -5628,6 +5632,7 @@
         "STERNGUARD VETERAN SQUAD",
         "SWORD BRETHREN SQUAD",
         "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD",
         "VICTRIX HONOUR GUARD"
       ],
       "options": [
@@ -6305,6 +6310,7 @@
         "DEATHWATCH TERMINATOR SQUAD",
         "DEATHWING KNIGHTS",
         "DEATHWING TERMINATOR SQUAD",
+        "RELIC TERMINATOR SQUAD",
         "TERMINATOR ASSAULT SQUAD",
         "TERMINATOR SQUAD"
       ],
@@ -6472,8 +6478,9 @@
         "at1000": 2
       },
       "leads": [
-        "Bike Squad",
-        "Outrider Squad"
+        "BIKE SQUAD",
+        "COMPANY VETERANS ON BIKES",
+        "OUTRIDER SQUAD"
       ],
       "options": [
         {
@@ -6844,10 +6851,6 @@
           "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
         },
         {
-          "n": "Invulnerable Save",
-          "d": "4+"
-        },
-        {
           "n": "Relic Shield",
           "d": "Add 1 to the bearer's Wounds characteristic."
         }
@@ -6871,7 +6874,7 @@
         "W": "6",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -6896,6 +6899,7 @@
       },
       "leads": [
         "ASSAULT INTERCESSORS WITH JUMP PACKS",
+        "ASSAULT SQUAD WITH JUMP PACKS",
         "SANGUINARY GUARD",
         "TALONSTRIKE KILL TEAM",
         "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
@@ -9373,10 +9377,6 @@
           "d": "Once per turn, when this model's unit is selected to shoot or fight, it can use this ability. If it does, until the end of the phase, each time this model makes an attack, you can re-roll the Wound Roll."
         },
         {
-          "n": "Invulnerable Save (4+)",
-          "d": "This model has a 4+ invulnerable save."
-        },
-        {
           "n": "Heavy Jump Pack and Mk X Gravis Armour",
           "d": "Infantry only. Change this model's Move characteristic to 10\", its Toughness characteristic to 6 and its Wounds characteristic to 5. Remove the Tacticus keyword, add the Jump Pack, Fly and Gravis keywords, it gains the Deep Strike ability and replace the list of units this model can be attached to: Inceptor Squad."
         },
@@ -9470,11 +9470,11 @@
         },
         {
           "n": "Tactical Precision",
-          "d": "Weapons Equipped by models in this unit have the [Lethal Hits] ability"
+          "d": "Weapons equipped by models in this unit have the [Lethal Hits] ability."
         },
         {
           "n": "Ravenwing Hunter",
-          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced"
+          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced."
         },
         {
           "n": "Tortuous Revelation (Psychic)",
@@ -9486,7 +9486,7 @@
         },
         {
           "n": "Forlorn Hero",
-          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability."
         },
         {
           "n": "Storm Shield",
@@ -9510,7 +9510,7 @@
         },
         {
           "n": "Vehement Aggression",
-          "d": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1"
+          "d": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
         },
         {
           "n": "Vengeful Exhortation",
@@ -9563,6 +9563,7 @@
       },
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "BLADEGUARD VETERAN SQUAD",
         "CRUSADER SQUAD",
         "DEATH COMPANY MARINES",
@@ -9576,7 +9577,8 @@
         "INTERCESSOR SQUAD",
         "STERNGUARD VETERAN SQUAD",
         "SWORD BRETHREN SQUAD",
-        "TACTICAL SQUAD"
+        "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": [
         {
@@ -9697,6 +9699,7 @@
         "DEATHWATCH TERMINATOR SQUAD",
         "DEATHWING KNIGHTS",
         "DEATHWING TERMINATOR SQUAD",
+        "RELIC TERMINATOR SQUAD",
         "TERMINATOR ASSAULT SQUAD",
         "TERMINATOR SQUAD"
       ],
@@ -9818,6 +9821,140 @@
       "native": true
     },
     {
+      "id": "c550-de70-074f-9210",
+      "linkId": "ef51-8c81-8a60-a930",
+      "name": "Chaplain Kastiel",
+      "rawName": "Chaplain Kastiel [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 70,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 70
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "CRUSADER SQUAD",
+        "DEATH COMPANY MARINES",
+        "DEATH COMPANY MARINES WITH BOLT RIFLES",
+        "DEATHWATCH VETERANS",
+        "DECIMUS KILL TEAM",
+        "FORTIS KILL TEAM",
+        "HELLBLASTER SQUAD",
+        "INFERNUS SQUAD",
+        "INNER CIRCLE COMPANIONS",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "SWORD BRETHREN SQUAD",
+        "TACTICAL SQUAD"
+      ],
+      "options": [
+        {
+          "n": "Wargear",
+          "owner": null,
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Absolvor bolt pistol",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Crozius arcanum",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Absolvor bolt pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Pistol"
+        },
+        {
+          "n": "Crozius arcanum",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": ""
+        }
+      ],
+      "composition": [
+        {
+          "n": "Chaplain Kastiel [Legends]",
+          "min": 1,
+          "max": 1,
+          "w": []
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Zealot's Fervour",
+          "d": "This model's unit is eligible to charge in a turn in which it fell back"
+        },
+        {
+          "n": "Litany of Hate",
+          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Tacticus",
+        "Imperium",
+        "Chaplain",
+        "Leader",
+        "Epic Hero",
+        "Kastiel",
+        "Grenades"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "5+",
+        "OC": "1",
+        "InSv": "4+"
+      },
+      "native": true
+    },
+    {
       "id": "5d1d-2230-8199-3ab3",
       "linkId": "618c-29ed-bec5-bd81",
       "name": "Chaplain on Bike",
@@ -9837,6 +9974,8 @@
         "at1000": 2
       },
       "leads": [
+        "BIKE SQUAD",
+        "COMPANY VETERANS ON BIKES",
         "OUTRIDER SQUAD",
         "RAVENWING BLACK KNIGHTS"
       ],
@@ -10286,6 +10425,7 @@
       },
       "leads": [
         "ASSAULT INTERCESSORS WITH JUMP PACKS",
+        "ASSAULT SQUAD WITH JUMP PACKS",
         "DEATH COMPANY MARINES WITH JUMP PACKS",
         "TALONSTRIKE KILL TEAM",
         "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
@@ -11457,8 +11597,9 @@
         "at1000": 2
       },
       "leads": [
-        "Bike Squad",
-        "Outrider Squad"
+        "BIKE SQUAD",
+        "COMPANY VETERANS ON BIKES",
+        "OUTRIDER SQUAD"
       ],
       "options": [
         {
@@ -15232,14 +15373,17 @@
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Bladeguard Veteran Squad",
-        "Company Heroes",
-        "Hellblaster Squad",
-        "Infernus Squad",
-        "Intercessor Squad",
-        "Sternguard Veteran Squad",
-        "Tactical Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "COMMAND SQUAD",
+        "COMPANY HEROES",
+        "HELLBLASTER SQUAD",
+        "INFERNUS SQUAD",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -15285,10 +15429,6 @@
         {
           "n": "Unrelenting and Uncompromising",
           "d": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or all modifiers to the Hit roll."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -15313,7 +15453,7 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -16803,16 +16943,7 @@
         "max": 3,
         "at1000": 2
       },
-      "leads": [
-        "Assault Squad",
-        "Command Squad",
-        "Tactical Squad",
-        "Vanguard Veteran Squad",
-        "Devastator Squad",
-        "and that Bodyguard unit is destroyed",
-        "the Leader units attached to it become separate units",
-        "with their original Starting Strengths"
-      ],
+      "leads": null,
       "options": [
         {
           "n": "Wargear",
@@ -16902,6 +17033,10 @@
         {
           "n": "Unbreakable Duty",
           "d": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability."
+        },
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following units: ASSAULT SQUAD, COMMAND SQUAD, DEVASTATOR SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -19015,6 +19150,7 @@
       },
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "BLADEGUARD VETERAN SQUAD",
         "CRUSADER SQUAD",
         "DEATHWATCH VETERANS",
@@ -19025,7 +19161,8 @@
         "INTERCESSOR SQUAD",
         "STERNGUARD VETERAN SQUAD",
         "SWORD BRETHREN SQUAD",
-        "TACTICAL SQUAD"
+        "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": [
         {
@@ -19100,6 +19237,10 @@
         {
           "n": "*Invulnerable Save",
           "d": "This model has a 4+ invulnerable save against melee attacks."
+        },
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -19108,8 +19249,7 @@
         "Infantry",
         "Imperium",
         "Tacticus",
-        "Judiciar",
-        "Leader"
+        "Judiciar"
       ],
       "models": {
         "min": 1,
@@ -19123,6 +19263,136 @@
         "LD": "5+",
         "OC": "1",
         "InSv": "4+*"
+      },
+      "native": true
+    },
+    {
+      "id": "be42-655d-472b-d89e",
+      "linkId": "293f-42d1-5fce-3720",
+      "name": "Judiciar Xacharus",
+      "rawName": "Judiciar Xacharus [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 75,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 75
+        }
+      ],
+      "cap": {
+        "max": 3,
+        "at1000": 2
+      },
+      "leads": [
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "CRUSADER SQUAD",
+        "DEATHWATCH VETERANS",
+        "DECIMUS KILL TEAM",
+        "FORTIS KILL TEAM",
+        "INFERNUS SQUAD",
+        "INNER CIRCLE COMPANIONS",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "SWORD BRETHREN SQUAD",
+        "TACTICAL SQUAD"
+      ],
+      "options": [
+        {
+          "n": "Wargear",
+          "owner": null,
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Executioner Relic Blade",
+              "min": 1,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Absolvor bolt pistol",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            }
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "n": "Executioner Relic Blade",
+          "melee": true,
+          "range": "Melee",
+          "a": "5",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Devastating Wounds, Precision"
+        },
+        {
+          "n": "Absolvor bolt pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Pistol"
+        }
+      ],
+      "composition": [
+        {
+          "n": "Judiciar Xacharus [Legends]",
+          "min": 1,
+          "max": 1,
+          "w": []
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Tempormortis",
+          "d": "While this model is leading a unit, that unit has the Fights First ability."
+        },
+        {
+          "n": "Indomitable Assault",
+          "d": "Each time this model in this unit makes a Consolidation move, it can move up to 6\" instead of up to 3\"."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Character",
+        "Infantry",
+        "Imperium",
+        "Tacticus",
+        "Judiciar",
+        "Leader",
+        "Epic Hero",
+        "Xacharus"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "6\"",
+        "T": "4",
+        "Sv": "3+",
+        "W": "4",
+        "LD": "5+",
+        "OC": "1",
+        "InSv": "4+"
       },
       "native": true
     },
@@ -22424,6 +22694,7 @@
       },
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "DEATHWATCH VETERANS",
         "DECIMUS KILL TEAM",
         "DESOLATION SQUAD",
@@ -22434,7 +22705,8 @@
         "INNER CIRCLE COMPANIONS",
         "INTERCESSOR SQUAD",
         "STERNGUARD VETERAN SQUAD",
-        "TACTICAL SQUAD"
+        "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": [
         {
@@ -22741,6 +23013,7 @@
         "DEATHWATCH TERMINATOR SQUAD",
         "DEATHWING KNIGHTS",
         "DEATHWING TERMINATOR SQUAD",
+        "RELIC TERMINATOR SQUAD",
         "TERMINATOR ASSAULT SQUAD",
         "TERMINATOR SQUAD"
       ],
@@ -22920,8 +23193,9 @@
         "at1000": 2
       },
       "leads": [
-        "Bike Squad",
-        "Outrider Squad"
+        "BIKE SQUAD",
+        "COMPANY VETERANS ON BIKES",
+        "OUTRIDER SQUAD"
       ],
       "options": [
         {
@@ -24878,10 +25152,6 @@
           "d": "Weapons equipped by models in this unit have the [Sustained Hits 1] ability"
         },
         {
-          "n": "Invulnerable Save (4+)",
-          "d": "This model has a 4+ invulnerable save."
-        },
-        {
           "n": "Heavy Jump Pack and Mk X Gravis Armour",
           "d": "Infantry only. Change this model's Move characteristic to 10\", its Toughness characteristic to 6 and its Wounds characteristic to 5. Remove the Tacticus keyword, add the Jump Pack, Fly and Gravis keywords, it gains the Deep Strike ability and replace the list of units this model can be attached to: Inceptor Squad."
         },
@@ -24975,11 +25245,11 @@
         },
         {
           "n": "Tactical Precision",
-          "d": "Weapons Equipped by models in this unit have the [Lethal Hits] ability"
+          "d": "Weapons equipped by models in this unit have the [Lethal Hits] ability."
         },
         {
           "n": "Ravenwing Hunter",
-          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced"
+          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced."
         },
         {
           "n": "Tortuous Revelation (Psychic)",
@@ -24991,7 +25261,7 @@
         },
         {
           "n": "Forlorn Hero",
-          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability."
         },
         {
           "n": "Storm Shield",
@@ -25015,7 +25285,7 @@
         },
         {
           "n": "Vehement Aggression",
-          "d": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1"
+          "d": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
         },
         {
           "n": "Vengeful Exhortation",
@@ -25320,7 +25590,7 @@
       "abilities": [
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ COMPANY HEROES ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD"
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, ASSAULT SQUAD, BLADEGUARD VETERAN SQUAD, COMMAND SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VANGUARD VETERAN SQUAD"
         },
         {
           "n": "Target Priority",
@@ -26873,11 +27143,13 @@
         "at1000": 2
       },
       "leads": [
-        "Assault Intercessor Squad",
-        "Bladeguard Veteran Squad",
-        "Infernus Squad",
-        "Intercessor Squad",
-        "Sternguard Veteran Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "INFERNUS SQUAD",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": [
         {
@@ -34987,6 +35259,7 @@
       },
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "ASSAULT SQUAD",
         "CRUSADER SQUAD",
         "DECIMUS KILL TEAM",
         "DESOLATION SQUAD",
@@ -34994,7 +35267,8 @@
         "FORTIS KILL TEAM",
         "INTERCESSOR SQUAD",
         "SWORD BRETHREN SQUAD",
-        "TACTICAL SQUAD"
+        "TACTICAL SQUAD",
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": [
         {
@@ -35156,8 +35430,9 @@
         "at1000": 2
       },
       "leads": [
-        "Bike Squad",
-        "Outrider Squad"
+        "BIKE SQUAD",
+        "COMPANY VETERANS ON BIKES",
+        "OUTRIDER SQUAD"
       ],
       "options": [
         {
@@ -38700,11 +38975,11 @@
         },
         {
           "n": "Tactical Precision",
-          "d": "Weapons Equipped by models in this unit have the [Lethal Hits] ability"
+          "d": "Weapons equipped by models in this unit have the [Lethal Hits] ability."
         },
         {
           "n": "Ravenwing Hunter",
-          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced"
+          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced."
         },
         {
           "n": "Tortuous Revelation (Psychic)",
@@ -38716,7 +38991,7 @@
         },
         {
           "n": "Forlorn Hero",
-          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability."
         },
         {
           "n": "Storm Shield",
@@ -38740,15 +39015,11 @@
         },
         {
           "n": "Vehement Aggression",
-          "d": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1"
+          "d": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
         },
         {
           "n": "Vengeful Exhortation",
           "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play, the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
-        },
-        {
-          "n": "Invulnerable Save (4+)",
-          "d": "This model has a 4+ invulnerable save."
         },
         {
           "n": "Heavy Jump Pack and Mk X Gravis Armour",
