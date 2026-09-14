@@ -82,6 +82,18 @@ for (const f of (MFM?.factions ?? []))
     if (u.wargear?.length && !mfmWargear.has(normU(u.name)))
       mfmWargear.set(normU(u.name), u.wargear);
 
+/* Índice global de unidades por nombre.
+ *
+ * El MFM lista cada unidad bajo SU facción. Genestealer Cults toma prestadas
+ * 106 unidades de Astra Militarum y 18 de Tyranids: emparejando sólo dentro
+ * de la facción, esas 124 quedaban sin precio oficial. Una unidad vale lo
+ * mismo la lleve quien la lleve, así que el nombre alcanza como respaldo. */
+const mfmUnits = new Map();
+for (const f of (MFM?.factions ?? []))
+  for (const u of f.units)
+    if (u.bands?.length && !mfmUnits.has(normU(u.name)))
+      mfmUnits.set(normU(u.name), u);
+
 /* ------------------------------------------------------------------
  * ROLES — dos ejes cruzados: CHASIS × RANGO.
  *
@@ -300,8 +312,16 @@ for (const file of files) {
     };
   }
 
-  // Capítulos y catálogos sin MFM propio: al menos el armamento con coste.
+  // Respaldo por nombre: unidades aliadas y catálogos sin MFM propio.
   for (const u of units) {
+    if (!u.B) {
+      const m = mfmUnits.get(normU(u.n));
+      if (m) {
+        u.B = m.bands.map((b) => ({ f: b.from, t: b.to,
+                                    s: b.tiers.map((x) => [x.models, x.pts]) }));
+        u.p = u.B[0]?.s?.[0]?.[1] ?? u.p;
+      }
+    }
     if (u.wg) continue;
     const wg = mfmWargear.get(normU(u.n));
     if (wg?.length) u.wg = Object.fromEntries(wg.map((w) => [normU(w.item), w.pts]));
