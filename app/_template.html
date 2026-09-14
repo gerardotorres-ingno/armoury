@@ -596,6 +596,18 @@ input[type=search]::placeholder{color:var(--ink2)}
 
 <script>
 /*__DATA__*/
+/* ------------------------------------------------------------------
+ * CONTADOR DE VISITAS (opcional)
+ *
+ * Vacío = no se carga nada y no sale ninguna petición. Para activarlo,
+ * poné acá el código de tu sitio en GoatCounter (gratis, sin cookies,
+ * sin datos personales): https://TUCODIGO.goatcounter.com
+ *
+ * Al activarlo, la pantalla de inicio lo dice sola: la promesa de que
+ * nada sale del dispositivo tiene que seguir siendo cierta.
+ * ---------------------------------------------------------------- */
+const ANALYTICS = '';   // p. ej. 'armoury'
+
 /* ============================================================
    ALMACENAMIENTO — IndexedDB
    Guardamos SOLO { id, qty }. Nada de puntos ni nombres: eso
@@ -5432,6 +5444,11 @@ function renderHome(){
     '<h3>Where your data lives</h3>' +
     '<p>Everything is stored in this browser. Nothing leaves the device unless you ' +
     'export a file yourself.</p>' +
+    (ANALYTICS
+      ? '<p>The only exception: an anonymous page view is counted on each visit, ' +
+        'with no cookies and no personal data, so we know whether anyone is using ' +
+        'this at all.</p>'
+      : '') +
     (mode === 'full'
       ? '<p class="ok">Storage is working normally.</p>'
       : mode === 'limited'
@@ -5441,6 +5458,17 @@ function renderHome(){
       : '<p class="warnt">This browser is blocking storage. Nothing will be saved when ' +
         'you close the tab.</p>');
   v.append(st);
+
+  // Contador propio, en este navegador: dice cuántas veces lo abriste vos.
+  // No sustituye a la analítica, pero no depende de ningún servicio.
+  const opens = OPENS;
+  const since = localStorage.getItem('armoury:firstSeen');
+  if (opens > 1) {
+    const o = el('div','hint');
+    o.textContent = 'Opened ' + opens + ' times on this device' +
+      (since ? ', first on ' + since : '') + '.';
+    v.append(o);
+  }
 
   const src = el('div','hint');
   src.innerHTML = 'Catalogue: <b>' + esc(DATA.revision?.sha ?? '—') + '</b> · ' +
@@ -5542,6 +5570,41 @@ function flowDiagram(){
 }
 
 boot();
+
+/* Contador: sólo con código configurado y servido por http/https. En
+ * file:// no tiene sentido y además fallaría. */
+/* Aperturas en este dispositivo. Se cuenta SIEMPRE, incluso sin analítica:
+ * es local y no sale de acá. Va antes del contador y de boot() porque ambos
+ * leen el valor ya actualizado; si no, la segunda visita se informaba como
+ * primera. */
+let OPENS = 0;
+try {
+  OPENS = +(localStorage.getItem('armoury:opens') || 0) + 1;
+  localStorage.setItem('armoury:opens', String(OPENS));
+  if (!localStorage.getItem('armoury:firstSeen'))
+    localStorage.setItem('armoury:firstSeen', new Date().toISOString().slice(0, 10));
+} catch { OPENS = 1; }
+
+if (ANALYTICS && location.protocol.startsWith('http')) {
+  /* Retención sin identificar a nadie.
+   *
+   * Una analítica sin cookies no puede saber si alguien volvió: cuenta
+   * visitas, no personas. Pero el navegador sí sabe cuántas veces se abrió
+   * la app acá, así que se informa el TRAMO —primera vez, 2 a 5, 6 o más—
+   * como si fuera una página distinta.
+   *
+   * Lo que llega al contador es "alguien abrió por sexta vez", nunca quién.
+   * Con eso alcanza para la única pregunta que importa: si vuelven. */
+  const bucket = OPENS <= 1 ? 'first' : OPENS <= 5 ? 'returning-2-5' : 'regular-6plus';
+
+  window.goatcounter = { path: '/open/' + bucket };
+
+  const sc = document.createElement('script');
+  sc.async = true;
+  sc.dataset.goatcounter = 'https://' + ANALYTICS + '.goatcounter.com/count';
+  sc.src = '//gc.zgo.at/count.js';
+  document.head.appendChild(sc);
+}
 
 /* Registro del service worker: sólo cuando la app se sirve por http/https.
  * En file:// no se puede, y no hace falta porque armoury.html ya trae todo. */
