@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "377901e",
-    "date": "2026-09-07T14:09:09Z"
+    "sha": "bc32e10",
+    "date": "2026-09-13T23:14:11Z"
   },
   "catalogueId": "f89b-84e0-6e3b-f1e2",
   "catalogueName": "Imperium - Adeptus Astartes - Deathwatch",
@@ -12,7 +12,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 6,
+  "revision": 9,
   "file": "Imperium - Deathwatch.json",
   "counts": {
     "total": 10,
@@ -2890,7 +2890,7 @@
           "opts": [
             {
               "n": "Intercessor w/ heavy bolt pistol and Jump Pack",
-              "min": 4,
+              "min": 2,
               "max": 9,
               "scale": null,
               "p": 0,
@@ -2901,20 +2901,9 @@
               ]
             },
             {
-              "n": "Heavy Intercessor w/ Jump Pack",
-              "min": 0,
-              "max": 5,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Close combat weapon"
-              ]
-            },
-            {
               "n": "Intercessor w/ plasma pistol and Jump Pack",
               "min": 0,
-              "max": 1,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
@@ -2997,29 +2986,34 @@
           ]
         },
         {
-          "n": "Weapons",
-          "owner": "Heavy Intercessor w/ Jump Pack",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
+          "n": "0-5 Heavy Intercessors w/ Jump Pack",
+          "owner": null,
+          "min": 0,
+          "max": 5,
+          "pick": "many",
           "opts": [
             {
-              "n": "Assault bolters",
+              "n": "Heavy Intercessor w/ assault bolter",
               "min": 0,
-              "max": null,
+              "max": 5,
               "scale": null,
               "p": 0,
-              "model": false,
-              "w": []
+              "model": true,
+              "w": [
+                "Assault bolters",
+                "Close combat weapon"
+              ]
             },
             {
-              "n": "Plasma exterminators",
+              "n": "Heavy Intercessor w/ plasma exterminators",
               "min": 0,
-              "max": null,
+              "max": 5,
               "scale": null,
               "p": 0,
-              "model": false,
-              "w": []
+              "model": true,
+              "w": [
+                "Close combat weapon"
+              ]
             }
           ]
         }
@@ -3114,6 +3108,17 @@
           "kw": "Assault, Pistol, Sustained Hits 2, Twin-linked"
         },
         {
+          "n": "Close combat weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
           "n": "➤ Plasma exterminators - standard",
           "melee": false,
           "range": "18\"",
@@ -3134,17 +3139,6 @@
           "ap": "-3",
           "d": "3",
           "kw": "Assault, Hazardous, Pistol, Twin-linked"
-        },
-        {
-          "n": "Close combat weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
         }
       ],
       "composition": [
@@ -3154,8 +3148,7 @@
           "max": 9,
           "w": [
             "Astartes Chainsword",
-            "Heavy Bolt Pistol",
-            "Close combat weapon"
+            "Heavy Bolt Pistol"
           ]
         }
       ],
@@ -3180,8 +3173,8 @@
         "Talonstrike Kill Team"
       ],
       "models": {
-        "min": 5,
-        "max": 16
+        "min": 3,
+        "max": 22
       },
       "profile": {
         "M": "12\"",

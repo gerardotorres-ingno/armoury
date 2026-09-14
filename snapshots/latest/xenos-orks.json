@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "377901e",
-    "date": "2026-09-07T14:09:09Z"
+    "sha": "bc32e10",
+    "date": "2026-09-13T23:14:11Z"
   },
   "catalogueId": "a55f-b7b3-6c65-a05f",
   "catalogueName": "Xenos - Orks",
@@ -771,7 +771,7 @@
         },
         {
           "n": "Keep Huntin'! (Once per battle round, per army)",
-          "d": "In your Movement phase, at the start of end of this unit's move, you can select one friendly BEAST SNAGGA unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
+          "d": "In your Movement phase, at the start or end of this unit's move, you can select one friendly BEAST SNAGGA unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
         }
       ],
       "faction": "Orks",
@@ -959,7 +959,7 @@
         },
         {
           "n": "Keep Huntin'! (Once per battle round, per army)",
-          "d": "In your Movement phase, at the start of end of this unit's move, you can select one friendly BEAST SNAGGA unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
+          "d": "In your Movement phase, at the start or end of this unit's move, you can select one friendly BEAST SNAGGA unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
         }
       ],
       "faction": "Orks",
@@ -1356,7 +1356,7 @@
               "w": []
             },
             {
-              "n": "Kustom Mega-blasta",
+              "n": "Kombi-weapon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1365,7 +1365,7 @@
               "w": []
             },
             {
-              "n": "Kombi-weapon",
+              "n": "Kustom Mega-blasta",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1438,17 +1438,6 @@
           "kw": "CLOSE-QUARTERS, TORRENT"
         },
         {
-          "n": "Kustom Mega-blasta",
-          "melee": false,
-          "range": "24\"",
-          "a": "3",
-          "skill": "4+",
-          "s": "9",
-          "ap": "-2",
-          "d": "3",
-          "kw": "HAZARDOUS"
-        },
-        {
           "n": "➤ Kombi-weapon - Point Blank",
           "melee": false,
           "range": "12\"",
@@ -1480,6 +1469,17 @@
           "ap": "0",
           "d": "1",
           "kw": "LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1"
+        },
+        {
+          "n": "Kustom Mega-blasta",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "4+",
+          "s": "9",
+          "ap": "-2",
+          "d": "3",
+          "kw": "HAZARDOUS"
         },
         {
           "n": "Killsaw",
@@ -2841,8 +2841,8 @@
           "opts": [
             {
               "n": "Rokkit Pistol",
-              "min": 0,
-              "max": null,
+              "min": 1,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": false,
@@ -6054,6 +6054,15 @@
               "w": []
             },
             {
+              "n": "Kombi-weapon",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
               "n": "Burna",
               "min": 0,
               "max": null,
@@ -6082,15 +6091,6 @@
             },
             {
               "n": "Eyez of Mork",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Kombi-weapon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -6414,6 +6414,17 @@
           "kw": "Assault"
         },
         {
+          "n": "Kombi-weapon",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+        },
+        {
           "n": "Burna",
           "melee": false,
           "range": "12\"",
@@ -6456,17 +6467,6 @@
           "ap": "-3",
           "d": "2",
           "kw": "Psychic"
-        },
-        {
-          "n": "Kombi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "5+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
         },
         {
           "n": "Kustom mega-blasta",
@@ -8633,7 +8633,7 @@
           "melee": false,
           "range": "24\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "5+",
           "s": "10",
           "ap": "-2",
           "d": "3",
@@ -8644,7 +8644,7 @@
           "melee": false,
           "range": "18\"",
           "a": "2",
-          "skill": "4+",
+          "skill": "5+",
           "s": "4",
           "ap": "0",
           "d": "1",
@@ -9210,16 +9210,16 @@
               "w": []
             },
             {
-              "n": "Kustom Mega-blasta",
-              "min": 0,
-              "max": null,
+              "n": "Dual Big Shoota",
+              "min": 2,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Dual Big Shoota",
+              "n": "Kustom Mega-blasta",
               "min": 0,
               "max": null,
               "scale": null,
@@ -9263,6 +9263,17 @@
           "kw": "BLAST 1, HAZARDOUS"
         },
         {
+          "n": "Dual Big Shoota",
+          "melee": false,
+          "range": "36\"",
+          "a": "6",
+          "skill": "4+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": "LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 4"
+        },
+        {
           "n": "Kustom Mega-blasta",
           "melee": false,
           "range": "24\"",
@@ -9272,17 +9283,6 @@
           "ap": "-2",
           "d": "3",
           "kw": "HAZARDOUS"
-        },
-        {
-          "n": "Dual Big Shoota",
-          "melee": false,
-          "range": "36\"",
-          "a": "6",
-          "skill": "5+",
-          "s": "5",
-          "ap": "0",
-          "d": "1",
-          "kw": "LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 4"
         },
         {
           "n": "➤ Rokkit Launcha - Busta",
@@ -9477,7 +9477,9 @@
         }
       ],
       "cap": null,
-      "leads": null,
+      "leads": [
+        "MEGANOBZ"
+      ],
       "options": null,
       "weapons": [
         {
@@ -10843,16 +10845,16 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Smash Hammer",
-              "min": 0,
-              "max": null,
+              "n": "Rokkit Pistol",
+              "min": 1,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Rokkit Pistol",
+              "n": "Smash Hammer",
               "min": 0,
               "max": null,
               "scale": null,
@@ -10864,6 +10866,17 @@
         }
       ],
       "weapons": [
+        {
+          "n": "Rokkit pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "CLOSE-QUARTERS"
+        },
         {
           "n": "➤ Smash Hammer - Hunter (Hunter: MONSTER/VEHICLE)",
           "melee": true,
@@ -10885,17 +10898,6 @@
           "ap": "-2",
           "d": "2",
           "kw": "\n"
-        },
-        {
-          "n": "Rokkit pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "5+",
-          "s": "10",
-          "ap": "-2",
-          "d": "3",
-          "kw": "CLOSE-QUARTERS"
         },
         {
           "n": "Choppa",
@@ -11372,6 +11374,15 @@
               "w": []
             },
             {
+              "n": "Kombi-weapon",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
               "n": "Burna",
               "min": 0,
               "max": null,
@@ -11400,15 +11411,6 @@
             },
             {
               "n": "Eyez of Mork",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Kombi-weapon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -11732,6 +11734,17 @@
           "kw": "Assault"
         },
         {
+          "n": "Kombi-weapon",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+        },
+        {
           "n": "Burna",
           "melee": false,
           "range": "12\"",
@@ -11774,17 +11787,6 @@
           "ap": "-3",
           "d": "2",
           "kw": "Psychic"
-        },
-        {
-          "n": "Kombi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "5+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
         },
         {
           "n": "Kustom mega-blasta",
@@ -12509,7 +12511,7 @@
         "at1000": 2
       },
       "leads": [
-        "Meganobz"
+        "MEGANOBZ"
       ],
       "options": [
         {
@@ -13152,6 +13154,15 @@
               "w": []
             },
             {
+              "n": "Kombi-weapon",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
               "n": "Burna",
               "min": 0,
               "max": null,
@@ -13180,15 +13191,6 @@
             },
             {
               "n": "Eyez of Mork",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Kombi-weapon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -13512,6 +13514,17 @@
           "kw": "Assault"
         },
         {
+          "n": "Kombi-weapon",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "5+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+        },
+        {
           "n": "Burna",
           "melee": false,
           "range": "12\"",
@@ -13554,17 +13567,6 @@
           "ap": "-3",
           "d": "2",
           "kw": "Psychic"
-        },
-        {
-          "n": "Kombi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "5+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
         },
         {
           "n": "Kustom mega-blasta",

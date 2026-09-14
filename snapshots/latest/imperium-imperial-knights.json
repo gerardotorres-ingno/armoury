@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "377901e",
-    "date": "2026-09-07T14:09:09Z"
+    "sha": "bc32e10",
+    "date": "2026-09-13T23:14:11Z"
   },
   "catalogueId": "25dd-7aa0-6bf4-f2d5",
   "catalogueName": "Imperium - Imperial Knights",
@@ -306,10 +306,10 @@
       "leads": null,
       "options": [
         {
-          "n": "9 Skitarii Rangers",
+          "n": "Skitarii Rangers Options",
           "owner": null,
-          "min": 9,
-          "max": 9,
+          "min": 0,
+          "max": null,
           "pick": "many",
           "opts": [
             {
@@ -346,42 +346,6 @@
               "w": [
                 "Close combat weapon"
               ]
-            },
-            {
-              "n": "Skitarii Ranger w/ galvanic rifle",
-              "min": 5,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Galvanic rifle",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Skitarii Ranger w/ data-tether",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Galvanic rifle",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Skitarii Ranger w/ omnispex",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Galvanic rifle",
-                "Close combat weapon"
-              ]
             }
           ]
         },
@@ -409,6 +373,39 @@
               "p": 0,
               "model": false,
               "w": []
+            }
+          ]
+        },
+        {
+          "n": "Either",
+          "owner": null,
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Skitarii Ranger w/ data-tether",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Galvanic rifle",
+                "Close combat weapon"
+              ]
+            },
+            {
+              "n": "Skitarii Ranger w/ omnispex",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Galvanic rifle",
+                "Close combat weapon"
+              ]
             }
           ]
         },
@@ -556,7 +553,7 @@
         "Recon Augury"
       ],
       "models": {
-        "min": 6,
+        "min": 10,
         "max": 15
       },
       "profile": {
@@ -592,10 +589,10 @@
       "leads": null,
       "options": [
         {
-          "n": "Skitarii Vanguard",
+          "n": "Skitarii Vanguard Options",
           "owner": null,
-          "min": 9,
-          "max": 9,
+          "min": 0,
+          "max": null,
           "pick": "many",
           "opts": [
             {
@@ -632,42 +629,6 @@
               "w": [
                 "Close combat weapon"
               ]
-            },
-            {
-              "n": "Skitarii Vanguard w/ radium carbine",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Radium carbine",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Skitarii Vanguard w/ data-tether",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Radium carbine",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Skitarii Vanguard w/ omnispex",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Radium carbine",
-                "Close combat weapon"
-              ]
             }
           ]
         },
@@ -695,6 +656,39 @@
               "p": 0,
               "model": false,
               "w": []
+            }
+          ]
+        },
+        {
+          "n": "Either:",
+          "owner": null,
+          "min": 0,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Skitarii Vanguard w/ omnispex",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Radium carbine",
+                "Close combat weapon"
+              ]
+            },
+            {
+              "n": "Skitarii Vanguard w/ data-tether",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Radium carbine",
+                "Close combat weapon"
+              ]
             }
           ]
         },
@@ -824,12 +818,12 @@
           "d": "While an enemy unit (excluding Vehicle units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that unit."
         },
         {
-          "n": "Enhanced data-tether",
-          "d": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
           "n": "Omnispex",
           "d": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
+        },
+        {
+          "n": "Enhanced data-tether",
+          "d": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
         }
       ],
       "faction": "Adeptus Mechanicus",
@@ -841,7 +835,7 @@
         "Battleline"
       ],
       "models": {
-        "min": 1,
+        "min": 10,
         "max": 15
       },
       "profile": {
