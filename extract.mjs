@@ -863,7 +863,20 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
       const n = stack.pop();
       if (n.name) {
         const dp = costNamed(n, 'Detachment Points');
-        if (dp > 0 && !seenDet.has(n.name)) { seenDet.add(n.name); detachments.push({ name: n.name, dp }); }
+        if (dp > 0 && !seenDet.has(n.name)) {
+          seenDet.add(n.name);
+          // Reglas del destacamento. Brazen Fury es la de Possessed
+          // Slaughterband: BSData la enlaza a las unidades que la reciben,
+          // así que hay que saber de dónde viene para no darla siempre.
+          // La regla del destacamento llega de tres formas según la facción:
+          // `rules` (World Eaters), `infoLinks` (T'au) o un perfil embebido.
+          const rules = [
+            ...asArray(n.rules),
+            ...asArray(n.infoLinks),
+            ...asArray(n.profiles),
+          ].map((r) => r.name).filter(Boolean);
+          detachments.push({ name: n.name, dp, rules: [...new Set(rules)] });
+        }
         if (costNamed(n, 'Enhancements') > 0 && !seenEnh.has(n.name)) {
           seenEnh.add(n.name);
           enhancements.push({ name: n.name, pts: costNamed(n, 'pts') });
