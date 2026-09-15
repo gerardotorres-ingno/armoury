@@ -27,6 +27,22 @@ try {
   console.log(`  Topes de aliados globales: ${GLOBAL_ALLY_CAPS.map((a) => a.name).join(', ')}`);
 } catch {}
 
+/* Reglas que aparecen como habilidad propia en muchas facciones: son de
+ * núcleo, no de destacamento, aunque algún destacamento también las conceda. */
+const CORE_RULE_NAMES = new Set();
+{
+  const seen = new Map();
+  for (const f of await fs.readdir(OUT_DIR)) {
+    if (!f.endsWith('.json') || f === '_index.json') continue;
+    const c = JSON.parse(await fs.readFile(path.join(OUT_DIR, f), 'utf8'));
+    const here = new Set();
+    for (const u of c.datasheets) for (const a of (u.abilities ?? [])) here.add(a.n);
+    for (const n of here) seen.set(n, (seen.get(n) ?? 0) + 1);
+  }
+  for (const [n, count] of seen) if (count >= 3) CORE_RULE_NAMES.add(n);
+  console.log(`  Reglas comunes excluidas del filtro: ${CORE_RULE_NAMES.size}`);
+}
+
 const files = (await fs.readdir(OUT_DIR)).filter(
   (f) => f.endsWith('.json') && f !== '_index.json'
 );
@@ -350,6 +366,17 @@ for (const file of files) {
             .filter(([n, by]) => Object.keys(by || {}).length && usedFactions.has(n))
             .map(([n, by]) => [n, by]),
     det: factionExtras?.det ?? (d.detachments ?? []).map((x) => [x.name, x.dp, null]),
+    // Regla de cada destacamento: habilidad → destacamento que la concede.
+    // Sirve para no atribuirle a una unidad algo que sólo tiene bajo ese
+    // destacamento (Brazen Fury es de Possessed Slaughterband).
+    detRules: Object.fromEntries(
+      (d.detachments ?? [])
+        .flatMap((x) => (x.rules ?? []).map((r) => [r, x.name]))
+        // Resguardo: una regla de NÚCLEO puede llamarse igual que la que
+        // concede un destacamento. Feel No Pain la tienen decenas de
+        // unidades por su cuenta; marcarla como condicional la escondería.
+        .filter(([r]) => !CORE_RULE_NAMES.has(r))
+    ),
     enhBy: factionExtras?.enhBy ?? null,
     enh: (d.enhancements ?? []).map((x) => [x.name, x.pts]),
     units,
