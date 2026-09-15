@@ -155,6 +155,7 @@ details.scope b{color:var(--ink)}
 .trow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
   padding:8px 0;border-bottom:1px solid var(--rule)}
 .trow.dead{opacity:.45}
+.trow.attached{padding-left:18px;box-shadow:inset 2px 0 0 var(--rule2)}
 .tname{flex:1;min-width:150px}
 .tname b{display:block;font-family:var(--disp);font-weight:600;font-size:16px}
 .tname i{display:block;font-style:normal;font-family:var(--mono);font-size:10px;color:var(--ink2)}
@@ -402,6 +403,10 @@ input[type=search]::placeholder{color:var(--ink2)}
 .wkw{display:block;font-size:10px;color:var(--plate-ink);letter-spacing:.02em;margin-top:1px}
 .abil{padding:8px 12px 2px}
 .abil h4{font-family:var(--disp);font-weight:600;font-size:14px;margin-bottom:1px}
+/* Habilidad que concede un destacamento, no la unidad. */
+.abil h4 .from{font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--plate-ink);border:1px solid var(--plate-line);
+  border-radius:2px;padding:1px 5px;margin-left:7px;vertical-align:2px;font-weight:400}
 .abil p{font-size:12.5px;line-height:1.5;color:var(--ink2);margin-bottom:8px}
 .kwbar{display:flex;flex-wrap:wrap;gap:4px;padding:8px 12px 10px;background:var(--field);
   color:var(--ink);border-top:1px solid var(--plate-line)}
@@ -1014,7 +1019,8 @@ function lineFor(u){
     let open = false, sheet = null;
     tog.onclick = () => {
       open = !open;
-      if (open) { sheet = datasheetFor(u); wrap.append(sheet); }
+      // En la colección no hay lista: se muestran todas, etiquetadas.
+      if (open) { sheet = datasheetFor(u, null, { faction: faction }); wrap.append(sheet); }
       else if (sheet) { sheet.remove(); sheet = null; }
     };
     step.append(tog);
@@ -1848,7 +1854,7 @@ function unitDetail(l, i){
     const wg = wargearFor(l, sl, u);
     if (wg) bd.append(wg);
   }
-  if (hasSheet(u)) bd.append(datasheetFor(u, sl));
+  if (hasSheet(u)) bd.append(datasheetFor(u, sl, { faction: f, dets: l.dets || [] }));
 
   box.append(hd, bd);
   return box;
@@ -2235,7 +2241,23 @@ function weaponCounts(u, sl){
   return counts.size ? counts : null;
 }
 
-function datasheetFor(u, sl){
+/* Habilidades que en realidad concede un destacamento.
+ *
+ * El catálogo las enlaza a las unidades que las reciben, sin decir que son
+ * condicionales. Brazen Fury figura en Eightbound, pero sólo la tienen si
+ * jugás Possessed Slaughterband. Mostrarla siempre es atribuirle a la unidad
+ * algo que no es suyo. */
+function abilitySource(u, name, f){
+  const map = (f || factionOf(u.f0) || {}).detRules;
+  return (map && map[name]) || null;
+}
+
+/* Contexto de facción para una ficha: la lista que la contiene, si hay. */
+function sheetFaction(l){
+  return l ? factionOf(l.faction) : null;
+}
+
+function datasheetFor(u, sl, ctx){
   const box = el('div','sheet');
   const weapons = weaponsAfterGear(u, sl);
   const counts = weaponCounts(u, sl);
@@ -2262,10 +2284,24 @@ function datasheetFor(u, sl){
 
   // Habilidades antes de las armas: es el orden de la ficha oficial.
   if (u.ab && u.ab.length) {
-    const b = el('div','band'); b.textContent = 'ABILITIES'; box.append(b);
-    const w = el('div','abil');
-    w.innerHTML = u.ab.map(([n, d]) => '<h4>' + esc(n) + '</h4><p>' + esc(d) + '</p>').join('');
-    box.append(w);
+    const f = ctx?.faction || null;
+    const dets = ctx?.dets || null;      // destacamentos elegidos, si hay lista
+
+    const rows = u.ab.map(([n, d]) => {
+      const from = f && f.detRules ? f.detRules[n] : null;
+      return { n, d, from };
+    // En una lista, una habilidad de destacamento que no elegiste no aplica.
+    }).filter((r) => !r.from || !dets || dets.includes(r.from));
+
+    if (rows.length) {
+      const b = el('div','band'); b.textContent = 'ABILITIES'; box.append(b);
+      const w = el('div','abil');
+      w.innerHTML = rows.map((r) =>
+        '<h4>' + esc(r.n) +
+        (r.from ? '<span class="from">' + esc(r.from) + '</span>' : '') +
+        '</h4><p>' + esc(r.d) + '</p>').join('');
+      box.append(w);
+    }
   }
 
   for (const melee of [0, 1]) {
@@ -3398,6 +3434,7 @@ function renderBattlesInner(){
     '<div class="lm"><b>' + t.me + '</b><i>me</i></div>' +
     '<div class="lm"><b>' + t.them + '</b><i>them</i></div>';
   v.append(head);
+  v.append(primaryRecap(b));
   v.append(scoreTable(b));
   // Se muestra el lado que está jugando: dos paneles completos de hasta diez
   // cartas cada uno no entran en una pantalla. El reloj decide, y se puede
@@ -3782,6 +3819,33 @@ function clockPanel(b){
   return box;
 }
 
+/* Cómo puntúa la primaria de cada uno, al lado de donde se anotan los
+ * puntos. Está arriba en el panel de misión, pero para cuando llegás a
+ * cargar el marcador ya quedó fuera de pantalla. */
+function primaryRecap(b){
+  const a = primaryCell(b.disp?.me, b.disp?.them);
+  const c = primaryCell(b.disp?.them, b.disp?.me);
+  if (!a && !c) return el('div');
+
+  const d = document.createElement('details');
+  d.className = 'cfg';
+  d.innerHTML = '<summary>How the primary scores <span>' +
+    esc([a && a.n, c && c.n].filter(Boolean).join('  vs  ')) + '</span></summary>';
+
+  const body = el('div','misres');
+  const tiers = (cell, who) => {
+    if (!cell) return '';
+    return '<div><b>' + esc(cell.n) + '</b><i>' + esc(who) + '</i>' +
+      (cell.score || []).map((t) =>
+        '<u>' + esc(t.w) + (t.max ? ' \u00b7 max ' + esc(t.max) : '') + '</u>' +
+        (t.i || []).map(([vp, tx]) => '<em><b>' + esc(vp) + '</b> ' + esc(tx) + '</em>').join('')
+      ).join('') + '</div>';
+  };
+  body.innerHTML = tiers(a, 'me') + tiers(c, b.opponent || 'them');
+  d.append(body);
+  return d;
+}
+
 function scoreTable(b){
   const t = el('table','score');
   const hdr = '<tr><th></th>' +
@@ -3809,11 +3873,11 @@ function scoreTable(b){
   const them = b.opponent || 'Them';
 
   t.innerHTML = hdr +
-    line('me', 'Me \u00b7 primary', 'p', 'sec-p') +
+    line('me', 'Me \u00b7 ' + (missionsFrom(b.disp?.me, b.disp?.them) ? esc(missionsFrom(b.disp.me, b.disp.them)[0]) : 'primary'), 'p', 'sec-p') +
     line('me', 'Me \u00b7 secondary', 's', 'sec-s') +
     '<tr class="sub"><th class="who">Subtotal</th><td colspan="' + ROUNDS + '"></td>' +
       '<td class="tot">' + sideTotal('me') + '</td></tr>' +
-    line('them', them + ' \u00b7 primary', 'p', 'sec-p') +
+    line('them', them + ' \u00b7 ' + (missionsFrom(b.disp?.me, b.disp?.them) ? esc(missionsFrom(b.disp.me, b.disp.them)[1]) : 'primary'), 'p', 'sec-p') +
     line('them', them + ' \u00b7 secondary', 's', 'sec-s') +
     '<tr class="sub"><th class="who">Subtotal</th><td colspan="' + ROUNDS + '"></td>' +
       '<td class="tot">' + sideTotal('them') + '</td></tr>';
@@ -4570,18 +4634,36 @@ function sideTracker(b, side){
   const t = mine ? trackOf(b) : trackThemOf(b);
   const copies = copyIndex(l);
 
-  for (const [i, sl] of l.slots.entries()) {
+  // Orden: cada líder inmediatamente debajo de la unidad que lidera. En la
+  // mesa se activan y mueren juntos, así que separarlos obliga a buscar.
+  const order = [];
+  const placed = new Set();
+  l.slots.forEach((sl, i) => {
+    if (sl.attach != null) return;
+    order.push(i); placed.add(i);
+    l.slots.forEach((s2, j) => {
+      if (s2.attach - 1 === i && !placed.has(j)) { order.push(j); placed.add(j); }
+    });
+  });
+  l.slots.forEach((_, i) => { if (!placed.has(i)) order.push(i); });
+
+  for (const i of order) {
+    const sl = l.slots[i];
     const u = unitOf(l, sl.unitId);
     const st = t[i] = t[i] || { w: 0, dead: null, act: {} };
+    const host = sl.attach != null ? l.slots[sl.attach - 1] : null;
+    const hostU = host ? unitOf(l, host.unitId) : null;
     const maxW = unitWounds(l, sl);
     const dead = st.dead != null;
 
-    const row = el('div', 'trow' + (dead ? ' dead' : ''));
+    const row = el('div', 'trow' + (dead ? ' dead' : '') + (hostU ? ' attached' : ''));
 
     const name = el('div','tname');
-    name.innerHTML = '<b>' + esc(u ? u.n : '?') + (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</b>' +
+    name.innerHTML = '<b>' + (hostU ? '\u21b3 ' : '') + esc(u ? u.n : '?') +
+      (sl.size > 1 ? ' \u00d7' + sl.size : '') + '</b>' +
       '<i>' + (dead ? 'destroyed in round ' + st.dead
-                    : (maxW ? st.w + ' / ' + maxW + ' wounds' : 'no profile')) + '</i>';
+                    : (maxW ? st.w + ' / ' + maxW + ' wounds' : 'no profile')) +
+      (hostU ? ' \u00b7 leading ' + esc(hostU.n) : '') + '</i>';
     row.append(name);
 
     // fases de ESTA ronda
