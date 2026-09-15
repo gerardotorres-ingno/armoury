@@ -55,6 +55,13 @@ jobs:
       - name: Build app
         run: node prepare-data.mjs
 
+      # ---- 4b. auditorías: no frenan la corrida, dejan rastro ------
+      - name: Audit data
+        continue-on-error: true
+        run: |
+          node audit.mjs
+          node audit-det.mjs
+
       # ---- 5. archivar y commitear ---------------------------------
       - name: Commit snapshot and changelog
         run: |
