@@ -3439,10 +3439,13 @@ function renderBattlesInner(){
   // Se muestra el lado que está jugando: dos paneles completos de hasta diez
   // cartas cada uno no entran en una pantalla. El reloj decide, y se puede
   // forzar con las pestañas.
+  // Un solo lado en pantalla: el que está jugando. El reloj lo decide y el
+  // interruptor lo fuerza. Antes se mostraban los dos y la pantalla medía
+  // el doble sin que nunca mirases ambos a la vez.
   const side = b.secView || b.clock.running || b.clock.paused || 'me';
   v.append(secSwitch(b, side));
   v.append(secondaryPanel(b, side));
-  v.append(trackerPanel(b));
+  v.append(trackerPanel(b, side));
 
   const d = t.detail;
   const brk = el('div','hint');
@@ -3770,7 +3773,11 @@ function clockPanel(b){
 
     const btn = el('button','btn' + (b.clock.running === who ? ' pri' : ''));
     btn.textContent = b.clock.running === who ? 'PAUSE' : 'START';
-    btn.onclick = () => toggleClock(b, who);
+    btn.onclick = () => {
+      // Arrancar el reloj de alguien es declarar su turno: la pantalla lo sigue.
+      if (b.clock.running !== who) b.secView = null;
+      toggleClock(b, who);
+    };
 
     side.append(lab, t, sub, btn);
     box.append(side);
@@ -4009,8 +4016,19 @@ function secSwitch(b, side){
     const active = side === who;
     const s2 = initSec(b, who);
     const vp = Object.values(s2.vp).reduce((a, n) => a + (+n || 0), 0);
+
+    // Unidades en pie, que es el otro dato que mirás al cambiar de lado.
+    const li = lists.find((x) => x.id === (who === 'me' ? b.mine : b.oppList));
+    const tr = who === 'me' ? (b.track || {}) : (b.trackThem || {});
+    let alive = '';
+    if (li) {
+      const dead = li.slots.filter((_, i) => tr[i] && tr[i].dead != null).length;
+      alive = ' \u00b7 ' + (li.slots.length - dead) + '/' + li.slots.length + ' units';
+    }
+
     const btn = el('button', 'chip' + (active ? ' on' : ''));
-    btn.innerHTML = esc(label) + '<i>' + s2.active.length + ' in hand \u00b7 ' + vp + ' VP</i>';
+    btn.innerHTML = esc(label) + '<i>' + s2.active.length + ' in hand \u00b7 ' +
+                    vp + ' VP' + alive + '</i>';
     btn.onclick = () => { b.secView = who; saveBattle(b); renderBattles(); };
     row.append(btn);
   }
@@ -4600,12 +4618,12 @@ function unitWounds(l, sl){
   return Number.isFinite(w) ? w * (sl.size || 1) : 0;
 }
 
-function trackerPanel(b){
+function trackerPanel(b, side){
   const box = el('div');
   box.style.cssText = 'margin:18px 0';
-  box.append(sideTracker(b, 'me'));
-  box.append(sideTracker(b, 'them'));
+  box.append(sideTracker(b, side || 'me'));
 
+  // El análisis es de tu ejército y se lee al terminar: va siempre al pie.
   const l = lists.find((x) => x.id === b.mine);
   if (l) box.append(analysisPanel(b, l));
   return box;
