@@ -222,6 +222,27 @@ details.rule>div{padding:10px 12px 12px}
   color:var(--ink2);margin-top:2px}
 .sswitch .chip.on i{color:var(--ochre)}
 
+/* Lo que cuenta, cuando difiere de lo anotado. */
+.score td.tot .capd{display:block;font-family:var(--mono);font-size:11px;
+  font-weight:400;color:var(--ochre);margin-top:-2px}
+.score td input.over{border-color:var(--ochre);color:var(--ochre)}
+.slot .step input.over{border-color:var(--ochre);color:var(--ochre)}
+.meta .overt{color:var(--ochre);font-weight:500}
+
+.viz{margin-top:10px}
+.viz svg{width:100%;height:auto;display:block}
+.viz .vg{stroke:var(--rule);stroke-width:1}
+.viz .vl{font-family:var(--disp);font-weight:600;font-size:14px;fill:var(--ink)}
+.viz .vs{font-family:var(--mono);font-size:9.5px;fill:var(--ink2)}
+.viz .vv{font-family:var(--mono);font-size:12px;fill:var(--ink)}
+.viz .vt{font-family:var(--mono);font-size:9px;fill:var(--ink2)}
+.viz .vb{cursor:default}
+.viz .vb:hover{opacity:.78}
+.vleg{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;
+  color:var(--ink2);margin-bottom:6px}
+.vleg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;
+  vertical-align:-1px}
+
 .lockt{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--ochre);border:1px solid var(--ochre);border-radius:2px;
   padding:1px 5px;margin-left:8px;vertical-align:2px}
@@ -3447,17 +3468,31 @@ function pace(b, who){
 /* Total con los topes del Event Companion aplicados: 15 VP por ronda en
  * cada fuente, 45 de primaria, 45 de secundarias y 10 por ejército pintado.
  * Sin esto la app deja sumar cualquier cifra y el marcador no sirve. */
+/* Total de una fila: lo ANOTADO y lo que efectivamente CUENTA.
+ *
+ * Los topes son del reglamento, pero no deben impedirte escribir lo que
+ * pasó en la mesa: si cobraste 18 en una ronda, se anota 18 y la app
+ * muestra cuánto cuenta. Bloquear la casilla te dejaba sin poder cargar
+ * las otras cartas de esa ronda. */
+function lineTotals(b, who, k){
+  const perRound = k === 'p' ? (b.primCap || VP_CAP.perRound) : VP_CAP.perRound;
+  const total    = k === 'p' ? VP_CAP.primary : VP_CAP.secondary;
+  let raw = 0, capped = 0;
+  for (const r of b[who]) {
+    const v = +r[k] || 0;
+    raw += v;
+    capped += Math.min(v, perRound);
+  }
+  return { raw, capped: Math.min(capped, total), perRound, total };
+}
+
 function battleTotals(b){
   const side = (who) => {
-    let prim = 0, sec = 0;
-    for (const r of b[who]) {
-      prim += Math.min(+r.p || 0, VP_CAP.perRound);
-      sec  += Math.min(+r.s || 0, VP_CAP.perRound);
-    }
-    prim = Math.min(prim, VP_CAP.primary);
-    sec  = Math.min(sec,  VP_CAP.secondary);
+    const p = lineTotals(b, who, 'p'), sc = lineTotals(b, who, 's');
     const paint = (b.painted && b.painted[who]) ? VP_CAP.painted : 0;
-    return { prim, sec, paint, total: prim + sec + paint };
+    return { prim: p.capped, sec: sc.capped, paint,
+             rawPrim: p.raw, rawSec: sc.raw,
+             total: p.capped + sc.capped + paint };
   };
   const me = side('me'), them = side('them');
   return { me: me.total, them: them.total, detail: { me, them } };
@@ -3985,12 +4020,20 @@ function scoreTable(b){
         (auto ? ' class="auto" title="Filled by your secondary cards"' : '') +
         ' value="' + (r[k]||0) + '"></td>';
     }).join('');
-    const tot = b[who].reduce((a, r) => a + (+r[k]||0), 0);
+    const lt = lineTotals(b, who, k);
+    const tot = lt.raw === lt.capped ? String(lt.raw)
+              : lt.raw + '<span class="capd">(' + lt.capped + ')</span>';
     return '<tr class="' + cls + '"><th class="who">' + esc(label) + '</th>' +
            cells + '<td class="tot">' + tot + '</td></tr>';
   };
 
-  const sideTotal = (who) => b[who].reduce((a, r) => a + (+r.p||0) + (+r.s||0), 0);
+  // Subtotal del lado: anotado y, si difiere, lo que cuenta entre paréntesis.
+  const sideTotal = (who) => {
+    const p = lineTotals(b, who, 'p'), sc = lineTotals(b, who, 's');
+    const raw = p.raw + sc.raw, capped = p.capped + sc.capped;
+    return raw === capped ? String(raw)
+         : raw + '<span class="capd">(' + capped + ')</span>';
+  };
   const them = b.opponent || 'Them';
 
   t.innerHTML = hdr +
@@ -4007,11 +4050,11 @@ function scoreTable(b){
   t.addEventListener('input', (ev) => {
     const el2 = ev.target;
     if (!el2.dataset || !el2.dataset.w) return;
-    const raw = Math.max(0, parseInt(el2.value, 10) || 0);
-    // Tope por ronda: 15 por defecto, o el de la primaria si lo ajustaste.
+    // Se guarda lo que escribiste. El tope se aplica al TOTAL, no a la
+    // casilla: recortar acá te impedía anotar el resto de la ronda.
+    const n = Math.max(0, parseInt(el2.value, 10) || 0);
     const cap = el2.dataset.k === 'p' ? (b.primCap || VP_CAP.perRound) : VP_CAP.perRound;
-    const n = Math.min(raw, cap);
-    if (n !== raw) el2.value = n;
+    el2.classList.toggle('over', n > cap);
     b[el2.dataset.w][+el2.dataset.i][el2.dataset.k] = n;
 
     // Editar mi secundaria a mano desactiva el automático de esa ronda.
@@ -4023,9 +4066,7 @@ function scoreTable(b){
     }
 
     saveBattle(b);
-    const tot = b[el2.dataset.w].reduce((a, r) => a + (+r[el2.dataset.k]||0), 0);
-    const cell = el2.closest('tr').querySelector('.tot');
-    if (cell) cell.textContent = tot;
+    renderBattles();
   });
   return t;
 }
@@ -4310,27 +4351,37 @@ function secRow(b, id, tactical, who){
   const scoredAt = s.scored[id] ?? null;
   const locked = tactical && scoredAt != null && scoredAt !== b.round;
 
+  // El máximo de la carta es información, no una barrera: si en la mesa
+  // cobraste más, se anota y se marca. Lo único que sí bloquea es el cierre
+  // de una táctica ya cobrada.
   const capRound = +c.pr || +c.max || 99;
   const capLeft  = Math.max(0, (+c.max || 99) - scoredBefore);
-  const cap = locked ? 0 : Math.min(capRound, capLeft);
+  const softCap  = Math.min(capRound, capLeft);
+  const cap = locked ? 0 : 99;
 
   const info = el('div','id');
-  const rules = (c.tiers || []).map((t) =>
-    '<u>' + esc([t.mode, t.w].filter(Boolean).join(' · ')) +
-    (t.max ? ' · max ' + esc(t.max) : '') + '</u>' +
+  // Sólo el tramo del sistema que estás jugando: mostrar el de Fijas
+  // mientras jugás Tácticas es texto que no aplica y confunde en la mesa.
+  const mine2 = (c.tiers || []).filter((t) =>
+    !t.mode || String(t.mode).toLowerCase() === s.mode);
+  const rules = (mine2.length ? mine2 : (c.tiers || [])).map((t) =>
+    '<u>' + esc(t.w) + (t.max ? ' \u00b7 max ' + esc(t.max) : '') + '</u>' +
     (t.i || []).map(([vp, tx]) => '<em><b>' + esc(vp) + '</b> ' + esc(tx) + '</em>').join('')
   ).join('');
   info.innerHTML = '<div class="nm">' + esc(c.n) +
     (locked ? '<span class="lockt">scored R' + scoredAt + '</span>' : '') + '</div>' +
     '<div class="meta">' + (c.pr ? c.pr + ' per round \u00b7 ' : '') + 'max ' + c.max +
     (locked ? ' \u00b7 ' + scoredBefore + ' VP \u00b7 closed for the rest of the battle'
-            : (scoredBefore ? ' \u00b7 ' + scoredBefore + ' scored' : '')) + '</div>' +
+            : (scoredBefore ? ' \u00b7 ' + scoredBefore + ' scored' : '')) +
+    ((s.byRound[key] ?? 0) > softCap
+      ? ' \u00b7 <b class="overt">over the card\u2019s ' + softCap + '</b>' : '') + '</div>' +
     (rules ? '<div class="crules">' + rules + '</div>' : '');
 
   const stepv = el('div','step');
   const minus = el('button'); minus.textContent = '\u2212';
   const val = el('input'); val.type='text'; val.inputMode='numeric';
   val.value = s.byRound[key] ?? 0;
+  if ((s.byRound[key] ?? 0) > softCap) val.classList.add('over');
   const plus = el('button'); plus.textContent = '+';
   const set = (n) => {
     n = Math.max(0, Math.min(cap, n | 0));
@@ -4390,7 +4441,7 @@ function syncSecToScore(b, who){
   if (manual[b.round - 1]) return;               // esa ronda la escribiste a mano
   const thisRound = Object.entries(s.byRound)
     .reduce((a, [k, v]) => k.endsWith(suffix) ? a + (+v || 0) : a, 0);
-  b[who][b.round - 1].s = Math.min(VP_CAP.perRound, thisRound);
+  b[who][b.round - 1].s = thisRound;   // el tope se aplica al total, no acá
   saveBattle(b);
 }
 
@@ -5258,7 +5309,10 @@ function summarise(b, mine){
       const st = tr[i] || {};
       const acted = ['m','s','c','f'].some((k) =>
         Array.from({length:5}, (_, r) => st.act && st.act[(r+1)+':'+k]).some(Boolean));
-      units.push({ n: u.n, size: sl.size, dead: st.dead ?? null, acted });
+      // El coste viaja con la unidad: sin él no se puede graficar cuántos
+      // puntos aguantaron la partida y cuántos se perdieron.
+      const cost = ptsFor(u, sl.size, copyIndex(l)[i]) + gearPoints(u, sl);
+      units.push({ n: u.n, size: sl.size, pts: cost, dead: st.dead ?? null, acted });
     }
   }
 
@@ -5455,7 +5509,6 @@ function feedPanel(){
 function renderStats(){
   const v = document.getElementById('viewStats');
   v.innerHTML = '';
-  v.append(feedPanel());
 
   const { mine, all } = allSummaries();
 
@@ -5500,11 +5553,20 @@ function renderStats(){
     v.append(sum);
   }
 
+  // Primero los gráficos: la pregunta es cómo fue, no qué números salieron.
+  // Las tablas quedan debajo como vista de datos exacta.
+  v.append(chartFactions(all));
+  v.append(chartSources(all));
+  v.append(chartUnits(all));
+
   v.append(splitTable('By faction played', tally(all, (r) => r.faction)));
   v.append(splitTable('By Force Disposition', tally(all, (r) => r.disp)));
   v.append(splitTable('By matchup', tally(all, (r) => r.disp && r.vsDisp ? r.disp + ' vs ' + r.vsDisp : null)));
   v.append(splitTable('By primary mission', tally(all, (r) => r.mission)));
   v.append(unitTable(all));
+
+  // El feed es configuración: se toca una vez y después estorba arriba.
+  v.append(feedPanel());
 
   const foot = el('div','hint');
   foot.textContent = mine.length + ' of your battles' +
@@ -5806,6 +5868,212 @@ function flowDiagram(){
     g.onclick = () => showTab(g.dataset.tab);
   }
   return box;
+}
+
+/* ============================================================
+   GRÁFICOS
+   
+   SVG en línea, sin librerías: la app funciona sin señal y no puede
+   depender de un CDN.
+   
+   Paleta validada contra la superficie de los paneles (#16212C): banda de
+   luminosidad, piso de croma, separación bajo daltonismo y contraste. El
+   cian de la interfaz quedó fuera — es demasiado claro para la banda
+   oscura, y además es el color de los controles, no de los datos.
+   ============================================================ */
+const VIZ = { s1:'#3987e5', s2:'#d95926', s3:'#199e70' };
+
+/* Extremo redondeado sólo del lado del dato; cuadrado contra la base. */
+function capRight(x, y, w, h, r, fill){
+  r = Math.min(r, w);
+  return '<path d="M' + x.toFixed(1) + ' ' + y + ' H' + (x + w - r).toFixed(1) +
+    ' a' + r + ' ' + r + ' 0 0 1 ' + r + ' ' + r +
+    ' V' + (y + h - r) + ' a' + r + ' ' + r + ' 0 0 1 ' + (-r) + ' ' + r +
+    ' H' + x.toFixed(1) + ' Z" fill="' + fill + '"/>';
+}
+
+function niceStep(x){
+  const p = Math.pow(10, Math.floor(Math.log10(Math.max(x, 1e-6))));
+  const n = x / p;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * p;
+}
+function fmtNum(v){ return String(Math.round(v * 10) / 10); }
+function clipTxt(t, n){ return t.length > n ? t.slice(0, n - 1) + '…' : t; }
+
+/* Barras horizontales, simples o apiladas.
+ * rows: [{ label, sub, segs:[{v,c,name}], tip }] */
+function hBars({ rows, legend, fmt, foot }){
+  const box = el('div','viz');
+  if (!rows.length) { box.append(hint('Not enough data yet.')); return box; }
+
+  const W = 700, LAB = 190, X0 = LAB + 10, X1 = 596, ROW = 36, PAD = 16, AX = 22;
+  const H = rows.length * ROW + PAD * 2 + AX;
+  const max = Math.max(1, ...rows.map((r) => r.segs.reduce((a, g) => a + g.v, 0)));
+  const sc = (v) => (v / max) * (X1 - X0);
+
+  // Rejilla fina en números redondos: recesiva, nunca punteada.
+  const step = niceStep(max / 4);
+  let grid = '', ticks = '';
+  for (let g = 0; g <= max + 1e-6; g += step) {
+    const x = (X0 + sc(g)).toFixed(1);
+    grid += '<line x1="' + x + '" y1="' + (PAD - 6) + '" x2="' + x +
+            '" y2="' + (H - PAD - AX + 6) + '" class="vg"/>';
+    ticks += '<text x="' + x + '" y="' + (H - PAD - 2) +
+             '" class="vt" text-anchor="middle">' + fmtNum(g) + '</text>';
+  }
+
+  let body = '';
+  rows.forEach((r, i) => {
+    const y = PAD + i * ROW, by = y + 4, bh = 18;
+    const total = r.segs.reduce((a, g) => a + g.v, 0);
+
+    body += '<text x="' + (LAB - 8) + '" y="' + (by + 13) + '" class="vl" text-anchor="end">' +
+            esc(clipTxt(r.label, 25)) + '</text>';
+    if (r.sub)
+      body += '<text x="' + (LAB - 8) + '" y="' + (by + 26) + '" class="vs" text-anchor="end">' +
+              esc(r.sub) + '</text>';
+
+    let x = X0;
+    r.segs.forEach((sg, k) => {
+      if (sg.v <= 0) return;
+      const last = r.segs.slice(k + 1).every((z) => z.v <= 0);
+      const w = Math.max(1, sc(sg.v) - (last ? 0 : 2));   // hueco de 2px entre tramos
+      body += '<g class="vb"><title>' +
+        esc(r.label + ' — ' + sg.name + ': ' + fmtNum(sg.v)) + '</title>' +
+        (last ? capRight(x, by, w, bh, 4, sg.c)
+              : '<rect x="' + x.toFixed(1) + '" y="' + by + '" width="' + w.toFixed(1) +
+                '" height="' + bh + '" fill="' + sg.c + '"/>') + '</g>';
+      x += sc(sg.v);
+    });
+
+    // El valor va en tinta: el texto nunca lleva el color de la serie.
+    body += '<text x="' + (X0 + sc(total) + 9).toFixed(1) + '" y="' + (by + 13) +
+            '" class="vv">' + esc(fmt ? fmt(r) : fmtNum(total)) + '</text>';
+  });
+
+  if (legend && legend.length > 1) {
+    const lg = el('div','vleg');
+    lg.innerHTML = legend.map((l) =>
+      '<span><i style="background:' + l.c + '"></i>' + esc(l.name) + '</span>').join('');
+    box.append(lg);
+  }
+  const holder = el('div');
+  holder.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img">' +
+                     grid + ticks + body + '</svg>';
+  box.append(holder);
+  if (foot) box.append(hint(foot));
+  return box;
+}
+
+function vizBlock(title, sub, node){
+  const box = el('div');
+  box.style.cssText = 'margin:20px 0';
+  const h = el('div','rrole');
+  h.innerHTML = '<span>' + esc(title.toUpperCase()) + '</span>';
+  box.append(h);
+  if (sub) {
+    const t = hint(sub);
+    t.style.margin = '6px 0 2px';   // sin esto se pega a la línea del título
+    box.append(t);
+  }
+  box.append(node);
+  return box;
+}
+
+/* ---- 1. cómo le fue a cada facción ---- */
+function chartFactions(rows){
+  const t = tally(rows, (r) => r.faction).filter((e) => e.k);
+  const data = t.sort((a, b) => pct(b) - pct(a)).map((e) => ({
+    label: e.k.replace(/^Adeptus Astartes - /, ''),
+    sub: e.n + (e.n === 1 ? ' game' : ' games'),
+    segs: [{ v: pct(e), c: VIZ.s1, name: 'win rate' }],
+    rec: e,
+  }));
+  return vizBlock('How each faction did',
+    'Win rate over every finished battle. One bar, one colour: the length is ' +
+    'the number — colouring by value would say the same thing twice.',
+    hBars({ rows: data, fmt: (r) => pct(r.rec) + '%  ' + r.rec.W + '–' + r.rec.L + '–' + r.rec.D }));
+}
+
+/* ---- 2. de dónde salen los puntos ---- */
+function chartSources(rows){
+  const m = new Map();
+  let sinDesglose = 0;
+  for (const r of rows) {
+    if (!r.faction) continue;
+    // Un archivo viejo no trae el marcador ronda a ronda. Meterlo entero en
+    // "primaria" sería inventar el desglose: se deja fuera y se avisa.
+    if (!r.rounds) { sinDesglose++; continue; }
+
+    const e = m.get(r.faction) || { n:0, p:0, s:0, paint:0 };
+    e.n++;
+    let p = 0, sec = 0;
+    for (const x of (r.rounds.me || [])) {
+      p   += Math.min(+x.p || 0, VP_CAP.perRound);
+      sec += Math.min(+x.s || 0, VP_CAP.perRound);
+    }
+    e.p += Math.min(p, VP_CAP.primary);          // los topes son por partida
+    e.s += Math.min(sec, VP_CAP.secondary);
+    if (r.painted && r.painted.me) e.paint += VP_CAP.painted;
+    m.set(r.faction, e);
+  }
+  const data = [...m.entries()]
+    .map(([k, e]) => ({
+      label: k.replace(/^Adeptus Astartes - /, ''),
+      sub: e.n + (e.n === 1 ? ' game' : ' games'),
+      segs: [{ v: e.p / e.n, c: VIZ.s1, name: 'primary' },
+             { v: e.s / e.n, c: VIZ.s2, name: 'secondary' },
+             { v: e.paint / e.n, c: VIZ.s3, name: 'painted' }],
+    }))
+    .sort((a, b) => b.segs.reduce((x,g)=>x+g.v,0) - a.segs.reduce((x,g)=>x+g.v,0));
+
+  return vizBlock('Where the points come from',
+    'Average VP per game, split by source. A faction that wins on primary and ' +
+    'one that wins on secondaries need different lists, even at the same win rate.',
+    hBars({ rows: data,
+      legend: [{name:'Primary',c:VIZ.s1},{name:'Secondary',c:VIZ.s2},{name:'Painted',c:VIZ.s3}],
+      fmt: (r) => fmtNum(r.segs.reduce((a,g)=>a+g.v,0)) + ' VP',
+      foot: sinDesglose ? sinDesglose + ' battle' + (sinDesglose>1?'s':'') +
+            ' finished with an older version carry no round-by-round split, so they ' +
+            'are left out of this chart.' : null }));
+}
+
+/* ---- 3. qué hizo cada unidad con los puntos que ocupa ---- */
+function chartUnits(rows){
+  const m = new Map();
+  for (const r of rows) for (const u of (r.units || [])) {
+    const e = m.get(u.n) || { n:0, pts:0, lost:0, idle:0, hasPts:false };
+    e.n++;
+    if (u.pts != null) { e.hasPts = true; e.pts += u.pts; if (u.dead != null) e.lost += u.pts; }
+    if (!u.acted) e.idle++;
+    m.set(u.n, e);
+  }
+  const all = [...m.entries()].filter(([, e]) => e.hasPts && e.pts > 0);
+  if (!all.length) {
+    return vizBlock('What each unit did with its points',
+      'No points recorded per unit yet. Battles finished with an older version ' +
+      'do not carry them; the next one you finish will.', hBars({ rows: [] }));
+  }
+
+  const data = all
+    .map(([k, e]) => ({
+      label: k,
+      sub: (e.idle ? e.idle + '× never acted' : e.n + (e.n === 1 ? ' game' : ' games')),
+      segs: [{ v: (e.pts - e.lost) / e.n, c: VIZ.s1, name: 'points that survived' },
+             { v: e.lost / e.n, c: VIZ.s2, name: 'points destroyed' }],
+      e,
+    }))
+    .sort((a, b) => b.segs.reduce((x,g)=>x+g.v,0) - a.segs.reduce((x,g)=>x+g.v,0))
+    .slice(0, 12);
+
+  return vizBlock('What each unit did with its points',
+    'Average points on the table per game, and how many of them you got back. ' +
+    'The app does not attribute VP to a unit — nothing in the game does — ' +
+    'so what it shows is the cost and its fate.',
+    hBars({ rows: data,
+      legend: [{name:'Survived',c:VIZ.s1},{name:'Destroyed',c:VIZ.s2}],
+      fmt: (r) => Math.round(r.segs.reduce((a,g)=>a+g.v,0)) + ' pts',
+      foot: all.length > 12 ? (all.length - 12) + ' more units in the table below.' : null }));
 }
 
 boot();
