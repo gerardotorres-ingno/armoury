@@ -222,6 +222,11 @@ details.rule>div{padding:10px 12px 12px}
   color:var(--ink2);margin-top:2px}
 .sswitch .chip.on i{color:var(--ochre)}
 
+.lockt{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ochre);border:1px solid var(--ochre);border-radius:2px;
+  padding:1px 5px;margin-left:8px;vertical-align:2px}
+.slot .step button:disabled,.slot .step input:disabled{opacity:.35;cursor:not-allowed}
+
 .chip{font-family:var(--disp);font-weight:600;font-size:13.5px;padding:6px 11px;
   background:var(--panel);border:1px solid var(--rule2);border-radius:14px;
   color:var(--ink);cursor:pointer}
@@ -3259,7 +3264,11 @@ function newBattle(){
   const b = {
     id: Date.now(),
     date: new Date().toISOString().slice(0, 10),
-    mine: lists[0]?.id ?? null,
+    // Arranca en la pantalla de preparación: las listas de los dos jugadores
+    // y el sistema de secundarias se fijan ANTES de empezar, no a mitad de
+    // partida. Cambiarlos después invalida lo ya anotado.
+    setup: true,
+    mine: lists.find((x) => !x.foreign)?.id ?? null,
     opponent: '',
     oppList: null,          // id de una lista importada, si la cargaste
     disp: { me: '', them: '' },   // Force Disposition de cada jugador
@@ -3276,6 +3285,128 @@ function newBattle(){
     done: false,
   };
   battles.push(b); saveBattle(b); openBattle = b.id; renderBattles();
+}
+
+/* ------------------------------------------------------------------
+ * PREPARACIÓN DE LA BATALLA
+ *
+ * Todo lo que no se puede cambiar a mitad de partida sin romper lo ya
+ * anotado: quién juega, con qué listas, a cuántos puntos y con qué
+ * sistema de secundarias.
+ * ---------------------------------------------------------------- */
+function battleSetup(v, b){
+  const bar = el('div','bar');
+  const back = el('button','btn'); back.textContent = '\u2190 ALL BATTLES';
+  back.onclick = () => { openBattle = null; renderBattles(); };
+  const del = el('button','btn'); del.textContent = 'DISCARD';
+  del.onclick = () => {
+    store.del('battles', b.id);
+    battles = battles.filter((x) => x.id !== b.id);
+    openBattle = null; renderBattles();
+  };
+  bar.append(back, del); v.append(bar);
+
+  const hero = el('div','hero');
+  hero.innerHTML = '<h2>Set up the battle</h2>' +
+    '<p>These are fixed once you start: changing them later would ' +
+    'invalidate the score you already wrote down.</p>';
+  v.append(hero);
+
+  const mineLists = lists.filter((x) => !x.foreign);
+  const oppLists  = lists.filter((x) => x.foreign);
+
+  const block = (label, node, tip) => {
+    const w = el('div');
+    w.style.cssText = 'margin-bottom:14px';
+    const t = el('div');
+    t.style.cssText = 'font-family:var(--mono);font-size:10px;letter-spacing:.12em;' +
+      'color:var(--ink2);text-transform:uppercase;margin-bottom:4px';
+    t.textContent = label;
+    w.append(t, node);
+    if (tip) {
+      const h = hint(tip);
+      h.style.marginTop = '5px';      // sin esto la nota se pega al selector
+      w.append(h);
+    }
+    return w;
+  };
+
+  // ---- mi lista
+  const mySel = el('select'); mySel.style.width = '100%';
+  const m0 = el('option'); m0.value=''; m0.textContent='(no list)'; mySel.append(m0);
+  for (const l of mineLists) {
+    const o = el('option'); o.value = l.id; o.textContent = l.name || 'Untitled';
+    if (l.id === b.mine) o.selected = true;
+    mySel.append(o);
+  }
+  mySel.onchange = () => { b.mine = mySel.value ? +mySel.value : null; saveBattle(b); renderBattles(); };
+  v.append(block('My list', mySel,
+    mineLists.length ? null : 'No lists yet. Build one in the Lists tab first.'));
+
+  // ---- rival
+  const opp = el('input'); opp.type='text'; opp.placeholder='Their name';
+  opp.style.width = '100%'; opp.value = b.opponent;
+  opp.oninput = () => { b.opponent = opp.value; saveBattle(b); };
+  v.append(block('Opponent', opp));
+
+  // ---- lista del rival
+  const os = el('select'); os.style.width = '100%';
+  const o0 = el('option'); o0.value=''; o0.textContent='(not loaded)'; os.append(o0);
+  for (const l of oppLists) {
+    const o = el('option'); o.value = l.id; o.textContent = l.name || 'Untitled';
+    if (l.id === b.oppList) o.selected = true;
+    os.append(o);
+  }
+  os.onchange = () => { b.oppList = os.value ? +os.value : null; saveBattle(b); renderBattles(); };
+  v.append(block('Their list', os,
+    oppLists.length
+      ? 'With their list loaded you can track their units and casualties too.'
+      : 'Ask them for their Armoury file and import it with LOAD A LIST in the ' +
+        'Lists tab. Without it you can still note what you destroyed and when.'));
+
+  // ---- tamaño de partida
+  const lim = numSelect([500,1000,1500,2000,2500,3000], b.limit, (n) => {
+    b.limit = n; saveBattle(b);
+  });
+  lim.style.width = '100%';
+  v.append(block('Battle size', lim));
+
+  // ---- secundarias: cada jugador elige su sistema
+  const modeSel = (who) => {
+    const s2 = initSec(b, who);
+    const sel = el('select'); sel.style.width = '100%';
+    for (const [val, txt] of [['tactical','Tactical \u2014 draw 2 each round'],
+                              ['fixed','Fixed \u2014 pick 2 for the whole battle']]) {
+      const o = el('option'); o.value = val; o.textContent = txt;
+      if (s2.mode === val) o.selected = true;
+      sel.append(o);
+    }
+    sel.onchange = () => {
+      s2.mode = sel.value;
+      s2.active = []; s2.done = []; s2.deck = []; s2.fixed = [];
+      s2.vp = {}; s2.byRound = {}; s2.drawnFor = {}; s2.scored = {};
+      saveBattle(b); renderBattles();
+    };
+    return sel;
+  };
+  const two = el('div');
+  two.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:10px';
+  const wrapMe = el('div'), wrapThem = el('div');
+  wrapMe.append(modeSel('me')); wrapThem.append(modeSel('them'));
+  two.append(wrapMe, wrapThem);
+  v.append(block('Secondary missions \u2014 mine / theirs', two,
+    'Tactical draws two new cards every round and they pile up. Fixed keeps ' +
+    'the same two all battle. A tactical card locks once you score with it.'));
+
+  // ---- empezar
+  const go = el('button','btn pri');
+  go.textContent = 'START THE BATTLE';
+  go.style.cssText = 'width:100%;padding:13px;margin-top:6px';
+  go.onclick = () => {
+    if (!b.mine && !confirm('No list of yours is selected. Start anyway?')) return;
+    b.setup = false; saveBattle(b); renderBattles();
+  };
+  v.append(go);
 }
 
 /* --- reloj: se guarda el acumulado y el instante de arranque, no un
@@ -3375,6 +3506,8 @@ function renderBattlesInner(){
   const b = battles.find((x) => x.id === openBattle);
   if (!b) { openBattle = null; return renderBattles(); }
 
+  if (b.setup) { battleSetup(v, b); return; }
+
   // ---- cabecera
   const bar = el('div','bar');
   const back = el('button','btn'); back.textContent = '\u2190 ALL BATTLES';
@@ -3387,41 +3520,22 @@ function renderBattlesInner(){
     battles = battles.filter((x) => x.id !== b.id);
     openBattle = null; renderBattles();
   };
-  bar.append(back, shr, del); v.append(bar);
+  const stp = el('button','btn'); stp.textContent = 'SETUP';
+  stp.title = 'Lists, battle size and secondary system';
+  stp.onclick = () => { b.setup = true; saveBattle(b); renderBattles(); };
+  bar.append(back, stp, shr, del); v.append(bar);
 
-  // ---- configuración
-  const cfg = el('div','bar');
-  const mySel = el('select');
-  const none = el('option'); none.value=''; none.textContent='(no list)'; mySel.append(none);
-  for (const l of lists) {
-    if (l.foreign) continue;
-    const o = el('option'); o.value = l.id; o.textContent = l.name || 'Untitled';
-    if (l.id === b.mine) o.selected = true;
-    mySel.append(o);
-  }
-  mySel.onchange = () => { b.mine = mySel.value ? +mySel.value : null; saveBattle(b); renderBattles(); };
-  cfg.append(labelled('My list', mySel));
+  // Las listas y el tamaño viven en SETUP: cambiarlos a mitad de partida
+  // invalida el marcador. Acá queda sólo lo que sí cambia al empezar la
+  // misión: disposiciones y terreno.
+  const who = el('div','hint');
+  const myL = lists.find((x) => x.id === b.mine);
+  const opL = lists.find((x) => x.id === b.oppList);
+  who.innerHTML = '<b>' + esc(myL ? (myL.name || 'Untitled') : 'no list') + '</b> vs <b>' +
+    esc(b.opponent || 'opponent') + '</b>' + (opL ? ' (' + esc(opL.name || 'Untitled') + ')' : '') +
+    ' \u00b7 ' + (b.limit || 2000) + ' pts';
+  v.append(who);
 
-  const opp = el('input'); opp.type='text'; opp.placeholder='opponent';
-  opp.style.cssText='width:150px;font-size:13px'; opp.value = b.opponent;
-  opp.oninput = () => { b.opponent = opp.value; saveBattle(b); };
-  cfg.append(labelled('Against', opp));
-
-  // Lista del rival: sólo las importadas, que son las suyas.
-  const foreign = lists.filter((x) => x.foreign);
-  if (foreign.length) {
-    const os = el('select');
-    const n0 = el('option'); n0.value=''; n0.textContent='—'; os.append(n0);
-    for (const l of foreign) {
-      const o = el('option'); o.value = l.id; o.textContent = l.name || 'Untitled';
-      if (l.id === b.oppList) o.selected = true;
-      os.append(o);
-    }
-    os.onchange = () => { b.oppList = os.value ? +os.value : null; saveBattle(b); };
-    cfg.append(labelled('Their list', os));
-  }
-
-  v.append(cfg);
   v.append(missionPanel(b));
 
   // ---- reloj
@@ -4003,6 +4117,16 @@ function drawSecondaries(b, force, who){
     }
   }
 
+  // Las tácticas que ya puntuaron salen de la mano al empezar la ronda
+  // siguiente: están cerradas y sólo estorban entre las activas.
+  s.scored = s.scored || {};
+  for (const id of [...s.active]) {
+    if (s.scored[id] != null && s.scored[id] < b.round) {
+      s.active = s.active.filter((x) => x !== id);
+      if (!s.done.includes(id)) s.done.push(id);
+    }
+  }
+
   let n = 0;
   while (n < 2 && s.deck.length) { s.active.push(s.deck.shift()); n++; }
   s.drawnFor[b.round] = true;
@@ -4074,19 +4198,13 @@ function secondaryPanel(b, who){
     return box;
   }
 
-  // modo
+  // El sistema se eligió en SETUP: acá sólo se informa. Cambiarlo a mitad
+  // de partida borraría las cartas ya puntuadas, así que obliga a volver.
   const bar = el('div','bar');
-  const mode = el('select');
-  for (const [v, t] of [['tactical','Tactical (draw 2 each round)'], ['fixed','Fixed (pick 2 for the battle)']]) {
-    const o = el('option'); o.value = v; o.textContent = t;
-    if (s.mode === v) o.selected = true;
-    mode.append(o);
-  }
-  mode.onchange = () => {
-    s.mode = mode.value; s.active = []; s.done = []; s.deck = [];
-    saveBattle(b); renderBattles();
-  };
-  bar.append(labelled('Mode', mode));
+  const tag = el('span','chip on');
+  tag.textContent = s.mode === 'fixed' ? 'Fixed \u00b7 2 for the battle'
+                                       : 'Tactical \u00b7 2 per round';
+  bar.append(tag);
 
   if (s.mode === 'tactical') {
     const sh = el('button','btn');
@@ -4179,13 +4297,22 @@ function secRow(b, id, tactical, who){
   const scoredBefore = Object.entries(s.byRound)
     .reduce((a, [k, v]) => k.startsWith(id + '@') && k !== key ? a + (+v || 0) : a, 0);
 
-  // Una carta que ya puntuó queda COMPLETADA: no admite más VP.
+  /* BLOQUEO DE LAS TÁCTICAS.
+   *
+   * Una carta táctica se cobra UNA vez: puntúa en la ronda en que la usaste
+   * y queda cerrada para las siguientes. Se puede corregir el número dentro
+   * de esa misma ronda, y bajarlo a cero la reabre — un error de dedo no
+   * debería costarte la carta.
+   *
+   * Las fijas no se bloquean: están activas toda la batalla y puntúan ronda
+   * a ronda hasta su tope. */
   s.scored = s.scored || {};
-  const completed = !!s.scored[id];
+  const scoredAt = s.scored[id] ?? null;
+  const locked = tactical && scoredAt != null && scoredAt !== b.round;
 
   const capRound = +c.pr || +c.max || 99;
   const capLeft  = Math.max(0, (+c.max || 99) - scoredBefore);
-  const cap = completed ? 0 : Math.min(capRound, capLeft);
+  const cap = locked ? 0 : Math.min(capRound, capLeft);
 
   const info = el('div','id');
   const rules = (c.tiers || []).map((t) =>
@@ -4193,9 +4320,11 @@ function secRow(b, id, tactical, who){
     (t.max ? ' · max ' + esc(t.max) : '') + '</u>' +
     (t.i || []).map(([vp, tx]) => '<em><b>' + esc(vp) + '</b> ' + esc(tx) + '</em>').join('')
   ).join('');
-  info.innerHTML = '<div class="nm">' + esc(c.n) + '</div>' +
-    '<div class="meta">' + (c.pr ? c.pr + ' per round · ' : '') + 'max ' + c.max +
-    (scoredBefore ? ' · ' + scoredBefore + ' already scored' : '') + '</div>' +
+  info.innerHTML = '<div class="nm">' + esc(c.n) +
+    (locked ? '<span class="lockt">scored R' + scoredAt + '</span>' : '') + '</div>' +
+    '<div class="meta">' + (c.pr ? c.pr + ' per round \u00b7 ' : '') + 'max ' + c.max +
+    (locked ? ' \u00b7 ' + scoredBefore + ' VP \u00b7 closed for the rest of the battle'
+            : (scoredBefore ? ' \u00b7 ' + scoredBefore + ' scored' : '')) + '</div>' +
     (rules ? '<div class="crules">' + rules + '</div>' : '');
 
   const stepv = el('div','step');
@@ -4207,8 +4336,16 @@ function secRow(b, id, tactical, who){
     n = Math.max(0, Math.min(cap, n | 0));
     s.byRound[key] = n;
     s.vp[id] = scoredBefore + n;
-    val.value = n; saveBattle(b); syncSecToScore(b, who);
+
+    // Puntuar una táctica la cierra en esta ronda; volver a cero la reabre.
+    if (tactical) {
+      if (n > 0) s.scored[id] = b.round;
+      else if (s.scored[id] === b.round) delete s.scored[id];
+    }
+
+    val.value = n; saveBattle(b); syncSecToScore(b, who); renderBattles();
   };
+  minus.disabled = plus.disabled = val.disabled = locked;
   minus.onclick = () => set((s.byRound[key] ?? 0) - 1);
   plus.onclick  = () => set((s.byRound[key] ?? 0) + 1);
   val.onchange  = () => set(parseInt(val.value,10) || 0);
@@ -4217,7 +4354,9 @@ function secRow(b, id, tactical, who){
   row.append(info, stepv);
 
   if (tactical) {
-    const ok = el('button','btn'); ok.textContent = 'ACHIEVED';
+    const ok = el('button','btn'); ok.textContent = locked ? 'CLOSED' : 'CLOSE';
+    ok.disabled = locked;
+    ok.title = 'Close this card without scoring any more from it';
     ok.onclick = () => {
       // Queda registrada como completada: sigue a la vista con sus puntos,
       // pero ya no suma más.
