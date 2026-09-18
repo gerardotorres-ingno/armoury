@@ -238,6 +238,24 @@ details.rule>div{padding:10px 12px 12px}
 .viz .vt{font-family:var(--mono);font-size:9px;fill:var(--ink2)}
 .viz .vb{cursor:default}
 .viz .vb:hover{opacity:.78}
+.viz .vd{font-family:var(--mono);font-size:11.5px;fill:var(--ink2)}
+details.blog{border:1px solid var(--rule2);border-radius:3px;background:var(--panel);
+  margin-bottom:5px}
+details.blog>summary{cursor:pointer;padding:9px 12px;display:flex;align-items:baseline;
+  gap:10px;flex-wrap:wrap}
+details.blog summary b{font-family:var(--mono);font-size:11px;border:1px solid;
+  border-radius:2px;padding:1px 6px}
+details.blog .r-win{color:var(--ochre);border-color:var(--ochre)}
+details.blog .r-loss{color:var(--oxide);border-color:var(--oxide)}
+details.blog .r-draw{color:var(--ink2);border-color:var(--rule2)}
+details.blog .bn{flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:15px}
+details.blog .bs{font-family:var(--mono);font-size:14px}
+details.blog summary i{flex-basis:100%;font-style:normal;font-family:var(--mono);
+  font-size:10px;color:var(--ink2)}
+details.blog>div{padding:4px 12px 12px;border-top:1px solid var(--rule)}
+/* El bruto tachado por el tope: visible pero claramente secundario. */
+details.blog .ov{font-style:normal;color:var(--ink2);font-size:.82em}
+
 .vleg{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;
   color:var(--ink2);margin-bottom:6px}
 .vleg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;
@@ -5286,6 +5304,7 @@ function importRules(){
    marcador y unidades. Ni nombres de rivales ni notas.
    ============================================================ */
 let pool = [];        // batallas importadas de otras personas
+let statsSide = 'me'; // qué lado muestra el gráfico de unidades
 
 function savePool(){ store.put('misc', { id: 'statsPool', qty: JSON.stringify(pool) }); }
 async function loadPool(){
@@ -5322,14 +5341,29 @@ function summarise(b, mine){
     ? oppL.slots.map((sl, i) => {
         const u = unitOf(oppL, sl.unitId);
         const st = (b.trackThem || {})[i] || {};
-        return u ? { n: u.n, size: sl.size, dead: st.dead ?? null } : null;
+        return u ? { n: u.n, size: sl.size,
+                     pts: ptsFor(u, sl.size, copyIndex(oppL)[i]) + gearPoints(u, sl),
+                     dead: st.dead ?? null,
+                     acted: ['m','s','c','f'].some((k) =>
+                       Array.from({length:5}, (_, r) => st.act && st.act[(r+1)+':'+k]).some(Boolean))
+                   } : null;
       }).filter(Boolean)
     : (b.kills || []).filter((k) => k.n).map((k) => ({ n: k.n, dead: k.r }));
+
+  const oppF = oppL ? factionOf(oppL.faction) : null;
 
   return {
     id: b.id,
     date: b.date,
+    // Sin la facción del rival no hay comparativa posible: era el hueco que
+    // dejaba la pestaña sin nada del otro lado.
+    theirFaction: oppF ? oppF.name : null,
+    listName: l ? (l.name || 'Untitled') : null,
+    opponent: b.opponent || null,
     rounds: { me: b.me, them: b.them },
+    // El tope de primaria es por misión: sin él el registro no puede mostrar
+    // lo que realmente contó cada ronda y el detalle no cuadra con el total.
+    primCap: b.primCap || VP_CAP.perRound,
     cp: b.cp || null,
     painted: b.painted || null,
     theirUnits,
@@ -5556,14 +5590,27 @@ function renderStats(){
   // Primero los gráficos: la pregunta es cómo fue, no qué números salieron.
   // Las tablas quedan debajo como vista de datos exacta.
   v.append(chartFactions(all));
-  v.append(chartSources(all));
-  v.append(chartUnits(all));
+  v.append(chartVersus(all));
+
+  // Mis unidades o las del rival: el mismo gráfico, un interruptor.
+  const sw = el('div','sswitch');
+  for (const [k, lab] of [['me','My units'], ['them','Their units']]) {
+    const bt = el('button', 'chip' + (statsSide === k ? ' on' : ''));
+    bt.textContent = lab;
+    bt.onclick = () => { statsSide = k; renderStats(); };
+    sw.append(bt);
+  }
+  v.append(sw);
+  v.append(chartLifespan(all, statsSide));
 
   v.append(splitTable('By faction played', tally(all, (r) => r.faction)));
+  v.append(splitTable('Against which faction', tally(all, (r) => r.theirFaction)));
   v.append(splitTable('By Force Disposition', tally(all, (r) => r.disp)));
   v.append(splitTable('By matchup', tally(all, (r) => r.disp && r.vsDisp ? r.disp + ' vs ' + r.vsDisp : null)));
   v.append(splitTable('By primary mission', tally(all, (r) => r.mission)));
   v.append(unitTable(all));
+
+  v.append(battleLog(all));
 
   // El feed es configuración: se toca una vez y después estorba arriba.
   v.append(feedPanel());
@@ -6074,6 +6121,219 @@ function chartUnits(rows){
       legend: [{name:'Survived',c:VIZ.s1},{name:'Destroyed',c:VIZ.s2}],
       fmt: (r) => Math.round(r.segs.reduce((a,g)=>a+g.v,0)) + ' pts',
       foot: all.length > 12 ? (all.length - 12) + ' more units in the table below.' : null }));
+}
+
+/* Barras agrupadas: dos series por categoría. Para comparar contra el rival
+ * hace falta ver los dos números, no sólo la diferencia. */
+function gBars({ rows, legend, fmt, foot, unit }){
+  const box = el('div','viz');
+  if (!rows.length) { box.append(hint('Not enough data yet.')); return box; }
+
+  const W = 700, LAB = 170, X0 = LAB + 10, X1 = 560, ROW = 52, PAD = 16, AX = 22;
+  const H = rows.length * ROW + PAD * 2 + AX;
+  const max = Math.max(1, ...rows.flatMap((r) => r.bars.map((x) => x.v)));
+  const sc = (v) => (v / max) * (X1 - X0);
+
+  const step = niceStep(max / 4);
+  let grid = '', ticks = '';
+  for (let g = 0; g <= max + 1e-6; g += step) {
+    const x = (X0 + sc(g)).toFixed(1);
+    grid += '<line x1="' + x + '" y1="' + (PAD - 6) + '" x2="' + x +
+            '" y2="' + (H - PAD - AX + 6) + '" class="vg"/>';
+    ticks += '<text x="' + x + '" y="' + (H - PAD - 2) +
+             '" class="vt" text-anchor="middle">' + fmtNum(g) + '</text>';
+  }
+
+  let body = '';
+  rows.forEach((r, i) => {
+    const y = PAD + i * ROW;
+    body += '<text x="' + (LAB - 8) + '" y="' + (y + 24) + '" class="vl" text-anchor="end">' +
+            esc(r.label) + '</text>';
+    if (r.sub)
+      body += '<text x="' + (LAB - 8) + '" y="' + (y + 37) + '" class="vs" text-anchor="end">' +
+              esc(r.sub) + '</text>';
+
+    r.bars.forEach((bar, k) => {
+      const by = y + 4 + k * 20, bh = 16;   // 4px de aire entre las dos barras
+      const w = Math.max(1, sc(bar.v));
+      body += '<g class="vb"><title>' + esc(r.label + ' — ' + bar.name + ': ' +
+              fmtNum(bar.v) + (unit ? ' ' + unit : '')) + '</title>' +
+              capRight(X0, by, w, bh, 4, bar.c) + '</g>' +
+              '<text x="' + (X0 + w + 9).toFixed(1) + '" y="' + (by + 12) +
+              '" class="vv">' + esc(fmtNum(bar.v)) + '</text>';
+    });
+
+    if (fmt) {
+      const d = fmt(r);
+      if (d) body += '<text x="' + (W - 6) + '" y="' + (y + 28) +
+        '" class="vd" text-anchor="end">' + esc(d) + '</text>';
+    }
+  });
+
+  if (legend && legend.length > 1) {
+    const lg = el('div','vleg');
+    lg.innerHTML = legend.map((l) =>
+      '<span><i style="background:' + l.c + '"></i>' + esc(l.name) + '</span>').join('');
+    box.append(lg);
+  }
+  const holder = el('div');
+  holder.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img">' +
+                     grid + ticks + body + '</svg>';
+  box.append(holder);
+  if (foot) box.append(hint(foot));
+  return box;
+}
+
+/* ---- 2. dónde se fue la partida: yo contra el rival ---- */
+function chartVersus(rows){
+  let n = 0;
+  const acc = { p:[0,0], s:[0,0], paint:[0,0] };
+  for (const r of rows) {
+    if (!r.rounds) continue;
+    n++;
+    for (const [who, k] of [['me',0], ['them',1]]) {
+      let p = 0, sec = 0;
+      for (const x of (r.rounds[who] || [])) {
+        p   += Math.min(+x.p || 0, VP_CAP.perRound);
+        sec += Math.min(+x.s || 0, VP_CAP.perRound);
+      }
+      acc.p[k] += Math.min(p, VP_CAP.primary);
+      acc.s[k] += Math.min(sec, VP_CAP.secondary);
+      if (r.painted && r.painted[who]) acc.paint[k] += VP_CAP.painted;
+    }
+  }
+  if (!n) {
+    return vizBlock('Where the game was won or lost',
+      'No battle carries the round-by-round score yet.', hBars({ rows: [] }));
+  }
+
+  const row = (label, pair) => ({
+    label,
+    bars: [{ v: pair[0]/n, c: VIZ.s1, name: 'me' },
+           { v: pair[1]/n, c: VIZ.s2, name: 'them' }],
+    delta: (pair[0] - pair[1]) / n,
+  });
+  const data = [row('Primary', acc.p), row('Secondary', acc.s), row('Painted', acc.paint)];
+
+  return vizBlock('Where the game was won or lost',
+    'Average VP per game, mine against theirs. The gap on the right is where the ' +
+    'result actually came from — losing on secondaries is a different problem ' +
+    'from losing on primary.',
+    gBars({ rows: data, unit: 'VP',
+      legend: [{name:'Me',c:VIZ.s1},{name:'Opponent',c:VIZ.s2}],
+      fmt: (r) => (r.delta >= 0 ? '+' : '−') + fmtNum(Math.abs(r.delta)) + ' VP',
+      foot: 'Over ' + n + ' battle' + (n>1?'s':'') + ' with a full score recorded.' }));
+}
+
+/* ---- 3. cuánto aguanta cada unidad ---- */
+function chartLifespan(rows, side){
+  const key = side === 'them' ? 'theirUnits' : 'units';
+  const m = new Map();
+  for (const r of rows) for (const u of (r[key] || [])) {
+    const e = m.get(u.n) || { n:0, rounds:0, died:0, pts:0, ptsN:0, idle:0 };
+    e.n++;
+    // Muere en la ronda R → estuvo R rondas. Sobrevive → las cinco.
+    e.rounds += (u.dead != null ? +u.dead : ROUNDS);
+    if (u.dead != null) e.died++;
+    if (u.pts != null) { e.pts += u.pts; e.ptsN++; }
+    if (u.acted === false) e.idle++;
+    m.set(u.n, e);
+  }
+  const data = [...m.entries()]
+    .sort((a, b) => (a[1].rounds / a[1].n) - (b[1].rounds / b[1].n))
+    .slice(0, 14)
+    .map(([k, e]) => ({
+      label: k,
+      sub: (e.ptsN ? Math.round(e.pts / e.ptsN) + ' pts · ' : '') +
+           (e.died ? 'lost in ' + e.died + ' of ' + e.n : 'never lost'),
+      segs: [{ v: e.rounds / e.n, c: e.died ? VIZ.s2 : VIZ.s1, name: 'rounds on the table' }],
+      e,
+    }));
+
+  const who = side === 'them' ? 'their' : 'your';
+  return vizBlock('How long ' + who + ' units last',
+    'Average rounds on the table out of ' + ROUNDS + '. Shortest first: the top of ' +
+    'this chart is what dies before it earns its points back. A bar that reaches ' +
+    ROUNDS + ' means it was never lost.',
+    hBars({ rows: data,
+      // sin esto el naranja/azul parece decorativo y no se entiende que es un estado
+      legend: data.some((r) => r.e.died)
+        ? [{ name:'Lost at some point', c:VIZ.s2 }, { name:'Never lost', c:VIZ.s1 }]
+        : null,
+      fmt: (r) => fmtNum(r.segs[0].v) + ' of ' + ROUNDS,
+      foot: m.size > 14 ? (m.size - 14) + ' more units in the table below.'
+                        : (data.length ? null : 'No casualties recorded yet.') }));
+}
+
+/* ---- registro de batallas ---- */
+function battleLog(rows){
+  const box = el('div');
+  box.style.cssText = 'margin:20px 0';
+  const h = el('div','rrole');
+  h.innerHTML = '<span>BATTLE LOG</span><span>' + rows.length + '</span>';
+  box.append(h);
+  if (!rows.length) { box.append(hint('Nothing recorded yet.')); return box; }
+
+  for (const r of [...rows].sort((a, b) => (b.id || 0) - (a.id || 0))) {
+    const d = document.createElement('details');
+    d.className = 'blog';
+    const res = r.result === 'W' ? 'win' : r.result === 'L' ? 'loss' : 'draw';
+    d.innerHTML = '<summary><b class="r-' + res + '">' + esc(r.result || '?') + '</b>' +
+      '<span class="bn">' + esc(r.faction || '?') +
+      (r.theirFaction ? ' vs ' + esc(r.theirFaction) : (r.opponent ? ' vs ' + esc(r.opponent) : '')) +
+      '</span><span class="bs">' + (r.me ?? 0) + ' – ' + (r.them ?? 0) + '</span>' +
+      '<i>' + esc(r.date || '') + (r.mission ? ' · ' + esc(r.mission) : '') + '</i></summary>';
+
+    const body = el('div');
+    // Marcador ronda a ronda: sin esto el registro no sirve para revisar nada.
+    // Cada celda muestra lo que CONTÓ esa ronda, no lo anotado en bruto: si el
+    // tope recorta, el bruto va entre paréntesis. Así la fila cuadra con el
+    // marcador de arriba en vez de contradecirlo.
+    if (r.rounds) {
+      const pc = r.primCap || VP_CAP.perRound;
+      let capped = false;
+      // Dos topes distintos recortan: el de la ronda y el de la partida
+      // (45 por categoría). El segundo sólo se nota acumulando, así que las
+      // celdas llevan cuenta corriente; si no, la fila sumaba más que el total.
+      const line = (who, label, tot) => {
+        let leftP = VP_CAP.primary, leftS = VP_CAP.secondary;
+        const cells = (r.rounds[who] || []).map((x) => {
+          const p = +x.p || 0, s = +x.s || 0;
+          const gp = Math.min(p, pc, leftP), gs = Math.min(s, VP_CAP.perRound, leftS);
+          leftP -= gp; leftS -= gs;
+          const got = gp + gs, raw = p + s;
+          if (got < raw) capped = true;
+          return '<td>' + got + (got < raw ? ' <i class="ov">(' + raw + ')</i>' : '') + '</td>';
+        }).join('');
+        return '<tr><th class="who">' + esc(label) + '</th>' + cells +
+          '<td>' + (r.painted && r.painted[who] ? '+' + VP_CAP.painted : '–') + '</td>' +
+          '<td class="tot">' + tot + '</td></tr>';
+      };
+
+      const t = el('table','score');
+      t.innerHTML = '<tr><th class="who">&nbsp;</th>' +
+        Array.from({length:ROUNDS}, (_, i) => '<th>R' + (i+1) + '</th>').join('') +
+        '<th>Paint</th><th>Total</th></tr>' +
+        line('me', 'Me', r.me ?? 0) +
+        line('them', r.theirFaction || r.opponent || 'Them', r.them ?? 0);
+      body.append(t);
+      if (capped) body.append(hint('In brackets: what you wrote down. The number outside is what the caps let you keep.'));
+    }
+
+    const lost = (list) => (list || []).filter((u) => u.dead != null)
+      .map((u) => u.n + ' (R' + u.dead + ')');
+    const mineLost = lost(r.units), theirLost = lost(r.theirUnits);
+    const p = el('div','hint');
+    p.innerHTML =
+      (r.disp ? '<b>' + esc(r.disp) + '</b> vs <b>' + esc(r.vsDisp || '?') + '</b><br>' : '') +
+      (mineLost.length  ? 'I lost: ' + esc(mineLost.join(', ')) + '<br>' : '') +
+      (theirLost.length ? 'They lost: ' + esc(theirLost.join(', ')) : '');
+    if (p.innerHTML) body.append(p);
+
+    d.append(body);
+    box.append(d);
+  }
+  return box;
 }
 
 boot();
