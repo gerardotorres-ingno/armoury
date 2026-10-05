@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "951d590",
-    "date": "2026-09-27T12:03:19Z"
+    "sha": "d20261005",
+    "date": "2026-10-05"
   },
   "catalogueId": "a55f-b7b3-6c65-a05f",
   "catalogueName": "Xenos - Orks",
@@ -169,7 +169,7 @@
     },
     {
       "name": "Dreadherder",
-      "pts": 20
+      "pts": 30
     },
     {
       "name": "Enhanced Runt-maw",
@@ -253,7 +253,7 @@
     },
     {
       "name": "Supa-snazz Dakka",
-      "pts": 20
+      "pts": 25
     },
     {
       "name": "Surly As A Squiggoth",
@@ -261,7 +261,7 @@
     },
     {
       "name": "Targetin' Gizmos",
-      "pts": 10
+      "pts": 25
     },
     {
       "name": "Targetin' Squigs",
@@ -289,7 +289,7 @@
     }
   ],
   "allyCaps": [],
-  "revision": 3,
+  "revision": 7,
   "file": "Orks.json",
   "counts": {
     "total": 73,
@@ -309,11 +309,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 35,
+      "points": 30,
       "ladder": [
         {
           "from": 1,
-          "pts": 35
+          "pts": 30
         }
       ],
       "cap": {
@@ -440,11 +440,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 150,
+      "points": 160,
       "ladder": [
         {
           "from": 1,
-          "pts": 150
+          "pts": 160
         }
       ],
       "cap": {
@@ -590,15 +590,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 85,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 85
+          "pts": 80
         },
         {
           "from": 11,
-          "pts": 170
+          "pts": 160
         }
       ],
       "cap": {
@@ -1048,11 +1048,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 85,
+      "points": 100,
       "ladder": [
         {
           "from": 1,
-          "pts": 85
+          "pts": 100
         }
       ],
       "cap": {
@@ -1236,11 +1236,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 135,
+      "points": 160,
       "ladder": [
         {
           "from": 1,
-          "pts": 135
+          "pts": 160
         }
       ],
       "cap": {
@@ -1614,11 +1614,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 95,
+      "points": 110,
       "ladder": [
         {
           "from": 1,
-          "pts": 95
+          "pts": 110
         }
       ],
       "cap": {
@@ -2449,15 +2449,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 90,
+      "points": 85,
       "ladder": [
         {
           "from": 1,
-          "pts": 90
+          "pts": 85
         },
         {
           "from": 11,
-          "pts": 180
+          "pts": 170
         }
       ],
       "cap": {
@@ -2834,11 +2834,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 135,
+      "points": 120,
       "ladder": [
         {
           "from": 1,
-          "pts": 135
+          "pts": 120
         }
       ],
       "cap": {
@@ -4029,15 +4029,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 80,
+      "points": 85,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 85
         },
         {
           "from": 4,
-          "pts": 160
+          "pts": 170
         }
       ],
       "cap": {
@@ -4281,15 +4281,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 105,
+      "points": 110,
       "ladder": [
         {
           "from": 1,
-          "pts": 105
+          "pts": 110
         },
         {
           "from": 6,
-          "pts": 210
+          "pts": 220
         }
       ],
       "cap": {
@@ -4413,14 +4413,14 @@
         {
           "n": "Wargear Options",
           "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
+          "min": 1,
+          "max": 2,
+          "pick": "many",
           "opts": [
             {
               "n": "Supa-kannon",
               "min": 0,
-              "max": null,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": false,
@@ -4440,7 +4440,7 @@
       ],
       "weapons": [
         {
-          "n": "➤ Huge tusks - strike",
+          "n": "Huge tusks",
           "melee": true,
           "range": "Melee",
           "a": "6",
@@ -4448,51 +4448,40 @@
           "s": "14",
           "ap": "-3",
           "d": "12",
-          "kw": "Lance"
-        },
-        {
-          "n": "➤ Huge tusks - sweep",
-          "melee": true,
-          "range": "Melee",
-          "a": "18",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-2",
-          "d": "3",
-          "kw": ""
+          "kw": "Cleave 2"
         },
         {
           "n": "Supa-kannon",
           "melee": false,
           "range": "60\"",
-          "a": "2D6",
+          "a": "8",
           "skill": "5+",
           "s": "12",
           "ap": "-2",
           "d": "3",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "➤ Kannon - shell",
           "melee": false,
           "range": "36\"",
-          "a": "1",
+          "a": "2",
           "skill": "5+",
-          "s": "9",
+          "s": "10",
           "ap": "-2",
-          "d": "D6",
-          "kw": ""
+          "d": "D6+1",
+          "kw": "Rapid Fire 2"
         },
         {
           "n": "➤ Kannon - frag",
           "melee": false,
           "range": "36\"",
-          "a": "D6",
+          "a": "6",
           "skill": "5+",
           "s": "5",
           "ap": "0",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1, Rapid Fire 6"
         }
       ],
       "composition": [
@@ -4505,16 +4494,8 @@
       ],
       "abilities": [
         {
-          "n": "Gargantuan",
-          "d": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there."
-        },
-        {
           "n": "Walking Bastion",
-          "d": "This model does not suffer the penalty to its Hit rolls for making ranged attacks while enemy units are within Engagement Range of it."
-        },
-        {
-          "n": "Damaged: 1-10 Wounds Remaining",
-          "d": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+          "d": "This unit's attacks can ignore modifiers to: - BS/WS - Hit rolls"
         }
       ],
       "faction": "Orks",
@@ -4549,11 +4530,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 300,
+      "points": 290,
       "ladder": [
         {
           "from": 1,
-          "pts": 300
+          "pts": 290
         }
       ],
       "cap": null,
@@ -4870,7 +4851,7 @@
           "pts": 45
         },
         {
-          "from": 12,
+          "from": 11,
           "pts": 80
         }
       ],
@@ -7678,7 +7659,7 @@
         },
         {
           "from": 4,
-          "pts": 260
+          "pts": 275
         }
       ],
       "cap": {
@@ -8103,6 +8084,15 @@
               "p": 0,
               "model": false,
               "w": []
+            },
+            {
+              "n": "Crushin' Bulk",
+              "min": 1,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
             }
           ]
         },
@@ -8180,6 +8170,17 @@
           "ap": "0",
           "d": "D6",
           "kw": "CLEAVE 2, EXTRA ATTACKS"
+        },
+        {
+          "n": "Crushin' Bulk",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Cleave 1"
         },
         {
           "n": "Big Shoota",
@@ -8548,23 +8549,23 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 70,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 70
         },
         {
           "from": 3,
-          "pts": 110
+          "pts": 105
         },
         {
           "from": 4,
-          "pts": 185
+          "pts": 175
         },
         {
           "from": 6,
-          "pts": 225
+          "pts": 210
         }
       ],
       "cap": {
@@ -8780,11 +8781,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 45,
+      "points": 55,
       "ladder": [
         {
           "from": 1,
-          "pts": 45
+          "pts": 55
         }
       ],
       "cap": {
@@ -9524,11 +9525,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 175,
+      "points": 165,
       "ladder": [
         {
           "from": 1,
-          "pts": 175
+          "pts": 165
         }
       ],
       "cap": null,
@@ -9651,15 +9652,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 125,
+      "points": 115,
       "ladder": [
         {
           "from": 1,
-          "pts": 125
+          "pts": 115
         },
         {
           "from": 6,
-          "pts": 250
+          "pts": 230
         }
       ],
       "cap": {
@@ -10337,15 +10338,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 140,
+      "points": 130,
       "ladder": [
         {
           "from": 1,
-          "pts": 140
+          "pts": 130
         },
         {
           "from": 5,
-          "pts": 280
+          "pts": 260
         }
       ],
       "cap": {
@@ -10837,11 +10838,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 145,
+      "points": 160,
       "ladder": [
         {
           "from": 1,
-          "pts": 145
+          "pts": 160
         }
       ],
       "cap": {
@@ -12554,11 +12555,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 125,
+      "points": 115,
       "ladder": [
         {
           "from": 1,
-          "pts": 125
+          "pts": 115
         }
       ],
       "cap": {
@@ -14419,11 +14420,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 65,
+      "points": 60,
       "ladder": [
         {
           "from": 1,
-          "pts": 65
+          "pts": 60
         }
       ],
       "cap": {
