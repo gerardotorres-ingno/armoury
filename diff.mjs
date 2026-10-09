@@ -31,9 +31,30 @@ async function loadSnapshot(dir) {
       version: d.version,
       revision: d.revision,
       datasheets: d.datasheets.filter((x) => x.native),
+      // Destacamentos y mejoras viajan aparte de las datasheets. Sin esto el
+      // changelog no vio la reestructuración de octubre de 2026, que borró 98
+      // destacamentos de Marines y dejó listas guardadas apuntando a nada.
+      detachments: d.detachments ?? [],
+      enhancements: d.enhancements ?? [],
     });
   }
   return byCatalogue;
+}
+
+/* Destacamentos y mejoras se identifican por nombre: no traen id estable, y
+ * el nombre es justamente lo que guarda la lista del usuario. */
+function diffNamed(oldArr, newArr, kinds, valueOf){
+  const A = new Map((oldArr ?? []).map((x) => [x.name, x]));
+  const B = new Map((newArr ?? []).map((x) => [x.name, x]));
+  const events = [];
+  for (const [n, nu] of B) {
+    const old = A.get(n);
+    if (!old) { events.push({ kind: kinds.added, name: n }); continue; }
+    const a = valueOf(old), b = valueOf(nu);
+    if (a !== b) events.push({ kind: kinds.changed, name: n, from: a, to: b });
+  }
+  for (const n of A.keys()) if (!B.has(n)) events.push({ kind: kinds.removed, name: n });
+  return events;
 }
 
 function diffCatalogue(oldSheets, newSheets) {
@@ -144,11 +165,21 @@ const LABEL = {
   'legends->crucible': '📖 Legends → Crucible',
   'crucible->legends': '⚠️  Crucible → Legends',
   points: '💰 Puntos',
+  // Un destacamento que desaparece rompe las listas que lo tenían elegido:
+  // va arriba de todo, antes incluso que los pases a Legends.
+  'det-':   '🛑 Destacamento eliminado',
+  'det+':   '🆕 Destacamento nuevo',
+  detDP:    '🎖️  DP de destacamento',
+  'enh-':   '🛑 Mejora eliminada',
+  'enh+':   '🆕 Mejora nueva',
+  enhPts:   '💠 Puntos de mejora',
 };
 
 const ORDER = [
+  'det-', 'enh-',
   'standard->legends', 'legends->standard',
   'added', 'removed', 'renamed', 'recreated',
+  'det+', 'enh+', 'detDP', 'enhPts',
   'standard->crucible', 'crucible->standard',
   'legends->crucible', 'crucible->legends',
   'points',
@@ -171,7 +202,7 @@ function render(byCatalogue) {
       const list = grouped.get(kind);
       if (!list) continue;
       for (const e of list) {
-        if (kind === 'points') {
+        if (kind === 'points' || kind === 'detDP' || kind === 'enhPts') {
           lines.push(`- ${LABEL[kind]} · ${e.name}: ${e.from} → ${e.to}`);
         } else if (kind === 'renamed') {
           lines.push(`- ${LABEL[kind]} · ${e.from} → ${e.to}`);
@@ -189,14 +220,60 @@ function render(byCatalogue) {
 
 // ---------------------------------------------------------------- main
 
+/* Modo --app: compara dos collection-data.json, el dato YA ENSAMBLADO.
+ *
+ * Hace falta porque los destacamentos de cada facción no salen de BSData sino
+ * del MFM, y se cruzan recién en prepare-data. Comparando sólo la extracción,
+ * el MFM v1.5 reorganizó los destacamentos de los seis capítulos de Marines y
+ * el changelog no dijo una palabra — mientras las listas guardadas quedaban
+ * apuntando a destacamentos inexistentes. */
+async function mainApp(oldFile, newFile, asJson) {
+  const [A, B] = await Promise.all(
+    [oldFile, newFile].map(async (f) => JSON.parse(await fs.readFile(f, 'utf8')))
+  );
+  const nameOf = (x) => (Array.isArray(x) ? x[0] : x.n ?? x.name);
+  const facs = (d) => new Map(d.factions.map((f) => [f.name, f]));
+  const FA = facs(A), FB = facs(B);
+
+  const result = new Map();
+  for (const name of [...new Set([...FA.keys(), ...FB.keys()])].sort()) {
+    const o = FA.get(name), n = FB.get(name);
+    if (!o) { result.set(name, [{ kind:'added', name:'(facción nueva)' }]); continue; }
+    if (!n) { result.set(name, [{ kind:'removed', name:'(facción eliminada)' }]); continue; }
+    const asNamed = (arr) => (arr ?? []).map((x) => ({ name: nameOf(x), dp: x[1], pts: x[1] }));
+    result.set(name, [
+      ...diffNamed(asNamed(o.det), asNamed(n.det),
+        { added:'det+', removed:'det-', changed:'detDP' }, (d) => d.dp),
+      ...diffNamed(asNamed(o.enh), asNamed(n.enh),
+        { added:'enh+', removed:'enh-', changed:'enhPts' }, (e) => e.pts),
+      ...diffNamed(
+        (o.units ?? []).map((u) => ({ name:u.n, p:u.p })),
+        (n.units ?? []).map((u) => ({ name:u.n, p:u.p })),
+        { added:'added', removed:'removed', changed:'points' }, (u) => u.p),
+    ]);
+  }
+
+  if (asJson) { console.log(JSON.stringify(Object.fromEntries(result), null, 2)); return; }
+
+  const { lines, totals } = render(result);
+  console.log(`# Changelog 40k 11e — MFM ${A.mfmVersion ?? '?'} → ${B.mfmVersion ?? '?'}` +
+              ` · rev ${B.revision?.sha ?? '?'}`);
+  if (!lines.length) { console.log('\nSin cambios entre las dos versiones.'); return; }
+  console.log('\n' + ORDER.filter((k) => totals[k]).map((k) => `${LABEL[k]}: ${totals[k]}`).join('  ·  '));
+  console.log(lines.join('\n'));
+}
+
 async function main() {
   const [oldDir, newDir] = process.argv.slice(2).filter((a) => !a.startsWith('--'));
   const asJson = process.argv.includes('--json');
 
   if (!oldDir || !newDir) {
     console.error('uso: node diff.mjs <snapshot-anterior> <snapshot-nuevo> [--json]');
+    console.error('     node diff.mjs --app <collection-data-viejo.json> <nuevo.json> [--json]');
     process.exit(1);
   }
+
+  if (process.argv.includes('--app')) return mainApp(oldDir, newDir, asJson);
 
   const [prev, next] = await Promise.all([loadSnapshot(oldDir), loadSnapshot(newDir)]);
 
@@ -215,7 +292,13 @@ async function main() {
       result.set(name, [{ kind: 'removed', name: '(catálogo eliminado)', id: null }]);
       continue;
     }
-    result.set(name, diffCatalogue(o.datasheets, n.datasheets));
+    result.set(name, [
+      ...diffCatalogue(o.datasheets, n.datasheets),
+      ...diffNamed(o.detachments, n.detachments,
+        { added:'det+', removed:'det-', changed:'detDP' }, (d) => d.dp),
+      ...diffNamed(o.enhancements, n.enhancements,
+        { added:'enh+', removed:'enh-', changed:'enhPts' }, (e) => e.pts),
+    ]);
   }
 
   if (asJson) {

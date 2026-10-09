@@ -411,6 +411,13 @@ input[type=search]::placeholder{color:var(--ink2)}
   padding:9px 12px;margin-bottom:6px;font-size:13px}
 .warn.soft{border-left-color:var(--ochre);background:var(--ochre-bg);color:var(--ink)}
 .warn b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;display:block;color:var(--ink2)}
+/* Tabla ancha que se desplaza sola en vez de empujar la página. */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+.tscroll>table{min-width:max-content}
+/* Destacamento guardado que el catálogo ya no trae: tiene que saltar a la vista. */
+.gone{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--oxide);border:1px solid var(--oxide);
+  border-radius:2px;padding:1px 5px;margin-left:6px;white-space:nowrap}
 .slot{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule)}
 .slot .id{flex:1;min-width:0}
 .hint{font-family:var(--mono);font-size:11px;color:var(--ink2);margin:-6px 0 14px}
@@ -489,7 +496,10 @@ input[type=search]::placeholder{color:var(--ink2)}
   .wrap{padding:0 12px}
   h1{font-size:25px}
   .masthead{padding:16px 0 10px}
-  .stamp{text-align:left}
+  /* El sello trae facciones, unidades, MFM y revisión en una línea; con
+     nowrap medía 492px en una pantalla de 390 y arrastraba scroll horizontal
+     a toda la app. En el teléfono baja de renglón. */
+  .stamp{text-align:left;white-space:normal}
   .line,.slot{flex-wrap:wrap}
   .line .id,.slot .id{flex:1 1 100%;order:1}
   .line .step,.slot .step{order:2}
@@ -498,7 +508,16 @@ input[type=search]::placeholder{color:var(--ink2)}
   .step input{height:var(--tap);width:56px;font-size:16px}
   .btn,.tog{min-height:38px}
   .bar select,.bar input{flex:1 1 100%}
-  .tabs button{flex:1;padding:11px 8px}
+  /* Cinco pestañas en 390px: sin min-width:0 el flex no las deja encoger por
+     debajo de su texto y la barra se salía 114px fuera de la pantalla, lo que
+     dejaba scroll horizontal en TODA la app, no sólo acá. */
+  .tabs{overflow:hidden}
+  .tabs button{flex:1 1 0;min-width:0;padding:11px 2px;font-size:12px;
+    letter-spacing:.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  /* El renglón de totales tampoco entraba: que baje de línea antes de empujar. */
+  .ledger{flex-wrap:wrap;gap:4px 12px}
+  .ledger .lf{flex:1 1 100%}
+  .ledger .lm{white-space:normal}
   .wp td:first-child{max-width:44vw}
   .filters{gap:10px 14px}
 }
@@ -1335,6 +1354,20 @@ function review(l){
   const dets = l.dets || [];
   if (dets.length && detsOf(f).length) {
     const info = new Map(detsOf(f).map((d) => [d[0], d]));
+
+    // Un destacamento guardado puede desaparecer del catálogo cuando se
+    // actualizan los datos. Antes se quedaba en la lista costando 0 DP y
+    // pasando la validación en verde, pero sin otorgar ninguna regla: la
+    // lista se veía legal y no lo era. Hay que decirlo.
+    const ghosts = dets.filter((n) => !info.has(n));
+    if (ghosts.length)
+      out.push({ hard:true,
+                 t:ghosts.length > 1 ? 'Detachments no longer in the catalogue'
+                                     : 'Detachment no longer in the catalogue',
+                 d:ghosts.join(', ') + ' — ' +
+                   (ghosts.length > 1 ? 'they grant no rules and cost' : 'it grants no rules and costs') +
+                   ' 0 DP. Pick a current one.' });
+
     const spent = dets.reduce((a, n) => a + (info.get(n)?.[1] ?? 0), 0);
     const budget = dpBudget(l);
     if (spent > budget)
@@ -2722,8 +2755,12 @@ function detachmentsFor(l, f){
   for (const [i, name] of l.dets.entries()) {
     const d = info.get(name);
     const row = el('div','slot');
-    row.innerHTML = '<div class="id"><div class="nm">' + esc(name) + '</div>' +
-      '<div class="meta">' + (d ? d[1] + ' DP' : '?') +
+    // Sin el aviso, un destacamento que el cat\u00e1logo ya no tiene se ve\u00eda igual
+    // que uno vigente, s\u00f3lo que con "?" donde van los DP.
+    row.innerHTML = '<div class="id"><div class="nm">' + esc(name) +
+      (d ? '' : ' <em class="gone">no longer in the catalogue</em>') + '</div>' +
+      '<div class="meta">' + (d ? d[1] + ' DP'
+                                : 'Grants no rules and costs 0 DP \u00b7 replace it') +
       (d?.[2] ? ' \u00b7 ' + esc(d[2]) + (l.mission === d[2] ? ' \u2713' : '') : '') +
       (d?.[3] ? ' \u00b7 unique: ' + esc(d[3]) : '') + '</div></div>';
     const rm = el('button','btn'); rm.textContent = 'REMOVE';
@@ -4639,10 +4676,17 @@ function requirements(l){
   const dl = detsOf(f);
   const spent = (l.dets || []).reduce((a, n) =>
     a + ((dl.find(([x]) => x === n) || [])[1] ?? 0), 0);
+  // Un nombre que el catálogo ya no tiene no cuenta como destacamento elegido:
+  // si no, la lista pasaba en verde con destacamentos que no existen.
+  const live = (l.dets || []).filter((n) => dl.some(([x]) => x === n));
+  const ghosts = (l.dets || []).length - live.length;
   req.push({
     k: 'det', t: 'A detachment',
-    ok: (l.dets || []).length > 0,
-    d: (l.dets || []).length ? spent + ' / ' + dpBudget(l) + ' DP used' : 'Pick at least one',
+    ok: live.length > 0,
+    d: ghosts
+         ? ghosts + (ghosts > 1 ? ' no longer exist' : ' no longer exists') +
+           (live.length ? ' · ' + spent + ' / ' + dpBudget(l) + ' DP used' : '')
+         : (live.length ? spent + ' / ' + dpBudget(l) + ' DP used' : 'Pick at least one'),
   });
 
   const missions = missionsFor(l, f);
@@ -5638,7 +5682,10 @@ function splitTable(title, rows){
       '<td>' + e.n + '</td><td>' + e.W + '</td><td>' + e.L + '</td><td>' + e.D + '</td>' +
       '<td class="tot">' + pct(e) + '</td>' +
       '<td>' + Math.round(e.vp / e.n) + '</td><td>' + Math.round(e.avp / e.n) + '</td></tr>').join('');
-  box.append(t);
+  // Ocho columnas no entran en un teléfono: que se desplace la tabla, no la página.
+  const scr = el('div','tscroll');
+  scr.append(t);
+  box.append(scr);
   return box;
 }
 
@@ -5673,7 +5720,9 @@ function unitTable(rows){
         '<td>' + e.died + '</td><td class="tot">' + surv + '</td>' +
         '<td>' + avg + '</td><td>' + e.idle + '</td></tr>';
     }).join('');
-  box.append(t);
+  const scrU = el('div','tscroll');
+  scrU.append(t);
+  box.append(scrU);
   box.append(hint('A unit with high "never acted" is paying points for nothing. ' +
                   'One that always dies in round 2 is either bait or misplaced.'));
   return box;
@@ -6316,7 +6365,11 @@ function battleLog(rows){
         '<th>Paint</th><th>Total</th></tr>' +
         line('me', 'Me', r.me ?? 0) +
         line('them', r.theirFaction || r.opponent || 'Them', r.them ?? 0);
-      body.append(t);
+      // Siete columnas no entran en un teléfono. Que se desplace la tabla
+      // dentro de su caja, no la página entera.
+      const scr = el('div','tscroll');
+      scr.append(t);
+      body.append(scr);
       if (capped) body.append(hint('In brackets: what you wrote down. The number outside is what the caps let you keep.'));
     }
 

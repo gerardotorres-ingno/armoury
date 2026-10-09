@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/32257326/README.md)
 # Armoury
 
 Warhammer 40,000 collection tracker and list composer. Reads its data from two
@@ -27,8 +26,18 @@ Sin el MFM la app funciona igual, con precios aproximados de BSData.
 
 O `npm run build`, que corre los tres en orden.
 
-`node diff.mjs <snapshot-viejo> output` compara dos extracciones y escribe el
-changelog: altas, bajas, renombres, recreaciones, cambios de puntos y de Legends.
+El comparador tiene dos modos, y hacen falta los dos:
+
+    node diff.mjs <snapshot-viejo> output
+    node diff.mjs --app <collection-data-viejo.json> app/collection-data.json
+
+El primero compara extracciones de BSData: altas, bajas, renombres,
+recreaciones y pases a Legends. El segundo compara el dato ya ensamblado, que
+es donde se ven los **destacamentos y mejoras por facción** — ésos salen del
+MFM y se cruzan recién en `prepare-data.mjs`, así que el primer modo no los
+ve. En octubre de 2026 el MFM reorganizó los destacamentos de los seis
+capítulos de Marines y el changelog no dijo nada hasta que existió el segundo
+modo.
 
 ## La app
 
