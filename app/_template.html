@@ -538,13 +538,18 @@ input[type=search]::placeholder{color:var(--ink2)}
 /* ---------- impresión: hoja de consulta rápida ---------- */
 #printArea{display:none}
 @media print{
-  @page{margin:14mm}
+  /* Carta, no A4: es el tamaño que se usa en Chile y en toda América.
+     Con A4 el navegador reescalaba y los márgenes salían desparejos. */
+  @page{size:letter;margin:10mm}
   /* El papel no tiene modo oscuro: se fuerza la paleta clara al imprimir. */
   :root{--field:#fff;--panel:#fff;--ink:#000;--ink2:#444;--rule:#bbb;--rule2:#888;
         --plate:#000;--plate-ink:#fff;--plate-line:#999;--ochre:#7a5c00;--ochre-bg:#f4eccd}
   body{background:#fff;color:#000;padding:0}
   button,input,select{color:#000}
-  .tabs,.totals,.controls,.filters,.bar,#viewCol,#viewLists,header,#fatal{display:none !important}
+  /* Faltaban viewHome, viewBattles y viewStats: la pestaña de inicio se
+     imprimía detrás de las fichas y se iban tres hojas en cada impresión. */
+  .tabs,.totals,.controls,.filters,.bar,header,#fatal,
+  #viewCol,#viewLists,#viewHome,#viewBattles,#viewStats{display:none !important}
   #printArea{display:block}
   .pr-head{border-bottom:2px solid #000;padding-bottom:8px;margin-bottom:12px}
   .pr-head h1{font-family:var(--disp);font-size:26px;font-weight:600}
@@ -557,39 +562,56 @@ input[type=search]::placeholder{color:var(--ink2)}
      por unidad se iba a tres páginas con cuatro unidades. */
   /* Dos columnas sólo si hay ancho. En el celular la impresión usa el ancho
      del viewport, y dos columnas de 230 px salían aplastadas e ilegibles. */
-  .pr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:9px}
+  /* Una hoja por cada grupo de PRINT_PER_PAGE fichas. Antes fluían seguidas y
+     una unidad podía quedar partida al pie de la página o aplastada entre
+     otras cinco; en la mesa eso es ilegible. */
+  /* inline-block y NO grid: Chromium parte una rejilla al final de la página
+     aunque sobre espacio, y salían dos fichas por hoja con media carilla en
+     blanco. El flujo en línea se fragmenta bien. */
+  .pr-grid{font-size:0;break-after:page;page-break-after:always}
+  .pr-grid:last-child{break-after:auto;page-break-after:auto}
+  .pr-card{display:inline-block;width:49%;vertical-align:top;
+    margin:0 2% 8px 0;font-size:initial}
+  .pr-card:nth-child(2n){margin-right:0}
+  /* El resumen de la lista va solo en la primera hoja. */
+  .pr-sum{break-after:page;page-break-after:always}
   /* Los fondos de las bandas deben imprimirse; si no, quedan cajas vacías. */
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .pr-card{break-inside:avoid;page-break-inside:avoid;
-    border:1px solid #999;border-radius:2px;padding:6px 8px}
-  .pr-card h3{font-family:var(--disp);font-size:13.5px;font-weight:600;
+    border:1px solid #999;border-radius:2px;padding:7px 10px}
+  .pr-card h3{font-family:var(--disp);font-size:15.5px;font-weight:600;
     border-bottom:1px solid #999;padding-bottom:3px;margin-bottom:5px;
     display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-  .pr-card h3 em{font-style:normal;font-family:var(--mono);font-size:9.5px;
+  .pr-card h3 em{font-style:normal;font-family:var(--mono);font-size:11px;
     color:#555;white-space:nowrap}
   .pr-strip{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
   .pr-strip span{border:1px solid #000;border-radius:3px;padding:0 4px;
-    font-family:var(--disp);font-weight:600;font-size:11.5px;min-width:29px;text-align:center}
+    font-family:var(--disp);font-weight:600;font-size:13.5px;min-width:34px;text-align:center}
   .pr-strip span i{display:block;font-style:normal;font-family:var(--mono);
-    font-size:6.5px;letter-spacing:.1em;color:#555}
-  .pr-strip span.wide{min-width:48px}
+    font-size:7.5px;letter-spacing:.1em;color:#555}
+  .pr-strip span.wide{min-width:56px}
   .pr-w{width:100%;border-collapse:collapse}
-  .pr-w td{font-family:var(--mono);font-size:9.5px;padding:1px 3px;
+  .pr-w td{font-family:var(--mono);font-size:11px;padding:2px 3px;
     border-bottom:1px solid #ddd;text-align:right}
-  .pr-w td:first-child{text-align:left;font-family:var(--body);font-size:10.5px}
-  .pr-w td b{font-family:var(--mono);font-size:9px;color:#555;font-weight:500}
+  .pr-w td:first-child{text-align:left;font-family:var(--body);font-size:12px}
+  .pr-w td b{font-family:var(--mono);font-size:10.5px;color:#555;font-weight:500}
   /* Las de cuerpo a cuerpo se agrupan al final; la columna de alcance ya
      dice "Melee", así que no hace falta ningún icono. */
-  .pr-abs{font-size:8.5px;color:#333;margin-top:4px;line-height:1.4}
+  .pr-abs{font-size:10.5px;color:#222;margin-top:5px;line-height:1.45}
   .pr-abs p{margin-bottom:2px}
   .pr-abs b{color:#000;font-weight:600}
-  .pr-kw{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;color:#555;
+  .pr-kw{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:#444;
     text-transform:uppercase;border-top:1px solid #ccc;margin-top:5px;padding-top:3px}
-  .pr-more{font-family:var(--mono);font-size:8.5px;color:#777;margin-top:3px}
+  .pr-more{font-family:var(--mono);font-size:10px;color:#666;margin-top:4px}
   .ros td.lead,.pr-roster td.lead{padding-left:20px;color:#333}
   .pr-unit .abil p{font-size:11px}
   .pr-unit .wp{font-size:11px}
   .pr-unit .stat{border-color:#999}
+}
+/* Imprimir desde el celular usa el ancho del viewport: dos columnas de 180 px
+   salían ilegibles. Ahí va una ficha por fila. */
+@media print and (max-width:560px){
+  .pr-card{width:100%;margin-right:0}
 }
 </style>
 </head>
@@ -3101,7 +3123,16 @@ function importList(){
  * ---------------------------------------------------------------- */
 /* Longitud máxima del texto de una habilidad impresa. Es la perilla que
  * regula cuántas páginas ocupa la lista. */
-const PRINT_AB_LEN = 190;
+const PRINT_AB_LEN = 200;
+
+/* Cuántas fichas entran en una hoja carta. Es la perilla: subilo a 6 si
+ * preferís gastar menos papel y tus unidades son cortas. */
+const PRINT_PER_PAGE = 4;
+
+/* Cuántas habilidades se imprimen por ficha. Sin este tope una sola unidad
+ * cargada —el Defiler llegaba a 637 px— ocupaba media hoja y empujaba a las
+ * otras tres a la página siguiente. El resto se consulta en la app. */
+const PRINT_AB_MAX = 4;
 
 function printList(l){
   const f = factionOf(l.faction);
@@ -3161,7 +3192,7 @@ function printList(l){
   // fichas, una por unidad distinta
   // Fichas de referencia, dos por fila. Una ficha por combinación de unidad
   // y equipamiento: dos Defilers con armas distintas son dos fichas.
-  const grid = el('div','pr-grid');
+  const cards = [];
   const seen = new Set();
 
   for (const [si, sl] of l.slots.entries()) {
@@ -3211,10 +3242,15 @@ function printList(l){
     // el texto muy largo se recorta: en la mesa alcanza con el enunciado
     // para saber qué hace, y el detalle se consulta en la app.
     if (u.ab && u.ab.length) {
-      inner += '<div class="pr-abs">' + u.ab.map(([n, t]) => {
+      const abShown = u.ab.slice(0, PRINT_AB_MAX);
+      inner += '<div class="pr-abs">' + abShown.map(([n, t]) => {
         const cut = t.length > PRINT_AB_LEN ? t.slice(0, PRINT_AB_LEN).replace(/\s+\S*$/, '') + '\u2026' : t;
         return '<p><b>' + esc(n) + '.</b> ' + esc(cut) + '</p>';
       }).join('') + '</div>';
+      if (u.ab.length > abShown.length)
+        inner += '<div class="pr-more">+' + (u.ab.length - abShown.length) +
+                 ' more abilities \u00b7 ' +
+                 esc(u.ab.slice(PRINT_AB_MAX).map(([n]) => n).join(', ')) + '</div>';
     }
 
     // Palabras clave: la línea que se consulta para saber si una regla aplica.
@@ -3222,9 +3258,19 @@ function printList(l){
       inner += '<div class="pr-kw">' + esc(u.kw.join(' \u00b7 ')) + '</div>';
 
     card.innerHTML = inner;
-    grid.append(card);
+    cards.push(card);
   }
-  area.append(grid);
+
+  // De a PRINT_PER_PAGE por hoja. Cada grupo es su propia rejilla con salto
+  // de página detrás, así ninguna unidad queda partida ni apretada.
+  if (cards.length) {
+    t.classList.add('pr-sum');            // el resumen se queda solo en la hoja 1
+    for (let i = 0; i < cards.length; i += PRINT_PER_PAGE) {
+      const pageGrid = el('div','pr-grid');
+      for (const c of cards.slice(i, i + PRINT_PER_PAGE)) pageGrid.append(c);
+      area.append(pageGrid);
+    }
+  }
 
   window.print();
 }
