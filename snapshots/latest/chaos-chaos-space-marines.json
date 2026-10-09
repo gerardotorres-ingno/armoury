@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "d20261005",
-    "date": "2026-10-05"
+    "sha": "6166445",
+    "date": "2026-10-07T21:59:51Z"
   },
   "catalogueId": "c8da-e875-58f7-f6d6",
   "catalogueName": "Chaos - Chaos Space Marines",
@@ -738,7 +738,7 @@
       "scope": "force"
     }
   ],
-  "revision": 23,
+  "revision": 26,
   "file": "Chaos - Chaos Space Marines.json",
   "counts": {
     "total": 114,
@@ -1938,8 +1938,8 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Armoured tracks",
-              "min": 1,
+              "n": "Combi-bolter",
+              "min": 0,
               "max": 1,
               "scale": null,
               "p": 0,
@@ -1947,8 +1947,8 @@
               "w": []
             },
             {
-              "n": "Combi-bolter",
-              "min": 0,
+              "n": "Armoured tracks",
+              "min": 1,
               "max": 1,
               "scale": null,
               "p": 0,
@@ -2110,6 +2110,17 @@
       ],
       "weapons": [
         {
+          "n": "Combi-bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        },
+        {
           "n": "➤ Plasma destroyer - standard",
           "melee": false,
           "range": "36\"",
@@ -2207,17 +2218,6 @@
           "ap": "0",
           "d": "1",
           "kw": ""
-        },
-        {
-          "n": "Combi-bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Rapid Fire 2"
         },
         {
           "n": "Hunter-killer missile",
@@ -2734,7 +2734,7 @@
           "range": "Melee",
           "a": "7",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -7289,8 +7289,8 @@
           "range": "24\"",
           "a": "1",
           "skill": "4+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
         },
@@ -7692,7 +7692,7 @@
       "abilities": [
         {
           "n": "For the Dark Gods",
-          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of Control over that objective marker is greater than yours at the start or end of any phase."
         },
         {
           "n": "Khorne",
@@ -8040,7 +8040,7 @@
       "abilities": [
         {
           "n": "For the Dark Gods",
-          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+          "d": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of Control over that objective marker is greater than yours at the start or end of any phase."
         },
         {
           "n": "Khorne",
