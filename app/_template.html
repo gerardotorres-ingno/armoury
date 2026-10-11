@@ -411,6 +411,23 @@ input[type=search]::placeholder{color:var(--ink2)}
   padding:9px 12px;margin-bottom:6px;font-size:13px}
 .warn.soft{border-left-color:var(--ochre);background:var(--ochre-bg);color:var(--ink)}
 .warn b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;display:block;color:var(--ink2)}
+/* Línea de bajas: un bloque por ronda. En fila en pantalla ancha, apilados
+   en el teléfono — el mismo HTML sirve para los dos. */
+.tl{display:flex;gap:7px;margin-top:8px}
+.tl .tlr{flex:1 1 0;min-width:0}
+.tl .hd{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink2);
+  text-transform:uppercase;padding-bottom:4px;border-bottom:1px solid var(--rule);margin-bottom:4px}
+.tl .cell{display:flex;flex-direction:column;gap:3px;min-height:34px}
+.tl .nada{font-family:var(--mono);font-size:9.5px;color:var(--rule2)}
+.kill{font-size:11px;border-radius:2px;padding:3px 7px;line-height:1.3;overflow-wrap:anywhere}
+.kill.me{background:#3a1f1c;border-left:2px solid #d95926;color:#f0d8d0}
+.kill.them{background:#15293f;border-left:2px solid #3987e5;color:#cfe0f2}
+.kill em{font-style:normal;font-family:var(--mono);font-size:9.5px;opacity:.75;display:block}
+@media screen and (max-width:620px){
+  .tl{flex-direction:column;gap:10px}
+  .tl .hd{margin-bottom:5px}
+}
+
 /* Tabla ancha que se desplaza sola en vez de empujar la página. */
 .tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
 .tscroll>table{min-width:max-content}
@@ -3337,6 +3354,22 @@ let battles = [];
 let openBattle = null;
 
 function saveBattle(b){ store.put('battles', b); }
+
+/* Borrar una batalla. Una sola función para los tres accesos —el listado,
+ * la batalla abierta y el registro de Stats— para que el aviso y lo que se
+ * borra sean siempre lo mismo. */
+function deleteBattle(b){
+  const mine = lists.find((x) => x.id === b.mine);
+  const quien = (mine ? (mine.name || 'Untitled') : '?') + ' vs ' + (b.opponent || '?');
+  if (!confirm('Delete the battle "' + quien + '" of ' + b.date + '?\n' +
+               'This cannot be undone: the score, the casualties and the clock go with it.')) return;
+  store.del('battles', b.id);
+  battles = battles.filter((x) => x.id !== b.id);
+  if (openBattle === b.id) openBattle = null;
+  if (statsBattle === b.id) statsBattle = null;
+  renderBattles();
+  renderStats();
+}
 function loadBattles(){ return store.getAll('battles'); }
 
 const ROUNDS = 5;
@@ -3652,6 +3685,17 @@ function renderBattlesInner(){
         (b.done ? ' · finished' : ' · round ' + b.round) + '</div></div>' +
         '<div class="pts">' + t.me + ' – ' + t.them + '</div>';
       c.onclick = () => { openBattle = b.id; renderBattles(); };
+      // Borrar sin tener que entrar: el DELETE de adentro obligaba a abrir
+      // la batalla, mirarla entera y recién ahí poder sacarla.
+      const rm = el('button','btn');
+      rm.textContent = '\u2715';
+      rm.title = 'Delete this battle';
+      rm.style.cssText = 'padding:4px 9px;margin-left:10px;line-height:1';
+      rm.onclick = (ev) => {
+        ev.stopPropagation();            // sin esto también abre la batalla
+        deleteBattle(b);
+      };
+      c.append(rm);
       v.append(c);
     }
     return;
@@ -3668,12 +3712,7 @@ function renderBattlesInner(){
   back.onclick = () => { openBattle = null; renderBattles(); };
   const shr = battleShareMenu(b);
   const del = el('button','btn'); del.textContent = 'DELETE';
-  del.onclick = () => {
-    if (!confirm('Delete this battle?')) return;
-    store.del('battles', b.id);
-    battles = battles.filter((x) => x.id !== b.id);
-    openBattle = null; renderBattles();
-  };
+  del.onclick = () => deleteBattle(b);
   const stp = el('button','btn'); stp.textContent = 'SETUP';
   stp.title = 'Lists, battle size and secondary system';
   stp.onclick = () => { b.setup = true; saveBattle(b); renderBattles(); };
@@ -5412,7 +5451,8 @@ function importRules(){
    marcador y unidades. Ni nombres de rivales ni notas.
    ============================================================ */
 let pool = [];        // batallas importadas de otras personas
-let statsSide = 'me'; // qué lado muestra el gráfico de unidades
+let statsSide = 'me';   // qué lado muestra el gráfico de unidades
+let statsBattle = null; // id de la batalla que se está mirando sola; null = todas
 
 function savePool(){ store.put('misc', { id: 'statsPool', qty: JSON.stringify(pool) }); }
 async function loadPool(){
@@ -5466,6 +5506,13 @@ function summarise(b, mine){
     // Sin la facción del rival no hay comparativa posible: era el hueco que
     // dejaba la pestaña sin nada del otro lado.
     theirFaction: oppF ? oppF.name : null,
+    // Puntos de partida de cada ejército: el techo de la curva de puntos en
+    // mesa. Los del rival sólo existen si cargaste su lista.
+    total: {
+      me: units.reduce((a, x) => a + (+x.pts || 0), 0) +
+          (l ? (l.enh || []).reduce((a, e) => a + (+e.pts || 0), 0) : 0),
+      them: oppL ? theirUnits.reduce((a, x) => a + (+x.pts || 0), 0) : null,
+    },
     listName: l ? (l.name || 'Untitled') : null,
     opponent: b.opponent || null,
     rounds: { me: b.me, them: b.them },
@@ -5681,7 +5728,51 @@ function renderStats(){
     return;
   }
 
-  // ---- resumen propio
+  // Todas las batallas o una sola. Los promedios contestan "cómo me va";
+  // una batalla contesta "qué pasó ese día y en qué ronda se decidió".
+  const selBar = el('div','sswitch');
+  for (const [k, lab] of [[null,'All battles'], ['one','One battle']]) {
+    const bt = el('button', 'chip' + ((k === null) === (statsBattle === null) ? ' on' : ''));
+    bt.textContent = lab;
+    bt.onclick = () => {
+      statsBattle = k === null ? null : (statsBattle ?? (mine[0] && mine[0].id) ?? null);
+      renderStats();
+    };
+    selBar.append(bt);
+  }
+  if (statsBattle !== null && mine.length) {
+    const sel = el('select');
+    sel.style.cssText = 'flex:1 1 300px;min-width:0;font-size:12px';
+    for (const r of [...mine].sort((a, b) => (b.id || 0) - (a.id || 0))) {
+      const o = el('option'); o.value = r.id;
+      o.textContent = (r.date || '') + ' \u00b7 ' + (r.faction || '?') +
+        (r.theirFaction ? ' vs ' + r.theirFaction : (r.opponent ? ' vs ' + r.opponent : '')) +
+        ' \u00b7 ' + r.me + '\u2013' + r.them + (r.mission ? ' \u00b7 ' + r.mission : '');
+      if (String(r.id) === String(statsBattle)) o.selected = true;
+      sel.append(o);
+    }
+    sel.onchange = () => { statsBattle = sel.value; renderStats(); };
+    selBar.append(sel);
+  }
+  v.append(selBar);
+
+  if (statsBattle !== null) {
+    const r = mine.find((x) => String(x.id) === String(statsBattle)) || mine[0];
+    if (!r) { v.append(note('None of your battles are finished yet.')); return; }
+    statsBattle = r.id;
+    renderUnaBatalla(v, r);
+    const rm = el('button','btn');
+    rm.textContent = 'DELETE THIS BATTLE';
+    rm.style.marginTop = '14px';
+    rm.onclick = () => {
+      const b = battles.find((x) => x.id === r.id);
+      if (b) deleteBattle(b);
+    };
+    v.append(rm);
+    return;
+  }
+
+  // ---- resumen propio: es de TODAS las batallas, así que sólo va en ese modo
   const rec = tally(mine, () => 'me')[0];
   if (rec) {
     const sum = el('div','reqbar');
@@ -6125,11 +6216,21 @@ function hBars({ rows, legend, fmt, foot }){
   return box;
 }
 
-function vizBlock(title, sub, node){
+/* Leyenda de colores. Con dos series o más es obligatoria: el color no puede
+   ser el único portador de la identidad. */
+function vizLegend(items){
+  const lg = el('div','vleg');
+  lg.innerHTML = items.filter(Boolean).map((l) =>
+    '<span><i style="background:' + l.c + '"></i>' + esc(l.name) + '</span>').join('');
+  return lg;
+}
+
+function vizBlock(title, sub, node, extra){
   const box = el('div');
   box.style.cssText = 'margin:20px 0';
   const h = el('div','rrole');
-  h.innerHTML = '<span>' + esc(title.toUpperCase()) + '</span>';
+  h.innerHTML = '<span>' + esc(title.toUpperCase()) + '</span>' +
+                (extra ? '<span>' + esc(String(extra)) + '</span>' : '');
   box.append(h);
   if (sub) {
     const t = hint(sub);
@@ -6376,6 +6477,252 @@ function chartLifespan(rows, side){
       fmt: (r) => fmtNum(r.segs[0].v) + ' of ' + ROUNDS,
       foot: m.size > 14 ? (m.size - 14) + ' more units in the table below.'
                         : (data.length ? null : 'No casualties recorded yet.') }));
+}
+
+/* ============================================================
+   UNA BATALLA
+
+   Las tablas y los promedios responden "cómo me va en general". Esto
+   responde otra pregunta: qué pasó en ESTA partida y en qué ronda se
+   decidió. Son cuatro lecturas del mismo registro.
+   ============================================================ */
+
+/* VP acumulado al cerrar cada ronda, con los topes del reglamento y el
+   pintado sumado al final. El índice 0 es el arranque: siempre cero. */
+function vpAcumulado(r, who){
+  const filas = (r.rounds && r.rounds[who]) || [];
+  const pc = who === 'me' ? (r.primCap || VP_CAP.perRound) : (r.primCap || VP_CAP.perRound);
+  let leftP = VP_CAP.primary, leftS = VP_CAP.secondary, acc = 0;
+  const out = [0];
+  for (let i = 0; i < ROUNDS; i++) {
+    const x = filas[i] || {};
+    const gp = Math.min(+x.p || 0, pc, leftP), gs = Math.min(+x.s || 0, VP_CAP.perRound, leftS);
+    leftP -= gp; leftS -= gs; acc += gp + gs;
+    out.push(acc);
+  }
+  if (r.painted && r.painted[who]) out[ROUNDS] += VP_CAP.painted;
+  return out;
+}
+
+/* Puntos que siguen en mesa al cerrar cada ronda. El índice 0 es la lista
+   entera; de ahí baja con cada unidad que cae. */
+function puntosEnMesa(us, total){
+  const out = [total];
+  for (let r = 1; r <= ROUNDS; r++)
+    out.push(us.reduce((a, u) => a + ((u.dead == null || +u.dead > r) ? (+u.pts || 0) : 0), 0));
+  return out;
+}
+
+/* Lienzo común de los dos gráficos de línea. */
+function lineChart({ series, top, step, fmtY, fmtEnd, desdeCero }){
+  const W = 760, H = 290, L = 58, R = 98, T = 16, Bm = 34;
+  const x = (i) => L + i * (W - L - R) / ROUNDS;
+  const y = (v) => T + (1 - v / top) * (H - T - Bm);
+  let g = '';
+  for (let v = 0; v <= top + 1e-6; v += step) {
+    g += '<line x1="' + L + '" y1="' + y(v).toFixed(1) + '" x2="' + (W - R) +
+         '" y2="' + y(v).toFixed(1) + '" class="vg"/>' +
+         '<text x="' + (L - 9) + '" y="' + (y(v) + 3.5).toFixed(1) +
+         '" class="vt" text-anchor="end">' + fmtY(v) + '</text>';
+  }
+  let ticks = '';
+  for (let i = 0; i <= ROUNDS; i++)
+    ticks += '<text x="' + x(i) + '" y="' + (H - Bm + 19) + '" class="vt" text-anchor="middle">' +
+             (i ? 'R' + i : (desdeCero ? 'inicio' : 'inicio')) + '</text>';
+
+  let body = '';
+  for (const s of series) {
+    if (!s) continue;
+    let d;
+    if (s.escalon) {
+      // Escalonada: las unidades caen en rondas discretas, no en una pendiente.
+      d = 'M ' + x(0) + ' ' + y(s.v[0]).toFixed(1);
+      for (let i = 1; i < s.v.length; i++)
+        d += ' L ' + x(i).toFixed(1) + ' ' + y(s.v[i - 1]).toFixed(1) +
+             ' L ' + x(i).toFixed(1) + ' ' + y(s.v[i]).toFixed(1);
+      body += '<path d="' + d + '" fill="none" stroke="' + s.c +
+              '" stroke-width="2" stroke-linejoin="round"/>';
+    } else {
+      body += '<polyline points="' +
+        s.v.map((v, i) => x(i).toFixed(1) + ',' + y(v).toFixed(1)).join(' ') +
+        '" fill="none" stroke="' + s.c + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+    }
+    body += s.v.map((v, i) => '<circle cx="' + x(i).toFixed(1) + '" cy="' + y(v).toFixed(1) +
+      '" r="4.2" fill="' + s.c + '" stroke="var(--field)" stroke-width="2"/>').join('');
+  }
+  // Etiqueta final de cada serie, separada si las dos caen en el mismo punto.
+  const fin = series.filter(Boolean).map((s) => ({ s, yy: y(s.v[ROUNDS]) }))
+                    .sort((a, b) => a.yy - b.yy);
+  for (let i = 1; i < fin.length; i++)
+    if (fin[i].yy - fin[i - 1].yy < 14) fin[i].yy = fin[i - 1].yy + 14;
+  for (const f of fin)
+    body += '<text x="' + (W - R + 12) + '" y="' + (f.yy + 4).toFixed(1) +
+            '" class="vv" fill="' + f.s.c + '">' + fmtEnd(f.s.v[ROUNDS]) + '</text>';
+
+  const sv = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  sv.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  sv.innerHTML = g + ticks + body;
+  return sv;
+}
+
+function chartMarcador(r){
+  const me = vpAcumulado(r, 'me'), them = vpAcumulado(r, 'them');
+  const max = Math.max(10, ...me, ...them);
+  const step = niceStep(max / 4), top = Math.ceil(max / step) * step;
+  const box = el('div','viz');
+  box.append(vizLegend([{ name:'You', c:VIZ.s1 }, { name:'Opponent', c:VIZ.s2 }]));
+  box.append(lineChart({
+    series: [{ v: them, c: VIZ.s2 }, { v: me, c: VIZ.s1 }],
+    top, step, fmtY: (v) => fmtNum(v), fmtEnd: (v) => v + ' VP',
+  }));
+  return vizBlock('How the score ran',
+    'Victory points as they piled up, round by round. Both start at zero: the gap ' +
+    'between the lines is the game.', box);
+}
+
+/* Diferencia por ronda. Es el gráfico que contesta "dónde la perdí": una
+   barra por ronda, arriba del cero vas ganando, abajo vas perdiendo. */
+function chartDiferencia(r){
+  const me = vpAcumulado(r, 'me'), them = vpAcumulado(r, 'them');
+  const dif = me.map((v, i) => v - them[i]);
+  const m = Math.max(10, ...dif.map(Math.abs));
+  const step = niceStep(m / 3), top = Math.ceil(m / step) * step;
+  const W = 760, H = 250, L = 58, R = 40, T = 18, Bm = 34;
+  const x = (i) => L + i * (W - L - R) / ROUNDS;
+  const y = (v) => T + (1 - (v + top) / (2 * top)) * (H - T - Bm);
+  let g = '';
+  for (let v = -top; v <= top + 1e-6; v += step)
+    g += '<line x1="' + L + '" y1="' + y(v).toFixed(1) + '" x2="' + (W - R) +
+         '" y2="' + y(v).toFixed(1) + '" class="vg"/>' +
+         '<text x="' + (L - 9) + '" y="' + (y(v) + 3.5).toFixed(1) +
+         '" class="vt" text-anchor="end">' + (v > 0 ? '+' : '') + fmtNum(v) + '</text>';
+  g += '<line x1="' + L + '" y1="' + y(0).toFixed(1) + '" x2="' + (W - R) +
+       '" y2="' + y(0).toFixed(1) + '" class="vz"/>';
+
+  const bw = 30;
+  let bars = '', ticks = '';
+  for (let i = 1; i <= ROUNDS; i++) {
+    const v = dif[i], c = v > 0 ? VIZ.s3 : v < 0 ? VIZ.s2 : 'var(--rule2)';
+    const y0 = y(0), y1 = y(v), h = Math.max(Math.abs(y1 - y0), 1.5);
+    bars += '<rect x="' + (x(i) - bw / 2) + '" y="' + Math.min(y0, y1).toFixed(1) +
+            '" width="' + bw + '" height="' + h.toFixed(1) + '" fill="' + c + '" rx="2"/>';
+    // Contra el borde la etiqueta se pisaba con el eje: ahí va dentro de la barra.
+    const fuera = v >= 0 ? y1 - 7 : y1 + 15;
+    const cabe = v >= 0 ? fuera > T + 8 : fuera < H - Bm - 4;
+    const ty = cabe ? fuera : (v >= 0 ? y1 + 14 : y1 - 7);
+    bars += '<text x="' + x(i) + '" y="' + ty.toFixed(1) + '" class="vv" text-anchor="middle"' +
+            (cabe ? '' : ' fill="#fff"') + '>' + (v > 0 ? '+' : '') + v + '</text>';
+    ticks += '<text x="' + x(i) + '" y="' + (H - Bm + 19) + '" class="vt" text-anchor="middle">R' + i + '</text>';
+  }
+  const sv = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  sv.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  sv.innerHTML = g + bars + ticks;
+  const box = el('div','viz');
+  box.append(vizLegend([{ name:'You are ahead', c:VIZ.s3 }, { name:'You are behind', c:VIZ.s2 }]));
+  box.append(sv);
+  return vizBlock('Where it turned',
+    'Your score minus theirs at the end of each round. Above the line you are ahead, ' +
+    'below it you are behind.', box);
+}
+
+function chartEnMesa(r){
+  const tot = r.total || {};
+  if (tot.me == null) return null;
+  const me = puntosEnMesa(r.units || [], tot.me);
+  const them = tot.them != null ? puntosEnMesa(r.theirUnits || [], tot.them) : null;
+  const max = Math.max(...me, ...(them || [0]));
+  const step = niceStep(max / 4), top = Math.ceil(max / step) * step;
+  const box = el('div','viz');
+  box.append(vizLegend(them
+    ? [{ name:'You', c:VIZ.s1 }, { name:'Opponent', c:VIZ.s2 }]
+    : [{ name:'You', c:VIZ.s1 }]));
+  box.append(lineChart({
+    series: [them && { v: them, c: VIZ.s2, escalon:true }, { v: me, c: VIZ.s1, escalon:true }],
+    top, step, fmtY: (v) => fmtNum(v), fmtEnd: (v) => v + ' pts',
+  }));
+  const perd = (us) => (us || []).filter((u) => u.dead != null).reduce((a, u) => a + (+u.pts || 0), 0);
+  return vizBlock('Points left on the table',
+    'How much army each side still has when the round closes. It starts at the full ' +
+    'list and drops with every unit that falls.' +
+    (them ? '' : ' Load your opponent’s list in the battle to see their line too.'),
+    box, perd(r.units) + (them ? ' vs ' + perd(r.theirUnits) : '') + ' pts lost');
+}
+
+/* Qué cayó y cuándo: un bloque por ronda.
+ *
+ * La primera versión era una rejilla de 6 columnas con una fila por bando.
+ * En un teléfono eso se desarmaba: los cinco encabezados quedaban apilados
+ * arriba y las bajas sueltas abajo, sin relación visible. Un bloque por
+ * ronda se lee igual en fila que en columna. */
+function bajasTimeline(r){
+  const wrap = el('div');
+  wrap.append(vizLegend([{ name:'Yours', c:'#d95926' }, { name:'Theirs', c:VIZ.s1 }]));
+  const box = el('div','tl');
+  for (let i = 1; i <= ROUNDS; i++) {
+    const blk = el('div','tlr');
+    const h = el('div','hd'); h.textContent = 'Round ' + i; blk.append(h);
+    const cell = el('div','cell');
+    const poner = (us, cls) => {
+      for (const u of (us || []).filter((x) => +x.dead === i)) {
+        const k = el('div','kill ' + cls);
+        k.innerHTML = esc(u.n) + (u.pts != null ? '<em>' + u.pts + ' pts</em>' : '');
+        cell.append(k);
+      }
+    };
+    poner(r.units, 'me');
+    poner(r.theirUnits, 'them');
+    if (!cell.children.length) {
+      const z = el('div','nada'); z.textContent = 'nothing fell';
+      cell.append(z);
+    }
+    blk.append(cell);
+    box.append(blk);
+  }
+  wrap.append(box);
+  const n = ((r.units || []).filter((u) => u.dead != null).length) +
+            ((r.theirUnits || []).filter((u) => u.dead != null).length);
+  return vizBlock('What fell, and when',
+    'Casualties on both sides, in the round they happened. Yours in orange, theirs in blue.',
+    wrap, n + ' casualties');
+}
+
+/* Tarjetas de cabecera: todo calculado, nada escrito a mano. */
+function battleHero(r){
+  const me = vpAcumulado(r, 'me'), them = vpAcumulado(r, 'them');
+  const dif = me.map((v, i) => v - them[i]);
+  const fin = dif[ROUNDS];
+  // Última vez que cambió quién iba adelante: la ronda en que se decidió.
+  let vuelta = null;
+  for (let i = 2; i <= ROUNDS; i++)
+    if (Math.sign(dif[i]) !== Math.sign(dif[i - 1]) && Math.sign(dif[i]) !== 0) vuelta = i;
+  const perd = (us) => (us || []).filter((u) => u.dead != null).reduce((a, u) => a + (+u.pts || 0), 0);
+  const res = fin > 0 ? 'win' : fin < 0 ? 'loss' : 'draw';
+
+  const bar = el('div','reqbar');
+  const card = (t, d) => { const c = el('div','req ok'); c.innerHTML = '<b>' + esc(t) + '</b><i>' + esc(d) + '</i>'; return c; };
+  bar.append(
+    card(me[ROUNDS] + ' – ' + them[ROUNDS], res + (fin ? ' by ' + Math.abs(fin) + ' VP' : '')),
+    card((fin > 0 ? '+' : '') + fin, 'final margin'),
+    card(vuelta ? 'R' + vuelta : (fin > 0 ? 'ahead all game' : fin < 0 ? 'behind all game' : 'level'),
+         vuelta ? 'the lead changed here' : 'the lead never changed'),
+    card(perd(r.units) + ' pts', 'lost of ' + (r.total && r.total.me != null ? r.total.me : '?')),
+  );
+  return bar;
+}
+
+function renderUnaBatalla(v, r){
+  v.append(battleHero(r));
+  v.append(chartMarcador(r));
+  v.append(chartDiferencia(r));
+  const mesa = chartEnMesa(r);
+  if (mesa) v.append(mesa);
+  v.append(bajasTimeline(r));
+
+  const pie = el('div','hint');
+  pie.textContent = [r.date, r.faction, r.theirFaction ? 'vs ' + r.theirFaction : null,
+                     r.disp && r.vsDisp ? r.disp + ' vs ' + r.vsDisp : null, r.mission]
+                    .filter(Boolean).join(' · ');
+  v.append(pie);
 }
 
 /* ---- registro de batallas ---- */
