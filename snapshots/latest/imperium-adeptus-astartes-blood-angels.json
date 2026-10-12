@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "4ef9-15ce-e3e6-36de",
   "catalogueName": "Imperium - Adeptus Astartes - Blood Angels",
@@ -14,13 +14,13 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 4,
+  "revision": 5,
   "file": "Imperium - Blood Angels.json",
   "counts": {
-    "total": 26,
-    "native": 25,
-    "matched": 14,
-    "legends": 11,
+    "total": 24,
+    "native": 23,
+    "matched": 13,
+    "legends": 10,
     "crucible": 0,
     "allied": 1
   },
@@ -34,11 +34,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 85,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 85
+          "pts": 90
         }
       ],
       "cap": null,
@@ -72,11 +72,11 @@
       "abilities": [
         {
           "n": "Redeemer of the Lost",
-          "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+          "d": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to that roll if that model was engaged with an enemy unit with a T greater than or equal to this unit's T: - On a 4+, do not remove that model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
         },
         {
           "n": "Mass of Doom",
-          "d": "Each time this model’s unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+          "d": "If this unit made a charge move this turn, this unit's melee attacks have [DEVASTATING WOUNDS:non-MONSTER/VEHICLE]"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -98,7 +98,7 @@
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "5",
         "LD": "5+",
@@ -115,11 +115,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 125,
+      "points": 135,
       "ladder": [
         {
           "from": 1,
-          "pts": 125
+          "pts": 135
         }
       ],
       "cap": {
@@ -189,7 +189,9 @@
               "scale": null,
               "p": 0,
               "model": false,
-              "w": []
+              "w": [
+                "Heavy Bolter"
+              ]
             }
           ]
         },
@@ -226,12 +228,12 @@
           "n": "Heavy Flamer",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Assault, Ignores Cover, Torrent"
+          "kw": "Assault, Blast 2, Torrent"
         },
         {
           "n": "Heavy Bolter",
@@ -242,18 +244,18 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Assault, Sustained Hits 1"
+          "kw": "Assault, Rapid Fire 2, Sustained Hits 1"
         },
         {
           "n": "Baal Flamestorm Cannon",
           "melee": false,
           "range": "18\"",
-          "a": "D6+3",
-          "skill": "N/A",
+          "a": "6",
+          "skill": "-",
           "s": "6",
           "ap": "-2",
           "d": "2",
-          "kw": "Assault, Ignores Cover, Torrent"
+          "kw": "Assault, Blast 2, Torrent"
         },
         {
           "n": "Twin Assault Cannon",
@@ -262,9 +264,9 @@
           "a": "6",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
-          "kw": "Assault, Devastating wounds, Twin-linked"
+          "kw": "Assault, Sustained Hits 1, Twin-linked"
         },
         {
           "n": "Armoured Tracks",
@@ -285,7 +287,7 @@
           "skill": "2+",
           "s": "14",
           "ap": "-3",
-          "d": "D6",
+          "d": "D3+3",
           "kw": "One Shot"
         },
         {
@@ -294,8 +296,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         }
@@ -311,11 +313,7 @@
       "abilities": [
         {
           "n": "Overcharged Engines",
-          "d": "You can re-roll Advance rolls made for this model."
-        },
-        {
-          "n": "Damaged: 1-4 Wounds Remaining",
-          "d": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "d": "This unit can re-roll advance rolls."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -349,11 +347,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 80,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 90
         }
       ],
       "cap": {
@@ -362,11 +360,10 @@
       },
       "leads": [
         "Assault Intercessor Squad",
+        "Company Heroes",
         "Infernus Squad",
         "Intercessor Squad",
-        "Sternguard Veteran Squad",
-        "Company Heroes",
-        "Tactical Squad"
+        "Sternguard Veteran Squad"
       ],
       "options": [
         {
@@ -440,7 +437,7 @@
           "range": "Melee",
           "a": "7",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "2",
           "kw": ""
@@ -473,7 +470,7 @@
           "range": "18\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": "Pistol"
@@ -481,13 +478,13 @@
         {
           "n": "Inferno pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
           "skill": "2+",
           "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 1"
         }
       ],
       "composition": [
@@ -500,12 +497,12 @@
       ],
       "abilities": [
         {
-          "n": "Rites of Battle",
-          "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+          "n": "Strategic Acumen",
+          "d": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
         },
         {
           "n": "Finest Hour",
-          "d": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability."
+          "d": "(Once per battle, per unit): In the Fight phase, when this unit is selected to fight, you can use this ability. If you do, this model's melee attacks have: ▪ +3 A ▪ [DEVASTATING WOUNDS]."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -524,7 +521,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "5",
         "LD": "6+",
@@ -579,7 +576,7 @@
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -683,10 +680,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -713,10 +710,6 @@
         {
           "n": "Tycho",
           "d": "Your army cannot contain both Captain Tycho and Tycho the Lost."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -740,7 +733,7 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -752,11 +745,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 110,
+      "points": 175,
       "ladder": [
         {
           "from": 1,
-          "pts": 110
+          "pts": 175
         }
       ],
       "cap": null,
@@ -769,10 +762,10 @@
           "range": "18\"",
           "a": "3",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
-          "d": "D3",
-          "kw": "Pistol, Psychic, Sustained Hits 1"
+          "d": "2",
+          "kw": "Assault, Close-quarters, Psychic"
         },
         {
           "n": "➤ Fury of the Ancients - Focused Witchfire",
@@ -780,10 +773,10 @@
           "range": "18\"",
           "a": "3",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
-          "d": "D3",
-          "kw": "Hazardous, Pistol, Psychic, Sustained Hits 3"
+          "d": "3",
+          "kw": "Assault, Close-quarters, Hazardous, Psychic"
         },
         {
           "n": "Vitarus",
@@ -791,21 +784,10 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "9",
+          "s": "10",
           "ap": "-3",
-          "d": "D3",
+          "d": "3",
           "kw": "Lethal Hits, Psychic"
-        },
-        {
-          "n": "➤ Plasma pistol - supercharge",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "2+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Hazardous, Pistol"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -816,7 +798,18 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Assault, Close-quarters"
+        },
+        {
+          "n": "➤ Plasma pistol - supercharge",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Assault, Close-quarters"
         }
       ],
       "composition": [
@@ -831,12 +824,8 @@
       ],
       "abilities": [
         {
-          "n": "The Quickening [Psychic]",
-          "d": "This model is eligible to declare a charge in a turn which it Advanced."
-        },
-        {
-          "n": "Transfixing Gaze [Aura, Psychic]",
-          "d": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+          "n": "Chief Librarian (Psyker level 3)",
+          "d": "This model has the psychic abilities listed in the Psychic Abilities section."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -844,23 +833,23 @@
         "Epic Hero",
         "Character",
         "Infantry",
-        "Grenades",
         "Tacticus",
         "Psyker",
-        "Chief Librarian Mephiston"
+        "Chief Librarian Mephiston",
+        "Explosives"
       ],
       "models": {
         "min": 1,
         "max": 1
       },
       "profile": {
-        "M": "7\"",
-        "T": "5",
+        "M": "8\"",
+        "T": "6",
         "Sv": "2+",
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "4+"
       },
       "native": true
     },
@@ -872,11 +861,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 125,
+      "points": 140,
       "ladder": [
         {
           "from": 1,
-          "pts": 125
+          "pts": 140
         }
       ],
       "cap": null,
@@ -889,15 +878,15 @@
       "options": null,
       "weapons": [
         {
-          "n": "Perdition",
+          "n": "Perdition Pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
           "skill": "2+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2, Pistol, Sustained Hits D3"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 2, Sustained Hits 1"
         },
         {
           "n": "The Axe Mortalis",
@@ -917,7 +906,7 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Perdition",
+            "Perdition Pistol",
             "The Axe Mortalis"
           ]
         }
@@ -925,11 +914,11 @@
       "abilities": [
         {
           "n": "Death Mask of Sanguinius",
-          "d": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do"
+          "d": "At the start of the Fight phase, each enemy unit within 6\" of this model makes a battle-shock roll, with -1 to that battle-shock roll."
         },
         {
           "n": "Lord Regent of the Imperium Nihilus",
-          "d": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll."
+          "d": "The assault doctrine and tactical doctrine are active for this unit in addition to any other combat doctrine."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -937,14 +926,14 @@
         "Epic Hero",
         "Character",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Fly",
         "Jump Pack",
         "Tacticus",
         "Chapter Master",
         "Commander Dante",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -952,7 +941,7 @@
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "6",
         "LD": "6+",
@@ -969,11 +958,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 70,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 70
+          "pts": 80
         }
       ],
       "cap": {
@@ -981,8 +970,7 @@
         "at1000": 2
       },
       "leads": [
-        "Death Company Marines",
-        "Death Company Marines with Bolt Rifles"
+        "Death Company Marines"
       ],
       "options": [
         {
@@ -1011,7 +999,7 @@
               "w": []
             },
             {
-              "n": "Relic Weapon",
+              "n": "Relic weapon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1054,18 +1042,18 @@
           "n": "Master-crafted Chainsword",
           "melee": true,
           "range": "Melee",
-          "a": "7",
+          "a": "8",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": ""
+          "kw": "Sustained Hits 1"
         },
         {
           "n": "Power fist",
           "melee": true,
           "range": "Melee",
-          "a": "5",
+          "a": "6",
           "skill": "2+",
           "s": "8",
           "ap": "-2",
@@ -1073,12 +1061,12 @@
           "kw": ""
         },
         {
-          "n": "Relic Weapon",
+          "n": "Relic weapon",
           "melee": true,
           "range": "Melee",
-          "a": "6",
+          "a": "7",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": ""
@@ -1089,21 +1077,21 @@
           "range": "18\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": ""
+          "kw": "Close-quarters"
         },
         {
           "n": "Inferno pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
           "skill": "2+",
           "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 1"
         }
       ],
       "composition": [
@@ -1117,27 +1105,27 @@
       "abilities": [
         {
           "n": "Forlorn Hero",
-          "d": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
-        },
-        {
-          "n": "Death Vision of Sanguinius",
-          "d": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+          "d": "This unit has Scouts 6\"."
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "- This unit's melee attacks can re-roll hit rolls of 1. - While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
+        },
+        {
+          "n": "Death Vision of Sanguinius",
+          "d": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy warlord unit: - On a 2-3, that enemy unit suffers D3 mortal wounds. - On a 4-5, that enemy unit suffers 3 mortal wounds. - On a 6+, that enemy unit suffers D3+3 mortal wounds."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
         "Character",
-        "Grenades",
         "Imperium",
         "Captain",
         "Tacticus",
         "Death Company",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -1145,7 +1133,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "5",
         "LD": "6+",
@@ -1162,11 +1150,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 85,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 85
         }
       ],
       "cap": {
@@ -1184,6 +1172,15 @@
           "max": 1,
           "pick": "one",
           "opts": [
+            {
+              "n": "Astartes Chainsword",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
             {
               "n": "Power fist",
               "min": 0,
@@ -1203,7 +1200,7 @@
               "w": []
             },
             {
-              "n": "Astartes Chainsword",
+              "n": "Thunder Hammer",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1222,6 +1219,15 @@
           "opts": [
             {
               "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Relic Shield",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1252,6 +1258,17 @@
       ],
       "weapons": [
         {
+          "n": "Astartes Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Sustained Hits 1"
+        },
+        {
           "n": "Power fist",
           "melee": true,
           "range": "Melee",
@@ -1274,15 +1291,15 @@
           "kw": ""
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Thunder Hammer",
           "melee": true,
           "range": "Melee",
-          "a": "7",
-          "skill": "2+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": ""
+          "a": "5",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Devastating Wounds"
         },
         {
           "n": "Heavy Bolt Pistol",
@@ -1298,13 +1315,13 @@
         {
           "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -1315,7 +1332,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -1326,7 +1343,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -1339,16 +1356,20 @@
       ],
       "abilities": [
         {
-          "n": "Death Vision of Sanguinius",
-          "d": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
-        },
-        {
           "n": "Lost to Fury",
-          "d": "When this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability"
+          "d": "This unit's melee attacks have [SUSTAINED HITS 1]."
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "- This unit's melee attacks can re-roll hit rolls of 1. - While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
+        },
+        {
+          "n": "Death Vision of Sanguinius",
+          "d": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy warlord unit: - On a 2-3, that enemy unit suffers D3 mortal wounds. - On a 4-5, that enemy unit suffers 3 mortal wounds. - On a 6+, that enemy unit suffers D3+3 mortal wounds."
+        },
+        {
+          "n": "Relic Shield",
+          "d": "This model has +1 W."
         }
       ],
       "faction": "Blood Angels",
@@ -1356,13 +1377,13 @@
         "Character",
         "Infantry",
         "Captain",
-        "Grenades",
         "Fly",
         "Imperium",
         "Jump Pack",
         "Tacticus",
         "Death Company",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -1370,7 +1391,7 @@
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "5",
         "LD": "6+",
@@ -1387,11 +1408,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 150,
+      "points": 165,
       "ladder": [
         {
           "from": 1,
-          "pts": 150
+          "pts": 165
         }
       ],
       "cap": {
@@ -1456,7 +1477,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Twin heavy bolter",
+              "n": "Twin Heavy Bolter",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1465,7 +1486,16 @@
               "w": []
             },
             {
-              "n": "Twin multi-melta",
+              "n": "Twin Multi-melta",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Twin heavy bolter",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1484,8 +1514,8 @@
           "a": "6",
           "skill": "3+",
           "s": "12",
-          "ap": "-2",
-          "d": "3",
+          "ap": "-3",
+          "d": "D3+3",
           "kw": "Twin-linked"
         },
         {
@@ -1494,32 +1524,21 @@
           "range": "24\"",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": "Twin-linked"
         },
         {
-          "n": "➤ Blood Talons - Strike",
+          "n": "Blood Talons",
           "melee": true,
           "range": "Melee",
-          "a": "6",
+          "a": "8",
           "skill": "3+",
-          "s": "12",
+          "s": "10",
           "ap": "-2",
-          "d": "3",
-          "kw": "Twin-linked"
-        },
-        {
-          "n": "➤ Blood Talons - Sweep",
-          "melee": true,
-          "range": "Melee",
-          "a": "10",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Twin-linked"
+          "d": "2",
+          "kw": "Cleave 2, Sustained Hits 1: Non-Monster/Vehicle, Twin-linked"
         },
         {
           "n": "Twin heavy bolter",
@@ -1533,15 +1552,15 @@
           "kw": "Sustained Hits 1, Twin-linked"
         },
         {
-          "n": "Twin multi-melta",
+          "n": "Twin Multi-melta",
           "melee": false,
           "range": "18\"",
           "a": "2",
           "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2, Twin-linked"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3, Twin-linked"
         },
         {
           "n": "Twin Icarus ironhail heavy stubber",
@@ -1550,9 +1569,9 @@
           "a": "3",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Anti-FLY 4+, Rapid Fire 3, Twin-linked"
+          "kw": "Anti-FLY 3+, Rapid Fire 3, Twin-linked"
         }
       ],
       "composition": [
@@ -1566,15 +1585,11 @@
       "abilities": [
         {
           "n": "Driven by Fury",
-          "d": "In your opponent’s Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2"
-        },
-        {
-          "n": "Damaged: 1-4 Wounds Remaining",
-          "d": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "d": "In your opponent's Shooting phase, when an enemy unit has shot, if this unit was hit by those attacks, it can make a surge move of up to D6+1\"."
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "- This unit's melee attacks can re-roll hit rolls of 1. - While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1760,12 +1775,12 @@
           "n": "Heavy Flamer",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 2, Torrent"
         },
         {
           "n": "Meltagun",
@@ -1798,7 +1813,7 @@
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "Each time a model in this unit makes an attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1833,15 +1848,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 85,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 85
+          "pts": 90
         },
         {
           "from": 6,
-          "pts": 160
+          "pts": 170
         }
       ],
       "cap": {
@@ -1860,7 +1875,7 @@
             {
               "n": "Death Company Marine w/Eviscerator",
               "min": 0,
-              "max": 1,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
@@ -1869,15 +1884,15 @@
               ]
             },
             {
-              "n": "Death Company Marine",
-              "min": 2,
+              "n": "Death Company Marine w/ Chainsword and Heavy Bolt Pistol",
+              "min": 0,
               "max": 10,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Heavy Bolt Pistol",
-                "Astartes Chainsword"
+                "Chainsword"
               ]
             },
             {
@@ -1888,6 +1903,30 @@
               "p": 0,
               "model": true,
               "w": []
+            },
+            {
+              "n": "Death Company Marine w/ Bolt Rifle",
+              "min": 0,
+              "max": 10,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Combat blade",
+                "Heavy Bolt Pistol"
+              ]
+            },
+            {
+              "n": "Death Company Marine w/ Bolt Rifle and Grenade Launcher",
+              "min": 0,
+              "max": 2,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Combat blade",
+                "Heavy Bolt Pistol"
+              ]
             }
           ]
         },
@@ -1898,15 +1937,6 @@
           "max": 1,
           "pick": "one",
           "opts": [
-            {
-              "n": "Heavy Bolt Pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
             {
               "n": "Hand flamer",
               "min": 0,
@@ -1933,6 +1963,15 @@
               "p": 0,
               "model": false,
               "w": []
+            },
+            {
+              "n": "Heavy Bolt Pistol",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
             }
           ]
         },
@@ -1943,6 +1982,17 @@
           "max": 1,
           "pick": "one",
           "opts": [
+            {
+              "n": "Bolt rifle and combat blade",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": [
+                "Combat blade"
+              ]
+            },
             {
               "n": "Thunder Hammer",
               "min": 0,
@@ -1962,7 +2012,7 @@
               "w": []
             },
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1992,40 +2042,29 @@
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "kw": "Sustained Hits 1"
-        },
-        {
-          "n": "Heavy Bolt Pistol",
-          "melee": false,
-          "range": "18\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Pistol"
+          "kw": "Cleave 1"
         },
         {
           "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Inferno Pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
           "skill": "3+",
           "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 1"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -2036,7 +2075,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -2047,18 +2086,62 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Heavy Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Close-quarters"
+        },
+        {
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
+        },
+        {
+          "n": "Combat blade",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "➤ Bolt Rifle - Focused Fire",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Rapid Fire 1"
+        },
+        {
+          "n": "➤ Bolt Rifle - Saturation",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Rapid Fire 1"
         },
         {
           "n": "Thunder Hammer",
@@ -2068,7 +2151,7 @@
           "skill": "4+",
           "s": "8",
           "ap": "-2",
-          "d": "2",
+          "d": "3",
           "kw": "Devastating Wounds"
         },
         {
@@ -2092,39 +2175,48 @@
           "ap": "-2",
           "d": "2",
           "kw": ""
+        },
+        {
+          "n": "➤ Grenade Launcher - Krak",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "➤ Grenade Launcher - Frag",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast 1"
         }
       ],
       "composition": [
         {
           "n": "Death Company Marine w/Eviscerator",
           "min": null,
-          "max": 1,
+          "max": 2,
           "w": [
             "Eviscerator"
-          ]
-        },
-        {
-          "n": "Death Company Marine",
-          "min": 2,
-          "max": 10,
-          "w": [
-            "Heavy Bolt Pistol",
-            "Astartes Chainsword"
           ]
         }
       ],
       "abilities": [
         {
           "n": "An Honourable Death in Combat",
-          "d": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessor Squad, it can be attached to this unit instead."
+          "d": "This unit's attacks: - Have [SUSTAINED HITS 1], if this unit is below starting strength. - Or: have [SUSTAINED HITS 2], if this unit is below half-strength."
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "- This unit's melee attacks can re-roll hit rolls of 1. - While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2137,431 +2229,12 @@
         "Death Company"
       ],
       "models": {
-        "min": 2,
-        "max": 13
-      },
-      "profile": {
-        "M": "6\"",
-        "T": "4",
-        "Sv": "3+",
-        "W": "2",
-        "LD": "6+",
-        "OC": "1",
-        "InSv": ""
-      },
-      "native": true
-    },
-    {
-      "id": "4aab-3ca5-0435-ed5e",
-      "linkId": "15ed-2cca-b373-a0a9",
-      "name": "Death Company Marines with Bolt Rifles",
-      "rawName": "Death Company Marines with Bolt Rifles",
-      "type": "unit",
-      "mode": "standard",
-      "legends": false,
-      "points": 80,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 80
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": null,
-      "options": [
-        {
-          "n": "Death Company Marines",
-          "owner": null,
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Death Company Marine w/Bolt Rifle",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Bolt Rifle",
-                "Bolt pistol",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Death Company Marine w/Eviscerator",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Eviscerator",
-                "Bolt pistol"
-              ]
-            },
-            {
-              "n": "Death Company Marine w/ alternate weapons",
-              "min": 0,
-              "max": 2,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Bolt pistol"
-              ]
-            }
-          ]
-        },
-        {
-          "n": "Replace Close Combat Weapon",
-          "owner": "Death Company Marine w/ alternate weapons",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Close Combat Weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power Fist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Thunder Hammer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Astartes Chainsword",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Replace Bolt Rifle",
-          "owner": "Death Company Marine w/ alternate weapons",
-          "min": 1,
-          "max": 2,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Bolt Rifle",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Hand flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Inferno Pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Astartes Chainsword",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Equipment",
-          "owner": null,
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Astartes Grenade Launcher",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "➤ Astartes Grenade Launcher - Frag",
-          "melee": false,
-          "range": "24\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Astartes Grenade Launcher - Krak",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-2",
-          "d": "D3",
-          "kw": ""
-        },
-        {
-          "n": "Bolt Rifle",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Assault, Heavy"
-        },
-        {
-          "n": "Bolt pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Close-Quarters"
-        },
-        {
-          "n": "Close combat weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Eviscerator",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "7",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Sustained Hits 1"
-        },
-        {
-          "n": "Close Combat Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Power Fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Thunder Hammer",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Power weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Astartes Chainsword",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Hand flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
-          "ap": "0",
-          "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
-        },
-        {
-          "n": "Inferno Pistol",
-          "melee": false,
-          "range": "6\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - supercharge",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Hazardous, Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - standard",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Pistol"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Death Company Marine w/Bolt Rifle",
-          "min": 1,
-          "max": null,
-          "w": [
-            "Bolt Rifle",
-            "Bolt pistol",
-            "Close combat weapon"
-          ]
-        },
-        {
-          "n": "Death Company Marine w/Eviscerator",
-          "min": null,
-          "max": 1,
-          "w": [
-            "Eviscerator",
-            "Bolt pistol"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Attached Unit",
-          "d": "If a Chaplain model from your army with the Leader ability can be attached to Intercessor Squad, it can be attached to this unit instead."
-        },
-        {
-          "n": "Visions of Heresy",
-          "d": "• This unit can re-roll charge rolls. ▪ When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP."
-        },
-        {
-          "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Infantry",
-        "Grenades",
-        "Imperium",
-        "Death Company Marines with Bolt Rifles",
-        "Tacticus",
-        "Death Company"
-      ],
-      "models": {
         "min": null,
-        "max": 3
+        "max": 26
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -2638,7 +2311,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2736,12 +2409,12 @@
           "kw": ""
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -2774,10 +2447,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -2788,7 +2461,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -2799,29 +2472,29 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Inferno Pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
           "skill": "3+",
           "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 1"
         },
         {
           "n": "Thunder Hammer",
@@ -2854,7 +2527,7 @@
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "- This unit's melee attacks can re-roll hit rolls of 1. - While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2948,7 +2621,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -3046,12 +2719,12 @@
           "kw": ""
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -3084,10 +2757,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -3098,7 +2771,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -3109,29 +2782,29 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Inferno Pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
           "skill": "3+",
           "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 1"
         },
         {
           "n": "Thunder Hammer",
@@ -3164,7 +2837,7 @@
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "Each time a model in this unit makes an attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3198,15 +2871,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 115,
+      "points": 130,
       "ladder": [
         {
           "from": 1,
-          "pts": 115
+          "pts": 130
         },
         {
           "from": 6,
-          "pts": 230
+          "pts": 260
         }
       ],
       "cap": {
@@ -3216,38 +2889,8 @@
       "leads": null,
       "options": [
         {
-          "n": "Death Company Marines",
-          "owner": null,
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Death Company Marine",
-              "min": 0,
-              "max": 10,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Astartes Chainsword",
-                "Heavy Bolt Pistol"
-              ]
-            },
-            {
-              "n": "Death Company Marine w/ alternate weapons",
-              "min": 0,
-              "max": 7,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": []
-            }
-          ]
-        },
-        {
           "n": "Pistol Weapon",
-          "owner": "Death Company Marine w/ alternate weapons",
+          "owner": "Death Company Marine",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3292,7 +2935,7 @@
         },
         {
           "n": "Melee Weapon",
-          "owner": "Death Company Marine w/ alternate weapons",
+          "owner": "Death Company Marine",
           "min": 1,
           "max": 1,
           "pick": "one",
@@ -3325,7 +2968,7 @@
               "w": []
             },
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -3338,26 +2981,15 @@
       ],
       "weapons": [
         {
-          "n": "Astartes Chainsword",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": ""
-        },
-        {
           "n": "Heavy Bolt Pistol",
           "melee": false,
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -3368,7 +3000,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -3379,29 +3011,29 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Inferno Pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
           "skill": "3+",
           "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 1"
         },
         {
           "n": "Power weapon",
@@ -3434,7 +3066,18 @@
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "kw": "Sustained Hits 1"
+          "kw": "Cleave 1"
+        },
+        {
+          "n": "Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
         }
       ],
       "composition": [
@@ -3442,44 +3085,37 @@
           "n": "Death Company Marine",
           "min": null,
           "max": 10,
-          "w": [
-            "Astartes Chainsword",
-            "Heavy Bolt Pistol"
-          ]
+          "w": []
         }
       ],
       "abilities": [
         {
           "n": "Savage Fury",
-          "d": "You can re-roll Charge rolls made for this unit."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead"
+          "d": "This unit has +1 to charge rolls."
         },
         {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "- This unit's melee attacks can re-roll hit rolls of 1. - While this unit is not within 6\" of one or more friendly Blood Angels Character models, or not within 12\" of one or more friendly Chaplain models, it cannot make a fall-back move and its OC is modified to 0."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
-        "Grenades",
         "Imperium",
         "Death Company Marines with Jump Packs",
         "Tacticus",
         "Fly",
         "Jump Pack",
-        "Death Company"
+        "Death Company",
+        "Explosives"
       ],
       "models": {
         "min": null,
-        "max": 17
+        "max": 10
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -3699,8 +3335,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         },
@@ -3836,10 +3472,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -3861,10 +3497,6 @@
         {
           "n": "Whirlwind of Rage",
           "d": "Each time this model fights, until that fight is resolved, add 1 to the Attacks characteristic of this model’s Blood Reaver for every 5 enemy models within 6\" of this model."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3888,7 +3520,7 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -3900,11 +3532,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 110,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 110
         }
       ],
       "cap": null,
@@ -3917,12 +3549,12 @@
           "n": "The Blood Crozius",
           "melee": true,
           "range": "Melee",
-          "a": "5",
+          "a": "6",
           "skill": "2+",
           "s": "6",
           "ap": "-2",
           "d": "2",
-          "kw": "Lethal Hits"
+          "kw": "Cleave 1, Lethal Hits"
         },
         {
           "n": "Absolvor Bolt Pistol",
@@ -3931,9 +3563,9 @@
           "a": "1",
           "skill": "2+",
           "s": "5",
-          "ap": "-1",
+          "ap": "-2",
           "d": "2",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -3942,18 +3574,19 @@
           "min": 1,
           "max": 1,
           "w": [
-            "The Blood Crozius"
+            "The Blood Crozius",
+            "Absolvor Bolt Pistol"
           ]
         }
       ],
       "abilities": [
         {
           "n": "Guardian of the Lost",
-          "d": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+          "d": "Attacks that target this unit have -1 D."
         },
         {
           "n": "Fury Unbound",
-          "d": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          "d": "This unit's melee attacks have [LETHAL HITS]."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3961,13 +3594,13 @@
         "Epic Hero",
         "Character",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Fly",
         "Chaplain",
         "Lemartes",
         "Jump Pack",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -3975,9 +3608,9 @@
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
-        "W": "4",
+        "W": "5",
         "LD": "5+",
         "OC": "1",
         "InSv": "4+"
@@ -4093,8 +3726,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         },
@@ -4102,12 +3735,12 @@
           "n": "Heavy Flamer",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 2, Torrent"
         },
         {
           "n": "Meltagun",
@@ -4172,11 +3805,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 120,
+      "points": 135,
       "ladder": [
         {
           "from": 1,
-          "pts": 120
+          "pts": 135
         }
       ],
       "cap": {
@@ -4186,92 +3819,42 @@
       "leads": null,
       "options": [
         {
-          "n": "Melee Weapon",
+          "n": "Sanguinary Guard",
           "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Encarmine Blade",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Encarmine Spear",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Ranged Weapon",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Angelus Boltgun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Inferno Pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Equipment",
-          "owner": null,
-          "min": 0,
-          "max": null,
+          "min": 3,
+          "max": 6,
           "pick": "many",
           "opts": [
             {
-              "n": "Sanguinary Banner",
-              "min": 0,
-              "max": 1,
+              "n": "Sanguinary Guard w/ Angelus Boltgun",
+              "min": 3,
+              "max": 6,
               "scale": null,
               "p": 0,
-              "model": false,
-              "w": []
+              "model": true,
+              "w": [
+                "Encarmine Weapon",
+                "Angelus Boltgun"
+              ]
+            },
+            {
+              "n": "Sanguinary Guard w/ Inferno Pistol",
+              "min": 0,
+              "max": 2,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Encarmine Weapon",
+                "Inferno pistol"
+              ]
             }
           ]
         }
       ],
       "weapons": [
         {
-          "n": "Encarmine Blade",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "2+",
-          "s": "6",
-          "ap": "-3",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Encarmine Spear",
+          "n": "Encarmine Weapon",
           "melee": true,
           "range": "Melee",
           "a": "4",
@@ -4284,72 +3867,68 @@
         {
           "n": "Angelus Boltgun",
           "melee": false,
-          "range": "12\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "range": "18\"",
+          "a": "3",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Assault, Close-quarters"
         },
         {
-          "n": "Inferno Pistol",
+          "n": "Inferno pistol",
           "melee": false,
-          "range": "6\"",
+          "range": "9\"",
           "a": "1",
-          "skill": "3+",
+          "skill": "2+",
           "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Close-quarters, Melta 1"
         }
       ],
       "composition": [
         {
           "n": "Sanguinary Guard",
-          "min": null,
+          "min": 3,
           "max": 6,
-          "w": []
+          "w": [
+            "Encarmine Weapon",
+            "Angelus Boltgun",
+            "Inferno pistol"
+          ]
         }
       ],
       "abilities": [
         {
           "n": "Angelic Visage",
-          "d": "Each time a melee attack targets this unit, subtract 1 from the Hit roll"
+          "d": "Melee attacks that target this unit have -1 to hit rolls."
         },
         {
           "n": "Heirs of Azkaellon",
-          "d": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a Captain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead."
-        },
-        {
-          "n": "Sanguinary Banner",
-          "d": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+          "d": "Attacks that target this unit with a S greater than this unit’s T have ‑1 to wound rolls."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
         "Fly",
-        "Grenades",
         "Imperium",
         "Sanguinary Guard",
-        "Jump Pack"
+        "Jump Pack",
+        "Explosives"
       ],
       "models": {
-        "min": null,
-        "max": 6
+        "min": 3,
+        "max": 8
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "3",
         "LD": "6+",
-        "OC": "1",
+        "OC": "2",
         "InSv": "4+"
       },
       "native": true
@@ -4362,11 +3941,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 60,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 60
         }
       ],
       "cap": {
@@ -4411,9 +3990,9 @@
           "a": "1",
           "skill": "3+",
           "s": "5",
-          "ap": "-1",
+          "ap": "-2",
           "d": "2",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Astartes Chainsword",
@@ -4421,7 +4000,7 @@
           "range": "Melee",
           "a": "5",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -4437,26 +4016,27 @@
       ],
       "abilities": [
         {
-          "n": "Sanguinary Priest",
-          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+          "n": "Narthecium",
+          "d": "(Once per turn, per unit) In your Command phase, this unit heals D3+1 wounds."
         },
         {
           "n": "Blood Chalice",
-          "d": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+          "d": "This unit has +1 T."
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: - Assault Intercessor Squad - Bladeguard Veteran Squad - Desolation Squad - Devastator Squad - Hellblaster Squad - Infernus Squad - Intercessor Squad - Tactical Squad - Sternguard Veteran Squad You can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths"
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, DESOLATION SQUAD, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Character",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Sanguinary Priest",
-        "Tacticus"
+        "Tacticus",
+        "Explosives",
+        "Support"
       ],
       "models": {
         "min": 1,
@@ -4464,377 +4044,11 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
-      },
-      "native": true
-    },
-    {
-      "id": "3621-b460-722-8954",
-      "linkId": "7b49-f741-1011-5f29",
-      "name": "Sanguinary Priest on Bike",
-      "rawName": "Sanguinary Priest on Bike [Legends]",
-      "type": "model",
-      "mode": "legends",
-      "legends": true,
-      "points": 135,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 135
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": [
-        "Bike Squad",
-        "Outrider Squad"
-      ],
-      "options": [
-        {
-          "n": "Wargear",
-          "owner": null,
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Twin boltgun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Pistol Options",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Boltgun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Bolt pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Hand flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Inferno Pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Grav-pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Combi-weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Storm bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Chainsword Options",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Power Fist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Astartes Chainsword",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Thunder Hammer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Boltgun",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Bolt pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Close-Quarters"
-        },
-        {
-          "n": "Hand flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
-          "ap": "0",
-          "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
-        },
-        {
-          "n": "Inferno Pistol",
-          "melee": false,
-          "range": "6\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
-        },
-        {
-          "n": "Grav-pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Anti-vehicle 2+, Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - supercharge",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Hazardous, Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - standard",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Pistol"
-        },
-        {
-          "n": "Combi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "4+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Power Fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Astartes Chainsword",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Power weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Thunder Hammer",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Twin boltgun",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Twin-linked"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Sanguinary Priest on Bike [Legends]",
-          "min": 1,
-          "max": 1,
-          "w": []
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Blood Chalice",
-          "d": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
-        },
-        {
-          "n": "Sanguinary Priest",
-          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Character",
-        "Mounted",
-        "Grenades",
-        "Imperium",
-        "Sanguinary Priest"
-      ],
-      "models": {
-        "min": 1,
-        "max": 1
-      },
-      "profile": {
-        "M": "12\"",
-        "T": "5",
-        "Sv": "3+",
-        "W": "5",
-        "LD": "6+",
-        "OC": "2",
         "InSv": ""
       },
       "native": true
@@ -4906,10 +4120,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -5002,12 +4216,12 @@
       ],
       "abilities": [
         {
-          "n": "Aura of Fervour (Aura)",
-          "d": "While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit"
+          "n": "Aura of Fervour",
+          "d": "Friendly ADEPTUS ASTARTES units within 12\" of this model can re-roll leadership rolls."
         },
         {
           "n": "Miraculous Savior",
-          "d": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. . That move does not prevent this unit from being eligible to move"
+          "d": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -5026,7 +4240,7 @@
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "7",
         "LD": "6+",
@@ -5062,10 +4276,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -5092,12 +4306,8 @@
           "d": "Your army cannot contain both Captain Tycho and Tycho the Lost."
         },
         {
-          "n": "Invulnerable Save",
-          "d": "4+"
-        },
-        {
           "n": "Black Rage",
-          "d": "Each time a model in this unit makes a melee attack, you can re‑roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "d": "Each time a model in this unit makes an attack, you can re-roll the Hit roll. While this unit is not within 12\" of one or more friendly Chaplain models, it cannot be selected to Fall Back and the Objective Control characteristic of models in this unit is 0."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -5121,7 +4331,7 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     }

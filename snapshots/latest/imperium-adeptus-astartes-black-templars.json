@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "36d3-36bc-68dd-40ac",
   "catalogueName": "Imperium - Adeptus Astartes - Black Templars",
@@ -10,26 +10,17 @@
     "Imperium - Adeptus Astartes - Space Marines"
   ],
   "detachments": [],
-  "enhancements": [
-    {
-      "name": "Fervent Exemplars",
-      "pts": 10
-    },
-    {
-      "name": "Inheritors of Sigismund",
-      "pts": 15
-    }
-  ],
+  "enhancements": [],
   "allyCaps": [],
-  "revision": 5,
+  "revision": 6,
   "file": "Imperium - Black Templars.json",
   "counts": {
-    "total": 19,
-    "native": 18,
-    "matched": 18,
+    "total": 16,
+    "native": 16,
+    "matched": 16,
     "legends": 0,
     "crucible": 0,
-    "allied": 1
+    "allied": 0
   },
   "unresolved": [],
   "datasheets": [
@@ -41,11 +32,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 70,
+      "points": 75,
       "ladder": [
         {
           "from": 1,
-          "pts": 70
+          "pts": 75
         }
       ],
       "cap": {
@@ -127,7 +118,7 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": "Lethal Hits"
@@ -144,15 +135,37 @@
           "kw": "Pistol"
         },
         {
-          "n": "Combi-weapon",
+          "n": "➤ Combi-weapon - Damnatus",
           "melee": false,
-          "range": "24\"",
+          "range": "12\"",
           "a": "1",
-          "skill": "3+",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "➤ Combi-weapon - Infernus",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+          "kw": "Blast 1, Torrent"
+        },
+        {
+          "n": "➤ Combi-weapon - Purgatus",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "\n"
         }
       ],
       "composition": [
@@ -166,27 +179,23 @@
       "abilities": [
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Crusader Squad ■ Sword Brethren ■ Sternguard Veteran Squad You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD"
         },
         {
           "n": "Vehement Aggression",
-          "d": "While this model is leading a unit, each time that unit is selected to fight, take a Leadership test for that unit: if passed, until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll; if failed, until the end of the phase, each time a model in that unit makes an attack, re-roll a Hit roll of 1"
-        },
-        {
-          "n": "Prioritised Eradication",
-          "d": "Each time a model in this model's unit makes a melee attack that destroys one or more enemy units, roll one D6: on a 4+, you gain 1 CP."
+          "d": "In the Fight phase, when this unit is selected to fight, you can use this ability. If you do, make a leadership roll for this unit: - This unit's melee attacks can re-roll hit rolls of 1. - Or: If that roll succeeds: This unit's melee attacks: - Can re-roll hit rolls of 1. - Can re-roll wound rolls of 1."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Character",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Tacticus",
         "Lieutenant",
         "Castellan",
-        "Support"
+        "Support",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -194,7 +203,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
@@ -211,11 +220,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 120,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 120
         }
       ],
       "cap": null,
@@ -248,7 +257,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Close-quarters, Pistol"
         },
         {
           "n": "➤ Plasma Pistol - Standard",
@@ -259,7 +268,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Close Combat Weapon",
@@ -294,15 +303,15 @@
       "abilities": [
         {
           "n": "Litanies of the Devout",
-          "d": "While this unit is leading a unit and contains a Chaplain Grimaldus model, each time a model in that unit makes a melee attack, you can re-roll the Hit roll."
+          "d": "This unit's melee attacks can re-roll hit rolls."
         },
         {
           "n": "Temple Relics",
-          "d": "In your Command phase, if this unit contains one or more Cenobyte Servitor models, select one Temple Relics ability (see left). Until the start of your next Command phase, this unit’s Chaplain Grimaldus model has that ability. Banner of the Emperor Victorious: Add 1 to Advance and Charge rolls for this unit. Column of the Major Alter: Add 1 to the Toughness characteristic of models in this unit. Water from the Stoup of Elucidation: Improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1."
+          "d": "At the start of your Command phase, if this unit contains one or more Cenobyte Servitor models, select up to one of the abilities in the Temple Relics section. Until the start of your next Command phase, this model has that ability. Banner of the Emperor Victorious This unit has +1 to advance rolls and charge rolls. Column from the Major Altar This unit has +1 T. Water from the Stoup of Elucidation This unit's melee attacks have +1 AP."
         },
         {
-          "n": "Servitors",
-          "d": "If this unit's Chaplain Grimaldus model is ever destroyed, all of this units remaining Cenobyte Servitor models are also destroyed. While embarking within a TRANSPORT and while embarked within a TRANSPORT, each Cenobyte Servitor model in this unit takes up the space of 0 models."
+          "n": "Faithful Cenobytes",
+          "d": "- If this unit’s Chaplain Grimaldus model is destroyed, this unit’s remaining Cenobyte Servitor models are also destroyed. - Each Cenobyte Servitor model in this unit takes up 0 transport capacity."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -319,9 +328,9 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
-        "W": "4",
+        "W": "5",
         "LD": "5+",
         "OC": "1",
         "InSv": "4+"
@@ -336,11 +345,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 40,
+      "points": 45,
       "ladder": [
         {
           "from": 1,
-          "pts": 40
+          "pts": 45
         }
       ],
       "cap": {
@@ -395,10 +404,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -412,27 +421,27 @@
       "abilities": [
         {
           "n": "Vengeful Exhortation",
-          "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play, the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          "d": "n the Fight phase, you can use this ability. If you do, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6: - On a 4+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
         },
         {
           "n": "Martial Honour",
-          "d": "The first time a model in this model's unit makes a melee attack that destroys one or more enemy units, until the end of the battle, while this model's unit is not Battle-shocked, add 5 to this model's Objective Control characteristic."
+          "d": "(Once per battle, per unit) If this unit's melee attacks destroyed an enemy unit this phase, you can use this ability. If you do, until the end of the battle, this model has +5 OC."
         },
         {
           "n": "Support",
-          "d": "This model can be attached to the following units: ■ Crusader Squad ■ Sword Brethren Squad You can attach this model to one of the above units even if one Captain, Chapter Master, Execrator or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "d": "This model can be attached to the following units: CRUSADER SQUAD, SWORD BRETHREN SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Character",
         "Infantry",
-        "Grenades",
         "Ancient",
         "Tacticus",
         "Imperium",
         "Crusade Ancient",
-        "Support"
+        "Support",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -440,7 +449,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
@@ -457,11 +466,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 150,
+      "points": 160,
       "ladder": [
         {
           "from": 1,
-          "pts": 150
+          "pts": 160
         }
       ],
       "cap": {
@@ -486,7 +495,6 @@
               "model": true,
               "w": [
                 "Close combat weapon",
-                "Bolt Rifle",
                 "Bolt pistol"
               ]
             },
@@ -498,45 +506,9 @@
               "p": 0,
               "model": true,
               "w": [
+                "Initiate Chainsword",
                 "Heavy Bolt Pistol",
-                "Bolt pistol",
-                "Astartes Chainsword"
-              ]
-            },
-            {
-              "n": "Initiate w/Power Fist & Heavy Bolt Pistol",
-              "min": 0,
-              "max": 2,
-              "scale": [
-                [
-                  20,
-                  4
-                ]
-              ],
-              "p": 0,
-              "model": true,
-              "w": [
-                "Heavy Bolt Pistol",
-                "Power fist",
                 "Bolt pistol"
-              ]
-            },
-            {
-              "n": "Initiate w/Pyreblaster",
-              "min": 0,
-              "max": 2,
-              "scale": [
-                [
-                  20,
-                  4
-                ]
-              ],
-              "p": 0,
-              "model": true,
-              "w": [
-                "Close combat weapon",
-                "Bolt pistol",
-                "Pyreblaster"
               ]
             }
           ]
@@ -549,27 +521,27 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Neophyte w/ Firearm",
+              "n": "Neophyte w/ Shotgun",
               "min": 0,
               "max": 8,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Neophyte Firearm",
-                "Close combat weapon"
+                "Shotgun",
+                "Combat knife"
               ]
             },
             {
-              "n": "Neophyte w/ Astartes Chainsword",
+              "n": "Neophyte w/ Chainsword",
               "min": 0,
               "max": 8,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Bolt pistol",
-                "Astartes Chainsword"
+                "Neophyte Chainsword",
+                "Bolt pistol"
               ]
             }
           ]
@@ -591,13 +563,48 @@
               "w": []
             },
             {
-              "n": "Pyre Pistol",
+              "n": "Hand flamer",
               "min": 0,
               "max": null,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
+            }
+          ]
+        },
+        {
+          "n": "Max 2 per 10 models",
+          "owner": null,
+          "min": 0,
+          "max": 4,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Initiate w/Pyreblaster",
+              "min": 0,
+              "max": 4,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Close combat weapon",
+                "Bolt pistol",
+                "Pyreblaster"
+              ]
+            },
+            {
+              "n": "Initiate w/Power Fist & Heavy Bolt Pistol",
+              "min": 0,
+              "max": 4,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Heavy Bolt Pistol",
+                "Power fist",
+                "Bolt pistol"
+              ]
             }
           ]
         }
@@ -620,21 +627,21 @@
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Pyre Pistol",
+          "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Close combat weapon",
@@ -648,15 +655,26 @@
           "kw": ""
         },
         {
-          "n": "Bolt Rifle",
+          "n": "➤ Bolt Rifle - Focused Fire",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Rapid Fire 1"
+        },
+        {
+          "n": "➤ Bolt Rifle - Saturation",
           "melee": false,
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Assault, Heavy"
+          "kw": "Assault, Rapid Fire 1"
         },
         {
           "n": "Bolt pistol",
@@ -664,21 +682,32 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Initiate Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Pyreblaster",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast 1, Torrent"
         },
         {
           "n": "Power fist",
@@ -692,26 +721,37 @@
           "kw": ""
         },
         {
-          "n": "Pyreblaster",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "5",
-          "ap": "0",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "Neophyte Firearm",
+          "n": "Shotgun",
           "melee": false,
           "range": "18\"",
           "a": "2",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Assault"
+          "kw": "Assault, Blast 1"
+        },
+        {
+          "n": "Combat knife",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Neophyte Chainsword",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Sustained Hits 1"
         }
       ],
       "composition": [
@@ -738,18 +778,18 @@
       "keywords": [
         "Infantry",
         "Battleline",
-        "Grenades",
         "Imperium",
         "Tacticus",
-        "Crusader Squad"
+        "Crusader Squad",
+        "Explosives"
       ],
       "models": {
         "min": 1,
-        "max": 43
+        "max": 47
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -766,20 +806,20 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 90,
+      "points": 100,
       "ladder": [
         {
           "from": 1,
-          "pts": 90
+          "pts": 100
         }
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Intercessor Squad",
-        "Crusader Squad",
-        "Sword Brethren",
-        "Sternguard Veteran Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "CRUSADER SQUAD",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "SWORD BRETHREN SQUAD"
       ],
       "options": [
         {
@@ -820,7 +860,7 @@
           "s": "8",
           "ap": "-3",
           "d": "3",
-          "kw": "Anti-Character 5+, Precision"
+          "kw": "Anti-Character 5+, Devastating Wounds, Precision"
         },
         {
           "n": "➤ Black Sword - Sweep",
@@ -839,10 +879,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -856,26 +896,26 @@
       "abilities": [
         {
           "n": "Armour of Faith",
-          "d": "Once per phase, when an attack is allocated to this model and the saving throw is failed, you can change the Damage characteristic of that attack to 0."
+          "d": "Attacks allocated to this model have ‑1 D."
         },
         {
           "n": "Sigismund's Heir",
-          "d": "▪ When this unit declares a charge, If an enemy CHARACTER unit is within 12\" of this unit, you can use this part of this ability. If you do: ▫ This unit can re-roll that charge roll. ▫ This unit must end that charge move engaged with one or more of those enemy CHARACTER units. ▪ (Once per battle, per army) In the Fight phase, when this unit is selected to fight, if this unit is engaged with a CHARACTER unit, you can use this part of this ability. If you do, this unit's melee attacks have [DEVASTATING WOUNDS]."
+          "d": "This unit has +1 to charge rolls."
         },
         {
           "n": "Chosen of the Emperor",
-          "d": "You cannot include more than one Emperor's Champion model in your army."
+          "d": "You cannot include more than one Emperor's Champion unit in your army."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Character",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Tacticus",
         "Emperor's Champion",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -883,7 +923,7 @@
       },
       "profile": {
         "M": "8\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "5",
         "LD": "6+",
@@ -909,11 +949,11 @@
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Intercessor Squad",
-        "Crusader Squad",
-        "Sword Brethren",
-        "Sternguard Veteran Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "CRUSADER SQUAD",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "SWORD BRETHREN SQUAD"
       ],
       "options": [
         {
@@ -954,7 +994,7 @@
           "s": "8",
           "ap": "-3",
           "d": "3",
-          "kw": "Anti-Character 5+, Precision"
+          "kw": "Anti-Character 5+, Devastating Wounds, Precision"
         },
         {
           "n": "➤ Black Sword - Sweep",
@@ -973,10 +1013,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -990,19 +1030,15 @@
       "abilities": [
         {
           "n": "Armour of Faith",
-          "d": "Once per phase, when an attack is allocated to this model and the saving throw is failed, you can change the Damage characteristic of that attack to 0."
+          "d": "Attacks allocated to this model have ‑1 D."
         },
         {
           "n": "Sigismund's Heir",
-          "d": "Each time this model's unit declares a charge, if one or more targets of that charge have the CHARACTER keyword, add 2 to the Charge roll. Once per battle, when this model's unit is selected to fight, if that unit is within Engagement Range of one or more enemy CHARACTER units, this model can use this ability. If it does, until the end of the phase, melee weapons equipped by this model have the [DEVASTATING WOUNDS] ability."
+          "d": "This unit has +1 to charge rolls."
         },
         {
           "n": "Chosen of the Emperor",
-          "d": "You cannot include more than one Emperor's Champion model in your army."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
+          "d": "You cannot include more than one Emperor's Champion unit in your army."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1021,12 +1057,12 @@
       },
       "profile": {
         "M": "8\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -1038,11 +1074,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 50,
+      "points": 65,
       "ladder": [
         {
           "from": 1,
-          "pts": 50
+          "pts": 65
         }
       ],
       "cap": {
@@ -1050,8 +1086,8 @@
         "at1000": 2
       },
       "leads": [
-        "Crusader Squad",
-        "Sword Brethren"
+        "CRUSADER SQUAD",
+        "SWORD BRETHREN SQUAD"
       ],
       "options": [
         {
@@ -1094,7 +1130,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Pyre Pistol",
+              "n": "Hand flamer",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1121,21 +1157,21 @@
           "range": "Melee",
           "a": "3",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": "Extra Attacks, Lethal Hits"
         },
         {
-          "n": "Pyre Pistol",
+          "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Absolvor bolt pistol",
@@ -1144,9 +1180,9 @@
           "a": "1",
           "skill": "3+",
           "s": "5",
-          "ap": "-1",
+          "ap": "-2",
           "d": "2",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Crozius arcanum",
@@ -1157,7 +1193,7 @@
           "s": "6",
           "ap": "-1",
           "d": "2",
-          "kw": ""
+          "kw": "Cleave 1"
         }
       ],
       "composition": [
@@ -1171,11 +1207,11 @@
       "abilities": [
         {
           "n": "Remorseless Persecution",
-          "d": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced"
+          "d": "In your Movement phase, when this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge."
         },
         {
           "n": "Condemnatory Annihilation",
-          "d": "Each time this model's unit has fought, if one or more enemy units were destroyed as a result of those attacks, each enemy unit within 6\" of this model must take a Battle-shock test"
+          "d": "After this unit has fought, if this unit destroyed an enemy model this phase, each enemy unit engaged with this unit makes a battle-shock roll, with -1 to that battle-shock roll."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1195,7 +1231,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "5+",
@@ -1212,11 +1248,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 160,
+      "points": 165,
       "ladder": [
         {
           "from": 1,
-          "pts": 160
+          "pts": 165
         }
       ],
       "cap": {
@@ -1233,7 +1269,7 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Lancer Laser Destroyer",
+              "n": "Laser Destroyer",
               "min": 1,
               "max": 1,
               "scale": null,
@@ -1243,35 +1279,8 @@
             },
             {
               "n": "Armoured Hull",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Icarus Rocket Pod",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Pintle Mount Option",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Ironhail Heavy Stubber",
-              "min": 0,
-              "max": null,
+              "min": 1,
+              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
@@ -1285,44 +1294,22 @@
               "p": 0,
               "model": false,
               "w": []
-            }
-          ]
-        },
-        {
-          "n": "Sponson Weapons",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "2 Fragstorm Grenade Launchers",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Fragstorm grenade launcher"
-              ]
             },
             {
-              "n": "2 Storm Bolters",
+              "n": "Defensive Array",
               "min": 0,
               "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Storm bolter"
-              ]
+              "w": []
             }
           ]
         }
       ],
       "weapons": [
         {
-          "n": "Lancer Laser Destroyer",
+          "n": "Laser Destroyer",
           "melee": false,
           "range": "72\"",
           "a": "2",
@@ -1331,50 +1318,6 @@
           "ap": "-4",
           "d": "D6+3",
           "kw": "Heavy"
-        },
-        {
-          "n": "Ironhail Heavy Stubber",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 3"
-        },
-        {
-          "n": "Multi-melta",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
-        },
-        {
-          "n": "Fragstorm grenade launcher",
-          "melee": false,
-          "range": "18\"",
-          "a": "D6",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
         },
         {
           "n": "Armoured Hull",
@@ -1388,15 +1331,26 @@
           "kw": ""
         },
         {
-          "n": "Icarus Rocket Pod",
+          "n": "Multi-melta",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
+        },
+        {
+          "n": "Defensive Array",
           "melee": false,
           "range": "24\"",
-          "a": "D3",
+          "a": "6",
           "skill": "3+",
-          "s": "8",
+          "s": "5",
           "ap": "-1",
-          "d": "2",
-          "kw": "Anti-fly 2+"
+          "d": "1",
+          "kw": "Rapid Fire 6"
         }
       ],
       "composition": [
@@ -1410,11 +1364,7 @@
       "abilities": [
         {
           "n": "Aquilon Optics",
-          "d": "Each time this model is selected to shoot, you can re-roll one Hit roll, you can re-roll one Wound roll and you can re-roll one Damage roll when resolving its attacks"
-        },
-        {
-          "n": "Damaged: 1-4 Wounds Remaining",
-          "d": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "d": "This unit’s ranged attacks that target a Monster/Vehicle unit can: - Re-roll one hit roll. - Re-roll one wound roll. - Re-roll one damage roll."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1448,11 +1398,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 160,
+      "points": 165,
       "ladder": [
         {
           "from": 1,
-          "pts": 160
+          "pts": 165
         }
       ],
       "cap": {
@@ -1469,15 +1419,6 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Tempest Bolter",
-              "min": 2,
-              "max": 2,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Twin Heavy Onslaught Gatling Cannon",
               "min": 1,
               "max": 1,
@@ -1487,36 +1428,18 @@
               "w": []
             },
             {
-              "n": "Armoured Hull",
-              "min": 0,
-              "max": null,
+              "n": "Defensive Array",
+              "min": 1,
+              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Icarus Rocket Pod",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Pintle Mount Option",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Ironhail Heavy Stubber",
-              "min": 0,
-              "max": null,
+              "n": "Armoured Hull",
+              "min": 1,
+              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
@@ -1536,48 +1459,26 @@
       ],
       "weapons": [
         {
-          "n": "Tempest Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Rapid Fire 4"
-        },
-        {
           "n": "Twin Heavy Onslaught Gatling Cannon",
           "melee": false,
           "range": "24\"",
           "a": "12",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Devastating Wounds, Twin-linked"
+          "kw": "Devastating Wounds: Non-Monster/Vehicle, Sustained Hits 2: Non-Monster/Vehicle Twin-linked"
         },
         {
-          "n": "Ironhail Heavy Stubber",
+          "n": "Defensive Array",
           "melee": false,
-          "range": "36\"",
-          "a": "3",
+          "range": "24\"",
+          "a": "12",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Rapid Fire 3"
-        },
-        {
-          "n": "Multi-melta",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
+          "kw": "Rapid Fire 12"
         },
         {
           "n": "Armoured Hull",
@@ -1591,15 +1492,15 @@
           "kw": ""
         },
         {
-          "n": "Icarus Rocket Pod",
+          "n": "Multi-melta",
           "melee": false,
-          "range": "24\"",
-          "a": "D3",
+          "range": "18\"",
+          "a": "2",
           "skill": "3+",
-          "s": "8",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Anti-fly 2+"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         }
       ],
       "composition": [
@@ -1612,12 +1513,8 @@
       ],
       "abilities": [
         {
-          "n": "Rotating Death",
-          "d": "This model’s twin heavy onslaught gatling cannon has the [SUSTAINED HITS 2] ability when targeting Infantry units."
-        },
-        {
-          "n": "Damaged: 1-4 Wounds Remaining",
-          "d": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "n": "Reaping Tally",
+          "d": "This unit’s ranged attacks that target a unit (excluding Monster/Vehicle units) have +1 AP."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1651,11 +1548,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 150,
+      "points": 145,
       "ladder": [
         {
           "from": 1,
-          "pts": 150
+          "pts": 145
         }
       ],
       "cap": {
@@ -1681,16 +1578,25 @@
               "w": []
             },
             {
-              "n": "Armoured Hull",
-              "min": 0,
-              "max": null,
+              "n": "Defensive Array",
+              "min": 1,
+              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Icarus Rocket Pod",
+              "n": "Armoured Hull",
+              "min": 1,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Multi-melta",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1701,25 +1607,16 @@
           ]
         },
         {
-          "n": "Pintle Mount Option",
+          "n": "Equipment",
           "owner": null,
           "min": 0,
-          "max": 3,
+          "max": null,
           "pick": "many",
           "opts": [
             {
-              "n": "Ironhail Heavy Stubber",
+              "n": "Clear Warning",
               "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Multi-melta",
-              "min": 0,
-              "max": null,
+              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
@@ -1737,30 +1634,19 @@
           "skill": "3+",
           "s": "10",
           "ap": "-3",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": "Twin-linked"
         },
         {
-          "n": "Ironhail Heavy Stubber",
+          "n": "Defensive Array",
           "melee": false,
-          "range": "36\"",
-          "a": "3",
+          "range": "24\"",
+          "a": "6",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Rapid Fire 3"
-        },
-        {
-          "n": "Multi-melta",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
+          "kw": "Rapid Fire 6"
         },
         {
           "n": "Armoured Hull",
@@ -1774,15 +1660,15 @@
           "kw": ""
         },
         {
-          "n": "Icarus Rocket Pod",
+          "n": "Multi-melta",
           "melee": false,
-          "range": "24\"",
-          "a": "D3",
+          "range": "18\"",
+          "a": "2",
           "skill": "3+",
-          "s": "8",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Anti-fly 2+"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         }
       ],
       "composition": [
@@ -1795,12 +1681,8 @@
       ],
       "abilities": [
         {
-          "n": "Ferocious Assault",
-          "d": "Each time this model makes an attack with its twin las-talon that targets the closest eligible Monster or Vehicle unit, add 1 to the Hit roll"
-        },
-        {
-          "n": "Damaged: 1-4 Wounds Remaining",
-          "d": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "n": "Priority Target Acquisition",
+          "d": "This unit’s ranged attacks that target a unit within 12\" of this unit have +1 S."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1834,19 +1716,21 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 110,
+      "points": 125,
       "ladder": [
         {
           "from": 1,
-          "pts": 110
+          "pts": 125
         }
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Intercessor Squad",
-        "Crusader Squad",
-        "Sword Brethren"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "COMPANY HEROES",
+        "CRUSADER SQUAD",
+        "INTERCESSOR SQUAD",
+        "SWORD BRETHREN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -1867,7 +1751,7 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "8",
+          "s": "9",
           "ap": "-3",
           "d": "3",
           "kw": ""
@@ -1897,11 +1781,11 @@
       "abilities": [
         {
           "n": "Crusade of Wrath",
-          "d": "While this model is leading a unit, add 1 to the Attacks and Strength characteristic of melee weapons equipped by models in that unit."
+          "d": "This unit's melee attacks have: - +1 A. - +1 S."
         },
         {
           "n": "High Marshal",
-          "d": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model’s unit and roll one D6, adding 1 to the result for every five models in this model's unit: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+          "d": "At the start of the Fight phase, select up to one enemy unit engaged with this unit and roll one D6: - On a 2-3, that enemy unit suffers D3 mortal wounds. - On a 4-5, that enemy unit suffers 3 mortal wounds. - On a 6+, that enemy unit suffers D3+3 mortal wounds."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1922,7 +1806,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "6",
         "LD": "6+",
@@ -1939,11 +1823,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 70,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 70
         }
       ],
       "cap": {
@@ -1953,25 +1837,7 @@
       "leads": null,
       "options": [
         {
-          "n": "Wargear",
-          "owner": null,
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Armoured Hull",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Option",
+          "n": "Wargear Option",
           "owner": null,
           "min": 0,
           "max": 1,
@@ -1982,21 +1848,12 @@
               "min": 0,
               "max": null,
               "scale": null,
-              "p": 0,
+              "p": 10,
               "model": false,
               "w": []
             },
             {
               "n": "Shield Dome",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Ironhail Skytalon Array",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2050,60 +1907,45 @@
           "pick": "one",
           "opts": [
             {
-              "n": "2 Fragstorm Grenade Launchers",
+              "n": "Fragstorm Grenade Launchers",
               "min": 0,
               "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Fragstorm grenade launcher"
-              ]
+              "w": []
             },
             {
-              "n": "2 Storm Bolters",
+              "n": "Storm Bolters",
               "min": 0,
               "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Storm bolter"
-              ]
+              "w": []
             }
           ]
         }
       ],
       "weapons": [
         {
-          "n": "Ironhail Skytalon Array",
-          "melee": false,
-          "range": "36\"",
-          "a": "8",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-Fly 4+, Sustained Hits 1"
-        },
-        {
           "n": "➤ Bellicatus Missile Array - Frag",
           "melee": false,
           "range": "48\"",
-          "a": "D6",
+          "a": "4",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "➤ Bellicatus Missile Array - Icarus",
           "melee": false,
           "range": "48\"",
-          "a": "D3",
+          "a": "3",
           "skill": "3+",
-          "s": "8",
+          "s": "6",
           "ap": "-1",
           "d": "2",
           "kw": "Anti-Fly 2+"
@@ -2114,9 +1956,9 @@
           "range": "48\"",
           "a": "1",
           "skill": "3+",
-          "s": "8",
+          "s": "10",
           "ap": "-2",
-          "d": "D6",
+          "d": "D3+3",
           "kw": ""
         },
         {
@@ -2126,7 +1968,7 @@
           "a": "3",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 3"
         },
@@ -2136,32 +1978,32 @@
           "range": "18\"",
           "a": "2",
           "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         },
         {
-          "n": "Fragstorm grenade launcher",
+          "n": "Fragstorm Grenade Launchers",
           "melee": false,
           "range": "18\"",
-          "a": "D6",
+          "a": "6",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 2"
         },
         {
-          "n": "Storm bolter",
+          "n": "Storm Bolters",
           "melee": false,
           "range": "24\"",
-          "a": "2",
+          "a": "4",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Rapid Fire 2"
+          "kw": "Rapid Fire 4"
         },
         {
           "n": "Armoured Hull",
@@ -2185,20 +2027,16 @@
       ],
       "abilities": [
         {
-          "n": "Transport",
-          "d": "This model has a transport capacity of 7 TACTICUS or PHOBOS INFANTRY models. It cannot transport JUMP PACK models."
-        },
-        {
-          "n": "Assault Vehicle",
-          "d": "Units can disembark from this Transport after it has Advanced. Units that do so count as having made a Normal move, and cannot declare a charge that turn."
+          "n": "Rapid Disembarkation",
+          "d": "In your Movement phase, when this unit ends an advance move, units embarked within this unit can make a shock disembark move."
         },
         {
           "n": "Orbital Comms Array [Aura]",
-          "d": "While a friendly Adeptus Astartes unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP"
+          "d": "This unit has Scouts 6\"."
         },
         {
           "n": "Shield Dome",
-          "d": "The bearer has a 5+ invulnerable save."
+          "d": "This unit has 5+ InSv."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2226,211 +2064,6 @@
       "native": true
     },
     {
-      "id": "8525-2de1-14fd-c1f5",
-      "linkId": "7f21-2e51-4d2a-91d6",
-      "name": "Land Raider Crusader",
-      "rawName": "Land Raider Crusader",
-      "type": "model",
-      "mode": "standard",
-      "legends": false,
-      "points": 220,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 220
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": null,
-      "options": [
-        {
-          "n": "Wargear",
-          "owner": null,
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Armoured Tracks",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Hunter-killer missile",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Hurricane Bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Multi-melta",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Storm bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Twin assault cannon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Armoured Tracks",
-          "melee": true,
-          "range": "Melee",
-          "a": "6",
-          "skill": "4+",
-          "s": "8",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Hunter-killer missile",
-          "melee": false,
-          "range": "48\"",
-          "a": "1",
-          "skill": "2+",
-          "s": "14",
-          "ap": "-3",
-          "d": "D6",
-          "kw": "One Shot"
-        },
-        {
-          "n": "Hurricane Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "6",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 6, Twin-linked"
-        },
-        {
-          "n": "Multi-melta",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Twin assault cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "6",
-          "skill": "3+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating wounds, Twin-linked"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Land Raider Crusader",
-          "min": 1,
-          "max": 1,
-          "w": []
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Transport",
-          "d": "This model has a transport capacity of 16 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
-        },
-        {
-          "n": "Assault Ramp",
-          "d": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
-        },
-        {
-          "n": "Legacy of Jerulas",
-          "d": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, re-roll a Hit roll of 1 and a re-roll a Wound roll of 1"
-        },
-        {
-          "n": "Damaged: 1-5 Wounds Remaining",
-          "d": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Vehicle",
-        "Land Raider Crusader",
-        "Smoke",
-        "Imperium",
-        "Transport",
-        "Grenades",
-        "Land Raider",
-        "Frame"
-      ],
-      "models": {
-        "min": 1,
-        "max": 1
-      },
-      "profile": {
-        "M": "12\"",
-        "T": "12",
-        "Sv": "2+",
-        "W": "16",
-        "LD": "6+",
-        "OC": "5",
-        "InSv": ""
-      },
-      "native": true
-    },
-    {
       "id": "68dd-5f49-4f17-cd84",
       "linkId": "d0d4-cb65-1f61-62f6",
       "name": "Marshal",
@@ -2450,12 +2083,13 @@
         "at1000": 2
       },
       "leads": [
-        "Assault Intercessor Squad",
-        "Infernus Squad",
-        "Intercessor Squad",
-        "Crusader Squad",
-        "Sword Brethren",
-        "Sternguard Veteran Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "CRUSADER SQUAD",
+        "INFERNUS SQUAD",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD",
+        "SWORD BRETHREN SQUAD"
       ],
       "options": [
         {
@@ -2493,7 +2127,7 @@
           "range": "Melee",
           "a": "7",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": "Lethal Hits"
@@ -2521,15 +2155,37 @@
           "kw": "Hazardous, Pistol"
         },
         {
-          "n": "Combi-weapon",
+          "n": "➤ Combi-weapon - Damnatus",
           "melee": false,
-          "range": "24\"",
+          "range": "12\"",
           "a": "1",
-          "skill": "3+",
+          "skill": "2+",
+          "s": "9",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "➤ Combi-weapon - Infernus",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+          "kw": "Blast 1, Torrent"
+        },
+        {
+          "n": "➤ Combi-weapon - Purgatus",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "\n"
         }
       ],
       "composition": [
@@ -2543,23 +2199,23 @@
       "abilities": [
         {
           "n": "Inspirational Exemplar",
-          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+          "d": "This unit's melee attacks have +1 to hit rolls."
         },
         {
           "n": "Pious Fervour",
-          "d": "Each time this model's unit is selected to fight, until the end of the phase, add 1 to the Attacks characteristic of this model's Master-Crafted Power Weapon for each enemy unit within 6\" of this model (to a maximum of +3)."
+          "d": "When this unit is selected to fight, you can use this ability. If you do, this model's melee attacks have +1 A for each enemy unit within 6\" of this model (to a maximum of +3 A)."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Character",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Tacticus",
         "Marshal",
         "Captain",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -2567,7 +2223,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "5",
         "LD": "6+",
@@ -2584,11 +2240,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 170,
+      "points": 190,
       "ladder": [
         {
           "from": 1,
-          "pts": 170
+          "pts": 190
         }
       ],
       "cap": {
@@ -2606,8 +2262,8 @@
           "opts": [
             {
               "n": "Armoured Hull",
-              "min": 0,
-              "max": null,
+              "min": 1,
+              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
@@ -2632,7 +2288,7 @@
               "w": []
             },
             {
-              "n": "Repulsor Defensive Array",
+              "n": "Defensive Array",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2677,7 +2333,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Las-talon",
+              "n": "Heavy Onslaught Gatling Cannon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2686,7 +2342,7 @@
               "w": []
             },
             {
-              "n": "Heavy Onslaught Gatling Cannon",
+              "n": "Las-talon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2707,7 +2363,7 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Sustained Hits 1, Twin-linked"
+          "kw": "Rapid Fire 2, Sustained Hits 1, Twin-linked"
         },
         {
           "n": "Twin lascannon",
@@ -2717,8 +2373,19 @@
           "skill": "3+",
           "s": "12",
           "ap": "-3",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": "Twin-linked"
+        },
+        {
+          "n": "Heavy Onslaught Gatling Cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "12",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Devastating Wounds: non-Monster/Vehicle, Sustained Hits 2: non-Monster/Vehicles"
         },
         {
           "n": "Las-talon",
@@ -2728,19 +2395,8 @@
           "skill": "3+",
           "s": "10",
           "ap": "-3",
-          "d": "D6",
+          "d": "D3+3",
           "kw": ""
-        },
-        {
-          "n": "Heavy Onslaught Gatling Cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "12",
-          "skill": "3+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds"
         },
         {
           "n": "Armoured Hull",
@@ -2759,10 +2415,10 @@
           "range": "18\"",
           "a": "2",
           "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         },
         {
           "n": "Hunter-slayer missile",
@@ -2772,17 +2428,17 @@
           "skill": "2+",
           "s": "14",
           "ap": "-3",
-          "d": "D6",
+          "d": "D3+3",
           "kw": "Indirect Fire, One Shot"
         },
         {
-          "n": "Repulsor Defensive Array",
+          "n": "Defensive Array",
           "melee": false,
           "range": "24\"",
           "a": "18",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": ""
         }
@@ -2797,16 +2453,8 @@
       ],
       "abilities": [
         {
-          "n": "Transport",
-          "d": "This model has a transport capacity of 14 ADEPTUS ASTARTES INFANTRY models. Each JUMP PACK, GRAVIS or TERMINATOR model takes up the space of 2 models and each CENTURION model takes up the space of 3 models."
-        },
-        {
-          "n": "Stabilised Disembarkation",
-          "d": "In your opponent's Shooting phase, each time and enemy unit is selected to shoot, after that unit has shot, if any of those attacks targeted this TRANSPORT, it can use this ability. If it does, any units embarked within it can disembark. When doing so, models in those units can be set up wholly within 6\" of this TRANSPORT and not within Engagement Range of one or more enemy units."
-        },
-        {
-          "n": "Damaged: 1-5 Wounds Remaining",
-          "d": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "n": "Combat Embarkation",
+          "d": "In your opponent’s Charge phase, when an enemy unit has selected charge targets, you can select one friendly unengaged Adeptus Astartes unit that was one of those charge targets and is eligible to embark within this transport. If every model in that unit is within 3\" of this transport, that unit can embark within this transport. That enemy unit can then select new charge targets for that charge move."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2841,11 +2489,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 255,
+      "points": 265,
       "ladder": [
         {
           "from": 1,
-          "pts": 255
+          "pts": 265
         }
       ],
       "cap": {
@@ -2862,7 +2510,7 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Repulsor Executioner Defensive Array",
+              "n": "Defensive Array",
               "min": 1,
               "max": 1,
               "scale": null,
@@ -2872,8 +2520,8 @@
             },
             {
               "n": "Armoured Hull",
-              "min": 0,
-              "max": null,
+              "min": 1,
+              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
@@ -2889,43 +2537,7 @@
               "w": []
             },
             {
-              "n": "Icarus Rocket Pod",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Twin heavy bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Twin Icarus ironhail heavy stubber",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Pintle Mount Option",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Ironhail Heavy Stubber",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2956,7 +2568,7 @@
               "min": 0,
               "max": null,
               "scale": null,
-              "p": 10,
+              "p": 0,
               "model": false,
               "w": []
             },
@@ -2974,37 +2586,15 @@
       ],
       "weapons": [
         {
-          "n": "Repulsor Executioner Defensive Array",
+          "n": "Defensive Array",
           "melee": false,
           "range": "24\"",
-          "a": "10",
+          "a": "18",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": ""
-        },
-        {
-          "n": "Ironhail Heavy Stubber",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 3"
-        },
-        {
-          "n": "Multi-melta",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
         },
         {
           "n": "Heavy Laser Destroyer",
@@ -3015,29 +2605,29 @@
           "s": "16",
           "ap": "-4",
           "d": "D6+4",
-          "kw": "Heavy"
+          "kw": "Devastating Wounds, Heavy"
         },
         {
           "n": "➤ Macro Plasma Incinerator - Standard",
           "melee": false,
           "range": "36\"",
-          "a": "D6+1",
+          "a": "D3+3",
           "skill": "3+",
-          "s": "8",
+          "s": "9",
           "ap": "-3",
           "d": "2",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "➤ Macro Plasma Incinerator - Supercharge",
           "melee": false,
           "range": "36\"",
-          "a": "D6+1",
+          "a": "D3+3",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-4",
           "d": "3",
-          "kw": "Blast, Hazardous"
+          "kw": "Blast 1, Hazardous"
         },
         {
           "n": "Armoured Hull",
@@ -3057,20 +2647,9 @@
           "a": "12",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Icarus Rocket Pod",
-          "melee": false,
-          "range": "24\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "8",
           "ap": "-1",
-          "d": "2",
-          "kw": "Anti-fly 2+"
+          "d": "1",
+          "kw": "Devastating Wounds: non-Monster/Vehicle, Sustained Hits 2: non-Monster/Vehicles"
         },
         {
           "n": "Twin heavy bolter",
@@ -3081,18 +2660,18 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Sustained Hits 1, Twin-linked"
+          "kw": "Rapid Fire 2, Sustained Hits 1, Twin-linked"
         },
         {
-          "n": "Twin Icarus ironhail heavy stubber",
+          "n": "Multi-melta",
           "melee": false,
-          "range": "36\"",
-          "a": "3",
+          "range": "18\"",
+          "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-FLY 4+, Rapid Fire 3, Twin-linked"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         }
       ],
       "composition": [
@@ -3105,12 +2684,8 @@
       ],
       "abilities": [
         {
-          "n": "Transport",
-          "d": "This model has a transport capacity of 7 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
-        },
-        {
-          "n": "Interception Strike",
-          "d": "Each time this model makes a ranged attack that targets a unit that is within 12\" of one or more ADEPTUS ASTARTES units from your army, you can re-roll the Hit roll."
+          "n": "Executioner",
+          "d": "This unit’s ranged attacks that target a unit not below half-strength have +1 to hit rolls."
         },
         {
           "n": "Damaged: 1-5 Wounds Remaining",
@@ -3142,318 +2717,6 @@
       "native": true
     },
     {
-      "id": "a499-86fa-4d0c-b06d",
-      "linkId": "ff16-9d2c-44ac-0b02",
-      "name": "Sternguard Veteran Squad",
-      "rawName": "Sternguard Veteran Squad",
-      "type": "unit",
-      "mode": "standard",
-      "legends": false,
-      "points": 85,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 85
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": null,
-      "options": [
-        {
-          "n": "Sternguard Veterans",
-          "owner": null,
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Sternguard Veteran w/ Bolt Rifle",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Sternguard Bolt Pistol",
-                "Sternguard Bolt Rifle",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Sternguard Veteran Sergeant",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Sternguard Bolt Pistol",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Sternguard Veteran w/ Special Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Sternguard Bolt Pistol",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Sternguard Veteran w/ Combi-weapon",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Sternguard Bolt Pistol",
-                "Combi-weapon",
-                "Close combat weapon"
-              ]
-            }
-          ]
-        },
-        {
-          "n": "Weapon Option",
-          "owner": "Sternguard Veteran Sergeant",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Combi-weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Sternguard Bolt Rifle",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Melee Option",
-          "owner": "Sternguard Veteran Sergeant",
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Astartes Chainsword",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power Weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power Fist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Weapon Option",
-          "owner": "Sternguard Veteran w/ Special Weapon",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Pyrecannon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Sternguard Heavy Bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Sternguard Bolt Pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds, Pistol"
-        },
-        {
-          "n": "Sternguard Bolt Rifle",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Assault, Devastating Wounds, Heavy, Rapid Fire 1"
-        },
-        {
-          "n": "Close combat weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Combi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "4+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
-        },
-        {
-          "n": "Astartes Chainsword",
-          "melee": true,
-          "range": "Melee",
-          "a": "6",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Power Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Power Fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Pyrecannon",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6+1",
-          "skill": "N/A",
-          "s": "6",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "Sternguard Heavy Bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "4+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Devastating Wounds, Heavy, Sustained Hits 1"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Sternguard Veteran Sergeant",
-          "min": 1,
-          "max": 1,
-          "w": [
-            "Sternguard Bolt Pistol",
-            "Close combat weapon"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Vitruous Onslaught",
-          "d": "Each time a model in this unit makes an attack that targets the closest eligible target, you can re-roll a Wound roll of 1."
-        }
-      ],
-      "faction": "Black Templars",
-      "keywords": [
-        "Infantry",
-        "Grenades",
-        "Imperium",
-        "Tacticus",
-        "Sternguard Veteran Squad"
-      ],
-      "models": {
-        "min": 1,
-        "max": 20
-      },
-      "profile": {
-        "M": "6\"",
-        "T": "4",
-        "Sv": "3+",
-        "W": "2",
-        "LD": "6+",
-        "OC": "1",
-        "InSv": ""
-      },
-      "native": false
-    },
-    {
       "id": "206c-6b4d-4aaa-7e79",
       "linkId": "f993-54e9-8aad-1ef3",
       "name": "Sword Brethren Squad",
@@ -3461,15 +2724,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 115,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 115
         },
         {
           "from": 10,
-          "pts": 250
+          "pts": 275
         }
       ],
       "cap": {
@@ -3497,7 +2760,7 @@
             {
               "n": "Sword Brother w/ Twin Lightning Claws",
               "min": 0,
-              "max": 0,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
@@ -3533,7 +2796,7 @@
               "w": []
             },
             {
-              "n": "Pyre Pistol",
+              "n": "Hand flamer",
               "min": 0,
               "max": null,
               "scale": null,
@@ -3553,7 +2816,7 @@
             {
               "n": "Thunder Hammer",
               "min": 0,
-              "max": 0,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": false,
@@ -3569,7 +2832,7 @@
               "w": []
             },
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -3587,10 +2850,10 @@
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -3601,7 +2864,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -3612,18 +2875,18 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Pyre Pistol",
+          "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Thunder Hammer",
@@ -3648,12 +2911,12 @@
           "kw": "Lethal Hits"
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": "Sustained Hits 1"
@@ -3681,11 +2944,7 @@
       "abilities": [
         {
           "n": "Exploit Their Cowardice",
-          "d": "Each time an enemy unit within Engagement Range of this unit is selected to Fall Back, after it ends that Fall Back move, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a CHARACTER from your army with the Leader ability can be attached to an INTERCESSOR SQUAD, it can be attached to this unit instead."
+          "d": "In your opponent's Movement phase, when an enemy unit that was engaged with this unit ends a fall-back move, if this unit is unengaged it can make a normal move of up to 6\"."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3698,340 +2957,16 @@
       ],
       "models": {
         "min": 4,
-        "max": 10
+        "max": 12
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "3",
         "LD": "6+",
         "OC": "1",
         "InSv": ""
-      },
-      "native": true
-    },
-    {
-      "id": "80ad-6e62-65e3-e667",
-      "linkId": "a05a-33d3-6d3d-c133",
-      "name": "Terminator Squad",
-      "rawName": "Terminator Squad",
-      "type": "unit",
-      "mode": "standard",
-      "legends": false,
-      "points": 160,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 160
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": null,
-      "options": [
-        {
-          "n": "Terminators",
-          "owner": null,
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Terminator Sergeant",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Storm bolter"
-              ]
-            },
-            {
-              "n": "Terminator w/ Power Fist",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Power fist",
-                "Storm bolter"
-              ]
-            },
-            {
-              "n": "Terminator w/ Chain Fist",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Storm bolter",
-                "Chainfist"
-              ]
-            },
-            {
-              "n": "Terminator w/ Heavy Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": [
-                [
-                  10,
-                  2
-                ]
-              ],
-              "p": 0,
-              "model": true,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Weapon Option",
-          "owner": "Terminator Sergeant",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Power weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Chainfist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power fist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Ranged Weapon Option",
-          "owner": "Terminator w/ Heavy Weapon",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Cyclone Missile Launcher & Storm Bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Storm bolter"
-              ]
-            },
-            {
-              "n": "Heavy Flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Assault Cannon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Melee Weapon Option",
-          "owner": "Terminator w/ Heavy Weapon",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Power Fist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Chainfist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Power weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Chainfist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Anti-Vehicle 3+"
-        },
-        {
-          "n": "Power fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "➤ Cyclone missile launcher - frag",
-          "melee": false,
-          "range": "36\"",
-          "a": "2D6",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Cyclone missile launcher - krak",
-          "melee": false,
-          "range": "36\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-2",
-          "d": "D6",
-          "kw": ""
-        },
-        {
-          "n": "Heavy Flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "Assault Cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "6",
-          "skill": "3+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Power Fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        }
-      ],
-      "composition": [
-        {
-          "n": "Terminator Sergeant",
-          "min": 1,
-          "max": 1,
-          "w": [
-            "Storm bolter"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Teleport Homer",
-          "d": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" horizontally of that token and not within 8\" horizontally of any enemy models. That token is then removed."
-        },
-        {
-          "n": "Judgement of the Weak",
-          "d": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within engagement range of this unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Terminator",
-        "Terminator Squad"
-      ],
-      "models": {
-        "min": 1,
-        "max": 20
-      },
-      "profile": {
-        "M": "5\"",
-        "T": "5",
-        "Sv": "2+",
-        "W": "3",
-        "LD": "6+",
-        "OC": "1",
-        "InSv": "4+"
       },
       "native": true
     }

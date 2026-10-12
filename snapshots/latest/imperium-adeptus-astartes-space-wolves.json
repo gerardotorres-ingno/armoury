@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "94bb-3284-ee14-57a1",
   "catalogueName": "Imperium - Adeptus Astartes - Space Wolves",
@@ -14,13 +14,13 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 11,
+  "revision": 12,
   "file": "Imperium - Space Wolves.json",
   "counts": {
-    "total": 41,
-    "native": 40,
+    "total": 39,
+    "native": 38,
     "matched": 21,
-    "legends": 19,
+    "legends": 17,
     "crucible": 0,
     "allied": 1
   },
@@ -34,16 +34,18 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 95,
+      "points": 105,
       "ladder": [
         {
           "from": 1,
-          "pts": 95
+          "pts": 105
         }
       ],
       "cap": null,
       "leads": [
-        "Wolf Guard Terminators"
+        "TERMINATOR ASSAULT SQUAD",
+        "TERMINATOR SQUAD",
+        "WOLF GUARD TERMINATORS"
       ],
       "options": null,
       "weapons": [
@@ -53,10 +55,10 @@
           "range": "Melee",
           "a": "5",
           "skill": "2+",
-          "s": "8",
+          "s": "10",
           "ap": "-2",
           "d": "3",
-          "kw": "Anti-Monster 3+, Anti-Vehicle 3+, Precision"
+          "kw": "Anti-Monster/Vehicle 3+, Precision"
         }
       ],
       "composition": [
@@ -72,11 +74,11 @@
       "abilities": [
         {
           "n": "Anvil of Endurance",
-          "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6, on a 4+, do not remove the destroyed model from play. The destroyed model can fight after the attacking unit has finished making its attacks, and then is removed from play"
+          "d": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6: - On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is then removed from the battlefield."
         },
         {
           "n": "Champion of the Kingsguard",
-          "d": "Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
+          "d": "This model’s attacks that target a Character unit: - Can re-roll hit rolls of 1. - Can re-roll wound rolls of 1."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -95,7 +97,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "6",
         "LD": "6+",
@@ -180,7 +182,7 @@
           "s": "6",
           "ap": "0",
           "d": "1",
-          "kw": "Devastating Wounds"
+          "kw": "Sustained Hits 1"
         },
         {
           "n": "Multi-melta",
@@ -188,17 +190,17 @@
           "range": "18\"",
           "a": "2",
           "skill": "2+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         },
         {
           "n": "➤ Helfrost cannon - dispersed",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "6",
           "ap": "-1",
           "d": "2",
@@ -219,12 +221,12 @@
           "n": "Heavy Flamer",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 2, Torrent"
         }
       ],
       "composition": [
@@ -241,11 +243,11 @@
       "abilities": [
         {
           "n": "Legendary Tenacity",
-          "d": "Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than this model's Toughness characteristic, subtract 1 from the Wound roll."
+          "d": "Attacks that target this unit with a S greater than this unit's T have -1 to wound rolls."
         },
         {
           "n": "Ancient Tactician",
-          "d": "At the start of your Command phase, if this model is on the battlefield, you gain 1 CP"
+          "d": "(Once per turn, per army) When you target this unit with a stratagem, that use is -1CP"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -265,7 +267,7 @@
       },
       "profile": {
         "M": "9\"",
-        "T": "9",
+        "T": "10",
         "Sv": "2+",
         "W": "8",
         "LD": "6+",
@@ -282,15 +284,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 135,
+      "points": 150,
       "ladder": [
         {
           "from": 1,
-          "pts": 135
+          "pts": 150
         },
         {
           "from": 11,
-          "pts": 270
+          "pts": 290
         }
       ],
       "cap": null,
@@ -331,7 +333,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -353,12 +355,12 @@
       ],
       "weapons": [
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -369,10 +371,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -383,7 +385,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -394,7 +396,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Power weapon",
@@ -414,7 +416,7 @@
           "min": 8,
           "max": 19,
           "w": [
-            "Astartes Chainsword",
+            "Chainsword",
             "Bolt pistol"
           ]
         },
@@ -428,17 +430,17 @@
       "abilities": [
         {
           "n": "Berserk Charge",
-          "d": "This unit is eligible to declare a charge in a turn in which it Advanced"
+          "d": "When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
         "Battleline",
-        "Grenades",
         "Imperium",
         "Blood Claws",
-        "Tacticus"
+        "Tacticus",
+        "Explosives"
       ],
       "models": {
         "min": 9,
@@ -446,7 +448,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -500,7 +502,7 @@
           "kw": "Twin-linked"
         },
         {
-          "n": "Crushing teeth and claws",
+          "n": "Teeth and claws",
           "melee": true,
           "range": "Melee",
           "a": "3",
@@ -519,7 +521,7 @@
           "w": [
             "Bolt pistol",
             "Wolf claws",
-            "Crushing teeth and claws"
+            "Teeth and claws"
           ]
         }
       ],
@@ -554,86 +556,6 @@
         "LD": "6+",
         "OC": "2",
         "InSv": ""
-      },
-      "native": true
-    },
-    {
-      "id": "6a06-e50c-2c7d-3ec3",
-      "linkId": "3f15-36d4-1194-be99",
-      "name": "Cyberwolf",
-      "rawName": "Cyberwolf [Legends]",
-      "type": "model",
-      "mode": "legends",
-      "legends": true,
-      "points": 20,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 20
-        }
-      ],
-      "cap": null,
-      "leads": null,
-      "options": null,
-      "weapons": [
-        {
-          "n": "Teeth and claws",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "4+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        }
-      ],
-      "composition": [
-        {
-          "n": "Cyberwolf [Legends]",
-          "min": 1,
-          "max": 1,
-          "w": []
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Alpha Hunter",
-          "d": "While this model is leading a unit, models in that unit have the Scouts 6\" ability."
-        },
-        {
-          "n": "Close In for the Kill",
-          "d": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll."
-        },
-        {
-          "n": "Support",
-          "d": "This model can be attached to the following unit: ■ Fenrisian Wolves"
-        },
-        {
-          "n": "Wolfkin",
-          "d": "This model cannot be your WARLORD and cannot be given Enhancements."
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Beast",
-        "Character",
-        "Imperium",
-        "Cyberwolf",
-        "Support"
-      ],
-      "models": {
-        "min": 1,
-        "max": 1
-      },
-      "profile": {
-        "M": "10\"",
-        "T": "4",
-        "Sv": "6+",
-        "W": "2",
-        "LD": "7+",
-        "OC": "0",
-        "InSv": "6+"
       },
       "native": true
     },
@@ -685,11 +607,11 @@
       "abilities": [
         {
           "n": "Predatory Instinct",
-          "d": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, it can make a Normal move of up to D6\""
+          "d": "In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of up to D6\"."
         },
         {
           "n": "Hunting Hounds",
-          "d": "While this unit is within 6\" of one or more SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, models in it have an Objective Control characteristic of 1"
+          "d": "While this unit is within 6\" of a friendly Space Wolves Character model (excluding Wulfen), if this unit is not battle-shocked, Hunting Wolf models have +1 OC."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -721,11 +643,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 165,
+      "points": 180,
       "ladder": [
         {
           "from": 1,
-          "pts": 165
+          "pts": 180
         }
       ],
       "cap": null,
@@ -757,7 +679,7 @@
               "w": []
             },
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -768,14 +690,14 @@
           ]
         },
         {
-          "n": "Replace Carbine",
+          "n": "Replace bolt pistol",
           "owner": "Grey Hunter Pack Leader",
           "min": 1,
           "max": 1,
           "pick": "one",
           "opts": [
             {
-              "n": "Bolt Carbine",
+              "n": "Plasma pistol",
               "min": 0,
               "max": null,
               "scale": null,
@@ -784,7 +706,7 @@
               "w": []
             },
             {
-              "n": "Plasma pistol",
+              "n": "Bolt pistol",
               "min": 0,
               "max": null,
               "scale": null,
@@ -819,26 +741,15 @@
           "kw": ""
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
-        },
-        {
-          "n": "Bolt Carbine",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 1"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -868,10 +779,21 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
+        },
+        {
+          "n": "Bolt Carbine",
+          "melee": false,
+          "range": "24\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Rapid Fire 1"
         }
       ],
       "composition": [
@@ -880,7 +802,7 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Bolt pistol"
+            "Bolt Carbine"
           ]
         },
         {
@@ -890,24 +812,28 @@
           "w": [
             "Bolt Carbine",
             "Bolt pistol",
-            "Astartes Chainsword"
+            "Chainsword"
           ]
         }
       ],
       "abilities": [
         {
           "n": "Cunning Hunters",
-          "d": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. If the target is within range of an objective marker, you can re-roll the Wound roll instead."
+          "d": "In the Fight phase, if this unit is within range of an objective, this unit’s melee attacks: - Have +1 S. - Have +1 AP."
+        },
+        {
+          "n": "Old Greymanes",
+          "d": "In the Declare Battle Formations step, you can split this unit into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units)."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
         "Battleline",
-        "Grenades",
         "Imperium",
         "Grey Hunters",
-        "Tacticus"
+        "Tacticus",
+        "Explosives"
       ],
       "models": {
         "min": 10,
@@ -915,7 +841,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -973,10 +899,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -1130,18 +1056,20 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 50,
+      "points": 60,
       "ladder": [
         {
           "from": 1,
-          "pts": 50
+          "pts": 60
         }
       ],
       "cap": null,
       "leads": [
-        "Wolfguard Headtakers",
-        "Blood Claws",
-        "Grey Hunters"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLOOD CLAWS",
+        "GREY HUNTERS",
+        "INTERCESSOR SQUAD",
+        "WOLF GUARD HEADTAKERS"
       ],
       "options": null,
       "weapons": [
@@ -1149,12 +1077,12 @@
           "n": "➤ Helfrost pistol - dispersed",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "➤ Helfrost pistol - focused",
@@ -1165,7 +1093,7 @@
           "s": "6",
           "ap": "-3",
           "d": "3",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Tempest hammer and Servo-arm",
@@ -1216,7 +1144,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "4",
         "LD": "6+",
@@ -1265,10 +1193,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -1326,16 +1254,18 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 150,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 150
         }
       ],
       "cap": null,
       "leads": [
-        "Wolf Guard Terminators"
+        "TERMINATOR ASSAULT SQUAD",
+        "TERMINATOR SQUAD",
+        "WOLF GUARD TERMINATORS"
       ],
       "options": null,
       "weapons": [
@@ -1351,17 +1281,6 @@
           "kw": "Extra Attacks"
         },
         {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
           "n": "➤ Axe Morkai - Sweep",
           "melee": true,
           "range": "Melee",
@@ -1370,7 +1289,7 @@
           "s": "6",
           "ap": "-2",
           "d": "1",
-          "kw": ""
+          "kw": "Cleave 1"
         },
         {
           "n": "➤ Axe Morkai - Strike",
@@ -1378,10 +1297,21 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "8",
+          "s": "10",
           "ap": "-2",
           "d": "3",
           "kw": ""
+        },
+        {
+          "n": "Storm bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Rapid Fire 2"
         }
       ],
       "composition": [
@@ -1398,15 +1328,11 @@
       "abilities": [
         {
           "n": "High King of Fenris",
-          "d": "Once per battle round, in your Movement phase, you can select one friendly Space Wolves unit that is in Reserves. If you do, until the end of the phase, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+          "d": "(Once per battle round, per unit) In your Movement phase, select up to one friendly Space Wolves unit in strategic reserves. If you do, when that unit makes an ingress move, treat the current battle round number as being one higher than it actually is."
         },
         {
-          "n": "Guile of the Wolf (Aura)",
-          "d": "Once per turn, when your opponent targets a unit from their army within 12” of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP."
-        },
-        {
-          "n": "Embarking within Transports",
-          "d": "This model can embark within friendly Adeptus Astartes Transport models that can transport Terminator models. When doing, it takes up the space of 4 Infantry models"
+          "n": "Guile of the Wolf",
+          "d": "At the start of each phase, the assault doctrine, devastator doctrine and tactical doctrine are active for this unit."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1426,7 +1352,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "8",
         "LD": "6+",
@@ -1495,8 +1421,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         }
@@ -1932,10 +1858,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
           "n": "Lascannon",
@@ -2218,13 +2144,13 @@
           "kw": "Sustained Hits 1, Twin-linked"
         },
         {
-          "n": "Storm Bolter",
+          "n": "Storm bolter",
           "melee": false,
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         },
@@ -2232,12 +2158,12 @@
           "n": "Heavy Flamer",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 2, Torrent"
         }
       ],
       "composition": [
@@ -2247,22 +2173,23 @@
           "max": 1,
           "w": [
             "Murderclaws",
+            "Storm bolter",
             "Heavy Flamer"
           ]
         }
       ],
       "abilities": [
         {
-          "n": "Murder-maker [Aura]",
-          "d": "In the Fight phase, each time an attack targets a friendly WULFEN unit within 6\" of this model, if a model in that unit is destroyed as a result of that attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          "n": "Murder-maker",
+          "d": "In the Fight phase, each time an attack targets a friendly WULFEN unit within 6\" of In the Fight phase, when a friendly Wulfen model within 6\" of this unit is destroyed, if that model's unit has not been selected to fight this phase, roll one D6: - On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
         },
         {
           "n": "Force of Untamed Destruction",
           "d": "This model cannot be your WARLORD."
         },
         {
-          "n": "Beastial Fury",
-          "d": "You can re-roll Advance and Charge rolls made for this model."
+          "n": "Bestial Fury",
+          "d": "This unit: -Can re-roll advance rolls. -Can re-roll charge rolls."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2299,18 +2226,21 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 100,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 100
         }
       ],
       "cap": null,
       "leads": [
-        "Blood Claws",
-        "Grey Hunters",
-        "Wolf Guard Headtakers"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "BLOOD CLAWS",
+        "GREY HUNTERS",
+        "INTERCESSOR SQUAD",
+        "WOLF GUARD HEADTAKERS"
       ],
       "options": null,
       "weapons": [
@@ -2322,14 +2252,14 @@
           "skill": "3+",
           "s": "7",
           "ap": "-1",
-          "d": "D3",
+          "d": "2",
           "kw": "Psychic, Sustained Hits 2"
         },
         {
           "n": "➤ Living Lightning - witchfire",
           "melee": false,
           "range": "24\"",
-          "a": "D6",
+          "a": "D3+3",
           "skill": "3+",
           "s": "7",
           "ap": "-1",
@@ -2340,10 +2270,10 @@
           "n": "➤ Living Lightning - focused witchfire",
           "melee": false,
           "range": "24\"",
-          "a": "2D6",
+          "a": "D6+6",
           "skill": "3+",
           "s": "7",
-          "ap": "-1",
+          "ap": "-2",
           "d": "1",
           "kw": "Hazardous, Psychic, Sustained Hits 2"
         },
@@ -2353,10 +2283,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -2372,12 +2302,12 @@
       ],
       "abilities": [
         {
-          "n": "Wind Walker (Psychic)",
-          "d": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and each time that unit advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit"
+          "n": "Wind Walker",
+          "d": "- This unit's ranged attacks have [ASSAULT]. - When this unit is selected to make an advance move, this unit can change advance rolls to a 6."
         },
         {
-          "n": "Tempest's Wrath (Psychic)",
-          "d": "In your Shooting phase, after this model's unit has shot, select one enemy unit, (excluding MONSTERS and VEHICLES) hit by one or more of those attacks made with this model's Living Lightning weapon. Until the start of your next turn, that enemy is stormwracked. While a unit is stormwracked, subtract 6\" from the Range characteristic of ranged weapons equipped by models in that unit (to a minimum of 12\")"
+          "n": "High Rune Priest (psyker level 3)",
+          "d": "This model has the psychic abilities listed in the Psychic Abilities section."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2397,7 +2327,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
@@ -2414,11 +2344,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 90,
+      "points": 100,
       "ladder": [
         {
           "from": 1,
-          "pts": 90
+          "pts": 100
         }
       ],
       "cap": null,
@@ -2445,10 +2375,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -2465,11 +2395,11 @@
       "abilities": [
         {
           "n": "War Howl",
-          "d": "While this model is leading a BLOOD CLAWS unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll. While this model is leading a WOLF GUARD HEADTAKERS UNIT, that unit is eligible to declare a charge in a turn in which it Advanced."
+          "d": "- While this model is attached to a Blood Claws unit, this unit's melee attacks have +1 S and [SUSTAINED HITS 1]. - While this model is attached to a Wolf Guard Headtakers unit, when this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge."
         },
         {
           "n": "Battle-lust",
-          "d": "Each time this model ends a Charge move, until the end of the turn, add 2 to the Attacks characteristics of this model’s Frostfang."
+          "d": "If this unit made a charge move this turn, this model's melee attacks have +2 A."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2478,11 +2408,11 @@
         "Character",
         "Epic Hero",
         "Imperium",
-        "Grenades",
         "Tacticus",
         "Captain",
         "Ragnar Blackmane",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -2490,7 +2420,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "5",
         "LD": "6+",
@@ -2663,10 +2593,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -2677,7 +2607,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -2688,7 +2618,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Astartes Chainsword",
@@ -3287,15 +3217,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 115,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 115
         },
         {
           "from": 4,
-          "pts": 200
+          "pts": 230
         }
       ],
       "cap": {
@@ -3314,17 +3244,17 @@
             {
               "n": "Thunderwolf w/ plasma pistol",
               "min": 0,
-              "max": 6,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Wolf Guard Weapon",
-                "Crushing teeth and claws"
+                "Teeth and claws"
               ]
             },
             {
-              "n": "Thunderwolf w/ boltgun",
+              "n": "Thunderwolf w/ boltgun and storm shield",
               "min": 0,
               "max": 6,
               "scale": null,
@@ -3332,20 +3262,8 @@
               "model": true,
               "w": [
                 "Wolf Guard Weapon",
-                "Crushing teeth and claws",
+                "Teeth and claws",
                 "Boltgun"
-              ]
-            },
-            {
-              "n": "Thunderwolf w/ storm shield",
-              "min": 0,
-              "max": 6,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Wolf Guard Weapon",
-                "Crushing teeth and claws"
               ]
             },
             {
@@ -3357,7 +3275,7 @@
               "model": true,
               "w": [
                 "Wolf Guard Weapon",
-                "Crushing teeth and claws",
+                "Teeth and claws",
                 "Bolt pistol"
               ]
             }
@@ -3377,7 +3295,7 @@
           "kw": ""
         },
         {
-          "n": "Crushing teeth and claws",
+          "n": "Teeth and claws",
           "melee": true,
           "range": "Melee",
           "a": "3",
@@ -3396,7 +3314,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -3407,7 +3325,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Boltgun",
@@ -3426,10 +3344,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -3439,7 +3357,7 @@
           "max": 6,
           "w": [
             "Wolf Guard Weapon",
-            "Crushing teeth and claws",
+            "Teeth and claws",
             "Boltgun",
             "Bolt pistol"
           ]
@@ -3464,7 +3382,7 @@
       ],
       "models": {
         "min": null,
-        "max": 24
+        "max": 14
       },
       "profile": {
         "M": "12\"",
@@ -3485,18 +3403,21 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 70,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 70
+          "pts": 90
         }
       ],
       "cap": null,
       "leads": [
-        "Blood Claws",
-        "Grey Hunters",
-        "Wolf Guard Headtakers"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "BLOOD CLAWS",
+        "GREY HUNTERS",
+        "INTERCESSOR SQUAD",
+        "WOLF GUARD HEADTAKERS"
       ],
       "options": null,
       "weapons": [
@@ -3509,7 +3430,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -3518,12 +3439,12 @@
           "a": "1",
           "skill": "2+",
           "s": "8",
-          "ap": "-2",
+          "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Close-quarters, Hazardous"
         },
         {
-          "n": "Artificer crozius",
+          "n": "Artificer Crozius Arcanum",
           "melee": true,
           "range": "Melee",
           "a": "5",
@@ -3531,7 +3452,7 @@
           "s": "6",
           "ap": "-2",
           "d": "2",
-          "kw": "Anti-Monster 4+, Anti-Vehicle 4+"
+          "kw": "Anti-Monster/Vehicle 4+"
         }
       ],
       "composition": [
@@ -3540,18 +3461,18 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Artificer crozius"
+            "Artificer Crozius Arcanum"
           ]
         }
       ],
       "abilities": [
         {
           "n": "Slayer’s Oath",
-          "d": "At the start of the battle, select one of the following keywords to be this model's Slayer's Oath: CHARACTER, VEHICLE or MONSTER. The first time this model's unit destroys a unit with this model's Slayer's Oath keyword, if your Detachment has a Saga, until the end of the battle, this model's unit receives the benefits of that Detachment rule as if that Saga had been completed."
+          "d": "At the start of the first battle round, you select up to one enemy Character/Monster/Vehicle unit to be this unit's slayer's oath: - This unit's attacks that target this unit's slayer's oath can ignore modifiers to your unit's: - BS and WS. - Hit rolls."
         },
         {
           "n": "Oathbound",
-          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll. If that attack targets a unit that has this model's Slayer's Oath keyword (see above), add 1 to the Wound roll as well."
+          "d": "This unit's melee attacks have +1 to hit rolls. - Or: This unit's melee attacks that target this unit's slayer's oath have +1 to hit rolls and wound rolls."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3559,11 +3480,11 @@
         "Infantry",
         "Character",
         "Epic Hero",
-        "Grenades",
         "Imperium",
         "Ulrik the Slayer",
         "Wolf Priest",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -3588,11 +3509,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 125,
+      "points": 130,
       "ladder": [
         {
           "from": 1,
-          "pts": 125
+          "pts": 130
         }
       ],
       "cap": null,
@@ -3628,7 +3549,7 @@
         {
           "n": "Replace assault cannon",
           "owner": null,
-          "min": 0,
+          "min": 1,
           "max": 1,
           "pick": "one",
           "opts": [
@@ -3691,28 +3612,6 @@
       ],
       "weapons": [
         {
-          "n": "Heavy Flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "Storm Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
           "n": "➤ Fenrisian great axe - strike",
           "melee": true,
           "range": "Melee",
@@ -3720,7 +3619,7 @@
           "skill": "3+",
           "s": "10",
           "ap": "-2",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": ""
         },
         {
@@ -3738,8 +3637,8 @@
           "n": "➤ Helfrost cannon - dispersed",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "6",
           "ap": "-1",
           "d": "2",
@@ -3763,9 +3662,9 @@
           "a": "6",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
-          "kw": "Devastating Wounds"
+          "kw": "Sustained Hits 1"
         },
         {
           "n": "Multi-melta",
@@ -3773,10 +3672,32 @@
           "range": "18\"",
           "a": "2",
           "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
+        },
+        {
+          "n": "Heavy Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast 2, Torrent"
+        },
+        {
+          "n": "Storm bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Rapid Fire 2"
         },
         {
           "n": "Dreadnought Combat Weapon",
@@ -3800,8 +3721,8 @@
       ],
       "abilities": [
         {
-          "n": "Fervour of the Ancients (Aura)",
-          "d": "While a friendly SPACE WOLVES unit is within 6\" of this model, add 1 to Advance and Charge rolls made for that unit."
+          "n": "Fervour of the Ancients",
+          "d": "Friendly Space Wolves units within 6\" of this unit: - Have +1 to advance rolls. - Have +1 to charge rolls."
         },
         {
           "n": "Blizzard shield",
@@ -3999,8 +3920,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         },
@@ -4010,10 +3931,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -4074,11 +3995,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 65,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 65
+          "pts": 80
         }
       ],
       "cap": {
@@ -4086,9 +4007,12 @@
         "at1000": 2
       },
       "leads": [
-        "Blood Claws",
-        "Grey Hunters",
-        "Wolf Guard Headtakers"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "BLOOD CLAWS",
+        "GREY HUNTERS",
+        "INTERCESSOR SQUAD",
+        "WOLF GUARD HEADTAKERS"
       ],
       "options": [
         {
@@ -4135,24 +4059,6 @@
               "w": []
             },
             {
-              "n": "Master-crafted Bolt Carbine",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Master-crafted Heavy Bolt Pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Plasma pistol",
               "min": 0,
               "max": null,
@@ -4171,7 +4077,7 @@
           "range": "Melee",
           "a": "7",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": ""
@@ -4184,30 +4090,8 @@
           "skill": "3+",
           "s": "8",
           "ap": "-2",
-          "d": "2",
+          "d": "3",
           "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Master-crafted Bolt Carbine",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Master-crafted Heavy Bolt Pistol",
-          "melee": false,
-          "range": "18\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Pistol"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -4218,7 +4102,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -4229,7 +4113,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -4243,15 +4127,15 @@
       "abilities": [
         {
           "n": "Tempered Ferocity",
-          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability and, each time a model in that unit makes an attack that targets an enemy unit within 6\", re-roll a Hit roll of 1"
+          "d": "- This unit's attacks have [SUSTAINED HITS 1]. - This unit's attacks that target an enemy unit within 6\" of this unit can re-roll hit rolls of 1."
         },
         {
           "n": "Heroic Last Stand",
-          "d": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and then it is removed from play."
+          "d": "In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: - On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
         },
         {
           "n": "Storm Shield",
-          "d": "The bearer has a Wounds characteristic of 6"
+          "d": "This model has +1 W."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -4270,7 +4154,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "5",
         "LD": "6+",
@@ -4539,7 +4423,7 @@
         },
         {
           "n": "Tactical Precision",
-          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          "d": "This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE]."
         },
         {
           "n": "Relic shield",
@@ -4812,10 +4696,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Combi-weapon",
@@ -4851,7 +4735,7 @@
           "kw": "Rapid Fire 2"
         },
         {
-          "n": "Crushing teeth and claws",
+          "n": "Teeth and claws",
           "melee": true,
           "range": "Melee",
           "a": "3",
@@ -4877,7 +4761,7 @@
         },
         {
           "n": "Tactical Precision",
-          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          "d": "This unit's attacks have [LETHAL HITS: non-MONSTER/VEHICLE]."
         },
         {
           "n": "Storm Shield",
@@ -4980,10 +4864,10 @@
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Paired Master-crafted Power Weapons",
@@ -5020,16 +4904,16 @@
       ],
       "abilities": [
         {
-          "n": "Let Loose the Wolves",
-          "d": "At the start of the Declare Battle Formations step, split this unit into two units, one containing all of it's HEADTAKERS models and one containing all of its HUNTING WOLVES models, with new Starting Strengths accordingly."
-        },
-        {
           "n": "Headhunters",
-          "d": "At the start of the battle, select one unit from your opponent's army to be this unit's quarry. Weapons equipped by HEADTAKERS models in this unit have the [DEVASTATING WOUNDS] and [PRECISION] abilities while targeting it's quarry. Each time this unit's quarry is destroyed, select one new enemy unit to be this unit's quarry. This ability can be used even if this unit is embarked within a Transport"
+          "d": "At the start of the first battle round, select up to one enemy unit to be this unit's quarry: - This unit's attacks that target this unit's quarry have [DEVASTATING WOUNDS] and [PRECISION]. - Each time this unit's quarry is destroyed, select one enemy unit to be this unit's quarry."
         },
         {
           "n": "Hunting Hounds",
-          "d": "While this unit is within 6\" of one or more friendly SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, HUNTING WOLVES models in it have an Objective Control characteristic of 1"
+          "d": "While this unit is within 6\" of a friendly Space Wolves Character model (excluding Wulfen), if this unit is not battle-shocked, Hunting Wolf models have +1 OC."
+        },
+        {
+          "n": "Let Loose the Wolves",
+          "d": "At the start of the Declare Battle Formations step, you can split this unit into two units, one containing all Wolf Guard Headtaker models and all leader/support models, the other containing all Hunting Wolves models, with new starting strengths accordingly."
         },
         {
           "n": "Storm Shield",
@@ -5047,7 +4931,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "3",
         "LD": "6+",
@@ -5147,10 +5031,10 @@
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Paired Master-crafted Power Weapons",
@@ -5179,15 +5063,15 @@
       "abilities": [
         {
           "n": "Let Loose the Wolves",
-          "d": "At the start of the Declare Battle Formations step, split this unit into two units, one containing all of it's HEADTAKERS models and one containing all of its HUNTING WOLVES models, with new Starting Strengths accordingly."
-        },
-        {
-          "n": "Headhunters",
-          "d": "At the start of the battle, select one unit from your opponent's army to be this unit's quarry. Weapons equipped by HEADTAKERS models in this unit have the [DEVASTATING WOUNDS] and [PRECISION] abilities while targeting it's quarry. Each time this unit's quarry is destroyed, select one new enemy unit to be this unit's quarry. This ability can be used even if this unit is embarked within a Transport"
+          "d": "At the start of the Declare Battle Formations step, you can split this unit into two units, one containing all Wolf Guard Headtaker models and all leader/support models, the other containing all Hunting Wolves models, with new starting strengths accordingly."
         },
         {
           "n": "Hunting Hounds",
-          "d": "While this unit is within 6\" of one or more friendly SPACE WOLVES CHARACTER models (excluding WULFEN models), if this unit is not Battle-shocked, HUNTING WOLVES models in it have an Objective Control characteristic of 1"
+          "d": "While this unit is within 6\" of a friendly Space Wolves Character model (excluding Wulfen), if this unit is not battle-shocked, Hunting Wolf models have +1 OC."
+        },
+        {
+          "n": "Headhunters",
+          "d": "At the start of the first battle round, select up to one enemy unit to be this unit's quarry: - This unit's attacks that target this unit's quarry have [DEVASTATING WOUNDS] and [PRECISION]. - Each time this unit's quarry is destroyed, select one enemy unit to be this unit's quarry."
         },
         {
           "n": "Storm Shield",
@@ -5204,12 +5088,12 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -5338,7 +5222,7 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -5392,10 +5276,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -5453,12 +5337,12 @@
           "kw": "Rapid Fire 2"
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -5493,7 +5377,7 @@
           "skill": "4+",
           "s": "8",
           "ap": "-2",
-          "d": "2",
+          "d": "3",
           "kw": "Devastating Wounds"
         },
         {
@@ -5762,12 +5646,12 @@
           "n": "Heavy Flamer",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 2, Torrent"
         },
         {
           "n": "Combi-weapon",
@@ -5814,15 +5698,26 @@
           "kw": ""
         },
         {
-          "n": "Chainfist",
+          "n": "➤ Chainfist - Standard",
           "melee": true,
           "range": "Melee",
-          "a": "3",
+          "a": "2",
           "skill": "4+",
           "s": "8",
           "ap": "-2",
           "d": "2",
-          "kw": "Anti-Vehicle 3+"
+          "kw": "\n"
+        },
+        {
+          "n": "➤ Chainfist - Hunter: Monster/Vehicle",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-2",
+          "d": "3",
+          "kw": ""
         },
         {
           "n": "Thunder Hammer",
@@ -5832,7 +5727,7 @@
           "skill": "4+",
           "s": "8",
           "ap": "-2",
-          "d": "2",
+          "d": "3",
           "kw": "Devastating Wounds"
         },
         {
@@ -6028,7 +5923,7 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -6082,10 +5977,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -6143,12 +6038,12 @@
           "kw": "Rapid Fire 2"
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -6183,7 +6078,7 @@
           "skill": "4+",
           "s": "8",
           "ap": "-2",
-          "d": "2",
+          "d": "3",
           "kw": "Devastating Wounds"
         },
         {
@@ -6270,15 +6165,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 155,
+      "points": 180,
       "ladder": [
         {
           "from": 1,
-          "pts": 155
+          "pts": 180
         },
         {
           "from": 6,
-          "pts": 310
+          "pts": 365
         }
       ],
       "cap": {
@@ -6302,8 +6197,7 @@
               "p": 0,
               "model": true,
               "w": [
-                "Master-crafted Power Weapon",
-                "Storm Bolter"
+                "Master-crafted power weapon"
               ]
             },
             {
@@ -6314,8 +6208,8 @@
               "p": 0,
               "model": true,
               "w": [
-                "Assault Cannon",
-                "Power fist"
+                "Power fist",
+                "Assault Cannon"
               ]
             },
             {
@@ -6326,7 +6220,7 @@
               "p": 5,
               "model": true,
               "w": [
-                "Master-crafted Power Weapon"
+                "Master-crafted power weapon"
               ]
             }
           ]
@@ -6339,7 +6233,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Twin-linked Lightning Claws",
+              "n": "Twin Lightning Claws",
               "min": 0,
               "max": null,
               "scale": null,
@@ -6364,8 +6258,7 @@
               "p": 0,
               "model": false,
               "w": [
-                "Master-crafted Power Weapon",
-                "Storm Bolter"
+                "Master-crafted power weapon"
               ]
             },
             {
@@ -6373,10 +6266,10 @@
               "min": 0,
               "max": null,
               "scale": null,
-              "p": 5,
+              "p": 0,
               "model": false,
               "w": [
-                "Master-crafted Power Weapon"
+                "Master-crafted power weapon"
               ]
             }
           ]
@@ -6400,13 +6293,24 @@
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "7",
+          "s": "8",
           "ap": "-2",
           "d": "3",
           "kw": "Devastating Wounds"
         },
         {
-          "n": "Master-crafted Power Weapon",
+          "n": "Storm Bolter",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Rapid Fire 2"
+        },
+        {
+          "n": "Master-crafted power weapon",
           "melee": true,
           "range": "Melee",
           "a": "4",
@@ -6415,28 +6319,6 @@
           "ap": "-2",
           "d": "2",
           "kw": ""
-        },
-        {
-          "n": "Storm Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "2+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Assault Cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "6",
-          "skill": "2+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds"
         },
         {
           "n": "Power fist",
@@ -6448,6 +6330,17 @@
           "ap": "-2",
           "d": "2",
           "kw": ""
+        },
+        {
+          "n": "Assault Cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Sustained Hits 1"
         }
       ],
       "composition": [
@@ -6482,7 +6375,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "3",
         "LD": "6+",
@@ -6667,10 +6560,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Combi-weapon",
@@ -6703,7 +6596,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -6714,7 +6607,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Storm bolter",
@@ -6722,8 +6615,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         },
@@ -6757,7 +6650,7 @@
           "skill": "3+",
           "s": "8",
           "ap": "-2",
-          "d": "2",
+          "d": "3",
           "kw": "Devastating Wounds"
         },
         {
@@ -6783,7 +6676,7 @@
           "kw": "Twin-linked"
         },
         {
-          "n": "Crushing teeth and claws",
+          "n": "Teeth and claws",
           "melee": true,
           "range": "Melee",
           "a": "3",
@@ -6808,8 +6701,8 @@
           "d": "Add 1 to Advance and Charge rolls made for this model’s unit."
         },
         {
-          "n": "Rites of Battle",
-          "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+          "n": "Strategic Acumen",
+          "d": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
         },
         {
           "n": "Relic shield",
@@ -6849,11 +6742,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 70,
+      "points": 75,
       "ladder": [
         {
           "from": 1,
-          "pts": 70
+          "pts": 75
         }
       ],
       "cap": {
@@ -6861,9 +6754,12 @@
         "at1000": 2
       },
       "leads": [
-        "Blood Claws",
-        "Grey Hunters",
-        "Wolf Guard Headtakers"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "BLOOD CLAWS",
+        "GREY HUNTERS",
+        "INTERCESSOR SQUAD",
+        "WOLF GUARD HEADTAKERS"
       ],
       "options": [
         {
@@ -6904,7 +6800,7 @@
           "s": "6",
           "ap": "-1",
           "d": "2",
-          "kw": ""
+          "kw": "Cleave 1"
         },
         {
           "n": "Absolvor bolt pistol",
@@ -6913,9 +6809,9 @@
           "a": "1",
           "skill": "3+",
           "s": "5",
-          "ap": "-1",
+          "ap": "-2",
           "d": "2",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -6929,11 +6825,11 @@
       "abilities": [
         {
           "n": "Healing Balms",
-          "d": "While this model is leading a unit, in your Command phase, you can return 1 model (excluding CHARACTER models) to that unit."
+          "d": "In your Command phase, this unit heals D3+1 wounds."
         },
         {
           "n": "Litany of Hate",
-          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+          "d": "This unit's melee attacks have [LANCE]"
         }
       ],
       "faction": "Space Wolves",
@@ -6951,7 +6847,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
@@ -6961,647 +6857,6 @@
       "native": false
     },
     {
-      "id": "91e4-38c4-a96f-2090",
-      "linkId": "d8d3-d93e-4ead-3e95",
-      "name": "Wolf Scouts",
-      "rawName": "Wolf Scouts [Legends]",
-      "type": "unit",
-      "mode": "legends",
-      "legends": true,
-      "points": 80,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 80
-        },
-        {
-          "from": 6,
-          "pts": 160
-        }
-      ],
-      "cap": null,
-      "leads": null,
-      "options": [
-        {
-          "n": "4-9 Wolf Scouts",
-          "owner": null,
-          "min": 4,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Wolf Scout w/ boltgun",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Boltgun",
-                "Close combat weapon",
-                "Bolt pistol"
-              ]
-            },
-            {
-              "n": "Wolf Scout w/ shotgun",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Astartes shotgun",
-                "Close combat weapon",
-                "Bolt pistol"
-              ]
-            },
-            {
-              "n": "Wolf Scout w/ combat knife",
-              "min": 0,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Combat knife",
-                "Close combat weapon",
-                "Bolt pistol"
-              ]
-            },
-            {
-              "n": "Wolf Scout w/ special weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Bolt pistol",
-                "Close combat weapon"
-              ]
-            }
-          ]
-        },
-        {
-          "n": "Ranged weapons",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Boltgun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Combi-weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Storm bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Pistols",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Bolt pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Hand flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Grav-pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Inferno Pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Melee weapons",
-          "owner": null,
-          "min": 0,
-          "max": 2,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Astartes Chainsword",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power fist",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Thunder Hammer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Twin lightning claws",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Up to 1 of",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Wolf Scout w/ power weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Close combat weapon",
-                "Bolt pistol",
-                "Power weapon"
-              ]
-            },
-            {
-              "n": "Wolf Scout w/ plasma pistol",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Boltgun",
-                "Close combat weapon"
-              ]
-            }
-          ]
-        },
-        {
-          "n": "Weapon",
-          "owner": "Wolf Scout w/ special weapon",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma gun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Grav-gun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Heavy Bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Meltagun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Missile Launcher",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Boltgun",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Combi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-infantry 4+, Devastating Wounds, Rapid Fire 1"
-        },
-        {
-          "n": "Storm Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Bolt pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Close-Quarters"
-        },
-        {
-          "n": "➤ Plasma pistol - supercharge",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Hazardous, Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - standard",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Pistol"
-        },
-        {
-          "n": "Hand flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
-          "ap": "0",
-          "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
-        },
-        {
-          "n": "Grav-pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Anti-vehicle 2+, Pistol"
-        },
-        {
-          "n": "Inferno Pistol",
-          "melee": false,
-          "range": "6\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-4",
-          "d": "D3",
-          "kw": "Melta 2, Pistol"
-        },
-        {
-          "n": "Astartes Chainsword",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Power fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "2",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Power weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Thunder Hammer",
-          "melee": true,
-          "range": "Melee",
-          "a": "2",
-          "skill": "4+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Twin lightning claws",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Twin-linked"
-        },
-        {
-          "n": "Close combat weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Astartes shotgun",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Assault"
-        },
-        {
-          "n": "Combat knife",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "➤ Plasma gun - standard",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Rapid Fire 1"
-        },
-        {
-          "n": "➤ Plasma gun - supercharge",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Rapid Fire 1, Hazardous"
-        },
-        {
-          "n": "Grav-gun",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Anti-vehicle 2+"
-        },
-        {
-          "n": "Heavy Bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "4+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Heavy, Sustained Hits 1"
-        },
-        {
-          "n": "Meltagun",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
-        },
-        {
-          "n": "➤ Missile Launcher - Frag",
-          "melee": false,
-          "range": "48\"",
-          "a": "D6",
-          "skill": "4+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast, Heavy"
-        },
-        {
-          "n": "➤ Missile Launcher - Krak",
-          "melee": false,
-          "range": "48\"",
-          "a": "1",
-          "skill": "4+",
-          "s": "9",
-          "ap": "-2",
-          "d": "D6",
-          "kw": "Heavy"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Wolf Scout Pack Leader",
-          "min": 1,
-          "max": 1,
-          "w": [
-            "Close combat weapon"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Guerrilla Tactics",
-          "d": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy models, you can remove this unit from the battlefield and place it into Strategic Reserves."
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Infantry",
-        "Grenades",
-        "Smoke",
-        "Imperium",
-        "Scout Squad",
-        "Wolf Scouts"
-      ],
-      "models": {
-        "min": 1,
-        "max": 29
-      },
-      "profile": {
-        "M": "6\"",
-        "T": "4",
-        "Sv": "4+",
-        "W": "2",
-        "LD": "6+",
-        "OC": "1",
-        "InSv": ""
-      },
-      "native": true
-    },
-    {
       "id": "ee6b-3815-3a1a-6458",
       "linkId": "1058-f2e6-8f32-7483",
       "name": "Wolf Scouts",
@@ -7609,15 +6864,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 90,
+      "points": 95,
       "ladder": [
         {
           "from": 1,
-          "pts": 90
+          "pts": 95
         },
         {
           "from": 12,
-          "pts": 180
+          "pts": 190
         }
       ],
       "cap": null,
@@ -7667,15 +6922,15 @@
           "n": "Instigator Bolt Carbine",
           "melee": false,
           "range": "24\"",
-          "a": "1",
+          "a": "2",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-2",
           "d": "2",
-          "kw": "Precision"
+          "kw": "Lethal Hits: non-Monster/Vehicle, Precision"
         },
         {
-          "n": "Combat Blade",
+          "n": "Combat Knife",
           "melee": true,
           "range": "Melee",
           "a": "4",
@@ -7694,7 +6949,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -7705,7 +6960,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Power weapon",
@@ -7748,19 +7003,19 @@
           "skill": "3+",
           "s": "6",
           "ap": "-1",
-          "d": "D3",
+          "d": "2",
           "kw": "Psychic"
         },
         {
           "n": "Thunderclap",
           "melee": false,
           "range": "12\"",
-          "a": "D3",
+          "a": "2",
           "skill": "3+",
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Blast, Psychic"
+          "kw": "Blast 1, Psychic"
         },
         {
           "n": "Bolt pistol",
@@ -7768,47 +7023,47 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         }
       ],
       "composition": null,
       "abilities": [
         {
-          "n": "Hunting Hounds",
-          "d": "While this unit is within 6\" of one or more friendly Space Wolves Character models (excluding Wulfen models), if this unit is not Battle-shocked, Hunting Wolves models in this unit have an Objective Control characteristic of 1."
+          "n": "Deadly Stalkers",
+          "d": "This unit's attacks that target an enemy unit more than 6\" from any other enemy units have +1 to wound rolls."
         },
         {
-          "n": "Deadly Stalkers",
-          "d": "Each time a model in this unit makes an attack that targets an enemy unit, if there are no other units from your opponent’s army within 6\" of that target, add 1 to the Wound roll."
+          "n": "Hunting Hounds",
+          "d": "While this unit is within 6\" of a friendly Space Wolves Character model (excluding Wulfen), if this unit is not battle-shocked, Hunting Wolf models have +1 OC."
         },
         {
           "n": "Haywire Mine",
-          "d": "Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a Vehicle unit."
+          "d": "Haywire Mine (Once per battle, per unit) In your Shooting phase, select up to one visible enemy unit within 6\" of this unit and roll one D6. On a 2+: - That enemy unit suffers D3 mortal wounds. - Or: If that enemy unit is a Vehicle unit, that enemy unit suffers 2D3 mortal wounds."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
-        "Grenades",
         "Smoke",
         "Imperium",
         "Phobos",
-        "Wolf Scouts"
+        "Wolf Scouts",
+        "Explosives"
       ],
       "models": {
         "min": 3,
         "max": 4
       },
       "profile": {
-        "M": "7\"",
+        "M": "10\"",
         "T": "4",
-        "Sv": "3+",
-        "W": "2",
-        "LD": "6+",
-        "OC": "1",
+        "Sv": "6+",
+        "W": "1",
+        "LD": "8+",
+        "OC": "0",
         "InSv": ""
       },
       "native": true
@@ -7821,15 +7076,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 85,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 85
+          "pts": 90
         },
         {
           "from": 6,
-          "pts": 170
+          "pts": 180
         }
       ],
       "cap": {
@@ -7840,26 +7095,26 @@
       "options": null,
       "weapons": [
         {
+          "n": "Stormfrag auto-launcher",
+          "melee": false,
+          "range": "12\"",
+          "a": "2",
+          "skill": "4+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Assault, Blast 1"
+        },
+        {
           "n": "Wulfen Weapons",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": "Sustained Hits 1"
-        },
-        {
-          "n": "Stormfrag auto-launcher",
-          "melee": false,
-          "range": "12\"",
-          "a": "D3",
-          "skill": "4+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Assault, Blast"
         }
       ],
       "composition": [
@@ -7868,8 +7123,8 @@
           "min": null,
           "max": 10,
           "w": [
-            "Wulfen Weapons",
-            "Stormfrag auto-launcher"
+            "Stormfrag auto-launcher",
+            "Wulfen Weapons"
           ]
         },
         {
@@ -7884,11 +7139,11 @@
       "abilities": [
         {
           "n": "Savage Frenzy",
-          "d": "Each time an enemy unit, (excluding MONSTERS and VEHICLES) within Engagement Range of this unit Falls Back, all that models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from those tests."
+          "d": "When an enemy unit engaged with your unit (excluding Monster/Vehicle units) makes a fall-back move that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls."
         },
         {
           "n": "Death Totem",
-          "d": "Each time the bearer makes a melee attack, re-roll a hit roll of 1."
+          "d": "This unit's melee attacks can re-roll hit rolls of 1."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -7920,11 +7175,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 135,
+      "points": 140,
       "ladder": [
         {
           "from": 1,
-          "pts": 135
+          "pts": 140
         }
       ],
       "cap": {
@@ -7934,23 +7189,41 @@
       "leads": null,
       "options": [
         {
-          "n": "Wargear",
+          "n": "Ranged weapon",
           "owner": null,
-          "min": 2,
-          "max": 2,
-          "pick": "many",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
           "opts": [
             {
-              "n": "Great wolf claw",
-              "min": 1,
-              "max": 1,
+              "n": "Storm bolter",
+              "min": 0,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Blizzard shield",
+              "n": "Heavy Flamer",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            }
+          ]
+        },
+        {
+          "n": "Axe or shield",
+          "owner": null,
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Fenrisian great axe",
               "min": 0,
               "max": 1,
               "scale": null,
@@ -7959,7 +7232,7 @@
               "w": []
             },
             {
-              "n": "Fenrisian great axe",
+              "n": "Blizzard shield",
               "min": 0,
               "max": 1,
               "scale": null,
@@ -7994,6 +7267,17 @@
           "kw": "Rapid Fire 2"
         },
         {
+          "n": "Heavy Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast 2, Torrent"
+        },
+        {
           "n": "➤ Fenrisian great axe - strike",
           "melee": true,
           "range": "Melee",
@@ -8001,7 +7285,7 @@
           "skill": "3+",
           "s": "10",
           "ap": "-2",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": ""
         },
         {
@@ -8027,11 +7311,11 @@
       "abilities": [
         {
           "n": "Bestial Rage",
-          "d": "Each time an enemy unit is selected to shoot, after that unit has shot, if this model lost one or more wounds as a result of those attacks, this model can make a Bestial Rage move. To do so, roll one D6, adding 2 to the result: this model can be moved a number of inches up to the result, but must finish that move as close as possible to the closest enemy unit(excluding AIRCRAFT). When doing so, this model can be moved within Engagement Range of that enemy unit. Each model can only make one Bestial Rage move per phase."
+          "d": "In your opponent's Shooting phase, when an enemy unit has shot, if this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+1\"."
         },
         {
           "n": "Violent Fury",
-          "d": "If this model is equipped with two melee weapons, those weapon profiles have the TWIN-LINKED ability."
+          "d": "If this model is equipped with two melee weapons, melee attacks made by this unit have [TWIN-LINKED]."
         },
         {
           "n": "Blizzard shield",
@@ -8069,15 +7353,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 125,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 125
         },
         {
           "from": 6,
-          "pts": 200
+          "pts": 250
         }
       ],
       "cap": {
@@ -8088,7 +7372,7 @@
       "options": null,
       "weapons": [
         {
-          "n": "Thunder Hammer",
+          "n": "➤ Thunder Hammer",
           "melee": true,
           "range": "Melee",
           "a": "2",
@@ -8096,18 +7380,29 @@
           "s": "5",
           "ap": "-2",
           "d": "3",
-          "kw": "Anti-Monster 3+, Anti-Vehicle 3+"
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "➤ Thunder Hammer (Hunter: Monster/Vehicle)",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Devastating Wounds"
         },
         {
           "n": "Stormfrag auto-launcher",
           "melee": false,
           "range": "12\"",
-          "a": "D3",
+          "a": "2",
           "skill": "4+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Assault, Blast"
+          "kw": "Assault, Blast 1"
         }
       ],
       "composition": [
@@ -8115,16 +7410,13 @@
           "n": "Wulfen w/Death Totem",
           "min": null,
           "max": 10,
-          "w": [
-            "Thunder Hammer"
-          ]
+          "w": []
         },
         {
           "n": "Wulfen w/Auto-launcher",
           "min": null,
           "max": 10,
           "w": [
-            "Thunder Hammer",
             "Stormfrag auto-launcher"
           ]
         }
@@ -8132,7 +7424,7 @@
       "abilities": [
         {
           "n": "Hammer Blow",
-          "d": "In the Fight phase, after this unit has fought, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Until the end of the next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+          "d": "In the Fight phase, when this unit has fought, select up to one enemy Monster/Vehicle unit hit by those attacks. If you do, that enemy unit is suppressed until the start of your next turn: -While a unit is suppressed, that unit's attacks have -1 to hit rolls."
         },
         {
           "n": "Death Totem",

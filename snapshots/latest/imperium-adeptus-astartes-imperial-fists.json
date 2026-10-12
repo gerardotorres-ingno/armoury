@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "5d6e-fd3-330a-11dd",
   "catalogueName": "Imperium - Adeptus Astartes - Imperial Fists",
@@ -13,12 +13,12 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 3,
+  "revision": 4,
   "file": "Imperium - Imperial Fists.json",
   "counts": {
-    "total": 3,
-    "native": 3,
-    "matched": 3,
+    "total": 2,
+    "native": 2,
+    "matched": 2,
     "legends": 0,
     "crucible": 0,
     "allied": 0
@@ -33,11 +33,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 160,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 160
         }
       ],
       "cap": null,
@@ -56,7 +56,7 @@
           "s": "10",
           "ap": "-3",
           "d": "3",
-          "kw": "Devastating Wounds"
+          "kw": "Cleave 1, Devastating Wounds"
         }
       ],
       "composition": [
@@ -72,15 +72,11 @@
       "abilities": [
         {
           "n": "Icon of Obstinacy",
-          "d": "Each time an attack targets this model's unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll."
+          "d": "Attacks that target this unit have -1 to hit rolls."
         },
         {
           "n": "Rampart",
-          "d": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save."
-        },
-        {
-          "n": "Inspiring Commander",
-          "d": "If you include this model in your army, until the end of the battle, non-Character models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+          "d": "(Once per battle, per army) At the start of any phase, you can use this ability. If you do, this model has 2+ InSv until the end of the phase."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -100,107 +96,9 @@
       },
       "profile": {
         "M": "5\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "7",
-        "LD": "6+",
-        "OC": "1",
-        "InSv": "4+"
-      },
-      "native": true
-    },
-    {
-      "id": "59e3-5a97-f36d-5b94",
-      "linkId": "776a-7bf7-2b4c-3211",
-      "name": "Pedro Kantor",
-      "rawName": "Pedro Kantor",
-      "type": "model",
-      "mode": "standard",
-      "legends": false,
-      "points": 80,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 80
-        }
-      ],
-      "cap": null,
-      "leads": [
-        "BLADEGUARD VETERAN SQUAD",
-        "COMPANY HEROES",
-        "STERNGUARD VETERAN SQUAD",
-        "TACTICAL SQUAD"
-      ],
-      "options": null,
-      "weapons": [
-        {
-          "n": "Dorn's Arrow",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "2+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Rapid Fire 2, Sustained Hits 1"
-        },
-        {
-          "n": "Fist of Retribution",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "2+",
-          "s": "8",
-          "ap": "-3",
-          "d": "3",
-          "kw": ""
-        }
-      ],
-      "composition": [
-        {
-          "n": "Pedro Kantor",
-          "min": 1,
-          "max": 1,
-          "w": [
-            "Dorn's Arrow",
-            "Fist of Retribution"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Oath of Rynn",
-          "d": "Once per battle, at the start of either player’s Command phase, this model can use this ability. When it does, until the end of the turn, add 1 to the Attacks characteristic of weapons equipped by models in this model’s unit."
-        },
-        {
-          "n": "To the Last",
-          "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength."
-        },
-        {
-          "n": "Inspiring Commander",
-          "d": "If you include this model in your army, until the end of the battle, non-Character models in Sternguard Veteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Epic Hero",
-        "Character",
-        "Infantry",
-        "Grenades",
-        "Imperium",
-        "Chapter Master",
-        "Pedro Kantor",
-        "Leader"
-      ],
-      "models": {
-        "min": 1,
-        "max": 1
-      },
-      "profile": {
-        "M": "6\"",
-        "T": "4",
-        "Sv": "2+",
-        "W": "5",
         "LD": "6+",
         "OC": "1",
         "InSv": "4+"
@@ -215,17 +113,18 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 80,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 90
         }
       ],
       "cap": null,
       "leads": [
         "AGGRESSOR SQUAD",
-        "ERADICATOR SQUAD",
+        "ERADICATOR SQUAD WITH HEAVY BOLTERS",
+        "ERADICATOR SQUAD WITH MELTA RIFLES",
         "HEAVY INTERCESSOR SQUAD"
       ],
       "options": null,
@@ -239,7 +138,7 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Anti-vehicle 2+"
+          "kw": "Anti-Vehicle 2+"
         },
         {
           "n": "Hand of Defiance",
@@ -267,11 +166,11 @@
       "abilities": [
         {
           "n": "Signum Array",
-          "d": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability."
+          "d": "In your Shooting phase, you can select one visible enemy unit within 18\" of this unit. That enemy unit cannot have the benefit of cover."
         },
         {
           "n": "Siege Captain",
-          "d": "Each time this model makes an attack that targets a Monster, Vehicle, or Fortification unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2."
+          "d": "This model’s attacks that target a Fortification/Monster/Vehicle unit have +2 S, AP and D."
         }
       ],
       "faction": "Adeptus Astartes",

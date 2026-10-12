@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "f27e-18c0-b73e-748e",
   "catalogueName": "Imperium - Adeptus Astartes - Iron Hands",
@@ -14,7 +14,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 3,
+  "revision": 4,
   "file": "Imperium - Iron Hands.json",
   "counts": {
     "total": 2,
@@ -34,11 +34,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 90,
+      "points": 100,
       "ladder": [
         {
           "from": 1,
-          "pts": 90
+          "pts": 100
         }
       ],
       "cap": null,
@@ -76,8 +76,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         }
@@ -95,11 +95,11 @@
       "abilities": [
         {
           "n": "Cold and Calculating",
-          "d": "Each time a model in this model’s unit makes an attack that targets a Monster or Vehicle unit, that attack has the [LETHAL HITS] ability. Each time a model in this model’s unit makes an attack that targets any other unit, that attack has the [SUSTAINED HITS 1] ability."
+          "d": "In your Shooting phase or the Fight phase, when this unit is selected to attack, you can select one of the following for this unit’s attacks to have: - [Lethal Hits: Monster/Vehicle]. - Or: [Sustained Hits 1: non-[Monster/Vehicle] - Or: If the tactical doctrine is active for this unit, [Lethal Hits: Monster/Vehicle] and [Sustained Hits 1: non-Monster/Vehicle]"
         },
         {
           "n": "Cerebrex Logic Engine",
-          "d": "■ At the start of the Declare Battle Formations step, you can select one Adeptus Astartes Infantry unit from your army. Until the end of the battle, that unit gains the Scouts 6\" ability. ■ After both players have deployed their armies, you can select one Adeptus Astartes unit from your army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+          "d": "In the Declare Battle Formations step, you can select one friendly Adeptus Astartes Infantry unit. That unit has Scouts 6\"."
         }
       ],
       "faction": "Iron Hands",
@@ -119,7 +119,7 @@
       },
       "profile": {
         "M": "5\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "6",
         "LD": "6+",
@@ -146,7 +146,8 @@
       "cap": null,
       "leads": [
         "AGGRESSOR SQUAD",
-        "ERADICATOR SQUAD",
+        "ERADICATOR SQUAD WITH HEAVY BOLTERS",
+        "ERADICATOR SQUAD WITH MELTA RIFLES",
         "HEAVY INTERCESSOR SQUAD"
       ],
       "options": null,
@@ -157,10 +158,10 @@
           "range": "36\"",
           "a": "3",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-1",
           "d": "2",
-          "kw": "Sustained Hits 2"
+          "kw": "Rapid Fire 2, Sustained Hits 2"
         },
         {
           "n": "Harrowhand",
@@ -179,7 +180,7 @@
           "range": "Melee",
           "a": "2",
           "skill": "3+",
-          "s": "8",
+          "s": "10",
           "ap": "-2",
           "d": "3",
           "kw": "Extra Attacks"
@@ -190,10 +191,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -212,19 +213,15 @@
       "abilities": [
         {
           "n": "Rites of Tempering",
-          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+          "d": "Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
         },
         {
           "n": "Iron Father",
-          "d": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, it has the Lone Operative ability."
+          "d": "While this model is within 3\" of a friendly ADEPTUS ASTARTES VEHICLE unit, this model has Lone Operative."
         },
         {
           "n": "Master of the Forge",
-          "d": "In your Command phase, select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to 3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. You cannot select a unit for this ability that has already been selected for the Blessing of the Omnissiah ability this phase, and vice versa."
-        },
-        {
-          "n": "Inspiring Commander",
-          "d": "If you include this model in your army, until the end of the battle, non-Character models in Heavy Intercessor Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked."
+          "d": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly Adeptus Astartes Vehicle model within 3\" of this model: - That Vehicle model heals 3 wounds. - That Vehicle model’s attacks can ignore modifiers to the following until the start of your next Movement phase: - BS. - Hit rolls and wound rolls."
         }
       ],
       "faction": "Adeptus Astartes",

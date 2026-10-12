@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "470a-6daa-9014-12df",
   "catalogueName": "Imperium - Adeptus Astartes - Dark Angels",
@@ -14,15 +14,15 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 6,
+  "revision": 7,
   "file": "Imperium - Dark Angels.json",
   "counts": {
-    "total": 19,
-    "native": 15,
+    "total": 16,
+    "native": 13,
     "matched": 13,
-    "legends": 2,
+    "legends": 0,
     "crucible": 0,
-    "allied": 4
+    "allied": 3
   },
   "unresolved": [],
   "datasheets": [
@@ -34,23 +34,22 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 70,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 70
+          "pts": 80
         }
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Bladeguard Veteran Squad",
-        "Hellblaster Squad",
-        "Infernus Squad",
-        "Inner Circle Companions",
-        "Intercessor Squad",
-        "Sternguard Veteran Squad",
-        "Tactical Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "HELLBLASTER SQUAD",
+        "INFERNUS SQUAD",
+        "INNER CIRCLE COMPANIONS",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -60,10 +59,10 @@
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Crozius Arcanum and Power Weapon - strike",
@@ -74,7 +73,7 @@
           "s": "6",
           "ap": "-2",
           "d": "2",
-          "kw": ""
+          "kw": "Precision"
         },
         {
           "n": "➤ Crozius Arcanum and Power Weapon - sweep",
@@ -85,7 +84,7 @@
           "s": "5",
           "ap": "-2",
           "d": "1",
-          "kw": ""
+          "kw": "Cleave 1"
         }
       ],
       "composition": [
@@ -101,11 +100,11 @@
       "abilities": [
         {
           "n": "Exemplar of Hate",
-          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Hit roll."
+          "d": "This unit's melee attacks can re-roll hit rolls."
         },
         {
           "n": "Feared Interrogator",
-          "d": "At the start of the Fight phase, each enemy Character unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do. In addition, each time this model destroys an enemy Character model with a melee attack, you gain 1CP."
+          "d": "At the start of the Fight phase, each enemy Character unit within 6\" of this model makes a battle-shock roll, with -1 to that battle-shock roll."
         }
       ],
       "faction": "Dark Angels",
@@ -113,13 +112,13 @@
         "Character",
         "Epic Hero",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Asmodai",
         "Chaplain",
         "Tacticus",
         "Deathwing",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -127,7 +126,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "5+",
@@ -144,23 +143,23 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 140,
+      "points": 150,
       "ladder": [
         {
           "from": 1,
-          "pts": 140
+          "pts": 150
         }
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Bladeguard Veteran Squad",
-        "Hellblaster Squad",
-        "Infernus Squad",
-        "Inner Circle Companions",
-        "Intercessor Squad",
-        "Sternguard Veteran Squad",
-        "Tactical Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "COMPANY HEROES",
+        "HELLBLASTER SQUAD",
+        "INFERNUS SQUAD",
+        "INNER CIRCLE COMPANIONS",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -201,15 +200,19 @@
       "abilities": [
         {
           "n": "Supreme Grand Master",
-          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+          "d": "This unit's attacks have [SUSTAINED HITS 1]."
         },
         {
           "n": "Masterful Tactician",
-          "d": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP."
+          "d": "In your Movement phase, select up to one visible friendly Adeptus Astartes unit within 9\" of this model, and select one combat doctrine. That combat doctrine is active for that unit until the start of your next Command phase."
+        },
+        {
+          "n": "Watcher in the Dark",
+          "d": "(Once per battle, per unit) In any phase, when this unit suffers a mortal wound, this unit can summon a Watcher in the Dark. If it does, this unit has Feel No Pain 4+ against mortal wounds."
         },
         {
           "n": "The Lion Helm",
-          "d": "Models in the bearer’s unit have a 4+ invulnerable save. In addition, once per battle, in any phase, the bearer can summon a Watcher in the Dark. When it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 4+ ability against mortal wounds."
+          "d": "This unit has a 4+ InSv"
         }
       ],
       "faction": "Dark Angels",
@@ -217,13 +220,13 @@
         "Character",
         "Epic Hero",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Tacticus",
         "Azrael",
         "Chapter Master",
         "Deathwing",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -231,7 +234,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "6",
         "LD": "6+",
@@ -248,19 +251,19 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 100,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 100
         }
       ],
       "cap": null,
       "leads": [
-        "Deathwing Knights",
-        "Deathwing Terminator Squad",
-        "Terminator Assault Squad",
-        "Terminator Squad"
+        "DEATHWING COMMAND SQUAD",
+        "DEATHWING KNIGHTS",
+        "DEATHWING TERMINATOR SQUAD",
+        "TERMINATOR SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -270,10 +273,10 @@
           "range": "24\"",
           "a": "2",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "2",
-          "kw": "Precision, Rapid Fire 2"
+          "kw": "Precision"
         },
         {
           "n": "The Sword of Silence",
@@ -282,9 +285,9 @@
           "a": "6",
           "skill": "2+",
           "s": "6",
-          "ap": "-2",
+          "ap": "-3",
           "d": "2",
-          "kw": "Precision"
+          "kw": "\n"
         }
       ],
       "composition": [
@@ -301,11 +304,11 @@
       "abilities": [
         {
           "n": "Grand Master of the Deathwing",
-          "d": "While this model is leading a unit, each time a model in that unit makes an attack, if a Critical Hit is scored, that attack has the [PRECISION] ability."
+          "d": "This unit's attacks that target an enemy Character unit have +1 to wound rolls."
         },
         {
           "n": "Strikes of Retribution",
-          "d": "Each time a melee attack is allocated to this model, after the attacking model’s unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound."
+          "d": "In the fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: - On a 2+, do not remove this model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
         }
       ],
       "faction": "Dark Angels",
@@ -326,481 +329,9 @@
       },
       "profile": {
         "M": "5\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "6",
-        "LD": "6+",
-        "OC": "1",
-        "InSv": "4+"
-      },
-      "native": true
-    },
-    {
-      "id": "48fb-ebd6-dd17-729b",
-      "linkId": "5e5d-9cdb-a861-66db",
-      "name": "Deathwing Command Squad",
-      "rawName": "Deathwing Command Squad [Legends]",
-      "type": "unit",
-      "mode": "legends",
-      "legends": true,
-      "points": 200,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 200
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": null,
-      "options": [
-        {
-          "n": "Deathwing Command Squad Members",
-          "owner": null,
-          "min": 5,
-          "max": 10,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Deathwing Ancient",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Power Fist",
-                "Storm Bolter"
-              ]
-            },
-            {
-              "n": "Deathwing Apothecary",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Storm Bolter",
-                "Chainfist"
-              ]
-            },
-            {
-              "n": "Deathwing Champion",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Halberd of Caliban"
-              ]
-            },
-            {
-              "n": "Deathwing Command Terminator",
-              "min": 0,
-              "max": 7,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Storm Bolter",
-                "Power Fist"
-              ]
-            },
-            {
-              "n": "Deathwing Terminator w/ Chainfist",
-              "min": 0,
-              "max": 7,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Storm Bolter",
-                "Chainfist"
-              ]
-            },
-            {
-              "n": "Deathwing Terminator w/ Heavy Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": [
-                [
-                  10,
-                  2
-                ]
-              ],
-              "p": 0,
-              "model": true,
-              "w": []
-            },
-            {
-              "n": "Deathwing Command Terminator w/ Power Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Storm Bolter",
-                "Power Weapon"
-              ]
-            },
-            {
-              "n": "Deathwing Command Terminator w/ Twin Claws",
-              "min": 0,
-              "max": 7,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Twin lightning claws"
-              ]
-            },
-            {
-              "n": "Deathwing Command Terminator w/ Hammer & Shield",
-              "min": 0,
-              "max": 7,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Thunder Hammer"
-              ]
-            }
-          ]
-        },
-        {
-          "n": "Ranged Weapon",
-          "owner": "Deathwing Terminator w/ Heavy Weapon",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Cyclone Missile Launcher & Storm Bolter",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Storm bolter"
-              ]
-            },
-            {
-              "n": "Assault cannon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Heavy Flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma cannon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Melee Weapon",
-          "owner": "Deathwing Terminator w/ Heavy Weapon",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Power Fist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Chainfist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Equipment",
-          "owner": null,
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Watcher in the Dark",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Power Fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Storm Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Chainfist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Anti-Vehicle 3+"
-        },
-        {
-          "n": "Halberd of Caliban",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "3+",
-          "s": "6",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Precision"
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "➤ Cyclone missile launcher - frag",
-          "melee": false,
-          "range": "36\"",
-          "a": "2D6",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Cyclone missile launcher - krak",
-          "melee": false,
-          "range": "36\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-2",
-          "d": "D6",
-          "kw": ""
-        },
-        {
-          "n": "Assault cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "6",
-          "skill": "3+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Heavy Flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "➤ Plasma cannon - standard",
-          "melee": false,
-          "range": "36\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Plasma cannon - supercharge",
-          "melee": false,
-          "range": "36\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Blast, Hazardous"
-        },
-        {
-          "n": "Power Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Twin lightning claws",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Twin-linked"
-        },
-        {
-          "n": "Thunder Hammer",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Devastating Wounds"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Deathwing Ancient",
-          "min": 1,
-          "max": 1,
-          "w": [
-            "Power Fist",
-            "Storm Bolter"
-          ]
-        },
-        {
-          "n": "Deathwing Apothecary",
-          "min": 1,
-          "max": 1,
-          "w": [
-            "Storm Bolter",
-            "Chainfist"
-          ]
-        },
-        {
-          "n": "Deathwing Champion",
-          "min": 1,
-          "max": 1,
-          "w": [
-            "Halberd of Caliban"
-          ]
-        },
-        {
-          "n": "Deathwing Command Terminator",
-          "min": null,
-          "max": 7,
-          "w": [
-            "Storm Bolter",
-            "Power Fist"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Attached Unit",
-          "d": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead."
-        },
-        {
-          "n": "Watcher in the Dark",
-          "d": "Once per battle, in any phase, just after a mortal wound is allocated to an Adeptus Astartes model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds."
-        },
-        {
-          "n": "Astartes Banner",
-          "d": "While this unit contains an Ancient, add 1 to the Objective Control characteristic of its models."
-        },
-        {
-          "n": "Narthecium",
-          "d": "While this unit contains an Apothecary, in your Command phase, you can return 1 destroyed model (excluding Character models) to this unit."
-        },
-        {
-          "n": "Honour or Death",
-          "d": "While this unit contains a Company Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP."
-        },
-        {
-          "n": "Storm Shield",
-          "d": "The bearer has a Wounds characteristic of 4."
-        }
-      ],
-      "faction": "Dark Angels",
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Deathwing",
-        "Deathwing Command Squad",
-        "Terminator"
-      ],
-      "models": {
-        "min": 3,
-        "max": 33
-      },
-      "profile": {
-        "M": "5\"",
-        "T": "5",
-        "Sv": "2+",
-        "W": "3",
         "LD": "6+",
         "OC": "1",
         "InSv": "4+"
@@ -815,11 +346,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 240,
+      "points": 255,
       "ladder": [
         {
           "from": 1,
-          "pts": 240
+          "pts": 255
         }
       ],
       "cap": {
@@ -836,7 +367,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Mace of absolution",
+              "n": "Mace of Absolution",
               "min": 0,
               "max": null,
               "scale": null,
@@ -903,7 +434,7 @@
       ],
       "weapons": [
         {
-          "n": "Mace of absolution",
+          "n": "Mace of Absolution",
           "melee": true,
           "range": "Melee",
           "a": "4",
@@ -911,7 +442,7 @@
           "s": "6",
           "ap": "-2",
           "d": "2",
-          "kw": "Anti-Monster 4+, Anti-Vehicle 4+"
+          "kw": "Anti-Monster/Vehicle 4+"
         },
         {
           "n": "Power Weapon",
@@ -964,15 +495,11 @@
       "abilities": [
         {
           "n": "Inner Circle",
-          "d": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead."
+          "d": "- Attacks that target this unit have -1D. - This unit cannot be targeted with the Tactical Dreadnought Fortitude stratagem."
         },
         {
           "n": "Teleport Homer",
-          "d": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" horizontally of that token and not within 8\" horizontally of any enemy models. That token is then removed."
+          "d": "(Once per battle, per unit) At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do: - When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. - If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield."
         },
         {
           "n": "Watcher in the Dark",
@@ -993,251 +520,12 @@
       },
       "profile": {
         "M": "5\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "4",
         "LD": "6+",
         "OC": "1",
         "InSv": "4+"
-      },
-      "native": true
-    },
-    {
-      "id": "ebd0-6939-6305-6d16",
-      "linkId": "1a6b-3ca9-141c-a248",
-      "name": "Deathwing Strikemaster",
-      "rawName": "Deathwing Strikemaster [Legends]",
-      "type": "model",
-      "mode": "legends",
-      "legends": true,
-      "points": 80,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 80
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": [
-        "Deathwing Command Squad",
-        "Deathwing Terminator Squad",
-        "Relic Terminator Squad",
-        "Terminator Assault Squad",
-        "Terminator Squad"
-      ],
-      "options": [
-        {
-          "n": "Wargear",
-          "owner": null,
-          "min": 1,
-          "max": 2,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Storm Bolter",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Master-crafted Power Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Chainfist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Mace of Absolution",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Power Fist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Thunder Hammer",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Storm Shield",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Twin Lightning Claws",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Storm Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "2+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Master-crafted Power Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "2+",
-          "s": "5",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Chainfist",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Anti-Vehicle 3+"
-        },
-        {
-          "n": "Mace of Absolution",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "2+",
-          "s": "6",
-          "ap": "-1",
-          "d": "3",
-          "kw": ""
-        },
-        {
-          "n": "Power Fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "2+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Thunder Hammer",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Twin Lightning Claws",
-          "melee": true,
-          "range": "Melee",
-          "a": "6",
-          "skill": "2+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Twin-Linked"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Deathwing Strikemaster [Legends]",
-          "min": 1,
-          "max": 1,
-          "w": []
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Invulnerable Save",
-          "d": "4+"
-        },
-        {
-          "n": "Tactical Precision",
-          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
-        },
-        {
-          "n": "Vanquish the Foe",
-          "d": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll."
-        },
-        {
-          "n": "Storm Shield",
-          "d": "The bearer has a Wounds characteristic of 6."
-        }
-      ],
-      "faction": "Dark Angels",
-      "keywords": [
-        "Character",
-        "Infantry",
-        "Imperium",
-        "Deathwing",
-        "Deathwing Strikemaster",
-        "Terminator",
-        "Lieutenant"
-      ],
-      "models": {
-        "min": 1,
-        "max": 1
-      },
-      "profile": {
-        "M": "5\"",
-        "T": "5",
-        "Sv": "2+",
-        "W": "5",
-        "LD": "6+",
-        "OC": "1",
-        "InSv": ""
       },
       "native": true
     },
@@ -1249,15 +537,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 165,
+      "points": 190,
       "ladder": [
         {
           "from": 1,
-          "pts": 165
+          "pts": 190
         },
         {
           "from": 6,
-          "pts": 330
+          "pts": 380
         }
       ],
       "cap": {
@@ -1267,7 +555,7 @@
       "leads": null,
       "options": [
         {
-          "n": "Squad Members",
+          "n": "Deathwing Terminators",
           "owner": null,
           "min": 5,
           "max": 10,
@@ -1281,8 +569,7 @@
               "p": 0,
               "model": true,
               "w": [
-                "Storm Bolter",
-                "Power Weapon"
+                "Storm bolter"
               ]
             },
             {
@@ -1293,8 +580,8 @@
               "p": 0,
               "model": true,
               "w": [
-                "Storm Bolter",
-                "Power Fist"
+                "Storm bolter",
+                "Power fist"
               ]
             },
             {
@@ -1305,22 +592,52 @@
               "p": 0,
               "model": true,
               "w": [
-                "Storm Bolter",
-                "Chainfist"
+                "Storm bolter"
               ]
             },
             {
               "n": "Deathwing Terminator w/ Heavy Weapon",
               "min": 0,
-              "max": 1,
-              "scale": [
-                [
-                  10,
-                  2
-                ]
-              ],
+              "max": 2,
+              "scale": null,
               "p": 0,
               "model": true,
+              "w": []
+            }
+          ]
+        },
+        {
+          "n": "Melee Weapon",
+          "owner": "Deathwing Sergeant",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power Weapon",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
               "w": []
             }
           ]
@@ -1353,7 +670,7 @@
               "w": []
             },
             {
-              "n": "Assault cannon",
+              "n": "Assault Cannon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1380,18 +697,18 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Power Fist",
+              "n": "Chainfist",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Chainfist",
+              "n": "Power fist",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -1420,17 +737,6 @@
       ],
       "weapons": [
         {
-          "n": "Storm Bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
           "n": "Power Weapon",
           "melee": true,
           "range": "Melee",
@@ -1442,47 +748,36 @@
           "kw": ""
         },
         {
-          "n": "Power Fist",
+          "n": "➤ Chainfist - Standard",
           "melee": true,
           "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Chainfist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
+          "a": "2",
           "skill": "4+",
           "s": "8",
           "ap": "-2",
           "d": "2",
-          "kw": "Anti-Vehicle 3+"
+          "kw": "\n"
         },
         {
-          "n": "➤ Cyclone missile launcher - frag",
-          "melee": false,
-          "range": "36\"",
-          "a": "2D6",
+          "n": "➤ Chainfist - Hunter: Monster/Vehicle",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Cyclone missile launcher - krak",
-          "melee": false,
-          "range": "36\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
+          "s": "12",
           "ap": "-2",
-          "d": "D6",
+          "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Power fist",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
           "kw": ""
         },
         {
@@ -1491,54 +786,76 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
+        },
+        {
+          "n": "➤ Cyclone missile launcher - frag",
+          "melee": false,
+          "range": "36\"",
+          "a": "8",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast 2"
+        },
+        {
+          "n": "➤ Cyclone missile launcher - krak",
+          "melee": false,
+          "range": "36\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "D3+3",
+          "kw": ""
         },
         {
           "n": "➤ Plasma cannon - standard",
           "melee": false,
           "range": "36\"",
-          "a": "D3",
+          "a": "3",
           "skill": "3+",
           "s": "7",
           "ap": "-2",
-          "d": "1",
-          "kw": "Blast"
+          "d": "2",
+          "kw": "Blast 1"
         },
         {
           "n": "➤ Plasma cannon - supercharge",
           "melee": false,
           "range": "36\"",
-          "a": "D3",
+          "a": "3",
           "skill": "3+",
           "s": "8",
           "ap": "-3",
-          "d": "2",
-          "kw": "Blast, Hazardous"
+          "d": "3",
+          "kw": "Blast 1, Hazardous"
         },
         {
-          "n": "Assault cannon",
+          "n": "Assault Cannon",
           "melee": false,
           "range": "24\"",
           "a": "6",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
-          "kw": "Devastating Wounds"
+          "kw": "Sustained Hits 1"
         },
         {
           "n": "Heavy Flamer",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 2, Torrent"
         }
       ],
       "composition": [
@@ -1547,8 +864,7 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Storm Bolter",
-            "Power Weapon"
+            "Storm bolter"
           ]
         },
         {
@@ -1556,8 +872,8 @@
           "min": null,
           "max": 9,
           "w": [
-            "Storm Bolter",
-            "Power Fist"
+            "Storm bolter",
+            "Power fist"
           ]
         }
       ],
@@ -1565,10 +881,6 @@
         {
           "n": "Deathwing",
           "d": "Each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or to the Hit roll. In addition, each time a model in this unit makes an attack that targets your Oath of Moment target (see Codex: Space Marines), add 1 to the Hit roll."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead."
         },
         {
           "n": "Teleport Homer",
@@ -1589,11 +901,11 @@
       ],
       "models": {
         "min": 1,
-        "max": 20
+        "max": 21
       },
       "profile": {
         "M": "5\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "3",
         "LD": "6+",
@@ -1610,23 +922,22 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 110,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 110
         }
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Bladeguard Veteran Squad",
-        "Hellblaster Squad",
-        "Infernus Squad",
-        "Inner Circle Companions",
-        "Intercessor Squad",
-        "Sternguard Veterans Squad",
-        "Tactical Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "HELLBLASTER SQUAD",
+        "INFERNUS SQUAD",
+        "INNER CIRCLE COMPANIONS",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -1636,10 +947,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Pistol, Precision"
+          "kw": "Close-quarters, Precision"
         },
         {
           "n": "➤ Mind Wipe - witchfire",
@@ -1650,18 +961,18 @@
           "s": "6",
           "ap": "-2",
           "d": "D6",
-          "kw": "Devastating Wounds, Precision, Psychic"
+          "kw": "Close-quarters, Devastating Wounds, Precision, Psychic"
         },
         {
-          "n": "➤ Mind Wipe - focussed witchfire",
+          "n": "➤ Mind Wipe - focused witchfire",
           "melee": false,
           "range": "12\"",
           "a": "1",
           "skill": "2+",
           "s": "6",
           "ap": "-2",
-          "d": "D6",
-          "kw": "Anti-Character 4+, Devastating Wounds, Hazardous, Precision, Psychic"
+          "d": "D3+3",
+          "kw": "Anti-Character 4+, Close-quarters, Devastating Wounds, Hazardous, Precision, Psychic"
         },
         {
           "n": "Traitor's Bane",
@@ -1670,9 +981,9 @@
           "a": "4",
           "skill": "2+",
           "s": "6",
-          "ap": "-2",
-          "d": "D3",
-          "kw": "Anti-Chaos 2+, Psychic"
+          "ap": "-3",
+          "d": "2",
+          "kw": "Precision, Psychic"
         }
       ],
       "composition": [
@@ -1688,16 +999,16 @@
       ],
       "abilities": [
         {
-          "n": "Engulfing Fear [Psychic]",
-          "d": "In your Shooting phase, you can select one enemy unit within 18\" of this model. That enemy unit must take a Battle-shock test."
+          "n": "Book of Salvation",
+          "d": "This unit's melee attacks have +1 A."
         },
         {
-          "n": "Book of Salvation",
-          "d": "While this model is leading a unit, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. When this model is destroyed, each friendly Adeptus Astartes unit within 6\" of this model must take a Battle-shock test."
+          "n": "Chief Librarian (psyker level 3)",
+          "d": "This model has the psychic abilities listed in the Psychic Abilities section."
         },
         {
           "n": "Psychic Hood",
-          "d": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+          "d": "This unit has Feel No Pain 4+ against psychic attacks and mortal wounds."
         }
       ],
       "faction": "Dark Angels",
@@ -1705,13 +1016,14 @@
         "Character",
         "Epic Hero",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Psyker",
         "Ezekiel",
         "Librarian",
         "Deathwing",
-        "Leader"
+        "Leader",
+        "Explosives",
+        "Tacticus"
       ],
       "models": {
         "min": 1,
@@ -1719,9 +1031,9 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
-        "W": "4",
+        "W": "5",
         "LD": "6+",
         "OC": "1",
         "InSv": "4+"
@@ -1736,15 +1048,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 80,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 90
         },
         {
           "from": 4,
-          "pts": 160
+          "pts": 180
         }
       ],
       "cap": {
@@ -1760,10 +1072,10 @@
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Calibanite Greatsword - Strike",
@@ -1800,16 +1112,12 @@
       ],
       "abilities": [
         {
-          "n": "Attached Unit",
-          "d": "If a Character unit from your army with the Leader ability can be attached to a Sternguard Veteran Squad, it can be attached to this unit instead."
-        },
-        {
           "n": "Braziers of Judgement",
           "d": "▪ This unit has Stealth. ▪ Melee attacks that target this unit have ‑1 to hit rolls."
         },
         {
           "n": "Emnity for the Unworthy",
-          "d": "Each time a model in this unit makes an attack that targets a Character unit, add 1 to the Hit roll."
+          "d": "This unit's attacks that target a Character unit have +1 to hit rolls."
         }
       ],
       "faction": "Dark Angels",
@@ -1826,7 +1134,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "3",
         "LD": "6+",
@@ -1843,11 +1151,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 130,
+      "points": 150,
       "ladder": [
         {
           "from": 1,
-          "pts": 130
+          "pts": 150
         }
       ],
       "cap": {
@@ -1864,18 +1172,18 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Assault cannon",
+              "n": "Assault Cannon",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Heavy bolter",
+              "n": "Heavy Bolter",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -1886,51 +1194,40 @@
       ],
       "weapons": [
         {
-          "n": "Close Combat Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
           "n": "➤ Plasma storm battery - standard",
           "melee": false,
           "range": "36\"",
-          "a": "D6+1",
+          "a": "D3+3",
           "skill": "3+",
-          "s": "8",
+          "s": "9",
           "ap": "-2",
           "d": "2",
-          "kw": "Blast, Twin-Linked"
+          "kw": "Blast 1, Twin-Linked"
         },
         {
           "n": "➤ Plasma storm battery - supercharge",
           "melee": false,
           "range": "36\"",
-          "a": "D6+1",
+          "a": "D3+3",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-3",
           "d": "3",
-          "kw": "Blast, Hazardous, Twin-Linked"
+          "kw": "Blast 1, Hazardous, Twin-Linked"
         },
         {
-          "n": "Assault cannon",
+          "n": "Assault Cannon",
           "melee": false,
           "range": "24\"",
           "a": "6",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
-          "kw": "Devastating Wounds"
+          "kw": "Sustained Hits 1"
         },
         {
-          "n": "Heavy bolter",
+          "n": "Heavy Bolter",
           "melee": false,
           "range": "36\"",
           "a": "3",
@@ -1938,7 +1235,18 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Sustained Hits 1"
+          "kw": "Rapid Fire 2, Sustained Hits 1"
+        },
+        {
+          "n": "Armoured Hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
         }
       ],
       "composition": [
@@ -1952,7 +1260,7 @@
       "abilities": [
         {
           "n": "Storm of Vengeance",
-          "d": "Once per turn, in your opponent’s Shooting phase, when another friendly Adeptus Astartes unit within 6\" of this model is destroyed, one model with this ability can use it. If it does, after the attacking unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target)."
+          "d": "(Once per turn, per unit) In your opponent's Shooting phase, when an enemy unit has shot, if those attacks destroyed a friendly Dark Angels unit within 6\" of this unit, you can use this ability. If you do, this unit shoots using normal shooting but while doing so this unit can only target that enemy unit."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -1970,9 +1278,9 @@
       },
       "profile": {
         "M": "14\"",
-        "T": "8",
+        "T": "9",
         "Sv": "3+",
-        "W": "10",
+        "W": "11",
         "LD": "6+",
         "OC": "3",
         "InSv": "5+"
@@ -1987,36 +1295,25 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 70,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 70
+          "pts": 80
         }
       ],
       "cap": null,
       "leads": [
-        "Assault Intercessor Squad",
-        "Bladeguard Veteran Squad",
-        "Infernus Squad",
-        "Inner Circle Companions",
-        "Intercessor Squad",
-        "Sternguard Veteran Squad",
-        "Tactical Squad"
+        "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
+        "COMPANY HEROES",
+        "INFERNUS SQUAD",
+        "INNER CIRCLE COMPANIONS",
+        "INTERCESSOR SQUAD",
+        "STERNGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
-        {
-          "n": "Bolt pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "2+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Pistol"
-        },
         {
           "n": "Enmity’s Edge",
           "melee": true,
@@ -2027,6 +1324,17 @@
           "ap": "-3",
           "d": "2",
           "kw": "Anti-Psyker 2+"
+        },
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -2035,15 +1343,15 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Bolt pistol",
-            "Enmity’s Edge"
+            "Enmity’s Edge",
+            "Bolt pistol"
           ]
         }
       ],
       "abilities": [
         {
           "n": "Intractable Will",
-          "d": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+          "d": "In the Fight phase, when a model in this unit is destroyed, if this unit has not been selected to fight this phase, roll one D6: - On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
         },
         {
           "n": "The Spiritshield Helm",
@@ -2069,7 +1377,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "5",
         "LD": "6+",
@@ -2086,11 +1394,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 265,
+      "points": 415,
       "ladder": [
         {
           "from": 1,
-          "pts": 265
+          "pts": 415
         }
       ],
       "cap": null,
@@ -2100,24 +1408,24 @@
         {
           "n": "➤ Arma Luminis - bolt",
           "melee": false,
-          "range": "12\"",
+          "range": "18\"",
           "a": "4",
           "skill": "2+",
-          "s": "4",
-          "ap": "-1",
+          "s": "6",
+          "ap": "-2",
           "d": "2",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Arma Luminis - plasma",
           "melee": false,
-          "range": "12\"",
+          "range": "18\"",
           "a": "2",
           "skill": "2+",
-          "s": "8",
+          "s": "10",
           "ap": "-3",
-          "d": "2",
-          "kw": "Pistol"
+          "d": "3",
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Fealty - strike",
@@ -2139,7 +1447,7 @@
           "s": "6",
           "ap": "-3",
           "d": "2",
-          "kw": "Sustained Hits 1"
+          "kw": "Cleave 2, Sustained Hits 1"
         }
       ],
       "composition": [
@@ -2157,11 +1465,19 @@
         },
         {
           "n": "The Emperor's Shield",
-          "d": "Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll."
+          "d": "Attacks that target this unit with a S greater than this unit's T have -1 to wound rolls."
         },
         {
           "n": "Dark Angels Bodyguard",
-          "d": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability."
+          "d": "While this unit is within 3\" of a friendly Dark Angels Infantry unit, this unit has Lone Operative."
+        },
+        {
+          "n": "Master Strategist",
+          "d": "In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase, in addition to any other combat doctrine."
+        },
+        {
+          "n": "The Watchers",
+          "d": "This unit has Feel No Pain 4+ against psychic attacks and mortal wounds."
         }
       ],
       "faction": "Dark Angels",
@@ -2180,9 +1496,9 @@
       },
       "profile": {
         "M": "8\"",
-        "T": "9",
+        "T": "10",
         "Sv": "2+",
-        "W": "10",
+        "W": "16",
         "LD": "5+",
         "OC": "4",
         "InSv": "3+"
@@ -2197,11 +1513,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 180,
+      "points": 200,
       "ladder": [
         {
           "from": 1,
-          "pts": 180
+          "pts": 200
         }
       ],
       "cap": {
@@ -2210,6 +1526,42 @@
       },
       "leads": null,
       "options": [
+        {
+          "n": "Wargear",
+          "owner": null,
+          "min": 0,
+          "max": null,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Blacksword missiles",
+              "min": 1,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Armoured Hull",
+              "min": 1,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Twin heavy bolter",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            }
+          ]
+        },
         {
           "n": "Main Weapon",
           "owner": null,
@@ -2240,17 +1592,6 @@
       ],
       "weapons": [
         {
-          "n": "Armoured hull",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
           "n": "Blacksword missiles",
           "melee": false,
           "range": "36\"",
@@ -2258,19 +1599,8 @@
           "skill": "3+",
           "s": "8",
           "ap": "-2",
-          "d": "D6",
+          "d": "D3+2",
           "kw": "Anti-Fly 2+"
-        },
-        {
-          "n": "Twin heavy bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Sustained Hits 1, Twin-Linked"
         },
         {
           "n": "Avenger mega bolter",
@@ -2291,8 +1621,30 @@
           "skill": "3+",
           "s": "12",
           "ap": "-3",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": ""
+        },
+        {
+          "n": "Armoured Hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        },
+        {
+          "n": "Twin heavy bolter",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "kw": "Rapid Fire 2, Sustained Hits 1, Twin-linked"
         }
       ],
       "composition": [
@@ -2306,15 +1658,7 @@
       "abilities": [
         {
           "n": "Lightning-fast Manoeuvres",
-          "d": "Ranged attacks that target this unit have ‑1 to wound rolls"
-        },
-        {
-          "n": "Damaged: 1-3 Wounds Remaining",
-          "d": "While this model has 1-3 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "5+"
+          "d": "Ranged attacks that target this unit have -1 to wound rolls."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2337,7 +1681,7 @@
         "W": "11",
         "LD": "6+",
         "OC": "-",
-        "InSv": ""
+        "InSv": "5+"
       },
       "native": false
     },
@@ -2349,15 +1693,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 75,
+      "points": 85,
       "ladder": [
         {
           "from": 1,
-          "pts": 75
+          "pts": 85
         },
         {
           "from": 4,
-          "pts": 150
+          "pts": 170
         }
       ],
       "cap": {
@@ -2382,11 +1726,11 @@
               "model": true,
               "w": [
                 "Bolt Pistol",
-                "Black Knight combat weapon"
+                "Corvus Hammers"
               ]
             },
             {
-              "n": "Ravenwing Black Knight",
+              "n": "Ravenwing Black Knight w/ Plasma Talon",
               "min": 2,
               "max": 5,
               "scale": null,
@@ -2394,24 +1738,19 @@
               "model": true,
               "w": [
                 "Bolt Pistol",
-                "Black Knight combat weapon"
+                "Corvus Hammers"
               ]
             },
             {
               "n": "Ravenwing Black Knight w/ Grenade Launcher",
               "min": 0,
-              "max": 1,
-              "scale": [
-                [
-                  6,
-                  2
-                ]
-              ],
+              "max": 2,
+              "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Bolt Pistol",
-                "Black Knight combat weapon"
+                "Corvus Hammers"
               ]
             }
           ]
@@ -2424,7 +1763,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Astartes grenade launcher",
+              "n": "Grenade Launcher",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2457,26 +1796,37 @@
           "kw": "Pistol"
         },
         {
-          "n": "➤ Astartes grenade launcher - krak",
+          "n": "Corvus Hammers",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "➤ Grenade Launcher - Krak",
           "melee": false,
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-2",
-          "d": "D3",
-          "kw": ""
+          "d": "3",
+          "kw": "Rapid Fire 1"
         },
         {
-          "n": "➤ Astartes grenade launcher - frag",
+          "n": "➤ Grenade Launcher - Frag",
           "melee": false,
           "range": "24\"",
-          "a": "D3",
+          "a": "4",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "➤ Plasma talon - Standard",
@@ -2499,17 +1849,6 @@
           "ap": "-3",
           "d": "2",
           "kw": "Hazardous, Rapid Fire 1"
-        },
-        {
-          "n": "Black Knight combat weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Devastating Wounds"
         }
       ],
       "composition": [
@@ -2519,27 +1858,14 @@
           "max": 1,
           "w": [
             "Bolt Pistol",
-            "Black Knight combat weapon"
-          ]
-        },
-        {
-          "n": "Ravenwing Black Knight",
-          "min": 2,
-          "max": 5,
-          "w": [
-            "Bolt Pistol",
-            "Black Knight combat weapon"
+            "Corvus Hammers"
           ]
         }
       ],
       "abilities": [
         {
           "n": "Knights of Caliban",
-          "d": "Each time this unit is selected to fight, if it made a Charge move this turn, until the end of the phase, melee weapons equipped by models in this unit have the [ANTI-MONSTER 4+] and [ANTI-VEHICLE 4+] abilities."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a Character unit from your army with the Leader ability can be attached to an Outrider Squad, it can be attached to this unit instead."
+          "d": "If this unit made a charge move this turn, this unit's melee attacks have [ANTI-MONSTER/VEHICLE 4+]."
         }
       ],
       "faction": "Dark Angels",
@@ -2552,11 +1878,11 @@
       ],
       "models": {
         "min": 3,
-        "max": 7
+        "max": 8
       },
       "profile": {
         "M": "12\"",
-        "T": "5",
+        "T": "6",
         "Sv": "3+",
         "W": "3",
         "LD": "6+",
@@ -2573,11 +1899,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 105,
+      "points": 115,
       "ladder": [
         {
           "from": 1,
-          "pts": 105
+          "pts": 115
         }
       ],
       "cap": {
@@ -2594,61 +1920,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Astartes grenade launcher",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma Talon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Bike weapon",
-          "owner": "Ravenwing Apothecary",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Astartes grenade launcher",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma Talon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Bike weapon",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Astartes grenade launcher",
+              "n": "Grenade Launcher",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2670,37 +1942,48 @@
       ],
       "weapons": [
         {
-          "n": "Bolt Pistol",
+          "n": "Corvus Hammers",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Devastating Wounds"
+        },
+        {
+          "n": "Bolt pistol",
           "melee": false,
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
-          "n": "➤ Astartes grenade launcher - krak",
+          "n": "➤ Grenade Launcher - Krak",
           "melee": false,
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-2",
-          "d": "D3",
-          "kw": ""
+          "d": "3",
+          "kw": "Rapid Fire 1"
         },
         {
-          "n": "➤ Astartes grenade launcher - frag",
+          "n": "➤ Grenade Launcher - Frag",
           "melee": false,
           "range": "24\"",
-          "a": "D3",
+          "a": "4",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "➤ Plasma talon - Standard",
@@ -2725,15 +2008,15 @@
           "kw": "Hazardous, Rapid Fire 1"
         },
         {
-          "n": "Black Knight combat weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
+          "n": "Bolt Pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
           "skill": "3+",
-          "s": "5",
-          "ap": "-2",
+          "s": "4",
+          "ap": "0",
           "d": "1",
-          "kw": "Devastating Wounds"
+          "kw": "Pistol"
         },
         {
           "n": "Master-crafted power weapon",
@@ -2741,7 +2024,7 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": ""
@@ -2753,8 +2036,8 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Bolt Pistol",
-            "Black Knight combat weapon"
+            "Corvus Hammers",
+            "Bolt pistol"
           ]
         },
         {
@@ -2763,7 +2046,7 @@
           "max": 1,
           "w": [
             "Bolt Pistol",
-            "Black Knight combat weapon"
+            "Corvus Hammers"
           ]
         },
         {
@@ -2779,27 +2062,26 @@
           "d": "This unit can be attached to the following units: ■ Outrider Squad ■ Ravenwing Black Knights"
         },
         {
-          "n": "Narthecium",
-          "d": "While this unit contains a Ravenwing Apothecary, in your Command phase, you can return 1 destroyed model (excluding Character and Invader ATV models) to this unit."
+          "n": "Astartes Banner",
+          "d": "While this unit contains a Ravenwing Ancient, this unit has +1 OC."
         },
         {
-          "n": "Astartes Banner",
-          "d": "While this unit contains a Ravenwing Ancient, add 1 to the Objective Control characteristic of models in this unit."
+          "n": "Narthecium",
+          "d": "While this unit contains a Ravenwing Apothecary, in your Command phase, this unit heals D3+1 wounds."
         },
         {
           "n": "Honour or Death",
-          "d": "While this unit contains a Ravenwing Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP."
+          "d": "While this unit contains a Ravenwing Champion: - This unit has +1 to advance rolls and charge rolls. - When you target this unit with the Heroic Intervention stratagem, that use is -1CP."
         }
       ],
       "faction": "Dark Angels",
       "keywords": [
         "Mounted",
-        "Grenades",
         "Imperium",
         "Ravenwing Command Squad",
         "Ravenwing",
-        "Character",
-        "Support"
+        "Support",
+        "Explosives"
       ],
       "models": {
         "min": 3,
@@ -2807,7 +2089,7 @@
       },
       "profile": {
         "M": "12\"",
-        "T": "5",
+        "T": "6",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
@@ -2824,11 +2106,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 200,
+      "points": 190,
       "ladder": [
         {
           "from": 1,
-          "pts": 200
+          "pts": 190
         }
       ],
       "cap": {
@@ -2839,24 +2121,13 @@
       "options": null,
       "weapons": [
         {
-          "n": "Armoured Hull",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
           "n": "Hurricane bolter",
           "melee": false,
           "range": "24\"",
           "a": "6",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 6, Twin-Linked"
         },
@@ -2869,7 +2140,18 @@
           "s": "16",
           "ap": "-4",
           "d": "3",
-          "kw": "Blast, Devastating Wounds"
+          "kw": "Blast 1, Devastating Wounds"
+        },
+        {
+          "n": "Armoured Hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
         }
       ],
       "composition": [
@@ -2884,10 +2166,6 @@
         {
           "n": "Stasis Bomb",
           "d": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding AIRCRAFT/Lone Operative units) within 24\" of this unit. That enemy unit is slowed until the end of your opponent’s next Movement phase: ▪ While a unit is slowed, in your opponent’s Movement phase, when that unit is selected to move, unless that unit remains stationary, roll one D6: ▫ On a 1-4, that unit suffers D3 mortal wounds and that unit has -2\" M. ▫ On a 5-6, that unit suffers 2D3 mortal wounds and that unit has -3\" M.’"
-        },
-        {
-          "n": "Damaged: 1-3 Wounds Remaining",
-          "d": "While this model has 1-3 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2922,11 +2200,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 70,
+      "points": 80,
       "ladder": [
         {
           "from": 1,
-          "pts": 70
+          "pts": 80
         }
       ],
       "cap": {
@@ -2943,18 +2221,18 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Assault cannon",
+              "n": "Assault Cannon",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
               "w": []
             },
             {
-              "n": "Heavy bolter",
+              "n": "Heavy Bolter",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -2965,29 +2243,18 @@
       ],
       "weapons": [
         {
-          "n": "Close Combat Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Assault cannon",
+          "n": "Assault Cannon",
           "melee": false,
           "range": "24\"",
           "a": "6",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
-          "kw": "Devastating Wounds"
+          "kw": "Sustained Hits 1"
         },
         {
-          "n": "Heavy bolter",
+          "n": "Heavy Bolter",
           "melee": false,
           "range": "36\"",
           "a": "3",
@@ -2995,7 +2262,18 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Sustained Hits 1"
+          "kw": "Rapid Fire 2, Sustained Hits 1"
+        },
+        {
+          "n": "Armoured Hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
         }
       ],
       "composition": [
@@ -3008,12 +2286,8 @@
       ],
       "abilities": [
         {
-          "n": "Invulnerable Save",
-          "d": "5+"
-        },
-        {
-          "n": "Icon of Old Caliban (Aura)",
-          "d": "Friendly ADEPTUS ASTARTES units within 6\" of this unit have Stealth"
+          "n": "Icon of Old Caliban",
+          "d": "While a friendly Dark Angels unit is within 6\" of this unit, that unit has Stealth."
         }
       ],
       "faction": "Dark Angels",
@@ -3036,115 +2310,9 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "5+"
       },
       "native": true
-    },
-    {
-      "id": "a2b6-e35-67a8-d76e",
-      "linkId": "4bae-848c-a666-2b2c",
-      "name": "Ravenwing Talonmaster",
-      "rawName": "Ravenwing Talonmaster [Legends]",
-      "type": "model",
-      "mode": "legends",
-      "legends": true,
-      "points": 105,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 105
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": null,
-      "options": null,
-      "weapons": [
-        {
-          "n": "Twin Heavy Bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Sustained Hits 1, Twin-Linked"
-        },
-        {
-          "n": "Power Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Twin Assault Cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "6",
-          "skill": "3+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds, Twin-Linked"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Ravenwing Talonmaster [Legends]",
-          "min": 1,
-          "max": 1,
-          "w": []
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Talonmaster",
-          "d": "While this model is within 3\" of one or more other friendly Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle units, this model has the Lone Operative ability."
-        },
-        {
-          "n": "Nowhere To Hide",
-          "d": "While a friendly Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability."
-        },
-        {
-          "n": "Master of Manoeuvre",
-          "d": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model, if this model is not within Engagement Range of one or more enemy units, this model can make a Normal move of up to 6\"."
-        },
-        {
-          "n": "Invulnerable Save",
-          "d": "5+"
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Vehicle",
-        "Character",
-        "Fly",
-        "Ravenwing",
-        "Ravenwing Talonmaster",
-        "Imperium"
-      ],
-      "models": {
-        "min": 1,
-        "max": 1
-      },
-      "profile": {
-        "M": "16\"",
-        "T": "7",
-        "Sv": "3+",
-        "W": "6",
-        "LD": "6+",
-        "OC": "2",
-        "InSv": ""
-      },
-      "native": false
     },
     {
       "id": "8f4b-c343-bef5-6779",
@@ -3154,41 +2322,30 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 105,
+      "points": 120,
       "ladder": [
         {
           "from": 1,
-          "pts": 105
+          "pts": 120
         }
       ],
       "cap": null,
       "leads": [
-        "Outrider Squad",
-        "Ravenwing Black Knights"
+        "OUTRIDER SQUAD",
+        "RAVENWING BLACK KNIGHTS"
       ],
       "options": null,
       "weapons": [
         {
-          "n": "Bolt Pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "2+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Pistol"
-        },
-        {
           "n": "Master-crafted plasma cannon",
           "melee": false,
           "range": "36\"",
-          "a": "D3",
+          "a": "3",
           "skill": "2+",
           "s": "8",
           "ap": "-3",
-          "d": "2",
-          "kw": "Blast"
+          "d": "3",
+          "kw": "Blast 1"
         },
         {
           "n": "Twin storm bolter",
@@ -3196,8 +2353,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2, Twin-Linked"
         },
@@ -3211,6 +2368,17 @@
           "ap": "-3",
           "d": "2",
           "kw": "Sustained Hits 2"
+        },
+        {
+          "n": "Bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -3219,21 +2387,21 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Bolt Pistol",
             "Master-crafted plasma cannon",
             "Twin storm bolter",
-            "The Raven Sword"
+            "The Raven Sword",
+            "Bolt pistol"
           ]
         }
       ],
       "abilities": [
         {
           "n": "Grand Master of the Ravenwing",
-          "d": "▪ This unit’s ranged attacks have [ASSAULT]. ▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. ▪ This unit has MOBILE"
+          "d": "- This unit has Mobile. - In your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
         },
         {
           "n": "Cut Off Their Escape",
-          "d": "Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of this model’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests."
+          "d": "When an enemy unit engaged with this unit (excluding Monster/Vehicle units) makes a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle‑shocked, ‑1 from those hazard rolls."
         }
       ],
       "faction": "Dark Angels",
@@ -3244,11 +2412,11 @@
         "Captain",
         "Imperium",
         "Fly",
-        "Grenades",
         "Sammael",
         "Ravenwing",
         "Frame",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -3256,7 +2424,7 @@
       },
       "profile": {
         "M": "12\"",
-        "T": "5",
+        "T": "6",
         "Sv": "3+",
         "W": "7",
         "LD": "6+",

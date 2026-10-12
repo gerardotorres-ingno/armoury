@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "2261-79a5-19d9-1668",
   "catalogueName": "Imperium - Adeptus Astartes - Salamanders",
@@ -14,7 +14,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 5,
+  "revision": 6,
   "file": "Imperium - Salamanders.json",
   "counts": {
     "total": 2,
@@ -34,11 +34,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 80,
+      "points": 90,
       "ladder": [
         {
           "from": 1,
-          "pts": 80
+          "pts": 90
         }
       ],
       "cap": null,
@@ -49,7 +49,7 @@
         "INFERNUS SQUAD",
         "INTERCESSOR SQUAD",
         "STERNGUARD VETERAN SQUAD",
-        "TACTICAL SQUAD"
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -58,11 +58,11 @@
           "melee": false,
           "range": "12\"",
           "a": "D6+3",
-          "skill": "N/A",
-          "s": "4",
+          "skill": "-",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Malleus Noctum",
@@ -73,7 +73,7 @@
           "s": "10",
           "ap": "-2",
           "d": "3",
-          "kw": ""
+          "kw": "Devastating Wounds"
         }
       ],
       "composition": [
@@ -90,11 +90,11 @@
       "abilities": [
         {
           "n": "Unto the Anvil",
-          "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll."
+          "d": "This unit’s melee attacks can: - Re-roll wound rolls of 1. - Or: If the assault doctrine is active for this unit, re-roll wound rolls."
         },
         {
           "n": "Lord of the Pyroclasts",
-          "d": "While an enemy unit is within Engagement Range of this model, halve the Objective Control characteristic of models in that enemy unit"
+          "d": "While an enemy unit is engaged with this unit, that enemy unit has -1 OC."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -106,7 +106,8 @@
         "Adrax Agatone",
         "Imperium",
         "Tacticus",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -114,7 +115,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "5",
         "LD": "6+",
@@ -131,19 +132,21 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 95,
+      "points": 105,
       "ladder": [
         {
           "from": 1,
-          "pts": 95
+          "pts": 105
         }
       ],
       "cap": null,
       "leads": [
         "ASSAULT INTERCESSOR SQUAD",
+        "BLADEGUARD VETERAN SQUAD",
         "COMPANY HEROES",
+        "ERADICATOR SQUAD WITH MELTA RIFLES",
         "INFERNUS SQUAD",
-        "TACTICAL SQUAD"
+        "VANGUARD VETERAN SQUAD"
       ],
       "options": null,
       "weapons": [
@@ -152,11 +155,11 @@
           "melee": false,
           "range": "12\"",
           "a": "D6+3",
-          "skill": "N/A",
+          "skill": "-",
           "s": "6",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "Spear of Vulkan",
@@ -164,7 +167,7 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "6",
+          "s": "7",
           "ap": "-2",
           "d": "2",
           "kw": "Devastating Wounds"
@@ -175,10 +178,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "2+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         }
       ],
       "composition": [
@@ -196,15 +199,11 @@
       "abilities": [
         {
           "n": "Forgefather",
-          "d": "In your Shooting phase, select one enemy unit within 24\" of and visible to this model. Until the end of the phase, each time a friendly Adeptus Astartes model makes a ranged attack with a Torrent or Melta weapon that targets that enemy unit, you can re-roll the Wound roll"
+          "d": "In your Shooting phase, select one visible enemy unit within 24\" of this model. Friendly Adeptus Astartes units’ [Melta]/[Torrent] attacks that target that enemy unit have +2 S."
         },
         {
           "n": "Seeker of the Unfound",
-          "d": "The first time this model is set up on the battlefield, select one objective marker on the battlefield. While this model is within range of that objective marker, it has an Objective Control characteristic of 10, a Leadership characteristic of 5+ and the Feel No Pain 4+ ability."
-        },
-        {
-          "n": "Inspiring Commander",
-          "d": "If you include this model in your army, until the end of the battle, non-Character models in Infernus Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+          "d": "The first time this model is set up on the battlefield, select one objective on the battlefield. While this model is within range of that objective, this model has: - 10 OC. - 5+ Ld. - Feel No Pain 4+."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -225,7 +224,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "5",
         "LD": "6+",

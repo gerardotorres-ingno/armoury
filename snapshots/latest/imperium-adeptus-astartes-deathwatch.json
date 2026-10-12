@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "3988a8b",
-    "date": "2026-10-10T16:39:58Z"
+    "sha": "99b1d84",
+    "date": "2026-10-12T17:47:11Z"
   },
   "catalogueId": "f89b-84e0-6e3b-f1e2",
   "catalogueName": "Imperium - Adeptus Astartes - Deathwatch",
@@ -12,7 +12,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 9,
+  "revision": 10,
   "file": "Imperium - Deathwatch.json",
   "counts": {
     "total": 10,
@@ -53,7 +53,16 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Armoured hull",
+              "n": "Hurricane bolter",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Auspex array",
               "min": 1,
               "max": 1,
               "scale": null,
@@ -62,8 +71,8 @@
               "w": []
             },
             {
-              "n": "Hurricane bolter",
-              "min": 0,
+              "n": "Armoured Hull",
+              "min": 1,
               "max": 1,
               "scale": null,
               "p": 0,
@@ -82,7 +91,7 @@
             {
               "n": "Twin assault cannon",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -91,7 +100,7 @@
             {
               "n": "Twin lascannon",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -129,55 +138,17 @@
               ]
             }
           ]
-        },
-        {
-          "n": "Wargear Options",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Auspex array",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Infernum halo-launcher",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
         }
       ],
       "weapons": [
-        {
-          "n": "Armoured hull",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
         {
           "n": "Hurricane bolter",
           "melee": false,
           "range": "24\"",
           "a": "6",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 6, Twin-Linked"
         },
@@ -188,9 +159,9 @@
           "a": "6",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
-          "kw": "Devastating Wounds, Twin-Linked"
+          "kw": "Sustained Hits 1, Twin-linked"
         },
         {
           "n": "Twin lascannon",
@@ -200,19 +171,19 @@
           "skill": "3+",
           "s": "12",
           "ap": "-3",
-          "d": "D6+1",
-          "kw": "Twin-Linked"
+          "d": "D3+3",
+          "kw": "Twin-linked"
         },
         {
           "n": "Blackstar rocket launcher",
           "melee": false,
           "range": "30\"",
-          "a": "D6+1",
+          "a": "4",
           "skill": "3+",
           "s": "5",
           "ap": "0",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "Stormstrike missile launcher",
@@ -223,6 +194,17 @@
           "s": "10",
           "ap": "-2",
           "d": "3",
+          "kw": ""
+        },
+        {
+          "n": "Armoured Hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
           "kw": ""
         }
       ],
@@ -237,23 +219,11 @@
       "abilities": [
         {
           "n": "Blackstar Cluster Launcher",
-          "d": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 5+, that unit suffers 1 mortal wound."
-        },
-        {
-          "n": "Damaged: 1-5 Wounds Remaining",
-          "d": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
-        },
-        {
-          "n": "Transport",
-          "d": "This model has a transport capacity of 12 ADEPTUS ASTARTES INFANTRY or KILL TEAM models. Each JUMP PACK, GRAVIS or TERMINATOR model takes up the space of 2 models and each CENTURION model takes up the space of 3 models."
+          "d": "In your Movement phase, when this unit ends a normal move, select up to one enemy unit this unit moved over during that move and roll six D6: - For each 4+, that unit suffers 1 mortal wound."
         },
         {
           "n": "Auspex Array",
           "d": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
-        },
-        {
-          "n": "Infernum Halo-launcher",
-          "d": "The bearer has the SMOKE keyword."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -288,15 +258,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 180,
+      "points": 190,
       "ladder": [
         {
           "from": 1,
-          "pts": 180
+          "pts": 190
         },
         {
           "from": 6,
-          "pts": 330
+          "pts": 380
         }
       ],
       "cap": {
@@ -349,18 +319,6 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Power Fist & Storm Bolter",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Power Fist",
-                "Storm Bolter"
-              ]
-            },
-            {
               "n": "Storm Bolter & Power Weapon",
               "min": 0,
               "max": 1,
@@ -368,8 +326,8 @@
               "p": 0,
               "model": false,
               "w": [
-                "Power Weapon",
-                "Storm Bolter"
+                "Storm bolter",
+                "Power weapon"
               ]
             },
             {
@@ -391,12 +349,23 @@
               "p": 0,
               "model": false,
               "w": [
-                "Chainfist",
-                "Storm Bolter"
+                "Storm bolter"
               ]
             },
             {
-              "n": "Twin lightning claws",
+              "n": "Power Fist & Storm Bolter",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": [
+                "Power fist",
+                "Storm bolter"
+              ]
+            },
+            {
+              "n": "Twin Lightning Claws",
               "min": 0,
               "max": null,
               "scale": null,
@@ -425,187 +394,135 @@
               ]
             },
             {
-              "n": "Heavy Flamer & Power Fist",
+              "n": "Heavy Flamer",
               "min": 0,
               "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
               "w": [
-                "Heavy flamer"
+                "Heavy Flamer"
               ]
             },
             {
-              "n": "Plasma Cannon & Power Fist",
+              "n": "Plasma Cannon",
               "min": 0,
               "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Power fist"
-              ]
+              "w": []
             },
             {
-              "n": "Cyclone Missile Launcher, Storm Bolter & Power Fist",
+              "n": "Cyclone Missile Launcher, Storm Bolter and/or melee weapon",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Storm bolter",
-                "Power fist"
-              ]
-            },
-            {
-              "n": "Assault Cannon & Chainfist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Assault Cannon"
-              ]
-            },
-            {
-              "n": "Assault Cannon & Power Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Assault Cannon"
-              ]
-            },
-            {
-              "n": "Heavy Flamer & Chainfist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Heavy flamer"
-              ]
-            },
-            {
-              "n": "Heavy Flamer & Power Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Heavy flamer"
-              ]
-            },
-            {
-              "n": "Plasma Cannon & Power Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Power weapon"
-              ]
-            },
-            {
-              "n": "Plasma Cannon & Chainfist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Chainfist"
-              ]
-            },
-            {
-              "n": "Cyclone Missile Launcher, Storm Bolter & Chainfist",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Storm bolter",
-                "Chainfist"
-              ]
-            },
-            {
-              "n": "Cyclone Missile Launcher, Storm Bolter & Power Weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Storm bolter",
-                "Power weapon"
-              ]
+              "w": []
             }
           ]
         },
         {
-          "n": "Terminator Weapons",
-          "owner": "Deathwatch Terminator Sergeant",
+          "n": "Melee",
+          "owner": null,
           "min": 1,
           "max": 1,
           "pick": "one",
           "opts": [
             {
-              "n": "Power Fist & Storm Bolter",
+              "n": "Power fist",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Power Fist",
-                "Storm Bolter"
-              ]
+              "w": []
             },
             {
-              "n": "Storm Bolter & Power Weapon",
+              "n": "Chainfist",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Power Weapon",
-                "Storm Bolter"
-              ]
+              "w": []
             },
             {
-              "n": "Thunder Hammer & Storm Shield",
+              "n": "Power weapon",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Thunder Hammer"
-              ]
-            },
+              "w": []
+            }
+          ]
+        },
+        {
+          "n": "Melee",
+          "owner": null,
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
             {
-              "n": "Storm Bolter & Chainfist",
+              "n": "Power fist",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
-              "w": [
-                "Chainfist",
-                "Storm Bolter"
-              ]
+              "w": []
             },
             {
-              "n": "Twin lightning claws",
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            }
+          ]
+        },
+        {
+          "n": "Melee",
+          "owner": null,
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power fist",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Chainfist",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Power weapon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -618,32 +535,21 @@
       ],
       "weapons": [
         {
-          "n": "Power Fist",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-2",
-          "d": "2",
-          "kw": ""
-        },
-        {
-          "n": "Storm Bolter",
+          "n": "Storm bolter",
           "melee": false,
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         },
         {
-          "n": "Power Weapon",
+          "n": "Power weapon",
           "melee": true,
           "range": "Melee",
-          "a": "4",
+          "a": "5",
           "skill": "3+",
           "s": "5",
           "ap": "-2",
@@ -655,77 +561,33 @@
           "melee": true,
           "range": "Melee",
           "a": "3",
-          "skill": "4+",
+          "skill": "3+",
           "s": "8",
           "ap": "-2",
           "d": "2",
           "kw": "Devastating Wounds"
         },
         {
-          "n": "Chainfist",
+          "n": "➤ Chainfist - Standard",
+          "melee": true,
+          "range": "Melee",
+          "a": "2",
+          "skill": "4+",
+          "s": "8",
+          "ap": "-2",
+          "d": "2",
+          "kw": "\n"
+        },
+        {
+          "n": "➤ Chainfist - Hunter: Monster/Vehicle",
           "melee": true,
           "range": "Melee",
           "a": "3",
-          "skill": "4+",
-          "s": "8+",
+          "skill": "3+",
+          "s": "12",
           "ap": "-2",
-          "d": "2",
-          "kw": "Anti-Vehicle 3+"
-        },
-        {
-          "n": "Twin lightning claws",
-          "melee": true,
-          "range": "Melee",
-          "a": "5",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Twin-linked"
-        },
-        {
-          "n": "Assault Cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "6",
-          "skill": "3+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": "Devastating Wounds"
-        },
-        {
-          "n": "Heavy flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "➤ Plasma cannon - standard",
-          "melee": false,
-          "range": "36\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Plasma cannon - supercharge",
-          "melee": false,
-          "range": "36\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Blast, Hazardous"
+          "d": "3",
+          "kw": ""
         },
         {
           "n": "Power fist",
@@ -739,15 +601,70 @@
           "kw": ""
         },
         {
+          "n": "Twin lightning claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "6",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Twin-linked"
+        },
+        {
+          "n": "Assault Cannon",
+          "melee": false,
+          "range": "24\"",
+          "a": "6",
+          "skill": "3+",
+          "s": "6",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Sustained Hits 1"
+        },
+        {
+          "n": "Heavy Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast 2, Torrent"
+        },
+        {
+          "n": "➤ Plasma cannon - standard",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast 1"
+        },
+        {
+          "n": "➤ Plasma cannon - supercharge",
+          "melee": false,
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "kw": "Blast 1, Hazardous"
+        },
+        {
           "n": "➤ Cyclone missile launcher - frag",
           "melee": false,
           "range": "36\"",
-          "a": "2D6",
+          "a": "8",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 2"
         },
         {
           "n": "➤ Cyclone missile launcher - krak",
@@ -755,31 +672,9 @@
           "range": "36\"",
           "a": "2",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-2",
-          "d": "D6",
-          "kw": ""
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Power weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-2",
-          "d": "1",
+          "d": "D3+3",
           "kw": ""
         }
       ],
@@ -800,15 +695,11 @@
       "abilities": [
         {
           "n": "Terminatus Assault",
-          "d": "You can re-roll Charge rolls made for this unit. Each time this unit ends a Charge move, each enemy unit within Engagement Range of this unit must take a Battle-shock test. If that enemy unit does not have the IMPERIUM or CHAOS keywords, subtract 1 from that test."
+          "d": "- This unit can re-roll charge rolls. - After this unit ends a charge move, each enemy unit engaged with this unit makes a battle-shock roll, with -1 to that battle-shock roll if it's a non-Imperium/Chaos unit."
         },
         {
           "n": "Teleport Homer",
-          "d": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" of that token and not within 9\" of any enemy models. That token is then removed."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a TERMINATOR SQUAD, it can be attached to this unit instead."
+          "d": "At the start of the battle, you can set up one Teleport Homer token for this unit on the battlefield. If you do: - When you target this unit with the Rapid Ingress stratagem, you can use that Teleport Homer token. If you do, that use is -1 CP, but when resolving that stratagem, this unit must be set up within 3\" of that Teleport Homer token and not within 8\" of an enemy unit. That Teleport Homer token is then removed from the battlefield. - If an enemy unit ends a move within 1\" of that Teleport Homer token, that Teleport Homer token is removed from the battlefield."
         },
         {
           "n": "Storm Shield",
@@ -829,7 +720,7 @@
       },
       "profile": {
         "M": "5\"",
-        "T": "5",
+        "T": "6",
         "Sv": "2+",
         "W": "3",
         "LD": "6+",
@@ -846,15 +737,15 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 115,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 115
         },
         {
           "from": 6,
-          "pts": 190
+          "pts": 220
         }
       ],
       "cap": {
@@ -883,14 +774,14 @@
               ]
             },
             {
-              "n": "Veteran w/ Deathwatch thunder hammer",
+              "n": "Veteran w/ heavy thunder hammer",
               "min": 0,
               "max": 4,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Deathwatch thunder hammer"
+                "Heavy thunder hammer"
               ]
             },
             {
@@ -901,8 +792,8 @@
               "p": 0,
               "model": true,
               "w": [
-                "Frag cannon",
-                "Close combat weapon"
+                "Knives and Fists",
+                "Frag cannon"
               ]
             },
             {
@@ -913,11 +804,11 @@
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon"
+                "Knives and Fists"
               ]
             },
             {
-              "n": "Veteran w/ Astartes shield and boltgun",
+              "n": "Veteran w/ Storm shield and boltgun",
               "min": 0,
               "max": 4,
               "scale": null,
@@ -925,11 +816,11 @@
               "model": true,
               "w": [
                 "Boltgun",
-                "Close combat weapon"
+                "Knives and Fists"
               ]
             },
             {
-              "n": "Veteran w/ Astartes shield and power weapon",
+              "n": "Veteran w/ Storm shield and power weapon",
               "min": 0,
               "max": 4,
               "scale": null,
@@ -948,7 +839,7 @@
               "model": true,
               "w": [
                 "Stalker-pattern boltgun",
-                "Close combat weapon"
+                "Knives and Fists"
               ]
             },
             {
@@ -960,7 +851,7 @@
               "model": true,
               "w": [
                 "Deathwatch shotgun",
-                "Close combat weapon"
+                "Knives and Fists"
               ]
             },
             {
@@ -982,7 +873,7 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Sgt w/ Astartes shield and xenophase blade",
+              "n": "Sgt w/ Storm shield and xenophase blade",
               "min": 0,
               "max": 1,
               "scale": null,
@@ -1012,8 +903,7 @@
               "p": 0,
               "model": true,
               "w": [
-                "Power weapon",
-                "Combi-weapon"
+                "Power weapon"
               ]
             },
             {
@@ -1024,20 +914,17 @@
               "p": 0,
               "model": true,
               "w": [
-                "Xenophase blade",
-                "Combi-weapon"
+                "Xenophase blade"
               ]
             },
             {
-              "n": "Sgt w/ Astartes shield and combi-weapon",
+              "n": "Sgt w/ Storm shield and combi-weapon",
               "min": 0,
               "max": 1,
               "scale": null,
               "p": 0,
               "model": true,
-              "w": [
-                "Combi-weapon"
-              ]
+              "w": []
             }
           ]
         }
@@ -1049,8 +936,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": ""
         },
@@ -1066,7 +953,7 @@
           "kw": ""
         },
         {
-          "n": "Deathwatch thunder hammer",
+          "n": "Heavy thunder hammer",
           "melee": true,
           "range": "Melee",
           "a": "3",
@@ -1077,29 +964,29 @@
           "kw": "Devastating Wounds"
         },
         {
-          "n": "Frag cannon",
-          "melee": false,
-          "range": "18\"",
-          "a": "D3",
-          "skill": "4+",
-          "s": "7",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Blast, Heavy, Rapid Fire D3"
-        },
-        {
-          "n": "Close combat weapon",
+          "n": "Knives and Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy bolter",
+          "n": "Frag cannon",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast 1, Heavy, Lethal Hits, Rapid Fire 1"
+        },
+        {
+          "n": "➤ Infernus heavy bolter (Bolt)",
           "melee": false,
           "range": "36\"",
           "a": "3",
@@ -1107,18 +994,18 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Heavy, Sustained Hits 1"
+          "kw": "Heavy, Rapid Fire 2, Sustained Hits 1"
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy flamer",
+          "n": "➤ Infernus heavy bolter (Infernus)",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 1, Torrent"
         },
         {
           "n": "Stalker-pattern boltgun",
@@ -1126,7 +1013,7 @@
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "2",
           "kw": "Heavy, Precision"
@@ -1134,11 +1021,11 @@
         {
           "n": "Deathwatch shotgun",
           "melee": false,
-          "range": "24\"",
+          "range": "18\"",
           "a": "2",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "2",
           "kw": "Assault"
         },
@@ -1165,15 +1052,37 @@
           "kw": "Devastating Wounds"
         },
         {
-          "n": "Combi-weapon",
+          "n": "➤ Combi-weapon (Damnatus)",
           "melee": false,
-          "range": "24\"",
+          "range": "12\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "\n"
+        },
+        {
+          "n": "➤ Combi-weapon (Infernus)",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+          "kw": "Blast 1, Torrent"
+        },
+        {
+          "n": "➤ Combi-weapon (Purgatus)",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Melta 2"
         }
       ],
       "composition": [
@@ -1184,9 +1093,9 @@
           "w": [
             "Boltgun",
             "Power weapon",
-            "Deathwatch thunder hammer",
+            "Heavy thunder hammer",
+            "Knives and Fists",
             "Frag cannon",
-            "Close combat weapon",
             "Stalker-pattern boltgun",
             "Deathwatch shotgun"
           ]
@@ -1195,14 +1104,10 @@
       "abilities": [
         {
           "n": "Death to the Alien",
-          "d": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the IMPERIUM or CHAOS keywords, you can re-roll the Hit roll instead."
+          "d": "This unit's attacks can: - Re-roll hit rolls of 1. - Or: If the target of those attacks does not have IMPERIUM/CHAOS, re-roll hit rolls."
         },
         {
-          "n": "Attached Unit",
-          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to a STERNGUARD VETERAN SQUAD, it can be attached to this unit instead."
-        },
-        {
-          "n": "Astartes shield",
+          "n": "Storm shield",
           "d": "The bearer has a 4+ invulnerable save."
         }
       ],
@@ -1210,10 +1115,10 @@
       "keywords": [
         "Infantry",
         "Battleline",
-        "Grenades",
         "Imperium",
         "Kill Team",
-        "Deathwatch Veterans"
+        "Deathwatch Veterans",
+        "Explosives"
       ],
       "models": {
         "min": null,
@@ -1221,7 +1126,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -1238,11 +1143,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 100,
+      "points": 110,
       "ladder": [
         {
           "from": 1,
-          "pts": 100
+          "pts": 110
         }
       ],
       "cap": {
@@ -1369,15 +1274,6 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Frag cannon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Hellstorm bolt rifle and grenade launcher",
               "min": 0,
               "max": null,
@@ -1387,6 +1283,15 @@
               "w": [
                 "Hellstorm bolt rifle"
               ]
+            },
+            {
+              "n": "Frag cannon",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
             },
             {
               "n": "Infernus heavy bolter",
@@ -1402,18 +1307,7 @@
       ],
       "weapons": [
         {
-          "n": "➤ Plasma pistol - Standard",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - Supercharge",
+          "n": "➤ Plasma pistol - supercharge",
           "melee": false,
           "range": "12\"",
           "a": "1",
@@ -1421,7 +1315,18 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
+        },
+        {
+          "n": "➤ Plasma pistol - standard",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Close-quarters"
         },
         {
           "n": "Power weapon",
@@ -1479,12 +1384,12 @@
           "kw": "Pistol, Lethal Hits"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Knives and Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
@@ -1534,17 +1439,6 @@
           "kw": "Pistol, Precision, Lethal Hits"
         },
         {
-          "n": "Frag cannon",
-          "melee": false,
-          "range": "18\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Blast, Heavy, Lethal Hits, Rapid Fire D3"
-        },
-        {
           "n": "Hellstorm bolt rifle",
           "melee": false,
           "range": "30\"",
@@ -1556,48 +1450,59 @@
           "kw": "Assault, Heavy, Lethal Hits"
         },
         {
-          "n": "➤ Astartes grenade launcher - frag",
-          "melee": false,
-          "range": "24\"",
-          "a": "D3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Astartes grenade launcher - krak",
+          "n": "➤ Grenade Launcher - Krak",
           "melee": false,
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-2",
-          "d": "D3",
-          "kw": ""
+          "d": "3",
+          "kw": "Rapid Fire 1"
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy bolter",
+          "n": "➤ Grenade Launcher - Frag",
+          "melee": false,
+          "range": "24\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Blast 1"
+        },
+        {
+          "n": "Frag cannon",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Blast 1, Heavy, Lethal Hits, Rapid Fire 1"
+        },
+        {
+          "n": "➤ Infernus heavy bolter (Bolt)",
           "melee": false,
           "range": "36\"",
           "a": "3",
-          "skill": "3+",
+          "skill": "4+",
           "s": "5",
-          "ap": "-2",
-          "d": "3",
-          "kw": "Sustained Hits 1"
+          "ap": "-1",
+          "d": "2",
+          "kw": "Heavy, Rapid Fire 2, Sustained Hits 1"
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy flamer",
+          "n": "➤ Infernus heavy bolter (Infernus)",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent"
+          "kw": "Blast 1, Torrent"
         },
         {
           "n": "Xenophase blade",
@@ -1615,11 +1520,7 @@
       "abilities": [
         {
           "n": "Death to the Alien",
-          "d": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the Imperium or Chaos keywords, you can re-roll the Hit roll instead."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a Character unit from your army can be attached to a Fortis Kill Team unit, it can be attached to this unit instead."
+          "d": "This unit's attacks can: - Re-roll hit rolls of 1. - Or: If the target of those attacks does not have IMPERIUM/CHAOS, re-roll hit rolls."
         },
         {
           "n": "Astartes shield",
@@ -1630,11 +1531,11 @@
       "keywords": [
         "Infantry",
         "Battleline",
-        "Grenades",
         "Imperium",
         "Kill Team",
         "Tacticus",
-        "Decimus Kill Team"
+        "Decimus Kill Team",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -1642,7 +1543,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -1659,11 +1560,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 195,
+      "points": 210,
       "ladder": [
         {
           "from": 1,
-          "pts": 195
+          "pts": 210
         }
       ],
       "cap": {
@@ -1673,66 +1574,6 @@
       "leads": null,
       "options": [
         {
-          "n": "Squad Members",
-          "owner": null,
-          "min": 9,
-          "max": 9,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Kill Team Intercessor",
-              "min": 2,
-              "max": 9,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Bolt pistol",
-                "Close combat weapon",
-                "Deathwatch bolt rifle"
-              ]
-            },
-            {
-              "n": "Kill Team Intercessor w/ grenade launcher",
-              "min": 0,
-              "max": 2,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Bolt pistol",
-                "Close combat weapon",
-                "Deathwatch bolt rifle"
-              ]
-            },
-            {
-              "n": "Kill Team Intercessor w/ heavy bolt pistol",
-              "min": 0,
-              "max": 4,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Heavy bolt pistol",
-                "Astartes Chainsword"
-              ]
-            },
-            {
-              "n": "Kill Team Intercessor w/ pyreblaster",
-              "min": 0,
-              "max": 4,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Bolt pistol",
-                "Close combat weapon",
-                "Pyreblaster"
-              ]
-            }
-          ]
-        },
-        {
           "n": "Replace bolt rifle",
           "owner": "Kill Team Sergeant",
           "min": 1,
@@ -1740,7 +1581,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1787,14 +1628,14 @@
           ]
         },
         {
-          "n": "Replace CCW",
+          "n": "Replace knives and fists",
           "owner": "Kill Team Sergeant",
           "min": 1,
           "max": 1,
           "pick": "one",
           "opts": [
             {
-              "n": "Close combat weapon",
+              "n": "Knives and Fists",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1830,7 +1671,7 @@
               "w": []
             },
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -1843,8 +1684,8 @@
         {
           "n": "Kill Team Intercessor w/ plasma incinerator",
           "owner": null,
-          "min": 0,
-          "max": 4,
+          "min": 2,
+          "max": 2,
           "pick": "many",
           "opts": [
             {
@@ -1855,18 +1696,18 @@
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon"
+                "Knives and Fists"
               ]
             },
             {
               "n": "Kill Team Intercessor w/ bolt pistol and incinerator",
-              "min": 0,
-              "max": 4,
+              "min": 2,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon",
+                "Knives and Fists",
                 "Bolt pistol"
               ]
             }
@@ -1875,9 +1716,9 @@
         {
           "n": "Kill Team Intercessor w/ missile launcher",
           "owner": null,
-          "min": 0,
-          "max": 2,
-          "pick": "many",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
           "opts": [
             {
               "n": "Kill Team Intercessor w/ vengor launcher",
@@ -1887,7 +1728,7 @@
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon",
+                "Knives and Fists",
                 "Bolt pistol",
                 "Castellan Launcher",
                 "Vengor launcher"
@@ -1902,7 +1743,7 @@
               "model": true,
               "w": [
                 "Superfrag missile launcher",
-                "Close combat weapon",
+                "Knives and Fists",
                 "Bolt pistol",
                 "Castellan Launcher"
               ]
@@ -1916,9 +1757,44 @@
               "model": true,
               "w": [
                 "Superkrak missile launcher",
-                "Close combat weapon",
+                "Knives and Fists",
                 "Bolt pistol",
                 "Castellan Launcher"
+              ]
+            }
+          ]
+        },
+        {
+          "n": "Kill Team Intercessors with bolt rifles",
+          "owner": null,
+          "min": 2,
+          "max": 2,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Kill Team Intercessor with bolt rifle",
+              "min": 2,
+              "max": 2,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Bolt pistol",
+                "Deathwatch bolt rifle",
+                "Knives and Fists"
+              ]
+            },
+            {
+              "n": "Kill Team Intercessor with bolt rifle and grenade launcher",
+              "min": 0,
+              "max": 2,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Bolt pistol",
+                "Deathwatch bolt rifle",
+                "Knives and Fists"
               ]
             }
           ]
@@ -1926,12 +1802,12 @@
       ],
       "weapons": [
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -1961,13 +1837,13 @@
         {
           "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
           "n": "➤ Plasma pistol - supercharge",
@@ -1978,7 +1854,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -1989,15 +1865,15 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Knives and Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
@@ -2021,30 +1897,30 @@
           "skill": "4+",
           "s": "8",
           "ap": "-2",
-          "d": "2",
+          "d": "3",
           "kw": "Devastating Wounds"
         },
         {
-          "n": "➤ Astartes grenade launcher - krak",
+          "n": "➤ Grenade Launcher - Krak",
           "melee": false,
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-2",
-          "d": "D3",
-          "kw": ""
+          "d": "3",
+          "kw": "Rapid Fire 1"
         },
         {
-          "n": "➤ Astartes grenade launcher - frag",
+          "n": "➤ Grenade Launcher - Frag",
           "melee": false,
           "range": "24\"",
-          "a": "D3",
+          "a": "4",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "Bolt pistol",
@@ -2052,21 +1928,21 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Close-Quarters"
-        },
-        {
-          "n": "Heavy bolt pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
+        },
+        {
+          "n": "Heavy Bolt Pistol",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Close-quarters"
         },
         {
           "n": "Pyreblaster",
@@ -2078,28 +1954,6 @@
           "ap": "0",
           "d": "1",
           "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "➤ Plasma pistol - Standard",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - Supercharge",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Hazardous, Pistol"
         },
         {
           "n": "➤ Plasma incinerator - Standard",
@@ -2126,45 +1980,45 @@
         {
           "n": "Castellan Launcher",
           "melee": false,
-          "range": "36\"",
-          "a": "D3",
+          "range": "24\"",
+          "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast, Indirect Fire"
+          "kw": "Heavy"
         },
         {
           "n": "Vengor launcher",
           "melee": false,
           "range": "48\"",
-          "a": "D6",
-          "skill": "2+",
+          "a": "4",
+          "skill": "3+",
           "s": "7",
           "ap": "-1",
           "d": "2",
-          "kw": "Blast, Indirect Fire"
+          "kw": "Blast 1, Heavy, Indirect Fire"
         },
         {
           "n": "Superfrag missile launcher",
           "melee": false,
           "range": "48\"",
-          "a": "D6+1",
-          "skill": "4+",
+          "a": "4",
+          "skill": "3+",
           "s": "5",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast, Heavy"
+          "kw": "Blast 1, Heavy"
         },
         {
           "n": "Superkrak missile launcher",
           "melee": false,
           "range": "48\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
           "s": "10",
           "ap": "-2",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": "Heavy"
         }
       ],
@@ -2176,44 +2030,30 @@
           "w": [
             "Bolt pistol"
           ]
-        },
-        {
-          "n": "Kill Team Intercessor",
-          "min": 2,
-          "max": 9,
-          "w": [
-            "Bolt pistol",
-            "Close combat weapon",
-            "Deathwatch bolt rifle"
-          ]
         }
       ],
       "abilities": [
         {
           "n": "Fortis Doctrines",
-          "d": "Each time a model in this unit makes an attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll instead."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a CHARACTER from your army with the Leader ability can be attached to an INTERCESSOR SQUAD, it can be attached to this unit instead."
+          "d": "This unit's attacks that target a unit - Below starting strength, have +1 to hit rolls. - Or: at or below half-strength have +1 to hit rolls and wound rolls."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
-        "Grenades",
         "Imperium",
         "Fortis Kill Team",
         "Tacticus",
-        "Kill Team"
+        "Kill Team",
+        "Explosives"
       ],
       "models": {
-        "min": 3,
-        "max": 30
+        "min": 9,
+        "max": 17
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -2230,11 +2070,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 275,
+      "points": 280,
       "ladder": [
         {
           "from": 1,
-          "pts": 275
+          "pts": 280
         }
       ],
       "cap": {
@@ -2259,8 +2099,7 @@
               "model": true,
               "w": [
                 "Bolt pistol",
-                "Close combat weapon",
-                "Melta rifle"
+                "Ceramite Fists"
               ]
             },
             {
@@ -2272,8 +2111,7 @@
               "model": true,
               "w": [
                 "Bolt pistol",
-                "Close combat weapon",
-                "Multi-melta"
+                "Ceramite Fists"
               ]
             }
           ]
@@ -2329,7 +2167,7 @@
               "w": [
                 "Deathwatch heavy bolt rifle",
                 "Bolt pistol",
-                "Close combat weapon"
+                "Ceramite Fists"
               ]
             },
             {
@@ -2347,7 +2185,7 @@
               "w": [
                 "Deathwatch heavy bolter",
                 "Bolt pistol",
-                "Close combat weapon"
+                "Ceramite Fists"
               ]
             }
           ]
@@ -2360,35 +2198,46 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Ceramite Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
         },
         {
-          "n": "Melta rifle",
+          "n": "➤ Melta Rifle HUNTER:Monster/Vehicle",
+          "melee": false,
+          "range": "18\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "➤ Melta Rifle",
           "melee": false,
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Heavy, Melta 2"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 2"
         },
         {
-          "n": "Multi-melta",
+          "n": "➤ Multi-melta",
           "melee": false,
           "range": "18\"",
           "a": "2",
@@ -2396,7 +2245,7 @@
           "s": "9",
           "ap": "-4",
           "d": "D6",
-          "kw": "Heavy, Melta 2"
+          "kw": "Heavy, Melta 3"
         },
         {
           "n": "Auto boltstorm gauntlets",
@@ -2424,12 +2273,12 @@
           "n": "Fragstorm grenade launcher",
           "melee": false,
           "range": "18\"",
-          "a": "D6",
+          "a": "3",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "Flamestorm gauntlets",
@@ -2469,11 +2318,7 @@
       "abilities": [
         {
           "n": "Indomitor Doctrines",
-          "d": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, or makes a melee attack in a turn in which it made a Charge move, improve the Strength characteristic of that attack by 2."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a CHARACTER unit from your army can be attached to a HEAVY INTERCESSOR SQUAD, it can be attached to this unit instead."
+          "d": "- This unit's ranged attacks that target the closest eligible enemy unit, have +1 S. - If this unit made a charge move this turn, this unit's melee attacks have +1 S."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -2508,11 +2353,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 170,
+      "points": 185,
       "ladder": [
         {
           "from": 1,
-          "pts": 170
+          "pts": 185
         }
       ],
       "cap": {
@@ -2524,27 +2369,27 @@
         {
           "n": "Squad Members",
           "owner": null,
-          "min": 5,
-          "max": 10,
+          "min": 0,
+          "max": null,
           "pick": "many",
           "opts": [
             {
-              "n": "Kill Team Infiltrator",
-              "min": 3,
-              "max": 10,
+              "n": "Kill Team Infiltrator w/ Marksman Bolt Carbine",
+              "min": 4,
+              "max": 4,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Deathwatch marksman bolt carbine",
                 "Bolt pistol",
-                "Close combat weapon"
+                "Ceramite Fists"
               ]
             },
             {
               "n": "Kill Team Infiltrator w/ occulus bolt carbine",
-              "min": 0,
-              "max": 4,
+              "min": 2,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
@@ -2555,7 +2400,7 @@
               ]
             },
             {
-              "n": "Kill Team Infiltrator w/ wargear",
+              "n": "Kill Team Infiltrator w/ helix gauntlet",
               "min": 0,
               "max": 1,
               "scale": null,
@@ -2564,7 +2409,7 @@
               "w": [
                 "Deathwatch marksman bolt carbine",
                 "Bolt pistol",
-                "Close combat weapon"
+                "Ceramite Fists"
               ]
             }
           ]
@@ -2572,32 +2417,32 @@
         {
           "n": "Kill Team Infiltrators w/ combat knives",
           "owner": null,
-          "min": 0,
-          "max": 4,
+          "min": 2,
+          "max": 2,
           "pick": "many",
           "opts": [
             {
               "n": "Kill Team Infiltrator w/ combat knife",
-              "min": 0,
-              "max": 4,
+              "min": 2,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Special-issue bolt pistol",
-                "Combat knife"
+                "Combat knife",
+                "Special-issue bolt pistol"
               ]
             },
             {
               "n": "Kill Team Infiltrator w/ bolt carbine",
               "min": 0,
-              "max": 4,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Special-issue bolt pistol",
-                "Close combat weapon"
+                "Ceramite Fists"
               ]
             }
           ]
@@ -2605,75 +2450,48 @@
         {
           "n": "Kill Team Infiltrators w/ bolt sniper rifles",
           "owner": null,
-          "min": 0,
-          "max": 3,
+          "min": 2,
+          "max": 2,
           "pick": "many",
           "opts": [
             {
               "n": "Kill Team Infiltrator w/ instigator bolt carbine",
               "min": 0,
-              "max": 1,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Instigator bolt carbine",
                 "Bolt pistol",
-                "Close combat weapon"
+                "Ceramite Fists"
               ]
             },
             {
               "n": "Kill Team Infiltrator w/ las fusil",
               "min": 0,
-              "max": 3,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Bolt pistol",
-                "Close combat weapon",
+                "Ceramite Fists",
                 "Las fusil"
               ]
             },
             {
               "n": "Kill Team Infiltrator w/ bolt sniper rifle",
-              "min": 0,
-              "max": 3,
+              "min": 2,
+              "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
                 "Bolt sniper rifle",
                 "Bolt pistol",
-                "Close combat weapon"
+                "Ceramite Fists"
               ]
-            }
-          ]
-        },
-        {
-          "n": "Equipment",
-          "owner": "Kill Team Infiltrator w/ wargear",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Helix Gauntlet",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Infiltrator Comms Array",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
             }
           ]
         }
@@ -2696,18 +2514,18 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Close-Quarters"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Ceramite Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
@@ -2729,21 +2547,10 @@
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": "Sustained Hits 1"
-        },
-        {
-          "n": "Special-issue bolt pistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Pistol, Precision"
         },
         {
           "n": "Combat knife",
@@ -2751,10 +2558,21 @@
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": "Precision"
+        },
+        {
+          "n": "Special-issue bolt pistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Close-quarters, Precision"
         },
         {
           "n": "Deathwatch Bolt carbine",
@@ -2773,10 +2591,10 @@
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-2",
           "d": "2",
-          "kw": "Heavy"
+          "kw": "Lethal Hits: Non-Monster/Vehicle, Precision, Rapid Fire 2"
         },
         {
           "n": "Las fusil",
@@ -2784,9 +2602,9 @@
           "range": "36\"",
           "a": "1",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-3",
-          "d": "D6",
+          "d": "D3+3",
           "kw": "Heavy"
         },
         {
@@ -2795,7 +2613,7 @@
           "range": "36\"",
           "a": "1",
           "skill": "3+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "3",
           "kw": "Heavy, Precision"
@@ -2803,54 +2621,44 @@
       ],
       "composition": [
         {
-          "n": "Kill Team Infiltrator",
-          "min": 3,
-          "max": 10,
+          "n": "Spectrus Kill Team",
+          "min": 2,
+          "max": 4,
           "w": [
             "Deathwatch marksman bolt carbine",
             "Bolt pistol",
-            "Close combat weapon"
+            "Ceramite Fists",
+            "Deathwatch occulus bolt carbine",
+            "Paired combat blades"
           ]
         }
       ],
       "abilities": [
         {
-          "n": "Attached Unit",
-          "d": "If a CHARACTER from your army with the Leader ability can be attached to an INFILTRATOR SQUAD, it can be attached to this unit instead. If this unit has a Leader unit attached to it during the Declare Battle Formations step, that Leader unit gains the Infiltrators and Scouts 6\" abilities."
-        },
-        {
           "n": "Spectrus Doctrines",
-          "d": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves."
+          "d": "At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit in strategic reserves."
         },
         {
           "n": "Helix Gauntlet",
-          "d": "Models in the bearer’s unit have the Feel No Pain 6+ ability."
-        },
-        {
-          "n": "Infiltrator Comms Array",
-          "d": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
-          "n": "Instigator Bolt Carbine",
-          "d": "In your Shooting phase, after the bearer’s unit has shot, the bearer’s unit can make a Normal move. If it does, until the end of the turn, the bearer’s unit is not eligible to declare a charge."
+          "d": "In your Command phase, this unit heals D3 wounds."
         }
       ],
       "faction": "Adeptus Astartes",
       "keywords": [
         "Infantry",
-        "Grenades",
         "Imperium",
         "Smoke",
         "Spectrus Kill Team",
         "Kill Team",
-        "Phobos"
+        "Phobos",
+        "Explosives"
       ],
       "models": {
-        "min": 3,
-        "max": 30
+        "min": 10,
+        "max": 17
       },
       "profile": {
-        "M": "6\"",
+        "M": "8\"",
         "T": "4",
         "Sv": "3+",
         "W": "2",
@@ -2868,11 +2676,11 @@
       "type": "unit",
       "mode": "standard",
       "legends": false,
-      "points": 265,
+      "points": 280,
       "ladder": [
         {
           "from": 1,
-          "pts": 265
+          "pts": 280
         }
       ],
       "cap": {
@@ -2882,21 +2690,53 @@
       "leads": null,
       "options": [
         {
-          "n": "Unit Composition",
+          "n": "4 Heavy Intercessors w/ Jump Pack",
           "owner": null,
-          "min": 9,
-          "max": 9,
+          "min": 4,
+          "max": 4,
           "pick": "many",
           "opts": [
             {
-              "n": "Intercessor w/ heavy bolt pistol and Jump Pack",
-              "min": 2,
-              "max": 9,
+              "n": "Heavy Intercessor w/ assault bolter",
+              "min": 4,
+              "max": 4,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Astartes Chainsword",
+                "Assault bolters",
+                "Ceramite Fists"
+              ]
+            },
+            {
+              "n": "Heavy Intercessor w/ plasma exterminators",
+              "min": 0,
+              "max": 4,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Ceramite Fists"
+              ]
+            }
+          ]
+        },
+        {
+          "n": "5 Intercessors with Jump Packs",
+          "owner": null,
+          "min": 5,
+          "max": 5,
+          "pick": "many",
+          "opts": [
+            {
+              "n": "Intercessor w/ heavy bolt pistol and Jump Pack",
+              "min": 5,
+              "max": 5,
+              "scale": null,
+              "p": 0,
+              "model": true,
+              "w": [
+                "Chainsword",
                 "Heavy Bolt Pistol"
               ]
             },
@@ -2908,7 +2748,7 @@
               "p": 0,
               "model": true,
               "w": [
-                "Astartes Chainsword"
+                "Chainsword"
               ]
             }
           ]
@@ -2957,7 +2797,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -2984,38 +2824,6 @@
               "w": []
             }
           ]
-        },
-        {
-          "n": "0-5 Heavy Intercessors w/ Jump Pack",
-          "owner": null,
-          "min": 0,
-          "max": 5,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Heavy Intercessor w/ assault bolter",
-              "min": 0,
-              "max": 5,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Assault bolters",
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Heavy Intercessor w/ plasma exterminators",
-              "min": 0,
-              "max": 5,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Close combat weapon"
-              ]
-            }
-          ]
         }
       ],
       "weapons": [
@@ -3025,35 +2833,24 @@
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "Hand flamer",
           "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "3",
+          "range": "9\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Ignores Cover, Pistol, Torrent"
+          "kw": "Close-quarters, Torrent"
         },
         {
-          "n": "➤ Plasma pistol - Standard",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Pistol"
-        },
-        {
-          "n": "➤ Plasma pistol - Supercharge",
+          "n": "➤ Plasma pistol - supercharge",
           "melee": false,
           "range": "12\"",
           "a": "1",
@@ -3061,15 +2858,26 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Hazardous, Close-quarters"
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "➤ Plasma pistol - standard",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Close-quarters"
+        },
+        {
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
           "a": "4",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""
@@ -3105,15 +2913,15 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Assault, Pistol, Sustained Hits 2, Twin-linked"
+          "kw": "Assault, Close-quarters, Sustained Hits 2, Twin-linked"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Ceramite Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
@@ -3127,7 +2935,7 @@
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "kw": "Assault, Pistol, Twin-linked"
+          "kw": "Assault, Close-quarters, Twin-linked"
         },
         {
           "n": "➤ Plasma exterminators - supercharge",
@@ -3138,28 +2946,21 @@
           "s": "8",
           "ap": "-3",
           "d": "3",
-          "kw": "Assault, Hazardous, Pistol, Twin-linked"
+          "kw": "Assault, Close-quarters, Hazardous, Twin-linked"
         }
       ],
       "composition": [
         {
           "n": "Talonstrike Kill Team",
           "min": 1,
-          "max": 9,
-          "w": [
-            "Astartes Chainsword",
-            "Heavy Bolt Pistol"
-          ]
+          "max": 1,
+          "w": []
         }
       ],
       "abilities": [
         {
           "n": "Talonstrike Doctrines",
-          "d": "Each time this unit is set up on the battlefield, until the end of the turn: - Improve the Armour Penetration characteristic of weapons equipped by models in this unit by 1. - Melee weapons equipped by models in this unit have the [LANCE] ability."
-        },
-        {
-          "n": "Attached Unit",
-          "d": "If a CHARACTER unit from your army with the Leader ability can be attached to an ASSAULT INTERCESSORS WITH JUMP PACKS unit, it can be attached to this unit instead."
+          "d": "In a turn this unit was set up on the battlefield: - This unit's attacks have +1 AP. - This unit's melee attacks have [LANCE]."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3173,12 +2974,12 @@
         "Talonstrike Kill Team"
       ],
       "models": {
-        "min": 3,
-        "max": 22
+        "min": 10,
+        "max": 16
       },
       "profile": {
         "M": "12\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
@@ -3195,16 +2996,17 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 65,
+      "points": 75,
       "ladder": [
         {
           "from": 1,
-          "pts": 65
+          "pts": 75
         }
       ],
       "cap": null,
       "leads": [
         "DEATHWATCH VETERANS",
+        "DECIMUS KILL TEAM",
         "FORTIS KILL TEAM"
       ],
       "options": null,
@@ -3213,8 +3015,8 @@
           "n": "Hellfire Extremis",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "-1",
           "d": "1",
@@ -3226,7 +3028,7 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": ""
@@ -3245,16 +3047,12 @@
       ],
       "abilities": [
         {
-          "n": "Invulnerable Save",
-          "d": "This model has a 4+ invulnerable save."
-        },
-        {
           "n": "Tactical Instinct",
-          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          "d": "This unit's attacks have [Sustained Hits 1]."
         },
         {
           "n": "Unstoppable Champion",
-          "d": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 1 wound remaining."
+          "d": "(Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6: - On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged with 3 wounds remaining."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3262,10 +3060,10 @@
         "Epic Hero",
         "Character",
         "Infantry",
-        "Grenades",
         "Imperium",
         "Watch Captain Artemis",
-        "Captain"
+        "Captain",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -3273,12 +3071,12 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     },
@@ -3290,11 +3088,11 @@
       "type": "model",
       "mode": "standard",
       "legends": false,
-      "points": 95,
+      "points": 105,
       "ladder": [
         {
           "from": 1,
-          "pts": 95
+          "pts": 105
         }
       ],
       "cap": {
@@ -3303,6 +3101,7 @@
       },
       "leads": [
         "DEATHWATCH VETERANS",
+        "DECIMUS KILL TEAM",
         "FORTIS KILL TEAM"
       ],
       "options": null,
@@ -3313,7 +3112,7 @@
           "range": "24\"",
           "a": "2",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "2",
           "kw": ""
@@ -3329,16 +3128,16 @@
       ],
       "abilities": [
         {
-          "n": "Invulnerable Save",
-          "d": "This model has a 4+ invulnerable save."
-        },
-        {
           "n": "Strategic Knowledge",
-          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+          "d": "- This unit’s ranged attacks have [ASSAULT]. - When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. - When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge."
         },
         {
           "n": "Watch Master",
-          "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+          "d": "This model’s attacks that target a Character unit can: - Re-roll hit rolls of 1. - Re-roll wound rolls of 1."
+        },
+        {
+          "n": "Purgatus Quarry",
+          "d": "At the start of the first battle round, select up to one enemy unit to be this unit’s hunted: - This unit’s attacks that target this unit’s hunted unit can re-roll wound rolls of 1. - Each time this unit’s hunted is destroyed, select up to one enemy unit to be this unit’s hunted."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3346,9 +3145,9 @@
         "Character",
         "Infantry",
         "Captain",
-        "Grenades",
         "Imperium",
-        "Watch Master"
+        "Watch Master",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -3356,12 +3155,12 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "4+"
       },
       "native": true
     }
