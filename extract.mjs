@@ -176,6 +176,49 @@ function buildProfileIndex(catalogues) {
   return idx;
 }
 
+/* REGLAS COMPARTIDAS.
+ *
+ * Las habilidades núcleo —Feel No Pain, Infiltrators, Deep Strike, Leader— y
+ * las de facción —Oath of Moment, Dark Pacts, Blessings of Khorne— NO son
+ * perfiles de la ficha: son `infoLinks` de tipo `rule` que apuntan a una
+ * regla compartida. Como abilitiesOf sólo leía perfiles, se perdían todas.
+ *
+ * Las del archivo raíz (gameSystem) son núcleo; las de un catálogo de
+ * facción son de facción. Esa es la misma separación que hace la ficha
+ * oficial, y es la que permite imprimirlas distinto. */
+/* Saca de la lista de reglas núcleo las que son palabras clave de un arma de
+ * esta unidad. El cotejo es por prefijo porque en el arma vienen con su
+ * parámetro: "Anti-MONSTER 3+", "Melta 2", "Rapid Fire 3". */
+function sinKeywordsDeArma(core, weapons) {
+  if (!core || !core.length) return null;
+  const deArma = new Set();
+  for (const w of asArray(weapons)) {
+    for (const k of String(w.kw ?? '').split(',')) {
+      const base = k.trim().replace(/[\s-]*(\d+\+?|[A-Z]{2,}.*)$/, '').trim();
+      if (base) deArma.add(base.toLowerCase());
+    }
+  }
+  const out = core.filter((a) => !deArma.has(String(a.n).toLowerCase()));
+  return out.length ? out : null;
+}
+
+function buildRuleIndex(loaded) {
+  const idx = new Map();
+  for (const { raw, cat } of loaded) {
+    const core = !!raw.gameSystem;
+    for (const r of asArray(cat.sharedRules)) {
+      if (idx.has(r.id) && !core) continue;   // el sistema manda sobre la facción
+      idx.set(r.id, {
+        n: r.name,
+        d: String(r.description ?? '').replace(/\^\^/g, '').replace(/\*\*/g, '')
+             .replace(/\s+/g, ' ').trim(),
+        core,
+      });
+    }
+  }
+  return idx;
+}
+
 /** Igual que el anterior pero para GRUPOS compartidos: ahí viven las mejoras. */
 function buildGroupIndex(catalogues) {
   const idx = new Map();
@@ -298,6 +341,46 @@ function forceCapOf(entry) {
  * Es lectura de prosa, no dato estructurado: si los mantenedores cambian la
  * redacción, esto se degrada. Por eso la app lo trata como aviso, no como ley.
  */
+/* A qué unidades se puede unir una unidad SUPPORT.
+ *
+ * En 11e no sólo los líderes se adjuntan: las unidades con la palabra clave
+ * SUPPORT —Apothecary, Ancient, Lieutenant, Dialogus, Wolf Guard Pack
+ * Leader— se unen a una unidad ADEMÁS del líder. La regla no vive en un
+ * perfil "Leader" sino en una habilidad llamada "Support", cuyo texto trae
+ * la lista: "This model can be attached to the following units: ...".
+ *
+ * Son 45 unidades en el catálogo y la app no las dejaba adjuntar a ninguna. */
+function supportTargetsOf(abilities) {
+  const ab = asArray(abilities).find((a) => /^support$/i.test(String(a?.n || '').trim()));
+  if (!ab) return null;
+  return splitUnitList(ab.d || '');
+}
+
+/* El troceo del listado de unidades es igual para Leader y para Support:
+ * una sola función para que las dos lean la misma puntuación rara de BSData. */
+function splitUnitList(desc) {
+  let cut = String(desc).replace(/\*\*/g, '').replace(/\^\^/g, '')
+                .split(/attached to the following units?:/i)[1];
+  if (!cut) return [];
+
+  // El listado NO siempre termina en punto. En Crusade Ancient sigue derecho:
+  // "■ Sword Brethren Squad You can attach this model to one of the above
+  // units even if one Captain..." — sin corte, la prosa entraba como si
+  // fueran nombres de unidad. Se corta en el arranque de la regla.
+  const prosa = cut.search(/\b(You can attach|If you do|While this|Each time|In addition|Note that|Designer)\b/);
+  if (prosa > 0) cut = cut.slice(0, prosa);
+
+  return cut
+    .replace(/\r/g, '')
+    // " - " en medio de la línea también separa: "- BOYZ - NOBZ" es una lista
+    // de dos, no una unidad llamada "BOYZ - NOBZ".
+    .split(/\s*[■•]\s*|\n\s*[-–]\s*|\s+[-–]\s+|,|\n/)
+    .map((x) => x.trim().replace(/^[-–•■]\s*/, '').replace(/[.;]$/, ''))
+    .filter((x) => x && x.length < 60 && !/^or$/i.test(x) &&
+                   x.split(/\s+/).length <= 6 &&
+                   !/excluding|keyword|following|destroyed|become|original/i.test(x));
+}
+
 function leaderTargetsOf(entry) {
   let desc = null;
   const stack = [entry];
@@ -312,17 +395,7 @@ function leaderTargetsOf(entry) {
     for (const g of asArray(n.selectionEntryGroups)) stack.push(g);
   }
   if (desc == null) return null;
-
-  const cut = desc.replace(/\*\*/g, '').replace(/\^\^/g, '')
-                  .split(/attached to the following units?:/i)[1];
-  if (!cut) return [];
-
-  return cut
-    .replace(/\r/g, '')
-    .split(/\n\s*[-•■]\s*|\s*■\s*|\n\s*-\s*|,|\n/)
-    .map((x) => x.trim().replace(/^[-•■]\s*/, '').replace(/[.;]$/, ''))
-    .filter((x) => x && x.length < 60 && !/^or$/i.test(x) &&
-                   !/excluding|keyword|following/i.test(x));
+  return splitUnitList(desc);
 }
 
 /**
@@ -702,6 +775,8 @@ function modelCountOf(entry, shared) {
  */
 function abilitiesOf(entry, ctx) {
   const acc = [];
+  const core = [];
+  const fac = [];
   const seen = new Set();
 
   const clean = (t) => String(t ?? '')
@@ -711,15 +786,28 @@ function abilitiesOf(entry, ctx) {
   walkAll(entry, ctx, (n) => {
     for (const p of asArray(n.profiles)) {
       if (p.typeName !== 'Abilities') continue;
-      if (p.name === 'Leader' || seen.has(p.name)) continue;
+      // 'Leader' ya no se salta: en la ficha oficial figura, y sin ella la
+      // hoja impresa no decía que el personaje puede engancharse.
+      if (seen.has(p.name)) continue;
       seen.add(p.name);
       const desc = asArray(p.characteristics)
         .map((c) => clean(c.$text ?? c['#text'])).filter(Boolean).join(' ');
       if (desc) acc.push({ n: p.name, d: desc });
     }
+    // Reglas enlazadas: núcleo y de facción.
+    for (const il of asArray(n.infoLinks)) {
+      if (il.type !== 'rule') continue;
+      const r = ctx.rules && ctx.rules.get(il.targetId);
+      const nombre = (r && r.n) || il.name;
+      if (!nombre || seen.has(nombre)) continue;
+      seen.add(nombre);
+      (r && r.core ? core : fac).push({ n: nombre, d: (r && r.d) || '' });
+    }
   });
 
-  return acc.length ? acc : null;
+  return { own: acc.length ? acc : null,
+           core: core.length ? core : null,
+           fac: fac.length ? fac : null };
 }
 
 /**
@@ -775,8 +863,8 @@ function unitProfileOf(entry, ctx) {
 
 // ---------------------------------------------------------------- extracción
 
-function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, profileIndex) {
-  const ctx = { shared, groups: groupIndex, profiles: profileIndex };
+function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, profileIndex, ruleIndex) {
+  const ctx = { shared, groups: groupIndex, profiles: profileIndex, rules: ruleIndex };
   if (catalogue.library === true) return null; // las Library no son facciones jugables
 
   const datasheets = [];
@@ -808,15 +896,26 @@ function extractCatalogue(catalogue, fileName, shared, groupIndex, libIndex, pro
       ladder: priceLadder(target),
       cap: forceCapOf(target),
       leads: leaderTargetsOf(target),
+      supports: null,   // se completa abajo: necesita las habilidades ya leídas
       options: null,   // se completa abajo: necesita los nombres de armas
       weapons: weaponsOf(target, ctx),
       composition: null,   // se completa abajo, necesita los nombres de armas
-      abilities: abilitiesOf(target, ctx),
+      abilities: null,   // se completa abajo junto con core y faction
       faction: factionOf(target),
       keywords: keywordsOf(target),
       models: modelCountOf(target, shared),
       profile: unitProfileOf(target, ctx),
     });
+    const recien = datasheets[datasheets.length - 1];
+    const ab = abilitiesOf(target, ctx);
+    recien.abilities = ab.own;
+    // Las reglas núcleo que son de ARMA —Pistol, Blast, Melta, Lethal Hits—
+    // ya salen impresas debajo de cada arma. Repetirlas como habilidades de
+    // la unidad llenaba la ficha de ruido: los Plague Marines mostraban
+    // nueve "habilidades núcleo" y las nueve eran palabras clave de armas.
+    recien.coreAb = sinKeywordsDeArma(ab.core, recien.weapons);
+    recien.facAb = ab.fac;
+    recien.supports = supportTargetsOf(recien.abilities);
   }
 
   // Destacamentos con su coste en PUNTOS DE DESTACAMENTO.
@@ -985,7 +1084,7 @@ async function main() {
   for (const file of files) {
     const raw = JSON.parse(await fs.readFile(path.join(SRC_DIR, file), 'utf8'));
     const cat = raw.catalogue ?? raw.gameSystem;
-    if (cat) loaded.push({ file, cat });
+    if (cat) loaded.push({ file, cat, raw });
   }
 
   // PASO 2: índice global para resolver entryLinks entre catálogos
@@ -993,6 +1092,9 @@ async function main() {
   const groupIndex = buildGroupIndex(loaded.map((l) => l.cat));
   const libIndex = new Map(loaded.map(({ cat }) => [cat.id, cat]));
   const profileIndex = buildProfileIndex(loaded.map((l) => l.cat));
+  const ruleIndex = buildRuleIndex(loaded);
+  console.log(`  Reglas compartidas: ${ruleIndex.size} ` +
+              `(${[...ruleIndex.values()].filter((r) => r.core).length} de núcleo)`);
   console.log(`  Índice global: ${shared.size} entradas compartidas de ${loaded.length} archivos`);
 
   const index = [];
@@ -1002,7 +1104,7 @@ async function main() {
   for (const { file, cat } of loaded) {
     if (factionArg && !file.toLowerCase().includes(factionArg.toLowerCase())) continue;
 
-    const result = extractCatalogue(cat, file, shared, groupIndex, libIndex, profileIndex);
+    const result = extractCatalogue(cat, file, shared, groupIndex, libIndex, profileIndex, ruleIndex);
     if (!result) continue;
     if (result.datasheets.length === 0) continue;
 
