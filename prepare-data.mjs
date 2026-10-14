@@ -82,6 +82,23 @@ const normF = (x) => x.toLowerCase()
   .replace(/[^a-z0-9]/g, '');
 const normU = (x) => x.toLowerCase().replace(/[^a-z0-9]/g, '');
 
+/* Segundo intento: singulariza cada palabra. BSData escribe "Invader ATV" y
+ * el MFM "Invader Atvs"; sin esto la unidad se quedaba con el precio
+ * aproximado de BSData (60) en vez del oficial (65). */
+const normU2 = (x) => x.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ')
+  .split(/\s+/).filter(Boolean)
+  .map((w) => w.replace(/ies$/, 'y').replace(/s$/, '')).join('');
+
+/* Tercer intento: además saca el paréntesis. "Chaos Spawn (Flesh Change)" es
+ * el mismo Chaos Spawn del MFM.
+ *
+ * PELIGROSO y por eso restringido: "Ripper Swarms (Parasite of Mortrex)" son
+ * los bichos GRATIS que genera el Parásito, y sin restricción se llevaban los
+ * 30 puntos de los Ripper Swarms normales. El discriminador es que las
+ * gratuitas no tienen precio en BSData: este intento sólo corre cuando la
+ * unidad YA tiene uno. */
+const normU3 = (x) => normU2(String(x).replace(/\([^)]*\)/g, ' '));
+
 const mfmByFaction = new Map((MFM?.factions ?? []).map((f) => [normF(f.name), f]));
 
 /* Índice global de armamento con coste, por nombre de unidad.
@@ -105,10 +122,27 @@ for (const f of (MFM?.factions ?? []))
  * de la facción, esas 124 quedaban sin precio oficial. Una unidad vale lo
  * mismo la lleve quien la lleve, así que el nombre alcanza como respaldo. */
 const mfmUnits = new Map();
+const mfmUnits2 = new Map();   // por nombre singularizado
+const mfmUnits3 = new Map();   // sin paréntesis — uso restringido, ver normU3
+/* Cuarto caso: el MFM parte una unidad en variantes de arma que BSData tiene
+ * como una sola entrada. Hoy sólo pasa con el Eradicator Squad, que el MFM
+ * lista como "… With Heavy Bolters" (95) y "… With Melta Rifles" (90). Sin
+ * esto la unidad quedaba marcada como fuera del MFM, y no lo está.
+ * La regla exige el " with " de por medio: no empareja por prefijo suelto. */
+const mfmVariants = new Map();   // nombre base → [entradas del MFM]
 for (const f of (MFM?.factions ?? []))
   for (const u of f.units)
-    if (u.bands?.length && !mfmUnits.has(normU(u.name)))
-      mfmUnits.set(normU(u.name), u);
+    if (u.bands?.length) {
+      if (!mfmUnits.has(normU(u.name))) mfmUnits.set(normU(u.name), u);
+      if (!mfmUnits2.has(normU2(u.name))) mfmUnits2.set(normU2(u.name), u);
+      if (!mfmUnits3.has(normU3(u.name))) mfmUnits3.set(normU3(u.name), u);
+      const mw = /^(.*?)\s+with\s+/i.exec(u.name);
+      if (mw) {
+        const k = normU(mw[1]);
+        if (!mfmVariants.has(k)) mfmVariants.set(k, []);
+        mfmVariants.get(k).push(u);
+      }
+    }
 
 /* ------------------------------------------------------------------
  * ROLES — dos ejes cruzados: CHASIS × RANGO.
@@ -202,6 +236,7 @@ function roleOf(keywords) {
   return r.id;
 }
 
+const CORE_TXT = {};   // nombre → texto de habilidad núcleo
 const factions = [];
 
 for (const file of files) {
@@ -241,7 +276,16 @@ for (const file of files) {
            : null,
       max: x.models?.max ?? null,
       c: x.cap ?? null,          // tope por fuerza: { max, at1000 }
+      // Habilidades núcleo y de facción: sólo los NOMBRES. El texto va una
+      // vez en un diccionario —global para las de núcleo, por facción para
+      // las suyas— porque "Oath of Moment" se repite en 1063 unidades y
+      // guardarlo entero en cada una sumaba más de un mega.
+      ck: (x.coreAb ?? []).map((a) => a.n),
+      fa: (x.facAb ?? []).map((a) => a.n),
       ld: x.leads ?? null,       // unidades a las que puede engancharse (nombres)
+      // Igual que ld pero para las unidades SUPPORT, que se adjuntan ADEMÁS
+      // del líder. Se resuelve a ids más abajo, junto con ld.
+      sp: x.supports ?? null,
       // Opciones de armamento. Se descarta el grupo que sólo repite el
       // tamaño de la unidad (ya lo cubre la escalera de precios) y los
       // grupos de una sola opción sin tope, que no son una elección real.
@@ -331,7 +375,22 @@ for (const file of files) {
   // Respaldo por nombre: unidades aliadas y catálogos sin MFM propio.
   for (const u of units) {
     if (!u.B) {
-      const m = mfmUnits.get(normU(u.n));
+      // Tres intentos, de más estricto a más laxo. El tercero sólo si la
+      // unidad ya tenía precio: ver el comentario de normU3.
+      const vs = mfmVariants.get(normU(u.n));
+      const m = mfmUnits.get(normU(u.n))
+             ?? mfmUnits2.get(normU2(u.n))
+             ?? (u.p != null ? mfmUnits3.get(normU3(u.n)) : undefined)
+             // De las variantes se toma la más barata y se deja constancia:
+             // elegir una sola sin avisar sería inventar el precio.
+             ?? (vs && vs.length
+                   ? vs.slice().sort((a, b) => (a.bands[0].tiers[0].pts) - (b.bands[0].tiers[0].pts))[0]
+                   : undefined);
+      // El mismo nombre se repite una vez por capítulo: deduplicar.
+      if (!mfmUnits.has(normU(u.n)) && vs && vs.length > 1) {
+        const ns = [...new Set(vs.map((x) => x.name))];
+        if (ns.length > 1) u.vr = ns;
+      }
       if (m) {
         u.B = m.bands.map((b) => ({ f: b.from, t: b.to,
                                     s: b.tiers.map((x) => [x.models, x.pts]) }));
@@ -343,11 +402,42 @@ for (const file of files) {
     if (wg?.length) u.wg = Object.fromEntries(wg.map((w) => [normU(w.item), w.pts]));
   }
 
+  // Diccionario de textos de las reglas de ESTA facción.
+  const frx = {};
+  for (const x of d.datasheets) for (const a of (x.facAb ?? [])) if (a.d && !frx[a.n]) frx[a.n] = a.d;
+  for (const x of d.datasheets) for (const a of (x.coreAb ?? [])) if (a.d) CORE_TXT[a.n] = CORE_TXT[a.n] ?? a.d;
+
+  for (const u of units) {
+    if (!u.ck.length) delete u.ck;
+    if (!u.fa.length) delete u.fa;
+    // Sin precio en el MFM pese a estar en juego competitivo.
+    //
+    // El MFM v1.5 sacó 69 unidades de Space Marines —Tactical Squad,
+    // Devastator Squad, Suppressor Squad— y BSData las sigue marcando como
+    // estándar. La app mostraba el precio aproximado de BSData como si fuera
+    // oficial y dejaba armar una lista con ellas sin decir nada.
+    if (u.m === 'standard' && !u.B) u.nm = 1;
+  }
+
   const byName = new Map(units.map((u) => [u.n.toLowerCase(), u.id]));
   for (const u of units) {
     if (!u.ld) continue;
     const ids = u.ld.map((n) => byName.get(n.toLowerCase())).filter(Boolean);
     u.ld = ids.length ? ids : null;
+  }
+
+  // SUPPORT se queda en NOMBRES, no en ids.
+  //
+  // El Apothecary vive en el catálogo genérico de Space Marines y apunta a
+  // CRUSADER SQUAD, que vive en el de Black Templars. Como esta resolución
+  // corre catálogo por catálogo —antes de que existan las demás facciones—,
+  // trece de cincuenta unidades perdían todos sus destinos. La app resuelve
+  // por nombre contra las unidades que esa lista sí tiene, que además evita
+  // confundir dos unidades homónimas de facciones distintas.
+  for (const u of units) {
+    if (!u.sp) continue;
+    const ns = [...new Set(u.sp.map((n) => n.toLowerCase().trim()).filter(Boolean))];
+    u.sp = ns.length ? ns : null;
   }
 
   factions.push({
@@ -360,6 +450,7 @@ for (const file of files) {
     // Nombres de catálogo de los que puede tomar unidades. Se convierten a
     // slugs después, cuando ya están todas las facciones cargadas.
     linkNames: d.links ?? [],
+    frx,                       // textos de las reglas de facción
     // Topes de puntos para facciones aliadas: [nombre, {tamaño: tope}]
     // Sólo los grupos que este catálogo puede usar de verdad.
     ally: [...caps.entries()]
@@ -401,6 +492,7 @@ const build = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
 const payload = {
   build,
+  coreRules: CORE_TXT,         // texto de las habilidades núcleo, una sola vez
   roles: [...roleTable.values()].sort((a, b) => a.order - b.order),
   mfmVersion: MFM?.version ?? null,
   missions: MISSIONS,
