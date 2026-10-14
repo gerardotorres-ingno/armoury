@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "77b9-2f66-3f9b-5cf3",
   "catalogueName": "Imperium - Adeptus Mechanicus",
@@ -223,7 +223,7 @@
     }
   ],
   "allyCaps": [],
-  "revision": 19,
+  "revision": 20,
   "file": "Imperium - Adeptus Mechanicus.json",
   "counts": {
     "total": 41,
@@ -255,6 +255,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Replace command uplink",
@@ -350,8 +351,21 @@
         "W": "10",
         "LD": "7+",
         "OC": "-",
-        "InSv": ""
+        "InSv": "",
+        "Base": "170x109mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -374,6 +388,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Replace command uplink",
@@ -491,8 +506,21 @@
         "W": "10",
         "LD": "7+",
         "OC": "-",
-        "InSv": ""
+        "InSv": "",
+        "Base": "170x109mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -515,6 +543,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Replace command uplink",
@@ -610,8 +639,29 @@
         "W": "10",
         "LD": "7+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "170x109mm"
       },
+      "coreAb": [
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -633,6 +683,7 @@
         "max": 1
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -736,8 +787,29 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "105x70mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        },
+        {
+          "n": "Blast",
+          "d": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -763,6 +835,7 @@
         "Skitarii Rangers",
         "Skitarii Vanguard"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -1576,6 +1649,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Skitarii Rangers, Skitarii Vanguard"
+        },
+        {
           "n": "Prioritisation Protocol",
           "d": "Melee weapons equipped by this model have [Precision]."
         },
@@ -1617,8 +1694,37 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -1645,6 +1751,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1694,8 +1801,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -1718,6 +1838,9 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "KASTELAN ROBOTS"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -1817,8 +1940,21 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -1845,6 +1981,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1894,8 +2031,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -1918,6 +2068,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -2025,8 +2176,29 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Sustained Hits",
+          "d": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).*"
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -2049,6 +2221,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -2147,8 +2320,21 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -2175,6 +2361,7 @@
         "Sydonian Dragoons with Taser Lances",
         "Sydonian Dragoons with Radium Jezzails"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Abilties",
@@ -2943,6 +3130,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Ironstrider Ballistarii, Sydonian Dragoons with Taser Lances, Sydonian Dragoons with Radium Jezzails"
+        },
+        {
           "n": "Vector of the Omnissiah's Wrath",
           "d": "Ranged weapons equipped by this model have [Ignores Cover]."
         },
@@ -2985,8 +3176,29 @@
         "W": "7",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "105x70mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -3009,6 +3221,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3089,8 +3302,21 @@
         "W": "7",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "105x70mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -3117,6 +3343,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Arm weapons",
@@ -3304,8 +3531,21 @@
         "W": "7",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -3332,6 +3572,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3442,8 +3683,25 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -3470,6 +3728,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3602,8 +3861,25 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -3631,6 +3907,7 @@
         "Skitarii Rangers",
         "Skitarii Vanguard"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -4444,6 +4721,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Electro-Priests, Kataphrons, Skitarii Rangers, Skitarii Vanguard"
+        },
+        {
           "n": "Technoarcane Zealotry",
           "d": "While this model's unit is in range of one or more objective markers, improve this model's Leadership characteristic by 1."
         },
@@ -4489,8 +4770,41 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -4513,6 +4827,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -4738,8 +5053,25 @@
         "W": "11",
         "LD": "7+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "130mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -4766,6 +5098,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -4862,8 +5195,21 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -4890,6 +5236,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -4986,8 +5333,21 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -5014,6 +5374,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4-9 Hoplites",
@@ -5192,8 +5553,25 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -5220,6 +5598,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4-9 Peltasts",
@@ -5421,8 +5800,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -5449,6 +5841,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "2-5 Serberys Raiders",
@@ -5569,8 +5962,25 @@
         "W": "2",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "60x35.5mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -5597,6 +6007,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -5725,8 +6136,25 @@
         "W": "2",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "60x35.5mm"
       },
+      "coreAb": [
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -5749,6 +6177,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Combat Servitors",
@@ -5925,8 +6354,21 @@
         "W": "1",
         "LD": "8+",
         "OC": "1",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "~25mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -5949,6 +6391,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Servitors",
@@ -6121,8 +6564,16 @@
         "W": "1",
         "LD": "8+",
         "OC": "0",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "25mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -6149,6 +6600,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -6260,8 +6712,25 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -6288,6 +6757,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -6383,8 +6853,25 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -6407,6 +6894,14 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "HASTARII EXTERMINATORS",
+        "HASTARII FUSILIERS",
+        "SECUTARII HOPLITES",
+        "SECUTARII PELTASTS",
+        "SKITARII RANGERS",
+        "SKITARII VANGUARD"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -6501,8 +6996,25 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -6525,6 +7037,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Skitarii Rangers Options",
@@ -6784,8 +7297,29 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -6808,6 +7342,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Skitarii Vanguard Options",
@@ -7066,8 +7601,25 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -7090,6 +7642,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "equipped with",
@@ -7218,8 +7771,21 @@
         "W": "12",
         "LD": "7+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -7242,6 +7808,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -7307,8 +7874,25 @@
         "W": "11",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -7339,6 +7923,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "1 -3 Sydonian Dragoons",
@@ -7433,8 +8018,29 @@
         "W": "7",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "105x70mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -7465,6 +8071,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "1 -3 Sydonian Dragoons",
@@ -7548,8 +8155,29 @@
         "W": "7",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "105x70mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -7572,6 +8200,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7716,8 +8345,25 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -7752,6 +8398,7 @@
         "SKITARII RANGERS",
         "SKITARII VANGUARD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Replace macrostubber",
@@ -7886,6 +8533,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, HASTARII EXTERMINATORS, HASTARII FUSILIERS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SERVITOR BATTLECLADE, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
           "n": "Lord of the Machine Cult",
           "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the Electro-Priests keyword, models in that unit have the Feel No Pain 4+ ability instead"
         },
@@ -7918,8 +8569,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -7951,6 +8615,7 @@
         "SKITARII RANGERS",
         "SKITARII VANGUARD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -8046,6 +8711,10 @@
           "d": "If a friendly Adeptus Mechanicus Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
           "n": "Baffling Data Screed",
           "d": "In your Shooting phase, when this unit is selected to shoot, if this unit is not battle-shocked, you can use this ability. If you do, roll one D6: - On a 2+, select one enemy VEHICLE unit within 12\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll. A unit cannot be selected for this ability more than once per turn. - Or: On 2+, those ranged attacks do not prevent this unit from being hidden."
         }
@@ -8070,8 +8739,21 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -8106,6 +8788,7 @@
         "SKITARII RANGERS",
         "SKITARII VANGUARD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Replace magnarail lance",
@@ -8180,6 +8863,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, HASTARII EXTERMINATORS, HASTARII FUSILIERS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SERVITOR BATTLECLADE, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
           "n": "Galvanic Field",
           "d": "While this model is leading a unit, weapons equipped by models in that unit have the [Lethal Hits] ability."
         },
@@ -8212,8 +8899,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -8236,6 +8936,19 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "CORPUSCARII ELECTRO-PRIESTS",
+        "FULGURITE ELECTRO-PRIESTS",
+        "HASTARII EXTERMINATORS",
+        "HASTARII FUSILIERS",
+        "KATAPHRON BREACHERS",
+        "KATAPHRON DESTROYERS",
+        "SECUTARII HOPLITES",
+        "SECUTARII PELTASTS",
+        "SERVITOR BATTLECLADE",
+        "SKITARII RANGERS",
+        "SKITARII VANGUARD"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -8335,8 +9048,25 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -8359,6 +9089,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "equipped with",
@@ -8500,8 +9231,25 @@
         "W": "14",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": false
     },
     {
@@ -8523,6 +9271,7 @@
         "max": 1
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -8626,8 +9375,21 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "80mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     }
   ]

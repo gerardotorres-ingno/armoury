@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "f89b-84e0-6e3b-f1e2",
   "catalogueName": "Imperium - Adeptus Astartes - Deathwatch",
@@ -12,7 +12,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 10,
+  "revision": 11,
   "file": "Imperium - Deathwatch.json",
   "counts": {
     "total": 10,
@@ -44,6 +44,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -246,8 +247,37 @@
         "W": "14",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Ignores Cover",
+          "d": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth)."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -274,6 +304,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Deathwatch Terminators",
@@ -383,7 +414,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Assault Cannon & Power fist",
+              "n": "Assault Cannon",
               "min": 0,
               "max": 1,
               "scale": null,
@@ -639,7 +670,7 @@
           "range": "36\"",
           "a": "3",
           "skill": "3+",
-          "s": "7",
+          "s": "9",
           "ap": "-2",
           "d": "2",
           "kw": "Blast 1"
@@ -650,7 +681,7 @@
           "range": "36\"",
           "a": "3",
           "skill": "3+",
-          "s": "8",
+          "s": "10",
           "ap": "-3",
           "d": "3",
           "kw": "Blast 1, Hazardous"
@@ -725,8 +756,21 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -753,6 +797,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Squad Loadout",
@@ -990,7 +1035,7 @@
           "melee": false,
           "range": "36\"",
           "a": "3",
-          "skill": "4+",
+          "skill": "3+",
           "s": "5",
           "ap": "-1",
           "d": "2",
@@ -1131,8 +1176,16 @@
         "W": "2",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -1155,6 +1208,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Unit composition",
@@ -1378,10 +1432,10 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol, Lethal Hits"
+          "kw": "Close-quarters"
         },
         {
           "n": "Knives and Fists",
@@ -1487,7 +1541,7 @@
           "melee": false,
           "range": "36\"",
           "a": "3",
-          "skill": "4+",
+          "skill": "3+",
           "s": "5",
           "ap": "-1",
           "d": "2",
@@ -1548,8 +1602,16 @@
         "W": "2",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -1572,6 +1634,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Replace bolt rifle",
@@ -2058,8 +2121,16 @@
         "W": "2",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -2082,17 +2153,18 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Kill Team Heavy Intercessors w/ melta weapons",
           "owner": null,
           "min": 0,
-          "max": 3,
+          "max": null,
           "pick": "many",
           "opts": [
             {
               "n": "Kill Team Heavy Intercessor w/ melta rifle",
-              "min": 0,
+              "min": 3,
               "max": 3,
               "scale": null,
               "p": 0,
@@ -2120,7 +2192,7 @@
           "n": "Kill Team Heavy Intercessors w/ twin power fists",
           "owner": null,
           "min": 0,
-          "max": 3,
+          "max": null,
           "pick": "many",
           "opts": [
             {
@@ -2138,13 +2210,12 @@
             },
             {
               "n": "Kill Team Heavy Intercessor w/ power fists & flamestorm gauntlets",
-              "min": 0,
+              "min": 3,
               "max": 3,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Flamestorm gauntlets",
                 "Twin power fists"
               ]
             }
@@ -2153,14 +2224,14 @@
         {
           "n": "Kill Team Heavy Intercessors",
           "owner": null,
-          "min": 3,
-          "max": 10,
+          "min": 0,
+          "max": null,
           "pick": "many",
           "opts": [
             {
               "n": "Kill Team Heavy Intercessor",
-              "min": 2,
-              "max": 10,
+              "min": 4,
+              "max": 4,
               "scale": null,
               "p": 0,
               "model": true,
@@ -2173,13 +2244,8 @@
             {
               "n": "Kill Team Heavy Intercessor w/ heavy bolter",
               "min": 0,
-              "max": 1,
-              "scale": [
-                [
-                  10,
-                  2
-                ]
-              ],
+              "max": 2,
+              "scale": null,
               "p": 0,
               "model": true,
               "w": [
@@ -2241,11 +2307,22 @@
           "melee": false,
           "range": "18\"",
           "a": "2",
-          "skill": "4+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
           "kw": "Heavy, Melta 3"
+        },
+        {
+          "n": "➤Multi-melta (HUNTER:Monster/Vehicle)",
+          "melee": false,
+          "range": "18\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         },
         {
           "n": "Auto boltstorm gauntlets",
@@ -2253,10 +2330,10 @@
           "range": "18\"",
           "a": "3",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Twin-linked"
+          "kw": "Close-quarters, Twin-linked"
         },
         {
           "n": "Twin power fists",
@@ -2281,15 +2358,26 @@
           "kw": "Blast 1"
         },
         {
-          "n": "Flamestorm gauntlets",
+          "n": "➤ Flamestorm gauntlets (Ranged)",
           "melee": false,
           "range": "12\"",
-          "a": "D6+1",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Ignores Cover, Torrent, Twin-linked"
+          "kw": "Blast 2, Torrent, Twin-linked"
+        },
+        {
+          "n": "➤ Flamestorm gauntlets (Close-quarters)",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
+          "s": "4",
+          "ap": "-1",
+          "d": "1",
+          "kw": "Close-quarters, Torrent, Twin-linked"
         },
         {
           "n": "Deathwatch heavy bolt rifle",
@@ -2331,8 +2419,8 @@
         "Kill Team"
       ],
       "models": {
-        "min": 2,
-        "max": 21
+        "min": 10,
+        "max": 16
       },
       "profile": {
         "M": "5\"",
@@ -2341,8 +2429,16 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -2365,6 +2461,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Squad Members",
@@ -2664,8 +2761,25 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -2688,6 +2802,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4 Heavy Intercessors w/ Jump Pack",
@@ -2984,8 +3099,21 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     },
     {
@@ -3009,6 +3137,7 @@
         "DECIMUS KILL TEAM",
         "FORTIS KILL TEAM"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3053,6 +3182,10 @@
         {
           "n": "Unstoppable Champion",
           "d": "(Once per battle, per army) At the end of a phase in which this model is destroyed, roll one D6: - On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged with 3 wounds remaining."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3076,8 +3209,29 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain 6+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        },
+        {
+          "n": "Transhuman Strategist",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1 CP"
+        }
+      ],
       "native": true
     },
     {
@@ -3104,6 +3258,7 @@
         "DECIMUS KILL TEAM",
         "FORTIS KILL TEAM"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3136,6 +3291,10 @@
           "d": "This model’s attacks that target a Character unit can: - Re-roll hit rolls of 1. - Re-roll wound rolls of 1."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM"
+        },
+        {
           "n": "Purgatus Quarry",
           "d": "At the start of the first battle round, select up to one enemy unit to be this unit’s hunted: - This unit’s attacks that target this unit’s hunted unit can re-roll wound rolls of 1. - Each time this unit’s hunted is destroyed, select up to one enemy unit to be this unit’s hunted."
         }
@@ -3160,8 +3319,21 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Lance",
+          "d": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": true
     }
   ]

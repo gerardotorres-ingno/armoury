@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "50c4-3e83-fe54-97c4",
   "catalogueName": "Imperium - Grey Knights",
@@ -235,6 +235,7 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -367,6 +368,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ■ Brotherhood Terminator Squad ■ Paladin Squad"
+        },
+        {
           "n": "Hammerhand (Psychic)",
           "d": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
         },
@@ -396,8 +401,21 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -420,6 +438,7 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -458,6 +477,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ■ Brotherhood Terminator Squad ■ Paladin Squad"
+        },
+        {
           "n": "Exemplar of the Silvered Host",
           "d": "While this model is leading a unit, each time a model in that unit makes a melee attack, on a Critical Wound, the target suffers 1 mortal wound in addition to any normal damage."
         },
@@ -488,8 +511,21 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -515,6 +551,7 @@
         "Purgation Squad",
         "Strike Squad"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -596,6 +633,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ■ Purgation Squad ■ Strike Squad"
+        },
+        {
           "n": "Clarion of Haste (Psychic)",
           "d": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced."
         },
@@ -624,8 +665,21 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -651,6 +705,7 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -718,6 +773,10 @@
           "d": "While this model is leading a unit, you can re-roll Charge rolls made for that unit."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ■ Brotherhood Terminator Squad ■ Paladin Squad"
+        },
+        {
           "n": "Litanies of Sanctity",
           "d": "Once per battle, at the start of any phase, you can select one friendly Grey Knights unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
         }
@@ -743,8 +802,21 @@
         "W": "5",
         "LD": "5+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -770,6 +842,7 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -904,6 +977,10 @@
           "d": "While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - Brotherhood Terminator Squad - Paladin Squad"
+        },
+        {
           "n": "Sanctic Hood",
           "d": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
         }
@@ -929,8 +1006,25 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -957,6 +1051,7 @@
         "Purgation Squad",
         "Purifier Squad"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -1060,6 +1155,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ■ Strike Squad ■ Purgation Squad ■ Purifier Squad"
+        },
+        {
           "n": "Guardians of the Machine",
           "d": "Each time an enemy unit ends a charge move engaged with one or more friendly GREY KNIGHTS VEHICLE units and within 6\" of this unit, you can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase."
         },
@@ -1092,8 +1191,25 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -1128,6 +1244,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "3-9 Terminators",
@@ -1386,8 +1503,21 @@
         "W": "3",
         "LD": "6+",
         "OC": "2",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -1409,6 +1539,7 @@
       "leads": [
         "Purifier Squad"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1465,6 +1596,10 @@
         {
           "n": "Foesight (Psychic)",
           "d": "Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: ■ Purifier Squad"
         }
       ],
       "faction": "Grey Knights",
@@ -1488,8 +1623,25 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -1512,6 +1664,7 @@
         "Purgation Squad",
         "Strike Squad"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -2322,6 +2475,10 @@
           "d": "Once per battle, at the start of a phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks and Strength characteristics of melee weapons equipped by this model."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - Purgation Squad - Strike Squad"
+        },
+        {
           "n": "Order of Purifiers",
           "d": "Infantry only. Add the Purifier keyword, and add to the list of units this model can be attached to: Purifiers."
         },
@@ -2395,8 +2552,33 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Crucible",
+          "d": "A Character created using Crucible rules has the Crucible ability. Your army may include up to three units with the Crucible ability and these units cannot be given Enhancements."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -2416,6 +2598,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -3303,8 +3486,37 @@
         "W": "13",
         "LD": "6+",
         "OC": "4",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Crucible",
+          "d": "A Character created using Crucible rules has the Crucible ability. Your army may include up to three units with the Crucible ability and these units cannot be given Enhancements."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -3330,6 +3542,7 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3466,6 +3679,10 @@
           "d": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks and Strength characteristics of melee weapons equipped by this model."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - Brotherhood Terminator Squad - Paladin Squad"
+        },
+        {
           "n": "Warrior Strategist",
           "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
         }
@@ -3492,8 +3709,21 @@
         "W": "7",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -3516,6 +3746,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3800,8 +4031,29 @@
         "W": "13",
         "LD": "6+",
         "OC": "4",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -3824,6 +4076,7 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3880,6 +4133,10 @@
         {
           "n": "Hammer Aflame (Psychic)",
           "d": "Each time this model’s unit is selected to fight, you can select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ■ Brotherhood Terminator Squad ■ Paladin Squad"
         }
       ],
       "faction": "Grey Knights",
@@ -3904,8 +4161,21 @@
         "W": "7",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -3928,6 +4198,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -4253,8 +4524,21 @@
         "W": "8",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "~60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -4277,6 +4561,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -4494,8 +4779,16 @@
         "W": "10",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -4518,6 +4811,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -4720,8 +5014,24 @@
         "W": "30",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Unique"
       },
+      "coreAb": [
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -4748,6 +5058,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Heavy weapons",
@@ -4909,8 +5220,21 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -4933,6 +5257,7 @@
         "Brotherhood Terminator Squad",
         "Paladin Squad"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -4991,6 +5316,10 @@
           "d": "Once per battle, when this model’s unit declares a charge in the same turn it was set up on the battlefield using the Deep Strike or Teleport Assault ability, add 3 to the Charge roll."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ■ Brotherhood Terminator Squad ■ Paladin Squad"
+        },
+        {
           "n": "Supreme Commander",
           "d": "If this model is in your army, it must be your WARLORD."
         }
@@ -5018,8 +5347,21 @@
         "W": "7",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -5042,6 +5384,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -5213,8 +5556,16 @@
         "W": "16",
         "LD": "6+",
         "OC": "5",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -5237,6 +5588,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -5409,8 +5761,16 @@
         "W": "16",
         "LD": "6+",
         "OC": "5",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -5433,6 +5793,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -5605,8 +5966,16 @@
         "W": "16",
         "LD": "6+",
         "OC": "5",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -5629,6 +5998,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Dreadfists",
@@ -5819,8 +6189,25 @@
         "W": "13",
         "LD": "6+",
         "OC": "4",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -5852,6 +6239,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "3-9 Paladins",
@@ -6109,8 +6497,21 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -6134,6 +6535,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Heavy Weapons",
@@ -6294,8 +6696,21 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -6319,6 +6734,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Heavy weapons",
@@ -6495,8 +6911,25 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -6519,6 +6952,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -6676,8 +7110,16 @@
         "W": "10",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -6700,6 +7142,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -6809,8 +7252,20 @@
         "W": "10",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -6833,6 +7288,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4 Servitors",
@@ -7003,8 +7459,16 @@
         "W": "1",
         "LD": "8+",
         "OC": "0",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -7027,6 +7491,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7243,8 +7708,20 @@
         "W": "10",
         "LD": "6+",
         "OC": "-",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -7267,6 +7744,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7539,8 +8017,20 @@
         "W": "14",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -7563,6 +8053,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7749,8 +8240,20 @@
         "W": "10",
         "LD": "6+",
         "OC": "-",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -7777,6 +8280,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4-9 Grey Knights",
@@ -7966,8 +8470,25 @@
         "W": "2",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -7987,6 +8508,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -8871,8 +9393,37 @@
         "W": "8",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Crucible",
+          "d": "A Character created using Crucible rules has the Crucible ability. Your army may include up to three units with the Crucible ability and these units cannot be given Enhancements."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     },
     {
@@ -8895,6 +9446,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Assault Cannon",
@@ -9080,8 +9632,25 @@
         "W": "8",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Gate of Infinity",
+          "d": "If your Army Faction is Grey Knights, at the end of your opponent’s Fight phase, you can select a number of units from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), providing every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows: Incursion - Up to 2 units Strike Force - Up to 3 units Onslaught - Up to 4 units - Place those units in strategic reserves. - Those units can make an ingress move in your next Movement phase (including in your first turn)"
+        }
+      ],
       "native": true
     }
   ]

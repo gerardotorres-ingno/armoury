@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "b00-cd86-4b4c-97ba",
   "catalogueName": "Imperium - Agents of the Imperium",
@@ -50,7 +50,7 @@
   ],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 17,
+  "revision": 20,
   "file": "Imperium - Agents of the Imperium.json",
   "counts": {
     "total": 49,
@@ -79,6 +79,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Unit composition",
@@ -142,7 +143,7 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Power weapon and Astartes shield",
+              "n": "Power weapon and Storm shield",
               "min": 0,
               "max": null,
               "scale": null,
@@ -154,33 +155,6 @@
             },
             {
               "n": "Heavy thunder hammer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Exchange carbine",
-          "owner": "Deathwatch Veteran w/ carbine",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Deathwatch marksman bolt carbine",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Combat knife",
               "min": 0,
               "max": null,
               "scale": null,
@@ -239,7 +213,7 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "kw": "Pistol"
+          "kw": "Close-quarters"
         },
         {
           "n": "➤ Plasma pistol - Supercharge",
@@ -250,7 +224,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Hazardous, Pistol"
+          "kw": "Close-quarters, Hazardous"
         },
         {
           "n": "Power weapon",
@@ -260,7 +234,7 @@
           "skill": "3+",
           "s": "5",
           "ap": "-2",
-          "d": "2",
+          "d": "1",
           "kw": "Sustained Hits 1"
         },
         {
@@ -282,8 +256,8 @@
           "skill": "3+",
           "s": "7",
           "ap": "-2",
-          "d": "1",
-          "kw": "Assault, Heavy"
+          "d": "2",
+          "kw": "Assault, Rapid Fire 1"
         },
         {
           "n": "➤ Plasma incinerator - Supercharge",
@@ -294,7 +268,7 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "kw": "Assault, Hazardous, Heavy"
+          "kw": "Assault, Hazardous, Rapid Fire 1"
         },
         {
           "n": "Bolt pistol",
@@ -302,18 +276,18 @@
           "range": "12\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": "Pistol, Lethal Hits"
+          "kw": "Close-quarters"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Knives and Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
@@ -341,37 +315,26 @@
           "kw": "Heavy, Lethal Hits"
         },
         {
-          "n": "Combat knife",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "3+",
-          "s": "4",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Precision"
-        },
-        {
           "n": "Special-issue bolt pistol",
           "melee": false,
           "range": "18\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Pistol, Precision, Lethal Hits"
+          "kw": "Close-quarters, Lethal Hits, Precision"
         },
         {
           "n": "Frag cannon",
           "melee": false,
           "range": "18\"",
-          "a": "D3",
+          "a": "2",
           "skill": "3+",
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "kw": "Blast, Heavy, Lethal Hits, Rapid Fire D3"
+          "kw": "Blast 1, Heavy, Lethal Hits, Rapid Fire 1"
         },
         {
           "n": "Hellstorm bolt rifle",
@@ -385,29 +348,29 @@
           "kw": "Assault, Heavy, Lethal Hits"
         },
         {
-          "n": "➤ Astartes grenade launcher - frag",
+          "n": "➤ Grenade Launcher (Frag)",
           "melee": false,
           "range": "24\"",
-          "a": "D3",
+          "a": "4",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
-          "n": "➤ Astartes grenade launcher - krak",
+          "n": "➤ Grenade Launcher (Krak)",
           "melee": false,
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "9",
+          "s": "10",
           "ap": "-2",
-          "d": "D3",
-          "kw": ""
+          "d": "3",
+          "kw": "Rapid Fire 1"
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy bolter",
+          "n": "➤ Infernus heavy bolter (Bolt)",
           "melee": false,
           "range": "36\"",
           "a": "3",
@@ -415,18 +378,18 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Sustained Hits 1"
+          "kw": "Heavy, Rapid Fire 2, Sustained Hits 1"
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy flamer",
+          "n": "➤ Infernus heavy bolter (Infernus)",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores cover, Torrent"
+          "kw": "Blast 1, Torrent"
         },
         {
           "n": "Xenophase blade",
@@ -444,15 +407,11 @@
       "abilities": [
         {
           "n": "Death to the Alien",
-          "d": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the Imperium or Chaos keywords, you can re-roll the Hit roll instead."
+          "d": "This unit's attacks can: - Re-roll hit rolls of 1. - Or: If the target of those attacks does not have IMPERIUM/CHAOS, re-roll hit rolls."
         },
         {
-          "n": "Attached Unit",
-          "d": "If a Character unit from your army can be attached to a Deathwatch Kill Team unit, it can be attached to this unit instead."
-        },
-        {
-          "n": "Astartes shield",
-          "d": "The bearer has a 4+ invulnerable save."
+          "n": "Storm shield",
+          "d": "This model has a 4+ InSv."
         }
       ],
       "faction": "Agents of the Imperium",
@@ -472,13 +431,16 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -498,6 +460,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Equipment",
@@ -528,7 +491,7 @@
           "s": "5",
           "ap": "-2",
           "d": "1",
-          "kw": "Anti-INFANTRY 2+, Precision, Torrent"
+          "kw": "Anti-INFANTRY 2+, Blast 2, Torrent"
         },
         {
           "n": "Phase sword and poison blades",
@@ -591,8 +554,33 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Fights First",
+          "d": "While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase (12.04)."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -612,6 +600,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -843,8 +832,28 @@
         "W": "14",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Ignores Cover",
+          "d": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth)."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -864,6 +873,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Equipment",
@@ -962,8 +972,29 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -978,6 +1009,7 @@
       "ladder": null,
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1048,8 +1080,11 @@
         "W": "3",
         "LD": "7+",
         "OC": "0",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "25mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -1073,6 +1108,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4-9 Legionnaires",
@@ -1425,8 +1461,21 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -1448,6 +1497,7 @@
       "leads": [
         "Deathwatch Kill Team"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -2379,6 +2429,10 @@
           "d": "While this model is leading a unit, in your Command phase, you can returned 1 destroyed model (excluding Character models) to that unit."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: Deathwatch Kill Team"
+        },
+        {
           "n": "High-handed Authority",
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         },
@@ -2425,8 +2479,21 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -2450,6 +2517,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4-9 Deathwatch Veterans",
@@ -2478,75 +2546,53 @@
               "p": 0,
               "model": true,
               "w": [
-                "Deathwatch thunder hammer"
+                "Heavy thunder hammer"
               ]
             },
             {
-              "n": "Veteran w/ frag cannon and CCW",
+              "n": "Veteran w/ frag cannon",
               "min": 0,
               "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon",
+                "Knives and Fists",
                 "Frag cannon"
               ]
             },
             {
-              "n": "Veteran w/ infernus heavy bolter and CCW",
+              "n": "Veteran w/ infernus heavy bolter",
               "min": 0,
               "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon"
+                "Knives and Fists"
               ]
             },
             {
-              "n": "Veteran w/ Astartes shield and boltgun",
-              "min": 0,
-              "max": 4,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Boltgun"
-              ]
-            },
-            {
-              "n": "Veteran w/ Astartes shield and power weapon",
-              "min": 0,
-              "max": 4,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Power weapon"
-              ]
-            },
-            {
-              "n": "Veteran w/ stalker-pattern boltgun and CCW",
+              "n": "Veteran w/ stalker-pattern boltgun",
               "min": 0,
               "max": 2,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon",
+                "Knives and Fists",
                 "Stalker-pattern boltgun"
               ]
             },
             {
-              "n": "Veteran w/ Deathwatch shotgun and CCW",
+              "n": "Veteran w/ Deathwatch shotgun",
               "min": 0,
               "max": 4,
               "scale": null,
               "p": 0,
               "model": true,
               "w": [
-                "Close combat weapon",
+                "Knives and Fists",
                 "Deathwatch shotgun"
               ]
             },
@@ -2564,85 +2610,33 @@
           ]
         },
         {
-          "n": "Wargear",
-          "owner": "Watch Sergeant",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
+          "n": "Storm Shield models",
+          "owner": null,
+          "min": 0,
+          "max": 4,
+          "pick": "many",
           "opts": [
             {
-              "n": "Boltgun and power weapon",
+              "n": "Veteran w/ Storm shield and boltgun",
               "min": 0,
-              "max": null,
+              "max": 4,
               "scale": null,
               "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Deathwatch shotgun and close combat weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
+              "model": true,
               "w": [
-                "Deathwatch shotgun",
-                "Close combat weapon"
+                "Boltgun"
               ]
             },
             {
-              "n": "Frag cannon and close combat weapon",
+              "n": "Veteran w/ Storm shield and power weapon",
               "min": 0,
-              "max": 1,
+              "max": 4,
               "scale": null,
               "p": 0,
-              "model": false,
+              "model": true,
               "w": [
-                "Close combat weapon",
-                "Frag cannon"
+                "Power weapon"
               ]
-            },
-            {
-              "n": "Infernus heavy bolter and close combat weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Close combat weapon"
-              ]
-            },
-            {
-              "n": "Stalker-pattern boltgun and close combat weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Close combat weapon",
-                "Stalker-pattern boltgun"
-              ]
-            },
-            {
-              "n": "Black Shield blades",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Deathwatch thunder hammer",
-              "min": 0,
-              "max": 2,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
             }
           ]
         },
@@ -2666,15 +2660,6 @@
               "n": "Boltgun",
               "min": 0,
               "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Astartes shield",
-              "min": 0,
-              "max": 2,
               "scale": null,
               "p": 0,
               "model": false,
@@ -2706,15 +2691,6 @@
               "p": 0,
               "model": false,
               "w": []
-            },
-            {
-              "n": "Astartes shield",
-              "min": 0,
-              "max": 2,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
             }
           ]
         }
@@ -2726,10 +2702,10 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": ""
+          "kw": "Rapid Fire 1"
         },
         {
           "n": "Power weapon",
@@ -2743,7 +2719,7 @@
           "kw": ""
         },
         {
-          "n": "Deathwatch thunder hammer",
+          "n": "Heavy thunder hammer",
           "melee": true,
           "range": "Melee",
           "a": "3",
@@ -2754,12 +2730,12 @@
           "kw": "Devastating Wounds"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Knives and Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
@@ -2768,15 +2744,15 @@
           "n": "Frag cannon",
           "melee": false,
           "range": "18\"",
-          "a": "D3",
+          "a": "2",
           "skill": "4+",
           "s": "7",
           "ap": "-1",
           "d": "2",
-          "kw": "Blast, Heavy, Rapid Fire D3"
+          "kw": "Blast 1, Heavy, Lethal Hits, Rapid Fire 1"
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy bolter",
+          "n": "➤ Infernus heavy bolter (Bolt)",
           "melee": false,
           "range": "36\"",
           "a": "3",
@@ -2784,18 +2760,18 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Heavy, Sustained Hits 1"
+          "kw": "Heavy, Rapid Fire 2, Sustained Hits 1"
         },
         {
-          "n": "➤ Infernus heavy bolter - heavy flamer",
+          "n": "➤ Infernus heavy bolter (Infernus)",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores cover, Torrent"
+          "kw": "Blast 1, Torrent"
         },
         {
           "n": "Stalker-pattern boltgun",
@@ -2803,7 +2779,7 @@
           "range": "24\"",
           "a": "1",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "2",
           "kw": "Heavy, Precision"
@@ -2815,7 +2791,7 @@
           "a": "2",
           "skill": "3+",
           "s": "4",
-          "ap": "0",
+          "ap": "-1",
           "d": "2",
           "kw": "Assault"
         },
@@ -2831,15 +2807,37 @@
           "kw": "Twin-linked"
         },
         {
-          "n": "Combi-weapon",
+          "n": "➤ Combi-weapon (Damnatus)",
           "melee": false,
-          "range": "24\"",
+          "range": "12\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 2"
+        },
+        {
+          "n": "➤ Combi-weapon (Infernus)",
+          "melee": false,
+          "range": "12\"",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
+          "kw": "Blast 1, Torrent"
+        },
+        {
+          "n": "➤ Combi-weapon (Purgatus)",
+          "melee": false,
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "kw": "\n"
         },
         {
           "n": "Xenophase blade",
@@ -2867,8 +2865,8 @@
           "d": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack does not have the IMPERIUM or CHAOS keywords, you can re-roll the Hit roll instead."
         },
         {
-          "n": "Astartes shield",
-          "d": "The bearer has a 4+ invulnerable save."
+          "n": "Storm Shield",
+          "d": "This model has a 4+ InSv."
         }
       ],
       "faction": "Agents of the Imperium",
@@ -2888,13 +2886,16 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "2",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -2918,6 +2919,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Deathwatch Terminators",
@@ -3405,8 +3407,20 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -3426,6 +3440,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -4361,6 +4376,10 @@
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Exaction Squad, Imperium Battleline, Imperial Navy Breachers, Inquisitorial Agents, Sisters of Battle Squad, Subductor Squad, Vigilant Squad"
+        },
+        {
           "n": "Backroom Deals",
           "d": "While this model is leading a unit, models in that unit have the Infiltrators ability."
         },
@@ -4402,8 +4421,25 @@
         "W": "9",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "-"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -4423,6 +4459,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Equipment",
@@ -4517,8 +4554,29 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -4538,6 +4596,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 Exaction Vigilants",
@@ -4832,8 +4891,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "28.5mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -4857,6 +4929,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Core",
@@ -5249,8 +5322,21 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Kill Team",
+          "d": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value. For the purposes of determining which models in this unit can embark within a TRANSPORT, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the TERMINATOR, MOUNTED or JUMP PACK keywords. For the purposes of interacting with terrain features, all models in units with this ability are considered Infantry models, even though similar models in other units may have the Mounted or Jump Pack keywords. Designer’s Note: *While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, Transport and Benefit of Cover rules.*"
+        }
+      ],
       "native": false
     },
     {
@@ -5270,6 +5356,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4 Terminators",
@@ -5480,8 +5567,21 @@
         "W": "3",
         "LD": "6+",
         "OC": "2",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -5501,6 +5601,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 Armsmen",
@@ -5873,8 +5974,11 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "25mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -5894,6 +5998,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -6002,8 +6107,25 @@
         "W": "10",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -6027,6 +6149,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Core",
@@ -6326,8 +6449,11 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": false
     },
     {
@@ -6358,6 +6484,7 @@
         "SUBDUCTOR SQUAD",
         "VIGILANT SQUAD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Melee weapon",
@@ -6513,6 +6640,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: AQUILA KILL TEAM, BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SANCTIFIERS, SISTERS OF BATTLE SQUAD, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
           "n": "Authority of the Inquisition",
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         },
@@ -6549,8 +6680,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -6578,6 +6717,7 @@
         "SUBDUCTOR SQUAD",
         "VIGILANT SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -6636,6 +6776,10 @@
           "d": "Each time your opponent gains a CP as the result of an ability, roll one D6: on a 2+, you also gain 1CP."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
           "n": "Authority of the Inquisition",
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         },
@@ -6667,8 +6811,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -6696,6 +6848,7 @@
         "SUBDUCTOR SQUAD",
         "VIGILANT SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -6754,6 +6907,10 @@
           "d": "In your Command phase, this PSYKER can use this ability. If it does, roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2+, until the start of your next Command phase, this PSYKER’s unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: AQUILA KILL TEAM, BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
           "n": "Authority of the Inquisition",
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         }
@@ -6782,8 +6939,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -6816,6 +6981,7 @@
         "SUBDUCTOR SQUAD",
         "VIGILANT SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -6866,6 +7032,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: DAEMONHOST, DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, EXACTION SQUAD, FORTIS KILL TEAM, IMPERIAL NAVY BREACHERS, INDOMITOR KILL TEAM, INQUISITORIAL AGENTS, PROTEUS KILL TEAM, SPECTRUS KILL TEAM, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
           "n": "Malus Codicium",
           "d": "While this model is leading a unit, double the Attacks characteristic of weapons equipped by Daemonhost models in that unit."
         },
@@ -6902,8 +7072,21 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -6932,6 +7115,7 @@
         "SUBDUCTOR SQUAD",
         "VIGILANT SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -6990,6 +7174,10 @@
           "d": "While this model is leading a unit, each time a model in that unit makes an attack that targets a unit that is Below Half-strength, add 1 to the Hit roll."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: BATTLELINE IMPERIUM INFANTRY, EXACTION SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SANCTIFIERS, SISTERS OF BATTLE SQUAD, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
           "n": "Authority of the Inquisition",
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         }
@@ -7018,8 +7206,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -7053,6 +7249,7 @@
         "SUBDUCTOR SQUAD",
         "VIGILANT SQUAD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7256,6 +7453,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, EXACTION SQUAD, FORTIS KILL TEAM, GREY KNIGHTS TERMINATOR SQUAD, IMPERIAL NAVY BREACHERS, INDOMITOR KILL TEAM, INQUISITORIAL AGENTS, PROTEUS KILL TEAM, SISTERS OF BATTLE SQUAD, SPECTRUS KILL TEAM, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
           "n": "Authority of the Inquisition",
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         },
@@ -7293,8 +7494,21 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -7314,6 +7528,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -7382,8 +7597,21 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -7403,6 +7631,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -7491,8 +7720,29 @@
         "W": "6",
         "LD": "6+",
         "OC": "2",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -7519,6 +7769,7 @@
         "SUBDUCTOR SQUAD",
         "VIGILANT SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -7584,6 +7835,10 @@
           "d": "Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this unit’s Inquisitor Ostromandeus model, increase the cost of that use of that Stratagem by 1CP."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: EXACTION SQUAD, IMPERIAL NAVY BREACHERS, INQUISITORIAL AGENTS, SISTERS OF BATTLE SQUAD, SUBDUCTOR SQUAD, VIGILANT SQUAD"
+        },
+        {
           "n": "Authority of the Inquisition",
           "d": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
         },
@@ -7614,8 +7869,21 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -7635,6 +7903,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "5 - 10 Acolytes",
@@ -7914,8 +8183,11 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -7935,6 +8207,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -8188,8 +8461,25 @@
         "W": "11",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -8212,6 +8502,7 @@
         "IMPERIAL NAVY BREACHERS",
         "VOIDSMEN-AT-ARMS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -8250,6 +8541,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
+        },
+        {
           "n": "Backroom Deals",
           "d": "If your army contains one or more models with this ability, during the Declare Battle Formations step, select one of those units. While the selected unit is leading a unit, models in that unit have the Infiltrators ability."
         },
@@ -8281,8 +8576,21 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -8304,6 +8612,7 @@
       "leads": [
         "INQUISITORIAL AGENTS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -8354,6 +8663,10 @@
           "d": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: INQUISITORIAL AGENTS"
+        },
+        {
           "n": "Inquisitorial Agent",
           "d": "If your Army Faction is not AGENTS OF THE IMPERIUM, then for each unique pairing of 1 INQUISITORIAL AGENTS unit and 1 JOKAERO WEAPONSMITH unit occuring in your army, increase the maximum number of CHARACTER units permitted in your army by 1."
         },
@@ -8381,8 +8694,11 @@
         "W": "2",
         "LD": "7+",
         "OC": "0",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "25mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -8402,6 +8718,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Equipment",
@@ -8465,7 +8782,7 @@
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": ""
+          "kw": "\n"
         },
         {
           "n": "Long Vigil ranged weapon",
@@ -8710,8 +9027,20 @@
         "W": "4",
         "LD": "5+",
         "OC": "2",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -8731,6 +9060,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -9707,8 +10037,29 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Leader",
+          "d": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+        },
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -9728,6 +10079,15 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": [
+        "EXACTION SQUAD",
+        "IMPERIAL NAVY BREACHERS",
+        "INQUISITORIAL AGENTS",
+        "SANCTIFIERS",
+        "SISTERS OF BATTLE SQUAD",
+        "SUBDUCTOR SQUAD",
+        "VIGILANT SQUAD"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -9837,8 +10197,11 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -9861,6 +10224,7 @@
         "IMPERIAL NAVY BREACHERS",
         "VOIDSMEN-AT-ARMS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -9902,6 +10266,10 @@
         {
           "n": "Gaze into the Empyrean (Psychic)",
           "d": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
         }
       ],
       "faction": "Agents of the Imperium",
@@ -9926,8 +10294,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -9950,6 +10326,7 @@
         "IMPERIAL NAVY BREACHERS",
         "VOIDSMEN-AT-ARMS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -9988,6 +10365,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
+        },
+        {
           "n": "Backroom Deals",
           "d": "If your army contains one or more models with this ability, during the Declare Battle Formations step, select one of those units. While the selected unit is leading a unit, models in that unit have the Infiltrators ability."
         },
@@ -10019,8 +10400,21 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -10044,6 +10438,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Additional",
@@ -10645,7 +11040,7 @@
           "s": "4",
           "ap": "0",
           "d": "1",
-          "kw": ""
+          "kw": "\n"
         },
         {
           "n": "Long Vigil ranged weapon",
@@ -10700,7 +11095,7 @@
           "s": "5",
           "ap": "-1",
           "d": "1",
-          "kw": "Ignores cover, Torrent"
+          "kw": "Ignores Cover, Torrent"
         }
       ],
       "composition": null,
@@ -10750,8 +11145,21 @@
         "W": "3",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "75x42mm"
       },
+      "coreAb": [
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Kill Team",
+          "d": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value. For the purposes of determining which models in this unit can embark within a TRANSPORT, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the TERMINATOR, MOUNTED or JUMP PACK keywords. For the purposes of interacting with terrain features, all models in units with this ability are considered Infantry models, even though similar models in other units may have the Mounted or Jump Pack keywords. Designer’s Note: *While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, Transport and Benefit of Cover rules.*"
+        }
+      ],
       "native": false
     },
     {
@@ -10774,6 +11182,7 @@
         "IMPERIAL NAVY BREACHERS",
         "VOIDSMEN-AT-ARMS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -10895,6 +11304,10 @@
           "d": "If your army contains one or more units with this ability, during the Declare Battle Formations step, select one of those units. While the selected unit is leading a unit, models in that unit have the Infiltrators ability."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: IMPERIAL NAVY BREACHERS, VOIDSMEN-AT-ARMS"
+        },
+        {
           "n": "Warrant of Trade",
           "d": "If your army contains one or more models with this ability, after both players have deployed their armies, select up to D3 IMPERIUM BATTLELINE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserve, regardless of how many units are already in Strategic Reserve."
         },
@@ -10925,8 +11338,11 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "25mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -10946,6 +11362,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapon",
@@ -11178,8 +11595,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -11199,6 +11629,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -11377,8 +11808,16 @@
         "W": "11",
         "LD": "7+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -11398,6 +11837,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Battle Sisters",
@@ -11901,8 +12341,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -11926,6 +12374,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Squad Members",
@@ -12270,8 +12719,25 @@
         "W": "2",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Kill Team",
+          "d": "Each time an attack targets this unit, if it contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what roll is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest value. For the purposes of determining which models in this unit can embark within a TRANSPORT, Kill Team Terminator models, Kill Team Outrider models, Kill Team Biker models and models equipped with a jump pack each take up the space of 2 models, but can otherwise embark within any TRANSPORT their unit can embark within, even though similar models in other units have the TERMINATOR, MOUNTED or JUMP PACK keywords. For the purposes of interacting with terrain features, all models in units with this ability are considered Infantry models, even though similar models in other units may have the Mounted or Jump Pack keywords. Designer’s Note: *While the abstractions in the above rule cause some models to behave differently to similar models in other units, they are designed to minimise complicated movement, Transport and Benefit of Cover rules.*"
+        }
+      ],
       "native": false
     },
     {
@@ -12291,6 +12757,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -12385,8 +12852,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "28.5mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -12406,6 +12881,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -12471,8 +12947,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -12496,6 +12985,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Additional Equipment",
@@ -12663,8 +13153,16 @@
         "W": "3",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "75x42mm"
       },
+      "coreAb": [
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -12684,6 +13182,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 Vigilants",
@@ -12920,8 +13419,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "28.5mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -12941,6 +13448,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Equipment",
@@ -13047,8 +13555,33 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -13068,6 +13601,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -13197,8 +13731,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Assigned Agents",
+          "d": "If your army Faction is not AGENTS OF THE IMPERIUM, but every model in your army has the IMPERIUM keyword, you can include AGENTS OF THE IMPERIUM units in your army even if they do not have the Faction keyword you selected in the Select Army Faction step. In this case, the maximum number of AGENTS OF THE IMPERIUM units you can include in your army depends on the battle size, as shown below. Incursion: 1 RETINUE, 1 CHARACTER, 1 REQUISITIONED Strike Force: 2 RETINUE, 2 CHARACTER, 1 REQUISITIONED Onslaught: 3 RETINUE, 3 CHARACTER, 2 REQUISITIONED Note that you can include AGENTS OF THE IMPERIUM DEDICATED TRANSPORT units in such an army as normal, but each unit must start the battle with one or more units embarked within it, or it cannot be deployed for that battle and will count as having been destroyed during the first battle round."
+        }
+      ],
       "native": true
     },
     {
@@ -13226,6 +13768,7 @@
         "PROTEUS KILL TEAM",
         "SPECTRUS KILL TEAM"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -13270,6 +13813,10 @@
         {
           "n": "Unstoppable Champion",
           "d": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 1 wound remaining."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: AQUILA KILL TEAM, DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, FORTIS KILL TEAM, INDOMITOR KILL TEAM, PROTEUS KILL TEAM, SPECTRUS KILL TEAM"
         }
       ],
       "faction": "Agents of the Imperium",
@@ -13295,8 +13842,20 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -13324,6 +13883,7 @@
         "PROTEUS KILL TEAM",
         "SPECTRUS KILL TEAM"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -13354,6 +13914,10 @@
         {
           "n": "Rites of Battle",
           "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: AQUILA KILL TEAM, DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, FORTIS KILL TEAM, INDOMITOR KILL TEAM, PROTEUS KILL TEAM, SPECTRUS KILL TEAM"
         }
       ],
       "faction": "Agents of the Imperium",
@@ -13379,8 +13943,16 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Lance",
+          "d": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll."
+        }
+      ],
+      "facAb": null,
       "native": true
     }
   ]

@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "2261-79a5-19d9-1668",
   "catalogueName": "Imperium - Adeptus Astartes - Salamanders",
@@ -51,6 +51,7 @@
         "STERNGUARD VETERAN SQUAD",
         "VANGUARD VETERAN SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -95,6 +96,10 @@
         {
           "n": "Lord of the Pyroclasts",
           "d": "While an enemy unit is engaged with this unit, that enemy unit has -1 OC."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VANGUARD VETERAN SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -120,8 +125,20 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        },
+        {
+          "n": "Transhuman Strategist",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1 CP"
+        }
+      ],
       "native": true
     },
     {
@@ -148,6 +165,7 @@
         "INFERNUS SQUAD",
         "VANGUARD VETERAN SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -204,6 +222,10 @@
         {
           "n": "Seeker of the Unfound",
           "d": "The first time this model is set up on the battlefield, select one objective on the battlefield. While this model is within range of that objective, this model has: - 10 OC. - 5+ Ld. - Feel No Pain 4+."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD WITH MELTA RIFLES, INFERNUS SQUAD, VANGUARD VETERAN SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -229,8 +251,25 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain 6+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        },
+        {
+          "n": "Transhuman Strategist",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1 CP"
+        }
+      ],
       "native": true
     }
   ]

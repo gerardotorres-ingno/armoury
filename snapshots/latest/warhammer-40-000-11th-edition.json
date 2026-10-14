@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "sys-352e-adc2-7639-d610",
   "catalogueName": "Warhammer 40,000 11th Edition",
@@ -71,7 +71,7 @@
       "scope": "force"
     }
   ],
-  "revision": 16,
+  "revision": 17,
   "file": "Warhammer 40,000.json",
   "counts": {
     "total": 4,
@@ -95,6 +95,7 @@
       "ladder": null,
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -139,8 +140,11 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "50mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -155,6 +159,7 @@
       "ladder": null,
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -200,8 +205,11 @@
         "W": "4",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "75x42mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -216,6 +224,7 @@
       "ladder": null,
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -283,8 +292,16 @@
         "W": "18",
         "LD": "6+",
         "OC": "5",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "100mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -299,6 +316,7 @@
       "ladder": null,
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -344,8 +362,11 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     }
   ]

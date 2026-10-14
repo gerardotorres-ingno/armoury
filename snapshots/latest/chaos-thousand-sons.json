@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "1069-10ff-3ba9-873b",
   "catalogueName": "Chaos - Thousand Sons",
@@ -247,6 +247,7 @@
         "TZAANGOR ENLIGHTENED",
         "TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -305,6 +306,10 @@
           "d": "Each time this model attempts a Ritual, add 1 to the Psychic test result."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: RUBRIC MARINES, TZAANGOR ENLIGHTENED, TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS"
+        },
+        {
           "n": "Mortal Sorcery (Aura)",
           "d": "While a friendly Scintillating Legions Psyker unit from your army is within 6\" of and visible to this unit, that Scintillating Legions unit has the Cabal of Sorcerers ability."
         }
@@ -333,8 +338,16 @@
         "W": "6",
         "LD": "6+",
         "OC": "2",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -357,6 +370,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -454,8 +468,20 @@
         "W": "1",
         "LD": "8+",
         "OC": "0",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -480,6 +506,7 @@
       "leads": [
         "Tzaangors"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -1091,6 +1118,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: Tzaangors"
+        },
+        {
           "n": "Fate's Guide",
           "d": "If this unit starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third turn, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting up this unit on the battlefield, treat the current battle round number as being one higher than it actually is."
         },
@@ -1143,8 +1174,25 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -1169,6 +1217,7 @@
       "leads": [
         "Tzaangors"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -1780,6 +1829,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: Tzaangors"
+        },
+        {
           "n": "Bestial Prophet",
           "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
         },
@@ -1837,8 +1890,25 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -1858,6 +1928,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Pintle weapon",
@@ -2050,8 +2121,21 @@
         "W": "18",
         "LD": "6+",
         "OC": "6",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -2074,6 +2158,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -2259,8 +2344,20 @@
         "W": "16",
         "LD": "6+",
         "OC": "5",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -2283,6 +2380,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -2500,8 +2598,20 @@
         "W": "11",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -2524,6 +2634,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -2741,8 +2852,20 @@
         "W": "11",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -2765,6 +2888,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -2916,8 +3040,24 @@
         "W": "10",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -2940,6 +3080,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -2993,8 +3134,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -3017,6 +3166,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3070,8 +3220,20 @@
         "W": "4",
         "LD": "7",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -3091,6 +3253,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3294,8 +3457,24 @@
         "W": "30",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -3318,6 +3497,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3482,8 +3662,20 @@
         "W": "11",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -3506,6 +3698,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3600,8 +3793,21 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -3624,6 +3830,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3715,8 +3922,25 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -3743,6 +3967,7 @@
         "Slaanesh",
         "Tzeentch"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Patron Specialisms",
@@ -4646,6 +4871,10 @@
           "d": "Melee weapons equipped by models in this unit have the [Lance] ability."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: Mounted Daemon units which share one of the following keywords with this model Khorne, Nurgle, Slaanesh, Tzeentch"
+        },
+        {
           "n": "Murderer's Cowl",
           "d": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced."
         },
@@ -4740,8 +4969,41 @@
         "W": "8",
         "LD": "7+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Precision",
+          "d": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "The Shadow of Chaos",
+          "d": "If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: ■ Your deployment zone is always within your army’s Shadow of Chaos. ■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos. ■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos. DAEMONIC MANIFESTATION While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead). DAEMONIC TERROR While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds."
+        },
+        {
+          "n": "Warp Rifts",
+          "d": "Each time a LEGIONES DAEMONICA unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units with which it shares the KHORNE, TZEENTCH, NURGLE or SLAANESH keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
+        }
+      ],
       "native": false
     },
     {
@@ -4768,6 +5030,7 @@
         "Slaanesh",
         "Tzeentch"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Patron Specialisms",
@@ -5671,6 +5934,10 @@
           "d": "While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model, or D3 destroyed models with the Battleline keyword, to that unit."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Infantry Daemon units (excluding Possessed units) which share one of the following keywords with this model Khorne, Nurgle, Slaanesh, Tzeentch"
+        },
+        {
           "n": "Murderer's Cowl",
           "d": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced."
         },
@@ -5766,8 +6033,41 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Precision",
+          "d": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "The Shadow of Chaos",
+          "d": "If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: ■ Your deployment zone is always within your army’s Shadow of Chaos. ■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos. ■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos. DAEMONIC MANIFESTATION While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead). DAEMONIC TERROR While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds."
+        },
+        {
+          "n": "Warp Rifts",
+          "d": "Each time a LEGIONES DAEMONICA unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units with which it shares the KHORNE, TZEENTCH, NURGLE or SLAANESH keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
+        }
+      ],
       "native": false
     },
     {
@@ -5790,6 +6090,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Replace heavy missile launcher",
@@ -6120,8 +6421,16 @@
         "W": "18",
         "LD": "6+",
         "OC": "5",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "160mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -6141,6 +6450,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Carapace weapon",
@@ -6391,8 +6701,21 @@
         "W": "12",
         "LD": "6+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "~60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -6417,6 +6740,7 @@
       "leads": [
         "RUBRIC MARINES"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -6528,6 +6852,10 @@
           "d": "In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: RUBRIC MARINES"
+        },
+        {
           "n": "Mortal Sorcery (Aura)",
           "d": "While a friendly Scintillating Legions Psyker unit from your army is within 6\" of and visible to this unit, that Scintillating Legions unit has the Cabal of Sorcerers ability."
         }
@@ -6554,8 +6882,16 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -6582,6 +6918,7 @@
         "TZAANGOR ENLIGHTENED",
         "TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -6693,6 +7030,10 @@
           "d": "In your Shooting phase, after this model has shot, select one enemy Infantry unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: RUBRIC MARINES, TZAANGOR ENLIGHTENED, TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS"
+        },
+        {
           "n": "Mortal Sorcery (Aura)",
           "d": "While a friendly Scintillating Legions Psyker unit from your army is within 6\" of and visible to this unit, that Scintillating Legions unit has the Cabal of Sorcerers ability."
         }
@@ -6721,8 +7062,16 @@
         "W": "6",
         "LD": "6+",
         "OC": "2",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -6742,6 +7091,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Frontal weapon",
@@ -6995,8 +7345,21 @@
         "W": "24",
         "LD": "6+",
         "OC": "8",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -7016,6 +7379,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7389,8 +7753,21 @@
         "W": "24",
         "LD": "6+",
         "OC": "8",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -7410,6 +7787,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Door weapons",
@@ -7578,8 +7956,25 @@
         "W": "18",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -7606,6 +8001,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -7682,8 +8078,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -7706,6 +8110,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Arm weapons",
@@ -7857,8 +8262,16 @@
         "W": "12",
         "LD": "6+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -7881,6 +8294,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Missile launcher",
@@ -8207,8 +8621,16 @@
         "W": "8",
         "LD": "6+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -8231,6 +8653,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Mouth weapon",
@@ -8332,8 +8755,20 @@
         "W": "12",
         "LD": "6+",
         "OC": "0",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -8356,6 +8791,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -8500,8 +8936,16 @@
         "W": "14",
         "LD": "6+",
         "OC": "0",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -8524,6 +8968,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapons",
@@ -8630,8 +9075,16 @@
         "W": "10",
         "LD": "6+",
         "OC": "0",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -8654,6 +9107,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Patron Specialisms",
@@ -9581,6 +10035,10 @@
           "d": "This model has the Feel No Pain 3+ ability against Psychic Attacks."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: Bloodcrushers"
+        },
+        {
           "n": "Eldritch Flames",
           "d": "In your Shooting phase, after this model has shot, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover."
         },
@@ -9654,8 +10112,45 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "~32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Precision",
+          "d": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "The Shadow of Chaos",
+          "d": "If your Army Faction is LEGIONES DAEMONICA, certain areas of the battlefield are considered to be within your army’s Shadow of Chaos, as follows: ■ Your deployment zone is always within your army’s Shadow of Chaos. ■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Shadow of Chaos. ■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Shadow of Chaos. DAEMONIC MANIFESTATION While a friendly LEGIONES DAEMONICA unit is within your army’s Shadow of Chaos, each time that unit makes a battle-shock roll, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit heals D3 wounds (if that unit is a BATTLELINE unit and that roll is successful, up to D3 destroyed models (excluding CHARACTER models) can be returned to that unit instead). DAEMONIC TERROR While an enemy unit is within your army’s Shadow of Chaos and/or it is within 6\" of one or more BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units from your army, each time that unit takes a Battle-shock test, subtract 1 from that test and, if that test is failed, that enemy unit suffers D3 mortal wounds."
+        },
+        {
+          "n": "Warp Rifts",
+          "d": "Each time a LEGIONES DAEMONICA unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within your army’s Shadow of Chaos, and/or if it is set up wholly within 6\" of one or more friendly BLOODTHIRSTER, GREAT UNCLEAN ONE, KAIROS FATEWEAVER, KEEPER OF SECRETS, LORD OF CHANGE, ROTIGUS, SHALAXI HELBANE or SKARBRAND units with which it shares the KHORNE, TZEENTCH, NURGLE or SLAANESH keyword, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
+        }
+      ],
       "native": false
     },
     {
@@ -9680,6 +10175,7 @@
       "leads": [
         "RUBRIC MARINES"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -9782,6 +10278,10 @@
           "d": "Once per turn, you can change the result of one Hit roll, one Wound roll or one saving throw made for this model to an unmodified 6."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: RUBRIC MARINES"
+        },
+        {
           "n": "Mortal Sorcery (Aura)",
           "d": "While a friendly Scintillating Legions Psyker unit from your army is within 6\" of and visible to this unit, that Scintillating Legions unit has the Cabal of Sorcerers ability."
         }
@@ -9808,8 +10308,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -9831,6 +10339,7 @@
         "max": 1
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -9919,8 +10428,20 @@
         "W": "20",
         "LD": "6+",
         "OC": "5",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "100mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -9940,6 +10461,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -10396,8 +10918,21 @@
         "W": "18",
         "LD": "6+",
         "OC": "6",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -10417,6 +10952,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -10699,8 +11235,21 @@
         "W": "16",
         "LD": "6+",
         "OC": "5",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -10720,6 +11269,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -10951,8 +11501,21 @@
         "W": "16",
         "LD": "6+",
         "OC": "5",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -10972,6 +11535,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -11241,8 +11805,21 @@
         "W": "12",
         "LD": "6+",
         "OC": "4",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "~60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -11265,6 +11842,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -11402,8 +11980,20 @@
         "W": "18",
         "LD": "6+",
         "OC": "5",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "100mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -11428,6 +12018,7 @@
       "leads": [
         "Rubric Marines"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -12043,6 +12634,10 @@
           "d": "In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds, on a 2+, you can return 1 destroyed Bodyguard model to that unit."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: Rubric Marines"
+        },
+        {
           "n": "Mortal Sorcery (Aura)",
           "d": "While a friendly Scintillating Legions Psyker unit from your army is within 6\" of and visible to this unit, that Scintillating Legions unit has the Cabal of Sorcerers ability."
         },
@@ -12096,8 +12691,21 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -12119,6 +12727,7 @@
         "max": 1
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -12219,8 +12828,25 @@
         "W": "16",
         "LD": "5+",
         "OC": "6",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "100mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -12240,6 +12866,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Front sponsons",
@@ -12464,8 +13091,21 @@
         "W": "30",
         "LD": "6+",
         "OC": "12",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -12488,6 +13128,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Head weapons",
@@ -12596,8 +13237,16 @@
         "W": "12",
         "LD": "6+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -12620,6 +13269,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -12723,8 +13373,20 @@
         "W": "13",
         "LD": "6+",
         "OC": "4",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -12747,6 +13409,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Equipment",
@@ -12898,8 +13561,16 @@
         "W": "1",
         "LD": "8+",
         "OC": "0",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -12919,6 +13590,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapon",
@@ -13076,8 +13748,21 @@
         "W": "6",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -13097,6 +13782,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -13513,8 +14199,25 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "~60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        },
+        {
+          "n": "Conversion",
+          "d": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit."
+        }
+      ],
       "native": false
     },
     {
@@ -13541,6 +14244,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "4-9 Rubric Marines",
@@ -13768,8 +14472,16 @@
         "W": "2",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -13796,6 +14508,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapon",
@@ -14005,8 +14718,21 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -14033,6 +14759,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -14088,8 +14815,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "32mm Flying"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": null,
       "native": false
     },
     {
@@ -14116,6 +14851,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "2-4 Sekhetar Robots",
@@ -14250,8 +14986,24 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Psychic",
+          "d": "Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules)."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -14271,6 +15023,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -14461,8 +15214,21 @@
         "W": "14",
         "LD": "6+",
         "OC": "4",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -14482,6 +15248,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -14672,8 +15439,21 @@
         "W": "14",
         "LD": "6+",
         "OC": "4",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -14693,6 +15473,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -14883,8 +15664,21 @@
         "W": "14",
         "LD": "6+",
         "OC": "4",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -14904,6 +15698,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -15035,8 +15830,25 @@
         "W": "40",
         "LD": "6+",
         "OC": "0",
-        "InSv": "5+ (Ranged)"
+        "InSv": "5+ (Ranged)",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -15061,6 +15873,7 @@
       "leads": [
         "RUBRIC MARINES"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -15164,6 +15977,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: RUBRIC MARINES"
+        },
+        {
           "n": "Twisted Sorceries (Psychic)",
           "d": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
         },
@@ -15197,8 +16014,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -15223,6 +16048,7 @@
       "leads": [
         "SCARAB OCCULT TERMINATORS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Weapon",
@@ -15308,6 +16134,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: SCARAB OCCULT TERMINATORS"
+        },
+        {
           "n": "Marked by Fate (Psychic)",
           "d": "At the start of your Shooting phase, select one enemy unit that is visible to this Psyker model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
         },
@@ -15341,8 +16171,21 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -15362,6 +16205,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Frontal weapon",
@@ -15604,8 +16448,21 @@
         "W": "18",
         "LD": "6+",
         "OC": "6",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -15625,6 +16482,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Nose weapon",
@@ -15821,8 +16679,25 @@
         "W": "18",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Hover",
+          "d": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -15842,6 +16717,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapons",
@@ -15979,8 +16855,25 @@
         "W": "14",
         "LD": "6+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -16000,6 +16893,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Pintle weapon",
@@ -16192,8 +17086,21 @@
         "W": "18",
         "LD": "6+",
         "OC": "6",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -16220,6 +17127,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapons",
@@ -16342,8 +17250,11 @@
         "W": "2",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -16370,6 +17281,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -16446,8 +17358,11 @@
         "W": "2",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": null,
       "native": true
     },
     {
@@ -16474,6 +17389,7 @@
         "TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS",
         "TZAANGORS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -16517,6 +17433,10 @@
           "d": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: TZAANGOR ENLIGHTENED, TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS, TZAANGORS"
+        },
+        {
           "n": "Mortal Sorcery (Aura)",
           "d": "While a friendly Scintillating Legions Psyker unit from your army is within 6\" of and visible to this unit, that Scintillating Legions unit has the Cabal of Sorcerers ability."
         }
@@ -16544,8 +17464,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Cabal of Sorcerers",
+          "d": "If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test by following the sequence below: 1. Roll 2D6 2. Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled during this test, that model's unit suffers D3 mortal wounds. 3. If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects."
+        }
+      ],
       "native": true
     },
     {
@@ -16572,6 +17500,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9-19 Tzaangors",
@@ -16743,8 +17672,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": null,
       "native": true
     },
     {
@@ -16764,6 +17701,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -16892,8 +17830,21 @@
         "W": "11",
         "LD": "6+",
         "OC": "3",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     },
     {
@@ -16913,6 +17864,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -17022,8 +17974,21 @@
         "W": "12",
         "LD": "6+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
       "native": false
     }
   ]

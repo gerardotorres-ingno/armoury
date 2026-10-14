@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "a55f-b7b3-6c65-a05f",
   "catalogueName": "Xenos - Orks",
@@ -289,7 +289,7 @@
     }
   ],
   "allyCaps": [],
-  "revision": 7,
+  "revision": 8,
   "file": "Orks.json",
   "counts": {
     "total": 73,
@@ -321,6 +321,10 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "BOYZ",
+        "NOBZ"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -428,8 +432,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "3",
-        "InSv": "\n"
+        "InSv": "\n",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -452,6 +464,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -578,8 +591,29 @@
         "W": "16",
         "LD": "7+",
         "OC": "5",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        },
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -606,6 +640,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9-18 Beast Snagga Boyz",
@@ -741,8 +776,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -767,6 +810,7 @@
       "leads": [
         "Beast Snagga Boyz"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -825,6 +869,10 @@
           "d": "This unit's attacks have +1 to hit rolls."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - Beast Snagga Boyz"
+        },
+        {
           "n": "Keep Huntin'! (Once per battle round, per army)",
           "d": "In your Movement phase, at the start or end of this unit's move, you can select one friendly BEAST SNAGGA unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
         }
@@ -849,8 +897,25 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain 6+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        },
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        }
+      ],
       "native": true
     },
     {
@@ -873,6 +938,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -1036,8 +1102,25 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "80mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain 5+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        },
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -1067,6 +1150,7 @@
         "NOBZ",
         "TANKBUSTAS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Power Klaw",
@@ -1201,6 +1285,10 @@
           "d": "In your Movement phase, when this unit is selected to make an advance move, you can use this ability. If you do: - This unit can change that advance roll to a 6. - This unit can move through all types of model. - When this unit ends that advance move, make a hazard roll for each model in this unit."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - FLASH GITZ - MEK GUNZ - NOBZ - TANKBUSTAS"
+        },
+        {
           "n": "More Dakka",
           "d": "This unit's ranged attacks have: - [IGNORES COVER]. - If this unit is riled up, [SUSTAINED HITS 1]."
         }
@@ -1224,8 +1312,16 @@
         "W": "6",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "50mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -1248,6 +1344,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1321,8 +1418,21 @@
         "W": "11",
         "LD": "7+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "90mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -1348,6 +1458,7 @@
         "MEGANOBZ",
         "MEK GUNZ"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -1573,6 +1684,10 @@
           "d": "In your Command phase, this unit heals 3 wounds. *Place a Grot Oiler token next to the unit, removing it when this ability is used.*"
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - MEGANOBZ - MEK GUNZ"
+        },
+        {
           "n": "More Dakka",
           "d": "This unit's ranged attacks have: - [IGNORES COVER]. - If this unit is riled up, [SUSTAINED HITS 1]."
         },
@@ -1602,8 +1717,16 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -1631,6 +1754,7 @@
         "NOBZ",
         "TANKBUSTAS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -1689,6 +1813,10 @@
           "d": "While this model is within 3\" of a friendly ORKS INFANTRY unit (excluding BIG MEK WITH SHOKK ATTACK GUN units), this model has Lone Operative."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - BOYZ - MEK GUNZ - NOBZ - TANKBUSTAS"
+        },
+        {
           "n": "More Dakka",
           "d": "This unit's ranged attacks have: - [IGNORES COVER]. - If this unit is riled up, [SUSTAINED HITS 1]."
         }
@@ -1713,8 +1841,16 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -1737,6 +1873,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -1893,8 +2030,29 @@
         "W": "12",
         "LD": "7+",
         "OC": "3",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -1917,6 +2075,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1996,8 +2155,25 @@
         "W": "12",
         "LD": "7+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -2020,6 +2196,11 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "NOBZ"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -2127,8 +2308,16 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -2151,6 +2340,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -2257,8 +2447,25 @@
         "W": "12",
         "LD": "7+",
         "OC": "-",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -2280,6 +2487,7 @@
       "leads": [
         "KOMMANDOS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -2324,6 +2532,10 @@
         {
           "n": "Kunnin’ Infiltrator",
           "d": "At the end of your opponent's Fight phase, if each model in this unit is hidden and unengaged, you can place this unit in strategic reserves."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - KOMMANDOS"
         }
       ],
       "faction": "Orks",
@@ -2347,8 +2559,29 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -2370,6 +2603,7 @@
       "leads": [
         "STORMBOYZ"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -2414,6 +2648,10 @@
         {
           "n": "Plummeting Descent",
           "d": "If this unit made an ingress move this turn, this unit can re-roll charge rolls."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - STORMBOYZ"
         }
       ],
       "faction": "Orks",
@@ -2437,8 +2675,25 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Feel No Pain 6+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -2465,6 +2720,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Special Weapons",
@@ -2822,8 +3078,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -2846,6 +3110,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "5 Breaka Boyz",
@@ -3026,8 +3291,16 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -3054,6 +3327,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Unit Composition",
@@ -3221,8 +3495,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -3245,6 +3527,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3371,8 +3654,25 @@
         "W": "12",
         "LD": "7+",
         "OC": "-",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -3392,6 +3692,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3456,8 +3757,29 @@
         "W": "3",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -3477,6 +3799,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3539,8 +3862,29 @@
         "W": "5",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -3563,6 +3907,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3649,8 +3994,25 @@
         "W": "12",
         "LD": "7+",
         "OC": "-",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -3673,6 +4035,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Big Shoota",
@@ -3884,8 +4247,21 @@
         "W": "8",
         "LD": "7+",
         "OC": "3",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -3913,6 +4289,7 @@
         "WARBIKERS",
         "WARBUGGIES"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -3995,6 +4372,10 @@
         {
           "n": "Fuel-mixa Grot",
           "d": "This unit has +1 to advance rolls."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - NOBZ ON WARBIKES - SKORCHAS - WARBIKERS - WARBUGGIES"
         }
       ],
       "faction": "Orks",
@@ -4017,8 +4398,25 @@
         "W": "9",
         "LD": "6+",
         "OC": "3",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "150x95mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        },
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -4045,6 +4443,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "3-6 Deffkoptas",
@@ -4269,8 +4668,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "75x42mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -4297,6 +4709,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -4385,8 +4798,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -4409,6 +4830,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Kannon",
@@ -4518,8 +4940,33 @@
         "W": "30",
         "LD": "7+",
         "OC": "12",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Super-Heavy Walker",
+          "d": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*"
+        },
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -4539,6 +4986,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -4635,8 +5083,20 @@
         "W": "16",
         "LD": "6+",
         "OC": "4",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "80mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        },
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        }
+      ],
       "native": true
     },
     {
@@ -4659,6 +5119,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -4832,8 +5293,29 @@
         "W": "20",
         "LD": "7+",
         "OC": "8",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "170x109mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Super-Heavy Walker",
+          "d": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*"
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -4860,6 +5342,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -4923,8 +5406,25 @@
         "W": "1",
         "LD": "8+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -4947,6 +5447,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear Options",
@@ -5125,8 +5626,25 @@
         "W": "12",
         "LD": "8+",
         "OC": "4",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -5153,6 +5671,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Grot Tanks",
@@ -5545,8 +6064,21 @@
         "W": "5",
         "LD": "8+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -5566,6 +6098,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -5632,8 +6165,29 @@
         "W": "5",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "-"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -5656,6 +6210,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -5882,8 +6437,25 @@
         "W": "16",
         "LD": "7+",
         "OC": "5",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -5906,6 +6478,7 @@
         "Boyz",
         "Nobz"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -6783,6 +7356,10 @@
           "d": "Improve this model's Leadership characteristic by 1 for every 5 models in this unit."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - Boyz - Nobz"
+        },
+        {
           "n": "Rokkit Pack",
           "d": "Hordeboss only. Change this model's Move characteristic to 12\", add the Jump Pack and Fly keywords, and it gains the Deep Strike ability. Replace the list of units this model can be attached to: Stormboyz"
         },
@@ -6842,8 +7419,29 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Crucible",
+          "d": "A Character created using Crucible rules has the Crucible ability. Your army may include up to three units with the Crucible ability and these units cannot be given Enhancements."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -6866,6 +7464,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7016,8 +7615,33 @@
         "W": "16",
         "LD": "7+",
         "OC": "5",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "170x109mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Feel No Pain 5+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -7039,6 +7663,7 @@
       "leads": [
         "FLASH GITZ"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -7105,6 +7730,10 @@
         {
           "n": "Ded Glowy Ammo (Aura)",
           "d": "Enemy units within 6\" of this model have -1 T."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - FLASH GITZ"
         }
       ],
       "faction": "Orks",
@@ -7126,8 +7755,16 @@
         "W": "6",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -7150,6 +7787,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -7317,8 +7955,33 @@
         "W": "16",
         "LD": "7+",
         "OC": "5",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "170x109mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Feel No Pain 5+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Unstable Energies",
+          "d": "ORKS PSYKER units with this ability have a psyker level of 1 or higher, specified in that unit's abilities. Each psychic ability has a psychic level of 1 or higher, specified in that ability's name. In a battle round, a friendly ORKS PSYKER unit can use a number of psychic abilities whose total psychic level does not exceed that PSYKER unit's psyker level."
+        },
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -7341,6 +8004,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Big Shootas",
@@ -7639,8 +8303,29 @@
         "W": "24",
         "LD": "6+",
         "OC": "10",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -7667,6 +8352,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -7746,8 +8432,21 @@
         "W": "5",
         "LD": "8+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -7770,6 +8469,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 Kommandos",
@@ -8026,8 +8726,25 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -8050,6 +8767,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -8248,8 +8966,25 @@
         "W": "16",
         "LD": "7+",
         "OC": "5",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -8276,6 +9011,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Unit Composition",
@@ -8432,8 +9168,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -8459,6 +9203,7 @@
         "NOBZ",
         "TANKBUSTAS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -8515,6 +9260,10 @@
         {
           "n": "One Scalpel Short of a Medpack",
           "d": "When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to declare a charge."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - BOYZ - BURNA BOYZ - LOOTAS - NOBZ - TANKBUSTAS"
         }
       ],
       "faction": "Orks",
@@ -8537,8 +9286,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain 5+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -8573,6 +9335,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "2-6 Meganobz",
@@ -8769,8 +9532,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -8793,6 +9564,13 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "BOYZ",
+        "FLASH GITZ",
+        "MEK GUNZ",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -8878,8 +9656,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -8906,6 +9692,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "1-3 Mek Gunz",
@@ -9150,8 +9937,16 @@
         "W": "6",
         "LD": "8+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -9174,6 +9969,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": null,
       "composition": [
@@ -9215,8 +10011,21 @@
         "W": "10",
         "LD": "7+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -9239,6 +10048,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -9401,8 +10211,29 @@
         "W": "20",
         "LD": "7+",
         "OC": "8",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "170x109mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Super-Heavy Walker",
+          "d": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*"
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -9422,6 +10253,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -9483,7 +10315,7 @@
       "abilities": [
         {
           "n": "Beast Snagga Following",
-          "d": "While this unit is within 3\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACER units), this unit has Lone Operative."
+          "d": "While this unit is within 3\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative."
         },
         {
           "n": "One Last Kill",
@@ -9513,8 +10345,21 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "80mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain 5+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -9536,6 +10381,7 @@
       "leads": [
         "MEGANOBZ"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -9615,6 +10461,10 @@
           "d": "In your opponent's Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can: - Make a normal move of up to D6\". - <ins>Or:</ins> If this unit is riled up, make a normal move of up to 5\"."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - MEGANOBZ"
+        },
+        {
           "n": "Intimidating Motivation (Once per battle round, per army)",
           "d": "In your Movement phase, at the start or end of this unit's move, you can select one friendly ORKS unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
         }
@@ -9640,8 +10490,25 @@
         "W": "8",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "60mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        },
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        }
+      ],
       "native": true
     },
     {
@@ -9668,6 +10535,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "5-10 Nobz",
@@ -9889,8 +10757,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -9913,6 +10789,10 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "BEAST SNAGGA BOYZ",
+        "SQUIGHOG BOYZ"
+      ],
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -9991,8 +10871,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -10015,6 +10903,13 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "BOYZ",
+        "BREAKA BOYZ",
+        "FLASH GITZ",
+        "NOBZ",
+        "TANKBUSTAS"
+      ],
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -10099,8 +10994,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -10127,6 +11030,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -10195,8 +11099,21 @@
         "W": "9",
         "LD": "7+",
         "OC": "3",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "150x95mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -10219,6 +11136,9 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "GRETCHIN"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -10326,8 +11246,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -10354,6 +11282,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -10473,8 +11402,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "90x52.5mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -10497,6 +11434,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -10680,8 +11618,29 @@
         "W": "30",
         "LD": "6+",
         "OC": "12",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Super-Heavy Walker",
+          "d": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*"
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -10707,6 +11666,7 @@
         "max": 3
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Kustom Choppa",
@@ -10826,8 +11786,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -10850,6 +11823,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Tankbustas",
@@ -11041,8 +12015,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -11065,6 +12047,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Dual Big Shoota",
@@ -11223,8 +12206,25 @@
         "W": "10",
         "LD": "7+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -11246,6 +12246,7 @@
       "leads": [
         "Gretchin"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -12123,6 +13124,10 @@
           "d": "While this model is leading a unit, models in that unit have the Infiltrators and Stealth abilities."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - Gretchin"
+        },
+        {
           "n": "Rokkit Pack",
           "d": "Hordeboss only. Change this model's Move characteristic to 12\", add the Jump Pack and Fly keywords, and it gains the Deep Strike ability. Replace the list of units this model can be attached to: Stormboyz"
         },
@@ -12183,8 +13188,37 @@
         "W": "3",
         "LD": "8+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "~25mm"
       },
+      "coreAb": [
+        {
+          "n": "Crucible",
+          "d": "A Character created using Crucible rules has the Crucible ability. Your army may include up to three units with the Crucible ability and these units cannot be given Enhancements."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -12211,6 +13245,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -12312,8 +13347,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "2",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "75x42mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -12340,6 +13383,7 @@
         "BREAKA BOYZ",
         "NOBZ"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Kustom Choppa",
@@ -12520,6 +13564,10 @@
           "d": "In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model's ranged attacks have +1 to hit rolls. *Place a Boss' Ammo Runt token next to the unit, removing it when this ability is used.*"
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - NOBZ"
+        },
+        {
           "n": "Intimidating Motivation (Once per battle round, per army)",
           "d": "In your Movement phase, at the start or end of this unit's move, you can select one friendly ORKS unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
         }
@@ -12543,8 +13591,20 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        },
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -12569,6 +13629,7 @@
       "leads": [
         "MEGANOBZ"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -12627,6 +13688,10 @@
           "d": "When this unit ends a charge move, you can select one enemy unit engaged with this unit. If you do, roll one D6 for each model in this unit engaged with that enemy unit: - For each 3+, that enemy unit suffers 1 mortal wound."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - MEGANOBZ"
+        },
+        {
           "n": "Intimidating Motivation (Once per battle round, per army)",
           "d": "In your Movement phase, at the start or end of this unit's move, you can select one friendly ORKS unit within 6\" of this unit. That unit: - Is no longer battle-shocked. - Is riled up until the start of your next turn."
         }
@@ -12651,8 +13716,20 @@
         "W": "7",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        },
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -12677,6 +13754,7 @@
       "leads": [
         "WARBIKERS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -12813,6 +13891,10 @@
         {
           "n": "Get Back in Da Race",
           "d": "In your Movement phase, at the start or end of this unit's move, you can select one friendly SPEED FREEKS unit within 6\" of this unit. That unit (and any units embarked within that unit): - Is no longer battle-shocked. - Is riled up until the start of your next turn."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - WARBIKERS"
         }
       ],
       "faction": "Orks",
@@ -12835,8 +13917,20 @@
         "W": "7",
         "LD": "6+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "75x42mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Da Boss",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP."
+        },
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -12863,6 +13957,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Warbuggies (1-2)",
@@ -13001,8 +14096,21 @@
         "W": "9",
         "LD": "7+",
         "OC": "3",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -13026,6 +14134,7 @@
         "Nobz",
         "Gretchin"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -13903,6 +15012,10 @@
           "d": "Each time this model attacks with a Psychic weapon, until the end of the phase, improve the Attacks, Strength and Damage characteristics of that weapon by 1 for every 5 models in this unit. While this unit contains 10 or more models, those weapons have the [HAZARDOUS] ability."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: - Boyz - Nobz - Gretchin"
+        },
+        {
           "n": "Rokkit Pack",
           "d": "Hordeboss only. Change this model's Move characteristic to 12\", add the Jump Pack and Fly keywords, and it gains the Deep Strike ability. Replace the list of units this model can be attached to: Stormboyz"
         },
@@ -13962,8 +15075,33 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Crucible",
+          "d": "A Character created using Crucible rules has the Crucible ability. Your army may include up to three units with the Crucible ability and these units cannot be given Enhancements."
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -13990,6 +15128,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -14098,8 +15237,16 @@
         "W": "7",
         "LD": "7+",
         "OC": "3",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "105x70mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -14122,6 +15269,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -14300,8 +15448,25 @@
         "W": "12",
         "LD": "7+",
         "OC": "-",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "150x95mm"
       },
+      "coreAb": [
+        {
+          "n": "Damaged",
+          "d": "This ability always takes the form Damaged X. While a model's remaining wounds are equal to or less than X, that model is damaged: - While a model is damaged, that model's attacks have -1 to hit rolls."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -14321,6 +15486,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -14408,8 +15574,29 @@
         "W": "10",
         "LD": "6+",
         "OC": "3",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "120x92mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        },
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -14432,6 +15619,10 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "BEAST SNAGGA BOYZ",
+        "BOYZ"
+      ],
       "options": [
         {
           "n": "Boarding Actiions Upgrades",
@@ -14513,8 +15704,25 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Unstable Energies",
+          "d": "ORKS PSYKER units with this ability have a psyker level of 1 or higher, specified in that unit's abilities. Each psychic ability has a psychic level of 1 or higher, specified in that ability's name. In a battle round, a friendly ORKS PSYKER unit can use a number of psychic abilities whose total psychic level does not exceed that PSYKER unit's psyker level."
+        },
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     },
     {
@@ -14536,6 +15744,7 @@
       "leads": [
         "Gretchin"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -14576,6 +15785,10 @@
         {
           "n": "Super Runts",
           "d": "- This unit is riled up. - This unit's Scavenged Shivs weapons have +1 A, WS and S."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: - Gretchin"
         }
       ],
       "faction": "Orks",
@@ -14598,8 +15811,16 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": "6+"
+        "InSv": "6+",
+        "Base": "50mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Waaagh!",
+          "d": ""
+        }
+      ],
       "native": true
     }
   ]

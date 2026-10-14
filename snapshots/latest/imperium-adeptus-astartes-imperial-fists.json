@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "5d6e-fd3-330a-11dd",
   "catalogueName": "Imperium - Adeptus Astartes - Imperial Fists",
@@ -45,6 +45,7 @@
         "TERMINATOR ASSAULT SQUAD",
         "TERMINATOR SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -75,6 +76,10 @@
           "d": "Attacks that target this unit have -1 to hit rolls."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD"
+        },
+        {
           "n": "Rampart",
           "d": "(Once per battle, per army) At the start of any phase, you can use this ability. If you do, this model has 2+ InSv until the end of the phase."
         }
@@ -101,8 +106,25 @@
         "W": "7",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Deep Strike",
+          "d": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        },
+        {
+          "n": "Transhuman Strategist",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1 CP"
+        }
+      ],
       "native": true
     },
     {
@@ -127,6 +149,7 @@
         "ERADICATOR SQUAD WITH MELTA RIFLES",
         "HEAVY INTERCESSOR SQUAD"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -171,6 +194,10 @@
         {
           "n": "Siege Captain",
           "d": "This model’s attacks that target a Fortification/Monster/Vehicle unit have +2 S, AP and D."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD WITH HEAVY BOLTERS, ERADICATOR SQUAD WITH MELTA RIFLES, HEAVY INTERCESSOR SQUAD"
         }
       ],
       "faction": "Adeptus Astartes",
@@ -195,8 +222,25 @@
         "W": "6",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        },
+        {
+          "n": "Transhuman Strategist",
+          "d": "At the start of the battle round, if a model with this ability is your WARLORD, gain 1 CP"
+        }
+      ],
       "native": true
     }
   ]

@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "f616-3f08-ee8e-3349",
   "catalogueName": "Xenos - Leagues of Votann",
@@ -244,6 +244,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -330,8 +331,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -353,6 +367,7 @@
       "leads": [
         "CTHONIAN BESERKS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -407,6 +422,10 @@
         {
           "n": "Relentless Avalanche",
           "d": "You can target this model's unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
+        },
+        {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: CTHONIAN BESERKS"
         }
       ],
       "faction": "Leagues of Votann",
@@ -429,8 +448,25 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -456,6 +492,7 @@
         "BRÔKHYR THUNDERKYN",
         "HEARTHKYN WARRIORS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -572,6 +609,10 @@
           "d": "While this unit is within 3\" of one or more friendly Leagues of Votann Vehicle or Ironkin Steeljacks units, if this unit is not an attached unit, it has the Lone Operative ability."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units:BRÔKHYR THUNDERKYN, HEARTHKYN WARRIORS"
+        },
+        {
           "n": "Unit Composition",
           "d": "If this unit’s Brôkhyr Iron‑master model is ever destroyed, all of this unit’s remaining E‑COG models are also destroyed. While embarking within a Transport and while embarked within a Transport, each E‑COG model takes up the space of 0 models."
         },
@@ -602,8 +643,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -630,6 +679,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapon",
@@ -752,8 +802,20 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        },
+        {
+          "n": "Conversion (Thunderkyn)",
+          "d": "Each time an attack made with this weapon targets an enemy unit that is not within 12\", an unmodified Hit roll of 4+ scores a Critical Hit."
+        }
+      ],
       "native": true
     },
     {
@@ -773,6 +835,7 @@
       ],
       "cap": null,
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -852,8 +915,25 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Lone Operative",
+          "d": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+        },
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -880,6 +960,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "5 - 10 Beserks",
@@ -1061,8 +1142,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "28.5mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -1085,6 +1179,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Main weapon",
@@ -1203,8 +1298,16 @@
         "W": "6",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -1229,6 +1332,7 @@
       "leads": [
         "EINHYR HEARTHGUARD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -1348,6 +1452,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: EINHYR HEARTHGUARD"
+        },
+        {
           "n": "Exemplar of the Einhyr",
           "d": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit."
         },
@@ -1387,8 +1495,16 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -1415,6 +1531,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Ranged weapon",
@@ -1687,8 +1804,16 @@
         "W": "2",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -1713,6 +1838,7 @@
       "leads": [
         "HEARTHKYN WARRIORS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1790,6 +1916,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following unit: HEARTHKYN WARRIORS"
+        },
+        {
           "n": "Fortify (Psychic)",
           "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
         },
@@ -1823,8 +1953,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -1847,6 +1985,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Hearthkyn Warriors",
@@ -2217,8 +2356,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "28.5mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain 6+",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -2241,6 +2393,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -2498,8 +2651,21 @@
         "W": "16",
         "LD": "7+",
         "OC": "5",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -2526,6 +2692,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "3 - 6 Pioneers",
@@ -2754,8 +2921,21 @@
         "W": "3",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "90x52.5mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -2778,6 +2958,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 Hernkyn Yaegir",
@@ -2972,8 +3153,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "28.5mm"
       },
+      "coreAb": [
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -3000,6 +3194,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Weapons",
@@ -3129,8 +3324,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -3157,6 +3360,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "2-5 Ironkin Steeljacks",
@@ -3295,8 +3499,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "~40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -3322,6 +3534,7 @@
         "EINHYR HEARTHGUARD",
         "HEARTHKYN WARRIORS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Crest",
@@ -3465,6 +3678,10 @@
           "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: EINHYR HEARTHGUARD, HEARTHKYN WARRIORS"
+        },
+        {
           "n": "Seized Opportunity",
           "d": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, gain 1YP."
         },
@@ -3499,8 +3716,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -3523,6 +3748,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3652,8 +3878,29 @@
         "W": "7",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "105x70mm"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Firing Deck",
+          "d": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -3680,6 +3927,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -3832,8 +4080,25 @@
         "W": "7",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "105x70mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -3859,6 +4124,7 @@
         "Einhyr Hearthguard",
         "Hearthkyn Warriors"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -4643,6 +4909,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Einhyr Hearthguard, Hearthkyn Warriors"
+        },
+        {
           "n": "Seized Opportunity",
           "d": "Once per phase, one model from your army with this ability can use it when its unit destroys an enemy unit. If it does, you gain 1YP."
         },
@@ -4690,8 +4960,37 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        },
+        {
+          "n": "Conversion (Thunderkyn)",
+          "d": "Each time an attack made with this weapon targets an enemy unit that is not within 12\", an unmodified Hit roll of 4+ scores a Critical Hit."
+        }
+      ],
       "native": true
     },
     {
@@ -4716,6 +5015,7 @@
       "leads": [
         "Hearthkyn Warriors"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -5500,6 +5800,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Hearthkyn Warriors"
+        },
+        {
           "n": "Grimnyr's Regard",
           "d": "Once per battle, at the start of any phase, you can select one friendly Leagues of Votann unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
         },
@@ -5548,8 +5852,37 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        },
+        {
+          "n": "Conversion (Thunderkyn)",
+          "d": "Each time an attack made with this weapon targets an enemy unit that is not within 12\", an unmodified Hit roll of 4+ scores a Critical Hit."
+        }
+      ],
       "native": true
     },
     {
@@ -5575,6 +5908,7 @@
         "IRONKIN STEELJACKS WITH HEAVY VOLKANITE DISINTEGRATORS",
         "IRONKIN STEELJACKS WITH MELEE WEAPONS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -5618,6 +5952,10 @@
           "d": "Once per battle round, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, you can use this ability. If you do, that use of that stratagem is ‑1 CP."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: IRONKIN STEELJACKS WITH HEAVY VOLKANITE DISINTEGRATORS, IRONKIN STEELJACKS WITH MELEE WEAPONS"
+        },
+        {
           "n": "Guerrilla Adepts",
           "d": "In your Shooting phase, just after this unit is selected to shoot, this unit can use this ability. If it does, select one enemy unit (excluding Monsters and Vehicles). Until the end of the phase, attacks made by models in this unit can only attack that enemy unit (and only if it is an eligible target) and, after resolving those attacks, if one or more of those attacks hit that enemy unit, until the start of your next Shooting phase, that enemy unit is assailed (this simply labels that unit for the purposes of this ability and some Enhancements or Stratagems). If that unit is already assailed, until the start of your next Shooting phase, it is also pinned. While a unit is pinned, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it."
         }
@@ -5640,8 +5978,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -5664,6 +6010,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Wargear",
@@ -5851,8 +6198,25 @@
         "W": "9",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "Hull"
       },
+      "coreAb": [
+        {
+          "n": "Deadly Demise",
+          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     },
     {
@@ -5878,6 +6242,7 @@
         "Ironkin Steeljacks with Heavy Volkanite Disintegrators",
         "Ironkin Steeljacks with Melee Weapons"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Specialisms",
@@ -6662,6 +7027,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: Ironkin Steeljacks with Heavy Volkanite Disintegrators, Ironkin Steeljacks with Melee Weapons"
+        },
+        {
           "n": "Forgewrought Skill",
           "d": "Each time this model makes an attack, you can re-roll the Hit roll."
         },
@@ -6710,8 +7079,37 @@
         "W": "5",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Infiltrators",
+          "d": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        },
+        {
+          "n": "Conversion (Thunderkyn)",
+          "d": "Each time an attack made with this weapon targets an enemy unit that is not within 12\", an unmodified Hit roll of 4+ scores a Critical Hit."
+        }
+      ],
       "native": true
     },
     {
@@ -6736,6 +7134,7 @@
         "EINHYR HEARTHGUARD",
         "HEARTHKYN WARRIORS"
       ],
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -6778,6 +7177,10 @@
           "d": "Once per turn, you can spend 1YP to change one Hit roll, one Wound roll or one saving throw made for this model to an unmodified 6."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: EINHYR HEARTHGUARD, HEARTHKYN WARRIORS"
+        },
+        {
           "n": "Grim Efficiency",
           "d": "Once per battle round, when a friendly Leagues of Votann unit within 12\" of this model is targeted with a Stratagem, this model can use this ability. If it does, reduce the CP cost of that Stratagem by 1CP."
         },
@@ -6809,8 +7212,16 @@
         "W": "5",
         "LD": "6+",
         "OC": "1",
-        "InSv": "4+"
+        "InSv": "4+",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Prioritised Efficiency",
+          "d": "If your Army Faction is Leagues of Votann, Leagues of Votann units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those Leagues of Votann units have will change depending on how many Yield points (YP) you currently have: - At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase. - At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase. Hostile Acquisition - Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll. - You can re‑roll Advance and Charge rolls made for this unit. Fortify Takeover - Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll. - Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a Vehicle, subtract 1 from the Wound roll. Yield Points At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy: You control one or more objective markers not within your deployment zone. You control two or more objective markers not within your deployment zone. You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability Leagues of Votann units from your army have. Whenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule."
+        }
+      ],
       "native": true
     }
   ]

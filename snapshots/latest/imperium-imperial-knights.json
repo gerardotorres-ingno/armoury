@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "25dd-7aa0-6bf4-f2d5",
   "catalogueName": "Imperium - Imperial Knights",
@@ -219,6 +219,14 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": [
+        "HASTARII EXTERMINATORS",
+        "HASTARII FUSILIERS",
+        "SECUTARII HOPLITES",
+        "SECUTARII PELTASTS",
+        "SKITARII RANGERS",
+        "SKITARII VANGUARD"
+      ],
       "options": [
         {
           "n": "Wargear",
@@ -313,8 +321,25 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Stealth",
+          "d": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08)."
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -337,6 +362,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Skitarii Rangers Options",
@@ -596,8 +622,29 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        },
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -620,6 +667,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Skitarii Vanguard Options",
@@ -878,8 +926,25 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Anti",
+          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -914,6 +979,7 @@
         "SKITARII RANGERS",
         "SKITARII VANGUARD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Replace macrostubber",
@@ -1048,6 +1114,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, HASTARII EXTERMINATORS, HASTARII FUSILIERS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SERVITOR BATTLECLADE, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
           "n": "Lord of the Machine Cult",
           "d": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the Electro-Priests keyword, models in that unit have the Feel No Pain 4+ ability instead"
         },
@@ -1080,8 +1150,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     },
     {
@@ -1116,6 +1199,7 @@
         "SKITARII RANGERS",
         "SKITARII VANGUARD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Replace magnarail lance",
@@ -1190,6 +1274,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: CORPUSCARII ELECTRO-PRIESTS, FULGURITE ELECTRO-PRIESTS, HASTARII EXTERMINATORS, HASTARII FUSILIERS, KATAPHRON BREACHERS, KATAPHRON DESTROYERS, SECUTARII HOPLITES, SECUTARII PELTASTS, SERVITOR BATTLECLADE, SKITARII RANGERS, SKITARII VANGUARD"
+        },
+        {
           "n": "Galvanic Field",
           "d": "While this model is leading a unit, weapons equipped by models in that unit have the [Lethal Hits] ability."
         },
@@ -1222,8 +1310,21 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "50mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Doctrina Imperatives",
+          "d": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below. PROTECTOR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability. ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability. ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
+        }
+      ],
       "native": true
     }
   ]

@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "99b1d84",
-    "date": "2026-10-12T17:47:11Z"
+    "sha": "fe72f4a",
+    "date": "2026-10-14T11:01:17Z"
   },
   "catalogueId": "46d8-abc8-ef3a-9f85",
   "catalogueName": "Chaos - Chaos Knights",
@@ -400,6 +400,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -538,8 +539,25 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "n": "Scouts",
+          "d": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -567,6 +585,7 @@
         "CULTIST MOB WITH FIREARMS",
         "NEGAVOLT CULTISTS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -665,6 +684,10 @@
           "d": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks. That unit must make a Battle-shock test."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ACCURSED CULTISTS, CULTIST MOB, CULTIST MOB WITH FIREARMS, NEGAVOLT CULTISTS"
+        },
+        {
           "n": "Khorne",
           "d": "Add 2 to the Strength characteristic of this model's hellforged weapons."
         },
@@ -702,8 +725,16 @@
         "W": "4",
         "LD": "6+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -730,6 +761,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -900,8 +932,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "25mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -928,6 +968,7 @@
         "at1000": 4
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 - 19 Cultists",
@@ -1248,8 +1289,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "~25mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -1277,6 +1326,7 @@
         "CULTIST MOB WITH FIREARMS",
         "NEGAVOLT CULTISTS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -1436,6 +1486,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ACCURSED CULTISTS, CULTIST MOB, CULTIST MOB WITH FIREARMS, NEGAVOLT CULTISTS"
+        },
+        {
           "n": "Faithful Flock",
           "d": "While this unit is leading a unit and contains a CULT DEMAGOGUE model, models in that unit have a 5+ invulnerable save."
         },
@@ -1485,8 +1539,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "28.5mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -1509,6 +1571,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 Beastmen",
@@ -1787,8 +1850,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -1811,6 +1882,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1890,8 +1962,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -1914,6 +1999,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -1963,8 +2049,21 @@
         "W": "1",
         "LD": "8+",
         "OC": "0",
-        "InSv": ""
+        "InSv": "",
+        "Base": "25mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -1987,6 +2086,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -2110,8 +2210,21 @@
         "W": "1",
         "LD": "7+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -2137,6 +2250,7 @@
         "RENEGADE HEAVY WEAPONS SQUAD",
         "TRAITOR GUARDSMEN SQUAD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -2371,6 +2485,10 @@
           "d": "This model's unit is eligible to declare a charge in a turn in which it Fell Back."
         },
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: RENEGADE HEAVY WEAPONS SQUAD, TRAITOR GUARDSMEN SQUAD"
+        },
+        {
           "n": "Khorne",
           "d": "Add 2 to the Strength characteristic of this model's hellforged weapons."
         },
@@ -2408,8 +2526,16 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -2432,6 +2558,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -2704,8 +2831,16 @@
         "W": "2",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "50mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -2732,6 +2867,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -2870,8 +3006,16 @@
         "W": "4",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -2894,6 +3038,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "Ogryn Brutes",
@@ -3056,8 +3201,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -3080,6 +3233,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": null,
       "weapons": [
         {
@@ -3129,8 +3283,21 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "40mm"
       },
+      "coreAb": [
+        {
+          "n": "Feel No Pain",
+          "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        }
+      ],
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -3158,6 +3325,7 @@
         "CULTIST MOB WITH FIREARMS",
         "NEGAVOLT CULTISTS"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -3270,6 +3438,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This model can be attached to the following units: ACCURSED CULTISTS, CULTIST MOB, CULTIST MOB WITH FIREARMS, NEGAVOLT CULTISTS"
+        },
+        {
           "n": "Cursed Wardings (Psychic)",
           "d": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
         },
@@ -3315,8 +3487,16 @@
         "W": "3",
         "LD": "7+",
         "OC": "1",
-        "InSv": ""
+        "InSv": "",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     },
     {
@@ -3341,6 +3521,7 @@
       "leads": [
         "TRAITOR GUARDSMAN SQUAD"
       ],
+      "supports": null,
       "options": [
         {
           "n": "Mark of Chaos",
@@ -3477,6 +3658,10 @@
       ],
       "abilities": [
         {
+          "n": "Leader",
+          "d": "This unit can be attached to the following unit: TRAITOR GUARDSMAN SQUAD"
+        },
+        {
           "n": "Brutal Example",
           "d": "Once per turn, while this unit is leading a unit and contains a TRAITOR ENFORCER model, you can target that unit with the Fire Overwatch Stratagem for 0CP, and can do so even if you have already targeted a different unit from your army with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed."
         },
@@ -3518,8 +3703,16 @@
         "W": "3",
         "LD": "6+",
         "OC": "1",
-        "InSv": "5+"
+        "InSv": "5+",
+        "Base": "32mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": false
     },
     {
@@ -3542,6 +3735,7 @@
         "at1000": 2
       },
       "leads": null,
+      "supports": null,
       "options": [
         {
           "n": "9 Traitor Guardsmen",
@@ -3943,8 +4137,16 @@
         "W": "1",
         "LD": "7+",
         "OC": "2",
-        "InSv": ""
+        "InSv": "",
+        "Base": "25mm"
       },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Dark Pacts",
+          "d": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]"
+        }
+      ],
       "native": true
     }
   ]
