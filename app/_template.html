@@ -411,6 +411,12 @@ input[type=search]::placeholder{color:var(--ink2)}
   padding:9px 12px;margin-bottom:6px;font-size:13px}
 .warn.soft{border-left-color:var(--ochre);background:var(--ochre-bg);color:var(--ink)}
 .warn b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;display:block;color:var(--ink2)}
+/* Unidad que el MFM vigente ya no lista: el precio es estimación de BSData. */
+.tag.t-nm{color:var(--oxide);border-color:var(--oxide)}
+
+/* Traza de una secundaria: en qué ronda salió y en cuál se cobró. */
+.slot .meta.trz{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ochre)}
+
 /* Línea de bajas: un bloque por ronda. En fila en pantalla ancha, apilados
    en el teléfono — el mismo HTML sirve para los dos. */
 .tl{display:flex;gap:7px;margin-top:8px}
@@ -532,7 +538,54 @@ input[type=search]::placeholder{color:var(--ink2)}
   .tabs button{flex:1 1 0;min-width:0;padding:11px 2px;font-size:12px;
     letter-spacing:.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   /* El renglón de totales tampoco entraba: que baje de línea antes de empujar. */
-  .ledger{flex-wrap:wrap;gap:4px 12px}
+  /* ---- panel de command points ---- */
+.cpbox{margin:9px 0}
+.cpbar{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.cpnum{flex:1 1 auto;min-width:0;background:var(--chrome);border:1px solid var(--plate-line);
+  border-radius:3px;text-align:center;padding:4px 0 3px}
+.cpnum b{display:block;font-family:var(--disp);font-size:32px;line-height:1;
+  color:var(--plate-ink);font-weight:700}
+.cpnum i{display:block;font-style:normal;font-family:var(--mono);font-size:8px;
+  letter-spacing:.16em;color:var(--ink2);margin-top:2px}
+.cprnd{flex:0 0 auto;background:var(--chrome);border:1px solid var(--plate-line);
+  border-radius:3px;padding:4px 9px 3px;text-align:center}
+.cprnd b{display:block;font-family:var(--disp);font-size:21px;line-height:1.1;color:var(--ink)}
+.cprnd i{display:block;font-style:normal;font-family:var(--mono);font-size:8px;
+  letter-spacing:.14em;color:var(--ink2)}
+.pm{width:var(--tap);height:var(--tap);flex:0 0 auto;border-radius:3px;
+  border:1px solid var(--rule2);background:var(--slate-bg);color:var(--ink);
+  font-family:var(--disp);font-size:24px;font-weight:700;line-height:1;cursor:pointer}
+.pm.up{border-color:var(--ochre);background:var(--ochre-bg);color:var(--ochre)}
+.pm.dn{border-color:var(--oxide);background:var(--oxide-bg);color:var(--oxide)}
+.cpnum.neg b{color:var(--oxide)}
+.cpini{display:flex;align-items:center;gap:7px;margin-bottom:8px;font-family:var(--mono);
+  font-size:8.5px;letter-spacing:.12em;color:var(--ink2)}
+.cpini input{width:48px;text-align:center;font-family:var(--mono);font-size:13px;padding:4px;
+  background:var(--panel);border:1px solid var(--rule2);border-radius:2px;color:var(--ink)}
+.cpini b{color:var(--oxide);font-weight:500;letter-spacing:.06em;text-transform:none;
+  font-size:9.5px;margin-left:auto;text-align:right}
+.cprow{display:flex;gap:6px;align-items:stretch}
+.cpsel{flex:1 1 auto;min-width:0;height:var(--tap);background:var(--chrome);
+  border:1px solid var(--plate-line);border-radius:3px;color:var(--ink);
+  font-family:var(--body);font-size:13px;padding:0 7px}
+.cpgo{flex:0 0 auto;height:var(--tap);padding:0 13px;border-color:var(--oxide);
+  background:var(--oxide-bg);color:var(--oxide)}
+.cplog{margin-top:8px;border-top:1px solid var(--rule);padding-top:6px}
+.cplg{display:flex;align-items:center;gap:7px;padding:2px 0;border-bottom:1px solid #1d2b39}
+.cplg:last-child{border-bottom:0}
+.cplg em{font-style:normal;font-family:var(--mono);font-size:9.5px;color:var(--ink2);flex:0 0 24px}
+.cplg span{flex:1 1 auto;min-width:0;font-size:12.5px;overflow-wrap:anywhere}
+.cplg b{font-family:var(--mono);font-size:11px;color:var(--oxide);flex:0 0 auto}
+.cplg b.g{color:var(--ochre)}
+.cpx{flex:0 0 auto;width:26px;height:26px;border:none;background:transparent;
+  color:var(--ink2);font-size:12px;cursor:pointer;border-radius:2px}
+.cpx:hover{color:var(--oxide);background:var(--oxide-bg)}
+.cptot{display:flex;justify-content:space-between;gap:6px;font-family:var(--mono);
+  font-size:10px;color:var(--ink2);margin-top:6px;padding-top:5px;border-top:1px solid var(--rule)}
+.cptot b{color:var(--ink)}
+.cpgh{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;color:var(--ink2);
+  text-transform:uppercase;margin:9px 0 4px;border-bottom:1px solid var(--rule);padding-bottom:3px}
+.ledger{flex-wrap:wrap;gap:4px 12px}
   .ledger .lf{flex:1 1 100%}
   .ledger .lm{white-space:normal}
   .wp td:first-child{max-width:44vw}
@@ -606,6 +659,12 @@ input[type=search]::placeholder{color:var(--ink2)}
     border-bottom:1px solid #ddd;text-align:right}
   .pr-w td:first-child{text-align:left;font-family:var(--body);font-size:12px}
   .pr-w td b{font-family:var(--mono);font-size:10.5px;color:#555;font-weight:500}
+  /* Palabras clave del arma: bajo el nombre, en un renglón propio. */
+  .pr-w .pkw{display:block;font-style:normal;font-family:var(--mono);font-size:9.5px;
+    color:#444;letter-spacing:.02em;margin-top:1px}
+  .pr-w tr.wh th{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;color:#666;
+    font-weight:500;text-align:right;padding:0 3px 2px;border-bottom:1px solid #999}
+  .pr-w tr.wh th:first-child{text-align:left}
   /* Las de cuerpo a cuerpo se agrupan al final; la columna de alcance ya
      dice "Melee", así que no hace falta ningún icono. */
   /* Armas a la izquierda, habilidades a la derecha. Sin esto, a ancho completo
@@ -939,6 +998,7 @@ async function start(){
   lists = await loadLists();
   battles = await loadBattles();
   await loadLib();
+  await loadStrats();
 
   await loadPool();
   await loadFeed();
@@ -1073,8 +1133,9 @@ function lineFor(u, faction){
   const row = document.createElement('div');
   row.className = 'line' + (qty ? ' owned' : '');
 
-  const tag = u.m === 'legends'  ? '<span class="tag t-leg">LEGENDS</span>'
-            : u.m === 'crucible' ? '<span class="tag t-cru">CRUCIBLE</span>' : '';
+  const tag = (u.m === 'legends'  ? '<span class="tag t-leg">LEGENDS</span>'
+            : u.m === 'crucible' ? '<span class="tag t-cru">CRUCIBLE</span>' : '') +
+            (u.nm ? '<span class="tag t-nm" title="Not in the current Munitorum Field Manual">NO MFM</span>' : '');
 
   const info = document.createElement('div');
   info.className = 'id';
@@ -1358,6 +1419,28 @@ function poolOf(l){
 }
 
 /* Busca una unidad en todo el repertorio, no sólo en la facción propia. */
+/* ¿Esta unidad puede adjuntarse a la otra, y como qué?
+ *
+ * Dos mecanismos distintos con la misma forma en la lista:
+ *   - LÍDER: la regla `Leader` trae ids de destino (u.ld).
+ *   - SUPPORT: la habilidad `Support` trae NOMBRES (u.sp). Van por nombre
+ *     porque el Apothecary vive en el catálogo de Space Marines y sus
+ *     destinos en el del capítulo; con ids se perdían.
+ * Una unidad puede recibir UN líder y UNA support a la vez: son cosas
+ * distintas y el reglamento las permite juntas. */
+function attachKind(u){
+  if (u && u.ld && u.ld.length) return 'leader';
+  if (u && u.sp && u.sp.length) return 'support';
+  return null;
+}
+
+function canAttachTo(u, host){
+  if (!u || !host) return false;
+  if (u.ld && u.ld.length) return u.ld.includes(host.id);
+  if (u.sp && u.sp.length) return u.sp.includes(String(host.n || '').toLowerCase());
+  return false;
+}
+
 function unitOf(l, id){
   const own = factionOf(l.faction);
   const mine = own && own.units.find((x) => x.id === id);
@@ -1391,6 +1474,20 @@ function review(l){
                  d:'Requisition threshold \u2014 ' + ptsFor(u, s.size, copy) + ' instead of ' + ptsFor(u, s.size, 1) + '.' });
     byUnit.set(u.id, (byUnit.get(u.id) ?? 0) + 1);
     needed.set(u.id, (needed.get(u.id) ?? 0) + s.size);
+
+    // El MFM ya no la trae: BSData la sigue dando por válida, pero el
+    // documento oficial de puntos la sacó. El precio que se muestra es la
+    // estimación de BSData, no el oficial.
+    if (u.nm && u.p != null)
+      out.push({ hard:false, i:si, t:u.n + ' has no official points',
+                 d:'The current MFM does not list it. ' + u.p +
+                   ' pts is a BSData estimate and the unit may be out of matched play.' });
+
+    // El MFM la parte en variantes de arma con precios distintos y BSData la
+    // tiene como una sola. Se muestra la más barata: hay que decirlo.
+    if (u.vr && u.vr.length > 1)
+      out.push({ hard:false, i:si, t:u.n + ': the MFM splits it by weapon',
+                 d:u.vr.join(' / ') + '. Shown at the cheaper one \u2014 check which you are fielding.' });
 
     if (u.m === 'legends'  && !l.legends)  out.push({ hard:true, t:u.n + ' is Legends', d:'Not allowed under this list\u2019s format.' });
     if (u.m === 'crucible' && !l.crucible) out.push({ hard:true, t:u.n + ' is Crucible', d:'Not allowed under this list\u2019s format.' });
@@ -1490,13 +1587,32 @@ function review(l){
   // en BSData, prefiero equivocarme avisando de más que bloquear una lista legal.
   for (const [i, sl] of l.slots.entries()) {
     const u = unitOf(l, sl.unitId);
-    if (!u || !u.ld) continue;
+    const kind = attachKind(u);
+    if (!kind) continue;
     // Ir suelto es legal: muchos personajes operan solos. No se avisa.
     if (!sl.attach) continue;
     const host = l.slots[sl.attach - 1];
     const hu = host && unitOf(l, host.unitId);
-    if (!hu || !u.ld.includes(hu.id))
-      out.push({ hard:false, i, t:u.n + ' cannot lead that unit', d:'Its Leader rule lists other targets.' });
+    if (!hu || !canAttachTo(u, hu))
+      out.push({ hard:false, i,
+                 t:u.n + ' cannot ' + (kind === 'leader' ? 'lead' : 'join') + ' that unit',
+                 d:'Its ' + (kind === 'leader' ? 'Leader' : 'Support') + ' rule lists other targets.' });
+  }
+
+  // Dos del mismo tipo sobre la misma unidad: un líder y una support pueden
+  // convivir, dos líderes no.
+  const porAnfitrion = new Map();
+  for (const [i, sl] of l.slots.entries()) {
+    if (sl.attach == null) continue;
+    const k = attachKind(unitOf(l, sl.unitId));
+    if (!k) continue;
+    const key = (sl.attach - 1) + '|' + k;
+    if (porAnfitrion.has(key)) {
+      const hu = unitOf(l, (l.slots[sl.attach - 1] || {}).unitId);
+      out.push({ hard:true, i,
+                 t:'Two ' + (k === 'leader' ? 'leaders' : 'support units') + ' on the same unit',
+                 d:(hu ? hu.n : 'That unit') + ' already has one attached.' });
+    } else porAnfitrion.set(key, i);
   }
 
   // Variantes de arma que superan el tamaño de la unidad.
@@ -1945,24 +2061,29 @@ function unitDetail(l, i){
     bd.append(w);
   }
 
-  // enganche
-  if (u.ld) {
+  // enganche: líderes y unidades SUPPORT usan el mismo control
+  const kind = attachKind(u);
+  if (kind) {
     const w = el('div'); w.style.marginBottom = '12px';
     const lab = el('div');
     lab.style.cssText = 'font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--ink2);margin-bottom:4px';
-    lab.textContent = 'ATTACHED TO';
+    lab.textContent = kind === 'leader' ? 'LEADS WHICH UNIT' : 'JOINS WHICH UNIT (SUPPORT)';
     const at = el('select'); at.style.width = '100%';
     const none = el('option'); none.value=''; none.textContent='not attached'; at.append(none);
-    // Una unidad sólo admite un líder: si ya está tomada, no se ofrece.
+
+    // Ocupadas POR TIPO: una unidad puede llevar un líder y una support a la
+    // vez, así que el líder no compite por el cupo de la support.
     const taken = new Set();
-    for (const [j, s2] of l.slots.entries())
-      if (j !== i && s2.attach != null) taken.add(s2.attach - 1);
+    for (const [j, s2] of l.slots.entries()) {
+      if (j === i || s2.attach == null) continue;
+      if (attachKind(unitOf(l, s2.unitId)) === kind) taken.add(s2.attach - 1);
+    }
 
     let free = 0;
     for (const [j, other] of l.slots.entries()) {
       if (j === i) continue;
       const ou = unitOf(l, other.unitId);
-      if (!ou || !u.ld.includes(ou.id)) continue;
+      if (!canAttachTo(u, ou)) continue;
       if (taken.has(j) && !sl_eq(sl.attach, j + 1)) continue;
       free++;
       const o = el('option'); o.value = String(j + 1);
@@ -1970,14 +2091,18 @@ function unitDetail(l, i){
       if (sl_eq(sl.attach, j + 1)) o.selected = true;
       at.append(o);
     }
+    at.onchange = () => { sl.attach = at.value ? +at.value : null; saveList(l); renderLists(); };
+    w.append(lab, at);
     if (!free && sl.attach == null) {
       const h = el('div','hint');
-      h.textContent = 'Every unit it can lead is already taken by another leader.';
-      w.append(lab, at, h);
-      bd.append(w);
+      const hay = l.slots.some((s2, j) => j !== i && canAttachTo(u, unitOf(l, s2.unitId)));
+      h.textContent = hay
+        ? 'Every unit it can ' + (kind === 'leader' ? 'lead' : 'join') +
+          ' already has ' + (kind === 'leader' ? 'a leader' : 'a support unit') + '.'
+        : 'No unit in this list matches its ' + (kind === 'leader' ? 'Leader' : 'Support') + ' rule.';
+      w.append(h);
     }
-    at.onchange = () => { sl.attach = at.value ? +at.value : null; saveList(l); renderLists(); };
-    if (!w.children.length) { w.append(lab, at); bd.append(w); }
+    bd.append(w);
   }
 
   if (u.o && u.o.length) {
@@ -3154,12 +3279,13 @@ function importList(){
  * ---------------------------------------------------------------- */
 /* Longitud máxima del texto de una habilidad impresa. Es la perilla que
  * regula cuántas páginas ocupa la lista. */
-const PRINT_AB_LEN = 200;
-
-/* Cuántas habilidades se imprimen por ficha. A ancho completo entran más que
- * en columnas, pero el tope sigue: una unidad con ocho habilidades ocupaba
- * media hoja. El resto se consulta en la app. */
-const PRINT_AB_MAX = 6;
+/* La hoja impresa lleva TODO: todas las armas con sus palabras clave y todas
+ * las habilidades con su texto entero. Antes recortaba a 6 armas, 6
+ * habilidades y 200 caracteres por habilidad, y en la mesa eso obliga a
+ * sacar el teléfono justo cuando no se puede. Cuesta hojas; las cuesta a
+ * propósito. */
+const PRINT_AB_LEN = Infinity;
+const PRINT_AB_MAX = Infinity;
 
 function printList(l){
   const f = factionOf(l.faction);
@@ -3174,6 +3300,11 @@ function printList(l){
     (l.mission ? ' \u00b7 ' + esc(l.mission) : '') +
     ' \u00b7 ' + total + ' / ' + l.limit + ' pts' +
     (l.foreign ? ' \u00b7 OPPONENT LIST' : '') +
+    // La versión del MFM va IMPRESA. Los puntos cambian entre versiones —de
+    // la v1.5 a la v1.6 bajaron seis de diecisiete unidades de Marines que
+    // comprobé— y una lista en papel sin decir con qué documento se coteó no
+    // se puede discutir en una mesa de torneo.
+    ' \u00b7 MFM ' + esc(String(DATA?.mfmVersion || '?')) +
     ' \u00b7 data ' + esc(String(l.importedRevision || DATA?.revision?.sha || '?')) + '</div>';
   area.append(head);
 
@@ -3259,16 +3390,20 @@ function printList(l){
     const counts = weaponCounts(u, sl);
     if (ws.length) {
       // Ranged primero, melee después: es el orden de la ficha oficial.
-      const shown = [...ws].sort((a, b) => a[1] - b[1]).slice(0, 6);
-      wHtml = '<table class="pr-w">' + shown.map((w) => {
+      // Todas, no las primeras seis: un arma que no está impresa es un arma
+      // que hay que ir a buscar a mitad de la partida.
+      const shown = [...ws].sort((a, b) => a[1] - b[1]);
+      wHtml = '<table class="pr-w"><tr class="wh"><th>&nbsp;</th><th>RG</th><th>A</th>' +
+        '<th>SK</th><th>S</th><th>AP</th><th>D</th></tr>' + shown.map((w) => {
         const c = counts && counts.get(wkey(w[0]));
         return '<tr' + (w[1] ? ' class="mel"' : '') + '><td>' + esc(w[0]) +
-          (c > 1 ? ' <b>\u00d7' + c + '</b>' : '') + '</td>' +
+          (c > 1 ? ' <b>\u00d7' + c + '</b>' : '') +
+          // Las palabras clave del arma —Pistol, Hazardous, Devastating
+          // Wounds— deciden cómo se tira. Estaban en el dato y no se imprimían.
+          (w[8] ? '<i class="pkw">' + esc(w[8]) + '</i>' : '') + '</td>' +
           '<td>' + esc(w[2]) + '</td><td>' + esc(w[3]) + '</td><td>' + esc(w[4]) +
           '</td><td>' + esc(w[5]) + '</td><td>' + esc(w[6]) + '</td><td>' + esc(w[7]) + '</td></tr>';
       }).join('') + '</table>';
-      if (ws.length > shown.length)
-        wHtml += '<div class="pr-more">+' + (ws.length - shown.length) + ' more weapons</div>';
     }
 
     // Habilidades con su texto. El texto muy largo se recorta: en la mesa
@@ -3279,10 +3414,6 @@ function printList(l){
         const cut = t.length > PRINT_AB_LEN ? t.slice(0, PRINT_AB_LEN).replace(/\s+\S*$/, '') + '\u2026' : t;
         return '<p><b>' + esc(n) + '.</b> ' + esc(cut) + '</p>';
       }).join('') + '</div>';
-      if (u.ab.length > abShown.length)
-        aHtml += '<div class="pr-more">+' + (u.ab.length - abShown.length) +
-                 ' more abilities \u00b7 ' +
-                 esc(u.ab.slice(PRINT_AB_MAX).map(([n]) => n).join(', ')) + '</div>';
     }
 
     if (wHtml || aHtml)
@@ -3737,12 +3868,14 @@ function renderBattlesInner(){
   // ---- marcador
   const t = battleTotals(b);
   const head = el('div','ledger');
+  head.id = 'scoreHead';
   head.innerHTML = '<div class="lf">Round ' + b.round + '</div>' +
-    '<div class="lm"><b>' + t.me + '</b><i>me</i></div>' +
-    '<div class="lm"><b>' + t.them + '</b><i>them</i></div>';
+    '<div class="lm"><b data-tot="me">' + t.me + '</b><i>me</i></div>' +
+    '<div class="lm"><b data-tot="them">' + t.them + '</b><i>them</i></div>';
   v.append(head);
   v.append(primaryRecap(b));
   v.append(scoreTable(b));
+  v.append(cpPanel(b));
   // Se muestra el lado que está jugando: dos paneles completos de hasta diez
   // cartas cada uno no entran en una pantalla. El reloj decide, y se puede
   // forzar con las pestañas.
@@ -3769,6 +3902,17 @@ function renderBattlesInner(){
   for (const who of ['me','them']) {
     const i = el('input'); i.type='text'; i.inputMode='numeric';
     i.style.cssText='width:56px;text-align:center;font-family:var(--mono)';
+    const rastreado = who === 'me' && cpOf(b).log.length > 0;
+    if (rastreado) {
+      // Lo lleva el panel de CP de arriba: dos casillas con el mismo dato y
+      // distinto valor es peor que una sola.
+      i.value = cpNow(b);
+      i.readOnly = true;
+      i.title = 'Lo lleva el panel de Command Points. Borr\u00e1 el registro para escribirlo a mano.';
+      i.style.cssText += ';opacity:.65';
+      cpBar.append(labelled('My CP', i));
+      continue;
+    }
     i.value = b.cp[who];
     i.onchange = () => {
       // El Event Companion limita a 1 PM por ronda además del CP básico.
@@ -4023,7 +4167,14 @@ function copyBattleText(b){
   const rowTxt = (arr) => arr.map((r) => String((+r.p||0) + '+' + (+r.s||0)).padEnd(6)).join('');
   lines.push('Me      ' + rowTxt(b.me));
   lines.push('Them    ' + rowTxt(b.them));
-  lines.push('CP: ' + (b.cp?.me ?? 0) + ' \u2013 ' + (b.cp?.them ?? 0));
+  const cpt = b.cpt && Array.isArray(b.cpt.log) ? b.cpt.log : [];
+  lines.push('CP: ' + (cpt.length ? cpNow(b) : (b.cp?.me ?? 0)) +
+             ' \u2013 ' + (b.cp?.them ?? 0));
+  if (cpt.length) {
+    const g = cpt.filter((x) => x.d < 0);
+    if (g.length) lines.push('CP spent: ' +
+      g.map((x) => 'R' + x.r + ' ' + x.n + ' (' + (-x.d) + ')').join(', '));
+  }
 
   // Bajas de los dos lados con su ronda.
   const lostOf = (list, tr) => {
@@ -4161,6 +4312,15 @@ function primaryRecap(b){
 }
 
 function scoreTable(b){
+  const caja = el('div');
+  const mis = missionsFrom(b.disp?.me, b.disp?.them);
+  if (mis) {
+    const cap = el('div','hint');
+    cap.style.margin = '0 0 4px';
+    cap.innerHTML = '<b>' + esc(mis[0]) + '</b> \u00b7 you  &nbsp; vs &nbsp; <b>' +
+                    esc(mis[1]) + '</b> \u00b7 ' + esc(b.opponent || 'them');
+    caja.append(cap);
+  }
   const t = el('table','score');
   const hdr = '<tr><th></th>' +
     Array.from({length:ROUNDS}, (_,i) => '<th>R' + (i+1) + '</th>').join('') +
@@ -4181,8 +4341,8 @@ function scoreTable(b){
     const lt = lineTotals(b, who, k);
     const tot = lt.raw === lt.capped ? String(lt.raw)
               : lt.raw + '<span class="capd">(' + lt.capped + ')</span>';
-    return '<tr class="' + cls + '"><th class="who">' + esc(label) + '</th>' +
-           cells + '<td class="tot">' + tot + '</td></tr>';
+    return '<tr class="' + cls + '" data-row="' + who + k + '"><th class="who">' + esc(label) + '</th>' +
+           cells + '<td class="tot" data-rt="' + who + k + '">' + tot + '</td></tr>';
   };
 
   // Subtotal del lado: anotado y, si difiere, lo que cuenta entre paréntesis.
@@ -4194,15 +4354,25 @@ function scoreTable(b){
   };
   const them = b.opponent || 'Them';
 
+  // El nombre de la misión ya NO va en la etiqueta de la fila: ocupaba más de
+  // la mitad del ancho en un teléfono y dejaba las casillas en 25 px. Va como
+  // encabezado de la tabla, donde se lee una vez.
   t.innerHTML = hdr +
-    line('me', 'Me \u00b7 ' + (missionsFrom(b.disp?.me, b.disp?.them) ? esc(missionsFrom(b.disp.me, b.disp.them)[0]) : 'primary'), 'p', 'sec-p') +
+    line('me', 'Me \u00b7 primary', 'p', 'sec-p') +
     line('me', 'Me \u00b7 secondary', 's', 'sec-s') +
     '<tr class="sub"><th class="who">Subtotal</th><td colspan="' + ROUNDS + '"></td>' +
-      '<td class="tot">' + sideTotal('me') + '</td></tr>' +
-    line('them', them + ' \u00b7 ' + (missionsFrom(b.disp?.me, b.disp?.them) ? esc(missionsFrom(b.disp.me, b.disp.them)[1]) : 'primary'), 'p', 'sec-p') +
-    line('them', them + ' \u00b7 secondary', 's', 'sec-s') +
+      '<td class="tot" data-st="me">' + sideTotal('me') + '</td></tr>' +
+    line('them', clipTxt(them, 10) + ' \u00b7 primary', 'p', 'sec-p') +
+    line('them', clipTxt(them, 10) + ' \u00b7 secondary', 's', 'sec-s') +
     '<tr class="sub"><th class="who">Subtotal</th><td colspan="' + ROUNDS + '"></td>' +
-      '<td class="tot">' + sideTotal('them') + '</td></tr>';
+      '<td class="tot" data-st="them">' + sideTotal('them') + '</td></tr>';
+
+  // Al entrar en una casilla se selecciona lo que hay. Todas arrancan en 0
+  // y, sin esto, teclear 15 sobre el 0 daba 015 — y sobre un 10, 105.
+  t.addEventListener('focusin', (ev) => {
+    const e2 = ev.target;
+    if (e2 && e2.dataset && e2.dataset.w) e2.select();
+  });
 
   // Un solo manejador para las 20 celdas.
   t.addEventListener('input', (ev) => {
@@ -4224,9 +4394,41 @@ function scoreTable(b){
     }
 
     saveBattle(b);
-    renderBattles();
+
+    // NO se redibuja la vista.
+    //
+    // Antes esto llamaba a renderBattles() en CADA tecla: la tabla se
+    // destruía y se volvía a crear, la casilla perdía el foco y el segundo
+    // dígito se perdía —escribir 15 era imposible— y la página saltaba
+    // arriba. Se actualizan sólo los totales, en su lugar.
+    refrescarTotales(b, t);
   });
-  return t;
+  caja.append(t);
+  return caja;
+}
+
+/* Reescribe los totales de la tabla y la cabecera sin tocar las casillas. */
+function refrescarTotales(b, tabla){
+  const marca = (lt) => lt.raw === lt.capped ? String(lt.raw)
+    : lt.raw + '<span class="capd">(' + lt.capped + ')</span>';
+
+  for (const who of ['me', 'them']) {
+    for (const k of ['p', 's']) {
+      const td = tabla.querySelector('[data-rt="' + who + k + '"]');
+      if (td) td.innerHTML = marca(lineTotals(b, who, k));
+    }
+    const p = lineTotals(b, who, 'p'), sc = lineTotals(b, who, 's');
+    const raw = p.raw + sc.raw, capped = p.capped + sc.capped;
+    const st = tabla.querySelector('[data-st="' + who + '"]');
+    if (st) st.innerHTML = raw === capped ? String(raw)
+      : raw + '<span class="capd">(' + capped + ')</span>';
+  }
+
+  const tot = battleTotals(b);
+  for (const who of ['me', 'them']) {
+    const e = document.querySelector('#scoreHead [data-tot="' + who + '"]');
+    if (e) e.textContent = tot[who];
+  }
 }
 
 /* ============================================================
@@ -4239,6 +4441,55 @@ function scoreTable(b){
    
    Se guardan una sola vez y sirven para todas las batallas.
    ============================================================ */
+/* ============================================================
+   ESTRATAGEMAS
+   ------------------------------------------------------------
+   El dataset de BSData NO trae estratagemas: ni nombres, ni
+   costos, ni efectos —se revisaron los 46 catálogos—. Están en
+   el códex y en la hoja del destacamento, que es material de
+   Games Workshop, y copiarlos acá convertiría el proyecto en un
+   uso comercial de propiedad ajena.
+   Por eso la app sale vacía y cada quien carga los suyos: quedan
+   en su teléfono, agrupados por destacamento, y se reusan en toda
+   lista que use ese destacamento.
+   Forma: { "<destacamento>": [ {n, c}, ... ] }. La clave CORE
+   guarda los que sirven en cualquier ejército.
+   ============================================================ */
+let stratLib = {};
+const CORE_KEY = 'CORE';
+
+function saveStrats(){ store.put('misc', { id: 'strats', qty: JSON.stringify(stratLib) }); }
+
+async function loadStrats(){
+  const rows = await store.getAll('misc');
+  const row = rows.find((r) => r.id === 'strats');
+  try { stratLib = row ? JSON.parse(row.qty) : {}; } catch { stratLib = {}; }
+  if (!stratLib || typeof stratLib !== 'object') stratLib = {};
+}
+
+/* Los destacamentos de la lista propia, más CORE. Sin lista, sólo CORE. */
+function stratGroups(b){
+  const l = lists.find((x) => x.id === b.mine);
+  const g = [CORE_KEY];
+  for (const d of (l && l.dets) || []) if (!g.includes(d)) g.push(d);
+  return g;
+}
+
+/* Estado de CP de una batalla. start es lo que pusiste al empezar;
+ * el resto sale del registro, para que borrar una línea deshaga el gasto. */
+function cpOf(b){
+  // OJO: b.cp ya existe desde antes con la forma {me,them} para el recuadro
+  // de análisis posterior a la partida. El rastreador vive en b.cpt aparte;
+  // pisarlo dejaba aquel campo en "undefined" y perdía las batallas viejas.
+  if (!b.cpt) b.cpt = { start: 0, log: [] };
+  if (!Array.isArray(b.cpt.log)) b.cpt.log = [];
+  return b.cpt;
+}
+function cpNow(b){
+  const c = cpOf(b);
+  return (+c.start || 0) + c.log.reduce((a, x) => a + (+x.d || 0), 0);
+}
+
 let secLib = [];
 
 /* En su propio almacén: guardarla junto a la colección la hacía aparecer
@@ -4326,8 +4577,17 @@ function drawSecondaries(b, force, who){
     }
   }
 
+  // En qué ronda salió cada carta. Sin esto sólo se sabía en cuál puntuó,
+  // y una carta imposible que salió en R5 no se distingue de una que tuviste
+  // cuatro rondas sin poder cerrar.
+  s.drawnAt = s.drawnAt || {};
   let n = 0;
-  while (n < 2 && s.deck.length) { s.active.push(s.deck.shift()); n++; }
+  while (n < 2 && s.deck.length) {
+    const id = s.deck.shift();
+    s.active.push(id);
+    if (s.drawnAt[id] == null) s.drawnAt[id] = b.round;
+    n++;
+  }
   s.drawnFor[b.round] = true;
   saveBattle(b);
 }
@@ -4451,6 +4711,9 @@ function secondaryPanel(b, who){
     }
     box.append(sel);
     if (s.fixed.length < 2) box.append(hint('Pick two fixed missions.'));
+    // Las fijas se eligen antes de empezar: están en mano desde la ronda 1.
+    s.drawnAt = s.drawnAt || {};
+    for (const id of s.fixed) if (s.drawnAt[id] == null) s.drawnAt[id] = 1;
     for (const id of s.fixed) box.append(secRow(b, id, false, who));
     return box;
   }
@@ -4470,7 +4733,9 @@ function secondaryPanel(b, who){
       const c = secOf(id); if (!c) continue;
       const r = el('div','slot');
       r.innerHTML = '<div class="id"><div class="nm" style="opacity:.6">' + esc(c.n) + '</div>' +
-        '<div class="meta">' + (s.vp[id] ?? 0) + ' VP \u00b7 round ' + (s.scored?.[id] ?? '?') + '</div></div>';
+        '<div class="meta">' + (s.vp[id] ?? 0) + ' VP \u00b7 ' +
+        (s.drawnAt?.[id] ? 'drawn R' + s.drawnAt[id] + ' \u00b7 ' : '') +
+        'scored R' + (s.scored?.[id] ?? '?') + '</div></div>';
       box.append(r);
     }
   }
@@ -4526,8 +4791,16 @@ function secRow(b, id, tactical, who){
     '<u>' + esc(t.w) + (t.max ? ' \u00b7 max ' + esc(t.max) : '') + '</u>' +
     (t.i || []).map(([vp, tx]) => '<em><b>' + esc(vp) + '</b> ' + esc(tx) + '</em>').join('')
   ).join('');
+  s.drawnAt = s.drawnAt || {};
+  const salio = s.drawnAt[id] ?? null;
+  // "salió en R2, cerrada en R4" es la lectura que sirve después: dice
+  // cuántas rondas la tuviste en mano antes de poder cobrarla.
+  const traza = (salio ? 'drawn R' + salio : '') +
+                (scoredAt != null ? (salio ? ' \u00b7 ' : '') + 'scored R' + scoredAt : '');
+
   info.innerHTML = '<div class="nm">' + esc(c.n) +
     (locked ? '<span class="lockt">scored R' + scoredAt + '</span>' : '') + '</div>' +
+    (traza ? '<div class="meta trz">' + traza + '</div>' : '') +
     '<div class="meta">' + (c.pr ? c.pr + ' per round \u00b7 ' : '') + 'max ' + c.max +
     (locked ? ' \u00b7 ' + scoredBefore + ' VP \u00b7 closed for the rest of the battle'
             : (scoredBefore ? ' \u00b7 ' + scoredBefore + ' scored' : '')) +
@@ -4582,6 +4855,9 @@ function secRow(b, id, tactical, who){
       s.active = s.active.filter((x) => x !== id);
       s.deck.push(id);
       b.cp[who] = Math.min(b.round, (b.cp[who] || 0) + 1);
+      // Y al registro, que para eso existe: el CP de descartar es de los que
+      // después nadie se acuerda de dónde salió.
+      if (who === 'me') cpOf(b).log.push({ r: b.round, n: 'descarte de carta', d: +1 });
       saveBattle(b); renderBattles();
     };
     row.append(ok, dc);
@@ -4601,6 +4877,233 @@ function syncSecToScore(b, who){
     .reduce((a, [k, v]) => k.endsWith(suffix) ? a + (+v || 0) : a, 0);
   b[who][b.round - 1].s = thisRound;   // el tope se aplica al total, no acá
   saveBattle(b);
+}
+
+/* ============================================================
+   PANEL DE COMMAND POINTS
+   ------------------------------------------------------------
+   Contador con −/+ y un desplegable con los estratagemas que
+   cargó el jugador, agrupados por destacamento. Gastar desde el
+   desplegable resta el costo Y deja la línea en el registro con
+   la ronda, que es la pregunta que de verdad importa después:
+   "¿en qué se me fueron los CP?".
+   El +1 de inicio de ronda NO se suma solo: la regla se confirma
+   con la hoja en la mano, no la supone la app.
+   ============================================================ */
+function cpPanel(b){
+  const c = cpOf(b);
+  const box = el('div','cpbox');
+
+  // ---- contador
+  const bar = el('div','cpbar');
+
+  const paso = (n, cls, txt, ttl) => {
+    const btn = el('button', 'pm ' + cls);
+    btn.type = 'button'; btn.textContent = txt; btn.title = ttl;
+    btn.onclick = () => {
+      c.log.push({ r: b.round, n: n < 0 ? 'ajuste' : 'ganado', d: n });
+      saveBattle(b); renderBattles();
+    };
+    return btn;
+  };
+
+  const ahora = cpNow(b);
+  const num = el('div','cpnum' + (ahora < 0 ? ' neg' : ''));
+  num.innerHTML = '<b>' + ahora + '</b><i>COMMAND POINTS</i>';
+  if (ahora < 0) num.title = 'Te pasaste: gastaste m\u00e1s CP de los que anotaste como ganados.';
+
+  const rnd = el('div','cprnd');
+  rnd.innerHTML = '<b>' + b.round + '</b><i>RONDA</i>';
+
+  bar.append(paso(-1, 'dn', '\u2212', 'Restar 1 CP sin nombre'), num,
+             paso(+1, 'up', '+', 'Sumar 1 CP'), rnd);
+  box.append(bar);
+
+  // CP con los que arrancás. Sin esto habría que tocar + ocho veces antes
+  // de empezar, y el total nunca cuadraría con lo gastado.
+  const ini = el('div','cpini');
+  const ii = el('input');
+  ii.type = 'text'; ii.inputMode = 'numeric'; ii.value = +c.start || 0;
+  ii.onfocus = () => ii.select();
+  ii.onchange = () => {
+    c.start = Math.max(0, parseInt(ii.value, 10) || 0);
+    saveBattle(b); renderBattles();
+  };
+  const il = el('span'); il.textContent = 'CP AL EMPEZAR';
+  ini.append(il, ii);
+  if (ahora < 0) {
+    const w = el('b');
+    w.textContent = 'gastaste m\u00e1s de los que ten\u00edas';
+    ini.append(w);
+  }
+  box.append(ini);
+
+  // ---- gastar desde el desplegable
+  const grupos = stratGroups(b).filter((g) => (stratLib[g] || []).length);
+
+  if (!grupos.length) {
+    const n = el('div','hint');
+    n.innerHTML = 'No tenés estratagemas cargados. Abr\u00ed <b>Mis estratagemas</b> ' +
+      'ac\u00e1 abajo y escrib\u00edlos una vez: quedan guardados por destacamento.';
+    box.append(n);
+  } else {
+    const fila = el('div','cprow');
+    const sel = el('select','cpsel');
+    for (const g of grupos) {
+      const og = el('optgroup');
+      og.label = g === CORE_KEY ? 'B\u00e1sicas' : g;
+      (stratLib[g] || []).forEach((st, i) => {
+        const o = el('option');
+        o.value = g + '\u241f' + i;
+        o.textContent = st.n + ' \u2014 ' + (+st.c || 0) + ' CP';
+        og.append(o);
+      });
+      sel.append(og);
+    }
+    const go = el('button','btn cpgo');
+    go.type = 'button'; go.textContent = 'GASTAR';
+    go.onclick = () => {
+      const [g, i] = sel.value.split('\u241f');
+      const st = (stratLib[g] || [])[+i];
+      if (!st) return;
+      c.log.push({ r: b.round, n: st.n, d: -(+st.c || 0), g });
+      saveBattle(b); renderBattles();
+    };
+    fila.append(sel, go);
+    box.append(fila);
+  }
+
+  // ---- registro
+  if (c.log.length) {
+    const log = el('div','cplog');
+    c.log.forEach((x, i) => {
+      const r = el('div','cplg');
+      const em = el('em'); em.textContent = 'R' + (x.r || '?');
+      const sp = el('span'); sp.textContent = x.n;
+      const bn = el('b'); bn.textContent = (x.d > 0 ? '+' : '') + x.d;
+      if (x.d > 0) bn.className = 'g';
+      const rm = el('button','cpx');
+      rm.type = 'button'; rm.textContent = '\u2715'; rm.title = 'Deshacer';
+      rm.onclick = () => { c.log.splice(i,1); saveBattle(b); renderBattles(); };
+      r.append(em, sp, bn, rm);
+      log.append(r);
+    });
+    box.append(log);
+
+    const gast = c.log.reduce((a,x) => a + (x.d < 0 ? -x.d : 0), 0);
+    const gan  = c.log.reduce((a,x) => a + (x.d > 0 ?  x.d : 0), 0);
+    const tot = el('div','cptot');
+    tot.innerHTML = '<span>GASTADOS <b>' + gast + '</b></span>' +
+                    '<span>GANADOS <b>' + ((+c.start||0) + gan) + '</b></span>' +
+                    '<span>QUEDAN <b>' + cpNow(b) + '</b></span>';
+    box.append(tot);
+  }
+
+  // ---- editor
+  box.append(stratEditor(b));
+  return box;
+}
+
+/* Carga de estratagemas. Vive dentro del panel para no mandar al jugador
+ * a otra pantalla en mitad de una partida. */
+function stratEditor(b){
+  const d = el('details','cfg');
+  const n = stratGroups(b).reduce((a,g) => a + (stratLib[g]||[]).length, 0);
+  d.innerHTML = '<summary>Mis estratagemas <span>' + n + ' cargados</span></summary>';
+  const body = el('div');
+  body.style.cssText = 'margin-top:8px';
+
+  const aviso = el('div','hint');
+  aviso.style.cssText = 'margin-bottom:8px';
+  aviso.innerHTML = 'Se guardan en este tel\u00e9fono, no en la app publicada. ' +
+    'Cada destacamento mantiene los suyos y se reusan en toda lista que lo use.';
+  body.append(aviso);
+
+  for (const g of stratGroups(b)) {
+    const h = el('div','cpgh');
+    h.textContent = g === CORE_KEY ? 'B\u00c1SICAS \u00b7 cualquier ej\u00e9rcito' : g.toUpperCase();
+    body.append(h);
+
+    const arr = stratLib[g] = stratLib[g] || [];
+    arr.forEach((st, i) => {
+      const row = el('div','slot');
+      const nm = el('input'); nm.type='text'; nm.value = st.n || '';
+      nm.placeholder = 'nombre del estratagema';
+      nm.style.cssText = 'flex:1;min-width:0;font-family:var(--disp);font-weight:600;' +
+        'font-size:15px;background:transparent;border:none;' +
+        'border-bottom:1px solid var(--rule2);padding:3px 0;color:var(--ink)';
+      nm.oninput = () => { st.n = nm.value; saveStrats(); };
+
+      const w = el('label');
+      w.style.cssText = 'display:flex;flex-direction:column;gap:2px;font-family:var(--mono);' +
+        'font-size:8.5px;letter-spacing:.1em;color:var(--ink2);text-transform:uppercase';
+      const ci = el('input'); ci.type='text'; ci.inputMode='numeric'; ci.value = st.c ?? 1;
+      ci.style.cssText = 'width:48px;text-align:center;font-family:var(--mono);padding:5px;' +
+        'background:var(--panel);border:1px solid var(--rule2);border-radius:2px;color:var(--ink)';
+      ci.onfocus = () => ci.select();
+      ci.onchange = () => { st.c = parseInt(ci.value,10) || 0; saveStrats(); };
+      w.append('CP', ci);
+
+      const rm = el('button','btn');
+      rm.type = 'button'; rm.textContent = 'QUITAR';
+      rm.onclick = () => { arr.splice(i,1); saveStrats(); renderBattles(); };
+
+      row.append(nm, w, rm);
+      body.append(row);
+    });
+
+    const add = el('button','btn');
+    add.type = 'button'; add.textContent = '+ ESTRATAGEMA';
+    add.style.cssText = 'margin:4px 0 10px';
+    add.onclick = () => { arr.push({ n:'', c:1 }); saveStrats(); renderBattles(); };
+    body.append(add);
+  }
+
+  // Pegado masivo: cargar ocho estratagemas de a un botón es el motivo real
+  // por el que la biblioteca se quedaría vacía.
+  const pg = el('details','cfg');
+  pg.innerHTML = '<summary>Pegar una tanda <span>uno por l\u00ednea: nombre y costo</span></summary>';
+  const pb = el('div'); pb.style.cssText = 'margin-top:8px';
+
+  const dest = el('select','cpsel');
+  for (const g of stratGroups(b)) {
+    const o = el('option'); o.value = g;
+    o.textContent = g === CORE_KEY ? 'B\u00e1sicas' : g;
+    dest.append(o);
+  }
+
+  const ta = el('textarea');
+  ta.rows = 5;
+  ta.placeholder = 'Blood Surge 1\nUnbridled Carnage 1\nWarp Frenzy 2';
+  ta.style.cssText = 'width:100%;margin:6px 0;background:var(--chrome);color:var(--ink);' +
+    'border:1px solid var(--rule2);border-radius:2px;padding:7px;font-family:var(--mono);font-size:12px';
+
+  const ok = el('button','btn pri');
+  ok.type = 'button'; ok.textContent = 'AGREGAR';
+  ok.onclick = () => {
+    const g = dest.value;
+    const arr = stratLib[g] = stratLib[g] || [];
+    let add = 0;
+    for (const raw of ta.value.split('\n')) {
+      const t = raw.trim();
+      if (!t) continue;
+      // "Blood Surge 1", "Blood Surge - 1CP", "Blood Surge — 1 CP"
+      const m = t.match(/^(.*?)[\s\u2014\u2013-]*?(\d+)\s*(?:cp)?$/i);
+      const nom  = (m ? m[1] : t).replace(/[\s\u2014\u2013-]+$/,'').trim();
+      const cost = m ? parseInt(m[2],10) : 1;
+      if (!nom) continue;
+      arr.push({ n: nom, c: cost });
+      add++;
+    }
+    if (add) { saveStrats(); renderBattles(); }
+  };
+
+  pb.append(labelled('Guardar en', dest), ta, ok);
+  pg.append(pb);
+  body.append(pg);
+
+  d.append(body);
+  return d;
 }
 
 /* Editor de la biblioteca. Se comparte entre batallas. */
@@ -5521,6 +6024,21 @@ function summarise(b, mine){
     primCap: b.primCap || VP_CAP.perRound,
     cp: b.cp || null,
     painted: b.painted || null,
+    // Secundarias de los dos lados con su traza: en qué ronda salió la carta
+    // y en cuál se cerró. Es lo que después deja ver si una carta estuvo
+    // cuatro rondas en mano sin poder cobrarse.
+    secs: ['me', 'them'].reduce((acc, who) => {
+      const st = b[who === 'them' ? 'secThem' : 'sec'];
+      if (!st) { acc[who] = []; return acc; }
+      const ids = [...new Set([...(st.fixed || []), ...(st.active || []), ...(st.done || [])])];
+      acc[who] = ids.map((id) => {
+        const c = secOf(id);
+        return { n: c ? c.n : 'Card', drawn: (st.drawnAt || {})[id] ?? null,
+                 scored: (st.scored || {})[id] ?? null, vp: +(st.vp || {})[id] || 0 };
+      }).sort((x, y) => (x.drawn ?? 9) - (y.drawn ?? 9));
+      acc[who + 'Mode'] = st.mode || null;
+      return acc;
+    }, {}),
     theirUnits,
     faction: f ? f.name : null,
     disp: b.disp?.me ?? null,
@@ -6710,6 +7228,26 @@ function battleHero(r){
   return bar;
 }
 
+/* Secundarias: qué carta salió, cuándo, y cuándo se cerró. */
+function secTable(r){
+  const S = r.secs || {};
+  const filas = [...(S.me || []).map((x) => ['You', x]), ...(S.them || []).map((x) => ['Them', x])];
+  if (!filas.length) return null;
+  const t = el('table','score');
+  t.innerHTML = '<tr><th class="who">Card</th><th>Side</th><th>Drawn</th><th>Scored</th><th>VP</th></tr>' +
+    filas.map(([lado, x]) =>
+      '<tr><th class="who">' + esc(x.n) + '</th><td>' + lado + '</td>' +
+      '<td>' + (x.drawn ? 'R' + x.drawn : '\u2014') + '</td>' +
+      '<td>' + (x.scored ? 'R' + x.scored : '\u2014') + '</td>' +
+      '<td class="tot">' + x.vp + '</td></tr>').join('');
+  const scr = el('div','tscroll'); scr.append(t);
+  const cerradas = filas.filter(([, x]) => x.scored).length;
+  return vizBlock('Secondary missions',
+    'Every card that came out, the round it was drawn and the round it closed. ' +
+    'A card drawn early that never scored is one you could not play.',
+    scr, cerradas + ' of ' + filas.length + ' scored');
+}
+
 function renderUnaBatalla(v, r){
   v.append(battleHero(r));
   v.append(chartMarcador(r));
@@ -6717,6 +7255,8 @@ function renderUnaBatalla(v, r){
   const mesa = chartEnMesa(r);
   if (mesa) v.append(mesa);
   v.append(bajasTimeline(r));
+  const sec = secTable(r);
+  if (sec) v.append(sec);
 
   const pie = el('div','hint');
   pie.textContent = [r.date, r.faction, r.theirFaction ? 'vs ' + r.theirFaction : null,
