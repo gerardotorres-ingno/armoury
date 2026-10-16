@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "fe72f4a",
-    "date": "2026-10-14T11:01:17Z"
+    "sha": "9b8207c",
+    "date": "2026-10-16T07:35:08Z"
   },
   "catalogueId": "4ef9-15ce-e3e6-36de",
   "catalogueName": "Imperium - Adeptus Astartes - Blood Angels",
@@ -14,7 +14,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 6,
+  "revision": 7,
   "file": "Imperium - Blood Angels.json",
   "counts": {
     "total": 24,
@@ -4177,8 +4177,8 @@
               "p": 0,
               "model": true,
               "w": [
-                "Encarmine Weapon",
-                "Angelus Boltgun"
+                "Angelus Boltgun",
+                "Encarmine Weapon"
               ]
             },
             {
@@ -4189,25 +4189,14 @@
               "p": 0,
               "model": true,
               "w": [
-                "Encarmine Weapon",
-                "Inferno pistol"
+                "Inferno pistol",
+                "Encarmine Weapon"
               ]
             }
           ]
         }
       ],
       "weapons": [
-        {
-          "n": "Encarmine Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "4",
-          "skill": "2+",
-          "s": "6",
-          "ap": "-2",
-          "d": "2",
-          "kw": "Lance"
-        },
         {
           "n": "Angelus Boltgun",
           "melee": false,
@@ -4218,6 +4207,17 @@
           "ap": "-1",
           "d": "1",
           "kw": "Assault, Close-quarters"
+        },
+        {
+          "n": "Encarmine Weapon",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "2+",
+          "s": "6",
+          "ap": "-2",
+          "d": "2",
+          "kw": "Lance"
         },
         {
           "n": "Inferno pistol",
@@ -4237,8 +4237,8 @@
           "min": 3,
           "max": 6,
           "w": [
-            "Encarmine Weapon",
             "Angelus Boltgun",
+            "Encarmine Weapon",
             "Inferno pistol"
           ]
         }

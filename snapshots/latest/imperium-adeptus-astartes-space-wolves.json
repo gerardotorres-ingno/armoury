@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "fe72f4a",
-    "date": "2026-10-14T11:01:17Z"
+    "sha": "9b8207c",
+    "date": "2026-10-16T07:35:08Z"
   },
   "catalogueId": "94bb-3284-ee14-57a1",
   "catalogueName": "Imperium - Adeptus Astartes - Space Wolves",
@@ -14,7 +14,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 13,
+  "revision": 14,
   "file": "Imperium - Space Wolves.json",
   "counts": {
     "total": 39,
@@ -1230,11 +1230,11 @@
       "abilities": [
         {
           "n": "Iron Priest",
-          "d": "While this model is within 3\" of one or more friendly ADEPTUS ASTARTES VEHICLE units, this model has the Lone Operative ability"
+          "d": "While this model is within 3\" of a friendly Space Wolves Vehicle unit, this model has Lone Operative."
         },
         {
           "n": "Gift of the Iron Wolf",
-          "d": "In your Command phase, you can select one friendly ADEPTUS ASTARTES VEHICLE model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, select one ranged weapon equipped by that model to have the [RAPID FIRE 1] ability. Each model can only be selected for this ability or Blessing of the Omnissiah ability once per turn."
+          "d": "In your Movement phase, at the start or end of this unit's move, select up to one friendly Space Wolves Vehicle model within 3\" of this model: - That Vehicle model heals D3 wounds. - That Vehicle model’s attacks can ignore modifiers to hit rolls and wound rolls until the start of your next Movement phase. You cannot select the same Vehicle model for this ability more than once per phase."
         },
         {
           "n": "Leader",
@@ -1242,7 +1242,7 @@
         },
         {
           "n": "Judgement of the Omnissiah",
-          "d": "Each time this model makes an attack that targets an enemy unit within Engagement Range of one or more friendly ADEPTUS ASTARTES VEHICLE units, you can re-roll the wound roll."
+          "d": "This model's attacks that target an enemy unit engaged with a friendly Space Wolves Vehicle can re-roll wound rolls."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3647,10 +3647,10 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
-          "kw": ""
+          "kw": "Rapid Fire 1"
         },
         {
           "n": "Bolt pistol",
@@ -3684,7 +3684,7 @@
         },
         {
           "n": "Storm Shield",
-          "d": "The bearer has a 4+ invulnerable save."
+          "d": "This model has a 4+ InSv."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -3819,7 +3819,7 @@
       },
       "profile": {
         "M": "7\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "5+",
@@ -5336,7 +5336,7 @@
         },
         {
           "n": "Storm Shield",
-          "d": "The bearer has a 4+ invulnerable save."
+          "d": "This model has a 4+ InSv."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -5503,7 +5503,7 @@
         },
         {
           "n": "Storm Shield",
-          "d": "The bearer has a 4+ invulnerable save."
+          "d": "This model has a 4+ InSv."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -6790,13 +6790,13 @@
           "kw": "Devastating Wounds"
         },
         {
-          "n": "Storm Bolter",
+          "n": "Storm bolter",
           "melee": false,
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         },
@@ -6810,17 +6810,6 @@
           "ap": "-2",
           "d": "2",
           "kw": ""
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Rapid Fire 2"
         },
         {
           "n": "Power fist",
@@ -6860,7 +6849,7 @@
         },
         {
           "n": "Storm Shield",
-          "d": "The bearer has a Wounds characteristic of 4."
+          "d": "This model has +1 W."
         }
       ],
       "faction": "Adeptus Astartes",
@@ -7981,7 +7970,7 @@
           "range": "Melee",
           "a": "2",
           "skill": "3+",
-          "s": "5",
+          "s": "8",
           "ap": "-2",
           "d": "3",
           "kw": "Devastating Wounds"
@@ -8032,11 +8021,11 @@
         },
         {
           "n": "Death Totem",
-          "d": "Each time the bearer makes a melee attack, re-roll a hit roll of 1."
+          "d": "This unit's melee attacks can re-roll hit rolls of 1."
         },
         {
           "n": "Storm Shield",
-          "d": "The bearer has a 4+ invulnerable save."
+          "d": "This model has a 4+ InSv."
         }
       ],
       "faction": "Adeptus Astartes",

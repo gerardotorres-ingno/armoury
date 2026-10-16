@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "fe72f4a",
-    "date": "2026-10-14T11:01:17Z"
+    "sha": "9b8207c",
+    "date": "2026-10-16T07:35:08Z"
   },
   "catalogueId": "470a-6daa-9014-12df",
   "catalogueName": "Imperium - Adeptus Astartes - Dark Angels",
@@ -14,7 +14,7 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 8,
+  "revision": 9,
   "file": "Imperium - Dark Angels.json",
   "counts": {
     "total": 16,
@@ -1105,7 +1105,7 @@
           "d": "This model has the psychic abilities listed in the Psychic Abilities section."
         },
         {
-          "n": "Psychic Hood",
+          "n": "Psychic Hood (Ezekiel)",
           "d": "This unit has Feel No Pain 4+ against psychic attacks and mortal wounds."
         }
       ],
@@ -1715,24 +1715,15 @@
       "supports": null,
       "options": [
         {
-          "n": "Wargear",
+          "n": "Main Weapon",
           "owner": null,
-          "min": 0,
-          "max": null,
-          "pick": "many",
+          "min": 1,
+          "max": 1,
+          "pick": "one",
           "opts": [
             {
-              "n": "Blacksword missiles",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Armoured Hull",
-              "min": 1,
+              "n": "Nephilim lascannons",
+              "min": 0,
               "max": 1,
               "scale": null,
               "p": 0,
@@ -1743,33 +1734,6 @@
               "n": "Twin heavy bolter",
               "min": 0,
               "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Main Weapon",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Avenger mega bolter",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Nephilim lascannons",
-              "min": 0,
-              "max": 1,
               "scale": null,
               "p": 0,
               "model": false,
@@ -1813,17 +1777,6 @@
           "kw": ""
         },
         {
-          "n": "Armoured Hull",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "4+",
-          "s": "6",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
           "n": "Twin heavy bolter",
           "melee": false,
           "range": "36\"",
@@ -1833,6 +1786,17 @@
           "ap": "-1",
           "d": "2",
           "kw": "Rapid Fire 2, Sustained Hits 1, Twin-linked"
+        },
+        {
+          "n": "Armoured Hull",
+          "melee": true,
+          "range": "Melee",
+          "a": "3",
+          "skill": "4+",
+          "s": "6",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
         }
       ],
       "composition": [
