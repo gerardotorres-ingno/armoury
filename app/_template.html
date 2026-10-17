@@ -538,6 +538,12 @@ input[type=search]::placeholder{color:var(--ink2)}
   .tabs button{flex:1 1 0;min-width:0;padding:11px 2px;font-size:12px;
     letter-spacing:.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   /* El renglón de totales tampoco entraba: que baje de línea antes de empujar. */
+.ledger{flex-wrap:wrap;gap:4px 12px}
+  .ledger .lf{flex:1 1 100%}
+  .ledger .lm{white-space:normal}
+  .wp td:first-child{max-width:44vw}
+  .filters{gap:10px 14px}
+}
   /* ---- panel de command points ---- */
 .cpbox{margin:9px 0}
 .cpbar{display:flex;align-items:center;gap:7px;margin-bottom:8px}
@@ -585,12 +591,7 @@ input[type=search]::placeholder{color:var(--ink2)}
 .cptot b{color:var(--ink)}
 .cpgh{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;color:var(--ink2);
   text-transform:uppercase;margin:9px 0 4px;border-bottom:1px solid var(--rule);padding-bottom:3px}
-.ledger{flex-wrap:wrap;gap:4px 12px}
-  .ledger .lf{flex:1 1 100%}
-  .ledger .lm{white-space:normal}
-  .wp td:first-child{max-width:44vw}
-  .filters{gap:10px 14px}
-}
+
 .ledger{position:sticky;top:0;z-index:5;display:flex;align-items:baseline;gap:14px;
   background:var(--field);border-bottom:2px solid var(--rule2);padding:10px 0 7px;margin:18px 0 10px}
 .ledger .lf{flex:1;min-width:0;font-family:var(--disp);font-weight:600;font-size:16px;
@@ -4481,14 +4482,23 @@ function cpOf(b){
   // OJO: b.cp ya existe desde antes con la forma {me,them} para el recuadro
   // de análisis posterior a la partida. El rastreador vive en b.cpt aparte;
   // pisarlo dejaba aquel campo en "undefined" y perdía las batallas viejas.
-  if (!b.cpt) b.cpt = { start: 0, log: [] };
+  if (!b.cpt) b.cpt = { start: 0, adj: 0, log: [] };
   if (!Array.isArray(b.cpt.log)) b.cpt.log = [];
+  if (typeof b.cpt.adj !== 'number') {
+    // Migración: antes los + y − dejaban una línea "ganado"/"ajuste" en el
+    // registro y lo llenaban de ruido. Ahora mueven un contador aparte y la
+    // lista queda sólo con los estratagemas, que es lo que se quiere leer.
+    const conNombre = (x) => x.d < 0 && x.n && x.n !== 'ajuste' && x.n !== 'ganado';
+    // Todo lo que no era un gasto con nombre pasa al contador suelto, para que
+    // el total no cambie solo al actualizar la app.
+    b.cpt.adj = b.cpt.log.reduce((a, x) => a + (conNombre(x) ? 0 : (+x.d || 0)), 0);
+    b.cpt.log = b.cpt.log.filter(conNombre);
+  }
   return b.cpt;
 }
-function cpNow(b){
-  const c = cpOf(b);
-  return (+c.start || 0) + c.log.reduce((a, x) => a + (+x.d || 0), 0);
-}
+function cpGastado(b){ return cpOf(b).log.reduce((a, x) => a + Math.abs(+x.d || 0), 0); }
+function cpGanado(b){ const c = cpOf(b); return (+c.start || 0) + (+c.adj || 0); }
+function cpNow(b){ return cpGanado(b) - cpGastado(b); }
 
 let secLib = [];
 
@@ -4857,7 +4867,7 @@ function secRow(b, id, tactical, who){
       b.cp[who] = Math.min(b.round, (b.cp[who] || 0) + 1);
       // Y al registro, que para eso existe: el CP de descartar es de los que
       // después nadie se acuerda de dónde salió.
-      if (who === 'me') cpOf(b).log.push({ r: b.round, n: 'descarte de carta', d: +1 });
+      if (who === 'me') { const q = cpOf(b); q.adj = (+q.adj || 0) + 1; }
       saveBattle(b); renderBattles();
     };
     row.append(ok, dc);
@@ -4897,13 +4907,12 @@ function cpPanel(b){
   // ---- contador
   const bar = el('div','cpbar');
 
+  // Suman o restan y punto. NO dejan línea en el registro: la lista es para
+  // los estratagemas, que es la pregunta que importa después.
   const paso = (n, cls, txt, ttl) => {
     const btn = el('button', 'pm ' + cls);
     btn.type = 'button'; btn.textContent = txt; btn.title = ttl;
-    btn.onclick = () => {
-      c.log.push({ r: b.round, n: n < 0 ? 'ajuste' : 'ganado', d: n });
-      saveBattle(b); renderBattles();
-    };
+    btn.onclick = () => { c.adj = (+c.adj || 0) + n; saveBattle(b); renderBattles(); };
     return btn;
   };
 
@@ -4915,7 +4924,7 @@ function cpPanel(b){
   const rnd = el('div','cprnd');
   rnd.innerHTML = '<b>' + b.round + '</b><i>RONDA</i>';
 
-  bar.append(paso(-1, 'dn', '\u2212', 'Restar 1 CP sin nombre'), num,
+  bar.append(paso(-1, 'dn', '\u2212', 'Restar 1 CP'), num,
              paso(+1, 'up', '+', 'Sumar 1 CP'), rnd);
   box.append(bar);
 
@@ -4976,12 +4985,14 @@ function cpPanel(b){
   // ---- registro
   if (c.log.length) {
     const log = el('div','cplog');
+    const lt = el('div','cpgh'); lt.style.marginTop = '2px';
+    lt.textContent = 'EN QU\u00c9 SE FUERON';
+    log.append(lt);
     c.log.forEach((x, i) => {
       const r = el('div','cplg');
       const em = el('em'); em.textContent = 'R' + (x.r || '?');
       const sp = el('span'); sp.textContent = x.n;
-      const bn = el('b'); bn.textContent = (x.d > 0 ? '+' : '') + x.d;
-      if (x.d > 0) bn.className = 'g';
+      const bn = el('b'); bn.textContent = x.d;
       const rm = el('button','cpx');
       rm.type = 'button'; rm.textContent = '\u2715'; rm.title = 'Deshacer';
       rm.onclick = () => { c.log.splice(i,1); saveBattle(b); renderBattles(); };
@@ -4990,11 +5001,9 @@ function cpPanel(b){
     });
     box.append(log);
 
-    const gast = c.log.reduce((a,x) => a + (x.d < 0 ? -x.d : 0), 0);
-    const gan  = c.log.reduce((a,x) => a + (x.d > 0 ?  x.d : 0), 0);
     const tot = el('div','cptot');
-    tot.innerHTML = '<span>GASTADOS <b>' + gast + '</b></span>' +
-                    '<span>GANADOS <b>' + ((+c.start||0) + gan) + '</b></span>' +
+    tot.innerHTML = '<span>GASTADOS <b>' + cpGastado(b) + '</b></span>' +
+                    '<span>DISPONIBLES <b>' + cpGanado(b) + '</b></span>' +
                     '<span>QUEDAN <b>' + cpNow(b) + '</b></span>';
     box.append(tot);
   }
@@ -5101,6 +5110,60 @@ function stratEditor(b){
   pb.append(labelled('Guardar en', dest), ta, ok);
   pg.append(pb);
   body.append(pg);
+
+  /* Exportar e importar la biblioteca entera.
+     Cargar ocho estratagemas por destacamento con el pulgar es el motivo real
+     por el que esto se quedaría vacío. Con esto se escribe una vez en el
+     computador, se guarda el archivo, y se pasa al teléfono —o entre
+     jugadores, que cada uno tiene su códex. */
+  const io = el('div','bar');
+  io.style.cssText = 'margin-top:10px';
+
+  const ex = el('button','btn');
+  ex.type = 'button'; ex.textContent = 'EXPORTAR';
+  ex.title = 'Baja un archivo con todos tus estratagemas';
+  ex.onclick = () => {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(stratLib, null, 2)],
+      { type: 'application/json' }));
+    const a = el('a'); a.href = url; a.download = 'mis-estratagemas.json';
+    a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000);
+  };
+
+  const imp = el('button','btn');
+  imp.type = 'button'; imp.textContent = 'IMPORTAR';
+  imp.title = 'Carga un archivo exportado antes, o de otro jugador';
+  const fi = el('input'); fi.type = 'file'; fi.accept = '.json,application/json';
+  fi.style.display = 'none';
+  imp.onclick = () => fi.click();
+  fi.onchange = () => {
+    const f = fi.files && fi.files[0];
+    if (!f) return;
+    const rd = new FileReader();
+    rd.onload = () => {
+      try {
+        const d = JSON.parse(rd.result);
+        if (!d || typeof d !== 'object' || Array.isArray(d)) throw new Error('formato');
+        // Se suma a lo que ya hay, sin pisar: importar la libreta de un amigo
+        // no debería borrar la tuya.
+        for (const [g, arr] of Object.entries(d)) {
+          if (!Array.isArray(arr)) continue;
+          const dest2 = stratLib[g] = stratLib[g] || [];
+          for (const st of arr) {
+            const nom = String((st && st.n) || '').trim();
+            if (!nom || dest2.some((y) => y.n === nom)) continue;
+            dest2.push({ n: nom, c: parseInt(st.c, 10) || 0 });
+          }
+        }
+        saveStrats(); renderBattles();
+      } catch {
+        alert('Ese archivo no tiene el formato de una biblioteca de estratagemas.');
+      }
+    };
+    rd.readAsText(f);
+  };
+
+  io.append(ex, imp, fi);
+  body.append(io);
 
   d.append(body);
   return d;
