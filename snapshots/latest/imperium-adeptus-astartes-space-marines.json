@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "9b8207c",
-    "date": "2026-10-16T07:35:08Z"
+    "sha": "b8667d4",
+    "date": "2026-10-19T01:14:51Z"
   },
   "catalogueId": "e0af-67df-9d63-8fb7",
   "catalogueName": "Imperium - Adeptus Astartes - Space Marines",
@@ -961,7 +961,7 @@
           "n": "Ceramite Fists",
           "melee": true,
           "range": "Melee",
-          "a": "5",
+          "a": "4",
           "skill": "3+",
           "s": "5",
           "ap": "0",
@@ -2845,7 +2845,7 @@
           "melee": true,
           "range": "Melee",
           "a": "3",
-          "skill": "4+",
+          "skill": "3+",
           "s": "7",
           "ap": "-2",
           "d": "2",
@@ -3371,7 +3371,7 @@
           "melee": true,
           "range": "Melee",
           "a": "3",
-          "skill": "4+",
+          "skill": "3+",
           "s": "7",
           "ap": "-2",
           "d": "2",
@@ -6431,7 +6431,7 @@
         {
           "n": "➤ Combi-weapon - Infernus",
           "melee": false,
-          "range": "12",
+          "range": "12\"",
           "a": "3",
           "skill": "-",
           "s": "4",
@@ -10655,7 +10655,7 @@
         "LD": "5+",
         "OC": "1",
         "InSv": "4+\n",
-        "Base": "32mm"
+        "Base": "40mm"
       },
       "coreAb": [
         {
@@ -16150,17 +16150,6 @@
           "ap": "-1",
           "d": "2",
           "kw": "Heavy, Rapid Fire 2, Sustained Hits 1"
-        },
-        {
-          "n": "Close combat weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
         }
       ],
       "composition": [
@@ -16191,7 +16180,7 @@
           "w": [
             "Heavy Bolter",
             "Bolt pistol",
-            "Close combat weapon"
+            "Ceramite Fists"
           ]
         }
       ],
@@ -16322,12 +16311,12 @@
           "kw": "Close-quarters"
         },
         {
-          "n": "Close combat weapon",
+          "n": "Ceramite Fists",
           "melee": true,
           "range": "Melee",
           "a": "3",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "0",
           "d": "1",
           "kw": ""
@@ -16353,17 +16342,6 @@
           "ap": "-3",
           "d": "2",
           "kw": "Assault, Hazardous, Rapid Fire 1"
-        },
-        {
-          "n": "Ceramite Fists",
-          "melee": true,
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
         }
       ],
       "composition": [
@@ -16372,7 +16350,7 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Close combat weapon"
+            "Ceramite Fists"
           ]
         },
         {
@@ -17007,7 +16985,8 @@
         "Transport",
         "Dedicated Transport",
         "Imperium",
-        "Impulsor"
+        "Impulsor",
+        "Frame"
       ],
       "models": {
         "min": 1,
@@ -21833,7 +21812,8 @@
         "Fly",
         "Imperium",
         "Land Speeder",
-        "Speeder"
+        "Speeder",
+        "Frame"
       ],
       "models": {
         "min": 1,
@@ -33399,33 +33379,6 @@
           ]
         },
         {
-          "n": "Weapon Option",
-          "owner": "Sternguard Veteran Sergeant",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Combi-weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Artificer Firearm",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
           "n": "Melee Option",
           "owner": "Sternguard Veteran Sergeant",
           "min": 0,
@@ -33546,17 +33499,6 @@
           "kw": ""
         },
         {
-          "n": "Combi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "4+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
-        },
-        {
           "n": "Power weapon",
           "melee": true,
           "range": "Melee",
@@ -33650,12 +33592,7 @@
         "InSv": "",
         "Base": "32mm"
       },
-      "coreAb": [
-        {
-          "n": "Anti",
-          "d": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-        }
-      ],
+      "coreAb": null,
       "facAb": [
         {
           "n": "Combat Doctrines",
@@ -37391,7 +37328,7 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "kw": "Sustained Hits 1, Twin-linked"
+          "kw": "Rapid Fire 2, Sustained Hits 1, Twin-linked"
         }
       ],
       "composition": [
