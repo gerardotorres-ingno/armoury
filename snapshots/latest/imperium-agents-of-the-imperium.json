@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "b8667d4",
-    "date": "2026-10-19T01:14:51Z"
+    "sha": "79c2aff",
+    "date": "2026-10-26T14:37:45Z"
   },
   "catalogueId": "b00-cd86-4b4c-97ba",
   "catalogueName": "Imperium - Agents of the Imperium",
@@ -50,7 +50,7 @@
   ],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 20,
+  "revision": 22,
   "file": "Imperium - Agents of the Imperium.json",
   "counts": {
     "total": 49,
@@ -418,12 +418,14 @@
       "keywords": [
         "Infantry",
         "Battleline",
-        "Grenades",
         "Imperium",
-        "Deathwatch",
         "Aquila Kill Team",
         "Retinue",
-        "Ordo Xenos"
+        "Ordo Xenos",
+        "Explosives",
+        "Gravis",
+        "Tacticus",
+        "Kill Team"
       ],
       "models": {
         "min": 1,
@@ -626,6 +628,15 @@
               "p": 0,
               "model": false,
               "w": []
+            },
+            {
+              "n": "Auspex array",
+              "min": 1,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
             }
           ]
         },
@@ -686,33 +697,6 @@
               ]
             }
           ]
-        },
-        {
-          "n": "Wargear",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Auspex array",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Infernum halo-launcher",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
         }
       ],
       "weapons": [
@@ -733,8 +717,8 @@
           "range": "24\"",
           "a": "6",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 6, Twin-Linked"
         },
@@ -745,9 +729,9 @@
           "a": "6",
           "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
-          "kw": "Devastating Wounds, Twin-Linked"
+          "kw": "Sustained Hits 1, Twin-Linked"
         },
         {
           "n": "Twin lascannon",
@@ -757,19 +741,19 @@
           "skill": "3+",
           "s": "12",
           "ap": "-3",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": "Twin-Linked"
         },
         {
           "n": "Blackstar rocket launcher",
           "melee": false,
           "range": "30\"",
-          "a": "D6+1",
+          "a": "4",
           "skill": "3+",
           "s": "5",
           "ap": "0",
           "d": "1",
-          "kw": "Blast"
+          "kw": "Blast 1"
         },
         {
           "n": "Stormstrike missile launcher",
@@ -794,7 +778,7 @@
       "abilities": [
         {
           "n": "Blackstar Cluster Launcher",
-          "d": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 5+, that unit suffers 1 mortal wound."
+          "d": "In your Movement phase, when this unit ends a normal move, select up to one enemy unit this unit moved over during that move and roll six D6: - For each 4+, that unit suffers 1 mortal wound."
         },
         {
           "n": "Damaged: 1-5 Wounds Remaining",
@@ -803,10 +787,6 @@
         {
           "n": "Auspex Array",
           "d": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
-        },
-        {
-          "n": "Infernum Halo-launcher",
-          "d": "The bearer has the SMOKE keyword."
         }
       ],
       "faction": "Agents of the Imperium",
@@ -818,8 +798,7 @@
         "Retinue",
         "Corvus Blackstar",
         "Ordo Xenos",
-        "Deathwatch",
-        "Frame"
+        "Smoke"
       ],
       "models": {
         "min": 1,
@@ -2873,12 +2852,11 @@
       "keywords": [
         "Infantry",
         "Battleline",
-        "Grenades",
         "Imperium",
         "Retinue",
         "Ordo Xenos",
-        "Deathwatch",
-        "Kill Team"
+        "Kill Team",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -13775,8 +13753,8 @@
           "n": "Hellfire Extremis",
           "melee": false,
           "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
+          "a": "3",
+          "skill": "-",
           "s": "4",
           "ap": "-1",
           "d": "1",
@@ -13788,7 +13766,7 @@
           "range": "Melee",
           "a": "6",
           "skill": "2+",
-          "s": "5",
+          "s": "6",
           "ap": "-2",
           "d": "2",
           "kw": ""
@@ -13808,11 +13786,11 @@
       "abilities": [
         {
           "n": "Tactical Instinct",
-          "d": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          "d": "This unit's attacks have [Sustained Hits 1]."
         },
         {
           "n": "Unstoppable Champion",
-          "d": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 1 wound remaining."
+          "d": "At the end of a phase in which this model is destroyed, roll one D6: - On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed, unengaged with 3 wounds remaining."
         },
         {
           "n": "Leader",
@@ -13826,10 +13804,10 @@
         "Infantry",
         "Grenades",
         "Imperium",
-        "Deathwatch",
         "Watch Captain Artemis",
         "Ordo Xenos",
-        "Leader"
+        "Leader",
+        "Captain"
       ],
       "models": {
         "min": 1,
@@ -13837,7 +13815,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "3+",
         "W": "4",
         "LD": "6+",
@@ -13847,7 +13825,7 @@
       },
       "coreAb": [
         {
-          "n": "Feel No Pain",
+          "n": "Feel No Pain 6+",
           "d": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
         },
         {
@@ -13892,7 +13870,7 @@
           "range": "24\"",
           "a": "2",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "2",
           "kw": ""
@@ -13908,29 +13886,31 @@
       ],
       "abilities": [
         {
-          "n": "Strategic Knowledge",
-          "d": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
+          "n": "Strategic Acumen",
+          "d": "n your Command phase, you can use this ability. If you do, select one combat doctrine to be active for this unit until the start of your next Command phase."
         },
         {
-          "n": "Rites of Battle",
-          "d": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+          "n": "Watch Master",
+          "d": "This model’s attacks that target a Character unit can: - Re-roll hit rolls of 1. - Re-roll wound rolls of 1."
         },
         {
           "n": "Leader",
           "d": "This model can be attached to the following units: AQUILA KILL TEAM, DEATHWATCH KILL TEAM, DEATHWATCH TERMINATOR SQUAD, FORTIS KILL TEAM, INDOMITOR KILL TEAM, PROTEUS KILL TEAM, SPECTRUS KILL TEAM"
+        },
+        {
+          "n": "Purgatus Quarry",
+          "d": "At the start of the first battle round, select up to one enemy unit to be this unit’s hunted: - This unit’s attacks that target this unit’s hunted unit can re-roll wound rolls of 1. - Each time this unit’s hunted is destroyed, select up to one enemy unit to be this unit’s hunted."
         }
       ],
       "faction": "Agents of the Imperium",
       "keywords": [
         "Character",
         "Infantry",
-        "Captain",
-        "Grenades",
         "Imperium",
         "Watch Master",
-        "Deathwatch",
         "Ordo Xenos",
-        "Leader"
+        "Leader",
+        "Explosives"
       ],
       "models": {
         "min": 1,
@@ -13938,7 +13918,7 @@
       },
       "profile": {
         "M": "6\"",
-        "T": "4",
+        "T": "5",
         "Sv": "2+",
         "W": "5",
         "LD": "6+",
