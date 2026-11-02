@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "79c2aff",
-    "date": "2026-10-26T14:37:45Z"
+    "sha": "0f90355",
+    "date": "2026-11-02T01:29:58Z"
   },
   "catalogueId": "e0af-67df-9d63-8fb7",
   "catalogueName": "Imperium - Adeptus Astartes - Space Marines",
@@ -621,12 +621,12 @@
   "revision": 23,
   "file": "Imperium - Space Marines.json",
   "counts": {
-    "total": 167,
-    "native": 144,
+    "total": 165,
+    "native": 143,
     "matched": 78,
-    "legends": 63,
+    "legends": 62,
     "crucible": 3,
-    "allied": 23
+    "allied": 22
   },
   "unresolved": [],
   "datasheets": [
@@ -1597,7 +1597,7 @@
         {
           "n": "Reductor Pistol",
           "melee": true,
-          "range": "3\"",
+          "range": "Melee",
           "a": "1",
           "skill": "3+",
           "s": "5",
@@ -3552,217 +3552,6 @@
       "native": true
     },
     {
-      "id": "74c4-82d0-4c98-2fa8",
-      "linkId": "6cd-6624-587-13dd",
-      "name": "Astartes Servitors",
-      "rawName": "Astartes Servitors [Legends]",
-      "type": "unit",
-      "mode": "legends",
-      "legends": true,
-      "points": 55,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 55
-        }
-      ],
-      "cap": {
-        "max": 3,
-        "at1000": 2
-      },
-      "leads": null,
-      "supports": null,
-      "options": [
-        {
-          "n": "Astartes Servitors",
-          "owner": null,
-          "min": 4,
-          "max": 4,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Astartes Servitor",
-              "min": 2,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Servitor Servo Arm"
-              ]
-            },
-            {
-              "n": "Astartes Servitor w/ Heavy Weapon",
-              "min": 0,
-              "max": 2,
-              "scale": null,
-              "p": 0,
-              "model": true,
-              "w": [
-                "Close Combat Weapon"
-              ]
-            }
-          ]
-        },
-        {
-          "n": "Heavy Weapon",
-          "owner": "Astartes Servitor w/ Heavy Weapon",
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Heavy Bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma cannon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Multi-melta",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Servitor Servo Arm",
-          "melee": true,
-          "range": "Melee",
-          "a": "1",
-          "skill": "5+",
-          "s": "6",
-          "ap": "-2",
-          "d": "3",
-          "kw": ""
-        },
-        {
-          "n": "Close Combat Weapon",
-          "melee": true,
-          "range": "Melee",
-          "a": "1",
-          "skill": "5+",
-          "s": "3",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Heavy Bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "4+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Heavy, Rapid Fire 2, Sustained Hits 1"
-        },
-        {
-          "n": "➤ Plasma cannon - standard",
-          "melee": false,
-          "range": "36\"",
-          "a": "D3",
-          "skill": "4+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Blast, Heavy"
-        },
-        {
-          "n": "➤ Plasma cannon - supercharge",
-          "melee": false,
-          "range": "36\"",
-          "a": "D3",
-          "skill": "4+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Blast, Heavy, Hazardous"
-        },
-        {
-          "n": "Multi-melta",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "4+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Heavy, Melta 2"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Astartes Servitor",
-          "min": 2,
-          "max": null,
-          "w": [
-            "Servitor Servo Arm"
-          ]
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Mindlock",
-          "d": "While a Techmarine model is leading this unit, improve the Ballistic Skill and Weapon Skill characteristics of ranged and melee weapons equipped by Astartes Servitor models in this unit by 1."
-        },
-        {
-          "n": "Servitor Retinue",
-          "d": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a Techmarine. If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
-        }
-      ],
-      "faction": "Adeptus Astartes",
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Astartes Servitors"
-      ],
-      "models": {
-        "min": 2,
-        "max": 2
-      },
-      "profile": {
-        "M": "6\"",
-        "T": "4",
-        "Sv": "4+",
-        "W": "1",
-        "LD": "8+",
-        "OC": "0",
-        "InSv": "6+",
-        "Base": "~25mm"
-      },
-      "coreAb": null,
-      "facAb": [
-        {
-          "n": "Combat Doctrines",
-          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
-        },
-        {
-          "n": "Templar Vows",
-          "d": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced."
-        }
-      ],
-      "native": true
-    },
-    {
       "id": "98db-fff3-b1b2-e22f",
       "linkId": "32de-a3b5-56f5-60b6",
       "name": "Astraeus",
@@ -3821,7 +3610,7 @@
             {
               "n": "Storm bolter",
               "min": 0,
-              "max": 1,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -3917,7 +3706,7 @@
           "skill": "3+",
           "s": "12",
           "ap": "-3",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": "Twin-linked"
         },
         {
@@ -3981,8 +3770,8 @@
           "range": "24\"",
           "a": "2",
           "skill": "3+",
-          "s": "4",
-          "ap": "0",
+          "s": "5",
+          "ap": "-1",
           "d": "1",
           "kw": "Rapid Fire 2"
         }
@@ -16234,414 +16023,6 @@
       "native": false
     },
     {
-      "id": "585d-722b-4304-2f63",
-      "linkId": "420f-595f-eecb-8ab3",
-      "name": "Fellblade",
-      "rawName": "Fellblade [Legends]",
-      "type": "model",
-      "mode": "legends",
-      "legends": true,
-      "points": 480,
-      "ladder": [
-        {
-          "from": 1,
-          "pts": 480
-        }
-      ],
-      "cap": null,
-      "leads": null,
-      "supports": null,
-      "options": [
-        {
-          "n": "Wargear",
-          "owner": null,
-          "min": 0,
-          "max": null,
-          "pick": "many",
-          "opts": [
-            {
-              "n": "Demolisher cannon",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Fellblade accelerator cannon",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Armoured tracks",
-              "min": 1,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Havoc launcher",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Frontal weapon",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Twin heavy bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Twin heavy flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Pintle weapon",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Heavy bolter",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Heavy flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Multi-melta",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Storm bolter",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Combi-weapon",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Sponsons",
-          "owner": null,
-          "min": 1,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Two quad lascannons",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Quad lascannon"
-              ]
-            },
-            {
-              "n": "Two laser destroyers",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Laser destroyer"
-              ]
-            },
-            {
-              "n": "Two quad heavy bolters",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": [
-                "Quad heavy bolter"
-              ]
-            }
-          ]
-        }
-      ],
-      "weapons": [
-        {
-          "n": "Demolisher cannon",
-          "melee": false,
-          "range": "24\"",
-          "a": "D6+3",
-          "skill": "3+",
-          "s": "14",
-          "ap": "-3",
-          "d": "D6",
-          "kw": "Blast"
-        },
-        {
-          "n": "➤ Fellblade accelerator cannon - AP shells",
-          "melee": false,
-          "range": "72\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "14",
-          "ap": "-3",
-          "d": "6",
-          "kw": ""
-        },
-        {
-          "n": "➤ Fellblade accelerator cannon - HE shells",
-          "melee": false,
-          "range": "72\"",
-          "a": "2D6",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Blast"
-        },
-        {
-          "n": "Twin heavy bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Sustained Hits 1, Twin-linked"
-        },
-        {
-          "n": "Twin heavy flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent, Twin-linked"
-        },
-        {
-          "n": "Heavy bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Sustained Hits 1"
-        },
-        {
-          "n": "Heavy flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "5",
-          "ap": "-1",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "Multi-melta",
-          "melee": false,
-          "range": "18\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
-        },
-        {
-          "n": "Storm bolter",
-          "melee": false,
-          "range": "24\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Rapid Fire 2"
-        },
-        {
-          "n": "Combi-weapon",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Anti-INFANTRY 3+, Devastating Wounds, Rapid Fire 1"
-        },
-        {
-          "n": "Quad lascannon",
-          "melee": false,
-          "range": "48\"",
-          "a": "4",
-          "skill": "3+",
-          "s": "12",
-          "ap": "-3",
-          "d": "D6+1",
-          "kw": ""
-        },
-        {
-          "n": "Laser destroyer",
-          "melee": false,
-          "range": "36\"",
-          "a": "3",
-          "skill": "3+",
-          "s": "14",
-          "ap": "-4",
-          "d": "D6+1",
-          "kw": "Heavy"
-        },
-        {
-          "n": "Quad heavy bolter",
-          "melee": false,
-          "range": "36\"",
-          "a": "6",
-          "skill": "3+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "kw": "Sustained Hits 1, Twin-linked"
-        },
-        {
-          "n": "Armoured tracks",
-          "melee": true,
-          "range": "Melee",
-          "a": "6",
-          "skill": "4+",
-          "s": "8",
-          "ap": "0",
-          "d": "1",
-          "kw": ""
-        },
-        {
-          "n": "Havoc launcher",
-          "melee": false,
-          "range": "48\"",
-          "a": "D6",
-          "skill": "3+",
-          "s": "5",
-          "ap": "0",
-          "d": "1",
-          "kw": "Blast"
-        }
-      ],
-      "composition": [
-        {
-          "n": "Fellblade [Legends]",
-          "min": 1,
-          "max": 1,
-          "w": []
-        }
-      ],
-      "abilities": [
-        {
-          "n": "Rolling Fortress",
-          "d": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack."
-        },
-        {
-          "n": "Damaged: 1-8 wounds remaining",
-          "d": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
-        }
-      ],
-      "faction": null,
-      "keywords": [
-        "Vehicle",
-        "Titanic",
-        "Smoke",
-        "Fellblade"
-      ],
-      "models": {
-        "min": 1,
-        "max": 1
-      },
-      "profile": {
-        "M": "9\"",
-        "T": "13",
-        "Sv": "2+",
-        "W": "24",
-        "LD": "6+",
-        "OC": "8",
-        "InSv": "",
-        "Base": "Hull"
-      },
-      "coreAb": [
-        {
-          "n": "Deadly Demise",
-          "d": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-        }
-      ],
-      "facAb": [
-        {
-          "n": "Combat Doctrines",
-          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
-        }
-      ],
-      "native": false
-    },
-    {
       "id": "dc83-f2ef-802a-5662",
       "linkId": "6981-8904-488b-309b",
       "name": "Ferren Areios",
@@ -22210,15 +21591,6 @@
           "pick": "many",
           "opts": [
             {
-              "n": "Godhammer Lascannon",
-              "min": 2,
-              "max": 2,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Armoured Tracks",
               "min": 0,
               "max": null,
@@ -22262,22 +21634,20 @@
               "p": 0,
               "model": false,
               "w": []
+            },
+            {
+              "n": "Godhammer Lascannon",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
             }
           ]
         }
       ],
       "weapons": [
-        {
-          "n": "Godhammer Lascannon",
-          "melee": false,
-          "range": "48\"",
-          "a": "2",
-          "skill": "3+",
-          "s": "12",
-          "ap": "-3",
-          "d": "D3+3",
-          "kw": ""
-        },
         {
           "n": "Armoured Tracks",
           "melee": true,
@@ -22332,6 +21702,17 @@
           "ap": "-1",
           "d": "2",
           "kw": "Rapid Fire 2, Sustained Hits 1, Twin-linked"
+        },
+        {
+          "n": "Godhammer Lascannon",
+          "melee": false,
+          "range": "48\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D3+3",
+          "kw": ""
         }
       ],
       "composition": [
@@ -22994,7 +22375,7 @@
               "w": []
             },
             {
-              "n": "Godhammer Lascannons",
+              "n": "Godhammer Lascannon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -23067,14 +22448,14 @@
           "kw": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
         },
         {
-          "n": "Godhammer Lascannons",
+          "n": "Godhammer Lascannon",
           "melee": false,
           "range": "48\"",
           "a": "2",
           "skill": "3+",
           "s": "12",
           "ap": "-3",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": ""
         },
         {
@@ -23094,10 +22475,10 @@
           "range": "18\"",
           "a": "2",
           "skill": "3+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "kw": "Melta 2"
+          "s": "10",
+          "ap": "-3",
+          "d": "D3+2",
+          "kw": "Melta 3"
         },
         {
           "n": "Storm bolter",
@@ -23224,7 +22605,7 @@
               "w": []
             },
             {
-              "n": "Godhammer Lascannons",
+              "n": "Godhammer Lascannon",
               "min": 0,
               "max": null,
               "scale": null,
@@ -23275,14 +22656,14 @@
           "kw": ""
         },
         {
-          "n": "Godhammer Lascannons",
+          "n": "Godhammer Lascannon",
           "melee": false,
           "range": "48\"",
           "a": "2",
           "skill": "3+",
           "s": "12",
           "ap": "-3",
-          "d": "D6+1",
+          "d": "D3+3",
           "kw": ""
         },
         {
@@ -30352,11 +29733,11 @@
       "type": "model",
       "mode": "legends",
       "legends": true,
-      "points": 85,
+      "points": 95,
       "ladder": [
         {
           "from": 1,
-          "pts": 85
+          "pts": 95
         }
       ],
       "cap": {
@@ -34211,11 +33592,11 @@
       "type": "model",
       "mode": "legends",
       "legends": true,
-      "points": 160,
+      "points": 180,
       "ladder": [
         {
           "from": 1,
-          "pts": 160
+          "pts": 180
         }
       ],
       "cap": null,
@@ -36170,7 +35551,7 @@
               "w": []
             },
             {
-              "n": "Astartes Chainsword",
+              "n": "Chainsword",
               "min": 0,
               "max": null,
               "scale": null,
@@ -36287,12 +35668,12 @@
           "kw": ""
         },
         {
-          "n": "Astartes Chainsword",
+          "n": "Chainsword",
           "melee": true,
           "range": "Melee",
-          "a": "6",
+          "a": "5",
           "skill": "3+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
           "d": "1",
           "kw": ""

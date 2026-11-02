@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "79c2aff",
-    "date": "2026-10-26T14:37:45Z"
+    "sha": "0f90355",
+    "date": "2026-11-02T01:29:58Z"
   },
   "catalogueId": "d265-877b-e03d-30ca",
   "catalogueName": "Chaos - Chaos Daemons",
@@ -2784,8 +2784,8 @@
               "p": 0,
               "model": true,
               "w": [
-                "Flamer",
-                "Close combat weapon"
+                "Close combat weapon",
+                "Flamer"
               ]
             },
             {
@@ -3400,17 +3400,6 @@
           "kw": ""
         },
         {
-          "n": "Autopistol",
-          "melee": false,
-          "range": "12\"",
-          "a": "1",
-          "skill": "4+",
-          "s": "3",
-          "ap": "0",
-          "d": "1",
-          "kw": "Pistol"
-        },
-        {
           "n": "Close combat weapon",
           "melee": true,
           "range": "Melee",
@@ -3420,6 +3409,17 @@
           "ap": "0",
           "d": "1",
           "kw": ""
+        },
+        {
+          "n": "Autopistol",
+          "melee": false,
+          "range": "12\"",
+          "a": "1",
+          "skill": "4+",
+          "s": "3",
+          "ap": "0",
+          "d": "1",
+          "kw": "Pistol"
         },
         {
           "n": "➤ Warp Curse - witchfire",
@@ -3469,8 +3469,8 @@
           "min": 1,
           "max": 1,
           "w": [
-            "Autopistol",
-            "Close combat weapon"
+            "Close combat weapon",
+            "Autopistol"
           ]
         },
         {
@@ -4171,24 +4171,6 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Flamer",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Plasma gun",
-              "min": 0,
-              "max": null,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Plasma pistol",
               "min": 0,
               "max": 1,
@@ -4232,6 +4214,24 @@
               "p": 0,
               "model": false,
               "w": []
+            },
+            {
+              "n": "Flamer",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Plasma gun",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
             }
           ]
         }
@@ -4269,39 +4269,6 @@
           "ap": "-1",
           "d": "1",
           "kw": ""
-        },
-        {
-          "n": "Flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
-          "n": "➤ Plasma gun - standard",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Rapid Fire 1"
-        },
-        {
-          "n": "➤ Plasma gun - supercharge",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Hazardous, Rapid Fire 1"
         },
         {
           "n": "➤ Plasma pistol - standard",
@@ -4346,6 +4313,39 @@
           "ap": "-4",
           "d": "D6",
           "kw": "Melta 2"
+        },
+        {
+          "n": "Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "➤ Plasma gun - standard",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "➤ Plasma gun - supercharge",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous, Rapid Fire 1"
         },
         {
           "n": "Havoc autocannon",
@@ -4771,15 +4771,6 @@
           "pick": "one",
           "opts": [
             {
-              "n": "Flamer",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Havoc autocannon",
               "min": 0,
               "max": 1,
@@ -4816,15 +4807,6 @@
               "w": []
             },
             {
-              "n": "Plasma gun",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
               "n": "Reaper chaincannon",
               "min": 0,
               "max": 1,
@@ -4848,6 +4830,24 @@
               "n": "Meltagun",
               "min": 0,
               "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Flamer",
+              "min": 0,
+              "max": null,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Plasma gun",
+              "min": 0,
+              "max": null,
               "scale": null,
               "p": 0,
               "model": false,
@@ -4957,17 +4957,6 @@
           "kw": "Psychic"
         },
         {
-          "n": "Flamer",
-          "melee": false,
-          "range": "12\"",
-          "a": "D6",
-          "skill": "N/A",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "kw": "Ignores Cover, Torrent"
-        },
-        {
           "n": "Havoc autocannon",
           "melee": false,
           "range": "48\"",
@@ -5023,28 +5012,6 @@
           "kw": "Heavy"
         },
         {
-          "n": "➤ Plasma gun - standard",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "kw": "Rapid Fire 1"
-        },
-        {
-          "n": "➤ Plasma gun - supercharge",
-          "melee": false,
-          "range": "24\"",
-          "a": "1",
-          "skill": "3+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "kw": "Hazardous, Rapid Fire 1"
-        },
-        {
           "n": "Reaper chaincannon",
           "melee": false,
           "range": "24\"",
@@ -5065,6 +5032,39 @@
           "ap": "-4",
           "d": "D6",
           "kw": "Melta 2"
+        },
+        {
+          "n": "Flamer",
+          "melee": false,
+          "range": "12\"",
+          "a": "D6",
+          "skill": "N/A",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": "Ignores Cover, Torrent"
+        },
+        {
+          "n": "➤ Plasma gun - standard",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "1",
+          "kw": "Rapid Fire 1"
+        },
+        {
+          "n": "➤ Plasma gun - supercharge",
+          "melee": false,
+          "range": "24\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "2",
+          "kw": "Hazardous, Rapid Fire 1"
         }
       ],
       "composition": [
@@ -8411,8 +8411,8 @@
               "p": 0,
               "model": true,
               "w": [
-                "Flamer",
-                "Close combat weapon"
+                "Close combat weapon",
+                "Flamer"
               ]
             },
             {

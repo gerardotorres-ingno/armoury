@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "79c2aff",
-    "date": "2026-10-26T14:37:45Z"
+    "sha": "0f90355",
+    "date": "2026-11-02T01:29:58Z"
   },
   "catalogueId": "94bb-3284-ee14-57a1",
   "catalogueName": "Imperium - Adeptus Astartes - Space Wolves",
@@ -14,13 +14,13 @@
   "detachments": [],
   "enhancements": [],
   "allyCaps": [],
-  "revision": 15,
+  "revision": 16,
   "file": "Imperium - Space Wolves.json",
   "counts": {
-    "total": 39,
-    "native": 38,
+    "total": 40,
+    "native": 39,
     "matched": 21,
-    "legends": 17,
+    "legends": 18,
     "crucible": 0,
     "allied": 1
   },
@@ -205,9 +205,9 @@
           "melee": false,
           "range": "24\"",
           "a": "6",
-          "skill": "2+",
+          "skill": "3+",
           "s": "6",
-          "ap": "0",
+          "ap": "-2",
           "d": "1",
           "kw": "Sustained Hits 1"
         },
@@ -615,6 +615,97 @@
         "OC": "2",
         "InSv": "",
         "Base": "60mm"
+      },
+      "coreAb": null,
+      "facAb": [
+        {
+          "n": "Combat Doctrines",
+          "d": "At the start of your Command phase, you can select one Combat Doctrine listed below. If you do, that Combat Doctrine is active for friendly ADEPTUS ASTARTES units with this ability until the start of your next Command Phase Assault Doctrine When this unit is selected to make an Advance move, that Advance move does not prevent this unit from being eligible to declare a charge. Devastator Doctrine This unit's ranged attacks have [ASSAULT] Tactical Doctrine When this unit is selected to make a Fall-back move, that Fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Unless otherwise stated. - You can only select each Combat Doctrine once per battle - Only one Combat Doctrine can be active for each unit. If a rule make a Combat Doctrine active for a unit, any Combat Doctrine previously active for that unit is no longer active for that unit."
+        }
+      ],
+      "native": true
+    },
+    {
+      "id": "6a06-e50c-2c7d-3ec3",
+      "linkId": "3f15-36d4-1194-be99",
+      "name": "Cyberwolf",
+      "rawName": "Cyberwolf [Legends]",
+      "type": "model",
+      "mode": "legends",
+      "legends": true,
+      "points": 20,
+      "ladder": [
+        {
+          "from": 1,
+          "pts": 20
+        }
+      ],
+      "cap": null,
+      "leads": null,
+      "supports": [
+        "Fenrisian Wolves"
+      ],
+      "options": null,
+      "weapons": [
+        {
+          "n": "Teeth and claws",
+          "melee": true,
+          "range": "Melee",
+          "a": "4",
+          "skill": "4+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "kw": ""
+        }
+      ],
+      "composition": [
+        {
+          "n": "Cyberwolf [Legends]",
+          "min": 1,
+          "max": 1,
+          "w": []
+        }
+      ],
+      "abilities": [
+        {
+          "n": "Alpha Hunter",
+          "d": "While this model is leading a unit, models in that unit have the Scouts 6\" ability."
+        },
+        {
+          "n": "Close In for the Kill",
+          "d": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll."
+        },
+        {
+          "n": "Support",
+          "d": "This model can be attached to the following unit: ■ Fenrisian Wolves"
+        },
+        {
+          "n": "Wolfkin",
+          "d": "This model cannot be your WARLORD and cannot be given Enhancements."
+        }
+      ],
+      "faction": "Adeptus Astartes",
+      "keywords": [
+        "Beast",
+        "Character",
+        "Imperium",
+        "Cyberwolf",
+        "Support"
+      ],
+      "models": {
+        "min": 1,
+        "max": 1
+      },
+      "profile": {
+        "M": "10\"",
+        "T": "4",
+        "Sv": "6+",
+        "W": "2",
+        "LD": "7+",
+        "OC": "0",
+        "InSv": "6+",
+        "Base": "40mm"
       },
       "coreAb": null,
       "facAb": [

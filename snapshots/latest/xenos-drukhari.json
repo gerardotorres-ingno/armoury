@@ -1,7 +1,7 @@
 {
   "version": {
-    "sha": "79c2aff",
-    "date": "2026-10-26T14:37:45Z"
+    "sha": "0f90355",
+    "date": "2026-11-02T01:29:58Z"
   },
   "catalogueId": "38de-521f-1ce0-44a0",
   "catalogueName": "Xenos - Drukhari",
@@ -10582,13 +10582,49 @@
               "p": 0,
               "model": false,
               "w": []
+            },
+            {
+              "n": "Alternative weapon options",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            }
+          ]
+        },
+        {
+          "n": "Melee Weapon",
+          "owner": null,
+          "min": 1,
+          "max": 1,
+          "pick": "one",
+          "opts": [
+            {
+              "n": "Power weapon",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
+            },
+            {
+              "n": "Torturer's tool",
+              "min": 0,
+              "max": 1,
+              "scale": null,
+              "p": 0,
+              "model": false,
+              "w": []
             }
           ]
         },
         {
           "n": "Ranged Weapon",
           "owner": null,
-          "min": 0,
+          "min": 1,
           "max": 1,
           "pick": "one",
           "opts": [
@@ -10630,33 +10666,6 @@
             },
             {
               "n": "Stinger pistol",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            }
-          ]
-        },
-        {
-          "n": "Melee Weapon",
-          "owner": null,
-          "min": 0,
-          "max": 1,
-          "pick": "one",
-          "opts": [
-            {
-              "n": "Power weapon",
-              "min": 0,
-              "max": 1,
-              "scale": null,
-              "p": 0,
-              "model": false,
-              "w": []
-            },
-            {
-              "n": "Torturer's tool",
               "min": 0,
               "max": 1,
               "scale": null,
